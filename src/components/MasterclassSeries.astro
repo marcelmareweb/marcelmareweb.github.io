@@ -170,7 +170,7 @@ const initialStage = stages[0];
     if (title) title.textContent = stage.stageTitle ?? '';
     if (numberLabel) numberLabel.textContent = `STAGE ${stage.stageNumber} / 05`;
     if (tier) tier.textContent = stage.automationLevel ?? '';
-    if (inquiryLabel) inquiryLabel.textContent = `Inquire About Stage ${stage.stageNumber} Training`;
+    if (inquiryLabel) inquiryLabel.textContent = `Inquire About Stage ${stage.stageNumber} Workshop`;
 
     for (const field of ['summary', 'primaryRisk', 'humanCheckpoint', 'workshopDeliverable']) {
       const target = inspector.querySelector<HTMLElement>(`[data-stage-value="${field}"]`);
@@ -248,6 +248,11 @@ const initialStage = stages[0];
     }));
     document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  const initialStageParam = new URLSearchParams(window.location.search).get('stage');
+  if (initialStageParam) {
+    selectStage(initialStageParam.padStart(2, '0'));
+  }
 </script>
 
 <style>

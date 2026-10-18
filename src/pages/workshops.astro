@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MasterclassSeries from '../components/MasterclassSeries.astro';
+import BookingSection from '../components/BookingSection.astro';
+
+const sectionIndex = [
+  { number: '01', label: 'The Premise', href: '#section-01' },
+  { number: '02', label: 'How Raykis Works', href: '#section-02' },
+  { number: '03', label: '5-Stage Agentic Mastery', href: '#masterclass' },
+  { number: '04', label: 'Who It Is For & Deliverables', href: '#section-04' },
+  { number: '05', label: 'Initiate a Workshop', href: '#book' },
+];
+
+const facilitationPhases = [
+  {
+    number: '01',
+    tag: 'PHASE ONE // VISIBILITY',
+    title: 'Expose Competing Assumptions',
+    problem: 'Under pressure, capable leaders use the same vocabulary to describe entirely different priorities and risks.',
+    action:
+      'Before touching a solution or an AI model, we surface unspoken assumptions, competing departmental incentives, and crossed signals so the real problem is visible to everyone in the room.',
+  },
+  {
+    number: '02',
+    tag: 'PHASE TWO // JUDGEMENT',
+    title: 'Confront the Hard Trade-Offs',
+    problem: 'More data and faster generation often become a refuge from making consequential choices.',
+    action:
+      'Using structured behavioural and strategic design protocols, we separate organisational noise from what is genuinely consequential—locking the strategic premise, evidentiary standard, and acceptable risk boundaries.',
+  },
+  {
+    number: '03',
+    tag: 'PHASE THREE // FORMATION',
+    title: 'Commit to Formation & Action',
+    problem: 'Workshops fail when teams leave with polite consensus instead of accountable ownership.',
+    action:
+      'Participants leave with explicit human-in-the-loop checkpoints, clear decision authority, and repeatable governance rubrics they can operate independently—then we step aside.',
+  },
+];
+
+const idealContexts = [
+  {
+    number: '01',
+    title: 'Executive teams facing a strategic fork',
+    description:
+      'When competing initiatives, market shifts, or resource constraints require senior leaders to stop hedging and commit to a single coherent direction.',
+  },
+  {
+    number: '02',
+    title: 'Specialist units integrating AI into high-stakes workflows',
+    description:
+      'Policy, research, legal, financial, or product teams where synthetic speed threatens analytical rigor, ethical compliance, or institutional accountability.',
+  },
+  {
+    number: '03',
+    title: 'Cross-functional alignment under turbulence',
+    description:
+      'Organisations moving fast across siloed departments where signals are crossed and busyness is being mistaken for genuine progress.',
+  },
+];
+
+const clientDeliverables = [
+  {
+    number: '01',
+    title: 'The Premise & Constraint Brief',
+    description:
+      'A locked, single-page strategic argument defining the core question, non-negotiable trade-offs, and what the team has explicitly chosen not to pursue.',
+  },
+  {
+    number: '02',
+    title: 'Human-in-the-Loop Decision Architecture',
+    description:
+      'A clear map of where AI extends analytical or creative capability, and the exact checkpoints where human judgement and sign-off are mandatory.',
+  },
+  {
+    number: '03',
+    title: 'Accountable Ownership & Evaluation Rubric',
+    description:
+      'Practical criteria and behavioural guardrails your team retains to govern quality, risk, and execution long after The Spotted Ape steps aside.',
+  },
+];
+---
+
+<BaseLayout
+  title="Raykis Strategic Decision Workshops & 5-Stage Agentic Mastery | The Spotted Ape"
+  description="From competing perspectives to collective decisions. Structured, facilitated workshops and 5-Stage Agentic Mastery training led by Marcel Maré."
+>
+  <!-- Section 01: Workshop Hero -->
+  <section id="section-01" class="architectural-grid section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="workshops-hero-heading">
+    <div class="editorial-container">
+      <div class="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
+        <span class="eyebrow-pill">
+          <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+          RAYKIS STRATEGIC DECISION WORKSHOPS
+        </span>
+        <nav class="hidden items-center gap-5 lg:flex" aria-label="Workshop page sections">
+          {sectionIndex.map((item) => (
+            <a
+              class="technical-label text-[10px] tracking-widest text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]"
+              href={item.href}
+            >
+              <span class="text-[var(--accent-signal)]">{item.number}</span> {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <div class="grid items-start gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-5 text-xs tracking-widest text-[var(--accent-signal)]">
+            01 / THE PREMISE • FACILITATED DECISION ARCHITECTURE
+          </p>
+          <h1 id="workshops-hero-heading" class="h1 mb-8 max-w-[15ch] text-[var(--text-primary)]">
+            From competing perspectives to <em>collective decisions.</em>
+          </h1>
+
+          <div class="mb-8 border-l-2 border-[var(--accent-signal)] pl-5 sm:pl-6">
+            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+              AI extends capability. Humans remain responsible for judgement.
+            </p>
+          </div>
+
+          <p class="p-body mb-6 max-w-[60ch]">
+            Under pressure and uncertainty, organisations rarely stall for lack of intelligence, tools, or effort. They stall because capable people are pulling in different directions—and faster tools only amplify the dispersion.
+          </p>
+          <p class="p-body mb-10 max-w-[60ch]">
+            Raykis Strategic Decision Workshops do not hand you a generic slide deck. They create a disciplined, facilitated room where hidden assumptions are exposed, consequential trade-offs are confronted, and your team commits to a shared formation.
+          </p>
+
+          <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+            <a
+              class="inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+              href="#book"
+            >
+              Initiate a Workshop Briefing <span class="ml-2.5" aria-hidden="true">→</span>
+            </a>
+            <a
+              class="group text-sm font-semibold text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)]"
+              href="#masterclass"
+            >
+              Inspect the 5-Stage Progression <span class="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Architectural Workshop Dossier Card -->
+        <aside class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-7 shadow-[0_24px_64px_rgba(0,0,0,0.45)] sm:p-9" aria-label="Workshop specification">
+          <div class="mb-6 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
+            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">RAYKIS SPECIFICATION</span>
+            <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+          </div>
+
+          <p class="font-editorial mb-6 text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+            “How do people coordinate judgement and action under conditions of uncertainty?”
+          </p>
+
+          <dl class="m-0 space-y-5 border-t border-[var(--border-subtle)] pt-6 text-sm">
+            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
+              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">FORMAT</dt>
+              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">In-Person Intensive or Structured Hybrid</dd>
+            </div>
+            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
+              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">COHORT SIZE</dt>
+              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">5–18 Executive or Specialist Decision-Makers</dd>
+            </div>
+            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
+              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">CORE DISCIPLINES</dt>
+              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">Behavioural Science · Strategic Design · AI Oversight</dd>
+            </div>
+            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
+              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">PRINCIPAL FACILITATOR</dt>
+              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">Marcel Maré (Cape Town / International)</dd>
+            </div>
+            <div class="flex flex-col gap-1 sm:flex-row sm:justify-between">
+              <dt class="technical-label text-[10px] tracking-widest text-[var(--accent-signal)]">DESIGN GOAL</dt>
+              <dd class="m-0 font-semibold text-[var(--accent-signal)] sm:text-right">Independent Capability (Zero Dependency)</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: How a Raykis Workshop Works (3-Phase Facilitation Architecture) -->
+  <section id="section-02" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="raykis-method-heading">
+    <div class="editorial-container">
+      <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+            02 / HOW RAYKIS WORKS
+          </p>
+          <h2 id="raykis-method-heading" class="h2 max-w-[14ch] text-[var(--text-primary)]">
+            Three movements from <em>noise to formation.</em>
+          </h2>
+        </div>
+        <div>
+          <p class="p-lead max-w-[58ch]">
+            We never automate a confused process. Every Raykis engagement moves a team through three deliberate stages of behavioural and strategic alignment.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] lg:grid-cols-3">
+        {facilitationPhases.map((phase) => (
+          <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-7 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:p-9">
+            <div>
+              <div class="mb-8 flex items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-4">
+                <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">{phase.number}</span>
+                <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">{phase.tag}</span>
+              </div>
+
+              <h3 class="h3 mb-6 text-[var(--text-primary)]">{phase.title}</h3>
+
+              <div class="mb-6 border-l-2 border-[var(--border-subtle)] pl-4">
+                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--text-muted)]">THE FRICTION</p>
+                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{phase.problem}</p>
+              </div>
+            </div>
+
+            <div class="border-t border-[var(--border-subtle)] pt-5">
+              <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">IN THE ROOM</p>
+              <p class="text-sm font-medium leading-6 text-[var(--text-primary)] sm:text-base">{phase.action}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: The 5-Stage Agentic Mastery Progression & Quick Team Diagnostic -->
+  <MasterclassSeries />
+
+  <!-- Section 04: Who It Is For & Concrete Deliverables -->
+  <section id="section-04" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="deliverables-heading">
+    <div class="editorial-container">
+      <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+            04 / CONTEXTS &amp; RETAINED DELIVERABLES
+          </p>
+          <h2 id="deliverables-heading" class="h2 max-w-[14ch] text-[var(--text-primary)]">
+            What your team keeps <em>after we step aside.</em>
+          </h2>
+        </div>
+        <div>
+          <p class="p-body max-w-[58ch]">
+            Good guidance eventually becomes unnecessary. We measure the success of a Raykis workshop by the clarity of the decisions made in the room and the durability of the tools your team retains independently.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-12 lg:grid-cols-2 lg:gap-14">
+        <!-- Column A: When to Convene a Raykis Workshop -->
+        <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-7 sm:p-9">
+          <div class="mb-8 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
+            <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">WHEN TO CONVENE</p>
+            <span class="technical-label text-[10px] text-[var(--text-muted)]">STRATEGIC MOMENTS</span>
+          </div>
+
+          <div class="space-y-8">
+            {idealContexts.map((ctx) => (
+              <article class="border-l-2 border-[var(--border-subtle)] pl-5">
+                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{ctx.number} / CONTEXT</p>
+                <h3 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{ctx.title}</h3>
+                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{ctx.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <!-- Column B: Concrete Deliverables Retained -->
+        <div class="border border-[var(--border-accent)] bg-[var(--bg-elevated)] p-7 sm:p-9">
+          <div class="mb-8 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
+            <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">RETAINED ARTIFACTS</p>
+            <span class="technical-label text-[10px] text-[var(--accent-signal)]">CLIENT OWNERSHIP</span>
+          </div>
+
+          <div class="space-y-8">
+            {clientDeliverables.map((item) => (
+              <article class="border-l-2 border-[var(--accent-signal)] pl-5">
+                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{item.number} / DELIVERABLE</p>
+                <h3 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{item.title}</h3>
+                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Dedicated Workshop Inquiry -->
+  <BookingSection
+    defaultEngagement="Raykis Strategic Decision Workshop"
+    eyebrow="05 / INITIATE A RAYKIS WORKSHOP"
+  />
+</BaseLayout>
+
