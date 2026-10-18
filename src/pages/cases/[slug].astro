@@ -1,0 +1,146 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  caseStudy: CollectionEntry<'cases'>;
+}
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+
+  return cases.map((caseStudy) => ({
+    params: { slug: caseStudy.data.slug },
+    props: { caseStudy },
+  }));
+}
+
+const { caseStudy } = Astro.props;
+const { data } = caseStudy;
+const { Content } = await render(caseStudy);
+const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://thespottedape.com');
+---
+
+<BaseLayout
+  title={`${data.title} | The Spotted Ape`}
+  description={data.clientContext}
+  canonicalURL={canonicalURL}
+  schemaType="Article"
+>
+  <div class="editorial-container max-w-5xl py-12 sm:py-20">
+    <article class="case-brief">
+      <header class="mb-12 border-b border-[var(--border-subtle)] pb-8 sm:mb-16 sm:pb-10">
+        <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <a class="print-action text-xs font-semibold text-[var(--text-muted)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-kharos)]" href="/#case">
+              ← Back to Field Notes
+            </a>
+            <span class="print-action text-[var(--border-subtle)]" aria-hidden="true">|</span>
+            <p class="technical-label text-[11px] tracking-widest text-[var(--accent-kharos)]">EXECUTIVE CASE / POLICY ANALYSIS</p>
+          </div>
+          <button class="print-action technical-label border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-3 text-[11px] tracking-widest text-[var(--text-primary)] transition-colors hover:border-[var(--accent-kharos)] hover:text-[var(--accent-kharos)]" type="button" data-print-brief>
+            Print / Save as PDF
+          </button>
+        </div>
+        <h1 class="mb-8 max-w-[18ch] text-5xl leading-[0.98] sm:text-7xl" style="view-transition-name: case-study-title;">
+          {data.title}
+        </h1>
+        <p class="font-editorial max-w-[46ch] text-2xl leading-snug text-[var(--text-muted)] sm:text-3xl">
+          {data.clientContext}
+        </p>
+      </header>
+
+      <div class="grid gap-8 sm:grid-cols-[11rem_1fr] sm:gap-12">
+        <aside class="border-l-2 border-[var(--accent-ochre)] pl-4 sm:border-l-0 sm:border-r sm:border-[var(--border-subtle)] sm:pl-0 sm:pr-6">
+          <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--text-muted)]">TIME TO COMPLETION</p>
+          <p class="font-editorial text-3xl">{data.timeframe}</p>
+        </aside>
+
+        <div class="space-y-8 sm:space-y-10">
+          <section>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-kharos)]">01 / THE PATTERN</p>
+            <p class="max-w-[58ch] text-lg leading-8">{data.pattern}</p>
+          </section>
+          <section class="border-t border-[var(--border-subtle)] pt-7 sm:pt-8">
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-kharos)]">02 / THE INTERVENTION</p>
+            <p class="max-w-[58ch] text-lg leading-8">{data.intervention}</p>
+          </section>
+          <section class="border-t border-[var(--border-subtle)] pt-7 sm:pt-8">
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-kharos)]">03 / THE SHIFT</p>
+            <p class="max-w-[58ch] text-lg leading-8">{data.shift}</p>
+          </section>
+          <section class="border-t border-[var(--border-subtle)] pt-7 sm:pt-8">
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-kharos)]">04 / THE RESULT</p>
+            <p class="font-editorial mb-7 text-3xl">{data.result}</p>
+            <blockquote class="font-editorial max-w-[44ch] border-l-2 border-[var(--accent-ochre)] pl-5 text-2xl italic leading-snug text-[var(--text-muted)] sm:text-3xl">
+              “{data.quote}”
+            </blockquote>
+          </section>
+          <section class="border-t border-[var(--border-subtle)] pt-7 text-base leading-7 text-[var(--text-muted)] sm:pt-8">
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--text-muted)]">EXECUTIVE SUMMARY</p>
+            <div class="max-w-[58ch]">
+              <Content />
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="mt-14 border-t border-[var(--border-subtle)] pt-6 sm:mt-20">
+        <p class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">THE SPOTTED APE (PTY) LTD / CAPE TOWN, SOUTH AFRICA • THESPOTTEDAPE.COM</p>
+      </footer>
+    </article>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelector('[data-print-brief]')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  @media print {
+    @page {
+      margin: 18mm;
+    }
+
+    :global(:root),
+    :global(html),
+    :global(body) {
+      --bg-primary: #ffffff !important;
+      --bg-elevated: #f6f4f0 !important;
+      --text-primary: #141413 !important;
+      --text-muted: #4a4845 !important;
+      --accent-signal: #141413 !important;
+      --accent-kharos: #141413 !important;
+      --accent-ochre: #575551 !important;
+      --border-subtle: #dcd7cd !important;
+      background: #fff !important;
+      color: #141413 !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    :global(body > header),
+    :global(body > footer),
+    .print-action {
+      display: none !important;
+    }
+
+    .case-brief {
+      width: 100%;
+    }
+
+    .case-brief h1 {
+      font-size: 34pt;
+    }
+
+    .case-brief section,
+    .case-brief aside,
+    .case-brief blockquote {
+      break-inside: avoid;
+    }
+
+    .case-brief footer {
+      margin-top: 16mm;
+    }
+  }
+</style>

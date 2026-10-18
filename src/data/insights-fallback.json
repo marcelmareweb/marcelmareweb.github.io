@@ -1,0 +1,32 @@
+[
+  {
+    "id": "knowledge-work-shift",
+    "title": "If AI Does the Work, What Are You Doing?",
+    "pubDate": "2026-10-14",
+    "readingTime": "4 min read",
+    "excerpt": "As AI takes on more production, knowledge work shifts from effort toward editorial judgment: deciding what matters, what is credible, and what deserves attention.",
+    "substackUrl": "https://thespottedape.substack.com",
+    "tags": ["knowledge work", "judgment", "AI literacy"],
+    "isFallback": true
+  },
+  {
+    "id": "rhizomatic-resilience",
+    "title": "The !Kharos Strategy: Rhizomatic Resilience Under Abundance",
+    "pubDate": "2026-09-29",
+    "readingTime": "6 min read",
+    "excerpt": "The Welwitschia mirabilis survives wet and dry through structural integrity: a model for staying grounded as AI expands the field of possibility.",
+    "substackUrl": "https://thespottedape.substack.com",
+    "tags": ["!Kharos", "resilience", "systems thinking"],
+    "isFallback": true
+  },
+  {
+    "id": "human-in-the-loop-governance",
+    "title": "When More Thinking Makes Everything Worse",
+    "pubDate": "2026-09-12",
+    "readingTime": "5 min read",
+    "excerpt": "Inside a 9-day strategic policy review intervention: one clear argument replaced endless AI generation, over-editing, and rewrites.",
+    "substackUrl": "https://thespottedape.substack.com",
+    "tags": ["governance", "human-in-the-loop", "agentic systems"],
+    "isFallback": true
+  }
+]

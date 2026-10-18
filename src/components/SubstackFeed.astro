@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+
+const insights = (await getCollection('insights'))
+  .sort((first, second) => Date.parse(second.data.pubDate) - Date.parse(first.data.pubDate))
+  .slice(0, 3);
+---
+
+<section class="section-y border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="insights-title">
+  <div class="editorial-container">
+    <div class="mb-12 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">07 / FIELD NOTES</p>
+        <h2 id="insights-title" class="h2 text-[var(--text-primary)]">Ideas for work in <em>transition.</em></h2>
+      </div>
+      <a class="group text-sm font-semibold text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)]" href="https://thespottedape.substack.com" target="_blank" rel="noreferrer">
+        Visit the Substack publication <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="grid border-y border-[var(--border-subtle)] md:grid-cols-3">
+      {insights.map(({ data }, index) => (
+        <article class:list={[
+          'group relative flex flex-col py-8 transition-colors sm:py-10',
+          index > 0 && 'border-t border-[var(--border-subtle)] md:border-l md:border-t-0 md:pl-8',
+          index < insights.length - 1 && 'md:pr-8',
+        ]}>
+          <div class="technical-label mb-5 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-[var(--text-muted)]">
+            <time datetime={data.pubDate}>{new Date(`${data.pubDate}T00:00:00Z`).toLocaleDateString('en-ZA', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
+            <span>{data.readingTime}</span>
+          </div>
+          <h3 class="font-editorial mb-4 text-2xl leading-snug text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-signal)] sm:text-3xl">
+            <a class="after:absolute after:inset-0 no-underline" href={data.substackUrl} target="_blank" rel="noreferrer">
+              {data.title}
+            </a>
+          </h3>
+          <ul class="mb-5 flex flex-wrap gap-2" aria-label="Essay topics">
+            {data.tags.map((tag) => (
+              <li class="technical-label border border-[var(--border-subtle)] bg-[var(--bg-primary)] px-2.5 py-1 text-[10px] tracking-wider text-[var(--text-muted)]">{tag}</li>
+            ))}
+          </ul>
+          <p class="mb-7 flex-1 text-sm leading-7 text-[var(--text-muted)] sm:text-base">{data.excerpt}</p>
+          <span class="technical-label self-start text-[11px] tracking-widest text-[var(--accent-signal)] underline decoration-[var(--border-subtle)] underline-offset-4 transition-colors group-hover:decoration-[var(--accent-signal)]">
+            Read on Substack <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">↗</span>
+          </span>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

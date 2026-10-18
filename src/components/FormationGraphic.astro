@@ -1,0 +1,462 @@
+---
+interface Props {
+  variant?: 'hero' | 'about';
+}
+
+const { variant = 'hero' } = Astro.props;
+
+interface NodePoint {
+  id: string;
+  chaosX: number;
+  chaosY: number;
+  chaosAngle: number;
+  formX: number;
+  formY: number;
+  formAngle: number;
+  isPrimaryBeacon?: boolean;
+  row: number;
+  col: number;
+}
+
+// 24 deterministic nodes: scattered with conflicting vectors in Chaos (t=0),
+// settling into a coordinated 4x6 directional formation aligned toward the Acid-Yellow Beacon in Coherence (t=1).
+const nodes: NodePoint[] = [
+  // Row 0
+  { id: 'N01', chaosX: 68, chaosY: 98, chaosAngle: 142, formX: 76, formY: 118, formAngle: 0, row: 0, col: 0 },
+  { id: 'N02', chaosX: 194, chaosY: 82, chaosAngle: -68, formX: 142, formY: 118, formAngle: 0, row: 0, col: 1 },
+  { id: 'N03', chaosX: 124, chaosY: 214, chaosAngle: 215, formX: 208, formY: 118, formAngle: 0, row: 0, col: 2 },
+  { id: 'N04', chaosX: 332, chaosY: 94, chaosAngle: 118, formX: 274, formY: 118, formAngle: 0, row: 0, col: 3 },
+  { id: 'N05', chaosX: 448, chaosY: 112, chaosAngle: -134, formX: 340, formY: 118, formAngle: 0, row: 0, col: 4 },
+  { id: 'N06', chaosX: 486, chaosY: 174, chaosAngle: 84, formX: 406, formY: 118, formAngle: 0, row: 0, col: 5, isPrimaryBeacon: true },
+  // Row 1
+  { id: 'N07', chaosX: 52, chaosY: 188, chaosAngle: -112, formX: 76, formY: 176, formAngle: 0, row: 1, col: 0 },
+  { id: 'N08', chaosX: 158, chaosY: 142, chaosAngle: 48, formX: 142, formY: 176, formAngle: 0, row: 1, col: 1 },
+  { id: 'N09', chaosX: 268, chaosY: 128, chaosAngle: -156, formX: 208, formY: 176, formAngle: 0, row: 1, col: 2 },
+  { id: 'N10', chaosX: 238, chaosY: 268, chaosAngle: 72, formX: 274, formY: 176, formAngle: 0, row: 1, col: 3 },
+  { id: 'N11', chaosX: 392, chaosY: 154, chaosAngle: -44, formX: 340, formY: 176, formAngle: 0, row: 1, col: 4, isPrimaryBeacon: true },
+  { id: 'N12', chaosX: 468, chaosY: 256, chaosAngle: 165, formX: 406, formY: 176, formAngle: 0, row: 1, col: 5, isPrimaryBeacon: true },
+  // Row 2
+  { id: 'N13', chaosX: 88, chaosY: 284, chaosAngle: 96, formX: 76, formY: 234, formAngle: 0, row: 2, col: 0 },
+  { id: 'N14', chaosX: 112, chaosY: 342, chaosAngle: -28, formX: 142, formY: 234, formAngle: 0, row: 2, col: 1 },
+  { id: 'N15', chaosX: 294, chaosY: 212, chaosAngle: 132, formX: 208, formY: 234, formAngle: 0, row: 2, col: 2 },
+  { id: 'N16', chaosX: 356, chaosY: 312, chaosAngle: -94, formX: 274, formY: 234, formAngle: 0, row: 2, col: 3 },
+  { id: 'N17', chaosX: 314, chaosY: 346, chaosAngle: 28, formX: 340, formY: 234, formAngle: 0, row: 2, col: 4, isPrimaryBeacon: true },
+  { id: 'N18', chaosX: 492, chaosY: 318, chaosAngle: -148, formX: 406, formY: 234, formAngle: 0, row: 2, col: 5, isPrimaryBeacon: true },
+  // Row 3
+  { id: 'N19', chaosX: 62, chaosY: 332, chaosAngle: -75, formX: 76, formY: 292, formAngle: 0, row: 3, col: 0 },
+  { id: 'N20', chaosX: 184, chaosY: 318, chaosAngle: 158, formX: 142, formY: 292, formAngle: 0, row: 3, col: 1 },
+  { id: 'N21', chaosX: 216, chaosY: 184, chaosAngle: -122, formX: 208, formY: 292, formAngle: 0, row: 3, col: 2 },
+  { id: 'N22', chaosX: 278, chaosY: 348, chaosAngle: 64, formX: 274, formY: 292, formAngle: 0, row: 3, col: 3 },
+  { id: 'N23', chaosX: 422, chaosY: 224, chaosAngle: -168, formX: 340, formY: 292, formAngle: 0, row: 3, col: 4 },
+  { id: 'N24', chaosX: 444, chaosY: 344, chaosAngle: 112, formX: 406, formY: 292, formAngle: 0, row: 3, col: 5, isPrimaryBeacon: true },
+];
+
+const captionLeft =
+  variant === 'about'
+    ? '01 / DISPERSION: Competing priorities & crossed signals'
+    : '01 / CHAOS: Capability without direction';
+const captionRight =
+  variant === 'about'
+    ? '02 / FORMATION: Wise hands at the wheel'
+    : '02 / COHERENCE: Shared orientation & judgement';
+---
+
+<figure
+  class="formation-graphic m-0 w-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] shadow-[0_24px_64px_rgba(0,0,0,0.55)]"
+  data-formation-root
+  data-variant={variant}
+>
+  <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 py-3 sm:px-5">
+    <div class="flex items-center gap-2.5">
+      <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" data-formation-beacon-dot aria-hidden="true"></span>
+      <span class="technical-label text-[11px] tracking-widest text-[var(--text-primary)]">
+        {variant === 'about' ? 'ORIENTATION FIELD / 01' : 'FORMATION SYSTEM / 01'}
+      </span>
+    </div>
+
+    <div class="flex items-center gap-1.5" role="group" aria-label="Toggle between chaotic dispersion and coherent formation">
+      <button
+        type="button"
+        class="formation-mode-btn technical-label border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-2.5 py-1 text-[10px] tracking-widest text-[var(--text-muted)] transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--text-primary)]"
+        data-formation-set="0"
+        aria-pressed="false"
+      >
+        Chaos
+      </button>
+      <button
+        type="button"
+        class="formation-mode-btn technical-label border border-[var(--accent-signal)] bg-[var(--accent-signal)]/15 px-2.5 py-1 text-[10px] tracking-widest text-[var(--accent-signal)] transition-colors"
+        data-formation-set="1"
+        aria-pressed="true"
+      >
+        Formation
+      </button>
+    </div>
+  </div>
+
+  <div class="relative overflow-hidden bg-[#0C0D0E]">
+    <svg
+      class="block h-auto w-full select-none"
+      viewBox="0 0 540 400"
+      role="img"
+      aria-labelledby={`formation-title-${variant} formation-desc-${variant}`}
+      data-formation-svg
+    >
+      <title id={`formation-title-${variant}`}>
+        From Chaotic Dispersion to Coherent Formation
+      </title>
+      <desc id={`formation-desc-${variant}`}>
+        An interactive geometric field of 24 organisational nodes. In the dispersion state, vectors pull in conflicting directions; as scroll or orientation engages, the nodes align into a coherent formation guided by an acid-yellow focal point.
+      </desc>
+
+      <defs>
+        <pattern id={`formation-grid-${variant}`} width="36" height="36" patternUnits="userSpaceOnUse">
+          <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#F6F4F0" stroke-opacity="0.045" stroke-width="1" />
+        </pattern>
+        <radialGradient id={`beacon-glow-${variant}`} cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E9F469" stop-opacity="0.28" />
+          <stop offset="65%" stop-color="#E9F469" stop-opacity="0.06" />
+          <stop offset="100%" stop-color="#E9F469" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+
+      <rect width="540" height="400" fill="#0C0D0E" />
+      <rect width="540" height="400" fill={`url(#formation-grid-${variant})`} />
+
+      <!-- Top HUD metadata inside SVG -->
+      <text x="28" y="34" fill="#A3A19A" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="1.4" data-svg-state-label>
+        STATE // COHERENT FORMATION
+      </text>
+      <text x="512" y="34" text-anchor="end" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="1.4" data-svg-coherence-metric>
+        ALIGNMENT: 100%
+      </text>
+      <line x1="28" y1="48" x2="512" y2="48" stroke="#F6F4F0" stroke-opacity="0.12" />
+
+      <!-- Coherent Structural Lattice Lines (fade in as t -> 1) -->
+      <g data-formation-lattice stroke="#E9F469" stroke-opacity="0.22" stroke-width="1" fill="none">
+        <!-- Horizontal formation rows -->
+        <line x1="76" y1="118" x2="468" y2="118" stroke-dasharray="3 3" />
+        <line x1="76" y1="176" x2="468" y2="176" stroke-dasharray="3 3" />
+        <line x1="76" y1="234" x2="468" y2="234" stroke-dasharray="3 3" />
+        <line x1="76" y1="292" x2="468" y2="292" stroke-dasharray="3 3" />
+        <!-- Vertical formation columns -->
+        <line x1="76" y1="118" x2="76" y2="292" />
+        <line x1="142" y1="118" x2="142" y2="292" />
+        <line x1="208" y1="118" x2="208" y2="292" />
+        <line x1="274" y1="118" x2="274" y2="292" />
+        <line x1="340" y1="118" x2="340" y2="292" />
+        <line x1="406" y1="118" x2="406" y2="292" />
+        <!-- Convergence vectors to the Orientation Beacon at (474, 205) -->
+        <path d="M406 118 L474 205 M406 176 L474 205 M406 234 L474 205 M406 292 L474 205" stroke="#E9F469" stroke-opacity="0.45" stroke-width="1.25" />
+      </g>
+
+      <!-- Chaotic Crossed Signal Lines (fade out as t -> 1) -->
+      <g data-chaos-noise stroke="#A3A19A" stroke-opacity="0" stroke-width="1" stroke-dasharray="4 4" fill="none">
+        <path d="M68 98 L194 82 L124 214 L332 94 L238 268 L448 112" />
+        <path d="M52 188 L268 128 L112 342 L392 154 L314 346 L492 318" />
+        <path d="M88 284 L216 184 L356 312 L422 224 L444 344" />
+      </g>
+
+      <!-- Acid-Yellow Focal Orientation Beacon (Right-hand reference point) -->
+      <g data-orientation-beacon transform="translate(474, 205)">
+        <circle r="44" fill={`url(#beacon-glow-${variant})`} />
+        <circle r="18" fill="none" stroke="#E9F469" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3" />
+        <circle r="6" fill="#E9F469" />
+        <text x="0" y="-26" text-anchor="middle" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="9.5" letter-spacing="1.2">
+          BEACON
+        </text>
+      </g>
+
+      <!-- 24 Dynamic Nodes with Velocity Vectors -->
+      <g data-nodes-container>
+        {nodes.map((node) => (
+          <g
+            class="formation-node"
+            data-node
+            data-chaos-x={node.chaosX}
+            data-chaos-y={node.chaosY}
+            data-chaos-angle={node.chaosAngle}
+            data-form-x={node.formX}
+            data-form-y={node.formY}
+            data-form-angle={node.formAngle}
+            data-primary={node.isPrimaryBeacon ? 'true' : 'false'}
+            transform={`translate(${node.formX}, ${node.formY}) rotate(${node.formAngle})`}
+          >
+            <!-- Directional vector line -->
+            <line
+              x1="0"
+              y1="0"
+              x2="18"
+              y2="0"
+              stroke={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              stroke-opacity={node.isPrimaryBeacon ? '0.9' : '0.55'}
+              stroke-width="1.5"
+              data-node-vector
+            />
+            <!-- Vector arrowhead tip -->
+            <polygon
+              points="18,-2.6 23,0 18,2.6"
+              fill={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              fill-opacity={node.isPrimaryBeacon ? '0.95' : '0.65'}
+              data-node-arrow
+            />
+            <!-- Node core -->
+            <circle
+              cx="0"
+              cy="0"
+              r={node.isPrimaryBeacon ? '4.5' : '3.5'}
+              fill={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              data-node-circle
+            />
+          </g>
+        ))}
+      </g>
+
+      <!-- Bottom HUD Axis inside SVG -->
+      <line x1="28" y1="348" x2="512" y2="348" stroke="#F6F4F0" stroke-opacity="0.12" />
+      <text x="28" y="372" fill="#A3A19A" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.1">
+        RAW SPEED WITHOUT DIRECTION CREATES NOISE
+      </text>
+      <text x="512" y="372" text-anchor="end" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.1">
+        VISIBILITY CREATES ORIENTATION
+      </text>
+    </svg>
+  </div>
+
+  <!-- Interactive Scrubber & Caption Footer -->
+  <figcaption class="border-t border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 py-3.5 sm:px-5">
+    <div class="mb-2.5 flex items-center gap-3">
+      <label class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]" for={`formation-range-${variant}`}>
+        ORIENTATION
+      </label>
+      <input
+        id={`formation-range-${variant}`}
+        type="range"
+        min="0"
+        max="100"
+        value="100"
+        class="formation-slider h-1 w-full cursor-pointer appearance-none bg-[var(--border-subtle)] accent-[var(--accent-signal)]"
+        aria-label="Scrub between chaotic dispersion and coherent formation"
+        data-formation-slider
+      />
+    </div>
+    <div class="technical-label flex flex-col justify-between gap-1 text-[10px] tracking-wider text-[var(--text-muted)] sm:flex-row sm:gap-4">
+      <span>{captionLeft}</span>
+      <span class="text-[var(--accent-signal)] sm:text-right">{captionRight}</span>
+    </div>
+  </figcaption>
+</figure>
+
+<script>
+  const initFormationGraphics = () => {
+    const roots = document.querySelectorAll<HTMLElement>('[data-formation-root]');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    roots.forEach((root) => {
+      if (root.dataset.initialized === 'true') return;
+      root.dataset.initialized = 'true';
+
+      const nodeElements = Array.from(root.querySelectorAll<SVGGElement>('[data-node]'));
+      const lattice = root.querySelector<SVGGElement>('[data-formation-lattice]');
+      const chaosNoise = root.querySelector<SVGGElement>('[data-chaos-noise]');
+      const beacon = root.querySelector<SVGGElement>('[data-orientation-beacon]');
+      const stateLabel = root.querySelector<SVGTextElement>('[data-svg-state-label]');
+      const metricLabel = root.querySelector<SVGTextElement>('[data-svg-coherence-metric]');
+      const slider = root.querySelector<HTMLInputElement>('[data-formation-slider]');
+      const modeButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-formation-set]'));
+
+      const isHero = root.dataset.variant === 'hero';
+      let currentT = prefersReducedMotion ? 1 : 0.08;
+      let targetT = prefersReducedMotion ? 1 : 1;
+      let manualOverride = false;
+      let rafId: number | null = null;
+      let loopRafId: number | null = null;
+
+      const parsedNodes = nodeElements.map((el) => ({
+        el,
+        circle: el.querySelector<SVGCircleElement>('[data-node-circle]'),
+        vector: el.querySelector<SVGLineElement>('[data-node-vector]'),
+        arrow: el.querySelector<SVGPolygonElement>('[data-node-arrow]'),
+        chaosX: Number(el.dataset.chaosX ?? 0),
+        chaosY: Number(el.dataset.chaosY ?? 0),
+        chaosAngle: Number(el.dataset.chaosAngle ?? 0),
+        formX: Number(el.dataset.formX ?? 0),
+        formY: Number(el.dataset.formY ?? 0),
+        formAngle: Number(el.dataset.formAngle ?? 0),
+        isPrimary: el.dataset.primary === 'true',
+      }));
+
+      const renderAt = (t: number) => {
+        const clamped = Math.max(0, Math.min(1, t));
+        // Cubic ease-out for pleasing geometric settling
+        const eased = 1 - Math.pow(1 - clamped, 3);
+
+        parsedNodes.forEach((n) => {
+          const x = n.chaosX + (n.formX - n.chaosX) * eased;
+          const y = n.chaosY + (n.formY - n.chaosY) * eased;
+          const angle = n.chaosAngle + (n.formAngle - n.chaosAngle) * eased;
+          n.el.setAttribute('transform', `translate(${x.toFixed(1)}, ${y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+
+          const isHighlighted = n.isPrimary || eased > 0.72;
+          const color = n.isPrimary ? '#E9F469' : eased > 0.5 ? '#F6F4F0' : '#A3A19A';
+          if (n.circle) n.circle.setAttribute('fill', color);
+          if (n.vector) {
+            n.vector.setAttribute('stroke', isHighlighted && n.isPrimary ? '#E9F469' : color);
+            n.vector.setAttribute('stroke-opacity', String((0.35 + eased * 0.55).toFixed(2)));
+          }
+          if (n.arrow) {
+            n.arrow.setAttribute('fill', isHighlighted && n.isPrimary ? '#E9F469' : color);
+          }
+        });
+
+        if (lattice) {
+          lattice.setAttribute('stroke-opacity', String((eased * 0.26).toFixed(3)));
+        }
+        if (chaosNoise) {
+          chaosNoise.setAttribute('stroke-opacity', String(((1 - eased) * 0.28).toFixed(3)));
+        }
+        if (beacon) {
+          const scale = 0.75 + eased * 0.25;
+          beacon.setAttribute('transform', `translate(474, 205) scale(${scale.toFixed(3)})`);
+          beacon.setAttribute('opacity', String((0.35 + eased * 0.65).toFixed(2)));
+        }
+
+        const pct = Math.round(eased * 100);
+        if (metricLabel) {
+          metricLabel.textContent = `ALIGNMENT: ${pct}%`;
+        }
+        if (stateLabel) {
+          stateLabel.textContent =
+            pct < 35
+              ? 'STATE // CHAOTIC DISPERSION'
+              : pct < 85
+                ? 'STATE // FINDING FORMATION'
+                : 'STATE // COHERENT FORMATION';
+        }
+        if (slider && document.activeElement !== slider) {
+          slider.value = String(pct);
+        }
+
+        modeButtons.forEach((btn) => {
+          const btnTarget = Number(btn.dataset.formationSet ?? 1);
+          const isActive = (btnTarget === 0 && pct < 50) || (btnTarget === 1 && pct >= 50);
+          btn.setAttribute('aria-pressed', String(isActive));
+          if (isActive) {
+            btn.classList.add('border-[var(--accent-signal)]', 'text-[var(--accent-signal)]', 'bg-[var(--accent-signal)]/15');
+            btn.classList.remove('border-[var(--border-subtle)]', 'text-[var(--text-muted)]');
+          } else {
+            btn.classList.remove('border-[var(--accent-signal)]', 'text-[var(--accent-signal)]', 'bg-[var(--accent-signal)]/15');
+            btn.classList.add('border-[var(--border-subtle)]', 'text-[var(--text-muted)]');
+          }
+        });
+      };
+
+      const tick = () => {
+        const diff = targetT - currentT;
+        if (Math.abs(diff) > 0.002) {
+          currentT += diff * 0.09;
+          renderAt(currentT);
+          rafId = requestAnimationFrame(tick);
+        } else {
+          currentT = targetT;
+          renderAt(currentT);
+          rafId = null;
+        }
+      };
+
+      const scheduleTick = () => {
+        if (rafId === null) {
+          rafId = requestAnimationFrame(tick);
+        }
+      };
+
+      if (isHero && !prefersReducedMotion) {
+        // Continuous playback cycle for variant="hero":
+        // 8.4s full cycle: 0.9s hold in chaos -> 3.0s settle into formation -> 1.9s hold in formation -> 2.6s disperse back to chaos
+        const cycleDuration = 8400;
+        const startTime = performance.now();
+
+        const loopHero = (now: number) => {
+          if (manualOverride) {
+            loopRafId = null;
+            return;
+          }
+          const elapsed = (now - startTime) % cycleDuration;
+          let cycleT = 0;
+
+          if (elapsed < 900) {
+            cycleT = 0;
+          } else if (elapsed < 3900) {
+            cycleT = (elapsed - 900) / 3000;
+          } else if (elapsed < 5800) {
+            cycleT = 1;
+          } else {
+            const returnProgress = (elapsed - 5800) / 2600;
+            // Smooth cosine ease back toward dispersion
+            cycleT = 0.5 * (1 + Math.cos(Math.PI * returnProgress));
+          }
+
+          currentT = cycleT;
+          renderAt(currentT);
+          loopRafId = requestAnimationFrame(loopHero);
+        };
+
+        loopRafId = requestAnimationFrame(loopHero);
+      } else {
+        // Initial render & gentle entrance from chaos -> formation for non-hero variants
+        renderAt(currentT);
+        if (!prefersReducedMotion) {
+          setTimeout(() => {
+            if (!manualOverride) {
+              targetT = 1;
+              scheduleTick();
+            }
+          }, 280);
+        }
+
+        const onScroll = () => {
+          if (manualOverride || prefersReducedMotion) return;
+          const rect = root.getBoundingClientRect();
+          const viewportH = window.innerHeight || 800;
+          const scrollY = window.scrollY;
+          if (scrollY < 40) {
+            targetT = 1;
+          } else {
+            const progress = Math.min(1, Math.max(0.15, 1 - Math.max(0, rect.top - viewportH * 0.15) / (viewportH * 0.75)));
+            targetT = progress;
+          }
+          scheduleTick();
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+
+      modeButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          manualOverride = true;
+          if (loopRafId !== null) {
+            cancelAnimationFrame(loopRafId);
+            loopRafId = null;
+          }
+          targetT = Number(btn.dataset.formationSet ?? 1);
+          scheduleTick();
+        });
+      });
+
+      slider?.addEventListener('input', () => {
+        manualOverride = true;
+        if (loopRafId !== null) {
+          cancelAnimationFrame(loopRafId);
+          loopRafId = null;
+        }
+        targetT = Number(slider.value) / 100;
+        currentT = targetT;
+        renderAt(currentT);
+      });
+    });
+  };
+
+  initFormationGraphics();
+  document.addEventListener('astro:page-load', initFormationGraphics);
+</script>
+

@@ -1,0 +1,87 @@
+---
+const navigationLinks = [
+  { label: 'The Tension', href: '/#idea' },
+  { label: 'Three Capabilities', href: '/#work' },
+  { label: 'Raykis Workshops', href: '/#masterclass' },
+  { label: 'Case Brief', href: '/#case' },
+  { label: 'About The Spotted Ape', href: '/about' },
+];
+
+const studioCapabilities = [
+  'Strategic Decisions (Raykis Workshops)',
+  'Behavioural Design & Research',
+  'Human Judgement in AI-Enabled Organisations',
+  'The !Kharos Masterclass Series',
+];
+---
+
+<footer class="bg-[var(--bg-dark)] text-[var(--text-primary)]">
+  <div class="editorial-container py-20 sm:py-28">
+    <div class="mb-6 flex items-center gap-2.5">
+      <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+      <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+        THE SPOTTED APE • WISE HANDS AT THE WHEEL
+      </p>
+    </div>
+
+    <p class="font-editorial mb-6 max-w-[30ch] text-3xl leading-tight text-[var(--text-primary)] sm:text-5xl">
+      We help you <em>find formation.</em> Then we get out of the way.
+    </p>
+    <p class="mb-14 max-w-[54ch] text-sm leading-7 text-[var(--text-muted)] sm:text-base">
+      Better decisions in a world of accelerating possibilities. Independent strategic practice of Marcel Maré — Cape Town, South Africa.
+    </p>
+
+    <div class="grid gap-10 border-t border-[var(--border-subtle)] py-12 sm:grid-cols-3 sm:gap-8">
+      <div>
+        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Navigation</h2>
+        <ul class="flex list-none flex-col gap-3 p-0">
+          {navigationLinks.map(({ label, href }) => (
+            <li>
+              <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href}>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Core Capabilities</h2>
+        <ul class="flex list-none flex-col gap-3 p-0">
+          {studioCapabilities.map((service) => (
+            <li class="text-sm text-[var(--text-muted)]">{service}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Connect</h2>
+        <ul class="flex list-none flex-col gap-3 p-0">
+          <li>
+            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="mailto:contact@spottedape.com">
+              contact@spottedape.com
+            </a>
+          </li>
+          <li>
+            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="https://thespottedape.substack.com" target="_blank" rel="noreferrer">
+              Substack Publication ↗
+            </a>
+          </li>
+          <li>
+            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/#book">
+              Start a Conversation →
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-4 border-t border-[var(--border-subtle)] pt-6 text-xs text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 The Spotted Ape (Pty) Ltd — Cape Town, South Africa</p>
+      <nav class="flex gap-6" aria-label="Legal">
+        <a class="text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/privacy">Privacy</a>
+        <a class="text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/terms">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+---
+import FormationGraphic from './FormationGraphic.astro';
+---
+
+<section class="architectural-grid section-y border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]">
+  <div class="editorial-container">
+    <div class="grid items-center gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
+      <div>
+        <div class="mb-8">
+          <span class="eyebrow-pill">
+            <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+            THE VISIBLE AGENT • ORIENTATION IN CHAOS
+          </span>
+        </div>
+
+        <h1 class="h1 mb-7 max-w-[14.5ch] text-[var(--text-primary)]">
+          Everything is moving faster. But who has <em>wise hands at the wheel?</em>
+        </h1>
+
+        <div class="mb-8 border-l-2 border-[var(--accent-signal)] pl-5 sm:pl-6">
+          <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+            <strong class="font-normal text-[var(--accent-signal)]">Find formation.</strong> Better decisions in a world of accelerating possibilities.
+          </p>
+        </div>
+
+        <p class="p-body mb-10 max-w-[58ch]">
+          We have never had more capability. But capability without direction creates confusion. We help capable people cut through organisational noise, coordinate human judgement, and move together with conviction.
+        </p>
+
+        <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+          <a
+            class="inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+            href="#book"
+          >
+            Start a Conversation <span class="ml-2.5" aria-hidden="true">→</span>
+          </a>
+          <a
+            class="group text-sm font-semibold text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)]"
+            href="/about"
+          >
+            Read the 5-Part Narrative <span class="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <FormationGraphic variant="hero" />
+      </div>
+    </div>
+
+    <div class="mt-16 grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:mt-20 md:grid-cols-3">
+      <div class="bg-[var(--bg-elevated)] p-6 sm:p-7">
+        <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">01 / ORIENTATION</p>
+        <p class="font-editorial mb-1.5 text-xl text-[var(--text-primary)] sm:text-2xl">Visibility creates orientation.</p>
+        <p class="text-sm leading-6 text-[var(--text-muted)]">A clear, unmistakable point of reference when signals get crossed and noise masquerades as urgency.</p>
+      </div>
+      <div class="bg-[var(--bg-elevated)] p-6 sm:p-7">
+        <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">02 / COORDINATION</p>
+        <p class="font-editorial mb-1.5 text-xl text-[var(--text-primary)] sm:text-2xl">Wise hands at the wheel.</p>
+        <p class="text-sm leading-6 text-[var(--text-muted)]">Calm, seasoned practitioner judgement rooted in human behaviour—not abstract theory or algorithmic hype.</p>
+      </div>
+      <div class="bg-[var(--bg-elevated)] p-6 sm:p-7">
+        <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">03 / INDEPENDENCE</p>
+        <p class="font-editorial mb-1.5 text-xl text-[var(--text-primary)] sm:text-2xl">Useful, never indispensable.</p>
+        <p class="text-sm leading-6 text-[var(--text-muted)]">Steady hands when it matters. Once your team has formation and conviction, we step aside.</p>
+      </div>
+    </div>
+  </div>
+</section>

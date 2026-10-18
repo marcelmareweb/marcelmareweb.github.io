@@ -1,0 +1,270 @@
+---
+import { getCollection } from 'astro:content';
+
+const stages = (await getCollection('stages')).sort((first, second) => first.data.order - second.data.order);
+const initialStage = stages[0];
+---
+
+<section id="masterclass" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="masterclass-title">
+  <div class="editorial-container">
+    <div class="mb-14 grid gap-8 border-b border-[var(--border-subtle)] pb-10 lg:grid-cols-[7fr_5fr] lg:items-end lg:gap-16">
+      <div>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+          03 / RAYKIS STRATEGIC DECISION WORKSHOPS &amp; AGENTIC MASTERY
+        </p>
+        <h2 id="masterclass-title" class="h2 max-w-[18ch] text-[var(--text-primary)]">
+          From competing perspectives to <em>collective decisions.</em>
+        </h2>
+      </div>
+      <div>
+        <p class="p-lead mb-4">
+          AI extends capability. Humans remain responsible for judgement.
+        </p>
+        <p class="p-body max-w-[56ch]">
+          Our Raykis Strategic Decision Workshops and 5-Stage Agentic Mastery progression help leadership and specialist teams expose hidden assumptions, resolve competing priorities, and govern AI-enabled work with clarity.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:gap-10">
+      <nav class="flex flex-col border-y border-[var(--border-subtle)] bg-[var(--bg-primary)]" role="tablist" aria-label="Stages of Agentic Mastery" aria-orientation="vertical">
+        {stages.map((stage, index) => (
+          <button
+            class="stage-tab flex w-full items-center gap-4 border-b border-[var(--border-subtle)] px-4 py-4 text-left transition-colors last:border-b-0 hover:bg-[var(--bg-card)] sm:px-5 sm:py-5"
+            type="button"
+            role="tab"
+            id={`stage-tab-${stage.data.stageNumber}`}
+            aria-controls="stage-inspector"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            tabindex={index === 0 ? 0 : -1}
+            data-stage-tab
+            data-stage-number={stage.data.stageNumber}
+            data-stage-title={stage.data.title}
+            data-automation-level={stage.data.automationLevel}
+            data-summary={stage.data.summary}
+            data-primary-risk={stage.data.primaryRisk}
+            data-human-checkpoint={stage.data.humanCheckpoint}
+            data-workshop-deliverable={stage.data.workshopDeliverable}
+          >
+            <span class="technical-label w-8 shrink-0 text-xs text-[var(--accent-signal)]">{stage.data.stageNumber}</span>
+            <span class="min-w-0 flex-1">
+              <span class="font-editorial block text-2xl leading-tight text-[var(--text-primary)]">{stage.data.title}</span>
+              <span class="technical-label mt-1 block text-[11px] tracking-wider text-[var(--text-muted)]">{stage.data.automationLevel}</span>
+            </span>
+            <span class="technical-label shrink-0 border border-[var(--border-subtle)] px-2.5 py-1 text-[10px] text-[var(--text-muted)]">TIER {stage.data.order}</span>
+          </button>
+        ))}
+      </nav>
+
+      <div
+        id="stage-inspector"
+        class="border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-6 transition-opacity duration-150 sm:p-8 lg:p-10"
+        role="tabpanel"
+        aria-labelledby={`stage-tab-${initialStage.data.stageNumber}`}
+        tabindex="0"
+        data-stage-inspector
+        aria-live="polite"
+      >
+        <div class="mb-8 flex flex-wrap items-start justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]" data-stage-number-label>
+              STAGE {initialStage.data.stageNumber} / 05
+            </p>
+            <h3 class="font-editorial text-4xl text-[var(--text-primary)] sm:text-5xl" data-stage-title>{initialStage.data.title}</h3>
+          </div>
+          <span class="technical-label border border-[var(--border-accent)] bg-[var(--accent-signal)]/10 px-3 py-2 text-[11px] tracking-widest text-[var(--accent-signal)]" data-stage-tier>{initialStage.data.automationLevel}</span>
+        </div>
+
+        <p class="mb-8 max-w-[56ch] text-base leading-7 text-[var(--text-primary)] sm:text-lg sm:leading-8" data-stage-value="summary">{initialStage.data.summary}</p>
+
+        <div class="grid gap-7 border-t border-[var(--border-subtle)] pt-7 sm:grid-cols-2 sm:gap-8">
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">PRIMARY FAILURE RISK</p>
+            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-stage-value="primaryRisk">{initialStage.data.primaryRisk}</p>
+          </div>
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">HUMAN-IN-THE-LOOP CHECKPOINT</p>
+            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-stage-value="humanCheckpoint">{initialStage.data.humanCheckpoint}</p>
+          </div>
+        </div>
+
+        <div class="mt-7 flex flex-col gap-5 border-t border-[var(--border-subtle)] pt-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">CONCRETE WORKSHOP DELIVERABLE</p>
+            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl" data-stage-value="workshopDeliverable">{initialStage.data.workshopDeliverable}</p>
+          </div>
+          <button class="inquiry-button inline-flex min-h-12 shrink-0 cursor-pointer items-center justify-center gap-2 bg-[var(--accent-signal)] px-6 text-sm font-semibold text-[var(--text-on-accent)] transition-colors hover:bg-[var(--accent-signal-hover)]" type="button" data-stage-inquiry>
+            <span data-inquiry-label>Inquire About Stage {initialStage.data.stageNumber} Workshop</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="mt-10 border border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="team-diagnostic-toggle">
+      <button
+        id="team-diagnostic-toggle"
+        class="flex min-h-16 w-full cursor-pointer items-center justify-between gap-5 px-5 py-4 text-left transition-colors hover:bg-[var(--bg-card)] sm:px-7"
+        type="button"
+        aria-expanded="false"
+        aria-controls="team-diagnostic-panel"
+        data-diagnostic-toggle
+      >
+        <span>
+          <span class="technical-label mb-1 block text-[11px] tracking-widest text-[var(--accent-signal)]">QUICK TEAM DIAGNOSTIC</span>
+          <span class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl">Where is your team losing formation right now?</span>
+        </span>
+        <span class="technical-label shrink-0 text-xl text-[var(--accent-signal)]" aria-hidden="true" data-diagnostic-icon>+</span>
+      </button>
+
+      <div id="team-diagnostic-panel" class="border-t border-[var(--border-subtle)] px-5 py-6 sm:px-7 sm:py-7" hidden>
+        <p class="mb-5 text-sm text-[var(--text-muted)]">Select the pattern that sounds most familiar to identify your starting workshop stage.</p>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <button class="diagnostic-option cursor-pointer border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-4 text-left text-sm leading-6 text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)]" type="button" aria-pressed="false" data-diagnostic-stage="01">
+            Endless AI drafts and over-editing without a clear argument.
+          </button>
+          <button class="diagnostic-option cursor-pointer border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-4 text-left text-sm leading-6 text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)]" type="button" aria-pressed="false" data-diagnostic-stage="02">
+            Power users hoarding unrepeatable private prompts.
+          </button>
+          <button class="diagnostic-option cursor-pointer border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-4 text-left text-sm leading-6 text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)]" type="button" aria-pressed="false" data-diagnostic-stage="03">
+            Leadership uneasy about quality and compliance, with teams rubber-stamping output.
+          </button>
+          <button class="diagnostic-option cursor-pointer border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-4 text-left text-sm leading-6 text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)]" type="button" aria-pressed="false" data-diagnostic-stage="04" data-diagnostic-followup-stage="05">
+            Multi-step agents are being deployed without clear boundaries or a defined standard of taste.
+          </button>
+        </div>
+        <div class="mt-5 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-card)] px-5 py-4 text-[var(--text-primary)]" aria-live="polite" data-diagnostic-recommendation hidden>
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">RECOMMENDED STARTING STAGE</p>
+          <p class="font-editorial text-xl sm:text-2xl" data-diagnostic-result></p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script>
+  const stageTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-stage-tab]'));
+  const inspector = document.querySelector<HTMLElement>('[data-stage-inspector]');
+  const diagnosticToggle = document.querySelector<HTMLButtonElement>('[data-diagnostic-toggle]');
+  const diagnosticPanel = document.querySelector<HTMLElement>('#team-diagnostic-panel');
+  const diagnosticRecommendation = document.querySelector<HTMLElement>('[data-diagnostic-recommendation]');
+  const diagnosticResult = document.querySelector<HTMLElement>('[data-diagnostic-result]');
+
+  const selectStage = (stageNumber: string, shouldScrollMobile = false) => {
+    const selectedTab = stageTabs.find((tab) => tab.dataset.stageNumber === stageNumber);
+    if (!selectedTab || !inspector) return;
+
+    stageTabs.forEach((tab) => {
+      const isSelected = tab === selectedTab;
+      tab.setAttribute('aria-selected', String(isSelected));
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+
+    inspector.setAttribute('aria-labelledby', selectedTab.id);
+    const stage = selectedTab.dataset;
+    const title = inspector.querySelector<HTMLElement>('[data-stage-title]');
+    const numberLabel = inspector.querySelector<HTMLElement>('[data-stage-number-label]');
+    const tier = inspector.querySelector<HTMLElement>('[data-stage-tier]');
+    const inquiryLabel = inspector.querySelector<HTMLElement>('[data-inquiry-label]');
+
+    if (title) title.textContent = stage.stageTitle ?? '';
+    if (numberLabel) numberLabel.textContent = `STAGE ${stage.stageNumber} / 05`;
+    if (tier) tier.textContent = stage.automationLevel ?? '';
+    if (inquiryLabel) inquiryLabel.textContent = `Inquire About Stage ${stage.stageNumber} Training`;
+
+    for (const field of ['summary', 'primaryRisk', 'humanCheckpoint', 'workshopDeliverable']) {
+      const target = inspector.querySelector<HTMLElement>(`[data-stage-value="${field}"]`);
+      const value = stage[field];
+      if (target && value) target.textContent = value;
+    }
+
+    if (shouldScrollMobile && window.innerWidth < 1024) {
+      const rect = inspector.getBoundingClientRect();
+      if (rect.top > window.innerHeight * 0.7 || rect.bottom < 0) {
+        inspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  };
+
+  stageTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectStage(tab.dataset.stageNumber ?? '', true));
+    tab.addEventListener('keydown', (event) => {
+      const key = event.key;
+      let nextIndex = index;
+
+      if (key === 'ArrowDown') nextIndex = (index + 1) % stageTabs.length;
+      else if (key === 'ArrowUp') nextIndex = (index - 1 + stageTabs.length) % stageTabs.length;
+      else if (key === 'Home') nextIndex = 0;
+      else if (key === 'End') nextIndex = stageTabs.length - 1;
+      else return;
+
+      event.preventDefault();
+      const nextTab = stageTabs[nextIndex];
+      selectStage(nextTab.dataset.stageNumber ?? '');
+      nextTab.focus();
+    });
+  });
+
+  diagnosticToggle?.addEventListener('click', () => {
+    if (!diagnosticPanel) return;
+    const isExpanded = diagnosticToggle.getAttribute('aria-expanded') === 'true';
+    diagnosticPanel.hidden = isExpanded;
+    diagnosticToggle.setAttribute('aria-expanded', String(!isExpanded));
+    const icon = diagnosticToggle.querySelector<HTMLElement>('[data-diagnostic-icon]');
+    if (icon) icon.textContent = isExpanded ? '+' : '−';
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('[data-diagnostic-stage]').forEach((option) => {
+    option.addEventListener('click', () => {
+      const stageNumber = option.dataset.diagnosticStage ?? '';
+      const selectedTab = stageTabs.find((tab) => tab.dataset.stageNumber === stageNumber);
+      if (!selectedTab || !diagnosticRecommendation || !diagnosticResult) return;
+
+      document.querySelectorAll('[data-diagnostic-stage]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button === option));
+      });
+      selectStage(stageNumber);
+      const followupTab = option.dataset.diagnosticFollowupStage
+        ? stageTabs.find((tab) => tab.dataset.stageNumber === option.dataset.diagnosticFollowupStage)
+        : undefined;
+      const recommendation = `${selectedTab.dataset.stageNumber} ${selectedTab.dataset.stageTitle} — ${selectedTab.dataset.automationLevel}`;
+      diagnosticResult.textContent = followupTab
+        ? `${recommendation}. Progress to ${followupTab.dataset.stageNumber} ${followupTab.dataset.stageTitle} — ${followupTab.dataset.automationLevel} when boundary design is established and outcome governance is the next gap.`
+        : recommendation;
+      diagnosticRecommendation.hidden = false;
+    });
+  });
+
+  const inquiryButton = document.querySelector<HTMLButtonElement>('[data-stage-inquiry]');
+  inquiryButton?.addEventListener('click', () => {
+    const selectedTab = stageTabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
+    if (!selectedTab) return;
+
+    window.dispatchEvent(new CustomEvent('select-stage', {
+      detail: {
+        stageNumber: selectedTab.dataset.stageNumber,
+        stageTitle: selectedTab.dataset.stageTitle,
+      },
+    }));
+    document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+
+<style>
+  .stage-tab[aria-selected='true'] {
+    border-left: 3px solid var(--accent-kharos);
+    background: var(--bg-elevated);
+  }
+
+  .stage-tab:focus-visible,
+  .diagnostic-option:focus-visible,
+  .inquiry-button:focus-visible {
+    outline: 2px solid var(--accent-kharos);
+    outline-offset: 3px;
+  }
+
+  .diagnostic-option[aria-pressed='true'] {
+    border-color: var(--accent-kharos);
+    background: var(--bg-elevated);
+  }
+</style>

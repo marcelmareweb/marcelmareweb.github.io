@@ -1,0 +1,60 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: string | URL;
+  ogImage?: string | URL;
+  schemaType?: string;
+}
+
+const {
+  title = 'The Spotted Ape — Find Formation | Wise Hands at the Wheel',
+  description = 'Find formation. Better decisions in a world of accelerating possibilities. Strategic decisions, behavioural design, and human judgement in AI-enabled organisations.',
+  canonicalURL,
+  ogImage = '/og-card.svg',
+  schemaType = 'ProfessionalService',
+} = Astro.props;
+
+const siteURL = Astro.site ?? new URL('https://thespottedape.com');
+const canonical = new URL(canonicalURL ?? Astro.url.pathname, siteURL);
+const socialImage = ogImage ? new URL(ogImage, siteURL).href : undefined;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': schemaType,
+  '@id': 'https://thespottedape.com/#organization',
+  name: 'The Spotted Ape (Pty) Ltd',
+  alternateName: 'The Spotted Ape',
+  url: 'https://thespottedape.com',
+  description,
+  email: 'contact@spottedape.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cape Town',
+    addressRegion: 'Western Cape',
+    addressCountry: 'ZA',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'South Africa',
+  },
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical.href} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Spotted Ape" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical.href} />
+{socialImage && <meta property="og:image" content={socialImage} />}
+
+<meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{socialImage && <meta name="twitter:image" content={socialImage} />}
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

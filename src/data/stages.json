@@ -1,0 +1,57 @@
+[
+  {
+    "id": "explorer",
+    "order": 1,
+    "stageNumber": "01",
+    "title": "Explorer",
+    "automationLevel": "Assisted",
+    "summary": "Confronting the gap between intent and AI output. Learning where judgment begins.",
+    "primaryRisk": "Treating fluent synthetic prose as finished thinking—leading to endless prompt-tweaking.",
+    "humanCheckpoint": "Problem Framing & Premise Lock before touching a model.",
+    "workshopDeliverable": "The Premise & Constraint Brief."
+  },
+  {
+    "id": "practitioner",
+    "order": 2,
+    "stageNumber": "02",
+    "title": "Practitioner",
+    "automationLevel": "Partial Automation",
+    "summary": "From prompts to workflows. Building repeatable systems instead of isolated outputs.",
+    "primaryRisk": "Hero-prompting in private chat threads that cannot be audited or reproduced.",
+    "humanCheckpoint": "Structural Decomposition & Editorial Cut criteria.",
+    "workshopDeliverable": "3 Modular Team Playbooks."
+  },
+  {
+    "id": "integrator",
+    "order": 3,
+    "stageNumber": "03",
+    "title": "Integrator",
+    "automationLevel": "Conditional Automation",
+    "summary": "Human-in-the-loop design. Defining where human oversight is required to maintain strategic rigor and ethical compliance.",
+    "primaryRisk": "Automation complacency (rubber-stamping AI output) or bottlenecking every minor step.",
+    "humanCheckpoint": "High-Consequence Decision Gates on evidentiary claims and policy trade-offs.",
+    "workshopDeliverable": "Human-in-the-Loop Governance Matrix."
+  },
+  {
+    "id": "architect",
+    "order": 4,
+    "stageNumber": "04",
+    "title": "Architect",
+    "automationLevel": "High Automation",
+    "summary": "From using systems to designing them. Creating agentic infrastructures that operate with defined boundaries.",
+    "primaryRisk": "Unbounded agent loops amplifying upstream assumptions and strategic noise.",
+    "humanCheckpoint": "Boundary Specification & Escalation Triggers.",
+    "workshopDeliverable": "Bounded Agentic Architecture Blueprint."
+  },
+  {
+    "id": "steward",
+    "order": 5,
+    "stageNumber": "05",
+    "title": "Steward",
+    "automationLevel": "Full Automation",
+    "summary": "The final shift: taste. Learning to govern outcomes, not interfaces.",
+    "primaryRisk": "Strategic homogenization—sounding and deciding identically to every competitor.",
+    "humanCheckpoint": "Editorial Taste & Outcome Audits against institutional positioning.",
+    "workshopDeliverable": "Executive Stewardship Charter & Quality Rubric."
+  }
+]

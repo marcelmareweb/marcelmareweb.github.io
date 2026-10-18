@@ -1,0 +1,76 @@
+---
+const outcomes = [
+  {
+    number: '01',
+    title: 'Better decisions under pressure',
+    description: 'Teams cut through competing priorities and algorithmic noise to commit to clear, defensible strategic choices.',
+    className: 'md:col-span-7',
+  },
+  {
+    number: '02',
+    title: 'Greater collective alignment',
+    description: 'Shared formation across departments—turning individual speed into coordinated organisational direction.',
+    className: 'md:col-span-5',
+  },
+  {
+    number: '03',
+    title: 'Explicit human accountability',
+    description: 'Clear governance rubrics and human-in-the-loop checkpoints where AI extends capability without diluting ownership.',
+    className: 'md:col-span-4',
+  },
+  {
+    number: '04',
+    title: 'Behavioural realism',
+    description: 'Strategies designed around how people actually perceive risk, negotiate uncertainty, and act in real conditions.',
+    className: 'md:col-span-4',
+  },
+  {
+    number: '05',
+    title: 'Independent capability',
+    description: 'Repeatable decision methods and internal steadiness your team retains long after The Spotted Ape steps aside.',
+    className: 'md:col-span-4',
+  },
+];
+---
+
+<section class="section-y border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="outcomes-title">
+  <div class="editorial-container">
+    <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
+      <div>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+          05 / THE PROMISE OF INDEPENDENCE
+        </p>
+        <h2 id="outcomes-title" class="h2 max-w-[16ch] text-[var(--text-primary)]">
+          Better decisions. Greater alignment. <em>Independent capability.</em>
+        </h2>
+      </div>
+      <div>
+        <p class="p-lead max-w-[58ch]">
+          Make yourself useful, not indispensable. Our goal is never client dependency—success is measured by what your organisation can do without us.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] md:grid-cols-12">
+      {outcomes.map((outcome) => (
+        <article class:list={[
+          'flex min-h-48 flex-col justify-between bg-[var(--bg-primary)] p-7 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:min-h-52 sm:p-8',
+          outcome.className,
+        ]}>
+          <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">{outcome.number} / OUTCOME</p>
+          <div class="mt-8">
+            <h3 class="font-editorial mb-3 max-w-sm text-2xl leading-tight text-[var(--text-primary)] sm:text-3xl">{outcome.title}</h3>
+            <p class="max-w-[44ch] text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">{outcome.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-12 flex flex-col justify-between gap-4 border border-[var(--border-accent)] bg-[var(--bg-primary)] px-6 py-7 sm:flex-row sm:items-center sm:px-9">
+      <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">THE INDEPENDENCE PRINCIPLE</p>
+      <p class="font-editorial text-2xl text-[var(--text-primary)] sm:text-3xl">
+        Steady hands when it matters. <em>Then we get out of the way.</em>
+      </p>
+    </div>
+  </div>
+</section>

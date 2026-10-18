@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.astro": "astro"
+  },
+  "tailwindCSS.includeLanguages": {
+    "astro": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}

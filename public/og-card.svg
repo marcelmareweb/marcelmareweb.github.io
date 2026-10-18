@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="The Spotted Ape — Find Formation">
+  <rect width="1200" height="630" fill="#0C0D0E" />
+  <g stroke="#F6F4F0" stroke-opacity="0.07" stroke-width="1">
+    <line x1="72" y1="0" x2="72" y2="630" />
+    <line x1="1128" y1="0" x2="1128" y2="630" />
+    <line x1="0" y1="84" x2="1200" y2="84" />
+    <line x1="0" y1="546" x2="1200" y2="546" />
+  </g>
+  <circle cx="80" cy="134" r="7" fill="#E9F469" />
+  <text x="102" y="140" fill="#E9F469" font-family="monospace" font-size="16" letter-spacing="3.2">THE SPOTTED APE • WISE HANDS AT THE WHEEL</text>
+  <text x="72" y="258" fill="#F6F4F0" font-family="Georgia, serif" font-size="68">Everything is moving faster.</text>
+  <text x="72" y="342" fill="#E9F469" font-family="Georgia, serif" font-style="italic" font-size="68">Who has wise hands at the wheel?</text>
+  <text x="72" y="432" fill="#A3A19A" font-family="sans-serif" font-size="25">Find formation. Better decisions in a world of accelerating possibilities.</text>
+  <text x="72" y="514" fill="#F6F4F0" fill-opacity="0.7" font-family="monospace" font-size="14" letter-spacing="2.4">STRATEGIC DECISIONS • BEHAVIOURAL DESIGN • HUMAN JUDGEMENT IN AI</text>
+</svg>

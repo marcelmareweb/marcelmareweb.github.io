@@ -1,0 +1,29 @@
+[
+  {
+    "id": "deep-resilience",
+    "order": 1,
+    "title": "Deep resilience",
+    "subtitle": "Clarity under variation",
+    "description": "Rooted in behavioural science and systems thinking. Teams learn how to hold clarity when tools produce infinite variation.",
+    "foundation": "Behavioural science and systems thinking.",
+    "outcome": "Teams learn to hold clarity when tools produce infinite variation."
+  },
+  {
+    "id": "editorial-judgment",
+    "order": 2,
+    "title": "Editorial judgment",
+    "subtitle": "Selection over accumulation",
+    "description": "Knowing what to keep, what to cut, and what actually matters. Not more thinking, but better selection.",
+    "foundation": "Editorial judgment and strategic prioritisation.",
+    "outcome": "Better selection: knowing what to keep, what to cut, and what matters."
+  },
+  {
+    "id": "agentic-orchestration",
+    "order": 3,
+    "title": "Agentic orchestration",
+    "subtitle": "Human accountability by design",
+    "description": "Designing workflows where AI produces, but humans remain accountable for outcomes.",
+    "foundation": "Workflow design with explicit human ownership.",
+    "outcome": "AI produces; humans remain accountable for outcomes."
+  }
+]

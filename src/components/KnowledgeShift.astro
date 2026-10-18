@@ -1,0 +1,126 @@
+---
+const foundingPrinciples = [
+  {
+    number: '01',
+    title: 'Visibility creates orientation',
+    description:
+      'In chaotic circumstances, people need a clear, unmistakable point of reference—functional visibility that cuts through organisational noise and algorithmic hype.',
+  },
+  {
+    number: '02',
+    title: 'Wise hands at the wheel',
+    description:
+      'Calm, seasoned judgement cannot be automated. Real guidance comes from practitioners who understand human behaviour and complex conditions firsthand.',
+  },
+  {
+    number: '03',
+    title: 'Good guidance becomes unnecessary',
+    description:
+      'Our goal is never client dependency. Once clarity is established and your team has steady hands on the wheel, we step aside.',
+  },
+  {
+    number: '04',
+    title: 'The Force Multiplier',
+    description:
+      'We do not need to be the loudest or largest presence in the room—we exist to make the capable people around us collectively effective.',
+  },
+];
+---
+
+<section id="idea" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]">
+  <div class="editorial-container">
+    <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
+      <div>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+          01 / THE STRATEGIC TENSION
+        </p>
+        <h2 class="h2 max-w-[14ch] text-[var(--text-primary)]">
+          More intelligence. <em>Less direction.</em>
+        </h2>
+      </div>
+      <div>
+        <p class="p-lead max-w-[58ch]">
+          We have never had more capability. But capability without direction creates confusion. When conditions turn chaotic, raw speed is not your friend.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-10 border-y border-[var(--border-subtle)] py-12 md:grid-cols-2 md:gap-12">
+      <article class="md:border-r md:border-[var(--border-subtle)] md:pr-12">
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--text-muted)]">THE ACCELERATION TRAP</p>
+        <h3 class="h3 mb-4 text-[var(--text-primary)]">
+          Faster tools. <span class="text-[var(--text-muted)]">Crossed signals.</span>
+        </h3>
+        <p class="p-body max-w-[54ch]">
+          Information is abundant and new technologies appear faster than teams can absorb them. Under pressure, even the most capable people pull in competing directions—mistaking noise for urgency and movement for progress.
+        </p>
+      </article>
+
+      <article>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">THE HUMAN IMPERATIVE</p>
+        <h3 class="h3 mb-4 text-[var(--text-primary)]">
+          AI extends capability. <em>Humans own judgement.</em>
+        </h3>
+        <p class="p-body max-w-[56ch]">
+          The constraint is no longer producing output. It is knowing what matters, confronting trade-offs, and bringing capable individuals together around a direction worth pursuing.
+        </p>
+      </article>
+    </div>
+
+    <!-- The 4 Founding Principles -->
+    <div class="mt-16">
+      <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">FOUNDING PRINCIPLES</p>
+          <h3 class="h3 text-[var(--text-primary)]">Four convictions that anchor our guidance.</h3>
+        </div>
+        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">01 — 04</span>
+      </div>
+
+      <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2 lg:grid-cols-4">
+        {foundingPrinciples.map((principle) => (
+          <article class="flex flex-col justify-between bg-[var(--bg-primary)] p-6 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:p-7">
+            <div class="mb-6 flex items-center justify-between">
+              <span class="technical-label text-xs text-[var(--accent-signal)]">{principle.number}</span>
+              <span class="size-1.5 rounded-full bg-[var(--accent-signal)]/60" aria-hidden="true"></span>
+            </div>
+            <div>
+              <h4 class="font-editorial mb-3 text-2xl leading-snug text-[var(--text-primary)]">{principle.title}</h4>
+              <p class="text-sm leading-6 text-[var(--text-muted)]">{principle.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <!-- Field Diagnostic Callout -->
+    <aside class="mt-14 border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-7 sm:p-10" aria-labelledby="failure-modes-title">
+      <div class="mb-8 flex flex-col gap-3 border-b border-[var(--border-subtle)] pb-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">FIELD DIAGNOSTIC</p>
+          <h3 id="failure-modes-title" class="h3 text-[var(--text-primary)]">Two ways capable teams lose formation.</h3>
+        </div>
+        <p class="max-w-[40ch] text-xs leading-6 text-[var(--text-muted)] sm:text-sm">
+          Both begin as a reaction to accelerating possibilities. Neither produces alignment.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 md:gap-12">
+        <div class="border-l-2 border-[var(--accent-signal)] pl-5 sm:pl-6">
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">FAILURE MODE A // OVER-ACCELERATION</p>
+          <h4 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)] sm:text-3xl">Endless generation without conviction</h4>
+          <p class="max-w-[50ch] text-sm leading-7 text-[var(--text-muted)] sm:text-base">
+            Armed with faster tools, departments generate competing drafts, synthetic analyses, and fragmented initiatives—losing the core argument in a fog of variation.
+          </p>
+        </div>
+        <div class="border-l-2 border-[var(--border-subtle)] pl-5 sm:pl-6">
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--text-muted)]">FAILURE MODE B // ABDICATION</p>
+          <h4 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)] sm:text-3xl">Surrendering human accountability</h4>
+          <p class="max-w-[50ch] text-sm leading-7 text-[var(--text-muted)] sm:text-base">
+            Rubber-stamping algorithmic output or retreating into defensive process—leaving no clear human hand on the wheel when consequential choices must be owned.
+          </p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

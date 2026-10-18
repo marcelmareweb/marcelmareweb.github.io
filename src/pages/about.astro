@@ -1,0 +1,463 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormationGraphic from '../components/FormationGraphic.astro';
+
+const foundingPrinciples = [
+  {
+    number: '01',
+    title: 'Visibility creates orientation',
+    body: 'In chaotic circumstances, people need a clear, unmistakable point of reference. The Spotted Ape is deliberately conspicuous—functional visibility that cuts through organisational noise and algorithmic hype.',
+  },
+  {
+    number: '02',
+    title: 'Wise hands at the wheel',
+    subtitle: 'Experience makes coordination possible',
+    body: 'Calm, seasoned judgement cannot be automated. Real guidance comes from practitioners who understand human behaviour and complex conditions firsthand, offering practical wisdom rather than abstract theory.',
+  },
+  {
+    number: '03',
+    title: 'Good guidance eventually becomes unnecessary',
+    body: 'Our goal is never client dependency. Once clarity is established and your team has steady hands on the wheel, we step aside. Success is measured by what you can do without us.',
+  },
+  {
+    number: '04',
+    title: 'The Force Multiplier',
+    body: 'We do not need to be the loudest or largest presence in the room—we exist to make the capable people around us collectively effective.',
+  },
+];
+
+const capabilities = [
+  {
+    number: '01',
+    title: 'Strategic Decisions',
+    problem: 'Organisations have competing priorities and struggle to make consequential choices under pressure.',
+    contribution: 'Structured, facilitated processes that help teams cut through noise, make hard choices, and commit to decisions.',
+  },
+  {
+    number: '02',
+    title: 'Behavioural Design',
+    problem: 'Strategies fail because actual human behaviour differs from boardroom expectations.',
+    contribution: 'Research and design that address how people really perceive risk, decide, and act.',
+  },
+  {
+    number: '03',
+    title: 'Human Judgement in AI-Enabled Organisations',
+    problem: 'Increasing automation creates chaos around responsibility, expertise, and control.',
+    contribution: 'Helping organisations establish meaningful human oversight, decision authority, and accountability.',
+  },
+];
+
+const sectionIndex = [
+  { number: '01', label: 'The Question', href: '#section-01' },
+  { number: '02', label: 'The Signal in the Chaos', href: '#section-02' },
+  { number: '03', label: 'The Tension', href: '#section-03' },
+  { number: '04', label: 'The Practice', href: '#section-04' },
+  { number: '05', label: 'The Person', href: '#section-05' },
+];
+---
+
+<BaseLayout
+  title="About The Spotted Ape — Everyone Is Moving. But Are We Moving Together?"
+  description="When conditions turn chaotic, speed is not your friend. Discover how The Spotted Ape brings behavioural science, strategic design, and wise human judgement to organisations in transition."
+>
+  <!-- Section 01: The Question -->
+  <section id="section-01" class="architectural-grid section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="about-question-heading">
+    <div class="editorial-container">
+      <div class="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
+        <span class="eyebrow-pill">
+          <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+          01 / THE QUESTION • ABOUT THE SPOTTED APE
+        </span>
+        <nav class="hidden items-center gap-5 lg:flex" aria-label="About page sections">
+          {sectionIndex.map((item) => (
+            <a
+              class="technical-label text-[10px] tracking-widest text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]"
+              href={item.href}
+            >
+              <span class="text-[var(--accent-signal)]">{item.number}</span> {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <div class="grid items-center gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-5 text-xs tracking-widest text-[var(--accent-signal)]">
+            ABOUT THE SPOTTED APE
+          </p>
+          <h1 id="about-question-heading" class="h1 mb-8 max-w-[14ch] text-[var(--text-primary)]">
+            Everyone is moving. <em>But are we moving together?</em>
+          </h1>
+
+          <div class="border-l-2 border-[var(--accent-signal)] pl-5 sm:pl-6">
+            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+              When conditions turn chaotic, speed is not your friend.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <FormationGraphic variant="about" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: The Signal in the Chaos -->
+  <section id="section-02" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="about-signal-heading">
+    <div class="editorial-container">
+      <div class="grid gap-12 lg:grid-cols-[4fr_8fr] lg:gap-16">
+        <div class="flex flex-col justify-between">
+          <div>
+            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              02 / THE SIGNAL IN THE CHAOS
+            </p>
+            <h2 id="about-signal-heading" class="h2 mb-6 max-w-[12ch] text-[var(--text-primary)]">
+              <em>Wise hands</em> at the wheel.
+            </h2>
+          </div>
+
+          <aside class="border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-6 sm:p-7">
+            <p class="technical-label mb-3 text-[10px] tracking-widest text-[var(--accent-signal)]">
+              FUNDAMENTAL PROPOSITION
+            </p>
+            <p class="font-editorial text-xl leading-snug text-[var(--text-primary)] sm:text-2xl">
+              “We have never had more capability. But capability without direction creates confusion.”
+            </p>
+          </aside>
+        </div>
+
+        <div class="space-y-7 text-lg leading-8 text-[var(--text-muted)] sm:text-xl sm:leading-9">
+          <p class="font-editorial max-w-[56ch] text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+            When conditions turn chaotic, speed is not your friend.
+          </p>
+          <p class="max-w-[62ch]">
+            Under pressure and uncertainty, even the most capable teams begin to pull in different directions. Signals get crossed. Noise gets mistaken for urgency. People react to what is loud rather than what is important.
+          </p>
+          <p class="max-w-[62ch]">
+            What matters in those moments is not having a faster engine. It is having wise hands at the wheel—and a clear point of reference that helps everyone find their bearings.
+          </p>
+          <p class="max-w-[62ch] text-[var(--text-primary)]">
+            That is why The Spotted Ape exists: to answer a very human problem. How do capable individuals, working in turbulent, fast-moving circumstances, become something more effective together?
+          </p>
+        </div>
+      </div>
+
+      <!-- The 4 Founding Principles -->
+      <div class="mt-20 border-t border-[var(--border-subtle)] pt-14">
+        <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+            THE FOUR FOUNDING PRINCIPLES
+          </p>
+          <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">01 — 04</span>
+        </div>
+
+        <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2 lg:grid-cols-4">
+          {foundingPrinciples.map((item) => (
+            <article class="flex flex-col justify-between bg-[var(--bg-primary)] p-6 sm:p-7">
+              <div>
+                <span class="technical-label mb-5 block text-xs text-[var(--accent-signal)]">{item.number} / PRINCIPLE</span>
+                <h3 class="font-editorial mb-2 text-2xl leading-snug text-[var(--text-primary)]">{item.title}</h3>
+                {item.subtitle && (
+                  <p class="font-editorial mb-3 text-sm italic text-[var(--accent-ochre)]">{item.subtitle}</p>
+                )}
+              </div>
+              <p class="mt-4 text-sm leading-6 text-[var(--text-muted)]">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: The Tension -->
+  <section id="section-03" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="about-tension-heading">
+    <div class="editorial-container">
+      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+            03 / THE TENSION
+          </p>
+          <h2 id="about-tension-heading" class="h2 mb-6 max-w-[12ch] text-[var(--text-primary)]">
+            Faster tools. <em>Familiar problems.</em>
+          </h2>
+          <p class="technical-label border-l-2 border-[var(--accent-signal)] py-1 pl-4 text-xs tracking-widest text-[var(--accent-signal)]">
+            MORE INTELLIGENCE. LESS DIRECTION.
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <p class="p-body max-w-[62ch] text-lg leading-8 sm:text-xl sm:leading-9">
+            Artificial intelligence is accelerating what organisations can produce. Information is abundant. New technologies appear faster than teams can absorb them. Individuals and departments pursue competing priorities, armed with increasingly sophisticated tools.
+          </p>
+
+          <!-- High-Contrast Editorial Pacing Callout -->
+          <div class="space-y-4 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-7 sm:p-9">
+            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+              Everyone is busy. Everyone is moving.
+            </p>
+            <p class="font-editorial text-2xl leading-snug text-[var(--accent-signal)] sm:text-3xl">
+              But movement is not necessarily progress.
+            </p>
+            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+              And more capability does not automatically produce better decisions.
+            </p>
+          </div>
+
+          <p class="p-lead max-w-[62ch]">
+            The challenge is no longer simply getting things done. It is knowing what matters, deciding what to do and bringing people together around a direction worth pursuing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04: The Practice -->
+  <section id="section-04" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="about-practice-heading">
+    <div class="editorial-container">
+      <!-- Part 4A: A different kind of strategic practice -->
+      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+            04 / THE PRACTICE
+          </p>
+          <h2 id="about-practice-heading" class="h2 mb-6 max-w-[13ch] text-[var(--text-primary)]">
+            A different kind of <em>strategic practice.</em>
+          </h2>
+          <p class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
+            BEHAVIOURAL SCIENCE • STRATEGIC DESIGN • EMERGING TECHNOLOGY
+          </p>
+        </div>
+
+        <div class="space-y-6 text-base leading-8 text-[var(--text-muted)] sm:text-lg sm:leading-9">
+          <p class="max-w-[62ch] text-[var(--text-primary)]">
+            The Spotted Ape works at the intersection of behavioural science, strategic design and emerging technology.
+          </p>
+          <p class="max-w-[62ch]">
+            We help organisations make sense of complexity, confront difficult choices and turn strategic intentions into coordinated action.
+          </p>
+          <p class="max-w-[62ch]">
+            Our work begins with people: how they perceive problems, make decisions, negotiate uncertainty and respond to change.
+          </p>
+          <p class="max-w-[62ch]">
+            We use research, facilitated workshops, strategic design and behavioural insight to make assumptions visible, expose competing priorities and help teams develop a shared understanding of what comes next.
+          </p>
+          <p class="max-w-[62ch]">
+            AI has an increasingly important place in this work. It can extend our analytical and creative capabilities enormously.
+          </p>
+          <p class="font-editorial border-l-2 border-[var(--accent-signal)] py-1 pl-5 text-2xl italic text-[var(--accent-signal)] sm:text-3xl">
+            But capability is not judgement.
+          </p>
+          <p class="max-w-[62ch] text-[var(--text-primary)]">
+            Technology can generate possibilities. People must still decide which possibilities are worth pursuing, what consequences they are prepared to accept and who remains accountable.
+          </p>
+        </div>
+      </div>
+
+      <!-- Part 4B: The Three Interlocking Capabilities Matrix -->
+      <div class="my-20 border-y border-[var(--border-subtle)] py-16 sm:my-24">
+        <div class="mb-12 grid gap-6 lg:grid-cols-[7fr_5fr] lg:items-end">
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              THE THREE INTERLOCKING CAPABILITIES
+            </p>
+            <h3 class="h3 max-w-[26ch] text-[var(--text-primary)]">
+              “How do people coordinate judgement and action under conditions of uncertainty?”
+            </h3>
+          </div>
+          <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">
+            From competing perspectives to collective decisions—our Raykis Strategic Decision Workshops and advisory work unite three capabilities:
+          </p>
+        </div>
+
+        <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] lg:grid-cols-3">
+          {capabilities.map((cap) => (
+            <article class="flex flex-col justify-between bg-[var(--bg-primary)] p-7 sm:p-9">
+              <div>
+                <span class="technical-label mb-5 block text-xs font-semibold text-[var(--accent-signal)]">
+                  {cap.number} / CAPABILITY
+                </span>
+                <h4 class="font-editorial mb-6 text-2xl leading-tight text-[var(--text-primary)] sm:text-3xl">
+                  {cap.title}
+                </h4>
+                <div class="mb-6 border-l-2 border-[var(--border-subtle)] pl-4">
+                  <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--text-muted)]">THE PROBLEM</p>
+                  <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{cap.problem}</p>
+                </div>
+              </div>
+              <div class="border-t border-[var(--border-subtle)] pt-5">
+                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">
+                  THE SPOTTED APE’S CONTRIBUTION
+                </p>
+                <p class="text-sm font-medium leading-6 text-[var(--text-primary)] sm:text-base">{cap.contribution}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <!-- Part 4C: Wise hands at the wheel—until you no longer need us. -->
+      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+            04.2 / OUR ROLE IS NOT TO STEER FOR YOU FOREVER
+          </p>
+          <h3 class="h2 mb-6 max-w-[14ch] text-[var(--text-primary)]">
+            Wise hands at the wheel—<em>until you no longer need us.</em>
+          </h3>
+        </div>
+
+        <div class="space-y-6 text-base leading-8 text-[var(--text-muted)] sm:text-lg sm:leading-9">
+          <p class="max-w-[62ch] text-[var(--text-primary)]">
+            We do not arrive with a predetermined answer or a proprietary framework that promises to solve every problem. And we have no interest in making you dependent on us.
+          </p>
+          <p class="max-w-[62ch]">
+            We bring seasoned experience, sharp questions, rigorous methods and an independent perspective when circumstances are messy.
+          </p>
+          <p class="max-w-[62ch]">
+            Sometimes that means challenging a comfortable assumption. Sometimes it means introducing a different way of seeing the problem. Sometimes it means helping people recognise that they already possess much of the knowledge required to move forward.
+          </p>
+
+          <div class="space-y-3 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-primary)] p-6 sm:p-8">
+            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl">
+              Our purpose is to create the conditions for better decisions.
+            </p>
+            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl">
+              To provide steady guidance when the path is unclear.
+            </p>
+            <p class="font-editorial text-xl text-[var(--accent-signal)] sm:text-2xl">
+              To help people see what matters and find formation.
+            </p>
+            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl">
+              And, once your team can navigate confidently on its own, to step aside.
+            </p>
+          </div>
+
+          <p class="max-w-[62ch] text-[var(--text-primary)]">
+            Because the point was never The Spotted Ape.
+          </p>
+          <p class="max-w-[62ch]">
+            It is what becomes possible when capable people move together with clarity and conviction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Closing Section Callout -->
+      <div class="mt-16 border border-[var(--border-accent)] bg-[var(--bg-primary)] p-8 sm:mt-20 sm:p-12">
+        <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
+          SIGNATURE COMMITMENT
+        </p>
+        <p class="font-editorial text-3xl leading-tight text-[var(--text-primary)] sm:text-5xl">
+          We help you find formation. <em>Then we get out of the way.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: The Person -->
+  <section id="section-05" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="about-person-heading">
+    <div class="editorial-container">
+      <div class="grid gap-12 lg:grid-cols-[4fr_8fr] lg:gap-16">
+        <!-- Restrained Architectural Portrait & Dossier Card -->
+        <aside class="flex flex-col justify-between border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-7 sm:p-8">
+          <div>
+            <div class="mb-6 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
+              <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">05 / THE PERSON</span>
+              <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+            </div>
+
+            <!-- Geometric Monogram & Orientation Frame -->
+            <div class="mb-7 border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-6">
+              <svg class="block h-auto w-full" viewBox="0 0 280 200" role="img" aria-label="Marcel Maré — Principal of The Spotted Ape">
+                <rect width="280" height="200" fill="#0C0D0E" />
+                <line x1="20" y1="36" x2="260" y2="36" stroke="#24272B" />
+                <line x1="20" y1="164" x2="260" y2="164" stroke="#24272B" />
+                <circle cx="140" cy="100" r="46" fill="none" stroke="#E9F469" stroke-opacity="0.35" stroke-dasharray="3 3" />
+                <circle cx="140" cy="100" r="32" fill="#131517" stroke="#E9F469" stroke-width="1.25" />
+                <text x="140" y="108" text-anchor="middle" fill="#F6F4F0" font-family="'Newsreader', Georgia, serif" font-size="24">
+                  MM
+                </text>
+                <circle cx="172" cy="76" r="4.5" fill="#E9F469" />
+                <text x="20" y="24" fill="#A3A19A" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.2">
+                  PRINCIPAL PRACTITIONER
+                </text>
+                <text x="260" y="184" text-anchor="end" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.2">
+                  CAPE TOWN, ZA
+                </text>
+              </svg>
+            </div>
+
+            <h3 class="font-editorial mb-1 text-3xl text-[var(--text-primary)]">Marcel Maré</h3>
+            <p class="technical-label mb-6 text-[10px] tracking-widest text-[var(--accent-signal)]">
+              BEHAVIOURAL DESIGNER • RESEARCHER • STRATEGIC CONSULTANT
+            </p>
+          </div>
+
+          <div class="space-y-3 border-t border-[var(--border-subtle)] pt-5 text-xs text-[var(--text-muted)]">
+            <div class="flex justify-between gap-4">
+              <span class="technical-label text-[10px] text-[var(--text-muted)]">PRACTICE</span>
+              <span class="text-right text-[var(--text-primary)]">The Spotted Ape (Pty) Ltd</span>
+            </div>
+            <div class="flex justify-between gap-4">
+              <span class="technical-label text-[10px] text-[var(--text-muted)]">LOCATION</span>
+              <span class="text-right text-[var(--text-primary)]">Cape Town, South Africa</span>
+            </div>
+            <div class="flex justify-between gap-4">
+              <span class="technical-label text-[10px] text-[var(--text-muted)]">DIRECT</span>
+              <a class="text-right text-[var(--accent-signal)] no-underline hover:underline" href="mailto:contact@spottedape.com">
+                contact@spottedape.com
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Verbatim Section 05 Biography -->
+        <div class="flex flex-col justify-between">
+          <div>
+            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              INDEPENDENT STRATEGIC PRACTICE
+            </p>
+            <h2 id="about-person-heading" class="h2 mb-8 text-[var(--text-primary)]">
+              Behind the Spotted Ape
+            </h2>
+
+            <div class="space-y-7 text-lg leading-8 text-[var(--text-muted)] sm:text-xl sm:leading-9">
+              <p class="max-w-[62ch] text-[var(--text-primary)]">
+                The Spotted Ape is the independent strategic practice of Marcel Maré, a behavioural designer, researcher and strategic consultant working across design, human behaviour and emerging technology.
+              </p>
+              <p class="max-w-[62ch]">
+                His work has ranged from understanding why households adopt new energy technologies to helping organisations navigate strategic choices and technological change.
+              </p>
+              <p class="max-w-[62ch]">
+                Across these different contexts, one question has remained remarkably consistent:
+              </p>
+
+              <blockquote class="m-0 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] px-6 py-7 sm:px-8">
+                <p class="font-editorial text-2xl italic leading-snug text-[var(--accent-signal)] sm:text-3xl">
+                  What enables people to move from knowing what is possible to actually doing something worthwhile?
+                </p>
+              </blockquote>
+
+              <p class="max-w-[62ch] text-[var(--text-primary)]">
+                The Spotted Ape brings that question into an age increasingly shaped by artificial intelligence.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[var(--border-subtle)] pt-8 sm:flex-row sm:items-center">
+            <div>
+              <p class="technical-label mb-1.5 text-[11px] tracking-widest text-[var(--accent-signal)]">START A CONVERSATION</p>
+              <p class="font-editorial text-2xl text-[var(--text-primary)]">Ready to bring competing perspectives into formation?</p>
+            </div>
+            <a
+              class="inline-flex min-h-12 shrink-0 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+              href="/#book"
+            >
+              Let’s Talk <span class="ml-2.5" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

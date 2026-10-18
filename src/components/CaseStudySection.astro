@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+
+const featuredCase = (await getCollection('cases')).find((caseStudy) => caseStudy.data.featured);
+const caseData = featuredCase?.data;
+const interventionParts = caseData?.intervention.split(': ') ?? [];
+const steps = caseData
+  ? [
+      { number: '01', label: 'The Pattern', content: caseData.pattern },
+      { number: '02', label: 'The Intervention', content: caseData.intervention },
+      { number: '03', label: 'The Shift', content: caseData.shift },
+      { number: '04', label: 'The Result', content: caseData.result },
+    ]
+  : [];
+---
+
+{caseData && (
+  <section id="case" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="case-study-title">
+    <div class="editorial-container">
+      <div class="mb-10 flex flex-col gap-5 border-b border-[var(--border-subtle)] pb-7 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">04 / FIELD NOTE • STRATEGIC DECISION INTERVENTION</p>
+          <h2 id="case-study-title" class="h2 max-w-[20ch] text-[var(--text-primary)]" style="view-transition-name: case-study-title;">
+            {caseData.title}
+          </h2>
+        </div>
+        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">STRATEGIC REVIEW / {caseData.timeframe}</span>
+      </div>
+
+      <p class="font-editorial mb-12 max-w-[46ch] text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
+        {caseData.clientContext}
+      </p>
+
+      <div class="grid border-y border-[var(--border-subtle)] md:grid-cols-2 xl:grid-cols-4">
+        {steps.map((step, index) => (
+          <article class:list={[
+            'py-7 sm:py-8',
+            index > 0 && 'border-t border-[var(--border-subtle)] md:border-l md:border-t-0 md:pl-7',
+            index < steps.length - 1 && 'md:pr-7',
+            index > 1 && 'xl:border-t-0',
+            index > 0 && 'xl:pl-7',
+          ]}>
+            <p class="technical-label mb-4 flex items-center gap-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              <span class="text-[var(--text-primary)]">{step.number}</span>
+              <span aria-hidden="true">/</span>
+              {step.label}
+            </p>
+            {step.number === '02' && interventionParts.length > 1 ? (
+              <p class="text-base leading-7 text-[var(--text-muted)]">
+                {interventionParts[0]}: <em class="font-editorial text-[1.12em] text-[var(--accent-signal)]">{interventionParts.slice(1).join(': ')}</em>
+              </p>
+            ) : step.number === '04' ? (
+              <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)]">{step.content}</p>
+            ) : (
+              <p class="text-base leading-7 text-[var(--text-muted)]">{step.content}</p>
+            )}
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-10 flex flex-col justify-between gap-8 border-b border-[var(--border-subtle)] pb-10 lg:flex-row lg:items-end">
+        <blockquote class="m-0 border-l-2 border-[var(--accent-signal)] pl-6">
+          <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">THE OUTCOME IN ONE LINE</p>
+          <p class="font-editorial max-w-[38ch] text-2xl italic leading-snug text-[var(--text-primary)] sm:text-3xl">
+            “{caseData.quote}”
+          </p>
+        </blockquote>
+
+        <div class="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <p class="text-xs text-[var(--text-muted)]">A concise case brief for executive discussion.</p>
+          <a class="group inline-flex min-h-12 shrink-0 items-center justify-center bg-[var(--accent-signal)] px-6 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]" href={`/cases/${caseData.slug}`}>
+            Read the Full Printable Brief <span class="ml-3 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+)}

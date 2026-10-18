@@ -1,0 +1,107 @@
+---
+const archetypes = [
+  {
+    role: 'ARCHETYPE 01 // THE GUIDE',
+    title: 'Wise hands at the wheel',
+    description:
+      'Experience, steadiness, seasoned judgement, and the calm required to help capable people find their bearings amidst turbulence.',
+  },
+  {
+    role: 'ARCHETYPE 02 // THE CHALLENGER',
+    title: 'Making the unfamiliar visible',
+    description:
+      'A willingness to question comfortable assumptions, disrupt herd thinking, and expose competing priorities before they derail execution.',
+  },
+];
+
+const practiceAreas = [
+  {
+    number: '01',
+    title: 'Raykis Decision Workshops',
+    description: 'Facilitated strategic interventions turning competing perspectives into collective decisions.',
+  },
+  {
+    number: '02',
+    title: 'Behavioural Research & Design',
+    description: 'Field insight and strategic design grounded in how people actually perceive risk, decide, and act.',
+  },
+  {
+    number: '03',
+    title: 'AI Governance & Oversight',
+    description: 'Establishing meaningful human judgement, decision authority, and accountability in automated workflows.',
+  },
+  {
+    number: '04',
+    title: 'The !Kharos Masterclass Series',
+    description: 'Staged capability progression from individual tool use to organisational outcome stewardship.',
+  },
+];
+---
+
+<section id="about" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="about-title">
+  <div class="editorial-container">
+    <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+      <div class="flex flex-col justify-between">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+            06 / ABOUT THE PRACTICE
+          </p>
+          <h2 id="about-title" class="h2 mb-6 max-w-[13ch] text-[var(--text-primary)]">
+            A different kind of <em>strategic practice.</em>
+          </h2>
+          <p class="p-lead mb-6 max-w-[48ch]">
+            The Spotted Ape is the independent strategic practice of Marcel Maré—working at the intersection of behavioural science, strategic design, and emerging technology.
+          </p>
+          <p class="p-body max-w-[50ch]">
+            A guide without a challenger is conventional consultancy; a challenger without a guide is disruption for its own sake. We hold both in productive tension.
+          </p>
+        </div>
+
+        <div class="mt-10 border-t border-[var(--border-subtle)] pt-7">
+          <p class="technical-label mb-5 border-l-2 border-[var(--accent-signal)] py-1 pl-4 text-[11px] tracking-widest text-[var(--text-muted)]">
+            MARCEL MARÉ • CAPE TOWN, SOUTH AFRICA
+          </p>
+          <a
+            class="group inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-6 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+            href="/about"
+          >
+            Read the Full 5-Part About Story <span class="ml-3 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-10">
+        <!-- Dual Archetype Tension -->
+        <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2">
+          {archetypes.map((item) => (
+            <article class="bg-[var(--bg-elevated)] p-6 sm:p-7">
+              <p class="technical-label mb-3 text-[10px] tracking-widest text-[var(--accent-signal)]">{item.role}</p>
+              <h3 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)]">{item.title}</h3>
+              <p class="text-sm leading-6 text-[var(--text-muted)]">{item.description}</p>
+            </article>
+          ))}
+        </div>
+
+        <!-- Practice Areas Grid -->
+        <div>
+          <div class="mb-5 flex items-end justify-between gap-5 border-b border-[var(--border-subtle)] pb-4">
+            <p class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">ENGAGEMENT ARCHITECTURE</p>
+            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">01 — 04</span>
+          </div>
+
+          <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2">
+            {practiceAreas.map((area) => (
+              <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-6 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:p-7">
+                <span class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">{area.number} / PRACTICE</span>
+                <div>
+                  <h4 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)]">{area.title}</h4>
+                  <p class="text-sm leading-6 text-[var(--text-muted)]">{area.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="404 — Orientation Lost | The Spotted Ape"
+  description="Without wise hands at the wheel, even fast-moving systems lose formation. Return to The Spotted Ape."
+>
+  <section class="architectural-grid section-y flex min-h-[68vh] items-center border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="not-found-title">
+    <div class="editorial-container">
+      <span class="eyebrow-pill mb-7">
+        <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+        404 / ORIENTATION LOST
+      </span>
+      <h1 id="not-found-title" class="h1 mb-6 max-w-[16ch] text-[var(--text-primary)]">
+        Movement without <em>formation.</em>
+      </h1>
+      <p class="font-editorial mb-9 max-w-[44ch] text-2xl leading-snug text-[var(--text-muted)] sm:text-3xl">
+        When conditions turn chaotic, speed is not your friend. Let’s return to a clear point of reference.
+      </p>
+      <a class="inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]" href="/">
+        Return to the homepage <span class="ml-3" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

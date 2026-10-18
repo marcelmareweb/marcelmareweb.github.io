@@ -1,0 +1,83 @@
+---
+const links = [
+  { label: 'The Tension', href: '/#idea' },
+  { label: 'Capabilities', href: '/#work' },
+  { label: 'Raykis Workshops', href: '/#masterclass' },
+  { label: 'Case Brief', href: '/#case' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[#0C0D0E]/88 backdrop-blur-md">
+  <div class="editorial-container flex min-h-20 items-center justify-between gap-6">
+    <a class="group flex min-w-0 flex-col leading-none text-[var(--text-primary)] no-underline" href="/" aria-label="The Spotted Ape home">
+      <span class="flex items-center gap-2.5 text-sm font-bold tracking-[0.16em]">
+        <span class="inline-block size-2.5 rounded-full bg-[var(--accent-signal)] shadow-[0_0_12px_rgba(233,244,105,0.65)] transition-transform duration-200 group-hover:scale-125" aria-hidden="true"></span>
+        <span>THE<span class="text-[var(--accent-signal)]">SPOTTED</span>APE</span>
+      </span>
+      <span class="technical-label mt-1.5 pl-5 text-[10px] tracking-widest text-[var(--text-muted)]">Wise Hands at the Wheel</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+      {links.map(({ label, href }) => (
+        <a class="text-xs font-medium tracking-wide text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href}>{label}</a>
+      ))}
+      <a class="inline-flex min-h-10 items-center bg-[var(--accent-signal)] px-5 py-2.5 text-xs font-semibold tracking-wide text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]" href="/#book" aria-label="Start a Conversation">
+        Let’s Talk
+      </a>
+    </nav>
+
+    <button
+      class="flex size-10 items-center justify-center border border-[var(--border-subtle)] text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)] lg:hidden"
+      type="button"
+      aria-label="Open navigation"
+      aria-controls="mobile-navigation"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span class="flex w-4 flex-col gap-1.5" aria-hidden="true">
+        <span class="h-px w-full bg-current"></span>
+        <span class="h-px w-full bg-current"></span>
+      </span>
+    </button>
+  </div>
+
+  <nav id="mobile-navigation" class="editorial-container border-t border-[var(--border-subtle)] bg-[#0C0D0E] py-5 lg:hidden" aria-label="Mobile navigation" hidden>
+    <div class="flex flex-col">
+      {links.map(({ label, href }) => (
+        <a class="border-b border-[var(--border-subtle)] py-3.5 text-sm text-[var(--text-primary)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href} data-menu-link>{label}</a>
+      ))}
+      <a class="mt-5 bg-[var(--accent-signal)] px-5 py-3.5 text-center text-sm font-semibold text-[var(--text-on-accent)] no-underline" href="/#book" aria-label="Start a Conversation" data-menu-link>
+        Let’s Talk
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const mobileNavigation = document.querySelector<HTMLElement>('#mobile-navigation');
+
+  const closeMenu = () => {
+    if (!menuToggle || !mobileNavigation) return;
+    mobileNavigation.hidden = true;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation');
+  };
+
+  menuToggle?.addEventListener('click', () => {
+    if (!mobileNavigation) return;
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    mobileNavigation.hidden = isExpanded;
+    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+    menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation' : 'Close navigation');
+  });
+
+  mobileNavigation?.querySelectorAll<HTMLAnchorElement>('[data-menu-link]').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+</script>

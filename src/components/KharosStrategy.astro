@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+
+const pillars = (await getCollection('pillars')).sort((first, second) => first.data.order - second.data.order);
+
+const capabilities = [
+  {
+    number: '01',
+    title: 'Strategic Decisions',
+    tag: 'DIRECTION UNDER PRESSURE',
+    problem: 'Organisations have competing priorities and struggle to make consequential choices under pressure.',
+    contribution: 'Structured, facilitated processes that help teams cut through noise, make hard choices, and commit to decisions.',
+  },
+  {
+    number: '02',
+    title: 'Behavioural Design',
+    tag: 'HUMAN REALITY VS. BOARDROOM THEORY',
+    problem: 'Strategies fail because actual human behaviour differs from boardroom expectations.',
+    contribution: 'Research and design that address how people really perceive risk, decide, and act.',
+  },
+  {
+    number: '03',
+    title: 'Human Judgement in AI-Enabled Organisations',
+    tag: 'OVERSIGHT & ACCOUNTABILITY',
+    problem: 'Increasing automation creates chaos around responsibility, expertise, and control.',
+    contribution: 'Helping organisations establish meaningful human oversight, decision authority, and accountability.',
+  },
+];
+---
+
+<section id="work" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]">
+  <div class="editorial-container">
+    <!-- Section Header: Governing Question -->
+    <div class="mb-14 flex flex-col gap-4 border-b border-[var(--border-subtle)] pb-8 sm:flex-row sm:items-end sm:justify-between">
+      <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+        02 / THREE INTERLOCKING CAPABILITIES
+      </p>
+      <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">THE GOVERNING QUESTION</span>
+    </div>
+
+    <div class="mb-16 grid gap-10 lg:grid-cols-[7fr_5fr] lg:items-end lg:gap-16">
+      <div>
+        <h2 class="h2 max-w-[18ch] text-[var(--text-primary)]">
+          “How do people coordinate <em>judgement and action</em> under conditions of uncertainty?”
+        </h2>
+      </div>
+      <div>
+        <p class="p-body max-w-[54ch]">
+          Every engagement we undertake answers this single question. Rather than offering a menu of generic consulting programmes, our practice interlocks strategic facilitation, behavioural reality, and responsible human governance.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 Interlocking Capabilities Matrix (Luft-inspired 3-Pillar Architecture) -->
+    <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] lg:grid-cols-3">
+      {capabilities.map((cap) => (
+        <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-7 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:p-9">
+          <div>
+            <div class="mb-8 flex items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-4">
+              <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">{cap.number} / CAPABILITY</span>
+              <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">{cap.tag}</span>
+            </div>
+
+            <h3 class="h3 mb-7 text-[var(--text-primary)]">{cap.title}</h3>
+
+            <div class="mb-6 border-l-2 border-[var(--border-subtle)] pl-4">
+              <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--text-muted)]">THE PROBLEM</p>
+              <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
+                {cap.problem}
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 border-t border-[var(--border-subtle)] pt-6">
+            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">THE SPOTTED APE’S CONTRIBUTION</p>
+            <p class="text-sm font-medium leading-6 text-[var(--text-primary)] sm:text-base sm:leading-7">
+              {cap.contribution}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Underlying Methodological Foundations (!Kharos Lineage) -->
+    <div class="mt-20 border-t border-[var(--border-subtle)] pt-14 sm:mt-24">
+      <div class="mb-10 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end">
+        <div>
+          <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-ochre)]">
+            METHODOLOGICAL ROOTS // THE !KHAROS STRATEGY
+          </p>
+          <h3 class="h3 text-[var(--text-primary)]">Rhizomatic resilience under abundance.</h3>
+        </div>
+        <p class="p-body max-w-[60ch]">
+          Inspired by the <em class="font-editorial text-[var(--text-primary)]">Welwitschia mirabilis</em> (!Kharos) of the Namib Desert—which endures relentless environmental extremes through deep subterranean structure—our work rests on three intellectual disciplines:
+        </p>
+      </div>
+
+      <div class="grid border-y border-[var(--border-subtle)] md:grid-cols-3">
+        {pillars.map(({ data }, index) => (
+          <article class:list={[
+            'flex flex-col py-8 sm:py-10',
+            index > 0 && 'border-t border-[var(--border-subtle)] md:border-l md:border-t-0 md:pl-8',
+            index < pillars.length - 1 && 'md:pr-8',
+          ]}>
+            <span class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">0{data.order} / DISCIPLINE</span>
+            <h4 class="font-editorial mb-1 text-2xl text-[var(--text-primary)] sm:text-3xl">{data.title}</h4>
+            <p class="font-editorial mb-4 text-base italic text-[var(--accent-ochre)]">{data.subtitle}</p>
+            <p class="mb-6 text-sm leading-7 text-[var(--text-muted)] sm:text-base">{data.description}</p>
+            <div class="mt-auto border-t border-[var(--border-subtle)] pt-4">
+              <p class="text-xs leading-5 text-[var(--text-muted)]">
+                <strong class="font-semibold text-[var(--text-primary)]">Foundation:</strong> {data.foundation}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
