@@ -82,9 +82,8 @@ const engagements = [
 
         <form
           class="grid gap-x-5 gap-y-5 sm:grid-cols-2"
-          action="mailto:hello@thespottedape.com?subject=Executive%20Workshop%20Inquiry"
-          method="post"
-          enctype="text/plain"
+          action="https://formsubmit.co/hello@thespottedape.com"
+          method="POST"
           data-inquiry-form
           data-web3forms-key={web3FormsKey}
           data-endpoint={inquiryEndpoint}
@@ -93,7 +92,10 @@ const engagements = [
           <div class="sr-only" aria-hidden="true">
             <label for="inquiry-botcheck">Do not fill this out if you are human</label>
             <input type="text" id="inquiry-botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
           </div>
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
 
           <div>
             <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-name">Name <span aria-hidden="true">*</span></label>
@@ -157,14 +159,14 @@ const engagements = [
               <p class="font-editorial text-2xl text-[var(--text-primary)]">
                 Thank you. Your inquiry has been delivered directly to Marcel Maré.
               </p>
-              <p class="mt-1.5 text-xs leading-5 text-[var(--text-muted)]">
+              <p class="mt-1.5 text-xs leading-5 text-[var(--text-muted)]" data-inquiry-confirmation-detail>
                 We review every briefing personally and will respond to your work email shortly.
               </p>
             </div>
 
             <p class="mt-4 text-xs leading-5 text-[var(--text-muted)]" role="status" aria-live="polite" data-inquiry-status></p>
             <a class="mt-2 hidden inline-block text-sm font-semibold text-[var(--accent-signal)] underline underline-offset-4" href="mailto:hello@thespottedape.com" data-email-fallback>
-              Email hello@thespottedape.com directly →
+              Or send via email to hello@thespottedape.com →
             </a>
           </div>
         </form>
@@ -177,6 +179,7 @@ const engagements = [
   const inquiryForm = document.querySelector<HTMLFormElement>('[data-inquiry-form]');
   const inquiryStatus = document.querySelector<HTMLElement>('[data-inquiry-status]');
   const inquiryConfirmation = document.querySelector<HTMLElement>('[data-inquiry-confirmation]');
+  const inquiryConfirmationDetail = document.querySelector<HTMLElement>('[data-inquiry-confirmation-detail]');
   const emailFallback = document.querySelector<HTMLAnchorElement>('[data-email-fallback]');
   const submitButton = document.querySelector<HTMLButtonElement>('[data-submit-button]');
   const engagementSelect = document.querySelector<HTMLSelectElement>('#inquiry-engagement');
@@ -255,6 +258,7 @@ const engagements = [
 
     return {
       subject,
+      _subject: subject,
       from_name: 'The Spotted Ape Website',
       replyto: email,
       _replyto: email,
@@ -269,7 +273,7 @@ const engagements = [
     };
   };
 
-  const openEmailDraft = (formData: FormData) => {
+  const prepareFallbackLink = (formData: FormData) => {
     const payload = buildStructuredPayload(formData);
     const message = [
       'EXECUTIVE BRIEFING INQUIRY — THE SPOTTED APE',
@@ -286,14 +290,10 @@ const engagements = [
       payload.context,
     ].join('\n');
 
-    if (inquiryStatus) {
-      inquiryStatus.textContent = 'Opening your pre-formatted executive briefing in your email client…';
-    }
     if (emailFallback) {
       emailFallback.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
       emailFallback.classList.remove('hidden');
     }
-    window.location.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
   };
 
   inquiryForm?.addEventListener('submit', async (event) => {
@@ -304,7 +304,8 @@ const engagements = [
 
     // Silent honeypot check for automated bots
     const botcheck = String(formData.get('botcheck') ?? '').trim();
-    if (botcheck.length > 0) {
+    const honey = String(formData.get('_honey') ?? '').trim();
+    if (botcheck.length > 0 || honey.length > 0) {
       if (inquiryConfirmation) inquiryConfirmation.hidden = false;
       if (inquiryStatus) inquiryStatus.textContent = 'Thank you. Your inquiry has been received.';
       inquiryForm.reset();
@@ -314,16 +315,15 @@ const engagements = [
     const web3FormsKey = (inquiryForm.dataset.web3formsKey ?? '').trim();
     const customEndpoint = (inquiryForm.dataset.endpoint ?? '').trim();
 
-    if (!web3FormsKey && !customEndpoint) {
-      openEmailDraft(formData);
-      return;
-    }
+    // Priority: 1. Web3Forms (if key set) -> 2. Custom Endpoint (if set) -> 3. FormSubmit AJAX direct to hello@thespottedape.com
+    const targetUrl = web3FormsKey
+      ? 'https://api.web3forms.com/submit'
+      : customEndpoint || 'https://formsubmit.co/ajax/hello@thespottedape.com';
 
     const payload = buildStructuredPayload(formData);
-    const targetUrl = web3FormsKey ? 'https://api.web3forms.com/submit' : customEndpoint;
     const requestBody = web3FormsKey
       ? { access_key: web3FormsKey, botcheck: '', ...payload }
-      : { _gotcha: '', ...payload };
+      : { _captcha: 'false', _template: 'table', _honey: '', ...payload };
 
     if (inquiryConfirmation) inquiryConfirmation.hidden = true;
     if (emailFallback) emailFallback.classList.add('hidden');
@@ -344,18 +344,31 @@ const engagements = [
       });
 
       const result = await response.json().catch(() => null);
-      if (!response.ok || (web3FormsKey && result && result.success === false)) {
-        throw new Error(`Form provider returned ${response.status}.`);
+      const isFailure =
+        !response.ok ||
+        (result && (result.success === false || result.success === 'false'));
+
+      if (isFailure) {
+        const providerMsg = result?.message ? String(result.message) : `HTTP ${response.status}`;
+        throw new Error(providerMsg);
       }
 
       if (inquiryConfirmation) inquiryConfirmation.hidden = false;
+      if (inquiryConfirmationDetail && result?.message && String(result.message).toLowerCase().includes('activate')) {
+        inquiryConfirmationDetail.textContent =
+          'First-time setup: Please check hello@thespottedape.com and click the one-time activation link to enable instant delivery.';
+      }
       if (inquiryStatus) {
         inquiryStatus.textContent = 'Thank you. Your inquiry has been delivered to hello@thespottedape.com.';
       }
       inquiryForm.reset();
       if (stageSelectionStatus) stageSelectionStatus.textContent = '';
-    } catch {
-      openEmailDraft(formData);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Unable to reach form server.';
+      if (inquiryStatus) {
+        inquiryStatus.textContent = `Could not complete direct submission (${errorMessage}). You can retry or use the direct email link below.`;
+      }
+      prepareFallbackLink(formData);
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
