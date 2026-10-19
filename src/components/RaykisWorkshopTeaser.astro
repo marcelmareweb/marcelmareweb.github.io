@@ -75,18 +75,26 @@ const workshopHighlights = [
     <div class="mt-10 flex flex-col items-start justify-between gap-6 border border-[var(--border-accent)] bg-[var(--bg-primary)] p-7 sm:flex-row sm:items-center sm:p-9">
       <div>
         <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">
-          INTERACTIVE 5-STAGE CURRICULUM &amp; TEAM DIAGNOSTIC
+          INTERACTIVE 5-STAGE CURRICULUM, DIAGNOSTIC &amp; APPLIED COURSES
         </p>
         <p class="font-editorial text-2xl text-[var(--text-primary)] sm:text-3xl">
-          Explore the full Raykis workshop architecture and run the Quick Team Diagnostic.
+          Explore the full Raykis workshop architecture or enter our applied case courses.
         </p>
       </div>
-      <a
-        class="group inline-flex min-h-12 shrink-0 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
-        href="/workshops"
-      >
-        Explore Raykis Workshops <span class="ml-2.5 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
-      </a>
+      <div class="flex flex-wrap items-center gap-3 shrink-0">
+        <a
+          class="group inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+          href="/workshops"
+        >
+          Explore Raykis Workshops <span class="ml-2.5 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+        </a>
+        <a
+          class="inline-flex min-h-12 items-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-6 text-sm font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
+          href="/courses"
+        >
+          Explore Applied Courses →
+        </a>
+      </div>
     </div>
   </div>
 </section>

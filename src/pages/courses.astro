@@ -1,0 +1,545 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CourseSyllabus from '../components/CourseSyllabus.astro';
+import BookingSection from '../components/BookingSection.astro';
+
+const pageTitle = 'Applied Strategy & Digital Acumen Courses | The Spotted Ape';
+const pageDescription =
+  'Applied learning in human judgement, responsible AI, behavioural and strategic design, and practical decision-making. Explore the Cape Manufacturing solar investment case and custom executive cohorts.';
+
+const anchorLinks = [
+  { number: '01', label: 'The Premise', href: '#premise' },
+  { number: '02', label: 'Why Conventional Strategy Fails', href: '#tension' },
+  { number: '03', label: 'Complete Syllabus', href: '#syllabus' },
+  { number: '04', label: 'Who It Is For & Outcomes', href: '#outcomes' },
+  { number: '05', label: 'Apply / Inquire', href: '#book' },
+];
+
+const courseSpecs = [
+  {
+    label: 'FLAGSHIP CASE SIMULATION',
+    value: 'Should We Invest in Solar? (Cape Manufacturing)',
+    detail: 'Three competing Western Cape rooftop solar proposals (R650k–R990k). One auditable model. One executive recommendation.',
+  },
+  {
+    label: 'DURATION & CADENCE',
+    value: '65–80 Min Interactive Case · Custom Multi-Week Labs',
+    detail: 'Self-paced interactive digital case or facilitated in-house cohort sprint calibrated to your organisation’s decisions.',
+  },
+  {
+    label: 'TECHNICAL ENVIRONMENT',
+    value: 'Microsoft Excel & Google Sheets + AI Governance',
+    detail: 'Zero prior spreadsheet fluency assumed; builds traceable financial modelling alongside critical managerial scepticism.',
+  },
+  {
+    label: 'CURRICULUM ARCHITECT',
+    value: 'Marcel Maré — The Spotted Ape (Cape Town)',
+    detail: 'Constructively aligned across Foundational, Practical, and Reflexive competence tiers.',
+  },
+];
+
+const tensionContrasts = [
+  {
+    number: '01',
+    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
+    conventionalTitle: 'Mechanical formulas detached from commercial reality',
+    conventionalCopy:
+      'Participants memorise syntax, copy static templates, or accept AI and spreadsheet outputs at face value—retyping inputs across tabs until nobody can audit where a number came from.',
+    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
+    spottedApeTitle: 'Traceable models anchored to a single source of truth',
+    spottedApeCopy:
+      'Every formula links directly back to source assumptions (Case Data!A3:F17). Learners diagnose broken relative references and build models that an executive or auditor can trace in seconds.',
+  },
+  {
+    number: '02',
+    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
+    conventionalTitle: 'Treating a single metric as an automatic decision',
+    conventionalCopy:
+      'Case exercises are rigged so one option wins on every measure—teaching analysts that the spreadsheet makes the choice for them.',
+    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
+    spottedApeTitle: 'Confronting genuine commercial trade-offs',
+    spottedApeCopy:
+      'Proposal A wins on simple payback (2.92 years). Proposal C wins on 20-year NPV (R2.871m). Proposal B overtakes C if self-consumption drops below ~73.96%. The spreadsheet gives evidence; it does not choose the decision rule.',
+  },
+  {
+    number: '03',
+    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
+    conventionalTitle: 'Taking vendor claims and annual averages on trust',
+    conventionalCopy:
+      'Supplier projections and ESG assertions are pasted straight into board decks without questioning operational timing or lifecycle boundaries.',
+    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
+    spottedApeTitle: 'Disciplined operational & sustainability scepticism',
+    spottedApeCopy:
+      'Learners demand half-hourly factory load profiles aligned with midday solar generation rather than annual totals, and separate unverified environmental claims until independent lifecycle evidence is produced.',
+  },
+];
+
+const toolkitResources = [
+  {
+    code: 'ARTIFACT 01 // .XLSX',
+    title: 'Student Workbook (V8)',
+    description:
+      'Five traceable sheets (Start Here, Case Data, Your Model, Test Assumptions, Recommendation) with pre-built 20-year DCF NPV engine.',
+    href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx',
+    cta: 'Download Student Workbook ↓',
+  },
+  {
+    code: 'ARTIFACT 02 // .PDF',
+    title: 'Cape Manufacturing Case Brief',
+    description:
+      'Full commercial context, supplier proposal specifications (60 kWp, 80 kWp, 100 kWp), tariff assumptions, and Financial Director briefing.',
+    href: 'https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf',
+    cta: 'Open Case Brief PDF ↗',
+  },
+  {
+    code: 'ARTIFACT 03 // .PDF',
+    title: 'Excel & Google Sheets Quick Reference',
+    description:
+      'Side-by-side reference covering cell addressing, cross-sheet syntax, relative ($A8) vs. absolute ($B$4) locking, and currency formatting.',
+    href: 'https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf',
+    cta: 'Open Quick Reference PDF ↗',
+  },
+  {
+    code: 'ARTIFACT 04 // .PDF',
+    title: 'Formula Troubleshooting Diagnostic',
+    description:
+      'Structured diagnostic card for inspecting copied-reference shifts, percentage formatting errors, and numerator/denominator reversals.',
+    href: 'https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf',
+    cta: 'Open Diagnostic Card PDF ↗',
+  },
+  {
+    code: 'ARTIFACT 05 // .XLSX',
+    title: 'Completed Reference Workbook (V8)',
+    description:
+      'Post-completion benchmark model for Stage 06 (Reflect) self-audit—compare your formula structure and sensitivity table against the reference solution.',
+    href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx',
+    cta: 'Download Reference Model ↓',
+  },
+  {
+    code: 'ARTIFACT 06 // RATIONALE',
+    title: '5-Minute Reviewer Rationale',
+    description:
+      'Complete pedagogical blueprint mapping constructive alignment, scaffolding, formative checkpoints, and competence rubrics for academic and executive reviewers.',
+    href: 'https://marcelmare.com/dla-course-2/reviewer-rationale.html',
+    cta: 'Read Reviewer Rationale ↗',
+  },
+];
+
+const audienceProfiles = [
+  {
+    tag: 'COHORT PROFILE 01',
+    title: 'Commercial Analysts, Trainee Accountants & Emerging Managers',
+    description:
+      'Professionals who build or review spreadsheets and AI-assisted analyses and need to move from mechanical operator to trusted commercial adviser.',
+  },
+  {
+    tag: 'COHORT PROFILE 02',
+    title: 'Enterprise Finance, Strategy & Operations Teams',
+    description:
+      'Intact organisational teams seeking custom case simulations built around their own capital allocation hurdles, operational risks, and decision rules.',
+  },
+  {
+    tag: 'COHORT PROFILE 03',
+    title: 'University & Executive Education Programmes',
+    description:
+      'Business schools and professional institutes requiring constructively aligned, observable digital-acumen and managerial-judgement curricula.',
+  },
+];
+
+const outcomesList = [
+  {
+    number: '01',
+    tier: 'FOUNDATIONAL & PRACTICAL COMPETENCE',
+    title: 'Auditable Financial & Operational Modelling',
+    description:
+      'Build traceable multi-sheet models (Your Model!B4:D7) that convert raw operational inputs into comparable financial metrics without hard-coded assumptions.',
+  },
+  {
+    number: '02',
+    tier: 'ANALYTICAL INTERROGATION',
+    title: 'Sensitivity & Crossover Stress-Testing',
+    description:
+      'Evaluate conflicting investment criteria (2.92y payback vs. R2.871m 20-year NPV) and isolate the exact operational threshold (~73.96% self-consumption) where rankings flip.',
+  },
+  {
+    number: '03',
+    tier: 'PROFESSIONAL SCEPTICISM',
+    title: 'Evidence-Based Verification of Claims',
+    description:
+      'Specify granular operational proof (half-hourly load data over annual averages) and independent lifecycle verification before allowing supplier claims to sway capital choices.',
+  },
+  {
+    number: '04',
+    tier: 'EXECUTIVE COMMUNICATION & TRANSFER',
+    title: '100-Word Decision Briefings & Pattern Transfer',
+    description:
+      'Communicate a qualified recommendation in 100 words or fewer—and transfer the Inputs → Model → Test assumptions → Interpret → Recommend loop to future strategic decisions.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Section 01: Course Hero & Prospectus Dossier -->
+  <section id="premise" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="courses-hero-heading">
+    <div class="editorial-container">
+      <div class="mb-8 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-2.5 border border-[var(--border-accent)] bg-[var(--bg-elevated)] px-3.5 py-1.5">
+          <span class="size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
+          <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+            STRATEGIC EDUCATION // THE SPOTTED APE
+          </span>
+        </span>
+        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
+          APPLIED LEARNING &amp; DIGITAL ACUMEN
+        </span>
+      </div>
+
+      <div class="grid gap-12 lg:grid-cols-[7fr_5fr] lg:items-start lg:gap-16">
+        <div>
+          <h1 id="courses-hero-heading" class="h1 mb-8 max-w-[16ch] text-[var(--text-primary)]">
+            The spreadsheet provides the evidence. The decisions require <em>your judgement.</em>
+          </h1>
+
+          <div class="space-y-6">
+            <p class="p-lead max-w-[60ch]">
+              Applied learning at The Spotted Ape joins human judgement, critical thinking, responsible AI, behavioural and strategic design, and practical digital capability through realistic organisational challenges.
+            </p>
+            <p class="p-body max-w-[62ch]">
+              In our flagship case simulation, <strong class="font-medium text-[var(--text-primary)]">Should We Invest in Solar?</strong>, you step into the role of a commercial analyst at a South African manufacturing company comparing three competing rooftop solar proposals (<strong class="font-medium text-[var(--text-primary)]">R650,000 to R990,000</strong>). The spreadsheet develops analytical competence; choosing what the evidence supports calls for managerial judgement.
+            </p>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              class="group inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+              href="https://marcelmare.com/dla-course-2/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Enter Interactive Sample Course <span class="ml-2.5 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="inline-flex min-h-12 items-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-6 text-sm font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
+              href="#syllabus"
+            >
+              Inspect 6-Stage Syllabus ↓
+            </a>
+            <a
+              class="inline-flex min-h-12 items-center px-3 text-xs font-medium tracking-wider text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]"
+              href="#book"
+            >
+              Commission an In-House Cohort →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Course Specification Dossier -->
+        <aside class="border border-[var(--border-subtle)] bg-[var(--bg-card)] p-7 sm:p-9" aria-label="Course Specification Dossier">
+          <div class="mb-6 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
+            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+              PROSPECTUS DOSSIER // DLA-02
+            </span>
+            <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
+              OPEN ACCESS &amp; COHORT
+            </span>
+          </div>
+
+          <div class="divide-y divide-[var(--border-subtle)]">
+            {courseSpecs.map((spec) => (
+              <div class="py-4 first:pt-0 last:pb-0">
+                <p class="technical-label mb-1 text-[10px] tracking-widest text-[var(--accent-signal)]">{spec.label}</p>
+                <p class="font-editorial text-2xl text-[var(--text-primary)]">{spec.value}</p>
+                <p class="mt-1 text-xs leading-5 text-[var(--text-muted)]">{spec.detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-6 border-t border-[var(--border-subtle)] pt-5">
+            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
+              TRANSFERABLE DECISION ARCHITECTURE
+            </p>
+            <p class="font-mono text-xs leading-6 text-[var(--text-primary)]">
+              Inputs → Model → Test Assumptions → Interpret → Recommend
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- 5-Section Anchor Jump Bar -->
+      <nav aria-label="Course page sections" class="mt-16 border-t border-[var(--border-subtle)] pt-8">
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--text-muted)]">
+          PROSPECTUS ARCHITECTURE // JUMP TO SECTION
+        </p>
+        <ol class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2 lg:grid-cols-5">
+          {anchorLinks.map((item) => (
+            <li class="bg-[var(--bg-elevated)]">
+              <a
+                href={item.href}
+                class="group flex h-full flex-col justify-between p-4 no-underline transition-colors hover:bg-[var(--bg-card)] sm:p-5"
+              >
+                <span class="technical-label mb-2 text-xs text-[var(--accent-signal)]">{item.number}</span>
+                <span class="text-sm font-medium text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-signal)]">
+                  {item.label}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Section 02: The Problem with Conventional Strategy & Tool Training -->
+  <section id="tension" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="tension-heading">
+    <div class="editorial-container">
+      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+        <div>
+          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+            02 / WHY CONVENTIONAL TRAINING FAILS
+          </p>
+          <h2 id="tension-heading" class="h2 mb-6 max-w-[15ch] text-[var(--text-primary)]">
+            Technical output is not economic value. And a calculation is not <em>a decision.</em>
+          </h2>
+          <p class="p-lead mb-6 max-w-[50ch]">
+            Most technical courses teach tools in a vacuum. Most strategy courses teach frameworks detached from the messy numbers.
+          </p>
+          <p class="p-body mb-8 max-w-[52ch]">
+            In real organisations, analysts and leaders face conflicting metrics, optimistic supplier assumptions, and time pressure. Our courses are built around authentic commercial dilemmas that move learners from <strong class="font-medium text-[var(--text-primary)]">spreadsheet operator</strong> to <strong class="font-medium text-[var(--text-primary)]">analyst</strong> to <strong class="font-medium text-[var(--text-primary)]">professional adviser</strong>.
+          </p>
+
+          <div class="border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-6">
+            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
+              THE CORE PEDAGOGICAL RULE
+            </p>
+            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)]">
+              “The spreadsheet gives evidence. It does not choose the decision rule.”
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          {tensionContrasts.map((row) => (
+            <article class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)]">
+              <div class="flex items-center justify-between border-b border-[var(--border-subtle)] px-6 py-3.5 sm:px-8">
+                <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">
+                  SHIFT {row.number} // CURRICULUM DESIGN
+                </span>
+                <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
+                  OPERATOR → ADVISER
+                </span>
+              </div>
+              <div class="grid gap-px bg-[var(--border-subtle)] sm:grid-cols-2">
+                <div class="bg-[var(--bg-primary)] p-6 sm:p-7">
+                  <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--text-muted)]">
+                    {row.conventionalLabel}
+                  </p>
+                  <h3 class="font-editorial mb-3 text-xl text-[var(--text-primary)]">
+                    {row.conventionalTitle}
+                  </h3>
+                  <p class="text-sm leading-6 text-[var(--text-muted)]">
+                    {row.conventionalCopy}
+                  </p>
+                </div>
+                <div class="bg-[var(--bg-card)] p-6 sm:p-7">
+                  <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
+                    {row.spottedApeLabel}
+                  </p>
+                  <h3 class="font-editorial mb-3 text-xl text-[var(--text-primary)]">
+                    {row.spottedApeTitle}
+                  </h3>
+                  <p class="text-sm leading-6 text-[var(--text-primary)]">
+                    {row.spottedApeCopy}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Interactive Curriculum & Module Inspector -->
+  <CourseSyllabus />
+
+  <!-- Section 04: Toolkit, Video Briefing, Constructive Alignment & Who Should Attend -->
+  <section id="outcomes" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="outcomes-heading">
+    <div class="editorial-container">
+      <!-- Part 4A: Video Introduction & Downloadable Course Toolkit -->
+      <div class="mb-20 border-b border-[var(--border-subtle)] pb-16">
+        <div class="mb-12 grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
+          <div>
+            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+              04 / COURSE TOOLKIT &amp; VIDEO BRIEFING
+            </p>
+            <h2 id="outcomes-heading" class="h2 max-w-[15ch] text-[var(--text-primary)]">
+              Work directly with the <em>case artifacts.</em>
+            </h2>
+          </div>
+          <div>
+            <p class="p-lead mb-3">
+              Every module is backed by an auditable Excel / Google Sheets workbook, diagnostic cards, and a transparent Reviewer Rationale.
+            </p>
+            <p class="p-body max-w-[58ch]">
+              Watch the 1-minute case introduction below, download the V8 Student Workbook, or inspect the 5-minute Reviewer Rationale designed for academic and executive curriculum leads.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-start lg:gap-12">
+          <!-- Video Embed Card -->
+          <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-6 sm:p-7">
+            <div class="mb-4 flex items-center justify-between border-b border-[var(--border-subtle)] pb-3">
+              <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+                VIDEO BRIEFING // 01 MIN
+              </span>
+              <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
+                CAPE MANUFACTURING
+              </span>
+            </div>
+            <div class="aspect-video w-full overflow-hidden border border-[var(--border-subtle)] bg-[#0C0D0E]">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/nHSyLciFe1k"
+                title="Introduction to Should We Invest in Solar?"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+            <h3 class="font-editorial mt-5 mb-2 text-2xl text-[var(--text-primary)]">
+              Introduction to Should We Invest in Solar?
+            </h3>
+            <p class="mb-6 text-sm leading-6 text-[var(--text-muted)]">
+              How the Cape Manufacturing case study connects spreadsheet modelling, sensitivity analysis, and managerial judgement in a 65–80 minute learning activity.
+            </p>
+            <div class="flex flex-wrap gap-3 border-t border-[var(--border-subtle)] pt-5">
+              <a
+                href="https://thespottedape.com/Courses/solar-investment/learn/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex min-h-11 items-center bg-[var(--accent-signal)] px-5 text-xs font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
+              >
+                Open on The Spotted Ape ↗
+              </a>
+              <a
+                href="https://marcelmare.com/dla-course-2/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex min-h-11 items-center border border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 text-xs font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
+              >
+                Mirror: marcelmare.com/dla-course-2 ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- 6-Artifact Toolkit Grid -->
+          <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2">
+            {toolkitResources.map((res) => (
+              <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-6 transition-colors hover:bg-[var(--bg-card)] sm:p-7">
+                <div>
+                  <span class="technical-label mb-3 block text-[10px] tracking-widest text-[var(--accent-signal)]">
+                    {res.code}
+                  </span>
+                  <h3 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)]">{res.title}</h3>
+                  <p class="mb-6 text-xs leading-6 text-[var(--text-muted)] sm:text-sm">{res.description}</p>
+                </div>
+                <div class="border-t border-[var(--border-subtle)] pt-4">
+                  <a
+                    href={res.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="technical-label inline-flex items-center gap-2 text-[11px] tracking-widest text-[var(--accent-signal)] no-underline transition-colors hover:text-[var(--accent-signal-hover)]"
+                  >
+                    {res.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 4B: Who Should Attend & Concrete Outcomes -->
+      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+        <div class="flex flex-col justify-between">
+          <div>
+            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+              04.2 / WHO IT IS FOR &amp; CAPABILITY OUTCOMES
+            </p>
+            <h3 class="h2 mb-6 max-w-[14ch] text-[var(--text-primary)]">
+              Built for people who must <em>defend their decisions.</em>
+            </h3>
+            <p class="p-body mb-8 max-w-[50ch]">
+              Whether taken as an individual self-paced simulation or commissioned as a custom cohort lab for your strategy, finance, or operations function, every course is constructively aligned around observable work.
+            </p>
+
+            <div class="space-y-4">
+              {audienceProfiles.map((aud) => (
+                <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 sm:p-6">
+                  <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{aud.tag}</p>
+                  <h4 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{aud.title}</h4>
+                  <p class="text-sm leading-6 text-[var(--text-muted)]">{aud.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Synthesis Bridge with Raykis Workshops -->
+          <div class="mt-8 border border-[var(--border-accent)] bg-[var(--bg-elevated)] p-6 sm:p-7">
+            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
+              HOW COURSES &amp; RAYKIS WORKSHOPS FIT TOGETHER
+            </p>
+            <p class="mb-4 text-sm leading-6 text-[var(--text-primary)]">
+              <strong>Applied Courses (/courses)</strong> build individual and cohort analytical judgement through realistic case models. <strong>Raykis Workshops (/workshops)</strong> bring 6–14 decision-makers into a live facilitated room to resolve high-stakes organisational choices.
+            </p>
+            <a
+              href="/workshops"
+              class="technical-label inline-flex items-center gap-2 text-[11px] tracking-widest text-[var(--accent-signal)] no-underline transition-colors hover:text-[var(--accent-signal-hover)]"
+            >
+              Explore Raykis Strategic Decision Workshops →
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-6 flex items-end justify-between border-b border-[var(--border-subtle)] pb-4">
+            <p class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
+              CONSTRUCTIVE ALIGNMENT // FOUR OBSERVABLE OUTCOMES
+            </p>
+            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">01 — 04</span>
+          </div>
+
+          <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)]">
+            {outcomesList.map((outcome) => (
+              <article class="bg-[var(--bg-elevated)] p-6 sm:p-8">
+                <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                  <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">
+                    OUTCOME {outcome.number}
+                  </span>
+                  <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
+                    {outcome.tier}
+                  </span>
+                </div>
+                <h4 class="font-editorial mb-3 text-2xl text-[var(--text-primary)] sm:text-3xl">
+                  {outcome.title}
+                </h4>
+                <p class="max-w-[58ch] text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
+                  {outcome.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Course Enrollment & In-House Cohort Inquiry -->
+  <BookingSection
+    defaultEngagement="Strategy Course (DLA)"
+    eyebrow="05 / APPLY OR REQUEST AN IN-HOUSE COHORT"
+  />
+</BaseLayout>
+

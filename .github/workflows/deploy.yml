@@ -32,6 +32,9 @@ jobs:
 
       - name: Build with Astro
         run: npm run build
+        env:
+          PUBLIC_WEB3FORMS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_KEY || vars.PUBLIC_WEB3FORMS_KEY }}
+          PUBLIC_INQUIRY_ENDPOINT: ${{ secrets.PUBLIC_INQUIRY_ENDPOINT || vars.PUBLIC_INQUIRY_ENDPOINT }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

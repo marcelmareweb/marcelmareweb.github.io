@@ -1,0 +1,489 @@
+---
+const proposals = [
+  {
+    id: 'Proposal A',
+    cost: 'R650,000',
+    size: '60 kWp',
+    generation: '92,000 kWh',
+    selfConsumption: '90%',
+    maintenance: 'R9,000 / yr',
+    netSavingY1: 'R222,840',
+    payback: '2.92 years',
+    npv20: 'R2.152m',
+    exposure: 'Fastest capital recovery; lowest 20-year value.',
+  },
+  {
+    id: 'Proposal B',
+    cost: 'R820,000',
+    size: '80 kWp',
+    generation: '121,000 kWh',
+    selfConsumption: '85%',
+    maintenance: 'R11,000 / yr',
+    netSavingY1: 'R276,980',
+    payback: '2.96 years',
+    npv20: 'R2.662m',
+    exposure: 'Balanced middle option; overtakes C below ~73.96% utilisation.',
+  },
+  {
+    id: 'Proposal C',
+    cost: 'R990,000',
+    size: '100 kWp',
+    generation: '147,000 kWh',
+    selfConsumption: '78%',
+    maintenance: 'R14,000 / yr',
+    netSavingY1: 'R307,048',
+    payback: '3.22 years',
+    npv20: 'R2.871m',
+    exposure: 'Highest base-case NPV; exposed to utilisation & unverified ESG claim.',
+  },
+];
+
+const modules = [
+  {
+    number: '01',
+    slug: 'understand',
+    title: 'Understand',
+    subtitle: 'Interpret the Inputs & Self-Consumption Bridge',
+    competenceTier: 'FOUNDATIONAL COMPETENCE',
+    senderCode: 'FD',
+    timestamp: 'Monday 09:00 · Financial Director',
+    promptHeadline: '“First, establish what we are buying—and what we can use.”',
+    promptBody:
+      'Check the proposal data before calculating. A larger system produces more electricity, but how much of that output will actually reduce our grid purchases?',
+    summary:
+      'Before entering a single formula, participants record an explicit initial prediction and examine why gross technical output (147,000 kWh for System C) does not automatically translate into economic value when unused electricity earns zero revenue.',
+    analyticalMechanics:
+      'Distinguishing installed capacity (60 / 80 / 100 kWp) from self-consumption (90% / 85% / 78%) as the bridge between engineering output and financial return; establishing Case Data!A3:F17 (including the R2.80/kWh tariff in B4) as the single source of truth.',
+    behaviouralShift:
+      'Overcoming anchoring bias on headline system size or lowest purchase price by surfacing prior intuition before touching the spreadsheet.',
+    deliverable:
+      'Recorded pre-model metric prediction + concept-check explanation of why neither gross generation nor self-consumption alone identifies the best investment.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/understand.html',
+  },
+  {
+    number: '02',
+    slug: 'spreadsheet-essentials',
+    title: 'Spreadsheet Essentials',
+    subtitle: 'Traceable Architecture & Reference Discipline',
+    competenceTier: 'FOUNDATIONAL COMPETENCE',
+    senderCode: 'FD',
+    timestamp: 'Monday 09:20 · Financial Director',
+    promptHeadline: '“Make the analysis traceable from the first formula.”',
+    promptBody:
+      'Keep the supplier inputs together and reference them in your calculations. I need to be able to follow each result back to its source.',
+    summary:
+      'Designed so zero prior Excel fluency is assumed while enforcing rigorous financial-modelling hygiene from the first keystroke: never retype a business input into a formula when you can reference the source cell.',
+    analyticalMechanics:
+      "Mastering the five core moves: cell coordinates, formula initiation (=), cross-sheet referencing ('Case Data'!B15*'Case Data'!B16), relative (B15) vs. absolute ($B$4) vs. mixed ($A8) references, and formula bar error inspection.",
+    behaviouralShift:
+      'Replacing fragile copy-pasted numbers with auditable, single-source-of-truth links that another analyst or auditor can verify in seconds.',
+    deliverable:
+      'Verified useful-generation calculation in Your Model!B4:D4 linked directly to Case Data inputs and copied cleanly across proposals.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/spreadsheet-essentials.html',
+  },
+  {
+    number: '03',
+    slug: 'build',
+    title: 'Build',
+    subtitle: 'Construct an Auditable Year-1 Comparison Model',
+    competenceTier: 'PRACTICAL COMPETENCE',
+    senderCode: 'FD',
+    timestamp: 'Monday 09:40 · Financial Director',
+    promptHeadline: '“Before we discuss long-term value, give me a clean Year-1 comparison.”',
+    promptBody:
+      'Show me how much generation we can use, what we save after maintenance and how quickly the initial capital is recovered. Keep the model traceable to the source data.',
+    summary:
+      'Participants convert operational solar data into four comparable Year-1 financial measures across Proposals A, B, and C, diagnose a colleague’s broken reference formula, and design an executive comparison chart.',
+    analyticalMechanics:
+      "Building the 4-step chain in Your Model!B4:D7: Useful Generation → Gross Saving (=B4*'Case Data'!$B$4: R231,840 / R287,980 / R321,048) → Net Saving after maintenance (R222,840 / R276,980 / R307,048) → Simple Payback (2.92 / 2.96 / 3.22 years), plus diagnosing why =C4*'Case Data'!C4 fails.",
+    behaviouralShift:
+      'Treating spreadsheet errors as structural diagnostic problems and pairing quantitative tables with purposeful visual communication.',
+    deliverable:
+      'Completed Your Model!B4:D7 comparison table, corrected reference-error diagnosis, 1 management chart, and a 1-sentence visual-design rationale.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/build.html',
+  },
+  {
+    number: '04',
+    slug: 'test',
+    title: 'Test',
+    subtitle: 'Sensitivity Analysis & Operational Crossover',
+    competenceTier: 'PRACTICAL COMPETENCE',
+    senderCode: 'TJ',
+    timestamp: 'Monday 13:15 · Thandi Jacobs · Production Manager',
+    promptHeadline: '“Will we really use 78% of System C’s output?”',
+    promptBody:
+      'Production varies during the week. If we cannot use as much solar power at the time it is generated as Supplier C assumes, does C still offer the highest net present value (NPV)?',
+    summary:
+      'Simple payback favours System A (2.92 years), while the 20-year DCF model favours System C (≈ R2.871m). When Operations challenges Supplier C’s 78% utilisation assumption, participants stress-test the model from 78% down to 60% to find where the ranking flips.',
+    analyticalMechanics:
+      'Using mixed references ($A8) in Test Assumptions!A8:E14 across 78%, 75%, 72%, 70%, 68%, 65%, and 60% scenarios; isolating the exact crossover at ≈ 73.96% (~74%) where System B (R2.662m) overtakes System C; specifying half-hourly factory load data aligned with midday solar generation.',
+    behaviouralShift:
+      'Interrogating the operational assumption behind the number rather than treating a 20-year DCF output as certainty.',
+    deliverable:
+      'Completed Test Assumptions!A7:E14 sensitivity table, exact ~73.96% crossover identification, and half-hourly load-profile verification requirement.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/test.html',
+  },
+  {
+    number: '05',
+    slug: 'decide',
+    title: 'Decide',
+    subtitle: 'Executive Briefing & Professional Scepticism',
+    competenceTier: 'PRACTICAL & REFLEXIVE COMPETENCE',
+    senderCode: 'FD',
+    timestamp: 'Monday 15:30 · Financial Director',
+    promptHeadline: '“Now turn the evidence into a recommendation.”',
+    promptBody:
+      'Which system should we take forward, why, and what do we still need to verify before signing? Keep your recommendation to 100 words. Separately, record the evidence you would need to assess Supplier C’s environmental claim.',
+    summary:
+      'The spreadsheet gives evidence; it does not choose the decision rule. Participants synthesise conflicting criteria (Payback vs. 20-year NPV vs. Utilisation risk) into a crisp executive recommendation while separating unverified ESG claims from financial fact.',
+    analyticalMechanics:
+      'Drafting a ≤100-word brief citing ≥2 quantified Excel metrics, 1 explicit commercial trade-off, and 1 operational condition prior to contract signature; specifying lifecycle assessment (LCA) boundaries, manufacturing impacts, service life, and independent certification for Supplier C.',
+    behaviouralShift:
+      'Accepting accountability for a qualified managerial judgement where no single metric offers a risk-free answer.',
+    deliverable:
+      '≤100-word Executive Recommendation in Recommendation!A7 + Professional Scepticism Evidence Request in Recommendation!A22.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/decide.html',
+  },
+  {
+    number: '06',
+    slug: 'reflect',
+    title: 'Reflect',
+    subtitle: 'Revisit, Explain & Transfer the Pattern',
+    competenceTier: 'REFLEXIVE COMPETENCE',
+    senderCode: 'FD',
+    timestamp: 'Monday 16:00 · Financial Director',
+    promptHeadline: '“What changed your judgement—and what remains uncertain?”',
+    promptBody:
+      'Explain how the model and sensitivity test changed your initial view. What would you check next, and what would you carry into our next investment decision?',
+    summary:
+      'Participants compare their Stage 01 intuition against their post-sensitivity recommendation, audit their formulas against the completed V8 reference workbook, and transfer the decision architecture to a new organisational challenge.',
+    analyticalMechanics:
+      'Applying the University of Edinburgh “What? So what? Now what?” reflective structure; auditing formula integrity against SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx; mapping Inputs → Model → Test assumptions → Interpret → Recommend to future capital choices.',
+    behaviouralShift:
+      'Moving permanently from spreadsheet operator to analytical adviser who knows how evidence reshapes initial intuition.',
+    deliverable:
+      'Completed reflective transfer synthesis + full model self-audit against the Completed Reference Workbook V8.',
+    liveUrl: 'https://marcelmare.com/dla-course-2/reflect.html',
+  },
+];
+
+const initialModule = modules[0];
+---
+
+<section id="syllabus" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="syllabus-title">
+  <div class="editorial-container">
+    <div class="mb-14 grid gap-8 border-b border-[var(--border-subtle)] pb-10 lg:grid-cols-[7fr_5fr] lg:items-end lg:gap-16">
+      <div>
+        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
+          03 / FLAGSHIP CASE &amp; 6-STAGE SYLLABUS INSPECTOR
+        </p>
+        <h2 id="syllabus-title" class="h2 max-w-[18ch] text-[var(--text-primary)]">
+          Should We Invest in Solar? <em>One case, one model, one decision.</em>
+        </h2>
+      </div>
+      <div>
+        <p class="p-lead mb-4">
+          Cape Manufacturing · Western Cape Capital Investment Simulation
+        </p>
+        <p class="p-body max-w-[56ch]">
+          Take the seat of a commercial analyst advising the Financial Director. Three suppliers have proposed rooftop solar systems costing <strong class="font-medium text-[var(--text-primary)]">R650,000 to R990,000</strong>. Inspect each stage of the 65–80 minute curriculum below.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cape Manufacturing 3-Proposal Reference Strip -->
+    <div class="mb-10 border border-[var(--border-subtle)] bg-[var(--bg-primary)]">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] px-6 py-4 sm:px-8">
+        <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
+          CASE DATA SNAPSHOT // THREE COMPETING SOLAR PROPOSALS (TARIFF: R2.80 / kWh)
+        </p>
+        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
+          SOURCE SHEET: CASE DATA!A3:F17
+        </span>
+      </div>
+      <div class="grid gap-px bg-[var(--border-subtle)] lg:grid-cols-3">
+        {proposals.map((prop) => (
+          <div class="bg-[var(--bg-primary)] p-6 sm:p-7">
+            <div class="mb-4 flex items-baseline justify-between gap-2 border-b border-[var(--border-subtle)] pb-3">
+              <h3 class="font-editorial text-2xl text-[var(--text-primary)]">{prop.id}</h3>
+              <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">{prop.cost} · {prop.size}</span>
+            </div>
+            <dl class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs">
+              <div>
+                <dt class="technical-label text-[10px] text-[var(--text-muted)]">GROSS GENERATION</dt>
+                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.generation}</dd>
+              </div>
+              <div>
+                <dt class="technical-label text-[10px] text-[var(--text-muted)]">SELF-CONSUMPTION</dt>
+                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.selfConsumption}</dd>
+              </div>
+              <div>
+                <dt class="technical-label text-[10px] text-[var(--text-muted)]">NET YEAR-1 SAVING</dt>
+                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.netSavingY1}</dd>
+              </div>
+              <div>
+                <dt class="technical-label text-[10px] text-[var(--text-muted)]">PAYBACK / 20Y NPV</dt>
+                <dd class="mt-0.5 font-medium text-[var(--accent-signal)]">{prop.payback} · {prop.npv20}</dd>
+              </div>
+            </dl>
+            <p class="mt-4 border-t border-[var(--border-subtle)] pt-3 text-xs leading-5 text-[var(--text-muted)]">
+              {prop.exposure}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Interactive 6-Stage Syllabus Inspector -->
+    <div class="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:gap-10">
+      <nav
+        class="flex flex-col border-y border-[var(--border-subtle)] bg-[var(--bg-primary)]"
+        role="tablist"
+        aria-label="Course Curriculum Modules"
+        aria-orientation="vertical"
+      >
+        {modules.map((mod, index) => (
+          <button
+            class="course-tab flex w-full cursor-pointer items-center gap-4 border-b border-[var(--border-subtle)] px-4 py-4 text-left transition-colors last:border-b-0 hover:bg-[var(--bg-card)] sm:px-5 sm:py-5"
+            type="button"
+            role="tab"
+            id={`course-tab-${mod.number}`}
+            aria-controls="course-inspector"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            tabindex={index === 0 ? 0 : -1}
+            data-course-tab
+            data-module-number={mod.number}
+            data-module-title={mod.title}
+            data-module-subtitle={mod.subtitle}
+            data-competence-tier={mod.competenceTier}
+            data-sender-code={mod.senderCode}
+            data-timestamp={mod.timestamp}
+            data-prompt-headline={mod.promptHeadline}
+            data-prompt-body={mod.promptBody}
+            data-summary={mod.summary}
+            data-analytical-mechanics={mod.analyticalMechanics}
+            data-behavioural-shift={mod.behaviouralShift}
+            data-deliverable={mod.deliverable}
+            data-live-url={mod.liveUrl}
+          >
+            <span class="technical-label w-8 shrink-0 text-xs text-[var(--accent-signal)]">{mod.number}</span>
+            <span class="min-w-0 flex-1">
+              <span class="font-editorial block text-2xl leading-tight text-[var(--text-primary)]">{mod.title}</span>
+              <span class="technical-label mt-1 block text-[11px] tracking-wider text-[var(--text-muted)]">{mod.subtitle}</span>
+            </span>
+            <span class="technical-label shrink-0 border border-[var(--border-subtle)] px-2.5 py-1 text-[10px] text-[var(--text-muted)]">
+              STAGE {mod.number}
+            </span>
+          </button>
+        ))}
+      </nav>
+
+      <div
+        id="course-inspector"
+        class="border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-6 transition-opacity duration-150 sm:p-8 lg:p-10"
+        role="tabpanel"
+        aria-labelledby={`course-tab-${initialModule.number}`}
+        tabindex="0"
+        data-course-inspector
+        aria-live="polite"
+      >
+        <div class="mb-7 flex flex-wrap items-start justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
+          <div>
+            <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]" data-course-number-label>
+              MODULE {initialModule.number} / 06 — {initialModule.subtitle}
+            </p>
+            <h3 class="font-editorial text-4xl text-[var(--text-primary)] sm:text-5xl" data-course-title>
+              {initialModule.title}
+            </h3>
+          </div>
+          <span
+            class="technical-label border border-[var(--border-accent)] bg-[var(--accent-signal)]/10 px-3 py-2 text-[10px] tracking-widest text-[var(--accent-signal)]"
+            data-course-tier
+          >
+            {initialModule.competenceTier}
+          </span>
+        </div>
+
+        <!-- In-Case Executive Dispatch Card -->
+        <div class="mb-7 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-5 sm:p-6">
+          <div class="mb-2 flex items-center gap-3">
+            <span
+              class="technical-label inline-flex size-7 items-center justify-center border border-[var(--border-accent)] bg-[var(--bg-primary)] text-[11px] font-semibold text-[var(--accent-signal)]"
+              data-course-sender
+            >
+              {initialModule.senderCode}
+            </span>
+            <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]" data-course-timestamp>
+              {initialModule.timestamp}
+            </span>
+          </div>
+          <p class="font-editorial mb-2 text-2xl leading-snug text-[var(--text-primary)]" data-course-prompt-headline>
+            {initialModule.promptHeadline}
+          </p>
+          <p class="text-sm leading-6 text-[var(--text-muted)]" data-course-prompt-body>
+            {initialModule.promptBody}
+          </p>
+        </div>
+
+        <p class="mb-7 max-w-[58ch] text-base leading-7 text-[var(--text-primary)] sm:text-lg sm:leading-8" data-course-value="summary">
+          {initialModule.summary}
+        </p>
+
+        <div class="grid gap-7 border-t border-[var(--border-subtle)] pt-7 sm:grid-cols-2 sm:gap-8">
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              ANALYTICAL &amp; SPREADSHEET MECHANICS
+            </p>
+            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-course-value="analyticalMechanics">
+              {initialModule.analyticalMechanics}
+            </p>
+          </div>
+          <div>
+            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              BEHAVIOURAL &amp; JUDGEMENT SHIFT
+            </p>
+            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-course-value="behaviouralShift">
+              {initialModule.behaviouralShift}
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-7 flex flex-col gap-5 border-t border-[var(--border-subtle)] pt-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">
+              OBSERVABLE WORKBOOK EVIDENCE
+            </p>
+            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl" data-course-value="deliverable">
+              {initialModule.deliverable}
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              class="inline-flex min-h-11 items-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 text-xs font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
+              href={initialModule.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              data-course-live-link
+            >
+              Open Stage in Live Course <span class="ml-2" aria-hidden="true">↗</span>
+            </a>
+            <button
+              class="course-inquiry-button inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 bg-[var(--accent-signal)] px-5 text-xs font-semibold text-[var(--text-on-accent)] transition-colors hover:bg-[var(--accent-signal-hover)]"
+              type="button"
+              data-course-inquiry
+            >
+              <span data-course-inquiry-label>Commission Module {initialModule.number} Cohort</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const courseTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-course-tab]'));
+  const courseInspector = document.querySelector<HTMLElement>('[data-course-inspector]');
+
+  const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) => {
+    const selectedTab = courseTabs.find((tab) => tab.dataset.moduleNumber === moduleNumber);
+    if (!selectedTab || !courseInspector) return;
+
+    courseTabs.forEach((tab) => {
+      const isSelected = tab === selectedTab;
+      tab.setAttribute('aria-selected', String(isSelected));
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+
+    courseInspector.setAttribute('aria-labelledby', selectedTab.id);
+    const mod = selectedTab.dataset;
+
+    const title = courseInspector.querySelector<HTMLElement>('[data-course-title]');
+    const numberLabel = courseInspector.querySelector<HTMLElement>('[data-course-number-label]');
+    const tier = courseInspector.querySelector<HTMLElement>('[data-course-tier]');
+    const sender = courseInspector.querySelector<HTMLElement>('[data-course-sender]');
+    const timestamp = courseInspector.querySelector<HTMLElement>('[data-course-timestamp]');
+    const promptHeadline = courseInspector.querySelector<HTMLElement>('[data-course-prompt-headline]');
+    const promptBody = courseInspector.querySelector<HTMLElement>('[data-course-prompt-body]');
+    const liveLink = courseInspector.querySelector<HTMLAnchorElement>('[data-course-live-link]');
+    const inquiryLabel = courseInspector.querySelector<HTMLElement>('[data-course-inquiry-label]');
+
+    if (title) title.textContent = mod.moduleTitle ?? '';
+    if (numberLabel) numberLabel.textContent = `MODULE ${mod.moduleNumber} / 06 — ${mod.moduleSubtitle ?? ''}`;
+    if (tier) tier.textContent = mod.competenceTier ?? '';
+    if (sender) sender.textContent = mod.senderCode ?? '';
+    if (timestamp) timestamp.textContent = mod.timestamp ?? '';
+    if (promptHeadline) promptHeadline.textContent = mod.promptHeadline ?? '';
+    if (promptBody) promptBody.textContent = mod.promptBody ?? '';
+    if (liveLink && mod.liveUrl) liveLink.href = mod.liveUrl;
+    if (inquiryLabel) inquiryLabel.textContent = `Commission Module ${mod.moduleNumber} Cohort`;
+
+    for (const field of ['summary', 'analyticalMechanics', 'behaviouralShift', 'deliverable']) {
+      const target = courseInspector.querySelector<HTMLElement>(`[data-course-value="${field}"]`);
+      const value = mod[field];
+      if (target && value) target.textContent = value;
+    }
+
+    if (shouldScrollMobile && window.innerWidth < 1024) {
+      const rect = courseInspector.getBoundingClientRect();
+      if (rect.top > window.innerHeight * 0.7 || rect.bottom < 0) {
+        courseInspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  };
+
+  courseTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectCourseModule(tab.dataset.moduleNumber ?? '', true));
+    tab.addEventListener('keydown', (event) => {
+      const key = event.key;
+      let nextIndex = index;
+
+      if (key === 'ArrowDown') nextIndex = (index + 1) % courseTabs.length;
+      else if (key === 'ArrowUp') nextIndex = (index - 1 + courseTabs.length) % courseTabs.length;
+      else if (key === 'Home') nextIndex = 0;
+      else if (key === 'End') nextIndex = courseTabs.length - 1;
+      else return;
+
+      event.preventDefault();
+      const nextTab = courseTabs[nextIndex];
+      selectCourseModule(nextTab.dataset.moduleNumber ?? '');
+      nextTab.focus();
+    });
+  });
+
+  const courseInquiryButton = document.querySelector<HTMLButtonElement>('[data-course-inquiry]');
+  courseInquiryButton?.addEventListener('click', () => {
+    const selectedTab = courseTabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
+    if (!selectedTab) return;
+
+    window.dispatchEvent(
+      new CustomEvent('select-course-module', {
+        detail: {
+          moduleNumber: selectedTab.dataset.moduleNumber,
+          moduleTitle: selectedTab.dataset.moduleTitle,
+        },
+      }),
+    );
+    document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  const initialModuleParam = new URLSearchParams(window.location.search).get('module');
+  if (initialModuleParam) {
+    selectCourseModule(initialModuleParam.padStart(2, '0'));
+  }
+</script>
+
+<style>
+  .course-tab[aria-selected='true'] {
+    border-left: 3px solid var(--accent-kharos);
+    background: var(--bg-elevated);
+  }
+
+  .course-tab:focus-visible,
+  .course-inquiry-button:focus-visible {
+    outline: 2px solid var(--accent-kharos);
+    outline-offset: 3px;
+  }
+</style>
+
