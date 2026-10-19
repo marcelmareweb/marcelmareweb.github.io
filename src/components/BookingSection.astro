@@ -44,8 +44,8 @@ const engagements = [
     <div class="grid border-y border-[var(--border-subtle)] lg:grid-cols-[0.85fr_1.15fr]">
       <div class="py-8 sm:py-10 lg:border-r lg:border-[var(--border-subtle)] lg:pr-10">
         <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">DIRECT PRINCIPAL CONNECT</p>
-        <a class="font-editorial text-2xl text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)] sm:text-3xl" href="mailto:contact@spottedape.com">
-          contact@spottedape.com
+        <a class="font-editorial text-2xl text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)] sm:text-3xl" href="mailto:hello@thespottedape.com">
+          hello@thespottedape.com
         </a>
         <p class="technical-label mt-6 inline-flex items-center gap-3 text-[11px] tracking-widest text-[var(--text-muted)]">
           <span class="h-2 w-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
@@ -82,7 +82,7 @@ const engagements = [
 
         <form
           class="grid gap-x-5 gap-y-5 sm:grid-cols-2"
-          action="mailto:contact@spottedape.com?subject=Executive%20Workshop%20Inquiry"
+          action="mailto:hello@thespottedape.com?subject=Executive%20Workshop%20Inquiry"
           method="post"
           enctype="text/plain"
           data-inquiry-form
@@ -163,8 +163,8 @@ const engagements = [
             </div>
 
             <p class="mt-4 text-xs leading-5 text-[var(--text-muted)]" role="status" aria-live="polite" data-inquiry-status></p>
-            <a class="mt-2 hidden inline-block text-sm font-semibold text-[var(--accent-signal)] underline underline-offset-4" href="mailto:contact@spottedape.com" data-email-fallback>
-              Email contact@spottedape.com directly →
+            <a class="mt-2 hidden inline-block text-sm font-semibold text-[var(--accent-signal)] underline underline-offset-4" href="mailto:hello@thespottedape.com" data-email-fallback>
+              Email hello@thespottedape.com directly →
             </a>
           </div>
         </form>
@@ -290,10 +290,10 @@ const engagements = [
       inquiryStatus.textContent = 'Opening your pre-formatted executive briefing in your email client…';
     }
     if (emailFallback) {
-      emailFallback.href = `mailto:contact@spottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
+      emailFallback.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
       emailFallback.classList.remove('hidden');
     }
-    window.location.href = `mailto:contact@spottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
+    window.location.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
   };
 
   inquiryForm?.addEventListener('submit', async (event) => {
@@ -350,7 +350,7 @@ const engagements = [
 
       if (inquiryConfirmation) inquiryConfirmation.hidden = false;
       if (inquiryStatus) {
-        inquiryStatus.textContent = 'Thank you. Your inquiry has been delivered to contact@spottedape.com.';
+        inquiryStatus.textContent = 'Thank you. Your inquiry has been delivered to hello@thespottedape.com.';
       }
       inquiryForm.reset();
       if (stageSelectionStatus) stageSelectionStatus.textContent = '';
