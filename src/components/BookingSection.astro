@@ -16,7 +16,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 
 const engagements = [
-  'Raykis Strategic Decision Workshop',
+  'Strategic Decision Workshop',
   'Strategy Course (DLA)',
   'Behavioural Design & Research',
   'Human Judgement in AI Governance',
@@ -61,7 +61,7 @@ const engagements = [
             </li>
             <li class="flex gap-4 text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
               <span class="technical-label pt-1 text-[11px] text-[var(--accent-signal)]">02</span>
-              Clarity on where human judgement, behavioural insight, or a Raykis Strategic Decision Workshop will create the most leverage.
+              Clarity on where human judgement, behavioural insight, or a Strategic Decision Workshop will create the most leverage.
             </li>
             <li class="flex gap-4 text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
               <span class="technical-label pt-1 text-[11px] text-[var(--accent-signal)]">03</span>
@@ -199,13 +199,13 @@ const engagements = [
     }
   };
 
-  // Support URL query parameters (?stage=01&focus=raykis or ?module=01&focus=course)
+  // Support URL query parameters (?stage=01&focus=workshops or ?module=01&focus=course)
   const params = new URLSearchParams(window.location.search);
   const queryStage = params.get('stage');
   const queryModule = params.get('module');
   const queryFocus = params.get('focus');
-  if (queryFocus === 'raykis' && engagementSelect) {
-    engagementSelect.value = 'Raykis Strategic Decision Workshop';
+  if ((queryFocus === 'workshops' || queryFocus === 'raykis') && engagementSelect) {
+    engagementSelect.value = 'Strategic Decision Workshop';
   } else if (queryFocus === 'course' && engagementSelect) {
     engagementSelect.value = 'Strategy Course (DLA)';
   }
@@ -225,7 +225,7 @@ const engagements = [
     const stageNumber = String(event.detail?.stageNumber ?? '');
     const stageTitle = event.detail?.stageTitle ? String(event.detail.stageTitle) : undefined;
     if (engagementSelect && !engagementSelect.value) {
-      engagementSelect.value = 'Raykis Strategic Decision Workshop';
+      engagementSelect.value = 'Strategic Decision Workshop';
     }
     applyStageSelection(stageNumber, stageTitle);
   });
