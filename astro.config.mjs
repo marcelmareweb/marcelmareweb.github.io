@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://thespottedape.com',
+	site: 'https://marcelmareweb.github.io',
 	integrations: [sitemap(), mdx()],
 	vite: {
 		plugins: [tailwindcss()],

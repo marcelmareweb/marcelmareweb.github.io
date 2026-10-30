@@ -9,7 +9,7 @@
 - Manage it with `npx astro dev status`, `npx astro dev logs`, and `npx astro dev stop`.
 - After creating or modifying any `.astro` or `.ts` files, run `npx astro check` and `npm run build`. Resolve all errors before finishing.
 - Inspect visual and interaction changes in Playwright at desktop and mobile widths; include keyboard and reduced-motion checks for changed interactions.
-- Do not push or deploy unless explicitly instructed. The current redesign is local-only.
+- Do not push or deploy unless explicitly instructed. Publish this repository only at `https://marcelmareweb.github.io`; use the existing `main` deployment workflow and no custom domain.
 
 ## Definitive practice and positioning
 
@@ -27,7 +27,7 @@ Do not reintroduce the superseded AI-agency positioning, !Kharos Strategy, or Ag
 
 The explicitly approved **Strategic Design Leadership in the Age of AI** executive masterclass uses E–P–I–A–S (Explorer, Practitioner, Integrator, Architect, Steward) as five standalone strategic decision days. Keep this curriculum scoped to `/workshops/strategic-design-leadership/` and its programme invitations. It is not an automation ladder or the positioning of the whole practice. AI supports exploration and human judgement; it does not establish validated strategies or reliable predictions. Preserve the original Find Formation exercise and its two-choice limit when extending its shared interaction code.
 
-Website: https://thespottedape.com. Use the current public contact: hello@thespottedape.com.
+Website: https://marcelmareweb.github.io. Use the current public contact: hello@thespottedape.com. Existing research, article and course resources on thespottedape.com remain external links on their current host; this GitHub Pages site does not replace or migrate that domain.
 
 ## Authoritative design system
 
@@ -55,7 +55,7 @@ Build original compositions for the practice's own material. Preserve the distin
 
 ## Navigation and customer journeys
 
-The approved navigation strategy is implemented locally. Read [the current implementation record](docs/navigation-strategy/implementation/IMPLEMENTATION.md) alongside the design-reference documents. The original audit and strategy remain the rationale and historical baseline.
+The approved navigation strategy is implemented. Read [the implementation record](docs/navigation-strategy/implementation/IMPLEMENTATION.md) alongside the design-reference documents. Its local-only scope records that task's status; later publication instructions take precedence. The original audit and strategy remain the rationale and historical baseline.
 
 - Primary navigation is defined in `src/data/navigation.ts`: How we help, Workshops & learning, Work & research, Thinking, About, and the separate Let’s talk contact action. Keep desktop/mobile labels and category ancestry consistent.
 - `/services/`, `/learning/`, `/work/` and `/contact/` are the main destinations. Preserve existing workshop, course, case, thinking and homepage-anchor URLs.

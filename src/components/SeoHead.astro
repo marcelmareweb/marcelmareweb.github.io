@@ -15,17 +15,17 @@ const {
   schemaType = 'ProfessionalService',
 } = Astro.props;
 
-const siteURL = Astro.site ?? new URL('https://thespottedape.com');
+const siteURL = Astro.site ?? new URL('https://marcelmareweb.github.io');
 const canonical = new URL(canonicalURL ?? Astro.url.pathname, siteURL);
 const socialImage = ogImage ? new URL(ogImage, siteURL).href : undefined;
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': schemaType,
-  '@id': 'https://thespottedape.com/#organization',
+  '@id': new URL('#organization', siteURL).href,
   name: 'The Spotted Ape (Pty) Ltd',
   alternateName: 'The Spotted Ape',
-  url: 'https://thespottedape.com',
+  url: siteURL.href,
   description,
   email: 'hello@thespottedape.com',
   address: {

@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
 const { caseStudy } = Astro.props;
 const { data } = caseStudy;
-const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://thespottedape.com');
+const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://marcelmareweb.github.io');
 ---
 <BaseLayout title={`${data.title} | The Spotted Ape`} description={data.clientContext} canonicalURL={canonicalURL} schemaType="Article">
 <PageIntro compact eyebrow="Case account / Policy analysis" scale="long" description={data.clientContext}>

@@ -1,8 +1,10 @@
 import { getCollection } from 'astro:content';
+import type { APIContext } from 'astro';
 
 export const prerender = true;
 
-export async function GET() {
+export async function GET({ site }: APIContext) {
+  const siteURL = (site ?? new URL('https://marcelmareweb.github.io')).origin;
   const insights = await getCollection('insights');
   const latestInsights = insights
     .sort((first, second) => Date.parse(second.data.pubDate) - Date.parse(first.data.pubDate))
@@ -20,16 +22,16 @@ Independent strategic decision and behavioural design practice in Cape Town, Sou
 
 ## Website
 
-- [How we help](https://thespottedape.com/services/)
-- [Workshops & learning](https://thespottedape.com/learning/)
-- [Custom decision workshops](https://thespottedape.com/workshops)
-- [Executive masterclass](https://thespottedape.com/workshops/strategic-design-leadership/)
-- [Solar learning case](https://thespottedape.com/courses)
-- [Contact](https://thespottedape.com/contact/)
-- [Work and research](https://thespottedape.com/work/)
-- [Strategic Thinking](https://thespottedape.com/thinking/)
-- [The Strategy Illusion quadrant map](https://thespottedape.com/thinking/strategic-decision-maps/strategy-illusion/)
-- [About](https://thespottedape.com/about)
+- [How we help](${siteURL}/services/)
+- [Workshops & learning](${siteURL}/learning/)
+- [Custom decision workshops](${siteURL}/workshops)
+- [Executive masterclass](${siteURL}/workshops/strategic-design-leadership/)
+- [Solar learning case](${siteURL}/courses)
+- [Contact](${siteURL}/contact/)
+- [Work and research](${siteURL}/work/)
+- [Strategic Thinking](${siteURL}/thinking/)
+- [The Strategy Illusion quadrant map](${siteURL}/thinking/strategic-decision-maps/strategy-illusion/)
+- [About](${siteURL}/about)
 
 ## Latest Substack Dispatches
 
@@ -38,9 +40,9 @@ ${latestInsights.map(({ data }) => `- [${data.title}](${data.substackUrl}) (${da
 ## Contact
 
 - Email: [hello@thespottedape.com](mailto:hello@thespottedape.com)
-- Website: [https://thespottedape.com](https://thespottedape.com)
-- Privacy: [https://thespottedape.com/privacy](https://thespottedape.com/privacy)
-- Terms: [https://thespottedape.com/terms](https://thespottedape.com/terms)
+- Website: [${siteURL}](${siteURL})
+- Privacy: [${siteURL}/privacy](${siteURL}/privacy)
+- Terms: [${siteURL}/terms](${siteURL}/terms)
 `;
 
   return new Response(markdown, {
