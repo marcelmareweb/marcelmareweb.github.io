@@ -1,0 +1,15 @@
+{
+  "concept": "Monochrome banana-bread factory",
+  "desktop_width_units": 1000,
+  "desktop_height_units": 340,
+  "worker_height_units": 40,
+  "worker_percent_of_desktop_width": 4,
+  "desktop_scene_css_width": 1320,
+  "desktop_worker_css_height": 52.8,
+  "mobile_crop_width_units": 500,
+  "mobile_crop_height_units": 260,
+  "mobile_scene_css_width": 335,
+  "mobile_worker_css_height": 26.8,
+  "cycle_seconds_provisional": 14,
+  "stage_2_started": false
+}

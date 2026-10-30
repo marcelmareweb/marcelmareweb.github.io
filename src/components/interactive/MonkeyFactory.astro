@@ -1,0 +1,45 @@
+---
+import FactoryScene from './FactoryScene.astro';
+import '../../styles/monkey-factory.css';
+---
+<section class="monkey-factory" data-monkey-factory aria-labelledby="factory-heading">
+  <div class="factory-intro">
+    <p class="factory-eyebrow">The judgement factory</p>
+    <h1 id="factory-heading">The machine works.<br />The monkey decides.</h1>
+    <p>An ingenious apparatus turns bananas into bread. The final loaf waits for a small act of judgement.</p>
+  </div>
+  <figure class="factory-figure" aria-describedby="factory-description">
+    <div class="factory-stage">
+      <picture class="factory-still">
+        <source media="(max-width: 640px)" srcset="/images/judgement-factory/mobile.webp" width="1345" height="1169" />
+        <img src="/images/judgement-factory/desktop.webp" width="1983" height="793" fetchpriority="high"
+          alt="A hand-drawn miniature banana-bread factory: whole yellow bananas climb to a peeler, skins drop into a hanging basket, a pulley drives a mixer and an oven bakes the loaf. Tiny monkey workers supervise. At the end, an inspector holds the loaf behind a stop before releasing it with a lever." />
+      </picture>
+      <div class="factory-live" hidden>
+        <FactoryScene id="factory-desktop" />
+        <FactoryScene id="factory-mobile" mobile />
+      </div>
+      <div class="factory-hotspots" hidden aria-hidden="true">
+        <div class="factory-machine-area" data-hover="mixer"></div>
+        <div class="factory-worker-area" data-hover="worker"></div>
+      </div>
+    </div>
+    <figcaption id="factory-description">Whole bananas → peeling → mixing → baking → inspection → release. Machines handle repetition. The inspector owns the final release.</figcaption>
+  </figure>
+  <div class="factory-controls" hidden>
+    <div class="factory-control-row" role="group" aria-label="Factory playback">
+      <button type="button" data-control="play" aria-pressed="false">Pause animation</button>
+      <button type="button" data-control="hold" aria-pressed="false">Hold next loaf</button>
+      <button type="button" data-control="approve">Approve loaf</button>
+      <button type="button" data-control="boost" aria-pressed="false">Boost mixer</button>
+      <button type="button" data-control="worker">Check intake</button>
+    </div>
+    <p class="factory-status" data-status role="status" aria-live="polite" aria-atomic="true">The factory is running. Each loaf pauses for inspection.</p>
+    <p class="factory-hint">Try holding a loaf, then approve its release. Hover the mixer or use “Boost mixer” for a small local speed change.</p>
+  </div>
+  <noscript><p class="factory-hint">This still shows the complete process. The loaf is held at inspection; motion and controls are available with JavaScript.</p></noscript>
+</section>
+<script>
+  import { mountFactories } from '../../lib/factory-animation';
+  mountFactories();
+</script>

@@ -1,298 +1,298 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import MasterclassSeries from '../components/MasterclassSeries.astro';
+import PageIntro from '../components/PageIntro.astro';
 import BookingSection from '../components/BookingSection.astro';
-
-const sectionIndex = [
-  { number: '01', label: 'The Premise', href: '#section-01' },
-  { number: '02', label: 'How It Works', href: '#section-02' },
-  { number: '03', label: '5-Stage Agentic Mastery', href: '#masterclass' },
-  { number: '04', label: 'Who It Is For & Deliverables', href: '#section-04' },
-  { number: '05', label: 'Initiate a Workshop', href: '#book' },
-];
+import RaykisWorkshopTeaser from '../components/RaykisWorkshopTeaser.astro';
 
 const facilitationPhases = [
   {
     number: '01',
     tag: 'PHASE ONE // VISIBILITY',
-    title: 'Expose Competing Assumptions',
-    problem: 'Under pressure, capable leaders use the same vocabulary to describe entirely different priorities and risks.',
-    action:
-      'Before touching a solution or an AI model, we surface unspoken assumptions, competing departmental incentives, and crossed signals so the real problem is visible to everyone in the room.',
+    title: 'Expose assumptions',
+    problem: 'Departments may use the same words for different priorities.',
+    action: 'Identify the assumptions, incentives and constraints shaping each alternative.',
   },
   {
     number: '02',
     tag: 'PHASE TWO // JUDGEMENT',
-    title: 'Confront the Hard Trade-Offs',
-    problem: 'More data and faster generation often become a refuge from making consequential choices.',
-    action:
-      'Using structured behavioural and strategic design protocols, we separate organisational noise from what is genuinely consequential—locking the strategic premise, evidentiary standard, and acceptable risk boundaries.',
+    title: 'Confront trade-offs',
+    problem: 'More analysis can postpone the choice.',
+    action: 'Examine what each alternative requires and what it rules out.',
   },
   {
     number: '03',
     tag: 'PHASE THREE // FORMATION',
-    title: 'Commit to Formation & Action',
-    problem: 'Workshops fail when teams leave with polite consensus instead of accountable ownership.',
-    action:
-      'Participants leave with explicit human-in-the-loop checkpoints, clear decision authority, and repeatable governance rubrics they can operate independently—then we step aside.',
+    title: 'Assign responsibility',
+    problem: 'Agreement leaves decisions unfinished when nobody owns the next step.',
+    action: 'Assign decision authority, responsibilities and review points.',
   },
 ];
 
 const idealContexts = [
   {
     number: '01',
-    title: 'Executive teams facing a strategic fork',
-    description:
-      'When competing initiatives, market shifts, or resource constraints require senior leaders to stop hedging and commit to a single coherent direction.',
+    title: 'Competing priorities',
+    description: 'Several initiatives need the same resources. Which deserves commitment?',
   },
   {
     number: '02',
-    title: 'Specialist units integrating AI into high-stakes workflows',
+    title: 'AI in consequential work',
     description:
-      'Policy, research, legal, financial, or product teams where synthetic speed threatens analytical rigor, ethical compliance, or institutional accountability.',
+      'AI is entering important workflows. Who may approve, challenge or stop its actions?',
   },
   {
     number: '03',
-    title: 'Cross-functional alignment under turbulence',
-    description:
-      'Organisations moving fast across siloed departments where signals are crossed and busyness is being mistaken for genuine progress.',
+    title: 'Agreement without action',
+    description: 'A direction is agreed, but departmental incentives keep pulling people apart.',
   },
 ];
 
 const clientDeliverables = [
   {
     number: '01',
-    title: 'The Premise & Constraint Brief',
-    description:
-      'A locked, single-page strategic argument defining the core question, non-negotiable trade-offs, and what the team has explicitly chosen not to pursue.',
+    title: 'The decision and its constraints',
+    description: 'Which question must be resolved, and what will the team stop doing?',
   },
   {
     number: '02',
-    title: 'Human-in-the-Loop Decision Architecture',
-    description:
-      'A clear map of where AI extends analytical or creative capability, and the exact checkpoints where human judgement and sign-off are mandatory.',
+    title: 'AI review points',
+    description: 'Where must a person review the evidence or authorise the next step?',
   },
   {
     number: '03',
-    title: 'Accountable Ownership & Evaluation Rubric',
-    description:
-      'Practical criteria and behavioural guardrails your team retains to govern quality, risk, and execution long after The Spotted Ape steps aside.',
+    title: 'Ownership and review',
+    description: 'Who owns the decision, and what evidence would justify revisiting it?',
   },
 ];
 ---
-
-<BaseLayout
-  title="Strategic Decision Workshops & 5-Stage Agentic Mastery | The Spotted Ape"
-  description="From competing perspectives to collective decisions. Structured, facilitated workshops and 5-Stage Agentic Mastery training led by Marcel Maré in partnership with Raykis."
->
-  <!-- Section 01: Workshop Hero -->
-  <section id="section-01" class="architectural-grid section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="workshops-hero-heading">
-    <div class="editorial-container">
-      <div class="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
-        <span class="eyebrow-pill">
-          <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
-          STRATEGIC DECISION WORKSHOPS
-        </span>
-        <nav class="hidden items-center gap-5 lg:flex" aria-label="Workshop page sections">
-          {sectionIndex.map((item) => (
-            <a
-              class="technical-label text-[10px] tracking-widest text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]"
-              href={item.href}
-            >
-              <span class="text-[var(--accent-signal)]">{item.number}</span> {item.label}
-            </a>
-          ))}
-        </nav>
-      </div>
-
-      <div class="grid items-start gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
-        <div>
-          <p class="technical-label mb-5 text-xs tracking-widest text-[var(--accent-signal)]">
-            01 / THE PREMISE • FACILITATED DECISION ARCHITECTURE
-          </p>
-          <h1 id="workshops-hero-heading" class="h1 mb-8 max-w-[15ch] text-[var(--text-primary)]">
-            From competing perspectives to <em>collective decisions.</em>
-          </h1>
-
-          <div class="mb-8 border-l-2 border-[var(--accent-signal)] pl-5 sm:pl-6">
-            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
-              AI extends capability. Humans remain responsible for judgement.
-            </p>
-          </div>
-
-          <p class="p-body mb-6 max-w-[60ch]">
-            Under pressure and uncertainty, organisations rarely stall for lack of intelligence, tools, or effort. They stall because capable people are pulling in different directions—and faster tools only amplify the dispersion.
-          </p>
-          <p class="p-body mb-10 max-w-[60ch]">
-            Our Strategic Decision Workshops—delivered in partnership with Raykis—do not hand you a generic slide deck. They create a disciplined, facilitated room where hidden assumptions are exposed, consequential trade-offs are confronted, and your team commits to a shared formation.
-          </p>
-
-          <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
-            <a
-              class="inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
-              href="#book"
-            >
-              Initiate a Workshop Briefing <span class="ml-2.5" aria-hidden="true">→</span>
-            </a>
-            <a
-              class="group text-sm font-semibold text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)]"
-              href="#masterclass"
-            >
-              Inspect the 5-Stage Progression <span class="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">↓</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Architectural Workshop Dossier Card -->
-        <aside class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-7 shadow-[0_24px_64px_rgba(0,0,0,0.45)] sm:p-9" aria-label="Workshop specification">
-          <div class="mb-6 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
-            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">WORKSHOP SPECIFICATION</span>
-            <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
-          </div>
-
-          <p class="font-editorial mb-6 text-2xl leading-snug text-[var(--text-primary)] sm:text-3xl">
-            “How do people coordinate judgement and action under conditions of uncertainty?”
-          </p>
-
-          <dl class="m-0 space-y-5 border-t border-[var(--border-subtle)] pt-6 text-sm">
-            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
-              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">FORMAT</dt>
-              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">In-Person Intensive or Structured Hybrid</dd>
-            </div>
-            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
-              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">COHORT SIZE</dt>
-              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">5–18 Executive or Specialist Decision-Makers</dd>
-            </div>
-            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
-              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">CORE DISCIPLINES</dt>
-              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">Behavioural Science · Strategic Design · AI Oversight</dd>
-            </div>
-            <div class="flex flex-col gap-1 border-b border-[var(--border-subtle)] pb-4 sm:flex-row sm:justify-between">
-              <dt class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">LEADERSHIP &amp; PARTNER</dt>
-              <dd class="m-0 font-medium text-[var(--text-primary)] sm:text-right">Marcel Maré · In partnership with Raykis</dd>
-            </div>
-            <div class="flex flex-col gap-1 sm:flex-row sm:justify-between">
-              <dt class="technical-label text-[10px] tracking-widest text-[var(--accent-signal)]">DESIGN GOAL</dt>
-              <dd class="m-0 font-semibold text-[var(--accent-signal)] sm:text-right">Independent Capability (Zero Dependency)</dd>
-            </div>
-          </dl>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 02: How a Strategic Decision Workshop Works (3-Phase Facilitation Architecture) -->
-  <section id="section-02" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="raykis-method-heading">
-    <div class="editorial-container">
-      <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
-        <div>
-          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
-            02 / HOW THE WORKSHOP WORKS
-          </p>
-          <h2 id="raykis-method-heading" class="h2 max-w-[14ch] text-[var(--text-primary)]">
-            Three movements from <em>noise to formation.</em>
-          </h2>
-        </div>
-        <div>
-          <p class="p-lead max-w-[58ch]">
-            We never automate a confused process. Every Strategic Decision Workshop moves a team through three deliberate stages of behavioural and strategic alignment.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] lg:grid-cols-3">
-        {facilitationPhases.map((phase) => (
-          <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-7 transition-colors duration-200 hover:bg-[var(--bg-card)] sm:p-9">
-            <div>
-              <div class="mb-8 flex items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-4">
-                <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">{phase.number}</span>
-                <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">{phase.tag}</span>
-              </div>
-
-              <h3 class="h3 mb-6 text-[var(--text-primary)]">{phase.title}</h3>
-
-              <div class="mb-6 border-l-2 border-[var(--border-subtle)] pl-4">
-                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--text-muted)]">THE FRICTION</p>
-                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{phase.problem}</p>
-              </div>
-            </div>
-
-            <div class="border-t border-[var(--border-subtle)] pt-5">
-              <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">IN THE ROOM</p>
-              <p class="text-sm font-medium leading-6 text-[var(--text-primary)] sm:text-base">{phase.action}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 03: The 5-Stage Agentic Mastery Progression & Quick Team Diagnostic -->
-  <MasterclassSeries />
-
-  <!-- Section 04: Who It Is For & Concrete Deliverables -->
-  <section id="section-04" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="deliverables-heading">
-    <div class="editorial-container">
-      <div class="mb-14 grid gap-6 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
-        <div>
-          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">
-            04 / CONTEXTS &amp; RETAINED DELIVERABLES
-          </p>
-          <h2 id="deliverables-heading" class="h2 max-w-[14ch] text-[var(--text-primary)]">
-            What your team keeps <em>after we step aside.</em>
-          </h2>
-        </div>
-        <div>
-          <p class="p-body max-w-[58ch]">
-            Good guidance eventually becomes unnecessary. We measure the success of a Strategic Decision Workshop by the clarity of the decisions made in the room and the durability of the tools your team retains independently.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid gap-12 lg:grid-cols-2 lg:gap-14">
-        <!-- Column A: When to Convene a Strategic Decision Workshop -->
-        <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-7 sm:p-9">
-          <div class="mb-8 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
-            <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">WHEN TO CONVENE</p>
-            <span class="technical-label text-[10px] text-[var(--text-muted)]">STRATEGIC MOMENTS</span>
-          </div>
-
-          <div class="space-y-8">
-            {idealContexts.map((ctx) => (
-              <article class="border-l-2 border-[var(--border-subtle)] pl-5">
-                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{ctx.number} / CONTEXT</p>
-                <h3 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{ctx.title}</h3>
-                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{ctx.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <!-- Column B: Concrete Deliverables Retained -->
-        <div class="border border-[var(--border-accent)] bg-[var(--bg-elevated)] p-7 sm:p-9">
-          <div class="mb-8 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
-            <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">RETAINED ARTIFACTS</p>
-            <span class="technical-label text-[10px] text-[var(--accent-signal)]">CLIENT OWNERSHIP</span>
-          </div>
-
-          <div class="space-y-8">
-            {clientDeliverables.map((item) => (
-              <article class="border-l-2 border-[var(--accent-signal)] pl-5">
-                <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{item.number} / DELIVERABLE</p>
-                <h3 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{item.title}</h3>
-                <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base">{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 05: Dedicated Workshop Inquiry -->
-  <BookingSection
-    defaultEngagement="Strategic Decision Workshop"
-    eyebrow="05 / INITIATE A STRATEGIC DECISION WORKSHOP"
-  />
+<BaseLayout title="Strategic Decision Workshops | The Spotted Ape" description="Facilitated examination of strategic alternatives, assumptions, trade-offs and responsibility. Independent strategic decision and behavioural design practice.">
+<PageIntro eyebrow="Workshops / Strategic decisions" description="Examine a live strategic choice: its alternatives, assumptions, trade-offs and responsibilities." id="section-01">
+<Fragment slot="heading">From competing<br />perspectives to<br />collective decisions.</Fragment>
+<nav class="page-nav" aria-label="Workshop page sections">
+<a href="#section-02">How it works ↓</a>
+<a href="#section-04">Situations &amp; questions ↓</a>
+<a href="/workshops/strategic-design-leadership/">Five-day executive masterclass ↗</a>
+<a href="#book">Discuss a workshop ↗</a>
+</nav>
+</PageIntro>
+<section class="workshop-banner theme-yellow">
+<div class="wrap">
+<p>One decision.<br />
+<span>Several perspectives.</span>
+</p>
+<p class="lead">Bring the disagreement into the room.<br />Leave with responsibility for the next step.</p>
+</div>
+</section>
+<section class="section-y" id="section-02">
+<div class="wrap">
+<div class="section-top meta">
+<p>01 / How the workshop works</p>
+<p>From noise to formation</p>
+</div>
+<h2 class="section-title" data-reveal>Make the<br />reasoning visible.</h2>
+<div class="phase-list">{facilitationPhases.map(phase=>
+<article class="phase">
+<span class="phase-number">{phase.number}</span>
+<div>
+<h3>{phase.title}.</h3>
+<p class="phase-problem">{phase.problem}</p>
+</div>
+<div class="phase-action">
+<p class="meta">In the room</p>
+<p>{phase.action}</p>
+</div>
+</article>)}</div>
+</div>
+</section>
+<section class="section-y theme-dark" id="section-04">
+<div class="wrap">
+<div class="section-top meta">
+<p>02 / Situations &amp; questions</p>
+<p>Start with the actual decision</p>
+</div>
+<h2 class="section-title" data-reveal>What needs<br />resolving?</h2>
+<div class="contexts split-layout">
+<div>
+<p class="meta context-label">When to convene</p>{idealContexts.map(item=>
+<article class="context">
+<span class="meta">{item.number}</span>
+<h3>{item.title}.</h3>
+<p>{item.description}</p>
+</article>)}</div>
+<div>
+<p class="meta context-label">Questions to resolve</p>{clientDeliverables.map(item=>
+<article class="context">
+<span class="meta">{item.number}</span>
+<h3>{item.title}.</h3>
+<p>{item.description}</p>
+</article>)}</div>
+</div>
+</div>
+</section>
+<section class="section-y">
+<div class="wrap split-layout">
+<div>
+<p class="meta">The workshop specification</p>
+<h2 class="h2 workshop-spec-title">Designed around<br />the decision.</h2>
+</div>
+<dl class="spec-list">
+<div>
+<dt>Scope</dt>
+<dd>Discussed around your live decision.</dd>
+</div>
+<div>
+<dt>Core disciplines</dt>
+<dd>Behavioural science, strategic design and human judgement.</dd>
+</div>
+<div>
+<dt>Working relationship</dt>
+<dd>Independent strategic decision and behavioural design.</dd>
+</div>
+</dl>
+</div>
+</section>
+<RaykisWorkshopTeaser />
+<BookingSection defaultEngagement="Strategic Decision Workshop" eyebrow="03 / Let’s talk" />
 </BaseLayout>
-
+<style>
+.workshop-banner {
+  padding-block: 64px;
+}
+.workshop-banner .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: end;
+}
+.workshop-banner .wrap > p:first-child {
+  font-size: var(--heading-2);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+.workshop-banner .wrap > p:first-child span {
+  opacity: 0.55;
+}
+.phase-list {
+  margin-top: var(--space-lg);
+}
+.phase {
+  display: grid;
+  grid-template-columns: 100px 1.35fr 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  padding-block: 48px;
+}
+.phase:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.phase-number {
+  font-size: var(--heading-3);
+  line-height: 1;
+  color: #777;
+  letter-spacing: -0.05em;
+}
+.phase h3 {
+  font-size: var(--heading-3);
+}
+.phase-problem {
+  font-size: 22px;
+  line-height: 1.35;
+  color: #626262;
+  max-width: 34ch;
+  margin-top: 24px;
+}
+.phase-action .meta {
+  margin-bottom: 24px;
+}
+.phase-action > p:last-child {
+  font-size: var(--body-large);
+  line-height: 1.3;
+  max-width: 30ch;
+}
+.contexts {
+  margin-top: var(--space-lg);
+}
+.context-label {
+  color: var(--signal);
+  margin-bottom: 24px;
+}
+.context {
+  border-top: 1px solid #555;
+  padding-block: 32px;
+}
+.context > .meta {
+  color: #aaa;
+}
+.context h3 {
+  font-size: var(--heading-4);
+  margin-top: 24px;
+  max-width: 19ch;
+}
+.context > p {
+  font-size: 22px;
+  color: #b3b3b3;
+  line-height: 1.4;
+  max-width: 38ch;
+  margin-top: 24px;
+}
+.workshop-spec-title {
+  margin-top: 32px;
+}
+@media (max-width: 1023px) {
+  .workshop-banner .wrap {
+    display: block;
+  }
+  .workshop-banner .lead {
+    margin-top: 32px;
+  }
+  .phase {
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+  }
+  .phase-action {
+    grid-column: 2;
+  }
+  .phase h3 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .workshop-banner {
+    padding-block: 48px;
+  }
+  .workshop-banner .wrap > p:first-child {
+    font-size: 44px;
+  }
+  .phase-list {
+    margin-top: 48px;
+  }
+  .phase {
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+    padding-block: 32px;
+  }
+  .phase-number {
+    font-size: 24px;
+  }
+  .phase h3 {
+    font-size: 32px;
+  }
+  .phase-problem,
+  .phase-action > p:last-child {
+    font-size: 20px;
+  }
+  .phase-action .meta {
+    margin-bottom: 16px;
+  }
+  .contexts {
+    margin-top: 48px;
+  }
+  .context h3 {
+    font-size: 32px;
+  }
+  .context > p {
+    font-size: 20px;
+  }
+}
+</style>

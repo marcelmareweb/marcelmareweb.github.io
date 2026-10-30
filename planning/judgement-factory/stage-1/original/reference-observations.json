@@ -1,0 +1,77 @@
+{
+  "surface": {
+    "title": "Automated Cloud Factory",
+    "text": "hover anything to make it work faster",
+    "canvas": [
+      {
+        "w": 1343,
+        "h": 1000,
+        "rect": {
+          "x": 48.5,
+          "y": 0,
+          "width": 1343,
+          "height": 1000,
+          "top": 0,
+          "right": 1391.5,
+          "bottom": 1000,
+          "left": 48.5
+        }
+      }
+    ],
+    "svgs": 0,
+    "buttons": [],
+    "animations": []
+  },
+  "hover_and_mobile": {
+    "central-press": {
+      "cursor": "pointer",
+      "element": "CANVAS",
+      "width": 1440,
+      "height": 1000
+    },
+    "lower-arm": {
+      "cursor": "pointer",
+      "element": "CANVAS",
+      "width": 1440,
+      "height": 1000
+    },
+    "worker": {
+      "cursor": "pointer",
+      "element": "CANVAS",
+      "width": 1440,
+      "height": 1000
+    },
+    "reducedMotionSample": {
+      "first": 3177897885,
+      "second": 1244398552,
+      "changed": true
+    },
+    "mobile": {
+      "width": 375,
+      "canvas": {
+        "x": 0,
+        "y": 266.5,
+        "width": 375,
+        "height": 279,
+        "top": 266.5,
+        "right": 375,
+        "bottom": 545.5,
+        "left": 0
+      },
+      "text": "hover anything to make it work faster",
+      "controls": 0
+    }
+  },
+  "reduced_motion_after_reload": {
+    "prefersReducedMotion": true,
+    "sampleChangedAfterReload": true,
+    "first": 2657920368,
+    "second": 248042139,
+    "samples": [
+      3841601740,
+      510046116,
+      2657920368,
+      248042139
+    ]
+  }
+}

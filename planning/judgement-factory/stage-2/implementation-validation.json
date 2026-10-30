@@ -1,0 +1,32 @@
+{
+  "existingContentFilesUnchanged": 208,
+  "excludedOSMetadata": [
+    "src/.DS_Store",
+    "src/content/.DS_Store",
+    "public/.DS_Store",
+    "planning/judgement-factory/stage-1/.DS_Store",
+    "planning/judgement-factory/stage-1/engineered-monochrome-version/.DS_Store"
+  ],
+  "homepageUnchanged": true,
+  "stage1Unchanged": true,
+  "artworkBytes": {
+    "desktop.webp": 317590,
+    "mobile.webp": 334908
+  },
+  "prototypeScripts": {
+    "dist/_astro/MonkeyFactory.astro_astro_type_script_index_0_lang.CLC47raY.js": {
+      "bytes": 9442,
+      "gzipBytes": 3188
+    }
+  },
+  "runtime": "Official Node 22.22.0 darwin-x64, SHA256 verified; isolated under /tmp, matching existing native dependencies",
+  "videoBytes": 1113356,
+  "finalAstroCheck": {
+    "files": 40,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "finalBuild": "passed: static output, 9 pages",
+  "reviewLinksAndLayout": "passed at 375 and 1440px"
+}

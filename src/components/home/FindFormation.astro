@@ -1,0 +1,762 @@
+---
+const choices = [
+  {
+    id: 'market',
+    number: '01',
+    title: ['Another', 'market'],
+    name: 'Enter another market',
+    needs: 'Customer evidence and a local delivery capability',
+    constraint: 'Leadership attention',
+    question: 'What evidence would justify entering this market?',
+  },
+  {
+    id: 'customers',
+    number: '02',
+    title: ['Closer', 'relationships'],
+    name: 'Deepen customer relationships',
+    needs: 'Customer research and service capacity',
+    constraint: 'Leadership attention',
+    question: 'Which customers and unmet needs deserve attention?',
+  },
+  {
+    id: 'reliability',
+    number: '03',
+    title: ['Reliable', 'operations'],
+    name: 'Improve operational reliability',
+    needs: 'Process observation and time for operational learning',
+    constraint: 'Change capacity',
+    question: 'Which recurring failures matter, and what sustains them?',
+  },
+  {
+    id: 'ai',
+    number: '04',
+    title: ['AI in the', 'workflow'],
+    name: 'Introduce AI into a workflow',
+    needs: 'Workflow evidence, review rights and retained human practice',
+    constraint: 'Change capacity',
+    question: 'Where can a person meaningfully challenge or stop an action?',
+  },
+];
+---
+
+<section class="movement choice theme-dark" id="choice" data-formation>
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="meta">Strategic Decisions</p>
+      <div>
+        <h2>Find formation.</h2>
+        <p>Choose what to back in the example below.<br />What does each decision require? What will you defer?</p>
+      </div>
+    </div>
+    <div class="formation-toolbar" data-enhancement hidden>
+      <div>
+        <h3>Back up to two priorities.</h3>
+        <p class="choice-hint" id="formation-hint">Hover over each priority to explore. Click or tap to back a decision. Select it again to clear it.</p>
+      </div>
+      <button class="reset" type="button" data-reset>Reset choices <span aria-hidden="true">↺</span></button>
+      <p class="selection-status" data-status role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="choice-grid">
+      <div class="choice-board">
+        <p class="board-tag">A field of commitments / fictional organisation</p>
+        <div class="choice-field" role="group" aria-label="Strategic priorities" aria-describedby="formation-hint">
+          <svg class="board-connections" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="board-link" data-link="market" d="M24 25 V43 H42 V50" />
+            <path class="board-link" data-link="customers" d="M76 25 V43 H58 V50" />
+            <path class="board-link" data-link="reliability" d="M24 75 V57 H42 V50" />
+            <path class="board-link" data-link="ai" d="M76 75 V57 H58 V50" />
+          </svg>
+          <span class="dependency-label dependency-market" aria-hidden="true">Customer evidence</span>
+          <span class="dependency-label dependency-customers" aria-hidden="true">Service capacity</span>
+          <span class="dependency-label dependency-reliability" aria-hidden="true">Time to learn</span>
+          <span class="dependency-label dependency-ai" aria-hidden="true">Review rights</span>
+          {choices.map(choice => (
+            <button
+              class="board-choice"
+              type="button"
+              data-node={choice.id}
+              data-name={choice.name}
+              data-constraint={choice.constraint}
+              aria-label={choice.name}
+              aria-pressed="false"
+              aria-controls={`formation-detail-${choice.id}`}
+              aria-describedby={`formation-detail-${choice.id}`}
+              disabled
+            >
+              <svg class="choice-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <polygon points={choice.id === 'market' || choice.id === 'ai' ? '1,1 99,1 94,99 1,99' : '1,1 99,1 99,99 6,99'} />
+              </svg>
+              <span class="shape-title" aria-hidden="true">{choice.number} / Decision <span class="choice-mark">+</span></span>
+              <span class="shape-name">{choice.title.map(line => <span>{line}</span>)}</span>
+              <span class="status-word" aria-hidden="true">Open</span>
+            </button>
+          ))}
+          <div class="constraint-ring">
+            <span class="constraint-label" data-constraint-label>Capacity</span>
+            <span class="constraint-note">Finite / shared</span>
+          </div>
+        </div>
+        <div class="board-tail">
+          <span>Yellow = backed · dashed = deferred</span>
+          <span>Open questions remain.</span>
+        </div>
+      </div>
+      <div class="choice-inspector" data-enhancement hidden role="region" aria-label="Choice details">
+        <p class="board-tag">The implications / your choice notes</p>
+        <div class="choice-details">
+          <div class="empty-choice" data-empty>
+            <p class="detail-state">Explore / nothing selected</p>
+            <h4>A choice creates obligations.</h4>
+            <p>Explore a shape to see what it needs. Back a priority to keep its information here.</p>
+          </div>
+          {choices.map(choice => (
+            <article class="choice-detail" id={`formation-detail-${choice.id}`} data-detail={choice.id} hidden>
+              <p class="detail-state"><span>{choice.number} / </span><span data-detail-state>Preview</span></p>
+              <h4>{choice.name}</h4>
+              <dl>
+                <dt>Requires</dt><dd>{choice.needs}.</dd>
+                <dt>Draws on</dt><dd>{choice.constraint}.</dd>
+                <dt>Ask before committing</dt><dd>{choice.question}</dd>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div class="consequence" data-consequences hidden>
+        <div>
+          <h4>Your provisional formation</h4>
+          <p data-trade-off></p>
+        </div>
+        <dl><dt data-alternatives-label>Still open</dt><dd data-alternatives></dd></dl>
+      </div>
+    </div>
+    <details class="fallback" data-worked-example open>
+      <summary>Read the worked example and its trade-offs</summary>
+      <p><strong>Backing another market and closer customer relationships</strong> requires customer evidence and service capacity. Both compete for leadership attention. Reliability and AI workflow changes are deferred.</p>
+      <p>Investigate demand and capacity before committing. There is no correct formation.</p>
+      <dl class="fallback-choices">
+        {choices.map(choice => (
+          <div>
+            <dt>{choice.name}</dt>
+            <dd>{choice.needs}. This draws on {choice.constraint.toLowerCase()}. {choice.question}</dd>
+          </div>
+        ))}
+      </dl>
+    </details>
+    <p class="scenario-note">Fictional exercise with an illustrative two-commitment limit. It is not an assessment. No information is saved or sent.</p>
+  </div>
+</section>
+
+<script>
+  import '../../scripts/formation.js';
+</script>
+
+<style>
+  .choice .section-heading {
+    display: block;
+  }
+  .choice .section-heading > .meta {
+    margin-bottom: 40px;
+    color: var(--signal);
+  }
+  .choice .section-heading h2 {
+    font-size: var(--display-l);
+    max-width: none;
+  }
+  .choice .section-heading p:not(.meta) {
+    max-width: 44ch;
+    font-size: clamp(26px, 2.25vw, 36px);
+    line-height: 1.2;
+    margin-top: 32px;
+    text-wrap: pretty;
+  }
+  .formation-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px 32px;
+    margin-top: var(--space-sm);
+  }
+  .formation-toolbar h3 {
+    font-size: var(--body-large);
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+  }
+  .choice-hint {
+    margin-top: 8px;
+    max-width: 68ch;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b3b3b3;
+  }
+  .reset {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #777;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .reset:hover,
+  .reset:focus-visible {
+    border-color: var(--signal);
+  }
+  .reset span {
+    margin-left: 12px;
+  }
+  .selection-status {
+    grid-column: 1 / -1;
+    min-height: 3em;
+    max-width: 90ch;
+    margin: 0;
+    color: var(--signal);
+    font: 12px/1.5 var(--mono);
+  }
+  .choice-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    column-gap: 48px;
+    row-gap: 32px;
+    align-items: start;
+    margin-top: 24px;
+  }
+  .choice-board,
+  .choice-inspector {
+    min-width: 0;
+    border-top: 1px solid #777;
+    padding-top: 16px;
+  }
+  .choice-board {
+    container-type: inline-size;
+  }
+  .board-tag {
+    min-height: 2.8em;
+    max-width: 50ch;
+    color: #b3b3b3;
+    font: 11px/1.4 var(--mono);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .choice-field {
+    --node-height: 156px;
+    --bridge-height: 156px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--node-height) var(--bridge-height) var(--node-height);
+    column-gap: 24px;
+    margin-top: 24px;
+    isolation: isolate;
+  }
+  .board-connections {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .board-link {
+    fill: none;
+    stroke: #777;
+    stroke-width: 1.3px;
+    stroke-dasharray: 4px 5px;
+    vector-effect: non-scaling-stroke;
+    transition: stroke 0.2s var(--out);
+  }
+  .board-link.is-preview {
+    stroke: var(--signal);
+  }
+  .board-link.is-backed {
+    stroke: var(--signal);
+    stroke-dasharray: none;
+    stroke-width: 2px;
+  }
+  .dependency-label {
+    position: absolute;
+    width: max-content;
+    max-width: calc(50% - 16px);
+    top: calc(var(--node-height) + 18px);
+    padding-inline: 6px;
+    background: var(--ink);
+    font: 11px/1.4 var(--mono);
+    color: #b3b3b3;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+  .dependency-market,
+  .dependency-reliability {
+    left: 24%;
+  }
+  .dependency-customers,
+  .dependency-ai {
+    left: 76%;
+  }
+  .dependency-reliability,
+  .dependency-ai {
+    top: auto;
+    bottom: calc(var(--node-height) + 18px);
+  }
+  .board-choice {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 12px minmax(0, 1fr) 12px;
+    align-items: start;
+    gap: 12px;
+    min-width: 0;
+    padding: 22px 28px;
+    border: 0;
+    background: transparent;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .board-choice[data-node='market'] {
+    grid-area: 1 / 1;
+    padding-left: 24px;
+  }
+  .board-choice[data-node='customers'] {
+    grid-area: 1 / 2;
+  }
+  .board-choice[data-node='reliability'] {
+    grid-area: 3 / 1;
+  }
+  .board-choice[data-node='ai'] {
+    grid-area: 3 / 2;
+    padding-left: 24px;
+  }
+  .choice-outline {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .choice-outline polygon {
+    fill: var(--ink);
+    stroke: #aaa;
+    stroke-width: 1.3px;
+    vector-effect: non-scaling-stroke;
+    transition:
+      fill 0.2s var(--out),
+      stroke 0.2s var(--out);
+  }
+  .board-choice:disabled {
+    opacity: 1;
+    cursor: default;
+  }
+  .board-choice.is-preview .choice-outline polygon {
+    stroke: var(--signal);
+    fill: #1b1b1b;
+  }
+  .board-choice.is-deferred .choice-outline polygon {
+    stroke-dasharray: 5px 5px;
+  }
+  .board-choice.is-backed {
+    color: var(--ink);
+  }
+  .board-choice.is-backed .choice-outline polygon {
+    fill: var(--signal);
+    stroke: var(--signal);
+  }
+  .board-choice:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 5px;
+  }
+  .shape-title {
+    padding-right: 18px;
+    font: 11px/12px var(--mono);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .choice-mark {
+    position: absolute;
+    top: 19px;
+    right: 24px;
+    font: 18px/1 var(--ui);
+  }
+  .shape-name {
+    align-self: center;
+    font-size: clamp(21px, 4.2cqi, 30px);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+  .shape-name > span {
+    display: block;
+  }
+  .status-word {
+    font: 11px/12px var(--mono);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #b3b3b3;
+  }
+  .board-choice.is-backed .status-word {
+    color: inherit;
+  }
+  .constraint-ring {
+    position: relative;
+    z-index: 1;
+    grid-area: 2 / 1 / 3 / -1;
+    place-self: center;
+    width: 52%;
+    min-height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1.3px solid var(--signal);
+    background: var(--ink);
+    color: var(--signal);
+  }
+  .constraint-label {
+    padding: 6px 8px;
+    font: 11px/1.2 var(--mono);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .constraint-note {
+    position: absolute;
+    top: calc(100% + 10px);
+    padding-inline: 8px;
+    background: var(--ink);
+    white-space: nowrap;
+    font: 10px/1.2 var(--mono);
+    text-transform: uppercase;
+    color: #b3b3b3;
+  }
+  .constraint-ring.is-contested {
+    border-style: dashed;
+  }
+  .board-tail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding-top: 24px;
+    color: #b3b3b3;
+    font: 11px/1.5 var(--mono);
+  }
+  .choice-details {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .empty-choice,
+  .choice-detail {
+    padding: 22px 24px;
+    border: 1px solid #555;
+  }
+  .empty-choice {
+    min-height: 280px;
+  }
+  .choice-detail.is-preview {
+    order: 1;
+    border-style: dashed;
+    border-color: #777;
+  }
+  .choice-detail.is-backed {
+    box-shadow: inset 3px 0 0 var(--signal);
+  }
+  .detail-state {
+    margin-bottom: 14px;
+    color: var(--signal);
+    font: 11px/1.4 var(--mono);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .choice-details h4 {
+    max-width: 26ch;
+    margin-bottom: 20px;
+    font-size: clamp(24px, 1.95vw, 30px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+  .empty-choice > p:last-child,
+  .consequence p {
+    max-width: 54ch;
+    color: #b3b3b3;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .choice-detail dl {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 14px 16px;
+    margin: 0;
+  }
+  .choice-detail dt,
+  .consequence dt {
+    color: #b3b3b3;
+    font: 11px/1.4 var(--mono);
+    text-transform: uppercase;
+  }
+  .choice-detail dt {
+    padding-top: 3px;
+  }
+  .choice-detail dd,
+  .consequence dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .consequence {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    column-gap: 48px;
+    border-top: 1px solid #777;
+    padding-top: 24px;
+  }
+  .consequence h4 {
+    margin-bottom: 12px;
+    font-size: var(--body-large);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+  .consequence dl {
+    margin: 0;
+  }
+  .consequence dd {
+    max-width: 44ch;
+    margin-top: 10px;
+  }
+  .fallback {
+    border-block: 1px solid #555;
+    padding-block: 20px;
+    margin-top: 40px;
+    max-width: 80ch;
+  }
+  .fallback summary {
+    min-height: 44px;
+    font-size: 18px;
+  }
+  .fallback p,
+  .fallback-choices dd {
+    margin-top: 20px;
+    color: #b3b3b3;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .fallback-choices {
+    display: grid;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .fallback-choices dt {
+    font-size: 18px;
+  }
+  .fallback-choices dd {
+    margin: 8px 0 0;
+  }
+  .scenario-note {
+    max-width: 75ch;
+    margin-top: 24px;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  @media (min-width: 1024px) {
+    .choice-inspector {
+      width: 50%;
+    }
+    .choice-detail dl {
+      display: block;
+    }
+    .choice-detail dt {
+      padding-top: 0;
+    }
+    .choice-detail dt:not(:first-child) {
+      margin-top: 16px;
+    }
+    .choice-detail dd {
+      margin-top: 5px;
+    }
+  }
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    .choice-grid,
+    .consequence {
+      column-gap: 32px;
+    }
+    .board-choice {
+      padding-inline: 22px;
+    }
+    .board-choice[data-node='market'],
+    .board-choice[data-node='ai'] {
+      padding-left: 20px;
+    }
+    .shape-name {
+      font-size: 22px;
+    }
+    .choice-detail dl {
+      grid-template-columns: 70px minmax(0, 1fr);
+      column-gap: 12px;
+    }
+    .empty-choice,
+    .choice-detail {
+      padding: 20px;
+    }
+  }
+  @media (max-width: 1023px) {
+    .choice .section-heading h2 {
+      font-size: clamp(68px, 10vw, 110px);
+    }
+    .choice-grid {
+      grid-template-columns: 1fr;
+    }
+    .choice-details {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+    }
+    .choice-detail dl {
+      display: block;
+    }
+    .choice-detail dt {
+      padding: 0;
+    }
+    .choice-detail dt:not(:first-child) {
+      margin-top: 16px;
+    }
+    .choice-detail dd {
+      margin-top: 5px;
+    }
+    .empty-choice {
+      min-height: 220px;
+    }
+    .consequence {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+  @media (max-width: 767px) {
+    .choice .section-heading h2 {
+      font-size: clamp(56px, 14vw, 80px);
+    }
+    .choice .section-heading > .meta {
+      margin-bottom: 32px;
+    }
+    .choice .section-heading p:not(.meta) {
+      margin-top: 24px;
+      font-size: 26px;
+    }
+    .formation-toolbar {
+      align-items: start;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .formation-toolbar > div {
+      display: contents;
+    }
+    .formation-toolbar h3 {
+      grid-area: 1 / 1;
+      max-width: 15ch;
+      font-size: 24px;
+    }
+    .choice-hint {
+      grid-area: 2 / 1 / 3 / -1;
+      max-width: 54ch;
+      margin: 0;
+    }
+    .reset {
+      grid-area: 1 / 2;
+      padding: 10px 14px;
+      font-size: 12px;
+    }
+    .reset span {
+      margin-left: 6px;
+    }
+    .selection-status {
+      grid-row: 3;
+      font-size: 11px;
+      min-height: 3em;
+    }
+    .choice-grid {
+      gap: 28px;
+      margin-top: 20px;
+    }
+    .board-tag {
+      font-size: 10px;
+    }
+    .choice-field {
+      --node-height: 144px;
+      --bridge-height: 144px;
+      column-gap: 16px;
+      margin-top: 20px;
+    }
+    .board-choice,
+    .board-choice[data-node] {
+      padding: 18px 18px 18px 20px;
+      gap: 10px;
+    }
+    .board-choice[data-node='market'],
+    .board-choice[data-node='ai'] {
+      padding-left: 16px;
+    }
+    .shape-title,
+    .status-word {
+      font-size: 10px;
+    }
+    .choice-mark {
+      top: 16px;
+      right: 18px;
+    }
+    .shape-name {
+      font-size: clamp(18px, 5.8cqi, 26px);
+    }
+    .dependency-label {
+      font-size: 10px;
+    }
+    .constraint-ring {
+      width: 60%;
+      min-height: 38px;
+    }
+    .constraint-label {
+      font-size: 10px;
+    }
+    .constraint-note {
+      font-size: 9px;
+    }
+    .board-tail {
+      gap: 8px 16px;
+      font-size: 10px;
+      padding-top: 20px;
+    }
+    .choice-details {
+      margin-top: 20px;
+    }
+    .empty-choice,
+    .choice-detail {
+      padding: 20px;
+    }
+    .choice-details h4 {
+      font-size: 26px;
+    }
+    .consequence {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding-top: 24px;
+    }
+  }
+  @media (max-width: 359px) {
+    .board-choice[data-node] {
+      padding-inline: 14px;
+    }
+    .board-choice[data-node='customers'],
+    .board-choice[data-node='reliability'] {
+      padding-left: 18px;
+    }
+    .shape-title {
+      font-size: 9px;
+    }
+    .choice-mark {
+      right: 16px;
+    }
+    .shape-name {
+      font-size: 18px;
+    }
+  }
+</style>

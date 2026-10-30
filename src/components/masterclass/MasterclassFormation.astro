@@ -1,0 +1,258 @@
+---
+import { masterclassDays } from '../../data/executive-masterclass';
+import MasterclassCard from './MasterclassCard.astro';
+import MasterclassDetail from './MasterclassDetail.astro';
+import MasterclassProgression from './MasterclassProgression.astro';
+---
+<section class="masterclass-formation section-y theme-dark" id="programme" data-masterclass>
+  <div class="wrap">
+    <div class="section-top meta"><p>01 / The working programme</p><p>Five standalone days. One connected progression.</p></div>
+    <div class="formation-heading"><h2>Five decisions.<br />One formation.</h2><p>Explorer → Practitioner → Integrator → Architect → Steward.<br />Choose the question your organisation needs to resolve.</p></div>
+    <MasterclassProgression />
+    <div class="formation-overview" data-masterclass-overview>
+      <div class="formation-instructions"><p id="masterclass-instructions">Explore a question. Open a day.<br />Each working session can stand alone.</p><p class="formation-status" data-masterclass-status role="status" aria-live="polite" aria-atomic="true">All five days are open to explore.</p></div>
+      <div class="masterclass-grid" role="group" aria-label="Five-day strategic decision formation" aria-describedby="masterclass-instructions">
+        <svg class="formation-connections connections-desktop" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M10 50H90" /></svg>
+        <svg class="formation-connections connections-tablet" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M16 22H84V50H25V78H75" /></svg>
+        <svg class="formation-connections connections-mobile" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M25 17H75V50H25V86H50" /></svg>
+        {masterclassDays.map(day => <MasterclassCard day={day} />)}
+      </div>
+      <div class="formation-preview" data-masterclass-preview aria-label="Day preview" hidden>
+        <div class="preview-empty" data-masterclass-empty><p class="meta">Explore / Nothing selected</p><p>Five strategic questions.<br />Start where the decision is unresolved.</p></div>
+        {masterclassDays.map(day => <div class="day-preview" data-masterclass-preview-day={day.id} hidden><div><p class="meta">Day {day.number} / {day.stage}</p><h3>{day.focus}.</h3></div><div><p>{day.problem}</p><p class="preview-tool"><span>Working tool</span> {day.tool}</p></div></div>)}
+      </div>
+    </div>
+    <p class="fallback-heading" data-masterclass-fallback>Open a day below to read its full working session.</p>
+    <div class="masterclass-sessions">
+      {masterclassDays.map(day => <details class="masterclass-session" id={`session-${day.id}`} data-masterclass-session={day.id}><summary class="session-summary"><span class="meta">Day {day.number} / {day.stage}</span><span>{day.question}</span></summary><MasterclassDetail day={day} /></details>)}
+    </div>
+    <p class="programme-principle">AI expands the options and challenges assumptions. Human leaders assess the evidence and remain responsible for strategic decisions.</p>
+  </div>
+</section>
+<script>
+  import '../../scripts/masterclass-formation';
+</script>
+<style>
+  .masterclass-formation {
+    --progression-height: 74px;
+  }
+  .formation-heading {
+    margin-bottom: var(--space-sm);
+  }
+  .formation-heading h2 {
+    max-width: 16ch;
+    font-size: var(--heading-2);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+  }
+  .formation-heading > p {
+    margin-top: 32px;
+    max-width: 65ch;
+    color: #b3b3b3;
+    font-size: var(--body-large);
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+  }
+  .formation-overview {
+    scroll-margin-top: var(--progression-height);
+  }
+  .formation-instructions {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block: 28px;
+  }
+  .formation-instructions > p:first-child {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b3b3b3;
+  }
+  .formation-status {
+    max-width: 42ch;
+    min-height: 3em;
+    margin: 0;
+    color: var(--signal);
+    font: 11px/1.5 var(--mono);
+  }
+  .masterclass-grid {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .formation-connections {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .formation-connections path {
+    fill: none;
+    stroke: #777;
+    stroke-width: 1.3px;
+    stroke-dasharray: 4px 5px;
+    vector-effect: non-scaling-stroke;
+  }
+  .connections-tablet,
+  .connections-mobile {
+    display: none;
+  }
+  .formation-preview {
+    min-height: 210px;
+    margin-top: 32px;
+    padding-block: 28px;
+    border-block: 1px solid #555;
+  }
+  .preview-empty {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .preview-empty > p:last-child {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+  }
+  .preview-empty .meta,
+  .day-preview .meta {
+    color: var(--signal);
+  }
+  .day-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .day-preview h3 {
+    max-width: 28ch;
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+  .day-preview > div > p:first-child:not(.meta) {
+    max-width: 55ch;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .preview-tool {
+    max-width: 55ch;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b3b3b3;
+  }
+  .preview-tool > span {
+    display: block;
+    margin-bottom: 8px;
+    font: 10px/1.4 var(--mono);
+    text-transform: uppercase;
+    color: var(--signal);
+  }
+  .fallback-heading {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .masterclass-sessions {
+    margin-top: 32px;
+  }
+  .masterclass-session {
+    scroll-margin-top: var(--progression-height);
+  }
+  .session-summary {
+    display: grid;
+    gap: 16px;
+    min-height: 72px;
+    padding-block: 24px;
+    border-top: 1px solid #777;
+  }
+  .session-summary > span:last-child {
+    font-size: 24px;
+    letter-spacing: -0.035em;
+  }
+  [data-enhanced] .session-summary {
+    display: none;
+  }
+  .programme-principle {
+    max-width: 76ch;
+    margin-top: 32px;
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .masterclass-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .masterclass-grid :global(.masterclass-card) {
+      grid-column: span 2;
+    }
+    .masterclass-grid :global(.masterclass-card:nth-of-type(4)),
+    .masterclass-grid :global(.masterclass-card:nth-of-type(5)) {
+      grid-column: span 3;
+    }
+    .connections-desktop {
+      display: none;
+    }
+    .connections-tablet {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .formation-heading h2 {
+      font-size: clamp(44px, 11.5vw, 68px);
+    }
+    .formation-heading > p {
+      font-size: 22px;
+    }
+    .formation-instructions {
+      display: block;
+      padding-block: 24px;
+    }
+    .formation-status {
+      margin-top: 20px;
+      min-height: 3em;
+    }
+    .masterclass-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 16px;
+    }
+    .masterclass-grid :global(.masterclass-card:last-of-type) {
+      grid-column: 1 / -1;
+    }
+    .connections-desktop {
+      display: none;
+    }
+    .connections-mobile {
+      display: block;
+    }
+    .preview-empty,
+    .day-preview {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .formation-preview {
+      min-height: 230px;
+      margin-top: 24px;
+      padding-block: 24px;
+    }
+    .preview-empty > p:last-child {
+      font-size: 26px;
+    }
+    .day-preview h3 {
+      font-size: 28px;
+    }
+    .day-preview > div > p:first-child:not(.meta) {
+      font-size: 17px;
+    }
+    .masterclass-sessions {
+      margin-top: 24px;
+    }
+    .programme-principle {
+      font-size: 13px;
+    }
+  }
+</style>

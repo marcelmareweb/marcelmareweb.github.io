@@ -1,0 +1,690 @@
+[
+  {
+    "width": 390,
+    "route": "",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236.5,
+      "width": 350,
+      "height": 98.796875,
+      "top": 236.5,
+      "right": 370,
+      "bottom": 335.296875,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "about",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 210.53125,
+      "top": 236,
+      "right": 370,
+      "bottom": 446.53125,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 390,
+    "route": "workshops",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 315.796875,
+      "top": 236,
+      "right": 370,
+      "bottom": 551.796875,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "INPUT",
+        "class": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "courses",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 264,
+      "top": 236,
+      "right": 370,
+      "bottom": 500,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "INPUT",
+        "class": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "thinking/",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 73.3125,
+      "top": 236,
+      "right": 370,
+      "bottom": 309.3125,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "thinking/strategic-decision-maps/strategy-illusion/",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 132,
+      "top": 236,
+      "right": 370,
+      "bottom": 368,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "cases/policy-analyst-strategic-review",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 350,
+      "height": 132,
+      "top": 236,
+      "right": 370,
+      "bottom": 368,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 390,
+    "route": "privacy",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 350,
+      "height": 128,
+      "top": 202.796875,
+      "right": 370,
+      "bottom": 330.796875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 390,
+    "route": "terms",
+    "scrollWidth": 390,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 350,
+      "height": 64,
+      "top": 202.796875,
+      "right": 370,
+      "bottom": 266.796875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 236,
+      "width": 728,
+      "height": 190.96875,
+      "top": 236,
+      "right": 748,
+      "bottom": 426.96875,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "about",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 228.0703125,
+      "top": 271,
+      "right": 748,
+      "bottom": 499.0703125,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "workshops",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 228.0703125,
+      "top": 271,
+      "right": 748,
+      "bottom": 499.0703125,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "courses",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 245.75,
+      "top": 271,
+      "right": 748,
+      "bottom": 516.75,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "thinking/",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 108.1328125,
+      "top": 271,
+      "right": 748,
+      "bottom": 379.1328125,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "thinking/strategic-decision-maps/strategy-illusion/",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 122.875,
+      "top": 271,
+      "right": 748,
+      "bottom": 393.875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "cases/policy-analyst-strategic-review",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 271,
+      "width": 728,
+      "height": 122.875,
+      "top": 271,
+      "right": 748,
+      "bottom": 393.875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "privacy",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 728,
+      "height": 84,
+      "top": 202.796875,
+      "right": 748,
+      "bottom": 286.796875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "terms",
+    "scrollWidth": 768,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 728,
+      "height": 84,
+      "top": 202.796875,
+      "right": 748,
+      "bottom": 286.796875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 244.234375,
+      "width": 944,
+      "height": 426.1953125,
+      "top": 244.234375,
+      "right": 984,
+      "bottom": 670.4296875,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "about",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 439.40625,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 718.5234375,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "workshops",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 439.40625,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 718.5234375,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "courses",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 336.25,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 615.3671875,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "thinking/",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 167.1953125,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 446.3125,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "thinking/strategic-decision-maps/strategy-illusion/",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 168.125,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 447.2421875,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "cases/policy-analyst-strategic-review",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 279.1171875,
+      "width": 944,
+      "height": 168.125,
+      "top": 279.1171875,
+      "right": 984,
+      "bottom": 447.2421875,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "privacy",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 210.796875,
+      "width": 944,
+      "height": 84.0625,
+      "top": 210.796875,
+      "right": 984,
+      "bottom": 294.859375,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "terms",
+    "scrollWidth": 1024,
+    "h1": {
+      "x": 40,
+      "y": 210.796875,
+      "width": 944,
+      "height": 84.0625,
+      "top": 210.796875,
+      "right": 984,
+      "bottom": 294.859375,
+      "left": 40
+    },
+    "overflow": []
+  },
+  {
+    "width": 320,
+    "route": "",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 236.5,
+      "width": 280,
+      "height": 137.1953125,
+      "top": 236.5,
+      "right": 300,
+      "bottom": 373.6953125,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "about",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 241.5,
+      "width": 280,
+      "height": 263.1640625,
+      "top": 241.5,
+      "right": 300,
+      "bottom": 504.6640625,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 320,
+    "route": "workshops",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 252.5,
+      "width": 280,
+      "height": 315.796875,
+      "top": 252.5,
+      "right": 300,
+      "bottom": 568.296875,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "INPUT",
+        "class": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "courses",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 252.5,
+      "width": 280,
+      "height": 308,
+      "top": 252.5,
+      "right": 300,
+      "bottom": 560.5,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "INPUT",
+        "class": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "thinking/",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 252.5,
+      "width": 280,
+      "height": 71.4375,
+      "top": 252.5,
+      "right": 300,
+      "bottom": 323.9375,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "thinking/strategic-decision-maps/strategy-illusion/",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 252.5,
+      "width": 280,
+      "height": 176,
+      "top": 252.5,
+      "right": 300,
+      "bottom": 428.5,
+      "left": 20
+    },
+    "overflow": [
+      {
+        "tag": "TR",
+        "class": "",
+        "text": "Low clarity of choiceHigh clarity of choice"
+      },
+      {
+        "tag": "TH",
+        "class": "",
+        "text": "High clarity of choice"
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "cases/policy-analyst-strategic-review",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 252.5,
+      "width": 280,
+      "height": 176,
+      "top": 252.5,
+      "right": 300,
+      "bottom": 428.5,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 320,
+    "route": "privacy",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 280,
+      "height": 128,
+      "top": 202.796875,
+      "right": 300,
+      "bottom": 330.796875,
+      "left": 20
+    },
+    "overflow": []
+  },
+  {
+    "width": 320,
+    "route": "terms",
+    "scrollWidth": 336,
+    "h1": {
+      "x": 20,
+      "y": 202.796875,
+      "width": 280,
+      "height": 128,
+      "top": 202.796875,
+      "right": 300,
+      "bottom": 330.796875,
+      "left": 20
+    },
+    "overflow": []
+  }
+]

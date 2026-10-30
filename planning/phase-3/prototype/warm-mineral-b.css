@@ -1,0 +1,49 @@
+/* User-selected palette. Isolated B specimen only; original control is retained. */
+.direction-b {
+  --ink: #121211;
+  --paper: #f6f4f0;
+  --signal: #ffff00;
+  --surface: #ece8e1;
+  --muted: #5c5c58;
+  --line: #d4d0c7;
+  --functional-rule: #77766f;
+  --selection-bg: #ffff00;
+  --selection-fg: #121211;
+}
+.direction-b .review-bar,
+.direction-b .footer,
+.direction-b .project-art {
+  background: #121211;
+  color: #f6f4f0;
+}
+.direction-b .project-art { --ink: #f6f4f0; }
+.direction-b .choice {
+  --line: #77766f;
+  --muted: #bdbbb5;
+}
+.direction-b .choice-board,
+.direction-b .choice-option,
+.direction-b .consequence,
+.direction-b .fallback { border-color: #77766f; }
+.direction-b .board-shape,
+.direction-b .board-link { stroke: #aaa79f; }
+.direction-b .board-choice.is-backed .board-shape,
+.direction-b .board-link.is-backed { stroke: #ffff00; }
+.direction-b .board-choice text { fill: #f6f4f0; }
+.direction-b .board-choice.is-backed text { fill: #121211; }
+.direction-b .board-choice .status-word { fill: #bdbbb5; }
+.direction-b .board-choice.is-backed .status-word { fill: #121211; }
+.direction-b .dependency-label { fill: #f6f4f0; }
+.direction-b .choice-hint,
+.direction-b .choice-option small,
+.direction-b .scenario-note,
+.direction-b .board-tail,
+.direction-b .fallback p { color: #bdbbb5; }
+.direction-b .choice-option input:checked ~ small { color: #ffff00; }
+.direction-b .reset { border-color: #aaa79f; }
+.direction-b .reset:hover { border-color: #ffff00; }
+.direction-b .button:hover { background: #353532; }
+.direction-b .direction-notes { background: #ece8e1; color: #121211; }
+/* Selection roles stay independent of locally inverted text/line roles. */
+.direction-b ::selection { background: var(--selection-bg); color: var(--selection-fg); }
+.direction-b .invitation { --selection-bg: #121211; --selection-fg: #ffff00; }

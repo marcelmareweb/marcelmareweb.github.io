@@ -1,0 +1,170 @@
+---
+import type { MasterclassDay } from '../../data/executive-masterclass';
+interface Props {
+  day: MasterclassDay;
+}
+const { day } = Astro.props;
+---
+<button class="masterclass-card" id={`card-${day.id}`} type="button" data-masterclass-card={day.id} aria-label={`Day ${day.number}: ${day.stage}. ${day.cardQuestion}`} aria-expanded="false" aria-controls={`session-${day.id}`} disabled>
+  <svg class="card-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polygon points={Number(day.number) % 2 ? '1,1 99,1 94,99 1,99' : '1,1 99,1 99,99 6,99'} /></svg>
+  <span class="card-day">Day {day.number} <span class="card-letter" aria-hidden="true">{day.letter}</span></span>
+  <strong class="card-stage">{day.stage}</strong>
+  <span class="card-question">{day.cardQuestion}</span>
+  <span class="card-cue"><span data-card-state>Explore day</span><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M4 12h16" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+</button>
+<style>
+  .masterclass-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 310px;
+    padding: 26px 24px;
+    border: 0;
+    background: transparent;
+    color: white;
+    text-align: left;
+  }
+  .card-outline {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .card-outline polygon {
+    fill: var(--ink);
+    stroke: #777;
+    stroke-width: 1.3px;
+    vector-effect: non-scaling-stroke;
+    transition:
+      fill 0.2s var(--out),
+      stroke 0.2s var(--out);
+  }
+  .masterclass-card:disabled {
+    opacity: 1;
+    cursor: default;
+  }
+  .masterclass-card.is-preview .card-outline polygon {
+    fill: #1b1b1b;
+    stroke: var(--signal);
+  }
+  .masterclass-card.is-selected {
+    color: var(--ink);
+  }
+  .masterclass-card.is-selected .card-outline polygon {
+    fill: var(--signal);
+    stroke: var(--signal);
+  }
+  .masterclass-card:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 5px;
+  }
+  .card-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font: 11px/1.4 var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .card-letter {
+    color: var(--signal);
+  }
+  .is-selected .card-letter {
+    color: inherit;
+  }
+  .card-stage {
+    margin-top: 32px;
+    font-size: clamp(24px, 2.1vw, 36px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+  .card-question {
+    max-width: 25ch;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+  }
+  .card-cue {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 28px;
+    margin-top: auto;
+    font: 10px/1.4 var(--mono);
+    text-transform: uppercase;
+  }
+  .card-cue svg {
+    flex-shrink: 0;
+    transition: transform 0.2s var(--out);
+  }
+  .is-selected .card-cue svg {
+    transform: rotate(45deg);
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .masterclass-card {
+      min-height: 262px;
+    }
+    .card-stage {
+      font-size: 32px;
+    }
+    .card-question {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .masterclass-card {
+      min-height: 264px;
+      padding: 20px 18px;
+    }
+    .card-day {
+      font-size: 10px;
+    }
+    .card-stage {
+      margin-top: 24px;
+      font-size: clamp(20px, 5.5vw, 30px);
+    }
+    .card-question {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .card-cue {
+      font-size: 9px;
+      padding-top: 24px;
+    }
+    .masterclass-card[data-masterclass-card='steward'] {
+      min-height: 208px;
+    }
+    .masterclass-card[data-masterclass-card='steward'] .card-stage {
+      font-size: 30px;
+    }
+    .masterclass-card[data-masterclass-card='steward'] .card-question {
+      max-width: 35ch;
+    }
+  }
+  @media (max-width: 359px) {
+    .masterclass-card {
+      padding-inline: 14px;
+      min-height: 292px;
+    }
+    .card-stage {
+      font-size: 19px;
+    }
+    .card-question {
+      font-size: 15px;
+    }
+    .card-cue {
+      letter-spacing: -0.04em;
+    }
+  }
+</style>

@@ -1,0 +1,36 @@
+{
+  "pending": {
+    "disabled": true,
+    "status": "Sending your enquiry…"
+  },
+  "success": {
+    "confirmation": true,
+    "status": "Enquiry submitted.",
+    "hasRetiredField": false,
+    "keys": [
+      "name",
+      "email",
+      "roleOrganization",
+      "teamSize",
+      "engagement",
+      "courseModule",
+      "context",
+      "pageUrl",
+      "subject",
+      "_subject",
+      "replyto",
+      "_replyto",
+      "from_name",
+      "_captcha",
+      "_template",
+      "_honey"
+    ]
+  },
+  "failure": {
+    "fallback": true,
+    "preserved": "Audit Example",
+    "status": "We couldn’t send your enquiry. Please try again or use the email link below. Your details are still here.",
+    "email": "mailto:hello@thespottedape.com?subject=The%20Spotted%20Ape%20enquiry%20%E2%80%94%20Strategic%20Decision%20Workshop&body=Name%3A%20Audit%20Example%0AEmail%3A%20audit%40example.com%0ARole%20%26%20organisation%3A%20QA%20%2F%20Example%20organisation%0ATeam%20size%3A%20Not%20specified%0AArea%3A%20Strategic%20Decision%20Workshop%0ALocal%20design%20validation.%20This%20request%20is%20mocked."
+  },
+  "delivery": "All POST requests fulfilled locally by Playwright; no real enquiry sent."
+}

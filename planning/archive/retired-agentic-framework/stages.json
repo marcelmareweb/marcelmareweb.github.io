@@ -1,0 +1,57 @@
+[
+  {
+    "id": "explorer",
+    "order": 1,
+    "stageNumber": "01",
+    "title": "Explorer",
+    "automationLevel": "Assisted",
+    "summary": "Examine the gap between intent and AI output.",
+    "primaryRisk": "Accepting fluent output without checking its argument.",
+    "humanCheckpoint": "Agree the question and constraints before using AI.",
+    "workshopDeliverable": "Framing the decision."
+  },
+  {
+    "id": "practitioner",
+    "order": 2,
+    "stageNumber": "02",
+    "title": "Practitioner",
+    "automationLevel": "Partial Automation",
+    "summary": "Build repeatable workflows from individual prompts.",
+    "primaryRisk": "Private prompts that colleagues cannot reproduce or audit.",
+    "humanCheckpoint": "Set shared criteria for what to keep and cut.",
+    "workshopDeliverable": "Repeatable team workflows."
+  },
+  {
+    "id": "integrator",
+    "order": 3,
+    "stageNumber": "03",
+    "title": "Integrator",
+    "automationLevel": "Conditional Automation",
+    "summary": "Define where people must review AI-supported decisions.",
+    "primaryRisk": "Rubber-stamping output or reviewing every minor step.",
+    "humanCheckpoint": "Review evidence and consequential trade-offs.",
+    "workshopDeliverable": "Decision review points."
+  },
+  {
+    "id": "architect",
+    "order": 4,
+    "stageNumber": "04",
+    "title": "Architect",
+    "automationLevel": "High Automation",
+    "summary": "Set boundaries for multi-step agents.",
+    "primaryRisk": "Agent loops amplify unchecked assumptions.",
+    "humanCheckpoint": "Define limits and escalation triggers.",
+    "workshopDeliverable": "Agent boundaries."
+  },
+  {
+    "id": "steward",
+    "order": 5,
+    "stageNumber": "05",
+    "title": "Steward",
+    "automationLevel": "Full Automation",
+    "summary": "Govern outcomes against the organisation’s standards.",
+    "primaryRisk": "Outputs converge on competitors’ assumptions and language.",
+    "humanCheckpoint": "Review quality, positioning and consequences.",
+    "workshopDeliverable": "Outcome review criteria."
+  }
+]

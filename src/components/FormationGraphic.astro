@@ -94,7 +94,7 @@ const captionRight =
     </div>
   </div>
 
-  <div class="relative overflow-hidden bg-[#0C0D0E]">
+  <div class="relative overflow-hidden bg-[#0D0B0A]">
     <svg
       class="block h-auto w-full select-none"
       viewBox="0 0 540 400"
@@ -111,29 +111,29 @@ const captionRight =
 
       <defs>
         <pattern id={`formation-grid-${variant}`} width="36" height="36" patternUnits="userSpaceOnUse">
-          <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#F6F4F0" stroke-opacity="0.045" stroke-width="1" />
+          <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1" />
         </pattern>
         <radialGradient id={`beacon-glow-${variant}`} cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#E9F469" stop-opacity="0.28" />
-          <stop offset="65%" stop-color="#E9F469" stop-opacity="0.06" />
-          <stop offset="100%" stop-color="#E9F469" stop-opacity="0" />
+          <stop offset="0%" stop-color="#FFFF00" stop-opacity="0.28" />
+          <stop offset="65%" stop-color="#FFFF00" stop-opacity="0.06" />
+          <stop offset="100%" stop-color="#FFFF00" stop-opacity="0" />
         </radialGradient>
       </defs>
 
-      <rect width="540" height="400" fill="#0C0D0E" />
+      <rect width="540" height="400" fill="#0D0B0A" />
       <rect width="540" height="400" fill={`url(#formation-grid-${variant})`} />
 
       <!-- Top HUD metadata inside SVG -->
-      <text x="28" y="34" fill="#A3A19A" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="1.4" data-svg-state-label>
+      <text x="28" y="34" fill="#B3B3B3" font-family="JetBrains, monospace" font-size="10.5" letter-spacing="1.4" data-svg-state-label>
         STATE // COHERENT FORMATION
       </text>
-      <text x="512" y="34" text-anchor="end" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="1.4" data-svg-coherence-metric>
+      <text x="512" y="34" text-anchor="end" fill="#FFFF00" font-family="JetBrains, monospace" font-size="10.5" letter-spacing="1.4" data-svg-coherence-metric>
         ALIGNMENT: 100%
       </text>
-      <line x1="28" y1="48" x2="512" y2="48" stroke="#F6F4F0" stroke-opacity="0.12" />
+      <line x1="28" y1="48" x2="512" y2="48" stroke="#FFFFFF" stroke-opacity="0.12" />
 
       <!-- Coherent Structural Lattice Lines (fade in as t -> 1) -->
-      <g data-formation-lattice stroke="#E9F469" stroke-opacity="0.22" stroke-width="1" fill="none">
+      <g data-formation-lattice stroke="#FFFF00" stroke-opacity="0.22" stroke-width="1" fill="none">
         <!-- Horizontal formation rows -->
         <line x1="76" y1="118" x2="468" y2="118" stroke-dasharray="3 3" />
         <line x1="76" y1="176" x2="468" y2="176" stroke-dasharray="3 3" />
@@ -147,11 +147,11 @@ const captionRight =
         <line x1="340" y1="118" x2="340" y2="292" />
         <line x1="406" y1="118" x2="406" y2="292" />
         <!-- Convergence vectors to the Orientation Beacon at (474, 205) -->
-        <path d="M406 118 L474 205 M406 176 L474 205 M406 234 L474 205 M406 292 L474 205" stroke="#E9F469" stroke-opacity="0.45" stroke-width="1.25" />
+        <path d="M406 118 L474 205 M406 176 L474 205 M406 234 L474 205 M406 292 L474 205" stroke="#FFFF00" stroke-opacity="0.45" stroke-width="1.25" />
       </g>
 
       <!-- Chaotic Crossed Signal Lines (fade out as t -> 1) -->
-      <g data-chaos-noise stroke="#A3A19A" stroke-opacity="0" stroke-width="1" stroke-dasharray="4 4" fill="none">
+      <g data-chaos-noise stroke="#B3B3B3" stroke-opacity="0" stroke-width="1" stroke-dasharray="4 4" fill="none">
         <path d="M68 98 L194 82 L124 214 L332 94 L238 268 L448 112" />
         <path d="M52 188 L268 128 L112 342 L392 154 L314 346 L492 318" />
         <path d="M88 284 L216 184 L356 312 L422 224 L444 344" />
@@ -160,9 +160,9 @@ const captionRight =
       <!-- Acid-Yellow Focal Orientation Beacon (Right-hand reference point) -->
       <g data-orientation-beacon transform="translate(474, 205)">
         <circle r="44" fill={`url(#beacon-glow-${variant})`} />
-        <circle r="18" fill="none" stroke="#E9F469" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3" />
-        <circle r="6" fill="#E9F469" />
-        <text x="0" y="-26" text-anchor="middle" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="9.5" letter-spacing="1.2">
+        <circle r="18" fill="none" stroke="#FFFF00" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3" />
+        <circle r="6" fill="#FFFF00" />
+        <text x="0" y="-26" text-anchor="middle" fill="#FFFF00" font-family="JetBrains, monospace" font-size="9.5" letter-spacing="1.2">
           BEACON
         </text>
       </g>
@@ -188,7 +188,7 @@ const captionRight =
               y1="0"
               x2="18"
               y2="0"
-              stroke={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              stroke={node.isPrimaryBeacon ? '#FFFF00' : '#FFFFFF'}
               stroke-opacity={node.isPrimaryBeacon ? '0.9' : '0.55'}
               stroke-width="1.5"
               data-node-vector
@@ -196,7 +196,7 @@ const captionRight =
             <!-- Vector arrowhead tip -->
             <polygon
               points="18,-2.6 23,0 18,2.6"
-              fill={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              fill={node.isPrimaryBeacon ? '#FFFF00' : '#FFFFFF'}
               fill-opacity={node.isPrimaryBeacon ? '0.95' : '0.65'}
               data-node-arrow
             />
@@ -205,7 +205,7 @@ const captionRight =
               cx="0"
               cy="0"
               r={node.isPrimaryBeacon ? '4.5' : '3.5'}
-              fill={node.isPrimaryBeacon ? '#E9F469' : '#F6F4F0'}
+              fill={node.isPrimaryBeacon ? '#FFFF00' : '#FFFFFF'}
               data-node-circle
             />
           </g>
@@ -213,11 +213,11 @@ const captionRight =
       </g>
 
       <!-- Bottom HUD Axis inside SVG -->
-      <line x1="28" y1="348" x2="512" y2="348" stroke="#F6F4F0" stroke-opacity="0.12" />
-      <text x="28" y="372" fill="#A3A19A" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.1">
+      <line x1="28" y1="348" x2="512" y2="348" stroke="#FFFFFF" stroke-opacity="0.12" />
+      <text x="28" y="372" fill="#B3B3B3" font-family="JetBrains, monospace" font-size="10" letter-spacing="1.1">
         RAW SPEED WITHOUT DIRECTION CREATES NOISE
       </text>
-      <text x="512" y="372" text-anchor="end" fill="#E9F469" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1.1">
+      <text x="512" y="372" text-anchor="end" fill="#FFFF00" font-family="JetBrains, monospace" font-size="10" letter-spacing="1.1">
         VISIBILITY CREATES ORIENTATION
       </text>
     </svg>
@@ -298,14 +298,14 @@ const captionRight =
           n.el.setAttribute('transform', `translate(${x.toFixed(1)}, ${y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
 
           const isHighlighted = n.isPrimary || eased > 0.72;
-          const color = n.isPrimary ? '#E9F469' : eased > 0.5 ? '#F6F4F0' : '#A3A19A';
+          const color = n.isPrimary ? '#FFFF00' : eased > 0.5 ? '#FFFFFF' : '#B3B3B3';
           if (n.circle) n.circle.setAttribute('fill', color);
           if (n.vector) {
-            n.vector.setAttribute('stroke', isHighlighted && n.isPrimary ? '#E9F469' : color);
+            n.vector.setAttribute('stroke', isHighlighted && n.isPrimary ? '#FFFF00' : color);
             n.vector.setAttribute('stroke-opacity', String((0.35 + eased * 0.55).toFixed(2)));
           }
           if (n.arrow) {
-            n.arrow.setAttribute('fill', isHighlighted && n.isPrimary ? '#E9F469' : color);
+            n.arrow.setAttribute('fill', isHighlighted && n.isPrimary ? '#FFFF00' : color);
           }
         });
 

@@ -1,0 +1,809 @@
+{
+  "date": "2026-10-29",
+  "scope": "Formation typography and layout refinement, rendered Playwright review",
+  "results": [
+    {
+      "width": 1440,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "box": {
+            "x": 40,
+            "y": 1643.78125,
+            "w": 358.78125,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 64,
+              "y": 1689.5859375,
+              "w": 102.9609375,
+              "h": 33
+            },
+            {
+              "x": 64,
+              "y": 1720.78125,
+              "w": 87.6640625,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "box": {
+            "x": 422.78125,
+            "y": 1643.78125,
+            "w": 358.78125,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 450.78125,
+              "y": 1689.5859375,
+              "w": 83.8515625,
+              "h": 33
+            },
+            {
+              "x": 450.78125,
+              "y": 1720.78125,
+              "w": 163.7734375,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "reliability",
+          "box": {
+            "x": 40,
+            "y": 1955.78125,
+            "w": 358.78125,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 68,
+              "y": 2001.5859375,
+              "w": 102.390625,
+              "h": 33
+            },
+            {
+              "x": 68,
+              "y": 2032.78125,
+              "w": 136.4453125,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "box": {
+            "x": 422.78125,
+            "y": 1955.78125,
+            "w": 358.78125,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 446.78125,
+              "y": 2001.5859375,
+              "w": 99.78125,
+              "h": 33
+            },
+            {
+              "x": 446.78125,
+              "y": 2032.78125,
+              "w": 115.6875,
+              "h": 33
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "text": "Customer evidence",
+          "box": {
+            "x": 155.8671875,
+            "y": 1817.78125,
+            "w": 124.203125,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Service capacity",
+          "box": {
+            "x": 544.78515625,
+            "y": 1817.78125,
+            "w": 117.6015625,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Time to learn",
+          "box": {
+            "x": 169.06640625,
+            "y": 1922.3828125,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Review rights",
+          "box": {
+            "x": 554.68359375,
+            "y": 1922.3828125,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        }
+      ],
+      "labelsClear": true,
+      "columnStartDelta": 0,
+      "count": 2,
+      "detailCount": 2,
+      "screenshot": "docs/design-reference/screenshots/ape-formation-refined-1440.png"
+    },
+    {
+      "width": 1024,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "box": {
+            "x": 40,
+            "y": 1644.234375,
+            "w": 245.734375,
+            "h": 156
+          },
+          "font": "22px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 60,
+              "y": 1698.359375,
+              "w": 75.5078125,
+              "h": 24
+            },
+            {
+              "x": 60,
+              "y": 1721.234375,
+              "w": 64.2890625,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "box": {
+            "x": 309.734375,
+            "y": 1644.234375,
+            "w": 245.7421875,
+            "h": 156
+          },
+          "font": "22px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 331.734375,
+              "y": 1698.359375,
+              "w": 61.4921875,
+              "h": 24
+            },
+            {
+              "x": 331.734375,
+              "y": 1721.234375,
+              "w": 120.1015625,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "id": "reliability",
+          "box": {
+            "x": 40,
+            "y": 1956.234375,
+            "w": 245.734375,
+            "h": 156
+          },
+          "font": "22px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 62,
+              "y": 2010.359375,
+              "w": 75.09375,
+              "h": 24
+            },
+            {
+              "x": 62,
+              "y": 2033.234375,
+              "w": 100.0625,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "box": {
+            "x": 309.734375,
+            "y": 1956.234375,
+            "w": 245.7421875,
+            "h": 156
+          },
+          "font": "22px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 329.734375,
+              "y": 2010.359375,
+              "w": 73.1796875,
+              "h": 24
+            },
+            {
+              "x": 329.734375,
+              "y": 2033.234375,
+              "w": 84.8359375,
+              "h": 24
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "text": "Customer evidence",
+          "box": {
+            "x": 101.609375,
+            "y": 1818.234375,
+            "w": 124.203125,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Service capacity",
+          "box": {
+            "x": 372.95703125,
+            "y": 1818.234375,
+            "w": 117.6015625,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Time to learn",
+          "box": {
+            "x": 114.80859375,
+            "y": 1922.8359375,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Review rights",
+          "box": {
+            "x": 382.85546875,
+            "y": 1922.8359375,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        }
+      ],
+      "labelsClear": true,
+      "columnStartDelta": 0,
+      "count": 2,
+      "detailCount": 2,
+      "screenshot": "docs/design-reference/screenshots/ape-formation-refined-1024.png"
+    },
+    {
+      "width": 768,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "box": {
+            "x": 20,
+            "y": 1411.2578125,
+            "w": 352,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 44,
+              "y": 1457.0625,
+              "w": 102.9609375,
+              "h": 33
+            },
+            {
+              "x": 44,
+              "y": 1488.2578125,
+              "w": 87.6640625,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "box": {
+            "x": 396,
+            "y": 1411.2578125,
+            "w": 352,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 424,
+              "y": 1457.0625,
+              "w": 83.8515625,
+              "h": 33
+            },
+            {
+              "x": 424,
+              "y": 1488.2578125,
+              "w": 163.7734375,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "reliability",
+          "box": {
+            "x": 20,
+            "y": 1723.2578125,
+            "w": 352,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 48,
+              "y": 1769.0625,
+              "w": 102.390625,
+              "h": 33
+            },
+            {
+              "x": 48,
+              "y": 1800.2578125,
+              "w": 136.4453125,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "box": {
+            "x": 396,
+            "y": 1723.2578125,
+            "w": 352,
+            "h": 156
+          },
+          "font": "30px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 420,
+              "y": 1769.0625,
+              "w": 99.78125,
+              "h": 33
+            },
+            {
+              "x": 420,
+              "y": 1800.2578125,
+              "w": 115.6875,
+              "h": 33
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "text": "Customer evidence",
+          "box": {
+            "x": 132.6171875,
+            "y": 1585.2578125,
+            "w": 124.203125,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Service capacity",
+          "box": {
+            "x": 514.47265625,
+            "y": 1585.2578125,
+            "w": 117.6015625,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Time to learn",
+          "box": {
+            "x": 145.81640625,
+            "y": 1689.859375,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        },
+        {
+          "text": "Review rights",
+          "box": {
+            "x": 524.37109375,
+            "y": 1689.859375,
+            "w": 97.8046875,
+            "h": 15.3984375
+          },
+          "font": "11px"
+        }
+      ],
+      "labelsClear": true,
+      "columnStartDelta": 612.296875,
+      "count": 2,
+      "detailCount": 2,
+      "screenshot": "docs/design-reference/screenshots/ape-formation-refined-768.png"
+    },
+    {
+      "width": 390,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "box": {
+            "x": 20,
+            "y": 1403.5546875,
+            "w": 167,
+            "h": 144
+          },
+          "font": "20.3px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 36,
+              "y": 1453.453125,
+              "w": 69.65625,
+              "h": 22.5
+            },
+            {
+              "x": 36,
+              "y": 1474.5546875,
+              "w": 59.3046875,
+              "h": 22.5
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "box": {
+            "x": 203,
+            "y": 1403.5546875,
+            "w": 167,
+            "h": 144
+          },
+          "font": "20.3px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 223,
+              "y": 1453.453125,
+              "w": 56.7265625,
+              "h": 22.5
+            },
+            {
+              "x": 223,
+              "y": 1474.5546875,
+              "w": 110.7890625,
+              "h": 22.5
+            }
+          ]
+        },
+        {
+          "id": "reliability",
+          "box": {
+            "x": 20,
+            "y": 1691.5546875,
+            "w": 167,
+            "h": 144
+          },
+          "font": "20.3px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 40,
+              "y": 1741.453125,
+              "w": 69.265625,
+              "h": 22.5
+            },
+            {
+              "x": 40,
+              "y": 1762.5546875,
+              "w": 92.3046875,
+              "h": 22.5
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "box": {
+            "x": 203,
+            "y": 1691.5546875,
+            "w": 167,
+            "h": 144
+          },
+          "font": "20.3px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 219,
+              "y": 1741.453125,
+              "w": 67.5,
+              "h": 22.5
+            },
+            {
+              "x": 219,
+              "y": 1762.5546875,
+              "w": 78.2578125,
+              "h": 22.5
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "text": "Customer evidence",
+          "box": {
+            "x": 47,
+            "y": 1565.5546875,
+            "w": 114,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Service capacity",
+          "box": {
+            "x": 232,
+            "y": 1565.5546875,
+            "w": 108,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Time to learn",
+          "box": {
+            "x": 59,
+            "y": 1659.5546875,
+            "w": 90,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Review rights",
+          "box": {
+            "x": 241,
+            "y": 1659.5546875,
+            "w": 90,
+            "h": 14
+          },
+          "font": "10px"
+        }
+      ],
+      "labelsClear": true,
+      "columnStartDelta": 583,
+      "count": 2,
+      "detailCount": 2,
+      "screenshot": "docs/design-reference/screenshots/ape-formation-refined-390.png"
+    },
+    {
+      "width": 320,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "box": {
+            "x": 20,
+            "y": 1553.4453125,
+            "w": 132,
+            "h": 144
+          },
+          "font": "18px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 34,
+              "y": 1605.7265625,
+              "w": 61.78125,
+              "h": 20
+            },
+            {
+              "x": 34,
+              "y": 1624.4453125,
+              "w": 52.6015625,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "box": {
+            "x": 168,
+            "y": 1553.4453125,
+            "w": 132,
+            "h": 144
+          },
+          "font": "18px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 186,
+              "y": 1605.7265625,
+              "w": 50.3125,
+              "h": 20
+            },
+            {
+              "x": 186,
+              "y": 1624.4453125,
+              "w": 98.265625,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "id": "reliability",
+          "box": {
+            "x": 20,
+            "y": 1841.4453125,
+            "w": 132,
+            "h": 144
+          },
+          "font": "18px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 38,
+              "y": 1893.7265625,
+              "w": 61.4375,
+              "h": 20
+            },
+            {
+              "x": 38,
+              "y": 1912.4453125,
+              "w": 81.8671875,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "box": {
+            "x": 168,
+            "y": 1841.4453125,
+            "w": 132,
+            "h": 144
+          },
+          "font": "18px",
+          "overflow": false,
+          "lineFit": true,
+          "lines": [
+            {
+              "x": 182,
+              "y": 1893.7265625,
+              "w": 59.875,
+              "h": 20
+            },
+            {
+              "x": 182,
+              "y": 1912.4453125,
+              "w": 69.4140625,
+              "h": 20
+            }
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "text": "Customer evidence",
+          "box": {
+            "x": 30.1953125,
+            "y": 1715.4453125,
+            "w": 114,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Service capacity",
+          "box": {
+            "x": 178.796875,
+            "y": 1715.4453125,
+            "w": 108,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Time to learn",
+          "box": {
+            "x": 42.1953125,
+            "y": 1809.4453125,
+            "w": 90,
+            "h": 14
+          },
+          "font": "10px"
+        },
+        {
+          "text": "Review rights",
+          "box": {
+            "x": 187.796875,
+            "y": 1809.4453125,
+            "w": 90,
+            "h": 14
+          },
+          "font": "10px"
+        }
+      ],
+      "labelsClear": true,
+      "columnStartDelta": 583,
+      "count": 2,
+      "detailCount": 2,
+      "screenshot": "docs/design-reference/screenshots/ape-formation-refined-320.png"
+    }
+  ],
+  "checks": [
+    "Hover still previews without selecting",
+    "A new preview retains the selected detail",
+    "Two-priority limit is preserved",
+    "Both selected cards persist after leaving the illustration",
+    "Tab order and visible focus are preserved",
+    "Space and Enter still back the focused shapes",
+    "Reduced motion makes SVG feedback effectively instant",
+    "Touch selects the illustrated shape and retains its information",
+    "Touch can clear a selection",
+    "All four choices and the worked example remain readable without JavaScript"
+  ],
+  "notes": [
+    "Desktop columns start on the same baseline.",
+    "Text ranges checked inside every illustrated shape, including 320px.",
+    "Dependency labels checked against choice and capacity rectangles.",
+    "Local Chromium; touch and reduced motion are emulation."
+  ]
+}

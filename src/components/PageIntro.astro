@@ -1,0 +1,25 @@
+---
+interface Props {
+  eyebrow: string;
+  description?: string;
+  scale?: 'default' | 'short' | 'long';
+  id?: string;
+}
+const { eyebrow, description, scale = 'default', id } = Astro.props;
+---
+<section class={`page-intro page-intro--${scale}`} id={id}>
+<div class="wrap">
+<div class="section-top meta">
+<p class="meta-dot">{eyebrow}</p>
+<p>Independent practice / Cape Town</p>
+</div>
+<h1>
+<slot name="heading" />
+</h1>{(description||Astro.slots.has('aside'))&&<div class="intro-bottom">
+<p class="intro-description">{description}</p>
+<div class="intro-aside">
+<slot name="aside" />
+</div>
+</div>}<slot />
+</div>
+</section>

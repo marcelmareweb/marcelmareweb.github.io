@@ -1,0 +1,35 @@
+{
+  "375": {
+    "width": 375,
+    "scroll": 375,
+    "missing": []
+  },
+  "768": {
+    "width": 768,
+    "scroll": 768,
+    "missing": []
+  },
+  "1440": {
+    "width": 1440,
+    "scroll": 1440,
+    "missing": []
+  },
+  "fixed_sizes": {
+    "desktop": [
+      1440,
+      1440
+    ],
+    "desktopImages": [
+      1320,
+      1320
+    ],
+    "mobile": [
+      375,
+      375
+    ],
+    "mobileImages": [
+      335,
+      335
+    ]
+  }
+}

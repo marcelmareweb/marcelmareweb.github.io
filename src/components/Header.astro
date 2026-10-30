@@ -1,90 +1,75 @@
 ---
 const links = [
-  { label: 'The Tension', href: '/#idea' },
-  { label: 'Capabilities', href: '/#work' },
-  { label: 'Decision Workshops', href: '/workshops' },
+  { label: 'Practice', href: '/#practice' },
+  { label: 'Work', href: '/#evidence' },
+  { label: 'Thinking', href: '/thinking/' },
+  { label: 'Workshops', href: '/workshops' },
   { label: 'Courses', href: '/courses' },
-  { label: 'Case Brief', href: '/#case' },
   { label: 'About', href: '/about' },
 ];
+const current = (href: string) =>
+  !href.includes('#') && Astro.url.pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
 ---
-
-<header class="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[#0C0D0E]/88 backdrop-blur-md">
-  <div class="editorial-container flex min-h-20 items-center justify-between gap-6">
-    <a class="group flex min-w-0 flex-col leading-none text-[var(--text-primary)] no-underline" href="/" aria-label="The Spotted Ape home">
-    <span class="flex items-center gap-2.5 text-sm font-bold tracking-[0.16em]">
-    <img
-        src="/logo.png"
-        alt=""
-        width="20"
-        height="20"
-        class="inline-block size-5 object-contain transition-transform duration-200 group-hover:scale-110"
-        aria-hidden="true"
-    />
-    <span>THE<span class="text-[var(--accent-signal)]">SPOTTED</span>APE</span>
-    </span>
-    </a>
-
-    <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-      {links.map(({ label, href }) => (
-        <a class="text-xs font-medium tracking-wide text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href}>{label}</a>
-      ))}
-      <a class="inline-flex min-h-10 items-center bg-[var(--accent-signal)] px-5 py-2.5 text-xs font-semibold tracking-wide text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]" href="/#book" aria-label="Start a Conversation">
-        Let’s Talk
-      </a>
-    </nav>
-
-    <button
-      class="flex size-10 items-center justify-center border border-[var(--border-subtle)] text-[var(--text-primary)] transition-colors hover:border-[var(--accent-signal)] lg:hidden"
-      type="button"
-      aria-label="Open navigation"
-      aria-controls="mobile-navigation"
-      aria-expanded="false"
-      data-menu-toggle
-    >
-      <span class="flex w-4 flex-col gap-1.5" aria-hidden="true">
-        <span class="h-px w-full bg-current"></span>
-        <span class="h-px w-full bg-current"></span>
-      </span>
-    </button>
-  </div>
-
-  <nav id="mobile-navigation" class="editorial-container border-t border-[var(--border-subtle)] bg-[#0C0D0E] py-5 lg:hidden" aria-label="Mobile navigation" hidden>
-    <div class="flex flex-col">
-      {links.map(({ label, href }) => (
-        <a class="border-b border-[var(--border-subtle)] py-3.5 text-sm text-[var(--text-primary)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href} data-menu-link>{label}</a>
-      ))}
-      <a class="mt-5 bg-[var(--accent-signal)] px-5 py-3.5 text-center text-sm font-semibold text-[var(--text-on-accent)] no-underline" href="/#book" aria-label="Start a Conversation" data-menu-link>
-        Let’s Talk
-      </a>
-    </div>
-  </nav>
+<header class="site-header">
+<div class="wrap header-row">
+<a class="brand" href="/" aria-label="The Spotted Ape home">
+<img src="/logo.png" width="30" height="30" alt="" />
+<span class="brand-word">THE SPOTTED APE</span>
+</a>
+<nav class="desktop-nav" aria-label="Main navigation">{links.map(link=>
+<a href={link.href} aria-current={current(link.href)?'page':undefined}>{link.label}</a>)}<a class="button button--talk" href="mailto:hello@thespottedape.com">Let’s talk
+</a>
+</nav>
+<button class="button menu-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span>
+</button>
+<noscript>
+<details class="noscript-menu">
+<summary>Menu</summary>
+<nav aria-label="Mobile navigation">{links.map(link=>
+<a href={link.href}>{link.label}</a>)}</nav>
+</details>
+</noscript>
+</div>
+<dialog class="nav-dialog" id="site-menu" aria-label="Navigation menu">
+<div class="wrap dialog-top">
+<a class="brand" href="/" aria-label="The Spotted Ape home">
+<img src="/logo.png" width="30" height="30" alt="" />
+<span class="brand-word">THE SPOTTED APE</span>
+</a>
+<button class="icon-button" type="button" data-menu-close aria-label="Close navigation">×</button>
+</div>
+<div class="wrap dialog-content">
+<nav class="mobile-links" aria-label="Mobile navigation">{links.map(link=>
+<a href={link.href} aria-current={current(link.href)?'page':undefined}>{link.label}.</a>)}</nav>
+<div class="dialog-bottom">
+<a class="button button--talk" href="mailto:hello@thespottedape.com">Let’s talk
+</a>
+<p>Make a choice.<br />Own its consequences.</p>
+</div>
+</div>
+</dialog>
 </header>
-
 <script>
-  const menuToggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
-  const mobileNavigation = document.querySelector<HTMLElement>('#mobile-navigation');
-
-  const closeMenu = () => {
-    if (!menuToggle || !mobileNavigation) return;
-    mobileNavigation.hidden = true;
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Open navigation');
-  };
-
-  menuToggle?.addEventListener('click', () => {
-    if (!mobileNavigation) return;
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    mobileNavigation.hidden = isExpanded;
-    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-    menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation' : 'Close navigation');
+const dialog = document.querySelector<HTMLDialogElement>('#site-menu');
+const trigger = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+if (dialog && trigger) {
+  trigger.hidden = false;
+  trigger.addEventListener('click', () => {
+    dialog.showModal();
+    document.body.style.overflow = 'hidden';
+    trigger.setAttribute('aria-expanded', 'true');
   });
-
-  mobileNavigation?.querySelectorAll<HTMLAnchorElement>('[data-menu-link]').forEach((link) => {
-    link.addEventListener('click', closeMenu);
+  dialog.querySelector('[data-menu-close]')?.addEventListener('click', () => dialog.close());
+  dialog
+    .querySelectorAll('a')
+    .forEach((link) => link.addEventListener('click', () => dialog.close()));
+  dialog.addEventListener('close', () => {
+    document.body.style.overflow = '';
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus({ preventScroll: true });
   });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+  matchMedia('(min-width:1024px)').addEventListener('change', (event) => {
+    if (event.matches && dialog.open) dialog.close();
   });
+}
 </script>

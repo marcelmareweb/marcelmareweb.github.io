@@ -1,0 +1,62 @@
+{
+  "buttons": [
+    {
+      "aria": "Previous slide",
+      "display": "flex",
+      "visible": true
+    },
+    {
+      "aria": "Next slide",
+      "display": "flex",
+      "visible": true
+    }
+  ],
+  "swipers": [
+    {
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 bg-transparent border border-(--theme-border-subtle) text-(--theme-text-primary) hover:border-(--theme-border-strong) active:opacity-75 focus-visible:shadow-[0_0_0_3px_var(--theme-text-primary)] swiper-button-disabled",
+      "style": null
+    },
+    {
+      "class": "swiper-group col-span-full",
+      "style": "translate: none; rotate: none; scale: none; opacity: 0; visibility: hidden; transform: translate(0px, 2em);"
+    },
+    {
+      "class": "swiper swiper-initialized swiper-horizontal swiper-backface-hidden",
+      "style": null
+    },
+    {
+      "class": "swiper-wrapper",
+      "style": "cursor: grab;"
+    },
+    {
+      "class": "swiper-slide swiper-slide-active",
+      "style": "width: auto;"
+    },
+    {
+      "class": "swiper-slide swiper-slide-next",
+      "style": "width: auto;"
+    }
+  ],
+  "headings": [
+    {
+      "text": "Since ʼ99.",
+      "y": 226
+    },
+    {
+      "text": "",
+      "y": 1115.453125
+    },
+    {
+      "text": "",
+      "y": 3368.59375
+    },
+    {
+      "text": "",
+      "y": 4192.8779296875
+    },
+    {
+      "text": "",
+      "y": 8660.19140625
+    }
+  ]
+}

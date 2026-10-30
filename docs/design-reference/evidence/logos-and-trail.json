@@ -1,0 +1,61 @@
+{
+  "logos": [
+    "<li data-logo-wall-item=\"\" class=\"logo-wall__item\" style=\"\"><div data-logo-wall-target-parent=\"\" class=\"logo-wall__logo\"><div class=\"logo-wall__logo-before\"></div><div data-logo-wall-target=\"\" class=\"logo-wall__logo-target\" style=\"opacity: 1; visibility: inherit; transform: translate(0px, 0px);\"><img alt=\"Nespresso\" loading=\"lazy\" width=\"400\" height=\"200\" decoding=\"async\" data-nimg=\"1\" class=\"logo-wall__logo-img\" style=\"color:transparent\" srcset=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt566b4764a776ca00/6a8ec26f11115524410d0364/Vector_(2).svg?width=640&amp;quality=75&amp;auto=webp&amp;disable=upscale 1x, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt566b4764a776ca00/6a8ec26f11115524410d0364/Vector_(2).svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale 2x\" src=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt566b4764a776ca00/6a8ec26f11115524410d0364/Vector_(2).svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale\"></div></div></li>",
+    "<li data-logo-wall-item=\"\" class=\"logo-wall__item\" style=\"\"><div data-logo-wall-target-parent=\"\" class=\"logo-wall__logo\"><div class=\"logo-wall__logo-before\"></div><div data-logo-wall-target=\"\" class=\"logo-wall__logo-target\" style=\"opacity: 1; visibility: inherit; transform: translate(0px, 0px);\"><img alt=\"\" loading=\"lazy\" width=\"400\" height=\"200\" decoding=\"async\" data-nimg=\"1\" class=\"logo-wall__logo-img\" style=\"color:transparent\" srcset=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt5cb40b83a569e64e/6a7de76caf79245d6825a9bb/Inova.svg?width=640&amp;quality=75&amp;auto=webp&amp;disable=upscale 1x, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt5cb40b83a569e64e/6a7de76caf79245d6825a9bb/Inova.svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale 2x\" src=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt5cb40b83a569e64e/6a7de76caf79245d6825a9bb/Inova.svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale\"></div></div></li>",
+    "<li data-logo-wall-item=\"\" class=\"logo-wall__item\" style=\"\"><div data-logo-wall-target-parent=\"\" class=\"logo-wall__logo\"><div class=\"logo-wall__logo-before\"></div><div data-logo-wall-target=\"\" class=\"logo-wall__logo-target\" style=\"opacity: 1; visibility: inherit; transform: translate(0px, 0px);\"><img alt=\"\" loading=\"lazy\" width=\"400\" height=\"200\" decoding=\"async\" data-nimg=\"1\" class=\"logo-wall__logo-img\" style=\"color:transparent\" srcset=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/bltdb2e9e3ad8d787c0/6a8ebd20da6aea230c37b3d2/logo-big-green-egg_1_(1).svg?width=640&amp;quality=75&amp;auto=webp&amp;disable=upscale 1x, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/bltdb2e9e3ad8d787c0/6a8ebd20da6aea230c37b3d2/logo-big-green-egg_1_(1).svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale 2x\" src=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/bltdb2e9e3ad8d787c0/6a8ebd20da6aea230c37b3d2/logo-big-green-egg_1_(1).svg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale\"></div></div></li>"
+  ],
+  "trails": [
+    {
+      "type": "wrapper",
+      "box": {
+        "x": 40,
+        "y": -656.015625,
+        "width": 1360,
+        "height": 640.5,
+        "top": -656.015625,
+        "right": 1400,
+        "bottom": -15.515625,
+        "left": 40
+      }
+    },
+    {
+      "type": "item",
+      "box": {
+        "x": 142,
+        "y": -554.015625,
+        "width": 0,
+        "height": 0,
+        "top": -554.015625,
+        "right": 142,
+        "bottom": -554.015625,
+        "left": 142
+      }
+    },
+    {
+      "type": "item",
+      "box": {
+        "x": 142,
+        "y": -554.015625,
+        "width": 0,
+        "height": 0,
+        "top": -554.015625,
+        "right": 142,
+        "bottom": -554.015625,
+        "left": 142
+      }
+    },
+    {
+      "type": "item",
+      "box": {
+        "x": 142,
+        "y": -554.015625,
+        "width": 0,
+        "height": 0,
+        "top": -554.015625,
+        "right": 142,
+        "bottom": -554.015625,
+        "left": 142
+      }
+    }
+  ]
+}

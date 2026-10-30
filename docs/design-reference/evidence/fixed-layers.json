@@ -1,0 +1,119 @@
+{
+  "layers": [
+    {
+      "tag": "HEADER",
+      "class": "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-(--page-margin) h-(--header-height)",
+      "position": "fixed",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "none",
+      "mask": "none",
+      "z": "50",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 70,
+        "top": 0,
+        "right": 1440,
+        "bottom": 70,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "class": "progressive-blur is--top",
+      "position": "fixed",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "none",
+      "mask": "none",
+      "z": "40",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 286.5546875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 286.5546875,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "class": "progressive-blur__layer is--1",
+      "position": "absolute",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "blur(1.791px)",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, rgba(0, 0, 0, 0) 50%)",
+      "z": "auto",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 286.5546875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 286.5546875,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "class": "progressive-blur__layer is--2",
+      "position": "absolute",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "blur(7.164px)",
+      "mask": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 37.5%)",
+      "z": "auto",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 286.5546875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 286.5546875,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "class": "progressive-blur__layer is--3",
+      "position": "absolute",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "blur(28.656px)",
+      "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 25%)",
+      "z": "auto",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 286.5546875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 286.5546875,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "class": "transition",
+      "position": "fixed",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "backdrop": "none",
+      "mask": "none",
+      "z": "100",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000,
+        "top": 0,
+        "right": 1440,
+        "bottom": 1000,
+        "left": 0
+      }
+    }
+  ],
+  "followers": []
+}

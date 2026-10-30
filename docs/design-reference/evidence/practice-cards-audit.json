@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-29",
+  "scope": "PracticeSection feature cards; original local implementation informed by Huge Approach horizontal feature sequence",
+  "desktop": {
+    "checks": [
+      "Desktop uses a pinned horizontal sequence",
+      "Normal vertical scrolling moves cards horizontally while their vertical position stays fixed",
+      "Previous control is disabled at the first card",
+      "Next control advances to Behavioural Design",
+      "Direct selection reaches the final card and disables Next",
+      "Native disclosure exposes the retained human–AI questions and outcomes",
+      "Home, ArrowRight and End navigate the focused card region",
+      "Tab reaches the next offscreen disclosure and brings its card into view without double scrolling",
+      "Enter opens the focused native disclosure",
+      "Space closes the focused native disclosure"
+    ]
+  },
+  "fallback": {
+    "checks": [
+      "Emulated touch swipe advances the native mobile rail",
+      "Touch Next reaches the third practice card",
+      "Touch opens retained card questions and outcomes",
+      "Expanded mobile card does not overflow the document",
+      "Reduced motion presents all three cards as an ordinary vertical stack",
+      "Reduced-motion disclosures remain functional",
+      "Without JavaScript all three cards remain in the native scroll rail",
+      "Without JavaScript keyboard focus reaches the third card and opens its content",
+      "No-JavaScript layout has no document overflow"
+    ]
+  },
+  "responsive": [
+    {
+      "viewport": "320 × 844",
+      "mode": "native",
+      "cardWidth": 280,
+      "headingSize": 34
+    },
+    {
+      "viewport": "390 × 844",
+      "mode": "native",
+      "cardWidth": 350,
+      "headingSize": 39.975
+    },
+    {
+      "viewport": "768 × 1024",
+      "mode": "native",
+      "cardWidth": 728,
+      "headingSize": 52
+    },
+    {
+      "viewport": "1024 × 768",
+      "mode": "pinned",
+      "cardWidth": 944,
+      "headingSize": 62
+    },
+    {
+      "viewport": "1440 × 900",
+      "mode": "pinned",
+      "cardWidth": 1360,
+      "headingSize": 77.856
+    },
+    {
+      "viewport": "1920 × 1080",
+      "mode": "pinned",
+      "cardWidth": 1800,
+      "headingSize": 88
+    },
+    {
+      "viewport": "844 × 390",
+      "mode": "native",
+      "cardWidth": 804,
+      "headingSize": 52
+    }
+  ],
+  "geometryResult": "All three cards at every viewport: title/summary text stays inside the card; mobile art clears headings; no card or document horizontal overflow.",
+  "browserErrors": 0,
+  "reference": {
+    "url": "https://www.hugeinc.com/approach",
+    "observed": "HugeOS/HATs/Huge LIVE dark feature cards translate horizontally while the section remains pinned. Their articles have no full-card link or carousel buttons in the inspected wrapper.",
+    "desktopCard": {
+      "width": 1360,
+      "height": 513,
+      "padding": 59.904,
+      "radius": 20
+    },
+    "measuredTypographySource": "Existing approach-desktop.json: heading 77.856px / 70.0704px, 600; body 25.184px / 27.7024px. Live mobile heading 40px / 36px.",
+    "liveScroll": {
+      "before": {
+        "scrollY": 1160,
+        "panelXs": [
+          18,
+          1418,
+          2818
+        ]
+      },
+      "after": {
+        "scrollY": 3056,
+        "panelXs": [
+          -1878,
+          -478,
+          922
+        ]
+      }
+    },
+    "distinction": "The local navigation buttons, native disclosures, original SVG sculptures, mobile swipe rail and reduced-motion stack are Spotted Ape adaptations."
+  },
+  "limitations": "Chromium and emulated viewport/touch/reduced-motion checks; no claim of physical-device or screen-reader certification."
+}

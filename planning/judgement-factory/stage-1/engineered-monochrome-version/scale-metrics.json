@@ -1,0 +1,24 @@
+{
+  "desktop_viewbox": [
+    0,
+    0,
+    1000,
+    360
+  ],
+  "worker_height": 40,
+  "worker_width_percentage": 4,
+  "desktop_css_panel": 1440,
+  "desktop_css_illustration": 1320,
+  "desktop_worker_css_height": 52.8,
+  "mobile_viewbox": [
+    500,
+    80,
+    500,
+    270
+  ],
+  "mobile_css_panel": 375,
+  "mobile_css_illustration": 335,
+  "mobile_worker_css_height": 26.8,
+  "storyboard_frames": "material/working-detail crops; not scale comparisons",
+  "stage_2_started": false
+}

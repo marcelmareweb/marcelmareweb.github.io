@@ -1,0 +1,1576 @@
+{
+  "initial": {
+    "data": {
+      "monkeyFactory": "",
+      "mounted": "true",
+      "state": "running",
+      "phase": "arrival",
+      "cycle": "0",
+      "ready": "true"
+    },
+    "hidden": false,
+    "width": 1440,
+    "scrollWidth": 1440,
+    "status": "The factory is running. Each loaf pauses for inspection.",
+    "scene": "desktop",
+    "parts": [
+      {
+        "name": "wheel",
+        "transform": "matrix(0.963961, 0.266044, -0.266044, 0.963961, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "pulley",
+        "transform": "matrix(0.858441, 0.512912, -0.512912, 0.858441, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.20003)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "basket",
+        "transform": "matrix(0.999949, -0.0101227, 0.0101227, 0.999949, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "fork",
+        "transform": "matrix(0.999964, -0.00847697, 0.00847697, 0.999964, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "fruit",
+        "transform": "matrix(1, 0, 0, 1, 0, -65)",
+        "opacity": "0.306131",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "beater",
+        "transform": "matrix(0.903997, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stream",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "door",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "receiver",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "mixerWorker",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "travelling-banana",
+        "transform": "matrix(1, 0, 0, 1, 2.72752, -3.35095)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "falling-peel",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "0.342866",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "loaf",
+        "transform": "matrix(1, 0, 0, 1, -220, 0)",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stop",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "lever",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "inspector",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "approval-arm",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "running",
+            "time": 300.0080000117198,
+            "rate": 1
+          }
+        ]
+      }
+    ],
+    "allAnimations": [
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      },
+      {
+        "state": "running",
+        "time": 300.0080000117198
+      }
+    ],
+    "buttons": [
+      {
+        "name": "play",
+        "label": "Pause animation",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "hold",
+        "label": "Hold next loaf",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "approve",
+        "label": "Approve loaf",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "boost",
+        "label": "Boost mixer",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "worker",
+        "label": "Check intake",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      }
+    ],
+    "svgNodes": 106,
+    "requests": [
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp"
+    ]
+  },
+  "keyboardPause": true,
+  "pauseSurvivesScroll": true,
+  "offscreenPause": true,
+  "localBoostOnly": true,
+  "reactionPauses": true,
+  "holdWithContinuousUpstream": {
+    "data": {
+      "monkeyFactory": "",
+      "mounted": "true",
+      "state": "held",
+      "phase": "inspection",
+      "cycle": "0",
+      "ready": "true"
+    },
+    "hidden": false,
+    "width": 1440,
+    "scrollWidth": 1440,
+    "status": "The loaf is held for your approval. The upstream machinery keeps working.",
+    "scene": "desktop",
+    "parts": [
+      {
+        "name": "wheel",
+        "transform": "matrix(0.308628, -0.951183, 0.951183, 0.308628, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12599.543999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "pulley",
+        "transform": "matrix(-0.809498, -0.587123, 0.587123, -0.809498, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12599.543999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.7351)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "basket",
+        "transform": "matrix(0.999998, -0.00220766, 0.00220766, 0.999998, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "fork",
+        "transform": "matrix(0.999676, 0.0254424, -0.0254424, 0.999676, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "fruit",
+        "transform": "matrix(1, 0, 0, 1, 29.6114, 36.9171)",
+        "opacity": "0.423576",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "beater",
+        "transform": "matrix(0.888146, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12599.543999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stream",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "door",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "receiver",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "mixerWorker",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "travelling-banana",
+        "transform": "matrix(1, 0, 0, 1, 177.651, -213.68)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "falling-peel",
+        "transform": "matrix(1, 0, 0, 1, -28.9297, 62.9647)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.223999941547,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "loaf",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stop",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "lever",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "inspector",
+        "transform": "matrix(0.99961, 0.0279216, -0.0279216, 0.99961, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "approval-arm",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      }
+    ],
+    "allAnimations": [
+      {
+        "state": "running",
+        "time": 12599.543999941547
+      },
+      {
+        "state": "running",
+        "time": 12599.543999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12599.543999941547
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "running",
+        "time": 12566.223999941547
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      }
+    ],
+    "buttons": [
+      {
+        "name": "play",
+        "label": "Pause animation",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "hold",
+        "label": "Hold next loaf",
+        "pressed": "true",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "approve",
+        "label": "Approve loaf",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "boost",
+        "label": "Boost mixer",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "worker",
+        "label": "Check intake",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      }
+    ],
+    "svgNodes": 106,
+    "requests": [
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp"
+    ]
+  },
+  "mobileHeld": {
+    "data": {
+      "monkeyFactory": "",
+      "mounted": "true",
+      "state": "held",
+      "phase": "inspection",
+      "cycle": "0",
+      "ready": "true"
+    },
+    "hidden": false,
+    "width": 375,
+    "scrollWidth": 375,
+    "status": "The loaf is held for your approval. The upstream machinery keeps working.",
+    "scene": "mobile",
+    "parts": [
+      {
+        "name": "pulley",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "basket",
+        "transform": "matrix(0.999925, -0.012217, 0.012217, 0.999925, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "door",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stream",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "loaf",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stop",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "lever",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "inspector",
+        "transform": "matrix(0.99961, 0.0279216, -0.0279216, 0.99961, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "approval-arm",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12000,
+            "rate": 1
+          }
+        ]
+      }
+    ],
+    "allAnimations": [
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      }
+    ],
+    "buttons": [
+      {
+        "name": "play",
+        "label": "Pause animation",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "hold",
+        "label": "Hold next loaf",
+        "pressed": "true",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "approve",
+        "label": "Approve loaf",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "boost",
+        "label": "Boost mixer",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "worker",
+        "label": "Check inspector",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      }
+    ],
+    "svgNodes": 66,
+    "requests": [
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/mobile.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp"
+    ]
+  },
+  "keyboardRelease": {
+    "data": {
+      "monkeyFactory": "",
+      "mounted": "true",
+      "state": "running",
+      "phase": "release",
+      "cycle": "0",
+      "ready": "true"
+    },
+    "hidden": false,
+    "width": 375,
+    "scrollWidth": 375,
+    "status": "Approved. The inspector is operating the release lever.",
+    "scene": "mobile",
+    "parts": [
+      {
+        "name": "pulley",
+        "transform": "matrix(0.420398, 0.90734, -0.90734, 0.420398, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 633.3079999565819,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.53323)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 633.3079999565819,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "basket",
+        "transform": "matrix(0.99997, -0.0077959, 0.0077959, 0.99997, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 633.3079999565819,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "door",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stream",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "loaf",
+        "transform": "matrix(1, 0, 0, 1, 61.6834, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stop",
+        "transform": "matrix(1, 0, 0, 1, 0, 120)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "lever",
+        "transform": "matrix(0.819152, -0.573576, 0.573576, 0.819152, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "inspector",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "approval-arm",
+        "transform": "none",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "running",
+            "time": 12566.643999973006,
+            "rate": 1
+          }
+        ]
+      }
+    ],
+    "allAnimations": [
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12616.209999941546
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12582.889999941546
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "paused",
+        "time": 12000
+      },
+      {
+        "state": "running",
+        "time": 633.3079999565819
+      },
+      {
+        "state": "running",
+        "time": 633.3079999565819
+      },
+      {
+        "state": "running",
+        "time": 633.3079999565819
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      },
+      {
+        "state": "running",
+        "time": 12566.643999973006
+      }
+    ],
+    "buttons": [
+      {
+        "name": "play",
+        "label": "Pause animation",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "hold",
+        "label": "Hold next loaf",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "approve",
+        "label": "Approve loaf",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "boost",
+        "label": "Boost mixer",
+        "pressed": "false",
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "worker",
+        "label": "Check inspector",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      }
+    ],
+    "svgNodes": 66,
+    "requests": [
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/mobile.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp"
+    ]
+  },
+  "repeatedApprovalQueuesOnce": true,
+  "nativeHiddenTabPause": true,
+  "liveMotionPreferencePreservesPause": true,
+  "reducedMotionApproval": {
+    "data": {
+      "monkeyFactory": "",
+      "mounted": "true",
+      "state": "approved",
+      "phase": "inspection",
+      "cycle": "0",
+      "ready": "true"
+    },
+    "hidden": false,
+    "width": 375,
+    "scrollWidth": 375,
+    "status": "Loaf approved. The release is open. No movement is required.",
+    "scene": "mobile",
+    "parts": [
+      {
+        "name": "pulley",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "basket",
+        "transform": "matrix(0.999925, -0.012217, 0.012217, 0.999925, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 0,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "door",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 11000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stream",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 11000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "loaf",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 11000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "stop",
+        "transform": "matrix(1, 0, 0, 1, 0, 120)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12600,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "lever",
+        "transform": "matrix(0.819152, -0.573576, 0.573576, 0.819152, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 12600,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "inspector",
+        "transform": "matrix(0.999391, 0.0348995, -0.0348995, 0.999391, 0, 0)",
+        "opacity": "1",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 11000,
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "name": "approval-arm",
+        "transform": "none",
+        "opacity": "0",
+        "animations": [
+          {
+            "state": "paused",
+            "time": 11000,
+            "rate": 1
+          }
+        ]
+      }
+    ],
+    "allAnimations": [
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 0
+      },
+      {
+        "state": "paused",
+        "time": 11000
+      },
+      {
+        "state": "paused",
+        "time": 11000
+      },
+      {
+        "state": "paused",
+        "time": 11000
+      },
+      {
+        "state": "paused",
+        "time": 12600
+      },
+      {
+        "state": "paused",
+        "time": 12600
+      },
+      {
+        "state": "paused",
+        "time": 11000
+      },
+      {
+        "state": "paused",
+        "time": 11000
+      }
+    ],
+    "buttons": [
+      {
+        "name": "play",
+        "label": "Reduced motion",
+        "pressed": "false",
+        "disabled": true,
+        "height": 46
+      },
+      {
+        "name": "hold",
+        "label": "Hold next loaf",
+        "pressed": "false",
+        "disabled": true,
+        "height": 46
+      },
+      {
+        "name": "approve",
+        "label": "Inspect next loaf",
+        "pressed": null,
+        "disabled": false,
+        "height": 46
+      },
+      {
+        "name": "boost",
+        "label": "Boost mixer",
+        "pressed": "false",
+        "disabled": true,
+        "height": 46
+      },
+      {
+        "name": "worker",
+        "label": "Check inspector",
+        "pressed": null,
+        "disabled": true,
+        "height": 46
+      }
+    ],
+    "svgNodes": 66,
+    "requests": [
+      "http://localhost:4324/images/judgement-factory/mobile.webp",
+      "http://localhost:4324/images/judgement-factory/desktop.webp"
+    ]
+  },
+  "staticNextLoaf": true,
+  "noJavaScript": {
+    "ready": false,
+    "controlsHidden": true,
+    "image": {
+      "loaded": true,
+      "width": 335
+    },
+    "text": "This still shows the complete process. The loaf is held at inspection; motion and controls are available with JavaScript.",
+    "width": 375,
+    "scrollWidth": 375
+  },
+  "layout-320": {
+    "svgNodes": 66,
+    "width": 320,
+    "scrollWidth": 320
+  },
+  "layout-768": {
+    "svgNodes": 106,
+    "width": 768,
+    "scrollWidth": 768
+  },
+  "layout-1440": {
+    "svgNodes": 106,
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  "runtimeExceptions": [],
+  "nativeMobileTouchBoostAndPause": true
+}

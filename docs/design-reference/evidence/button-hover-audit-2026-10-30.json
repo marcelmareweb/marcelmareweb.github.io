@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-30",
+  "reference": {
+    "pages": [
+      "https://www.hugeinc.com/approach",
+      "https://www.hugeinc.com/work"
+    ],
+    "script": "https://www.hugeinc.com/_next/static/chunks/2oy_6evvtg-e3.js",
+    "observed": {
+      "restBackground": "#0D0B0A",
+      "restText": "#FFFFFF",
+      "hoverFill": "#FF0090",
+      "hoverText": "#FFFFFF",
+      "transformDuration": "700ms",
+      "fillColourDuration": "400ms",
+      "easing": "cubic-bezier(.625,.05,0,1)",
+      "events": "mouseenter and mouseleave; no mousemove recentering",
+      "circleDiameterPercent": "115 + 2 × round(abs((localX − width/2) / (width/2) × 50), 1)",
+      "pointerExit": "Origin and diameter recomputed at exit; shrink toward that point."
+    }
+  },
+  "localDesktop": {
+    "box": {
+      "x": 1239,
+      "y": 16,
+      "width": 161,
+      "height": 48
+    },
+    "rest": {
+      "x": "157px",
+      "y": "42px",
+      "size": "340.03200000000004px",
+      "transform": "matrix(0, 0, 0, 0, -170.016, -170.016)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(255, 255, 255)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "entering": {
+      "x": "2px",
+      "y": "23px",
+      "size": "340.03200000000004px",
+      "transform": "matrix(0.502378, 8.76815e-06, -8.76815e-06, 0.502378, -170.016, -170.016)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(133, 132, 132)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "hovered": {
+      "x": "2px",
+      "y": "23px",
+      "size": "340.03200000000004px",
+      "transform": "matrix(1, 1.74533e-05, -1.74533e-05, 1, -170.016, -170.016)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(13, 11, 10)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "moved": {
+      "x": "2px",
+      "y": "23px",
+      "size": "340.03200000000004px",
+      "transform": "matrix(1, 1.74533e-05, -1.74533e-05, 1, -170.016, -170.016)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(13, 11, 10)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "leaving": {
+      "x": "162px",
+      "y": "23px",
+      "size": "350.014px",
+      "transform": "matrix(0.635703, 1.10951e-05, -1.10951e-05, 0.635703, -175.004, -175.004)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(101, 100, 99)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "reset": {
+      "x": "162px",
+      "y": "23px",
+      "size": "350.014px",
+      "transform": "matrix(0, 0, 0, 0, -175.004, -175.004)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(255, 255, 255)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "focused": {
+      "x": "79.5px",
+      "y": "23px",
+      "size": "185.14999999999998px",
+      "transform": "matrix(1, 1.74533e-05, -1.74533e-05, 1, -92.5742, -92.5742)",
+      "fill": "rgb(255, 255, 0)",
+      "color": "rgb(13, 11, 10)",
+      "duration": "0.7s, 0.4s",
+      "easing": "cubic-bezier(0.625, 0.05, 0, 1), cubic-bezier(0.625, 0.05, 0, 1)",
+      "href": "mailto:hello@thespottedape.com"
+    },
+    "isFocused": true
+  },
+  "accessibilityAndFallback": {
+    "checks": [
+      "Top entry starts at the actual top-centre pointer position",
+      "Bottom exit moves the collapse origin to the exit point",
+      "Homepage Let’s talk uses the same yellow/ink pill effect",
+      "Contact destination is preserved",
+      "Reduced motion changes to yellow/ink without a visible expanding animation",
+      "Mobile menu keeps its Let’s talk control",
+      "Touch still activates the contact destination (intercepted; no external app opened)",
+      "Contact activation retains the existing mobile menu close behaviour",
+      "Touch leaves no pointer coordinates or latched yellow hover",
+      "Mobile layout has no document overflow",
+      "Without JavaScript the centred CSS reveal and contact link remain usable"
+    ],
+    "top": {
+      "x": 80.5,
+      "y": 2,
+      "w": 161,
+      "size": 185.14999999999998
+    },
+    "bottom": {
+      "y": 50,
+      "h": 48
+    }
+  },
+  "build": {
+    "astroFiles": 58,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0,
+    "staticPages": 12,
+    "productionBuild": "passed",
+    "diffCheck": "passed"
+  },
+  "limits": "Chromium; touch/reduced-motion emulation. Contact activation was intercepted; no external mail app opened and no messages sent."
+}

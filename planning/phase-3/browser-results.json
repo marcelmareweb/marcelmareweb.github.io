@@ -1,0 +1,727 @@
+{
+  "browser": "Chrome via CDP",
+  "viewports": [
+    {
+      "page": "direction-a.html",
+      "width": 375,
+      "scrollWidth": 375,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        },
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        }
+      ],
+      "heroHeight": 738.140625,
+      "headlineHeight": 118.03125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-a.html",
+      "width": 430,
+      "scrollWidth": 430,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 671.453125,
+      "headlineHeight": 135.328125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-a.html",
+      "width": 768,
+      "scrollWidth": 768,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 543.21875,
+      "headlineHeight": 125.6875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-a.html",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 656.828125,
+      "headlineHeight": 265.6875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-a.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 786.015625,
+      "headlineHeight": 373.640625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-a.html",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "title": "A — Editorial Monumentalism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 866.359375,
+      "headlineHeight": 446.390625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 375,
+      "scrollWidth": 375,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 722.515625,
+      "headlineHeight": 129.59375,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 430,
+      "scrollWidth": 430,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 656.640625,
+      "headlineHeight": 147.703125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 768,
+      "scrollWidth": 768,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 598.484375,
+      "headlineHeight": 144.140625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 557.25,
+      "headlineHeight": 193.296875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 653.359375,
+      "headlineHeight": 268.171875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-b.html",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "title": "B — Constellations of Judgement | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 692.9375,
+      "headlineHeight": 300.15625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 375,
+      "scrollWidth": 375,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 736.953125,
+      "headlineHeight": 118.03125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 430,
+      "scrollWidth": 430,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 670.265625,
+      "headlineHeight": 135.328125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 768,
+      "scrollWidth": 768,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 634.875,
+      "headlineHeight": 188.53125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 658.84375,
+      "headlineHeight": 242.859375,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 757.46875,
+      "headlineHeight": 341.484375,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "direction-c.html",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "title": "C — Playful Intellectualism | Phase 3 review",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 790.9375,
+      "headlineHeight": 374.953125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "typography.html",
+      "width": 375,
+      "scrollWidth": 375,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        }
+      ],
+      "headlineFont": null
+    },
+    {
+      "page": "typography.html",
+      "width": 430,
+      "scrollWidth": 430,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "headlineFont": null
+    },
+    {
+      "page": "typography.html",
+      "width": 768,
+      "scrollWidth": 768,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "headlineFont": null
+    },
+    {
+      "page": "typography.html",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "headlineFont": null
+    },
+    {
+      "page": "typography.html",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "headlineFont": null
+    },
+    {
+      "page": "typography.html",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "title": "Typography comparison | Phase 3",
+      "fontReady": "loaded",
+      "headings": [
+        "Same words.Three reading voices."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "newsreader-latin.woff2",
+          "bytes": 131848
+        },
+        {
+          "name": "jakarta-latin.woff2",
+          "bytes": 27272
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "headlineFont": null
+    }
+  ],
+  "interaction": [
+    {
+      "test": "Keyboard Space selects a priority",
+      "pass": true
+    },
+    {
+      "test": "Two commitments expose shared demand and deferrals",
+      "pass": true
+    },
+    {
+      "test": "Third choice preserves earlier selections and explains capacity",
+      "pass": true
+    },
+    {
+      "test": "Revision updates dependencies without shared-resource warning",
+      "pass": true
+    },
+    {
+      "test": "Keyboard reset reopens all alternatives",
+      "pass": true
+    },
+    {
+      "test": "Keyboard opens native mobile navigation",
+      "pass": true
+    },
+    {
+      "test": "Reduced motion disables relationship transitions",
+      "pass": true
+    },
+    {
+      "test": "No JavaScript retains worked example, navigation and CTA",
+      "pass": true
+    },
+    {
+      "test": "Escape closes mobile navigation and restores focus",
+      "pass": true
+    },
+    {
+      "test": "Emulated touch selects through the full label",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "No assistive-technology user testing.",
+    "No Lighthouse score is claimed.",
+    "Local resource measurements do not represent a production network profile."
+  ],
+  "reflow320": true,
+  "escapeDiagnostics": {
+    "open": false,
+    "active": "<summary>Menu</summary>"
+  },
+  "allPairs": [
+    {
+      "pair": [
+        "market",
+        "customers"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": true
+    },
+    {
+      "pair": [
+        "market",
+        "reliability"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "market",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "customers",
+        "reliability"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "customers",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "reliability",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}

@@ -1,0 +1,317 @@
+{
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "fonts": true,
+    "images": [
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 1320,
+        "height": 527.859375
+      }
+    ],
+    "scripts": 0
+  },
+  "mobile": {
+    "width": 375,
+    "scrollWidth": 375,
+    "fonts": true,
+    "images": [
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 335,
+        "height": 291.15625
+      }
+    ],
+    "scripts": 0
+  },
+  "review-1440": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "fonts": true,
+    "images": [
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 1320,
+        "height": 527.859375
+      },
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 335,
+        "height": 291.15625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 1328.703125,
+        "height": 996.515625
+      }
+    ],
+    "scripts": 0
+  },
+  "review-375": {
+    "width": 375,
+    "scrollWidth": 375,
+    "fonts": true,
+    "images": [
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 335,
+        "height": 133.953125
+      },
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 295,
+        "height": 256.390625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 689.03125,
+        "height": 516.765625
+      }
+    ],
+    "scripts": 0
+  },
+  "review-320": {
+    "width": 320,
+    "scrollWidth": 320,
+    "fonts": true,
+    "images": [
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 280,
+        "height": 111.96875
+      },
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 240,
+        "height": 208.59375
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      },
+      {
+        "src": "editorial-assets/storyboard-six-frames.png",
+        "loaded": true,
+        "width": 575.90625,
+        "height": 431.921875
+      }
+    ],
+    "scripts": 0
+  },
+  "comparison-desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "fonts": true,
+    "images": [
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 320,
+        "height": 115.1875
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 320,
+        "height": 127.953125
+      },
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 646,
+        "height": 232.546875
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 646,
+        "height": 258.328125
+      },
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 1320,
+        "height": 475.1875
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 1320,
+        "height": 527.859375
+      },
+      {
+        "src": "engineered-monochrome-version/mobile-composition.svg",
+        "loaded": true,
+        "width": 335,
+        "height": 180.890625
+      },
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 335,
+        "height": 291.15625
+      }
+    ],
+    "scripts": 0
+  },
+  "comparison-mobile": {
+    "width": 375,
+    "scrollWidth": 375,
+    "fonts": true,
+    "images": [
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 320,
+        "height": 115.1875
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 320,
+        "height": 127.953125
+      },
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 335,
+        "height": 120.59375
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 335,
+        "height": 133.953125
+      },
+      {
+        "src": "engineered-monochrome-version/factory-composition.svg",
+        "loaded": true,
+        "width": 1320,
+        "height": 475.1875
+      },
+      {
+        "src": "editorial-assets/factory-desktop.png",
+        "loaded": true,
+        "width": 1320,
+        "height": 527.859375
+      },
+      {
+        "src": "engineered-monochrome-version/mobile-composition.svg",
+        "loaded": true,
+        "width": 335,
+        "height": 180.890625
+      },
+      {
+        "src": "editorial-assets/factory-mobile.png",
+        "loaded": true,
+        "width": 335,
+        "height": 291.15625
+      }
+    ],
+    "scripts": 0
+  },
+  "verification": {
+    "sourcePublicFilesUnchanged": 50,
+    "localReferencesMissing": [],
+    "zeroReviewScripts": true,
+    "scope": "static planning artifacts only",
+    "images": "built-in image generation; no raster manipulation outside tool"
+  }
+}

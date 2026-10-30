@@ -1,0 +1,12 @@
+{
+  "desktop": {
+    "width": 1440,
+    "scroll": 1440,
+    "missingImages": []
+  },
+  "mobile": {
+    "width": 375,
+    "scroll": 375,
+    "missingImages": []
+  }
+}

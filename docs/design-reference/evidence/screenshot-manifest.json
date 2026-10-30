@@ -1,0 +1,674 @@
+[
+  {
+    "file": "ape-01-home-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 102522,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-02-home-2800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 117731,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-02-home-800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 133864,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-03-about-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 271150,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-04-workshops-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 284303,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-05-courses-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 163004,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-06-thinking-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 90581,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-07-home-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 49641,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-08-formation-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 59033,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-09-menu-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 46613,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-10-workshops-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 129986,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-11-footer-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 47745,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-12-courses-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 64571,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "ape-13-stage-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 43301,
+    "kind": "existing-local-site"
+  },
+  {
+    "file": "huge-01-home-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 641229,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-02-nav-hover.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 641982,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-03-cta-hover.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 642270,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-04-home-statement.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 203660,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-05-home-work-start.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 510391,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-06-home-work-mid.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 455409,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-07-home-partnerships.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 627023,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-08-home-services.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 138002,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-09-home-footer.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 92651,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-10-work-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 85053,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-11-work-bottom.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 68172,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-12-solutions-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 247598,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-13-solutions-2000.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 104123,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-13-solutions-5200.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 643836,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-14-solution-card-hover.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 174209,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-15-approach-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 96989,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-16-approach-1800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 235834,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-16-approach-4500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 193742,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-17-company-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 429732,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-18-company-1800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 63105,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-18-company-4500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 88836,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-19-leadership-carousel.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 531687,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-20-ideas-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 76042,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-21-ideas-list.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 502354,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-22-careers-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 99036,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-23-careers-jobs.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 562609,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-24-benefit-open.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 516254,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-25-contact-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 99489,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-26-contact-form.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 73951,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-27-contact-press.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 171349,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-28-ai-activation-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 398287,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-29-ai-activation-1800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 158411,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-29-ai-activation-4500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 205440,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-30-case-cointracker.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 1011112,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-31-case-cointracker-1800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 583052,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-31-case-cointracker-4500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 118611,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-31-case-cointracker-8500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 69576,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-32-article-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 1798910,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-33-article-1800.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 277406,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-33-article-4500.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 302307,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-34-profile-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 488724,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-35-profile-body.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 288088,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-36-ideas-news-filter.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 174065,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-37-newsletter-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 79703,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-38-home-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 222005,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-39-mobile-menu.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 26724,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-40-solutions-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 137582,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-41-solutions-cards-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 48258,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-42-work-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 43533,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-43-work-cards-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 160570,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-44-brand-detail.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 880595,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-45-products-detail.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 535604,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-46-marketing-detail.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 929738,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-47-commerce-detail.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 454233,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-48-experience-detail.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 858457,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-49-case-nbcu.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 1719927,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-50-case-nbcu-body.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 374552,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-51-showreel-expanded.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 62715,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-52-contact-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 59195,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-53-contact-form-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 31266,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-54-approach-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 41944,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-55-approach-body-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 90338,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-56-company-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 152453,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-57-leadership-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 59051,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-58-ideas-body-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 238999,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-58-ideas-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 93871,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-59-careers-body-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 153190,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-59-careers-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 48664,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-60-case-body-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 84865,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-60-case-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 202547,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-61-article-body-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 128826,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-61-article-mobile.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 158927,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-62-home-reduced-motion.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 527539,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-63-mobile-menu-landscape.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 24851,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-64-client-logos.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 114525,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-65-image-trail-active.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 417316,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-66-privacy-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 189410,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-67-work-grid.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 363671,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-68-work-card-hover.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 907758,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-69-showreel-paused-muted.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 41669,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-70-route-transition.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 164551,
+    "kind": "reference"
+  },
+  {
+    "file": "huge-71-route-arrived.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 85104,
+    "kind": "reference"
+  }
+]

@@ -1,88 +1,42 @@
 ---
-const navigationLinks = [
-  { label: 'The Tension', href: '/#idea' },
-  { label: 'Three Capabilities', href: '/#work' },
-  { label: 'Strategic Decision Workshops', href: '/workshops' },
-  { label: 'Applied Courses', href: '/courses' },
-  { label: 'Case Brief', href: '/#case' },
-  { label: 'About The Spotted Ape', href: '/about' },
-];
-
-const studioCapabilities = [
-  'Strategic Decision Workshops',
-  'Applied Strategy & Digital Acumen Courses',
-  'Behavioural Design & Research',
-  'Human Judgement in AI-Enabled Organisations',
-];
+const year = new Date().getFullYear();
 ---
-
-<footer class="bg-[var(--bg-dark)] text-[var(--text-primary)]">
-  <div class="editorial-container py-20 sm:py-28">
-    <div class="mb-6 flex items-center gap-2.5">
-      <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
-      <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
-        THE SPOTTED APE • WISE HANDS AT THE WHEEL
-      </p>
-    </div>
-
-    <p class="font-editorial mb-6 max-w-[30ch] text-3xl leading-tight text-[var(--text-primary)] sm:text-5xl">
-      We help you <em>find formation.</em> Then we get out of the way.
-    </p>
-    <p class="mb-14 max-w-[54ch] text-sm leading-7 text-[var(--text-muted)] sm:text-base">
-      Better decisions in a world of accelerating possibilities. Independent strategic practice of Marcel Maré — Cape Town, South Africa.
-    </p>
-
-    <div class="grid gap-10 border-t border-[var(--border-subtle)] py-12 sm:grid-cols-3 sm:gap-8">
-      <div>
-        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Navigation</h2>
-        <ul class="flex list-none flex-col gap-3 p-0">
-          {navigationLinks.map(({ label, href }) => (
-            <li>
-              <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href={href}>
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Core Capabilities</h2>
-        <ul class="flex list-none flex-col gap-3 p-0">
-          {studioCapabilities.map((service) => (
-            <li class="text-sm text-[var(--text-muted)]">{service}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="technical-label mb-5 text-[11px] tracking-widest text-[var(--accent-signal)]">Connect</h2>
-        <ul class="flex list-none flex-col gap-3 p-0">
-          <li>
-            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="mailto:hello@thespottedape.com">
-              hello@thespottedape.com
-            </a>
-          </li>
-          <li>
-            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="https://thespottedape.substack.com" target="_blank" rel="noreferrer">
-              Substack Publication ↗
-            </a>
-          </li>
-          <li>
-            <a class="text-sm text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/#book">
-              Start a Conversation →
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-4 border-t border-[var(--border-subtle)] pt-6 text-xs text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
-      <p>© 2026 The Spotted Ape (Pty) Ltd — Cape Town, South Africa</p>
-      <nav class="flex gap-6" aria-label="Legal">
-        <a class="text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/privacy">Privacy</a>
-        <a class="text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]" href="/terms">Terms</a>
-      </nav>
-    </div>
-  </div>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-invitation">
+<h2>Find your<br />formation.</h2>
+<a href="mailto:hello@thespottedape.com" aria-label="Talk to The Spotted Ape">
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="footer-main">
+<div>
+<a class="brand" href="/" aria-label="The Spotted Ape home">
+<img src="/logo.png" width="30" height="30" alt="" />
+<span class="brand-word">THE SPOTTED APE</span>
+</a>
+<p>Independent strategic decision<br />and behavioural design practice.</p>
+</div>
+<nav class="footer-nav" aria-label="Footer navigation">
+<a href="/#practice">Practice</a>
+<a href="/workshops">Workshops</a>
+<a href="/#evidence">Work &amp; research</a>
+<a href="/courses">Courses</a>
+<a href="/thinking/">Thinking</a>
+<a href="/about">About</a>
+</nav>
+<div class="footer-contact">
+<a href="mailto:hello@thespottedape.com">hello@thespottedape.com ↗</a>
+<p>Cape Town, South Africa.<br />Working with organisations in transition.</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© {year} The Spotted Ape (Pty) Ltd</p>
+<nav aria-label="Legal">
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+<a href="#top">Back to top ↑</a>
+</nav>
+</div>
+</div>
 </footer>

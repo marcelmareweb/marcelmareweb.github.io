@@ -169,321 +169,420 @@ const modules = [
 
 const initialModule = modules[0];
 ---
-
-<section id="syllabus" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-elevated)]" aria-labelledby="syllabus-title">
-  <div class="editorial-container">
-    <div class="mb-14 grid gap-8 border-b border-[var(--border-subtle)] pb-10 lg:grid-cols-[7fr_5fr] lg:items-end lg:gap-16">
-      <div>
-        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
-          03 / FLAGSHIP CASE &amp; 6-STAGE SYLLABUS INSPECTOR
-        </p>
-        <h2 id="syllabus-title" class="h2 max-w-[18ch] text-[var(--text-primary)]">
-          Should We Invest in Solar? <em>One case, one model, one decision.</em>
-        </h2>
-      </div>
-      <div>
-        <p class="p-lead mb-4">
-          Cape Manufacturing · Western Cape Capital Investment Simulation
-        </p>
-        <p class="p-body max-w-[56ch]">
-          Take the seat of a commercial analyst advising the Financial Director. Three suppliers have proposed rooftop solar systems costing <strong class="font-medium text-[var(--text-primary)]">R650,000 to R990,000</strong>. Inspect each stage of the 65–80 minute curriculum below.
-        </p>
-      </div>
-    </div>
-
-    <!-- Cape Manufacturing 3-Proposal Reference Strip -->
-    <div class="mb-10 border border-[var(--border-subtle)] bg-[var(--bg-primary)]">
-      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] px-6 py-4 sm:px-8">
-        <p class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
-          CASE DATA SNAPSHOT // THREE COMPETING SOLAR PROPOSALS (TARIFF: R2.80 / kWh)
-        </p>
-        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
-          SOURCE SHEET: CASE DATA!A3:F17
-        </span>
-      </div>
-      <div class="grid gap-px bg-[var(--border-subtle)] lg:grid-cols-3">
-        {proposals.map((prop) => (
-          <div class="bg-[var(--bg-primary)] p-6 sm:p-7">
-            <div class="mb-4 flex items-baseline justify-between gap-2 border-b border-[var(--border-subtle)] pb-3">
-              <h3 class="font-editorial text-2xl text-[var(--text-primary)]">{prop.id}</h3>
-              <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">{prop.cost} · {prop.size}</span>
-            </div>
-            <dl class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-xs">
-              <div>
-                <dt class="technical-label text-[10px] text-[var(--text-muted)]">GROSS GENERATION</dt>
-                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.generation}</dd>
-              </div>
-              <div>
-                <dt class="technical-label text-[10px] text-[var(--text-muted)]">SELF-CONSUMPTION</dt>
-                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.selfConsumption}</dd>
-              </div>
-              <div>
-                <dt class="technical-label text-[10px] text-[var(--text-muted)]">NET YEAR-1 SAVING</dt>
-                <dd class="mt-0.5 font-medium text-[var(--text-primary)]">{prop.netSavingY1}</dd>
-              </div>
-              <div>
-                <dt class="technical-label text-[10px] text-[var(--text-muted)]">PAYBACK / 20Y NPV</dt>
-                <dd class="mt-0.5 font-medium text-[var(--accent-signal)]">{prop.payback} · {prop.npv20}</dd>
-              </div>
-            </dl>
-            <p class="mt-4 border-t border-[var(--border-subtle)] pt-3 text-xs leading-5 text-[var(--text-muted)]">
-              {prop.exposure}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <!-- Interactive 6-Stage Syllabus Inspector -->
-    <div class="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:gap-10">
-      <nav
-        class="flex flex-col border-y border-[var(--border-subtle)] bg-[var(--bg-primary)]"
-        role="tablist"
-        aria-label="Course Curriculum Modules"
-        aria-orientation="vertical"
-      >
-        {modules.map((mod, index) => (
-          <button
-            class="course-tab flex w-full cursor-pointer items-center gap-4 border-b border-[var(--border-subtle)] px-4 py-4 text-left transition-colors last:border-b-0 hover:bg-[var(--bg-card)] sm:px-5 sm:py-5"
-            type="button"
-            role="tab"
-            id={`course-tab-${mod.number}`}
-            aria-controls="course-inspector"
-            aria-selected={index === 0 ? 'true' : 'false'}
-            tabindex={index === 0 ? 0 : -1}
-            data-course-tab
-            data-module-number={mod.number}
-            data-module-title={mod.title}
-            data-module-subtitle={mod.subtitle}
-            data-competence-tier={mod.competenceTier}
-            data-sender-code={mod.senderCode}
-            data-timestamp={mod.timestamp}
-            data-prompt-headline={mod.promptHeadline}
-            data-prompt-body={mod.promptBody}
-            data-summary={mod.summary}
-            data-analytical-mechanics={mod.analyticalMechanics}
-            data-behavioural-shift={mod.behaviouralShift}
-            data-deliverable={mod.deliverable}
-            data-live-url={mod.liveUrl}
-          >
-            <span class="technical-label w-8 shrink-0 text-xs text-[var(--accent-signal)]">{mod.number}</span>
-            <span class="min-w-0 flex-1">
-              <span class="font-editorial block text-2xl leading-tight text-[var(--text-primary)]">{mod.title}</span>
-              <span class="technical-label mt-1 block text-[11px] tracking-wider text-[var(--text-muted)]">{mod.subtitle}</span>
-            </span>
-            <span class="technical-label shrink-0 border border-[var(--border-subtle)] px-2.5 py-1 text-[10px] text-[var(--text-muted)]">
-              STAGE {mod.number}
-            </span>
-          </button>
-        ))}
-      </nav>
-
-      <div
-        id="course-inspector"
-        class="border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-6 transition-opacity duration-150 sm:p-8 lg:p-10"
-        role="tabpanel"
-        aria-labelledby={`course-tab-${initialModule.number}`}
-        tabindex="0"
-        data-course-inspector
-        aria-live="polite"
-      >
-        <div class="mb-7 flex flex-wrap items-start justify-between gap-4 border-b border-[var(--border-subtle)] pb-6">
-          <div>
-            <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]" data-course-number-label>
-              MODULE {initialModule.number} / 06 — {initialModule.subtitle}
-            </p>
-            <h3 class="font-editorial text-4xl text-[var(--text-primary)] sm:text-5xl" data-course-title>
-              {initialModule.title}
-            </h3>
-          </div>
-          <span
-            class="technical-label border border-[var(--border-accent)] bg-[var(--accent-signal)]/10 px-3 py-2 text-[10px] tracking-widest text-[var(--accent-signal)]"
-            data-course-tier
-          >
-            {initialModule.competenceTier}
-          </span>
-        </div>
-
-        <!-- In-Case Executive Dispatch Card -->
-        <div class="mb-7 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-5 sm:p-6">
-          <div class="mb-2 flex items-center gap-3">
-            <span
-              class="technical-label inline-flex size-7 items-center justify-center border border-[var(--border-accent)] bg-[var(--bg-primary)] text-[11px] font-semibold text-[var(--accent-signal)]"
-              data-course-sender
-            >
-              {initialModule.senderCode}
-            </span>
-            <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]" data-course-timestamp>
-              {initialModule.timestamp}
-            </span>
-          </div>
-          <p class="font-editorial mb-2 text-2xl leading-snug text-[var(--text-primary)]" data-course-prompt-headline>
-            {initialModule.promptHeadline}
-          </p>
-          <p class="text-sm leading-6 text-[var(--text-muted)]" data-course-prompt-body>
-            {initialModule.promptBody}
-          </p>
-        </div>
-
-        <p class="mb-7 max-w-[58ch] text-base leading-7 text-[var(--text-primary)] sm:text-lg sm:leading-8" data-course-value="summary">
-          {initialModule.summary}
-        </p>
-
-        <div class="grid gap-7 border-t border-[var(--border-subtle)] pt-7 sm:grid-cols-2 sm:gap-8">
-          <div>
-            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
-              ANALYTICAL &amp; SPREADSHEET MECHANICS
-            </p>
-            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-course-value="analyticalMechanics">
-              {initialModule.analyticalMechanics}
-            </p>
-          </div>
-          <div>
-            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">
-              BEHAVIOURAL &amp; JUDGEMENT SHIFT
-            </p>
-            <p class="text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7" data-course-value="behaviouralShift">
-              {initialModule.behaviouralShift}
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-7 flex flex-col gap-5 border-t border-[var(--border-subtle)] pt-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="technical-label mb-2 text-[11px] tracking-widest text-[var(--accent-signal)]">
-              OBSERVABLE WORKBOOK EVIDENCE
-            </p>
-            <p class="font-editorial text-xl text-[var(--text-primary)] sm:text-2xl" data-course-value="deliverable">
-              {initialModule.deliverable}
-            </p>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 shrink-0">
-            <a
-              class="inline-flex min-h-11 items-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 text-xs font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
-              href={initialModule.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              data-course-live-link
-            >
-              Open Stage in Live Course <span class="ml-2" aria-hidden="true">↗</span>
-            </a>
-            <button
-              class="course-inquiry-button inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 bg-[var(--accent-signal)] px-5 text-xs font-semibold text-[var(--text-on-accent)] transition-colors hover:bg-[var(--accent-signal-hover)]"
-              type="button"
-              data-course-inquiry
-            >
-              <span data-course-inquiry-label>Commission Module {initialModule.number} Cohort</span>
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="syllabus" class="section-y theme-dark" aria-labelledby="syllabus-title">
+<div class="wrap">
+<div class="section-top meta">
+<p>02 / The curriculum</p>
+<p>A fictional investment case</p>
+</div>
+<h2 class="section-title" id="syllabus-title" data-reveal>One case.<br />One decision.</h2>
+<div class="syllabus-intro">
+<p class="lead">Take the seat of a commercial analyst advising the Financial Director. Compare three rooftop solar proposals costing R650,000 to R990,000.</p>
+<p class="meta">65–80 minutes<br />Six modules<br />A working spreadsheet model</p>
+</div>
+<div class="course-table" role="region" tabindex="0" aria-label="Comparison of the three solar proposals. Scroll horizontally on small screens.">
+<table>
+<caption class="sr-only">Cape Manufacturing fictional case. Base-case proposal data; tariff R2.80 per kWh.</caption>
+<thead>
+<tr>
+<th scope="col">Case data</th>{proposals.map(prop=>
+<th scope="col">{prop.id}</th>)}</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Investment</th>{proposals.map(prop=>
+<td>{prop.cost}</td>)}</tr>
+<tr>
+<th scope="row">System size</th>{proposals.map(prop=>
+<td>{prop.size}</td>)}</tr>
+<tr>
+<th scope="row">Self-consumption</th>{proposals.map(prop=>
+<td>{prop.selfConsumption}</td>)}</tr>
+<tr>
+<th scope="row">Simple payback</th>{proposals.map(prop=>
+<td>{prop.payback}</td>)}</tr>
+<tr>
+<th scope="row">20-year NPV</th>{proposals.map(prop=>
+<td>{prop.npv20}</td>)}</tr>
+</tbody>
+</table>
+</div>
+<p class="syllabus-source meta">Illustrative case data / Case Data!A3:F17 / Figures are not an investment recommendation.</p>
+<div class="course-interactive" data-course-interactive hidden>
+<nav class="course-tabs" role="tablist" aria-label="Course Curriculum Modules" aria-orientation="vertical">{modules.map((mod,index)=>
+<button class="course-tab" type="button" role="tab" id={`course-tab-${mod.number}`} aria-controls="course-inspector" aria-selected={index===0?'true':'false'} tabindex={index===0?0:-1} data-course-tab data-module-number={mod.number} data-module-title={mod.title} data-module-subtitle={mod.subtitle} data-competence-tier={mod.competenceTier} data-sender-code={mod.senderCode} data-timestamp={mod.timestamp} data-prompt-headline={mod.promptHeadline} data-prompt-body={mod.promptBody} data-summary={mod.summary} data-analytical-mechanics={mod.analyticalMechanics} data-behavioural-shift={mod.behaviouralShift} data-deliverable={mod.deliverable} data-live-url={mod.liveUrl}>
+<span class="meta">{mod.number}</span>
+<span>{mod.title}.</span>
+<span aria-hidden="true">↗</span>
+</button>)}</nav>
+<div id="course-inspector" class="course-panel" role="tabpanel" aria-labelledby={`course-tab-${initialModule.number}`} tabindex="0" data-course-inspector>
+<p class="meta" data-course-number-label>MODULE {initialModule.number} / 06 — {initialModule.subtitle}</p>
+<h3 data-course-title>{initialModule.title}</h3>
+<p class="meta course-tier" data-course-tier>{initialModule.competenceTier}</p>
+<div class="course-dispatch">
+<div class="meta">
+<span data-course-sender>{initialModule.senderCode}</span> / <span data-course-timestamp>{initialModule.timestamp}</span>
+</div>
+<p class="dispatch-title" data-course-prompt-headline>{initialModule.promptHeadline}</p>
+<p data-course-prompt-body>{initialModule.promptBody}</p>
+</div>
+<p class="module-summary" data-course-value="summary">{initialModule.summary}</p>
+<details class="module-detail">
+<summary>Analytical &amp; spreadsheet mechanics</summary>
+<p data-course-value="analyticalMechanics">{initialModule.analyticalMechanics}</p>
+</details>
+<details class="module-detail">
+<summary>Behavioural &amp; judgement shift</summary>
+<p data-course-value="behaviouralShift">{initialModule.behaviouralShift}</p>
+</details>
+<div class="module-output">
+<p class="meta">Observable workbook evidence</p>
+<p data-course-value="deliverable">{initialModule.deliverable}</p>
+</div>
+<div class="actions">
+<a class="text-link" href={initialModule.liveUrl} target="_blank" rel="noreferrer" data-course-live-link>Open module in live course ↗</a>
+<button class="button button--yellow" type="button" data-course-inquiry>
+<span data-course-inquiry-label>Commission Module {initialModule.number} Cohort</span>
+<span aria-hidden="true">↗</span>
+</button>
+</div>
+</div>
+</div>
+<div class="course-fallback" data-course-fallback>{modules.map(mod=>
+<details>
+<summary>{mod.number} / {mod.title}</summary>
+<p>{mod.summary}</p>
+<p>{mod.deliverable}</p>
+<a href={mod.liveUrl}>Open module in live course ↗</a>
+</details>)}</div>
+</div>
 </section>
-
 <script>
-  const courseTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-course-tab]'));
-  const courseInspector = document.querySelector<HTMLElement>('[data-course-inspector]');
+const courseTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-course-tab]'));
+const courseInspector = document.querySelector<HTMLElement>('[data-course-inspector]');
 
-  const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) => {
-    const selectedTab = courseTabs.find((tab) => tab.dataset.moduleNumber === moduleNumber);
-    if (!selectedTab || !courseInspector) return;
+const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) => {
+  const selectedTab = courseTabs.find((tab) => tab.dataset.moduleNumber === moduleNumber);
+  if (!selectedTab || !courseInspector) return;
 
-    courseTabs.forEach((tab) => {
-      const isSelected = tab === selectedTab;
-      tab.setAttribute('aria-selected', String(isSelected));
-      tab.tabIndex = isSelected ? 0 : -1;
-    });
-
-    courseInspector.setAttribute('aria-labelledby', selectedTab.id);
-    const mod = selectedTab.dataset;
-
-    const title = courseInspector.querySelector<HTMLElement>('[data-course-title]');
-    const numberLabel = courseInspector.querySelector<HTMLElement>('[data-course-number-label]');
-    const tier = courseInspector.querySelector<HTMLElement>('[data-course-tier]');
-    const sender = courseInspector.querySelector<HTMLElement>('[data-course-sender]');
-    const timestamp = courseInspector.querySelector<HTMLElement>('[data-course-timestamp]');
-    const promptHeadline = courseInspector.querySelector<HTMLElement>('[data-course-prompt-headline]');
-    const promptBody = courseInspector.querySelector<HTMLElement>('[data-course-prompt-body]');
-    const liveLink = courseInspector.querySelector<HTMLAnchorElement>('[data-course-live-link]');
-    const inquiryLabel = courseInspector.querySelector<HTMLElement>('[data-course-inquiry-label]');
-
-    if (title) title.textContent = mod.moduleTitle ?? '';
-    if (numberLabel) numberLabel.textContent = `MODULE ${mod.moduleNumber} / 06 — ${mod.moduleSubtitle ?? ''}`;
-    if (tier) tier.textContent = mod.competenceTier ?? '';
-    if (sender) sender.textContent = mod.senderCode ?? '';
-    if (timestamp) timestamp.textContent = mod.timestamp ?? '';
-    if (promptHeadline) promptHeadline.textContent = mod.promptHeadline ?? '';
-    if (promptBody) promptBody.textContent = mod.promptBody ?? '';
-    if (liveLink && mod.liveUrl) liveLink.href = mod.liveUrl;
-    if (inquiryLabel) inquiryLabel.textContent = `Commission Module ${mod.moduleNumber} Cohort`;
-
-    for (const field of ['summary', 'analyticalMechanics', 'behaviouralShift', 'deliverable']) {
-      const target = courseInspector.querySelector<HTMLElement>(`[data-course-value="${field}"]`);
-      const value = mod[field];
-      if (target && value) target.textContent = value;
-    }
-
-    if (shouldScrollMobile && window.innerWidth < 1024) {
-      const rect = courseInspector.getBoundingClientRect();
-      if (rect.top > window.innerHeight * 0.7 || rect.bottom < 0) {
-        courseInspector.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-  };
-
-  courseTabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => selectCourseModule(tab.dataset.moduleNumber ?? '', true));
-    tab.addEventListener('keydown', (event) => {
-      const key = event.key;
-      let nextIndex = index;
-
-      if (key === 'ArrowDown') nextIndex = (index + 1) % courseTabs.length;
-      else if (key === 'ArrowUp') nextIndex = (index - 1 + courseTabs.length) % courseTabs.length;
-      else if (key === 'Home') nextIndex = 0;
-      else if (key === 'End') nextIndex = courseTabs.length - 1;
-      else return;
-
-      event.preventDefault();
-      const nextTab = courseTabs[nextIndex];
-      selectCourseModule(nextTab.dataset.moduleNumber ?? '');
-      nextTab.focus();
-    });
+  courseTabs.forEach((tab) => {
+    const isSelected = tab === selectedTab;
+    tab.setAttribute('aria-selected', String(isSelected));
+    tab.tabIndex = isSelected ? 0 : -1;
   });
 
-  const courseInquiryButton = document.querySelector<HTMLButtonElement>('[data-course-inquiry]');
-  courseInquiryButton?.addEventListener('click', () => {
-    const selectedTab = courseTabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
-    if (!selectedTab) return;
+  courseInspector.setAttribute('aria-labelledby', selectedTab.id);
+  const mod = selectedTab.dataset;
 
-    window.dispatchEvent(
-      new CustomEvent('select-course-module', {
-        detail: {
-          moduleNumber: selectedTab.dataset.moduleNumber,
-          moduleTitle: selectedTab.dataset.moduleTitle,
-        },
-      }),
-    );
-    document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+  const title = courseInspector.querySelector<HTMLElement>('[data-course-title]');
+  const numberLabel = courseInspector.querySelector<HTMLElement>('[data-course-number-label]');
+  const tier = courseInspector.querySelector<HTMLElement>('[data-course-tier]');
+  const sender = courseInspector.querySelector<HTMLElement>('[data-course-sender]');
+  const timestamp = courseInspector.querySelector<HTMLElement>('[data-course-timestamp]');
+  const promptHeadline = courseInspector.querySelector<HTMLElement>(
+    '[data-course-prompt-headline]',
+  );
+  const promptBody = courseInspector.querySelector<HTMLElement>('[data-course-prompt-body]');
+  const liveLink = courseInspector.querySelector<HTMLAnchorElement>('[data-course-live-link]');
+  const inquiryLabel = courseInspector.querySelector<HTMLElement>('[data-course-inquiry-label]');
 
-  const initialModuleParam = new URLSearchParams(window.location.search).get('module');
-  if (initialModuleParam) {
-    selectCourseModule(initialModuleParam.padStart(2, '0'));
+  if (title) title.textContent = mod.moduleTitle ?? '';
+  if (numberLabel)
+    numberLabel.textContent = `MODULE ${mod.moduleNumber} / 06 — ${mod.moduleSubtitle ?? ''}`;
+  if (tier) tier.textContent = mod.competenceTier ?? '';
+  if (sender) sender.textContent = mod.senderCode ?? '';
+  if (timestamp) timestamp.textContent = mod.timestamp ?? '';
+  if (promptHeadline) promptHeadline.textContent = mod.promptHeadline ?? '';
+  if (promptBody) promptBody.textContent = mod.promptBody ?? '';
+  if (liveLink && mod.liveUrl) liveLink.href = mod.liveUrl;
+  if (inquiryLabel) inquiryLabel.textContent = `Commission Module ${mod.moduleNumber} Cohort`;
+
+  for (const field of ['summary', 'analyticalMechanics', 'behaviouralShift', 'deliverable']) {
+    const target = courseInspector.querySelector<HTMLElement>(`[data-course-value="${field}"]`);
+    const value = mod[field];
+    if (target && value) target.textContent = value;
   }
+
+  if (shouldScrollMobile && window.innerWidth < 1024) {
+    const rect = courseInspector.getBoundingClientRect();
+    if (rect.top > window.innerHeight * 0.7 || rect.bottom < 0) {
+      courseInspector.scrollIntoView({
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+        block: 'nearest',
+      });
+    }
+  }
+};
+
+courseTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectCourseModule(tab.dataset.moduleNumber ?? '', true));
+  tab.addEventListener('keydown', (event) => {
+    const key = event.key;
+    let nextIndex = index;
+
+    if (key === 'ArrowDown') nextIndex = (index + 1) % courseTabs.length;
+    else if (key === 'ArrowUp') nextIndex = (index - 1 + courseTabs.length) % courseTabs.length;
+    else if (key === 'Home') nextIndex = 0;
+    else if (key === 'End') nextIndex = courseTabs.length - 1;
+    else return;
+
+    event.preventDefault();
+    const nextTab = courseTabs[nextIndex];
+    selectCourseModule(nextTab.dataset.moduleNumber ?? '');
+    nextTab.focus();
+  });
+});
+
+const courseInquiryButton = document.querySelector<HTMLButtonElement>('[data-course-inquiry]');
+courseInquiryButton?.addEventListener('click', () => {
+  const selectedTab = courseTabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
+  if (!selectedTab) return;
+
+  window.dispatchEvent(
+    new CustomEvent('select-course-module', {
+      detail: {
+        moduleNumber: selectedTab.dataset.moduleNumber,
+        moduleTitle: selectedTab.dataset.moduleTitle,
+      },
+    }),
+  );
+  document
+    .querySelector('#book')
+    ?.scrollIntoView({
+      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      block: 'start',
+    });
+});
+
+const initialModuleParam = new URLSearchParams(window.location.search).get('module');
+if (initialModuleParam) {
+  selectCourseModule(initialModuleParam.padStart(2, '0'));
+}
+
+document.querySelector<HTMLElement>('[data-course-interactive]')!.hidden = false;
+document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 </script>
-
 <style>
-  .course-tab[aria-selected='true'] {
-    border-left: 3px solid var(--accent-kharos);
-    background: var(--bg-elevated);
+.syllabus-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: end;
+  margin-block: 48px;
+}
+.syllabus-intro .lead {
+  max-width: 44ch;
+}
+.syllabus-intro > .meta {
+  color: #b3b3b3;
+  flex-shrink: 0;
+}
+.syllabus-source {
+  color: #aaa;
+  margin-top: 20px;
+  max-width: 70ch;
+}
+.course-interactive {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+.course-tabs {
+  border-top: 1px solid #555;
+}
+.course-tab {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32px 1fr 24px;
+  gap: 20px;
+  align-items: start;
+  text-align: left;
+  padding: 28px 0;
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  color: #fff;
+}
+.course-tab > span:nth-child(2) {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+.course-tab > .meta {
+  color: #aaa;
+}
+.course-tab > span:last-child {
+  font-size: 24px;
+}
+.course-tab[aria-selected='true'] {
+  color: var(--signal);
+}
+.course-tab[aria-selected='true'] > .meta {
+  color: var(--signal);
+}
+.course-tab:hover {
+  background: #ffffff0a;
+}
+.course-panel {
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 40px;
+  --text-primary: #0d0b0a;
+  --text-muted: #626262;
+  --border-subtle: #ddd;
+}
+.course-panel > h3 {
+  font-size: var(--heading-3);
+  line-height: 1;
+  margin-top: 28px;
+}
+.course-tier {
+  margin-top: 24px;
+  color: #626262;
+}
+.course-dispatch {
+  border-block: 1px solid #ddd;
+  padding-block: 24px;
+  margin-block: 32px;
+}
+.course-dispatch .meta {
+  color: #626262;
+  font-size: 10px;
+}
+.course-dispatch .dispatch-title {
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  margin-top: 24px;
+}
+.course-dispatch > p:last-child {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #626262;
+  margin-top: 20px;
+}
+.module-summary {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.module-detail {
+  border-bottom: 1px solid #ddd;
+  padding-block: 12px;
+}
+.module-detail summary {
+  font-size: 16px;
+  padding-block: 12px;
+  min-height: 44px;
+  font-weight: 500;
+}
+.module-detail p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #626262;
+  padding-block: 12px;
+}
+.module-output {
+  margin-top: 32px;
+}
+.module-output > p:last-child {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin-top: 16px;
+}
+.course-panel .text-link {
+  font-size: 14px;
+}
+.course-panel .button {
+  font-size: 13px;
+  gap: 16px;
+}
+.course-panel:focus-visible {
+  outline-color: var(--signal);
+}
+.course-fallback {
+  margin-top: 48px;
+}
+.course-fallback details {
+  border-top: 1px solid #555;
+  padding-block: 20px;
+}
+.course-fallback summary {
+  font-size: 28px;
+}
+.course-fallback p {
+  max-width: 60ch;
+  margin-top: 24px;
+  font-size: 18px;
+}
+.course-fallback a {
+  display: inline-block;
+  margin-top: 24px;
+}
+@media (max-width: 1023px) {
+  .course-interactive {
+    grid-template-columns: 1fr;
   }
-
-  .course-tab:focus-visible,
-  .course-inquiry-button:focus-visible {
-    outline: 2px solid var(--accent-kharos);
-    outline-offset: 3px;
+  .course-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
   }
+  .course-panel > h3 {
+    font-size: 52px;
+  }
+  .course-tab > span:nth-child(2) {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .syllabus-intro {
+    display: block;
+  }
+  .syllabus-intro > .meta {
+    margin-top: 24px;
+  }
+  .course-interactive {
+    margin-top: 48px;
+    gap: 32px;
+  }
+  .course-tabs {
+    display: block;
+  }
+  .course-tab {
+    padding-block: 24px;
+  }
+  .course-tab > span:nth-child(2) {
+    font-size: 28px;
+  }
+  .course-panel {
+    padding: 24px;
+  }
+  .course-panel > h3 {
+    font-size: 40px;
+  }
+  .course-panel > .meta {
+    font-size: 10px;
+  }
+  .course-dispatch .dispatch-title {
+    font-size: 24px;
+  }
+  .module-summary {
+    font-size: 18px;
+  }
+  .module-output > p:last-child {
+    font-size: 20px;
+  }
+  .syllabus-source {
+    font-size: 10px;
+  }
+  .course-panel .actions {
+    align-items: start;
+    gap: 16px;
+  }
+}
 </style>
-

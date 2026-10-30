@@ -1,0 +1,338 @@
+{
+  "date": "2026-10-29",
+  "scope": "Local FindFormation direct illustration interaction; Playwright Chromium",
+  "desktop": {
+    "checks": [
+      "market: hover exposes its own detail",
+      "market: hover does not commit",
+      "customers: hover exposes its own detail",
+      "customers: hover does not commit",
+      "reliability: hover exposes its own detail",
+      "reliability: hover does not commit",
+      "ai: hover exposes its own detail",
+      "ai: hover does not commit",
+      "Leaving a preview restores the empty state",
+      "Illustration click backs a priority",
+      "Backed detail persists after leaving the shape",
+      "Backed shape remains solid yellow",
+      "New preview keeps the previous backed detail visible",
+      "Two illustrated priorities can be backed",
+      "Shared leadership demand is exposed",
+      "Third commitment is rejected without losing earlier selections",
+      "Capacity rejection is announced",
+      "Deferred choice can still be explored",
+      "Only backed cards remain after leaving the preview",
+      "Clicking again clears a shape and frees capacity",
+      "Different resource demands restore the capacity label",
+      "Reset clears every commitment and preview",
+      "Tab moves to the next illustrated shape with a visible focus ring",
+      "Keyboard preview takes precedence over an idle mouse",
+      "Space activates the focused illustrated shape",
+      "Enter activates the next illustrated shape",
+      "Enter also clears an existing commitment",
+      "No browser JavaScript errors"
+    ]
+  },
+  "mobileAndFallback": {
+    "checks": [
+      "Touch taps back the illustrated choices directly",
+      "Both touch selections keep their relevant details visible",
+      "Touch leaves no synthetic hover preview",
+      "Second tap clears the chosen shape and its detail",
+      "Touch reset clears the formation",
+      "Without JavaScript the worked example remains open",
+      "Without JavaScript all four dependencies and questions remain readable",
+      "Without JavaScript inert illustration controls are not keyboard traps",
+      "Unavailable enhancements stay hidden without JavaScript",
+      "Reduced motion preserves selection with effectively instant feedback and native scroll"
+    ],
+    "reduced": {
+      "duration": "1e-05s",
+      "scroll": "auto",
+      "pressed": "true"
+    }
+  },
+  "responsive": [
+    {
+      "width": 320,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 132,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 132,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 132,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 132,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 390,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 167,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 167,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 167,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 167,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 600,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 272,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 272,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 272,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 272,
+          "height": 132,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 768,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 276.203125,
+          "height": 89.90625,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 267.609375,
+          "height": 85.6640625,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 260.1796875,
+          "height": 87.7578125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 264.40625,
+          "height": 85.6640625,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 1024,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 358.1484375,
+          "height": 116.5859375,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 347.0078125,
+          "height": 111.078125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 337.3828125,
+          "height": 113.796875,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 342.859375,
+          "height": 111.078125,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 1200,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 235.2265625,
+          "height": 76.5703125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 227.9140625,
+          "height": 72.953125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 221.5859375,
+          "height": 74.7421875,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 225.1796875,
+          "height": 72.953125,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 1440,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 287.7265625,
+          "height": 93.6640625,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 278.78125,
+          "height": 89.234375,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 271.046875,
+          "height": 91.421875,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 275.4453125,
+          "height": 89.234375,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    },
+    {
+      "width": 1920,
+      "documentOverflow": false,
+      "nodes": [
+        {
+          "id": "market",
+          "width": 384.203125,
+          "height": 125.0703125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "customers",
+          "width": 372.25,
+          "height": 119.15625,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "reliability",
+          "width": 361.921875,
+          "height": 122.078125,
+          "overflow": false,
+          "nameOverflow": false
+        },
+        {
+          "id": "ai",
+          "width": 367.796875,
+          "height": 119.15625,
+          "overflow": false,
+          "nameOverflow": false
+        }
+      ],
+      "visibleDetails": 2
+    }
+  ],
+  "limits": "Touch and reduced motion are browser emulation; no physical-device or screen-reader conformance claim."
+}

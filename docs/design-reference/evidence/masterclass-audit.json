@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-29",
+  "route": "/workshops/strategic-design-leadership/",
+  "desktop": {
+    "checks": [
+      "Initial formation exposes five strategic questions and no full agendas",
+      "Hover previews the session method without selecting a day",
+      "explorer: exactly one complete session opens",
+      "explorer: selected card remains identified in the formation",
+      "explorer: supplied executive decision tool is retained",
+      "explorer: morning, afternoon and tangible executive output are available",
+      "explorer: all other days remain accessible",
+      "practitioner: exactly one complete session opens",
+      "practitioner: selected card remains identified in the formation",
+      "practitioner: supplied executive decision tool is retained",
+      "practitioner: morning, afternoon and tangible executive output are available",
+      "practitioner: all other days remain accessible",
+      "integrator: exactly one complete session opens",
+      "integrator: selected card remains identified in the formation",
+      "integrator: supplied executive decision tool is retained",
+      "integrator: morning, afternoon and tangible executive output are available",
+      "integrator: all other days remain accessible",
+      "architect: exactly one complete session opens",
+      "architect: selected card remains identified in the formation",
+      "architect: supplied executive decision tool is retained",
+      "architect: morning, afternoon and tangible executive output are available",
+      "architect: all other days remain accessible",
+      "steward: exactly one complete session opens",
+      "steward: selected card remains identified in the formation",
+      "steward: supplied executive decision tool is retained",
+      "steward: morning, afternoon and tangible executive output are available",
+      "steward: all other days remain accessible",
+      "Expanded session lands 24px below the sticky progression",
+      "Next-day navigation moves directly between sessions",
+      "Escape returns to the formation and restores the originating card focus",
+      "End moves keyboard focus directly to Steward",
+      "Arrow navigation wraps across the five-card formation",
+      "Space opens a keyboard-focused card",
+      "Explicit return control restores the five-card formation",
+      "Session expansion stays in the page and uses no modal",
+      "No browser JavaScript errors"
+    ]
+  },
+  "touchFallbackAndLegacy": {
+    "checks": [
+      "Touch opens the selected workshop day",
+      "Touch does not leave a synthetic hover preview",
+      "Mobile progression switches directly between complete sessions",
+      "Touch return restores the formation",
+      "Touch layout has no horizontal document overflow",
+      "Without JavaScript five native session disclosures remain available",
+      "No-JavaScript keyboard disclosure exposes the full Steward session and output",
+      "Unavailable enhanced progression stays hidden without JavaScript",
+      "Reduced motion retains complete interaction with effectively instant feedback",
+      "Original Formation at 1440px: hover preview survives shared-handler extraction",
+      "Original Formation at 1440px: backed detail persists alongside a new preview",
+      "Original Formation at 1440px: two-choice limit and announcement are unchanged",
+      "Original Formation at 1440px: reset clears selections and previews",
+      "Original Formation at 390px: hover preview survives shared-handler extraction",
+      "Original Formation at 390px: backed detail persists alongside a new preview",
+      "Original Formation at 390px: two-choice limit and announcement are unchanged",
+      "Original Formation at 390px: reset clears selections and previews"
+    ]
+  },
+  "responsive": {
+    "geometryPreference": "Reduced motion for stable measurement; default-motion interactions were tested separately.",
+    "results": [
+      {
+        "width": 320,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 132,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 132,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 132,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 132,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 280,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 167,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 167,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 167,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 167,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 350,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      },
+      {
+        "width": 768,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 226.6640625,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 226.6640625,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 226.671875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 352,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 352,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      },
+      {
+        "width": 1024,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 298.6640625,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 298.6640625,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 298.6640625,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 459.9921875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 460,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 252.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 252.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 252.8046875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 252.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 252.8046875,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      },
+      {
+        "width": 1920,
+        "overflow": false,
+        "cardCount": 5,
+        "cards": [
+          {
+            "width": 340.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 340.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 340.8046875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 340.796875,
+            "stageFits": true,
+            "overflow": false
+          },
+          {
+            "width": 340.796875,
+            "stageFits": true,
+            "overflow": false
+          }
+        ],
+        "allFiveSessionWidthsPass": true
+      }
+    ]
+  },
+  "build": {
+    "astroFiles": 57,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0,
+    "staticPages": 12,
+    "productionBuild": "passed",
+    "diffCheck": "passed"
+  },
+  "scope": "Local implementation. Chromium with touch/reduced-motion emulation; no physical-device or screen-reader certification. No enquiries sent."
+}

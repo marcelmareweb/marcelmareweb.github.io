@@ -1,0 +1,49 @@
+{
+  "storyboard_375": {
+    "width": 375,
+    "scrollWidth": 375,
+    "missing": []
+  },
+  "storyboard_768": {
+    "width": 768,
+    "scrollWidth": 768,
+    "missing": []
+  },
+  "storyboard_1440": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "missing": []
+  },
+  "comparison_desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "desktopSceneWidths": [
+      1320,
+      1320
+    ],
+    "mobileSceneWidths": [
+      335,
+      335
+    ],
+    "desktopPanels": [
+      1440,
+      1440
+    ],
+    "mobilePanels": [
+      375,
+      375
+    ]
+  },
+  "comparison_mobile": {
+    "width": 375,
+    "scrollWidth": 375,
+    "desktopWidths": [
+      1440,
+      1440
+    ],
+    "mobileWidths": [
+      375,
+      375
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+---
+interface Props { mobile?: boolean; id: string }
+const { mobile = false, id } = Astro.props;
+const w = mobile ? 1345 : 1983;
+const h = mobile ? 1169 : 793;
+const asset = `/images/judgement-factory/${mobile ? 'mobile' : 'desktop'}.webp`;
+const ellipse = (x: number, y: number, rx: number, ry = rx) =>
+  `M${x-rx},${y}a${rx},${ry} 0 1 0 ${rx*2},0a${rx},${ry} 0 1 0 -${rx*2},0`;
+// Registered cutouts of the approved artwork, in its original pixel coordinates.
+// The drawing remains the source for every visible mechanical and character part.
+const cuts: Record<string, string> = mobile ? {
+  pulley: ellipse(474, 188, 53),
+  weight: 'M438 347Q438 338 480 334L537 363 536 496 508 516 449 501Z',
+  basket: 'M20 222L194 221 194 384 15 385Z',
+  door: 'M650 651Q680 604 733 617L781 646 781 899 686 917 644 877Z',
+  loaf: 'M949 947L949 896Q952 877 977 869Q988 858 1005 862Q1020 855 1040 863Q1073 858 1097 885L1110 900 1110 947Z',
+  stop: 'M1113 834L1159 847 1159 953 1113 953Z',
+  lever: `${ellipse(1295, 864, 13)} M1289 874H1301V912H1289Z`,
+  inspector: 'M1195 856H1277V940H1195Z',
+  stream: 'M403 681L453 690 473 785 445 797 419 776Z',
+} : {
+  wheel: ellipse(790, 139, 123, 120),
+  pulley: ellipse(1035, 193, 43),
+  weight: 'M1074 291L1116 287 1148 312 1149 388 1126 401 1080 391Z',
+  basket: 'M510 277L636 277 642 398 617 421 527 414 506 390Z',
+  fork: 'M565 121L639 128 653 192 650 262 626 273 581 263 569 241 590 212 571 182Z',
+  fruit: 'M698 334Q703 320 714 334Q743 357 754 394Q755 409 744 409Q712 399 698 344Z',
+  feed1: 'M209 378Q231 371 257 352L277 346 286 358Q269 392 240 402L213 399Z',
+  feed2: 'M286 339Q305 338 324 309L341 301 352 317Q335 350 304 357L285 351Z',
+  feed3: 'M343 259Q364 252 378 221L389 213 401 228Q390 265 366 282L347 279Z',
+  feed4: 'M408 166Q435 154 447 136L461 133 468 146Q457 175 426 186L409 181Z',
+  feed5: 'M474 130Q497 137 521 125L535 124 540 137Q525 159 493 156L477 148Z',
+  beater: 'M748 451L819 449 841 498 817 513 744 506Z',
+  stream: 'M1137 480L1175 484 1195 519 1165 530 1146 513Z',
+  door: 'M1341 427Q1370 400 1405 422L1461 459 1460 592 1390 605 1348 577Z',
+  loaf: 'M1658 615L1658 574Q1660 559 1685 549Q1706 543 1718 550Q1744 546 1757 569L1758 615Z',
+  stop: 'M1757 543L1789 554 1790 624 1757 624Z',
+  lever: `${ellipse(1924, 538, 11)} M1919 544H1929V598H1919Z`,
+  inspector: 'M1796 514H1901V609H1796Z',
+  receiver: 'M141 227L229 227 234 270 224 294 215 313 178 313 168 297 147 291Z',
+  mixerWorker: 'M600 402L703 402 715 454 690 475 675 496 623 498 615 481 601 464Z',
+};
+const parts = Object.keys(cuts);
+const removed = parts.filter(k => !k.startsWith('feed'));
+const cut = (key: string) => `${id}-cut-${key}`;
+const motion = (key: string) => ['feed1','feed2','feed3','feed4','feed5'].includes(key) ? 'feed' : key;
+const origin: Record<string, string> = mobile ? {
+  pulley:'474px 188px', weight:'480px 335px', basket:'100px 80px',
+  door:'775px 815px', inspector:'1232px 930px', lever:'1295px 934px',
+} : {
+  wheel:'790px 139px', pulley:'1035px 193px', weight:'1114px 290px',
+  basket:'576px 180px', fork:'576px 141px', beater:'791px 479px',
+  door:'1454px 511px', receiver:'202px 308px', mixerWorker:'653px 491px',
+  inspector:'1845px 609px', lever:'1925px 611px',
+};
+---
+<svg class:list={['factory-scene', mobile ? 'factory-scene--mobile' : 'factory-scene--desktop']}
+  viewBox={`0 0 ${w} ${h}`} width={w} height={h} data-factory-scene={mobile ? 'mobile' : 'desktop'}
+  aria-hidden="true" focusable="false">
+  <defs>
+    <image id={`${id}-art`} width={w} height={h} data-art-src={asset} />
+    {parts.map(key => <clipPath id={cut(key)}><path d={cuts[key]} /></clipPath>)}
+    <mask id={`${id}-plate`} maskUnits="userSpaceOnUse" x="0" y="0" width={w} height={h}>
+      <rect width={w} height={h} fill="white" />
+      {removed.map(key => <path d={key === 'loaf' ? (mobile ? 'M946 853H1114V951H946Z' : 'M1655 542H1763V617H1655Z') : cuts[key]} fill="black" />)}
+      <path d={mobile ? 'M944 831H1164V955H944Z' : 'M1656 535H1795V627H1656Z'} fill="black" />
+    </mask>
+    <clipPath id={`${id}-product-lane`}>
+      <rect x={mobile ? 760 : 1490} y={mobile ? 760 : 525} width={mobile ? 600 : 510} height={mobile ? 200 : 100} />
+    </clipPath>
+    <clipPath id={`${id}-gate-window`}>
+      <rect x={mobile ? 1110 : 1750} y={mobile ? 820 : 535} width="65" height={mobile ? 133 : 88} />
+    </clipPath>
+  </defs>
+  <use href={`#${id}-art`} mask={`url(#${id}-plate)`} />
+  <!-- Dark oven interior and the track revealed by the moving product. -->
+  <path fill="#111" d={mobile ? 'M650 675Q687 627 751 657L778 688 776 897 681 910 647 870Z' : 'M1345 442Q1370 412 1414 437L1457 471 1456 590 1380 598 1346 571Z'} />
+  {mobile && <g fill="white" stroke="#161616" stroke-width="2">
+    <path d="M937 828L1105 864 1103 872 936 836Z" />
+    <path d={ellipse(1104, 870, 15)} /><path d={ellipse(1104, 870, 8)} />
+  </g>}
+  <g class="factory-track-repair" fill="white" stroke="#171717" stroke-width={mobile ? 2 : 1.5} stroke-linejoin="round">
+    {mobile ? <>
+      <path d="M947 945L1160 944 1165 960 949 960Z" />
+      <path d="M971 946L979 958M1001 946L1009 958M1035 945L1044 959M1066 945L1075 959M1098 945L1109 959M1134 945L1145 959" />
+    </> : <>
+      <path d="M1656 613L1790 614 1794 626 1658 626Z" />
+      <path d="M1664 614L1671 624M1684 614L1694 625M1707 614L1716 625M1730 614L1741 625M1753 615L1764 625M1777 615L1786 625" />
+    </>}
+  </g>
+  {parts.filter(key => !['loaf','stop','lever','inspector'].includes(key) && !key.startsWith('feed')).map(key =>
+    <g data-motion={motion(key)} style={`transform-origin:${origin[key] || '0px 0px'}`}>
+      <use href={`#${id}-art`} clip-path={`url(#${cut(key)})`} />
+    </g>
+  )}
+  {!mobile && <>
+    <!-- Whole fruit is already drawn along the intake; a travelling skin accent
+         joins that continuous inventory without replacing its handcrafted linework. -->
+    <g data-motion="travelling-banana" style="transform-origin:270px 378px">
+      <use href={`#${id}-art`} clip-path={`url(#${cut('feed1')})`} />
+    </g>
+    <g data-motion="falling-peel" fill="#F4D03F" stroke="#151515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M621 254q-7 17-20 24q-7 2-13-1q17-8 21-28q-13 11-22 7q16-8 22-20l8 1q0 17 13 24q-8 2-14-9" />
+    </g>
+  </>}
+  <g clip-path={`url(#${id}-product-lane)`}>
+    <g data-motion="loaf"><use href={`#${id}-art`} clip-path={`url(#${cut('loaf')})`} /></g>
+  </g>
+  <g clip-path={`url(#${id}-gate-window)`}>
+    <g data-motion="stop"><use href={`#${id}-art`} clip-path={`url(#${cut('stop')})`} /></g>
+  </g>
+  <g data-motion="lever" style={`transform-origin:${origin.lever}`}>
+    <use href={`#${id}-art`} clip-path={`url(#${cut('lever')})`} />
+  </g>
+  <g data-motion="inspector" style={`transform-origin:${origin.inspector}`}>
+    <use href={`#${id}-art`} clip-path={`url(#${cut('inspector')})`} />
+    <path data-motion="approval-arm" fill="none" stroke="#080808" stroke-width={mobile ? 7 : 8} stroke-linecap="round"
+      d={mobile ? 'M1225 893Q1235 877 1252 876' : 'M1845 563Q1860 548 1884 551'} />
+  </g>
+</svg>

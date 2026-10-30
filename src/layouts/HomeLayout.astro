@@ -1,0 +1,13 @@
+---
+import SiteLayout from './SiteLayout.astro';
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: string | URL;
+  ogImage?: string | URL;
+  schemaType?: string;
+}
+---
+<SiteLayout {...Astro.props}>
+<slot />
+</SiteLayout>

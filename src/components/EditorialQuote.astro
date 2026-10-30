@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  quote: string;
+  attribution: string;
+  portrait: ImageMetadata;
+  portraitAlt: string;
+}
+
+const { quote, attribution, portrait, portraitAlt } = Astro.props;
+---
+
+<div class="editorial-opening">
+  <figure class="quote-copy">
+    <blockquote><p>“{quote}”</p></blockquote>
+    <figcaption>— {attribution}</figcaption>
+  </figure>
+  <Image
+    class="quote-portrait"
+    src={portrait}
+    alt={portraitAlt}
+    width={640}
+    widths={[240, 320, 640]}
+    sizes="(max-width: 639px) 12rem, 20rem"
+    format="webp"
+    quality={85}
+    loading="eager"
+    decoding="async"
+  />
+</div>
+
+<style>
+  .editorial-opening {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+    margin-block: clamp(2rem, 5vw, 4rem);
+  }
+  .quote-copy, blockquote { margin: 0; }
+  blockquote p {
+    max-width: none;
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--ui);
+    font-size: clamp(2rem, 3.8vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+  figcaption {
+    margin-top: 1.5rem;
+    padding-left: 0.75rem;
+    border-left: 0.25rem solid var(--signal);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+  .quote-portrait {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    justify-self: end;
+  }
+  @media (max-width: 639px) {
+    .editorial-opening { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .quote-portrait { width: min(50%, 12rem); }
+  }
+</style>

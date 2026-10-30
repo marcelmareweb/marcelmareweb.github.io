@@ -1,0 +1,264 @@
+{
+  "browser": "Chrome via CDP",
+  "viewports": [
+    {
+      "page": "",
+      "width": 375,
+      "scrollWidth": 375,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 34940
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 31340
+        }
+      ],
+      "heroHeight": 722.515625,
+      "headlineHeight": 129.59375,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "",
+      "width": 430,
+      "scrollWidth": 430,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 0
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 0
+        }
+      ],
+      "heroHeight": 656.640625,
+      "headlineHeight": 147.703125,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "",
+      "width": 768,
+      "scrollWidth": 768,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 0
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 0
+        }
+      ],
+      "heroHeight": 598.484375,
+      "headlineHeight": 144.140625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 0
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 0
+        }
+      ],
+      "heroHeight": 557.25,
+      "headlineHeight": 193.296875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 0
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 0
+        }
+      ],
+      "heroHeight": 653.359375,
+      "headlineHeight": 268.171875,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    },
+    {
+      "page": "",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "title": "The Spotted Ape — Strategic Decisions, Behavioural Design & Human–AI Decision Design",
+      "fontReady": "loaded",
+      "headings": [
+        "MORE INTELLIGENCE.LESS DIRECTION."
+      ],
+      "missingImages": [],
+      "fontFiles": [
+        {
+          "name": "archivo-latin.woff2",
+          "bytes": 0
+        },
+        {
+          "name": "jetbrains-latin.woff2",
+          "bytes": 0
+        }
+      ],
+      "heroHeight": 692.9375,
+      "headlineHeight": 300.15625,
+      "headlineFont": "Archivo, Arial, sans-serif"
+    }
+  ],
+  "interaction": [
+    {
+      "test": "Keyboard Space selects a priority",
+      "pass": true
+    },
+    {
+      "test": "Two commitments expose shared demand and deferrals",
+      "pass": true
+    },
+    {
+      "test": "Third choice preserves earlier selections and explains capacity",
+      "pass": true
+    },
+    {
+      "test": "Revision updates dependencies without shared-resource warning",
+      "pass": true
+    },
+    {
+      "test": "Keyboard reset reopens all alternatives",
+      "pass": true
+    },
+    {
+      "test": "Keyboard opens native mobile navigation",
+      "pass": true
+    },
+    {
+      "test": "Reduced motion disables relationship transitions",
+      "pass": true
+    },
+    {
+      "test": "No JavaScript retains worked example, navigation and CTA",
+      "pass": true
+    },
+    {
+      "test": "Escape closes mobile navigation and restores focus",
+      "pass": true
+    },
+    {
+      "test": "Emulated touch selects through the full label",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "No assistive-technology user testing.",
+    "No Lighthouse score is claimed.",
+    "Local resource measurements do not represent a production network profile."
+  ],
+  "reflow320": true,
+  "escapeDiagnostics": {
+    "open": false,
+    "active": "<summary>Menu</summary>"
+  },
+  "allPairs": [
+    {
+      "pair": [
+        "market",
+        "customers"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": true
+    },
+    {
+      "pair": [
+        "market",
+        "reliability"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "market",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "customers",
+        "reliability"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "customers",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": false
+    },
+    {
+      "pair": [
+        "reliability",
+        "ai"
+      ],
+      "backed": 2,
+      "deferred": 2,
+      "shared": true
+    }
+  ],
+  "palette": {
+    "paper": "#f6f4f0",
+    "signal": "#ffff00",
+    "projectSelection": "rgb(18, 18, 17)"
+  },
+  "errors": [],
+  "failedRequests": []
+}

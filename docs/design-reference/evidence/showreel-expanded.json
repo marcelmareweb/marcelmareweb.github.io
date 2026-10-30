@@ -1,0 +1,33 @@
+{
+  "box": "<div data-testid=\"sticky-showreel-box\" data-video-status=\"idle\" data-player-status=\"playing\" data-video-muted=\"false\" data-expanded=\"true\" data-phase=\"expanded\" data-player-visible=\"true\" data-has-poster=\"true\" data-sticky=\"true\" tabindex=\"-1\" class=\"media-lightbox__box ssv-card bg-neutral-1000 fixed inset-0 z-60 rounded-none border-0\" style=\"\" data-follower-status=\"idle\" data-flip-id=\"auto-1\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Play showreel.\"><div class=\"absolute inset-0 overflow-hidden rounded-none\" style=\"border-radius: 0px;\"><img alt=\"Play showreel.\" aria-hidden=\"true\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"media-lightbox__poster z-10 object-cover\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent\" sizes=\"(min-width: 1024px) 25vw, 100vw\" srcset=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=256&amp;quality=75&amp;auto=webp&amp;disable=upscale 256w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=384&amp;quality=75&amp;auto=webp&amp;disable=upscale 384w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=640&amp;quality=75&amp;auto=webp&amp;disable=upscale 640w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=750&amp;quality=75&amp;auto=webp&amp;disable=upscale 750w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale 828w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt248c176a03654ddd/6a905376a594511f0962c3ec/Hs_Poster.jpg?width=1080&amp;quality=75&amp;auto=webp&amp;disable=upscale 1080w, https://images.contentstack.io/v3/assets/blt92018a2de144",
+  "controls": [
+    {
+      "aria": "Pause",
+      "text": "",
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 backdrop-blur-md bg-neutral-500/50 text-neutral-0 hover:bg-neutral-500/60 active:bg-neutral-500/80 focus-visible:shadow-[0_0_0_3px_rgba(255,255,255,0.8)]"
+    },
+    {
+      "aria": "Mute",
+      "text": "",
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 backdrop-blur-md bg-neutral-500/50 text-neutral-0 hover:bg-neutral-500/60 active:bg-neutral-500/80 focus-visible:shadow-[0_0_0_3px_rgba(255,255,255,0.8)]"
+    },
+    {
+      "aria": "Play showreel",
+      "text": "",
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 backdrop-blur-md bg-neutral-500/50 text-neutral-0 hover:bg-neutral-500/60 active:bg-neutral-500/80 focus-visible:shadow-[0_0_0_3px_rgba(255,255,255,0.8)] media-lightbox__fallback-button absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 lg:hidden"
+    },
+    {
+      "aria": "Subscribe",
+      "text": "",
+      "class": "flex shrink-0 items-center justify-center rounded-full border text-brand-magenta transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:cursor-default disabled:opacity-60 size-[40px] border-neutral-300 hover:border-neutral-950"
+    }
+  ],
+  "videos": [
+    {
+      "paused": false,
+      "muted": false,
+      "controls": false,
+      "readyState": 4
+    }
+  ]
+}

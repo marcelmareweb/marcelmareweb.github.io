@@ -1,0 +1,387 @@
+{
+  "url": "https://www.hugeinc.com/work",
+  "controls": [],
+  "cards": [
+    {
+      "text": "CoinTracker.\n\nCrypto tax reporting, made effortless.",
+      "href": "/case-study/cointracker",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/mcdonalds",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/nbcu",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/planet-fitness",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/darling-ingredients",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/google",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/big-green-egg",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/unc-health",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/case-study/lpga",
+      "class": "block size-full cursor-pointer"
+    },
+    {
+      "text": "",
+      "href": "/approach",
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 bg-transparent border border-(--theme-border-subtle) hover:border-(--theme-border-strong) active:opacity-75 focus-visible:shadow-[0_0_0_3px_var(--theme-text-primary)] self-start text-(--theme-cta)"
+    },
+    {
+      "text": "",
+      "href": "/contact",
+      "class": "inline-flex items-center justify-center rounded-full size-[60px] outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 bg-transparent border border-(--theme-border-subtle) hover:border-(--theme-border-strong) active:opacity-75 focus-visible:shadow-[0_0_0_3px_var(--theme-text-primary)] self-start text-(--theme-cta)"
+    }
+  ],
+  "measure": [
+    {
+      "tag": "SECTION",
+      "text": "Shipped.\n\nWork that reimagines experiences, drives outcomes and leaves things better than we found t",
+      "class": "full-bleed content-grid content-end pt-[96px] lg:pt-[70px] bg-(--theme-bg)",
+      "box": {
+        "x": 0,
+        "y": -1300,
+        "width": 1440,
+        "height": 652.4375,
+        "top": -1300,
+        "right": 1440,
+        "bottom": -647.5625,
+        "left": 0
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "H1",
+      "text": "Shipped.",
+      "class": "relative cap-height leading-[0.77] col-span-full text-display-2xl max-md:text-[clamp(2.5rem,13.5vw,6.25rem)] font-semibold text-(--theme-text-primary)",
+      "box": {
+        "x": 40,
+        "y": -1033.265625,
+        "width": 1360,
+        "height": 174.296875,
+        "top": -1033.265625,
+        "right": 1400,
+        "bottom": -858.96875,
+        "left": 40
+      },
+      "font": "600 248.992px / 191.724px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "class": "w-full bg-(--theme-bg)",
+      "box": {
+        "x": 40,
+        "y": -647.5625,
+        "width": 1360,
+        "height": 115.9140625,
+        "top": -647.5625,
+        "right": 1400,
+        "bottom": -531.6484375,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "SECTION",
+      "text": "",
+      "class": "flex flex-col gap-5 w-full",
+      "box": {
+        "x": 40,
+        "y": -531.6484375,
+        "width": 1360,
+        "height": 676,
+        "top": -531.6484375,
+        "right": 1400,
+        "bottom": 144.3515625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "20px",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "class": "w-full bg-(--theme-bg)",
+      "box": {
+        "x": 40,
+        "y": 144.3515625,
+        "width": 1360,
+        "height": 115.9140625,
+        "top": 144.3515625,
+        "right": 1400,
+        "bottom": 260.265625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "SECTION",
+      "text": "CoinTracker.\n\nCrypto tax reporting, made effortless.",
+      "class": "bg-(--theme-bg)",
+      "box": {
+        "x": 40,
+        "y": 260.265625,
+        "width": 1360,
+        "height": 6910,
+        "top": 260.265625,
+        "right": 1400,
+        "bottom": 7170.265625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "CoinTracker.\n\nCrypto tax reporting, made effortless.",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 260.265625,
+        "width": 1360,
+        "height": 750,
+        "top": 260.265625,
+        "right": 1400,
+        "bottom": 1010.265625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 1068.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 1068.4736328125,
+        "right": 1400,
+        "bottom": 1818.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 1838.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 1838.4736328125,
+        "right": 1400,
+        "bottom": 2588.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 2608.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 2608.4736328125,
+        "right": 1400,
+        "bottom": 3358.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 3378.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 3378.4736328125,
+        "right": 1400,
+        "bottom": 4128.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 4148.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 4148.4736328125,
+        "right": 1400,
+        "bottom": 4898.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 4918.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 4918.4736328125,
+        "right": 1400,
+        "bottom": 5668.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 5688.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 5688.4736328125,
+        "right": 1400,
+        "bottom": 6438.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "ARTICLE",
+      "text": "",
+      "class": "group relative flex flex-col justify-end overflow-hidden rounded-8 p-xl lg:p-2xl size-full",
+      "box": {
+        "x": 40,
+        "y": 6458.4736328125,
+        "width": 1360,
+        "height": 750,
+        "top": 6458.4736328125,
+        "right": 1400,
+        "bottom": 7208.4736328125,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "8px"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "class": "w-full bg-(--theme-bg)",
+      "box": {
+        "x": 40,
+        "y": 7170.265625,
+        "width": 1360,
+        "height": 149.375,
+        "top": 7170.265625,
+        "right": 1400,
+        "bottom": 7319.640625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "SECTION",
+      "text": "",
+      "class": "layout-grid gap-(--grid-gutter)",
+      "box": {
+        "x": 40,
+        "y": 7319.640625,
+        "width": 1360,
+        "height": 672,
+        "top": 7319.640625,
+        "right": 1400,
+        "bottom": 7991.640625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "16px",
+      "borderRadius": "0px"
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "class": "w-full bg-(--theme-bg)",
+      "box": {
+        "x": 40,
+        "y": 7991.640625,
+        "width": 1360,
+        "height": 149.375,
+        "top": 7991.640625,
+        "right": 1400,
+        "bottom": 8141.015625,
+        "left": 40
+      },
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "borderRadius": "0px"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "header": {
+    "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "color": "rgb(13, 11, 10)",
+    "background": "rgba(0, 0, 0, 0)",
+    "box": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 70,
+      "top": 0,
+      "right": 1440,
+      "bottom": 70,
+      "left": 0
+    },
+    "radius": "0px",
+    "transition": "all"
+  },
+  "before": {
+    "content": "none",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backdropFilter": "none",
+    "mask": "none"
+  },
+  "cta": {
+    "font": "600 16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(13, 11, 10)",
+    "box": {
+      "x": 1279.296875,
+      "y": 13,
+      "width": 120.703125,
+      "height": 44,
+      "top": 13,
+      "right": 1400,
+      "bottom": 57,
+      "left": 1279.296875
+    },
+    "radius": "999px",
+    "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "rules": [
+    {
+      "selector": ".logo-wall__list",
+      "css": "flex-flow: wrap; gap: 8px; display: flex;"
+    },
+    {
+      "selector": ".logo-wall__item",
+      "css": "width: calc(50% - 4px); position: relative;"
+    },
+    {
+      "selector": "[data-logo-wall-list] [data-logo-wall-item]:nth-child(n+9)",
+      "css": "display: none;"
+    },
+    {
+      "selector": ".logo-wall__logo",
+      "css": "background-color: var(--theme-on-base); border-radius: 8px; justify-content: center; align-items: center; display: flex; position: relative; overflow: hidden;"
+    },
+    {
+      "selector": ".logo-wall__logo-before",
+      "css": "padding-top: 100%;"
+    },
+    {
+      "selector": ".logo-wall__logo-target",
+      "css": "justify-content: center; align-items: center; width: 32%; height: 32%; display: flex; position: absolute; overflow: hidden;"
+    },
+    {
+      "selector": ".logo-wall__logo-img",
+      "css": "object-fit: contain; width: 100%; height: 100%; max-height: 100%;"
+    },
+    {
+      "selector": ".logo-wall__logo-target",
+      "css": "width: 91px; height: 91px;"
+    },
+    {
+      "selector": ".logo-wall__logo-target",
+      "css": "width: 80px; height: 80px;"
+    },
+    {
+      "selector": ".logo-wall__logo-target",
+      "css": "width: 128px; height: 128px;"
+    },
+    {
+      "selector": ".logo-wall__item",
+      "css": "width: calc(25% - 6px);"
+    }
+  ]
+}

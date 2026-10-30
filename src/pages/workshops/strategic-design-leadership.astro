@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import MasterclassFormation from '../../components/masterclass/MasterclassFormation.astro';
+import { masterclassTitle } from '../../data/executive-masterclass';
+const subject = encodeURIComponent(`${masterclassTitle} — Executive masterclass enquiry`);
+---
+<BaseLayout title={`${masterclassTitle} | The Spotted Ape`} description="Five standalone executive working sessions on strategic choices, capabilities and governance. Explore the E–P–I–A–S five-day masterclass through an interactive formation.">
+  <PageIntro eyebrow="Workshops / The five-day executive masterclass" scale="long" description="Five days. Five strategic decisions. One coherent direction.">
+    <Fragment slot="heading">Strategic Design<br />Leadership in<br />the Age of AI</Fragment>
+    <div class="masterclass-introduction">
+      <div><p>Organisations rarely suffer from a shortage of plans. They struggle to make the choices that matter: where to compete, how to win, what capabilities to develop and what to stop doing.</p><p>This executive masterclass combines strategic decision design, behavioural understanding and AI-assisted exploration to turn unresolved strategic questions into actionable choices.</p></div>
+      <aside><p class="meta">The format</p><p>Five standalone working sessions form one integrated strategic progression.</p><p class="masterclass-audience">For executive leaders, strategy directors and business-unit owners.</p></aside>
+    </div>
+    <nav class="page-nav" aria-label="Masterclass page sections"><a class="text-link" href="#programme">Explore the five days ↓</a><a class="text-link" href="/workshops">← All decision workshops</a></nav>
+  </PageIntro>
+  <MasterclassFormation />
+  <section class="masterclass-invitation section-y theme-yellow" id="discuss-programme"><div class="wrap"><p class="meta">One day or the complete programme</p><h2>Bring a consequential<br />strategic question.</h2><div class="invitation-copy"><p class="lead">Discuss a standalone working day or the complete five-day progression around your organisation’s decisions.</p><a class="button" href={`mailto:hello@thespottedape.com?subject=${subject}`}>Discuss the masterclass <span aria-hidden="true">↗</span></a></div></div></section>
+</BaseLayout>
+<style>
+  .masterclass-introduction {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 12%;
+    margin-top: 48px;
+  }
+  .masterclass-introduction > div {
+    max-width: 56ch;
+    font-size: var(--body-large);
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+  }
+  .masterclass-introduction aside {
+    max-width: 34ch;
+  }
+  .masterclass-introduction aside > p:not(.meta) {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.35;
+  }
+  .masterclass-introduction aside .masterclass-audience {
+    font-size: 16px;
+    color: #626262;
+  }
+  .masterclass-invitation h2 {
+    max-width: 24ch;
+    margin-top: 40px;
+    font-size: var(--heading-2);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+  }
+  .invitation-copy {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 48px;
+  }
+  .invitation-copy .lead {
+    max-width: 43ch;
+  }
+  .invitation-copy .button {
+    flex-shrink: 0;
+  }
+  @media (max-width: 1023px) {
+    .masterclass-introduction {
+      gap: 48px;
+    }
+  }
+  @media (max-width: 767px) {
+    .masterclass-introduction {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    .masterclass-introduction > div {
+      font-size: 22px;
+    }
+    .masterclass-invitation h2 {
+      font-size: 44px;
+    }
+    .invitation-copy {
+      display: block;
+      margin-top: 32px;
+    }
+    .invitation-copy .button {
+      margin-top: 32px;
+    }
+  }
+</style>

@@ -1,0 +1,15 @@
+{
+  "desktop_scene_units": 1000,
+  "revised_worker_height_units": 40,
+  "revised_percent": 4,
+  "original_tallest_worker_height_units": 114.33,
+  "original_percent": 11.433,
+  "desktop_css_scene_width": 1320,
+  "revised_desktop_worker_css_height": 52.8,
+  "original_desktop_worker_css_height": 150.9156,
+  "mobile_css_viewport": 375,
+  "mobile_css_scene_width": 335,
+  "mobile_viewbox_width": 560,
+  "revised_mobile_worker_css_height": 23.928571428571427,
+  "original_mobile_worker_css_height": 100.04535714285714
+}

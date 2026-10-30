@@ -1,0 +1,675 @@
+{
+  "root": "<html lang=\"en\" class=\"z2O8Na_variable lenis\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"preload\" as=\"image\" imagesrcset=\"https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=32&amp;quality=75&amp;auto=webp&amp;disable=upscale 32w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=48&amp;quality=75&amp;auto=webp&amp;disable=upscale 48w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=64&amp;quality=75&amp;auto=webp&amp;disable=upscale 64w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=96&amp;quality=75&amp;auto=webp&amp;disable=upscale 96w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=128&amp;quality=75&amp;auto=webp&amp;disable=upscale 128w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=256&amp;quality=75&amp;auto=webp&amp;disable=upscale 256w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=384&amp;quality=75&amp;auto=webp&amp;disable=upscale 384w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=640&amp;quality=75&amp;auto=webp&amp;disable=upscale 640w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=750&amp;quality=75&amp;auto=webp&amp;disable=upscale 750w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=828&amp;quality=75&amp;auto=webp&amp;disable=upscale 828w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=1080&amp;quality=75&amp;auto=webp&amp;disable=upscale 1080w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/android.webp?width=1200&amp;quality=75&amp;auto=webp&amp;disable=upscale 1200w, https://images.contentstack.io/v3/assets/blt92018a2de1445ae9/blt38c9e7909cf81e36/6a6752b45f29189a85139cab/andr",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Hello.",
+      "class": "font-matter text-display-2xl text-(--theme-text-primary) max-lg:text-[min(41.5vw,11.4rem)] max-lg:tracking-[-0.07em] cap-height optical-left lg:text-[min(28.5vw,17.8rem)] font-semibold lg:tracking-[-0.07em]"
+    },
+    {
+      "tag": "H2",
+      "text": "We make things that\nmatter to \npeople.",
+      "class": "font-matter text-display-l text-(--theme-text-primary) w-full col-span-full font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "",
+      "class": "font-matter text-display-l text-(--theme-text-primary) cap-height optical-left tracking-tighter max-md:text-[clamp(2.5rem,13.5vw,4.25rem)] font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "",
+      "class": "font-matter text-display-l text-(--theme-text-primary) cap-height optical-left tracking-tighter max-md:text-[clamp(2.5rem,13.5vw,4.25rem)] font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "",
+      "class": "font-matter text-display-l text-(--theme-text-primary) cap-height optical-left tracking-tighter max-md:text-[clamp(2.5rem,13.5vw,4.25rem)] font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "Brand strategy & design.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "Marketing & content.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "Products & platforms.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "Composable commerce.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "Customer experience.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "AI activation.",
+      "class": "font-matter text-h1 lg:text-display-l cap-height text-left cap-height text-neutral-950 font-semibold"
+    },
+    {
+      "tag": "H2",
+      "text": "",
+      "class": "font-matter text-display-l text-(--theme-text-primary) cap-height optical-left tracking-tighter max-md:text-[clamp(2.5rem,13.5vw,4.25rem)] font-semibold"
+    },
+    {
+      "tag": "H3",
+      "text": "",
+      "class": "font-semibold tracking-tight text-(--theme-text-primary) line-clamp-2 text-body-xl leading-[100%] descender-safe"
+    },
+    {
+      "tag": "H2",
+      "text": "Privacy Preference Center",
+      "class": ""
+    },
+    {
+      "tag": "H3",
+      "text": " Manage Consent Preferences",
+      "class": ""
+    },
+    {
+      "tag": "H3",
+      "text": "Cookie List",
+      "class": ""
+    }
+  ],
+  "measure": [
+    {
+      "tag": "HEADER",
+      "class": "fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-(--page-margin) h-(--header-height)",
+      "text": "Work\nSolutions\nApproach\nCompany\nIdeas\nCareers\nLet’s talk",
+      "box": [
+        0,
+        0,
+        1440,
+        70
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px 40px",
+      "display": "flex",
+      "gap": "normal",
+      "position": "fixed",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "",
+      "box": [
+        40,
+        20,
+        70.7109375,
+        30
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Work",
+      "box": [
+        412.953125,
+        27,
+        37.109375,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Solutions",
+      "box": [
+        497.5390625,
+        27,
+        61.984375,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Approach",
+      "box": [
+        606.984375,
+        27,
+        69.3828125,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Company",
+      "box": [
+        723.3125,
+        27,
+        68.359375,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Ideas",
+      "box": [
+        838.4296875,
+        27,
+        37.21875,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm whitespace-nowrap outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent rounded-none text-(--theme-text-primary) active:opacity-50 focus-visible:ring-(--theme-text-primary) text-nav-link transition-colors font-regular",
+      "text": "Careers",
+      "box": [
+        922.703125,
+        27,
+        54.2265625,
+        16
+      ],
+      "font": "16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "static",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via 0.15s cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "items-center justify-center gap-sm font-semibold whitespace-nowrap rounded-full transition-colors outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer relative isolate px-8 py-3 bg-(--theme-text-primary) text-(--theme-text-inverse) active:bg-(--theme-btn-active) focus-visible:ring-(--theme-text-inverse) hidden lg:inline-flex h-11 text-nav-link",
+      "text": "Let’s talk",
+      "box": [
+        1279.296875,
+        13,
+        120.703125,
+        44
+      ],
+      "font": "600 16px / 16px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-0.48px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgb(255, 255, 255)",
+      "padding": "12px 31.104px",
+      "display": "flex",
+      "gap": "8px",
+      "position": "relative",
+      "transition": "color 0.7s cubic-bezier(0.625, 0.05, 0, 1)"
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "Huge",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Work",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Solutions",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Approach",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Company",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Ideas",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "py-3 text-h4 leading-display-tight tracking-display font-semibold text-(--theme-text-primary) landscape:py-2 landscape:text-h5",
+      "text": "Careers",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 32.288px / 29.0592px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-1.29152px",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "8px 0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "A",
+      "class": "inline-flex items-center justify-center gap-sm font-semibold whitespace-nowrap rounded-full transition-colors outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer text-body relative isolate px-8 py-5 bg-(--theme-text-primary) text-(--theme-text-inverse) active:bg-(--theme-btn-active) focus-visible:ring-(--theme-text-inverse) landscape:py-3",
+      "text": "Let’s talk",
+      "box": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "font": "600 19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(13, 11, 10)",
+      "padding": "12px 31.104px",
+      "display": "inline-flex",
+      "gap": "8px",
+      "position": "relative",
+      "transition": "color 0.7s cubic-bezier(0.625, 0.05, 0, 1)"
+    },
+    {
+      "tag": "SECTION",
+      "class": "content-grid relative isolate min-h-svh overflow-clip bg-(--theme-bg) text-(--theme-text-primary)",
+      "text": "Hello.\n\nHope this beats your last meeting. Working hard or avoiding Slack? Just another perfectly no",
+      "box": [
+        0,
+        0,
+        1440,
+        1000
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(13, 11, 10)",
+      "padding": "0px",
+      "display": "grid",
+      "gap": "normal",
+      "position": "relative",
+      "transition": "all"
+    },
+    {
+      "tag": "H1",
+      "class": "font-matter text-display-2xl text-(--theme-text-primary) max-lg:text-[min(41.5vw,11.4rem)] max-lg:tracking-[-0.07em] cap-height optical-left lg:text-[min(28.5vw,17.8rem)] font-semibold lg:tracking-[-0.07em]",
+      "text": "Hello.",
+      "box": [
+        40,
+        608.625,
+        901.328125,
+        199.359375
+      ],
+      "font": "600 284.8px / 250.624px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-19.936px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "P",
+      "class": "font-body text-h4 text-(--theme-text-primary) cap-height leading-display-tight font-semibold",
+      "text": "Hope this beats your last meeting. Working hard or avoiding Slack? Just another perfectly normal wee",
+      "box": [
+        40,
+        831.984375,
+        901.328125,
+        108.1171875
+      ],
+      "font": "600 43.248px / 38.9232px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "-2.1624px",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "layout-grid py-48 lg:py-32",
+      "text": "We make things that\nmatter to \npeople.",
+      "box": [
+        40,
+        1000,
+        1360,
+        493.984375
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "115.92px 0px",
+      "display": "grid",
+      "gap": "16px",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "layout-grid image-trail-section gap-y-48 py-(--section-gap-xl)",
+      "text": "Anyone can make. Creating experiences that resonate with culture and business is the hard part. It t",
+      "box": [
+        40,
+        1493.984375,
+        1360,
+        640.5
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "196.736px 0px",
+      "display": "grid",
+      "gap": "196.736px 16px",
+      "position": "relative",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "flex flex-col gap-5 w-full",
+      "text": "",
+      "box": [
+        40,
+        2134.484375,
+        1360,
+        676
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "flex",
+      "gap": "20px",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "full-bleed mx-[calc(var(--page-margin)-var(--spacing-5))] bg-(--theme-bg)",
+      "text": "NBCU.\n\nEnabling friction-free discovery of Olympics scheduling with AI.\n\nCoinTracker.\n\nCrypto tax re",
+      "box": [
+        20,
+        3007.21875,
+        1400,
+        6600
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgb(255, 255, 255)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "full-bleed",
+      "text": "",
+      "box": [
+        0,
+        9756.59375,
+        1440,
+        4124
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "block",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "full-bleed content-grid bg-(--theme-bg) py-(--section-gap-xl)",
+      "text": "01\nBrand strategy & design.\n\nBrands that move with culture.\n\n02\nMarketing & content.\n\nInsight and cr",
+      "box": [
+        0,
+        13880.59375,
+        1440,
+        5901.9921875
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgb(255, 255, 255)",
+      "padding": "196.736px 0px",
+      "display": "grid",
+      "gap": "normal",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "layout-grid gap-y-16 pb-16",
+      "text": "",
+      "box": [
+        40,
+        19782.5859375,
+        1360,
+        161.8515625
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px 0px 59.904px",
+      "display": "grid",
+      "gap": "59.904px 16px",
+      "position": "static",
+      "transition": "all"
+    },
+    {
+      "tag": "SECTION",
+      "class": "layout-grid",
+      "text": "",
+      "box": [
+        40,
+        19982.64453125,
+        1360,
+        920.609375
+      ],
+      "font": "19.104px / 30.5664px matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fontFamily": "matter, \"matter Fallback\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tracking": "normal",
+      "color": "rgb(13, 11, 10)",
+      "background": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "display": "grid",
+      "gap": "16px",
+      "position": "static",
+      "transition": "all"
+    }
+  ]
+}

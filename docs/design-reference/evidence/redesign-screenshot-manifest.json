@@ -1,0 +1,248 @@
+[
+  {
+    "file": "redesign-01-home-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 133720
+  },
+  {
+    "file": "redesign-02-about-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 100470
+  },
+  {
+    "file": "redesign-03-courses-desktop.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 116327
+  },
+  {
+    "file": "redesign-320-footer.png",
+    "width": 320,
+    "height": 844,
+    "bytes": 49746
+  },
+  {
+    "file": "redesign-course-inspector.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 154934
+  },
+  {
+    "file": "redesign-course-no-js.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 75982
+  },
+  {
+    "file": "redesign-desktop-about.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 100470
+  },
+  {
+    "file": "redesign-desktop-courses.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 116331
+  },
+  {
+    "file": "redesign-desktop-thinking-.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 67053
+  },
+  {
+    "file": "redesign-desktop-workshops.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 124173
+  },
+  {
+    "file": "redesign-enquiry-failure.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 93192
+  },
+  {
+    "file": "redesign-final-1440-about.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 94571
+  },
+  {
+    "file": "redesign-final-1440-courses.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 108270
+  },
+  {
+    "file": "redesign-final-1440-home.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 130524
+  },
+  {
+    "file": "redesign-final-1440-thinking-.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 57553
+  },
+  {
+    "file": "redesign-final-1440-workshops.png",
+    "width": 1440,
+    "height": 900,
+    "bytes": 115903
+  },
+  {
+    "file": "redesign-final-390-about.png",
+    "width": 390,
+    "height": 900,
+    "bytes": 56075
+  },
+  {
+    "file": "redesign-final-390-courses.png",
+    "width": 390,
+    "height": 900,
+    "bytes": 64535
+  },
+  {
+    "file": "redesign-final-390-home.png",
+    "width": 390,
+    "height": 900,
+    "bytes": 54755
+  },
+  {
+    "file": "redesign-final-390-thinking-.png",
+    "width": 390,
+    "height": 900,
+    "bytes": 51122
+  },
+  {
+    "file": "redesign-final-390-workshops.png",
+    "width": 390,
+    "height": 900,
+    "bytes": 59995
+  },
+  {
+    "file": "redesign-final-about-field.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 130905
+  },
+  {
+    "file": "redesign-final-desktop-formation.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 103153
+  },
+  {
+    "file": "redesign-final-desktop-invitation.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 75980
+  },
+  {
+    "file": "redesign-final-desktop-practice.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 94531
+  },
+  {
+    "file": "redesign-final-desktop-research.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 116186
+  },
+  {
+    "file": "redesign-final-desktop-thinking.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 91688
+  },
+  {
+    "file": "redesign-final-home-full-desktop.png",
+    "width": 1440,
+    "height": 8760,
+    "bytes": 880352
+  },
+  {
+    "file": "redesign-final-home-full-mobile.png",
+    "width": 390,
+    "height": 8926,
+    "bytes": 531448
+  },
+  {
+    "file": "redesign-final-mobile-map.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 39811
+  },
+  {
+    "file": "redesign-home-no-js.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 50338
+  },
+  {
+    "file": "redesign-menu-landscape.png",
+    "width": 844,
+    "height": 390,
+    "bytes": 29059
+  },
+  {
+    "file": "redesign-mobile-about.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 51307
+  },
+  {
+    "file": "redesign-mobile-courses.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 66100
+  },
+  {
+    "file": "redesign-mobile-formation.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 52357
+  },
+  {
+    "file": "redesign-mobile-home.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 56097
+  },
+  {
+    "file": "redesign-mobile-menu.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 34353
+  },
+  {
+    "file": "redesign-mobile-practice.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 54466
+  },
+  {
+    "file": "redesign-mobile-thinking-.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 47497
+  },
+  {
+    "file": "redesign-mobile-workshops.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 61554
+  },
+  {
+    "file": "redesign-reduced-motion.png",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 152186
+  }
+]

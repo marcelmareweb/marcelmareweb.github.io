@@ -2,75 +2,59 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CourseSyllabus from '../components/CourseSyllabus.astro';
 import BookingSection from '../components/BookingSection.astro';
+import PageIntro from '../components/PageIntro.astro';
 
 const pageTitle = 'Applied Strategy & Digital Acumen Courses | The Spotted Ape';
 const pageDescription =
   'Applied learning in human judgement, responsible AI, behavioural and strategic design, and practical decision-making. Explore the Cape Manufacturing solar investment case and custom executive cohorts.';
 
-const anchorLinks = [
-  { number: '01', label: 'The Premise', href: '#premise' },
-  { number: '02', label: 'Why Conventional Strategy Fails', href: '#tension' },
-  { number: '03', label: 'Complete Syllabus', href: '#syllabus' },
-  { number: '04', label: 'Who It Is For & Outcomes', href: '#outcomes' },
-  { number: '05', label: 'Apply / Inquire', href: '#book' },
-];
-
 const courseSpecs = [
   {
     label: 'FLAGSHIP CASE SIMULATION',
     value: 'Should We Invest in Solar? (Cape Manufacturing)',
-    detail: 'Three competing Western Cape rooftop solar proposals (R650k–R990k). One auditable model. One executive recommendation.',
+    detail: 'Compare three proposals and defend a recommendation.',
   },
   {
-    label: 'DURATION & CADENCE',
-    value: '65–80 Min Interactive Case · Custom Multi-Week Labs',
-    detail: 'Self-paced interactive digital case or facilitated in-house cohort sprint calibrated to your organisation’s decisions.',
+    label: 'DURATION',
+    value: '65–80 minute interactive case',
+    detail: 'Self-paced learning with a working spreadsheet model.',
   },
   {
     label: 'TECHNICAL ENVIRONMENT',
-    value: 'Microsoft Excel & Google Sheets + AI Governance',
-    detail: 'Zero prior spreadsheet fluency assumed; builds traceable financial modelling alongside critical managerial scepticism.',
-  },
-  {
-    label: 'CURRICULUM ARCHITECT',
-    value: 'Marcel Maré — The Spotted Ape (Cape Town)',
-    detail: 'Constructively aligned across Foundational, Practical, and Reflexive competence tiers.',
+    value: 'Microsoft Excel & Google Sheets',
+    detail: 'Spreadsheet essentials are included.',
   },
 ];
 
 const tensionContrasts = [
   {
     number: '01',
-    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
-    conventionalTitle: 'Mechanical formulas detached from commercial reality',
-    conventionalCopy:
-      'Participants memorise syntax, copy static templates, or accept AI and spreadsheet outputs at face value—retyping inputs across tabs until nobody can audit where a number came from.',
-    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
-    spottedApeTitle: 'Traceable models anchored to a single source of truth',
-    spottedApeCopy:
-      'Every formula links directly back to source assumptions (Case Data!A3:F17). Learners diagnose broken relative references and build models that an executive or auditor can trace in seconds.',
+    conventionalLabel: 'COMMON PITFALL',
+    conventionalTitle: 'Untraceable inputs',
+    conventionalCopy: 'Retyped inputs obscure the assumptions behind a result.',
+    spottedApeLabel: 'IN THIS CASE',
+    spottedApeTitle: 'Traceable formulas',
+    spottedApeCopy: 'Link calculations to Case Data!A3:F17 and inspect broken references.',
   },
   {
     number: '02',
-    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
-    conventionalTitle: 'Treating a single metric as an automatic decision',
-    conventionalCopy:
-      'Case exercises are rigged so one option wins on every measure—teaching analysts that the spreadsheet makes the choice for them.',
-    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
-    spottedApeTitle: 'Confronting genuine commercial trade-offs',
+    conventionalLabel: 'COMMON PITFALL',
+    conventionalTitle: 'One metric decides',
+    conventionalCopy: 'Payback and long-term value can favour different proposals.',
+    spottedApeLabel: 'IN THIS CASE',
+    spottedApeTitle: 'Competing criteria',
     spottedApeCopy:
-      'Proposal A wins on simple payback (2.92 years). Proposal C wins on 20-year NPV (R2.871m). Proposal B overtakes C if self-consumption drops below ~73.96%. The spreadsheet gives evidence; it does not choose the decision rule.',
+      'A has the shortest payback (2.92 years); C has the highest base-case NPV (R2.871m).',
   },
   {
     number: '03',
-    conventionalLabel: 'CONVENTIONAL TOOL & STRATEGY TRAINING',
-    conventionalTitle: 'Taking vendor claims and annual averages on trust',
-    conventionalCopy:
-      'Supplier projections and ESG assertions are pasted straight into board decks without questioning operational timing or lifecycle boundaries.',
-    spottedApeLabel: 'THE SPOTTED APE APPLIED LEARNING APPROACH',
-    spottedApeTitle: 'Disciplined operational & sustainability scepticism',
+    conventionalLabel: 'COMMON PITFALL',
+    conventionalTitle: 'Claims without evidence',
+    conventionalCopy: 'Annual averages hide when electricity is actually used.',
+    spottedApeLabel: 'IN THIS CASE',
+    spottedApeTitle: 'Operational evidence',
     spottedApeCopy:
-      'Learners demand half-hourly factory load profiles aligned with midday solar generation rather than annual totals, and separate unverified environmental claims until independent lifecycle evidence is produced.',
+      'Check half-hourly load profiles and seek independent evidence for environmental claims.',
   },
 ];
 
@@ -78,48 +62,42 @@ const toolkitResources = [
   {
     code: 'ARTIFACT 01 // .XLSX',
     title: 'Student Workbook (V8)',
-    description:
-      'Five traceable sheets (Start Here, Case Data, Your Model, Test Assumptions, Recommendation) with pre-built 20-year DCF NPV engine.',
+    description: 'Five linked sheets, including a 20-year NPV model.',
     href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx',
     cta: 'Download Student Workbook ↓',
   },
   {
     code: 'ARTIFACT 02 // .PDF',
     title: 'Cape Manufacturing Case Brief',
-    description:
-      'Full commercial context, supplier proposal specifications (60 kWp, 80 kWp, 100 kWp), tariff assumptions, and Financial Director briefing.',
+    description: 'Supplier proposals, tariff assumptions and the Financial Director’s briefing.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf',
     cta: 'Open Case Brief PDF ↗',
   },
   {
     code: 'ARTIFACT 03 // .PDF',
     title: 'Excel & Google Sheets Quick Reference',
-    description:
-      'Side-by-side reference covering cell addressing, cross-sheet syntax, relative ($A8) vs. absolute ($B$4) locking, and currency formatting.',
+    description: 'Cell addresses, cross-sheet formulas, reference locking and currency formatting.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf',
     cta: 'Open Quick Reference PDF ↗',
   },
   {
     code: 'ARTIFACT 04 // .PDF',
     title: 'Formula Troubleshooting Diagnostic',
-    description:
-      'Structured diagnostic card for inspecting copied-reference shifts, percentage formatting errors, and numerator/denominator reversals.',
+    description: 'Check shifted references, percentages and reversed ratios.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf',
     cta: 'Open Diagnostic Card PDF ↗',
   },
   {
     code: 'ARTIFACT 05 // .XLSX',
     title: 'Completed Reference Workbook (V8)',
-    description:
-      'Post-completion benchmark model for Stage 06 (Reflect) self-audit—compare your formula structure and sensitivity table against the reference solution.',
+    description: 'Compare your formulas and sensitivity analysis with the reference solution.',
     href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx',
     cta: 'Download Reference Model ↓',
   },
   {
     code: 'ARTIFACT 06 // RATIONALE',
     title: '5-Minute Reviewer Rationale',
-    description:
-      'Complete pedagogical blueprint mapping constructive alignment, scaffolding, formative checkpoints, and competence rubrics for academic and executive reviewers.',
+    description: 'Learning design, assessment checkpoints and competence criteria.',
     href: 'https://marcelmare.com/dla-course-2/reviewer-rationale.html',
     cta: 'Read Reviewer Rationale ↗',
   },
@@ -128,21 +106,18 @@ const toolkitResources = [
 const audienceProfiles = [
   {
     tag: 'COHORT PROFILE 01',
-    title: 'Commercial Analysts, Trainee Accountants & Emerging Managers',
-    description:
-      'Professionals who build or review spreadsheets and AI-assisted analyses and need to move from mechanical operator to trusted commercial adviser.',
+    title: 'Analysts and emerging managers',
+    description: 'Build, question and explain spreadsheet analyses.',
   },
   {
     tag: 'COHORT PROFILE 02',
-    title: 'Enterprise Finance, Strategy & Operations Teams',
-    description:
-      'Intact organisational teams seeking custom case simulations built around their own capital allocation hurdles, operational risks, and decision rules.',
+    title: 'Finance, strategy and operations teams',
+    description: 'Examine capital allocation, operational risks and investment criteria.',
   },
   {
     tag: 'COHORT PROFILE 03',
-    title: 'University & Executive Education Programmes',
-    description:
-      'Business schools and professional institutes requiring constructively aligned, observable digital-acumen and managerial-judgement curricula.',
+    title: 'Universities and executive education',
+    description: 'Teach analytical judgement through observable work.',
   },
 ];
 
@@ -152,394 +127,339 @@ const outcomesList = [
     tier: 'FOUNDATIONAL & PRACTICAL COMPETENCE',
     title: 'Auditable Financial & Operational Modelling',
     description:
-      'Build traceable multi-sheet models (Your Model!B4:D7) that convert raw operational inputs into comparable financial metrics without hard-coded assumptions.',
+      'Build linked models that translate operational inputs into comparable financial metrics.',
   },
   {
     number: '02',
     tier: 'ANALYTICAL INTERROGATION',
     title: 'Sensitivity & Crossover Stress-Testing',
-    description:
-      'Evaluate conflicting investment criteria (2.92y payback vs. R2.871m 20-year NPV) and isolate the exact operational threshold (~73.96% self-consumption) where rankings flip.',
+    description: 'Find the self-consumption threshold where investment rankings change.',
   },
   {
     number: '03',
     tier: 'PROFESSIONAL SCEPTICISM',
     title: 'Evidence-Based Verification of Claims',
-    description:
-      'Specify granular operational proof (half-hourly load data over annual averages) and independent lifecycle verification before allowing supplier claims to sway capital choices.',
+    description: 'Specify the operational and lifecycle evidence needed to test supplier claims.',
   },
   {
     number: '04',
     tier: 'EXECUTIVE COMMUNICATION & TRANSFER',
     title: '100-Word Decision Briefings & Pattern Transfer',
-    description:
-      'Communicate a qualified recommendation in 100 words or fewer—and transfer the Inputs → Model → Test assumptions → Interpret → Recommend loop to future strategic decisions.',
+    description: 'Write a qualified recommendation in 100 words or fewer.',
   },
 ];
 ---
-
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <!-- Section 01: Course Hero & Prospectus Dossier -->
-  <section id="premise" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="courses-hero-heading">
-    <div class="editorial-container">
-      <div class="mb-8 flex flex-wrap items-center gap-3">
-        <span class="inline-flex items-center gap-2.5 border border-[var(--border-accent)] bg-[var(--bg-elevated)] px-3.5 py-1.5">
-          <span class="size-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
-          <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
-            STRATEGIC EDUCATION // THE SPOTTED APE
-          </span>
-        </span>
-        <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
-          APPLIED LEARNING &amp; DIGITAL ACUMEN
-        </span>
-      </div>
-
-      <div class="grid gap-12 lg:grid-cols-[7fr_5fr] lg:items-start lg:gap-16">
-        <div>
-          <h1 id="courses-hero-heading" class="h1 mb-8 max-w-[16ch] text-[var(--text-primary)]">
-            The spreadsheet provides the evidence. The decisions require <em>your judgement.</em>
-          </h1>
-
-          <div class="space-y-6">
-            <p class="p-lead max-w-[60ch]">
-              Applied learning at The Spotted Ape joins human judgement, critical thinking, responsible AI, behavioural and strategic design, and practical digital capability through realistic organisational challenges.
-            </p>
-            <p class="p-body max-w-[62ch]">
-              In our flagship case simulation, <strong class="font-medium text-[var(--text-primary)]">Should We Invest in Solar?</strong>, you step into the role of a commercial analyst at a South African manufacturing company comparing three competing rooftop solar proposals (<strong class="font-medium text-[var(--text-primary)]">R650,000 to R990,000</strong>). The spreadsheet develops analytical competence; choosing what the evidence supports calls for managerial judgement.
-            </p>
-          </div>
-
-          <div class="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              class="group inline-flex min-h-12 items-center bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
-              href="https://marcelmare.com/dla-course-2/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Enter Interactive Sample Course <span class="ml-2.5 inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">↗</span>
-            </a>
-            <a
-              class="inline-flex min-h-12 items-center border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-6 text-sm font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
-              href="#syllabus"
-            >
-              Inspect 6-Stage Syllabus ↓
-            </a>
-            <a
-              class="inline-flex min-h-12 items-center px-3 text-xs font-medium tracking-wider text-[var(--text-muted)] no-underline transition-colors hover:text-[var(--accent-signal)]"
-              href="#book"
-            >
-              Commission an In-House Cohort →
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Course Specification Dossier -->
-        <aside class="border border-[var(--border-subtle)] bg-[var(--bg-card)] p-7 sm:p-9" aria-label="Course Specification Dossier">
-          <div class="mb-6 flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
-            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
-              PROSPECTUS DOSSIER // DLA-02
-            </span>
-            <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
-              OPEN ACCESS &amp; COHORT
-            </span>
-          </div>
-
-          <div class="divide-y divide-[var(--border-subtle)]">
-            {courseSpecs.map((spec) => (
-              <div class="py-4 first:pt-0 last:pb-0">
-                <p class="technical-label mb-1 text-[10px] tracking-widest text-[var(--accent-signal)]">{spec.label}</p>
-                <p class="font-editorial text-2xl text-[var(--text-primary)]">{spec.value}</p>
-                <p class="mt-1 text-xs leading-5 text-[var(--text-muted)]">{spec.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <div class="mt-6 border-t border-[var(--border-subtle)] pt-5">
-            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
-              TRANSFERABLE DECISION ARCHITECTURE
-            </p>
-            <p class="font-mono text-xs leading-6 text-[var(--text-primary)]">
-              Inputs → Model → Test Assumptions → Interpret → Recommend
-            </p>
-          </div>
-        </aside>
-      </div>
-
-      <!-- 5-Section Anchor Jump Bar -->
-      <nav aria-label="Course page sections" class="mt-16 border-t border-[var(--border-subtle)] pt-8">
-        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--text-muted)]">
-          PROSPECTUS ARCHITECTURE // JUMP TO SECTION
-        </p>
-        <ol class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2 lg:grid-cols-5">
-          {anchorLinks.map((item) => (
-            <li class="bg-[var(--bg-elevated)]">
-              <a
-                href={item.href}
-                class="group flex h-full flex-col justify-between p-4 no-underline transition-colors hover:bg-[var(--bg-card)] sm:p-5"
-              >
-                <span class="technical-label mb-2 text-xs text-[var(--accent-signal)]">{item.number}</span>
-                <span class="text-sm font-medium text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-signal)]">
-                  {item.label}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </nav>
-    </div>
-  </section>
-
-  <!-- Section 02: The Problem with Conventional Strategy & Tool Training -->
-  <section id="tension" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="tension-heading">
-    <div class="editorial-container">
-      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
-        <div>
-          <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
-            02 / WHY CONVENTIONAL TRAINING FAILS
-          </p>
-          <h2 id="tension-heading" class="h2 mb-6 max-w-[15ch] text-[var(--text-primary)]">
-            Technical output is not economic value. And a calculation is not <em>a decision.</em>
-          </h2>
-          <p class="p-lead mb-6 max-w-[50ch]">
-            Most technical courses teach tools in a vacuum. Most strategy courses teach frameworks detached from the messy numbers.
-          </p>
-          <p class="p-body mb-8 max-w-[52ch]">
-            In real organisations, analysts and leaders face conflicting metrics, optimistic supplier assumptions, and time pressure. Our courses are built around authentic commercial dilemmas that move learners from <strong class="font-medium text-[var(--text-primary)]">spreadsheet operator</strong> to <strong class="font-medium text-[var(--text-primary)]">analyst</strong> to <strong class="font-medium text-[var(--text-primary)]">professional adviser</strong>.
-          </p>
-
-          <div class="border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-6">
-            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
-              THE CORE PEDAGOGICAL RULE
-            </p>
-            <p class="font-editorial text-2xl leading-snug text-[var(--text-primary)]">
-              “The spreadsheet gives evidence. It does not choose the decision rule.”
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-6">
-          {tensionContrasts.map((row) => (
-            <article class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)]">
-              <div class="flex items-center justify-between border-b border-[var(--border-subtle)] px-6 py-3.5 sm:px-8">
-                <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">
-                  SHIFT {row.number} // CURRICULUM DESIGN
-                </span>
-                <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
-                  OPERATOR → ADVISER
-                </span>
-              </div>
-              <div class="grid gap-px bg-[var(--border-subtle)] sm:grid-cols-2">
-                <div class="bg-[var(--bg-primary)] p-6 sm:p-7">
-                  <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--text-muted)]">
-                    {row.conventionalLabel}
-                  </p>
-                  <h3 class="font-editorial mb-3 text-xl text-[var(--text-primary)]">
-                    {row.conventionalTitle}
-                  </h3>
-                  <p class="text-sm leading-6 text-[var(--text-muted)]">
-                    {row.conventionalCopy}
-                  </p>
-                </div>
-                <div class="bg-[var(--bg-card)] p-6 sm:p-7">
-                  <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
-                    {row.spottedApeLabel}
-                  </p>
-                  <h3 class="font-editorial mb-3 text-xl text-[var(--text-primary)]">
-                    {row.spottedApeTitle}
-                  </h3>
-                  <p class="text-sm leading-6 text-[var(--text-primary)]">
-                    {row.spottedApeCopy}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 03: Interactive Curriculum & Module Inspector -->
-  <CourseSyllabus />
-
-  <!-- Section 04: Toolkit, Video Briefing, Constructive Alignment & Who Should Attend -->
-  <section id="outcomes" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="outcomes-heading">
-    <div class="editorial-container">
-      <!-- Part 4A: Video Introduction & Downloadable Course Toolkit -->
-      <div class="mb-20 border-b border-[var(--border-subtle)] pb-16">
-        <div class="mb-12 grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-end lg:gap-16">
-          <div>
-            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
-              04 / COURSE TOOLKIT &amp; VIDEO BRIEFING
-            </p>
-            <h2 id="outcomes-heading" class="h2 max-w-[15ch] text-[var(--text-primary)]">
-              Work directly with the <em>case artifacts.</em>
-            </h2>
-          </div>
-          <div>
-            <p class="p-lead mb-3">
-              Every module is backed by an auditable Excel / Google Sheets workbook, diagnostic cards, and a transparent Reviewer Rationale.
-            </p>
-            <p class="p-body max-w-[58ch]">
-              Watch the 1-minute case introduction below, download the V8 Student Workbook, or inspect the 5-minute Reviewer Rationale designed for academic and executive curriculum leads.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-start lg:gap-12">
-          <!-- Video Embed Card -->
-          <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-6 sm:p-7">
-            <div class="mb-4 flex items-center justify-between border-b border-[var(--border-subtle)] pb-3">
-              <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">
-                VIDEO BRIEFING // 01 MIN
-              </span>
-              <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
-                CAPE MANUFACTURING
-              </span>
-            </div>
-            <div class="aspect-video w-full overflow-hidden border border-[var(--border-subtle)] bg-[#0C0D0E]">
-              <iframe
-                class="h-full w-full"
-                src="https://www.youtube.com/embed/nHSyLciFe1k"
-                title="Introduction to Should We Invest in Solar?"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-            <h3 class="font-editorial mt-5 mb-2 text-2xl text-[var(--text-primary)]">
-              Introduction to Should We Invest in Solar?
-            </h3>
-            <p class="mb-6 text-sm leading-6 text-[var(--text-muted)]">
-              How the Cape Manufacturing case study connects spreadsheet modelling, sensitivity analysis, and managerial judgement in a 65–80 minute learning activity.
-            </p>
-            <div class="flex flex-wrap gap-3 border-t border-[var(--border-subtle)] pt-5">
-              <a
-                href="https://thespottedape.com/Courses/solar-investment/learn/"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex min-h-11 items-center bg-[var(--accent-signal)] px-5 text-xs font-semibold text-[var(--text-on-accent)] no-underline transition-colors hover:bg-[var(--accent-signal-hover)]"
-              >
-                Open on The Spotted Ape ↗
-              </a>
-              <a
-                href="https://marcelmare.com/dla-course-2/"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex min-h-11 items-center border border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 text-xs font-medium text-[var(--text-primary)] no-underline transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--accent-signal)]"
-              >
-                Mirror: marcelmare.com/dla-course-2 ↗
-              </a>
-            </div>
-          </div>
-
-          <!-- 6-Artifact Toolkit Grid -->
-          <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)] sm:grid-cols-2">
-            {toolkitResources.map((res) => (
-              <article class="flex flex-col justify-between bg-[var(--bg-elevated)] p-6 transition-colors hover:bg-[var(--bg-card)] sm:p-7">
-                <div>
-                  <span class="technical-label mb-3 block text-[10px] tracking-widest text-[var(--accent-signal)]">
-                    {res.code}
-                  </span>
-                  <h3 class="font-editorial mb-2.5 text-2xl text-[var(--text-primary)]">{res.title}</h3>
-                  <p class="mb-6 text-xs leading-6 text-[var(--text-muted)] sm:text-sm">{res.description}</p>
-                </div>
-                <div class="border-t border-[var(--border-subtle)] pt-4">
-                  <a
-                    href={res.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    class="technical-label inline-flex items-center gap-2 text-[11px] tracking-widest text-[var(--accent-signal)] no-underline transition-colors hover:text-[var(--accent-signal-hover)]"
-                  >
-                    {res.cta}
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <!-- Part 4B: Who Should Attend & Concrete Outcomes -->
-      <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
-        <div class="flex flex-col justify-between">
-          <div>
-            <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">
-              04.2 / WHO IT IS FOR &amp; CAPABILITY OUTCOMES
-            </p>
-            <h3 class="h2 mb-6 max-w-[14ch] text-[var(--text-primary)]">
-              Built for people who must <em>defend their decisions.</em>
-            </h3>
-            <p class="p-body mb-8 max-w-[50ch]">
-              Whether taken as an individual self-paced simulation or commissioned as a custom cohort lab for your strategy, finance, or operations function, every course is constructively aligned around observable work.
-            </p>
-
-            <div class="space-y-4">
-              {audienceProfiles.map((aud) => (
-                <div class="border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 sm:p-6">
-                  <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">{aud.tag}</p>
-                  <h4 class="font-editorial mb-2 text-2xl text-[var(--text-primary)]">{aud.title}</h4>
-                  <p class="text-sm leading-6 text-[var(--text-muted)]">{aud.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Synthesis Bridge with Strategic Decision Workshops -->
-          <div class="mt-8 border border-[var(--border-accent)] bg-[var(--bg-elevated)] p-6 sm:p-7">
-            <p class="technical-label mb-2 text-[10px] tracking-widest text-[var(--accent-signal)]">
-              HOW COURSES &amp; STRATEGIC DECISION WORKSHOPS FIT TOGETHER
-            </p>
-            <p class="mb-4 text-sm leading-6 text-[var(--text-primary)]">
-              <strong>Applied Courses (/courses)</strong> build individual and cohort analytical judgement through realistic case models. <strong>Strategic Decision Workshops (/workshops)</strong>—delivered with our partner Raykis—bring 6–14 decision-makers into a live facilitated room to resolve high-stakes organisational choices.
-            </p>
-            <a
-              href="/workshops"
-              class="technical-label inline-flex items-center gap-2 text-[11px] tracking-widest text-[var(--accent-signal)] no-underline transition-colors hover:text-[var(--accent-signal-hover)]"
-            >
-              Explore Strategic Decision Workshops →
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="mb-6 flex items-end justify-between border-b border-[var(--border-subtle)] pb-4">
-            <p class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">
-              CONSTRUCTIVE ALIGNMENT // FOUR OBSERVABLE OUTCOMES
-            </p>
-            <span class="technical-label text-[11px] tracking-widest text-[var(--accent-signal)]">01 — 04</span>
-          </div>
-
-          <div class="grid gap-px border border-[var(--border-subtle)] bg-[var(--border-subtle)]">
-            {outcomesList.map((outcome) => (
-              <article class="bg-[var(--bg-elevated)] p-6 sm:p-8">
-                <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
-                  <span class="technical-label text-xs font-semibold text-[var(--accent-signal)]">
-                    OUTCOME {outcome.number}
-                  </span>
-                  <span class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]">
-                    {outcome.tier}
-                  </span>
-                </div>
-                <h4 class="font-editorial mb-3 text-2xl text-[var(--text-primary)] sm:text-3xl">
-                  {outcome.title}
-                </h4>
-                <p class="max-w-[58ch] text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
-                  {outcome.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 05: Course Enrollment & In-House Cohort Inquiry -->
-  <BookingSection
-    defaultEngagement="Strategy Course (DLA)"
-    eyebrow="05 / APPLY OR REQUEST AN IN-HOUSE COHORT"
-  />
+<PageIntro eyebrow="Courses / Applied strategy" scale="long" description="A calculation is not a decision. Learn to question the evidence and defend a recommendation." id="premise">
+<Fragment slot="heading">The spreadsheet provides the evidence.<br />The decisions require your judgement.</Fragment>
+<Fragment slot="aside">Flagship case simulation<br />65–80 minutes<br />Excel &amp; Google Sheets</Fragment>
+<nav class="page-nav" aria-label="Course page sections">
+<a href="#syllabus">Explore the curriculum ↓</a>
+<a href="#outcomes">Course artifacts ↓</a>
+<a href="#book">Discuss a cohort ↗</a>
+</nav>
+</PageIntro>
+<section class="course-feature theme-yellow section-y">
+<div class="wrap">
+<p class="meta">Cape Manufacturing / Western Cape</p>
+<div class="course-feature-grid">
+<h2>Should we invest<br />in solar?</h2>
+<div>
+<p class="lead">One case. Three proposals.<br />One decision to defend.</p>
+<a class="button" href="#syllabus">Inspect the case <span aria-hidden="true">↓</span>
+</a>
+</div>
+</div>
+<div class="course-specs">{courseSpecs.map(spec=>
+<div>
+<p class="meta">{spec.label}</p>
+<p>{spec.value}</p>
+<span>{spec.detail}</span>
+</div>)}</div>
+</div>
+</section>
+<section class="section-y" id="tension">
+<div class="wrap">
+<div class="section-top meta">
+<p>01 / What the case tests</p>
+<p>From operator to adviser</p>
+</div>
+<h2 class="section-title" data-reveal>Technical output.<br />Human judgement.</h2>
+<div class="tension-list">{tensionContrasts.map(item=>
+<article class="tension-row">
+<span class="meta">{item.number}</span>
+<div>
+<p class="meta">{item.conventionalLabel}</p>
+<h3>{item.conventionalTitle}.</h3>
+<p>{item.conventionalCopy}</p>
+</div>
+<div>
+<p class="meta">{item.spottedApeLabel}</p>
+<h3>{item.spottedApeTitle}.</h3>
+<p>{item.spottedApeCopy}</p>
+</div>
+</article>)}</div>
+</div>
+</section>
+<CourseSyllabus />
+<section class="section-y" id="outcomes">
+<div class="wrap">
+<div class="section-top meta">
+<p>03 / Course toolkit</p>
+<p>Work with the actual artifacts</p>
+</div>
+<h2 class="section-title" data-reveal>Open the model.<br />Question it.</h2>
+<div class="toolkit-layout">
+<aside class="course-video">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/nHSyLciFe1k" title="Introduction to Should We Invest in Solar?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+</div>
+<h3>Should We Invest in Solar?</h3>
+<p>A one-minute introduction to the investment decision.</p>
+<a class="text-link" href="https://thespottedape.com/Courses/solar-investment/learn/" target="_blank" rel="noreferrer">Open the live course <span aria-hidden="true">↗</span>
+</a>
+<p class="source-note">
+<a href="https://marcelmare.com/dla-course-2/" target="_blank" rel="noreferrer">Alternative course host: marcelmare.com ↗</a>
+</p>
+</aside>
+<div class="resource-list">{toolkitResources.map((res,index)=>
+<a class="resource-row" href={res.href} target="_blank" rel="noreferrer">
+<span class="meta">0{index+1}<br />{res.code.split('//')[1]}</span>
+<div>
+<h3>{res.title}.</h3>
+<p>{res.description}</p>
+<span class="resource-action">{res.cta}</span>
+</div>
+<span class="resource-arrow" aria-hidden="true">↗</span>
+</a>)}</div>
+</div>
+</div>
+</section>
+<section class="section-y theme-grey">
+<div class="wrap">
+<div class="section-top meta">
+<p>04 / People &amp; outcomes</p>
+<p>Learning through observable work</p>
+</div>
+<div class="split-layout">
+<div>
+<h2 class="h2 audience-title">For people who must defend their decisions.</h2>
+<div class="audiences">{audienceProfiles.map(aud=>
+<article>
+<h3>{aud.title}.</h3>
+<p>{aud.description}</p>
+</article>)}</div>
+</div>
+<div class="learning-outcomes">{outcomesList.map(item=>
+<article>
+<span class="meta">{item.number} / Learning outcome</span>
+<h3>{item.title}.</h3>
+<p>{item.description}</p>
+</article>)}</div>
+</div>
+<div class="evidence-foot">
+<p class="lead">A live organisational decision?<br />Bring your alternatives and trade-offs.</p>
+<a class="text-link" href="/workshops">Explore decision workshops <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</section>
+<BookingSection defaultEngagement="Strategy Course (DLA)" eyebrow="05 / Let’s talk" />
 </BaseLayout>
-
+<style>
+.course-feature > .wrap > .meta {
+  margin-bottom: 48px;
+}
+.course-feature-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: end;
+}
+.course-feature h2 {
+  font-size: var(--display-l);
+  max-width: 13ch;
+}
+.course-feature-grid .button {
+  margin-top: 32px;
+}
+.course-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  border-top: 1px solid #0d0b0a66;
+  padding-top: 32px;
+  margin-top: var(--space-lg);
+}
+.course-specs .meta {
+  margin-bottom: 20px;
+}
+.course-specs p:not(.meta) {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  max-width: 24ch;
+}
+.course-specs span {
+  display: block;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 16px;
+  max-width: 32ch;
+}
+.tension-list {
+  margin-top: var(--space-lg);
+}
+.tension-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  gap: 40px;
+  padding-block: 40px;
+  border-top: 1px solid var(--line);
+}
+.tension-row h3 {
+  font-size: var(--heading-4);
+  margin-top: 24px;
+}
+.tension-row div > p:last-child {
+  font-size: 20px;
+  color: #626262;
+  line-height: 1.45;
+  max-width: 38ch;
+  margin-top: 24px;
+}
+.toolkit-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+.video-frame {
+  aspect-ratio: 16/9;
+  background: var(--ink);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.course-video h3 {
+  font-size: 32px;
+  margin-top: 32px;
+}
+.course-video > p:not(.source-note) {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #626262;
+  margin-top: 20px;
+}
+.course-video .text-link {
+  margin-top: 24px;
+}
+.resource-action {
+  display: block;
+  font-size: 13px;
+  margin-top: 16px;
+}
+.audience-title {
+  max-width: 15ch;
+}
+.audiences {
+  margin-top: 48px;
+}
+.audiences article {
+  border-top: 1px solid var(--line);
+  padding-block: 24px;
+}
+.audiences h3 {
+  font-size: 28px;
+  max-width: 26ch;
+}
+.audiences p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 16px;
+  max-width: 38ch;
+  color: #626262;
+}
+.learning-outcomes article {
+  border-top: 1px solid var(--line);
+  padding-block: 32px;
+}
+.learning-outcomes h3 {
+  font-size: 36px;
+  max-width: 24ch;
+  margin-top: 24px;
+}
+.learning-outcomes article > p {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #626262;
+  max-width: 38ch;
+  margin-top: 24px;
+}
+@media (max-width: 1023px) {
+  .course-feature h2 {
+    font-size: 100px;
+  }
+  .course-feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-specs {
+    gap: 24px;
+  }
+  .toolkit-layout {
+    grid-template-columns: 1fr;
+  }
+  .course-video {
+    max-width: 800px;
+  }
+  .tension-row {
+    grid-template-columns: 40px 1fr 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .course-feature h2 {
+    font-size: 64px;
+  }
+  .course-feature-grid {
+    gap: 32px;
+  }
+  .course-specs {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .course-specs p:not(.meta) {
+    font-size: 24px;
+  }
+  .tension-list,
+  .toolkit-layout {
+    margin-top: 48px;
+  }
+  .tension-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .tension-row h3 {
+    font-size: 32px;
+  }
+  .tension-row div > p:last-child {
+    font-size: 18px;
+  }
+  .learning-outcomes h3 {
+    font-size: 30px;
+  }
+  .learning-outcomes article > p {
+    font-size: 18px;
+  }
+  .audience-title {
+    font-size: 44px;
+  }
+}
+</style>

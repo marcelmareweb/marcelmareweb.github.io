@@ -1,0 +1,305 @@
+{
+  "url": "https://www.hugeinc.com/",
+  "title": "Huge.",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://www.hugeinc.com/"
+    },
+    {
+      "text": "Work",
+      "href": "https://www.hugeinc.com/work"
+    },
+    {
+      "text": "Solutions",
+      "href": "https://www.hugeinc.com/solutions"
+    },
+    {
+      "text": "Approach",
+      "href": "https://www.hugeinc.com/approach"
+    },
+    {
+      "text": "Company",
+      "href": "https://www.hugeinc.com/company"
+    },
+    {
+      "text": "Ideas",
+      "href": "https://www.hugeinc.com/ideas"
+    },
+    {
+      "text": "Careers",
+      "href": "https://www.hugeinc.com/careers"
+    },
+    {
+      "text": "Let’s talk",
+      "href": "https://www.hugeinc.com/contact"
+    },
+    {
+      "text": "Huge",
+      "href": "https://www.hugeinc.com/"
+    },
+    {
+      "text": "Work",
+      "href": "https://www.hugeinc.com/work"
+    },
+    {
+      "text": "Solutions",
+      "href": "https://www.hugeinc.com/solutions"
+    },
+    {
+      "text": "Approach",
+      "href": "https://www.hugeinc.com/approach"
+    },
+    {
+      "text": "Company",
+      "href": "https://www.hugeinc.com/company"
+    },
+    {
+      "text": "Ideas",
+      "href": "https://www.hugeinc.com/ideas"
+    },
+    {
+      "text": "Careers",
+      "href": "https://www.hugeinc.com/careers"
+    },
+    {
+      "text": "Let’s talk",
+      "href": "https://www.hugeinc.com/contact"
+    },
+    {
+      "text": "See the work.",
+      "href": "https://www.hugeinc.com/work"
+    },
+    {
+      "text": "Discover our solutions.",
+      "href": "https://www.hugeinc.com/solutions"
+    },
+    {
+      "text": "Check our approach.",
+      "href": "https://www.hugeinc.com/approach"
+    },
+    {
+      "text": "Latest ideas & news.",
+      "href": "https://www.hugeinc.com/ideas"
+    },
+    {
+      "text": "This is Huge.",
+      "href": "https://www.hugeinc.com/company"
+    },
+    {
+      "text": "Want to join us?",
+      "href": "https://www.hugeinc.com/careers"
+    },
+    {
+      "text": "NBCU.\n\nEnabling friction-free discovery of Olympics scheduling with AI.",
+      "href": "https://www.hugeinc.com/case-study/nbcu"
+    },
+    {
+      "text": "CoinTracker.\n\nCrypto tax reporting, made effortless.",
+      "href": "https://www.hugeinc.com/case-study/cointracker"
+    },
+    {
+      "text": "Big Green Egg.\n\nEnabling a blend of commerce and cooking for a luxury BBQ brand.",
+      "href": "https://www.hugeinc.com/case-study/big-green-egg"
+    },
+    {
+      "text": "Darling Ingredients.\n\nReimagining a brand to drive investor and talent appeal.",
+      "href": "https://www.hugeinc.com/case-study/darling-ingredients"
+    },
+    {
+      "text": "Google.\n\nA 14+ year partnership driving their biggest bets.",
+      "href": "https://www.hugeinc.com/case-study/google"
+    },
+    {
+      "text": "01\nBrand strategy & design.\n\nBrands that move with culture.",
+      "href": "https://www.hugeinc.com/solutions/brand-strategy-and-design"
+    },
+    {
+      "text": "02\nMarketing & content.\n\nInsight and creative that cut through.",
+      "href": "https://www.hugeinc.com/solutions/marketing-and-content"
+    },
+    {
+      "text": "03\nProducts & platforms.\n\nFrom idea to adoption, fast.",
+      "href": "https://www.hugeinc.com/solutions/products-and-platforms"
+    },
+    {
+      "text": "04\nComposable commerce.\n\nCommerce built around your business.",
+      "href": "https://www.hugeinc.com/solutions/composable-commerce"
+    },
+    {
+      "text": "05\nCustomer experience.\n\nExperiences that meet every moment.",
+      "href": "https://www.hugeinc.com/solutions/customer-experience"
+    },
+    {
+      "text": "06\nAI activation.\n\nTransforming how teams work, today.",
+      "href": "https://www.hugeinc.com/solutions/ai-activation"
+    },
+    {
+      "text": "",
+      "href": "https://www.hugeinc.com/ideas/agentic-shopping-webinar"
+    },
+    {
+      "text": "",
+      "href": "https://www.hugeinc.com/work"
+    },
+    {
+      "text": "",
+      "href": "https://www.hugeinc.com/contact"
+    },
+    {
+      "text": "See our privacy policy",
+      "href": "https://www.hugeinc.com/privacy"
+    },
+    {
+      "text": "Work.",
+      "href": "https://www.hugeinc.com/work"
+    },
+    {
+      "text": "Solutions.",
+      "href": "https://www.hugeinc.com/solutions"
+    },
+    {
+      "text": "Approach.",
+      "href": "https://www.hugeinc.com/approach"
+    },
+    {
+      "text": "Company.",
+      "href": "https://www.hugeinc.com/company"
+    },
+    {
+      "text": "Ideas.",
+      "href": "https://www.hugeinc.com/ideas"
+    },
+    {
+      "text": "Newsletter.",
+      "href": "https://www.hugeinc.com/newsletter"
+    },
+    {
+      "text": "Join us.",
+      "href": "https://www.hugeinc.com/careers"
+    },
+    {
+      "text": "Contact us.",
+      "href": "https://www.hugeinc.com/contact"
+    },
+    {
+      "text": "Linkedin.",
+      "href": "https://www.linkedin.com/company/hugeinc"
+    },
+    {
+      "text": "Instagram.",
+      "href": "https://www.instagram.com/hugeinc/"
+    },
+    {
+      "text": "X.",
+      "href": "https://x.com/hugeinc"
+    },
+    {
+      "text": "Legal notices.",
+      "href": "https://www.hugeinc.com/privacy"
+    },
+    {
+      "text": "Privacy.",
+      "href": "https://www.hugeinc.com/privacy"
+    },
+    {
+      "text": "More information",
+      "href": "https://cookiepedia.co.uk/giving-consent-to-cookies"
+    },
+    {
+      "text": "",
+      "href": "https://www.onetrust.com/products/cookie-consent/"
+    }
+  ],
+  "fonts": [
+    {
+      "family": "matter",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "matter",
+      "weight": "500",
+      "status": "loaded"
+    },
+    {
+      "family": "matter",
+      "weight": "600",
+      "status": "loaded"
+    },
+    {
+      "family": "matter Fallback",
+      "weight": "normal",
+      "status": "unloaded"
+    }
+  ],
+  "scripts": [
+    "https://j.6sc.co/6si.min.js",
+    "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+    "https://www.googletagmanager.com/gtag/js?id=AW-10792246425&cx=c&gtm=4e6ar1",
+    "https://munchkin.marketo.net/165/munchkin.js",
+    "https://j.6sc.co/6si.min.js",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-NWF6WT",
+    "https://www.hugeinc.com/_next/static/chunks/3wjkd7x0y2arl.js",
+    "https://www.hugeinc.com/_next/static/chunks/2gxuz2fvi40hl.js",
+    "https://www.hugeinc.com/_next/static/chunks/44vzygh-8--r-.js",
+    "https://www.hugeinc.com/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+    "https://www.hugeinc.com/_next/static/chunks/1aa9n2-jgkz85.js",
+    "https://www.hugeinc.com/_next/static/chunks/3ytems-0ze896.js",
+    "https://www.hugeinc.com/_next/static/chunks/3nr2ebb6e7g8p.js",
+    "https://www.hugeinc.com/_next/static/chunks/2p6nouz_2hm2e.js",
+    "https://www.hugeinc.com/_next/static/chunks/3aa1px1ow5rp8.js",
+    "https://www.hugeinc.com/_next/static/chunks/1f-1ulm372ici.js",
+    "https://www.hugeinc.com/_next/static/chunks/3g2ib3gq5rmyw.js",
+    "https://www.hugeinc.com/_next/static/chunks/3x3uff_-hauom.js",
+    "https://www.hugeinc.com/_next/static/chunks/2iuon7aqn2-4w.js",
+    "https://www.hugeinc.com/_next/static/chunks/0wev7kzmlp6ry.js",
+    "https://www.hugeinc.com/_next/static/chunks/1rurir4_qk9rk.js",
+    "https://www.hugeinc.com/_next/static/chunks/1h2_a508snhgr.js",
+    "https://www.hugeinc.com/_next/static/chunks/2l04kaxhsb4sp.js",
+    "https://cdn.cookielaw.org/consent/0195d8bd-d20e-783a-a06b-d1f1fd5c43b3/OtAutoBlock.js",
+    "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+    "https://www.hugeinc.com/scripts/onetrust.js",
+    "https://www.hugeinc.com/_next/static/chunks/0cz1d0mv5g_q7.js",
+    "https://munchkin.marketo.net/munchkin.js",
+    "https://www.hugeinc.com/_vercel/insights/script.js",
+    "https://www.hugeinc.com/_vercel/speed-insights/script.js",
+    "https://cdn.cookielaw.org/scripttemplates/202510.1.0/otBannerSdk.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js",
+    "https://j.6sc.co/j/d018119d-97ac-4b25-a721-2fd46818ca2b.js",
+    "https://munchkin.marketo.net/munchkin.js",
+    "https://www.hugeinc.com/_next/static/chunks/4271bqkk8cb4e.js",
+    "https://www.hugeinc.com/_next/static/chunks/3ncu6y0acp0c3.js",
+    "https://www.hugeinc.com/_next/static/chunks/2lok4l1dtaes_.js",
+    "https://www.hugeinc.com/_next/static/chunks/0oxifaptk01zj.js",
+    "https://www.hugeinc.com/_next/static/chunks/2-nhcbmlksyyl.js",
+    "https://www.hugeinc.com/_next/static/chunks/082ahkuj4-7om.js",
+    "https://www.hugeinc.com/_next/static/chunks/0sqq82oivvzyl.js",
+    "https://www.hugeinc.com/_next/static/chunks/34gzmoy64btkc.js",
+    "https://www.hugeinc.com/_next/static/chunks/0myo3ek5phss-.js",
+    "https://www.hugeinc.com/_next/static/chunks/0s5nxctp08-v7.js",
+    "https://www.hugeinc.com/_next/static/chunks/0_xgqs_sg1xot.js",
+    "https://www.hugeinc.com/_next/static/chunks/17jgc65no27l2.js",
+    "https://www.hugeinc.com/_next/static/chunks/0cz1d0mv5g_q7.js",
+    "https://www.hugeinc.com/scripts/munchkin",
+    "https://j.6sc.co/j/d018119d-97ac-4b25-a721-2fd46818ca2b.js"
+  ],
+  "styles": [
+    "https://www.hugeinc.com/_next/static/chunks/0j_ib3500u09c.css",
+    "https://www.hugeinc.com/_next/static/chunks/28qss66z7zmhj.css",
+    "https://www.hugeinc.com/_next/static/chunks/2r6mmf3cq5xqa.css",
+    "https://www.hugeinc.com/_next/static/chunks/2ivx63wwbru-y.css",
+    "https://www.hugeinc.com/_next/static/chunks/32o_6_23vaun0.css",
+    "https://www.hugeinc.com/_next/static/chunks/3hb2ebgtw57t5.css",
+    "https://www.hugeinc.com/_next/static/chunks/2z1nuowl9t-8t.css",
+    "https://www.hugeinc.com/_next/static/chunks/2txe4ji8trhv1.css",
+    "https://www.hugeinc.com/_next/static/chunks/42_w6i_9fwe3w.css",
+    "https://www.hugeinc.com/_next/static/chunks/2wnlm1-2a2mlc.css",
+    null,
+    null
+  ]
+}

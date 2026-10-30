@@ -1,408 +1,351 @@
 ---
-import { getCollection } from 'astro:content';
-
 interface Props {
   defaultEngagement?: string;
   eyebrow?: string;
 }
-
-const {
-  defaultEngagement = '',
-  eyebrow = '08 / START A CONVERSATION',
-} = Astro.props;
-
-const stages = (await getCollection('stages')).sort((first, second) => first.data.order - second.data.order);
-const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
-const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
-
+const { defaultEngagement = '', eyebrow = 'Let’s talk' } = Astro.props;
 const engagements = [
   'Strategic Decision Workshop',
   'Strategy Course (DLA)',
   'Behavioural Design & Research',
-  'Human Judgement in AI Governance',
-  'The !Kharos Masterclass Series',
+  'Human–AI Decision Design',
   'Executive Advisory Conversation',
 ];
+const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 ---
-
-<section id="book" class="section-y scroll-mt-24 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]" aria-labelledby="booking-title">
-  <div class="editorial-container">
-    <div class="mb-14 grid gap-6 lg:grid-cols-[7fr_5fr] lg:items-end lg:gap-16">
-      <div>
-        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)] sm:text-xs">{eyebrow}</p>
-        <h2 id="booking-title" class="h2 max-w-[18ch] text-[var(--text-primary)]">
-          Steady hands when it matters. <em>Then we get out of the way.</em>
-        </h2>
-      </div>
-      <div>
-        <p class="p-body max-w-[56ch]">
-          Curiosity first. We do not arrive with a predetermined menu of programmes. We begin with a candid conversation about your circumstances, the decisions ahead, and where your team needs formation.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid border-y border-[var(--border-subtle)] lg:grid-cols-[0.85fr_1.15fr]">
-      <div class="py-8 sm:py-10 lg:border-r lg:border-[var(--border-subtle)] lg:pr-10">
-        <p class="technical-label mb-4 text-[11px] tracking-widest text-[var(--accent-signal)]">DIRECT PRINCIPAL CONNECT</p>
-        <a class="font-editorial text-2xl text-[var(--text-primary)] underline decoration-[var(--accent-ochre)] underline-offset-4 transition-colors hover:text-[var(--accent-signal)] sm:text-3xl" href="mailto:hello@thespottedape.com">
-          hello@thespottedape.com
-        </a>
-        <p class="technical-label mt-6 inline-flex items-center gap-3 text-[11px] tracking-widest text-[var(--text-muted)]">
-          <span class="h-2 w-2 rounded-full bg-[var(--accent-signal)]" aria-hidden="true"></span>
-          MARCEL MARÉ • CAPE TOWN, SOUTH AFRICA
-        </p>
-
-        <div class="mt-10 border-t border-[var(--border-subtle)] pt-7">
-          <h3 class="font-editorial mb-6 text-2xl leading-tight text-[var(--text-primary)] sm:text-3xl">What happens in an initial conversation</h3>
-          <ul class="m-0 flex list-none flex-col gap-5 p-0">
-            <li class="flex gap-4 text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
-              <span class="technical-label pt-1 text-[11px] text-[var(--accent-signal)]">01</span>
-              A candid look at the competing priorities, strategic choices, or technological pressures your team is navigating.
-            </li>
-            <li class="flex gap-4 text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
-              <span class="technical-label pt-1 text-[11px] text-[var(--accent-signal)]">02</span>
-              Clarity on where human judgement, behavioural insight, or a Strategic Decision Workshop will create the most leverage.
-            </li>
-            <li class="flex gap-4 text-sm leading-6 text-[var(--text-muted)] sm:text-base sm:leading-7">
-              <span class="technical-label pt-1 text-[11px] text-[var(--accent-signal)]">03</span>
-              A straightforward recommendation on how to proceed—and how we will step aside once your team has steady hands on the wheel.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-[var(--border-subtle)] py-8 sm:py-10 lg:border-l-0 lg:border-t-0 lg:pl-10">
-        <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="technical-label mb-3 text-[11px] tracking-widest text-[var(--accent-signal)]">INITIATE BRIEFING</p>
-            <h3 class="font-editorial text-3xl text-[var(--text-primary)]">Tell us what you are navigating.</h3>
-          </div>
-          <span class="technical-label text-[11px] tracking-widest text-[var(--text-muted)]">DIRECT INQUIRY</span>
-        </div>
-
-        <form
-          class="grid gap-x-5 gap-y-5 sm:grid-cols-2"
-          action="https://formsubmit.co/hello@thespottedape.com"
-          method="POST"
-          data-inquiry-form
-          data-web3forms-key={web3FormsKey}
-          data-endpoint={inquiryEndpoint}
-        >
-          <!-- Zero-Captcha Honeypot Field -->
-          <div class="sr-only" aria-hidden="true">
-            <label for="inquiry-botcheck">Do not fill this out if you are human</label>
-            <input type="text" id="inquiry-botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
-          </div>
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-name">Name <span aria-hidden="true">*</span></label>
-            <input class="inquiry-field" id="inquiry-name" name="name" autocomplete="name" required />
-          </div>
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-email">Work Email <span aria-hidden="true">*</span></label>
-            <input class="inquiry-field" id="inquiry-email" name="email" type="email" autocomplete="email" placeholder="you@organisation.com" required />
-          </div>
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-role-organization">Role &amp; Organization <span aria-hidden="true">*</span></label>
-            <input class="inquiry-field" id="inquiry-role-organization" name="roleOrganization" autocomplete="organization-title" required />
-          </div>
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-team-size">Team Size</label>
-            <select class="inquiry-field" id="inquiry-team-size" name="teamSize">
-              <option value="">Select team size</option>
-              <option>1–10</option>
-              <option>11–50</option>
-              <option>50+</option>
-            </select>
-          </div>
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-engagement">Target Focus <span aria-hidden="true">*</span></label>
-            <select class="inquiry-field" id="inquiry-engagement" name="engagement" required>
-              <option value="">Select an area of focus</option>
-              {engagements.map((engagement) => (
-                <option value={engagement} selected={engagement === defaultEngagement}>{engagement}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="booking-stage-select">Target Maturity Stage</label>
-            <select class="inquiry-field" id="booking-stage-select" name="targetStage">
-              <option value="">Not sure yet</option>
-              {stages.map(({ data }) => (
-                <option value={data.stageNumber}>{data.stageNumber} — {data.title} / {data.automationLevel}</option>
-              ))}
-            </select>
-          </div>
-          <div class="sm:col-span-2" data-stage-status-wrapper>
-            <p class="text-xs text-[var(--accent-signal)] empty:hidden" aria-live="polite" data-stage-selection-status></p>
-          </div>
-          <div class="sm:col-span-2">
-            <label class="mb-2 block text-xs font-semibold text-[var(--text-primary)]" for="inquiry-context">Primary Constraint / Context <span aria-hidden="true">*</span></label>
-            <textarea class="inquiry-field min-h-32 resize-y py-3" id="inquiry-context" name="context" rows="4" required></textarea>
-          </div>
-          <div class="sm:col-span-2">
-            <button class="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 bg-[var(--accent-signal)] px-7 text-sm font-semibold text-[var(--text-on-accent)] transition-colors hover:bg-[var(--accent-signal-hover)] sm:w-auto" type="submit" data-submit-button>
-              Send Executive Inquiry <span aria-hidden="true">→</span>
-            </button>
-
-            <div
-              class="mt-5 border-l-2 border-[var(--accent-signal)] bg-[var(--bg-elevated)] p-5"
-              data-inquiry-confirmation
-              hidden
-            >
-              <p class="technical-label mb-1.5 text-[10px] tracking-widest text-[var(--accent-signal)]">
-                BRIEFING RECEIVED // THE SPOTTED APE
-              </p>
-              <p class="font-editorial text-2xl text-[var(--text-primary)]">
-                Thank you. Your inquiry has been delivered directly to Marcel Maré.
-              </p>
-              <p class="mt-1.5 text-xs leading-5 text-[var(--text-muted)]" data-inquiry-confirmation-detail>
-                We review every briefing personally and will respond to your work email shortly.
-              </p>
-            </div>
-
-            <p class="mt-4 text-xs leading-5 text-[var(--text-muted)]" role="status" aria-live="polite" data-inquiry-status></p>
-            <a class="mt-2 hidden inline-block text-sm font-semibold text-[var(--accent-signal)] underline underline-offset-4" href="mailto:hello@thespottedape.com" data-email-fallback>
-              Or send via email to hello@thespottedape.com →
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+<section id="book" class="booking-section section-y theme-grey" aria-labelledby="booking-title">
+<div class="wrap">
+<div class="section-top meta">
+<p>{eyebrow}</p>
+<p>Start with the decision</p>
+</div>
+<div class="booking-layout">
+<div class="booking-copy">
+<h2 id="booking-title">What does your team need to decide?</h2>
+<a class="booking-email" href="mailto:hello@thespottedape.com">hello@thespottedape.com ↗</a>
+<p class="meta">Marcel Maré / Cape Town, South Africa</p>
+<p class="lead">Bring the alternatives, the assumptions and the difficult questions.</p>
+</div>
+<form class="inquiry-form" action="https://formsubmit.co/hello@thespottedape.com" method="POST" data-inquiry-form data-web3forms-key={web3FormsKey} data-endpoint={inquiryEndpoint}>
+<div class="sr-only" aria-hidden="true">
+<label for="inquiry-botcheck">Leave this blank</label>
+<input id="inquiry-botcheck" type="text" name="botcheck" tabindex="-1" autocomplete="off" />
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+</div>
+<input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_template" value="table" />
+<input type="hidden" name="courseModule" data-course-module-value />
+<div>
+<label for="inquiry-name">Name</label>
+<input class="inquiry-field" id="inquiry-name" name="name" autocomplete="name" required />
+</div>
+<div>
+<label for="inquiry-email">Work email</label>
+<input class="inquiry-field" id="inquiry-email" name="email" type="email" autocomplete="email" required />
+</div>
+<div class="form-wide">
+<label for="inquiry-role-organization">Role &amp; organisation</label>
+<input class="inquiry-field" id="inquiry-role-organization" name="roleOrganization" autocomplete="organization" required />
+</div>
+<div>
+<label for="inquiry-engagement">Area of interest</label>
+<select class="inquiry-field" id="inquiry-engagement" name="engagement" required>
+<option value="">Choose an area</option>{engagements.map(item=>
+<option value={item} selected={item===defaultEngagement}>{item}</option>)}</select>
+</div>
+<div>
+<label for="inquiry-team-size">Team size <span>(optional)</span>
+</label>
+<select class="inquiry-field" id="inquiry-team-size" name="teamSize">
+<option value="">Choose team size</option>
+<option>1–10</option>
+<option>11–50</option>
+<option>50+</option>
+</select>
+</div>
+<p class="form-wide module-context" data-module-status hidden>
+</p>
+<div class="form-wide">
+<label for="inquiry-context">What needs deciding?</label>
+<textarea class="inquiry-field" id="inquiry-context" name="context" rows="5" required>
+</textarea>
+</div>
+<div class="form-wide">
+<button class="button" type="submit" data-submit-button>Send enquiry <span aria-hidden="true">↗</span>
+</button>
+<p class="form-note">We’ll use these details to respond to your enquiry. <a href="/privacy">Privacy policy</a>.</p>
+<p class="inquiry-status" role="status" aria-live="polite" data-inquiry-status>
+</p>
+<div class="inquiry-confirmation" data-inquiry-confirmation hidden>
+<h3>Thank you.</h3>
+<p>Your enquiry has been submitted. We’ll reply to the email address you provided.</p>
+</div>
+<a class="text-link" href="mailto:hello@thespottedape.com" data-email-fallback hidden>Send your enquiry by email ↗</a>
+</div>
+</form>
+</div>
+</div>
 </section>
-
 <script>
-  const inquiryForm = document.querySelector<HTMLFormElement>('[data-inquiry-form]');
-  const inquiryStatus = document.querySelector<HTMLElement>('[data-inquiry-status]');
-  const inquiryConfirmation = document.querySelector<HTMLElement>('[data-inquiry-confirmation]');
-  const inquiryConfirmationDetail = document.querySelector<HTMLElement>('[data-inquiry-confirmation-detail]');
-  const emailFallback = document.querySelector<HTMLAnchorElement>('[data-email-fallback]');
-  const submitButton = document.querySelector<HTMLButtonElement>('[data-submit-button]');
-  const engagementSelect = document.querySelector<HTMLSelectElement>('#inquiry-engagement');
-  const maturitySelect = document.querySelector<HTMLSelectElement>('#booking-stage-select');
-  const stageSelectionStatus = document.querySelector<HTMLElement>('[data-stage-selection-status]');
-
-  const applyStageSelection = (stageNumber: string, stageTitle?: string) => {
-    if (!maturitySelect) return;
-    const selectedOption = Array.from(maturitySelect.options).find((option) => option.value === stageNumber);
-    if (!selectedOption) return;
-
-    maturitySelect.value = stageNumber;
-    maturitySelect.dispatchEvent(new Event('change', { bubbles: true }));
-    if (stageSelectionStatus) {
-      const label = stageTitle ?? selectedOption.textContent?.trim() ?? '';
-      stageSelectionStatus.textContent = `Stage ${stageNumber} (${label}) pre-selected for your workshop inquiry.`;
-    }
+const form = document.querySelector<HTMLFormElement>('[data-inquiry-form]');
+if (form) {
+  const status = form.querySelector<HTMLElement>('[data-inquiry-status]')!;
+  const confirmation = form.querySelector<HTMLElement>('[data-inquiry-confirmation]')!;
+  const fallback = form.querySelector<HTMLAnchorElement>('[data-email-fallback]')!;
+  const submit = form.querySelector<HTMLButtonElement>('[data-submit-button]')!;
+  const engagement = form.querySelector<HTMLSelectElement>('#inquiry-engagement')!;
+  const moduleValue = form.querySelector<HTMLInputElement>('[data-course-module-value]')!;
+  const moduleStatus = form.querySelector<HTMLElement>('[data-module-status]')!;
+  const selectModule = (number: string, title = '') => {
+    if (!/^0[1-6]$/.test(number)) return;
+    moduleValue.value = number;
+    engagement.value = 'Strategy Course (DLA)';
+    moduleStatus.hidden = false;
+    moduleStatus.textContent = `Course module ${number}${title ? ` — ${title}` : ''} selected for your cohort enquiry.`;
   };
-
-  // Support URL query parameters (?stage=01&focus=workshops or ?module=01&focus=course)
-  const params = new URLSearchParams(window.location.search);
-  const queryStage = params.get('stage');
-  const queryModule = params.get('module');
-  const queryFocus = params.get('focus');
-  if ((queryFocus === 'workshops' || queryFocus === 'raykis') && engagementSelect) {
-    engagementSelect.value = 'Strategic Decision Workshop';
-  } else if (queryFocus === 'course' && engagementSelect) {
-    engagementSelect.value = 'Strategy Course (DLA)';
-  }
-  if (queryStage) {
-    applyStageSelection(queryStage.padStart(2, '0'));
-  }
-  if (queryModule) {
-    const modNum = queryModule.padStart(2, '0');
-    if (engagementSelect) engagementSelect.value = 'Strategy Course (DLA)';
-    if (stageSelectionStatus) {
-      stageSelectionStatus.textContent = `Course Module ${modNum} pre-selected for your cohort inquiry.`;
-    }
-  }
-
-  window.addEventListener('select-stage', (event) => {
-    if (!(event instanceof CustomEvent)) return;
-    const stageNumber = String(event.detail?.stageNumber ?? '');
-    const stageTitle = event.detail?.stageTitle ? String(event.detail.stageTitle) : undefined;
-    if (engagementSelect && !engagementSelect.value) {
-      engagementSelect.value = 'Strategic Decision Workshop';
-    }
-    applyStageSelection(stageNumber, stageTitle);
-  });
-
+  const params = new URLSearchParams(location.search);
+  const moduleParam = params.get('module');
+  if (moduleParam) selectModule(moduleParam.padStart(2, '0'));
+  if (params.get('focus') === 'workshops') engagement.value = 'Strategic Decision Workshop';
   window.addEventListener('select-course-module', (event) => {
-    if (!(event instanceof CustomEvent)) return;
-    const moduleNumber = String(event.detail?.moduleNumber ?? '');
-    const moduleTitle = event.detail?.moduleTitle ? String(event.detail.moduleTitle) : '';
-    if (engagementSelect) {
-      engagementSelect.value = 'Strategy Course (DLA)';
-    }
-    if (stageSelectionStatus) {
-      stageSelectionStatus.textContent = `Course Module ${moduleNumber} (${moduleTitle}) pre-selected for your cohort inquiry.`;
-    }
+    if (event instanceof CustomEvent)
+      selectModule(
+        String(event.detail?.moduleNumber ?? ''),
+        String(event.detail?.moduleTitle ?? ''),
+      );
   });
-
-  const buildStructuredPayload = (formData: FormData) => {
-    const clean = (key: string, fallback = 'Not specified') => {
-      const raw = String(formData.get(key) ?? '').trim();
-      return raw.length > 0 ? raw : fallback;
-    };
-    const name = clean('name');
-    const email = clean('email');
-    const roleOrganization = clean('roleOrganization');
-    const teamSize = clean('teamSize');
-    const engagement = clean('engagement');
-    const targetStage = clean('targetStage');
-    const context = clean('context');
-    const subject = `New Spotted Ape Inquiry — ${engagement} from ${name}`;
-
-    return {
-      subject,
-      _subject: subject,
-      from_name: 'The Spotted Ape Website',
-      replyto: email,
-      _replyto: email,
-      name,
-      email,
-      roleOrganization,
-      teamSize,
-      engagement,
-      targetStage,
-      pageUrl: window.location.href,
-      context,
-    };
-  };
-
-  const prepareFallbackLink = (formData: FormData) => {
-    const payload = buildStructuredPayload(formData);
-    const message = [
-      'EXECUTIVE BRIEFING INQUIRY — THE SPOTTED APE',
-      '--------------------------------------------',
-      `Name: ${payload.name}`,
-      `Work Email: ${payload.email}`,
-      `Role & Organization: ${payload.roleOrganization}`,
-      `Team Size: ${payload.teamSize}`,
-      `Target Focus: ${payload.engagement}`,
-      `Target Maturity Stage: ${payload.targetStage}`,
-      `Source Page: ${payload.pageUrl}`,
-      '',
-      'Primary Constraint / Context:',
-      payload.context,
-    ].join('\n');
-
-    if (emailFallback) {
-      emailFallback.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(payload.subject)}&body=${encodeURIComponent(message)}`;
-      emailFallback.classList.remove('hidden');
-    }
-  };
-
-  inquiryForm?.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!inquiryForm.reportValidity()) return;
-
-    const formData = new FormData(inquiryForm);
-
-    // Silent honeypot check for automated bots
-    const botcheck = String(formData.get('botcheck') ?? '').trim();
-    const honey = String(formData.get('_honey') ?? '').trim();
-    if (botcheck.length > 0 || honey.length > 0) {
-      if (inquiryConfirmation) inquiryConfirmation.hidden = false;
-      if (inquiryStatus) inquiryStatus.textContent = 'Thank you. Your inquiry has been received.';
-      inquiryForm.reset();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const clean = (key: string) => String(data.get(key) ?? '').trim();
+    if (clean('botcheck') || clean('_honey')) {
+      status.textContent = 'Thank you. Your enquiry has been received.';
       return;
     }
-
-    const web3FormsKey = (inquiryForm.dataset.web3formsKey ?? '').trim();
-    const customEndpoint = (inquiryForm.dataset.endpoint ?? '').trim();
-
-    // Priority: 1. Web3Forms (if key set) -> 2. Custom Endpoint (if set) -> 3. FormSubmit AJAX direct to hello@thespottedape.com
-    const targetUrl = web3FormsKey
+    const payload = {
+      name: clean('name'),
+      email: clean('email'),
+      roleOrganization: clean('roleOrganization'),
+      teamSize: clean('teamSize'),
+      engagement: clean('engagement'),
+      courseModule: clean('courseModule'),
+      context: clean('context'),
+      pageUrl: location.href,
+    };
+    const subject = `The Spotted Ape enquiry — ${payload.engagement}`;
+    const emailBody = [
+      `Name: ${payload.name}`,
+      `Email: ${payload.email}`,
+      `Role & organisation: ${payload.roleOrganization}`,
+      `Team size: ${payload.teamSize || 'Not specified'}`,
+      `Area: ${payload.engagement}`,
+      payload.courseModule ? `Course module: ${payload.courseModule}` : '',
+      '',
+      payload.context,
+    ]
+      .filter(Boolean)
+      .join('\n');
+    fallback.href = `mailto:hello@thespottedape.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const key = form.dataset.web3formsKey?.trim();
+    const endpoint = key
       ? 'https://api.web3forms.com/submit'
-      : customEndpoint || 'https://formsubmit.co/ajax/hello@thespottedape.com';
-
-    const payload = buildStructuredPayload(formData);
-    const requestBody = web3FormsKey
-      ? { access_key: web3FormsKey, botcheck: '', ...payload }
-      : { _captcha: 'false', _template: 'table', _honey: '', ...payload };
-
-    if (inquiryConfirmation) inquiryConfirmation.hidden = true;
-    if (emailFallback) emailFallback.classList.add('hidden');
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending inquiry…';
-    }
-    if (inquiryStatus) inquiryStatus.textContent = 'Transmitting your briefing securely…';
-
+      : form.dataset.endpoint?.trim() || 'https://formsubmit.co/ajax/hello@thespottedape.com';
+    const body = {
+      ...payload,
+      subject,
+      _subject: subject,
+      replyto: payload.email,
+      _replyto: payload.email,
+      from_name: 'The Spotted Ape Website',
+      ...(key
+        ? { access_key: key, botcheck: '' }
+        : { _captcha: 'false', _template: 'table', _honey: '' }),
+    };
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    form.setAttribute('aria-busy', 'true');
+    status.textContent = 'Sending your enquiry…';
+    confirmation.hidden = true;
+    fallback.hidden = true;
     try {
-      const response = await fetch(targetUrl, {
+      const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody),
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
       });
-
       const result = await response.json().catch(() => null);
-      const isFailure =
+      if (
         !response.ok ||
-        (result && (result.success === false || result.success === 'false'));
-
-      if (isFailure) {
-        const providerMsg = result?.message ? String(result.message) : `HTTP ${response.status}`;
-        throw new Error(providerMsg);
-      }
-
-      if (inquiryConfirmation) inquiryConfirmation.hidden = false;
-      if (inquiryConfirmationDetail && result?.message && String(result.message).toLowerCase().includes('activate')) {
-        inquiryConfirmationDetail.textContent =
-          'First-time setup: Please check hello@thespottedape.com and click the one-time activation link to enable instant delivery.';
-      }
-      if (inquiryStatus) {
-        inquiryStatus.textContent = 'Thank you. Your inquiry has been delivered to hello@thespottedape.com.';
-      }
-      inquiryForm.reset();
-      if (stageSelectionStatus) stageSelectionStatus.textContent = '';
-    } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unable to reach form server.';
-      if (inquiryStatus) {
-        inquiryStatus.textContent = `Could not complete direct submission (${errorMessage}). You can retry or use the direct email link below.`;
-      }
-      prepareFallbackLink(formData);
+        result?.success === false ||
+        result?.success === 'false' ||
+        /activate/i.test(String(result?.message ?? ''))
+      )
+        throw new Error('Delivery unavailable');
+      form.reset();
+      moduleValue.value = '';
+      moduleStatus.hidden = true;
+      confirmation.hidden = false;
+      status.textContent = 'Enquiry submitted.';
+    } catch {
+      status.textContent =
+        'We couldn’t send your enquiry. Please try again or use the email link below. Your details are still here.';
+      fallback.hidden = false;
     } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = 'Send Executive Inquiry <span aria-hidden="true">→</span>';
-      }
+      submit.disabled = false;
+      submit.innerHTML = 'Send enquiry <span aria-hidden="true">↗</span>';
+      form.removeAttribute('aria-busy');
     }
   });
+}
 </script>
-
 <style>
-  .inquiry-field {
-    width: 100%;
-    min-height: 48px;
-    border: 1px solid var(--border-subtle);
-    border-radius: 0;
-    background: var(--bg-primary);
-    padding: 0.75rem;
-    color: var(--text-primary);
-    font: inherit;
-    font-size: 0.875rem;
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+.booking-copy h2 {
+  font-size: var(--heading-1);
+  line-height: 0.95;
+  max-width: 13ch;
+}
+.booking-email {
+  font-size: clamp(18px, 2.2vw, 32px);
+  letter-spacing: -0.035em;
+  display: inline-block;
+  margin-top: 48px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+.booking-copy > .meta {
+  margin-top: 24px;
+  color: #626262;
+}
+.booking-copy .lead {
+  margin-top: 48px;
+  max-width: 26ch;
+}
+.inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.inquiry-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.inquiry-form label span {
+  font-weight: 400;
+  color: #626262;
+}
+.inquiry-field {
+  width: 100%;
+  min-width: 0;
+  min-height: 56px;
+  padding: 16px;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.inquiry-field:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+.inquiry-field:user-invalid {
+  border-color: var(--ink);
+}
+textarea.inquiry-field {
+  min-height: 160px;
+  resize: vertical;
+}
+.form-wide {
+  grid-column: 1/-1;
+}
+.form-note {
+  font-size: 13px;
+  color: #626262;
+  line-height: 1.5;
+  max-width: 52ch;
+  margin-top: 24px;
+}
+.inquiry-status {
+  font-size: 16px;
+  margin-top: 24px;
+  max-width: 50ch;
+}
+.inquiry-status:empty {
+  display: none;
+}
+.inquiry-confirmation {
+  border-top: 1px solid #bbb;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+.inquiry-confirmation h3 {
+  font-size: 40px;
+}
+.inquiry-confirmation p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+.module-context {
+  font-size: 14px;
+  border-left: 4px solid var(--signal);
+  padding-left: 16px;
+}
+.inquiry-form [data-email-fallback] {
+  margin-top: 24px;
+}
+@media (max-width: 1023px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: 64px;
   }
-
-  .inquiry-field:focus-visible {
-    outline: 2px solid var(--accent-kharos);
-    outline-offset: 2px;
+  .booking-copy h2 {
+    font-size: 80px;
+    max-width: 18ch;
   }
-
-  [data-submit-button]:focus-visible {
-    outline: 2px solid var(--text-primary);
-    outline-offset: 3px;
+  .booking-copy .lead {
+    max-width: 40ch;
   }
-
-  [data-submit-button]:disabled {
-    cursor: wait;
-    opacity: 0.65;
+  .inquiry-form {
+    max-width: 100%;
   }
+}
+@media (max-width: 767px) {
+  .booking-copy h2 {
+    font-size: 56px;
+    max-width: 12ch;
+  }
+  .booking-email {
+    margin-top: 32px;
+    font-size: 22px;
+  }
+  .booking-copy .lead {
+    margin-top: 32px;
+  }
+  .inquiry-form {
+    grid-template-columns: 1fr;
+  }
+  .form-wide {
+    grid-column: auto;
+  }
+  .booking-layout {
+    gap: 48px;
+  }
+  .inquiry-form label {
+    font-size: 16px;
+  }
+}
 </style>

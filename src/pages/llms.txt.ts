@@ -3,62 +3,36 @@ import { getCollection } from 'astro:content';
 export const prerender = true;
 
 export async function GET() {
-  const [pillars, stages, cases, insights] = await Promise.all([
-    getCollection('pillars'),
-    getCollection('stages'),
-    getCollection('cases'),
-    getCollection('insights'),
-  ]);
-
-  const orderedPillars = pillars.sort((first, second) => first.data.order - second.data.order);
-  const orderedStages = stages.sort((first, second) => first.data.order - second.data.order);
-  const featuredCase = cases.find((caseStudy) => caseStudy.data.featured);
+  const insights = await getCollection('insights');
   const latestInsights = insights
     .sort((first, second) => Date.parse(second.data.pubDate) - Date.parse(first.data.pubDate))
     .slice(0, 3);
 
-  const markdown = `# The Spotted Ape — The Visible Agent
+  const markdown = `# The Spotted Ape
 
-> AI literacy, human-in-the-loop strategy, and agentic orchestration for organizations developing professional capability in the age of AI.
+Independent strategic decision and behavioural design practice in Cape Town, South Africa.
 
-## Core Thesis: The Knowledge Work Shift
+## Capabilities
 
-If AI does the work, what are you doing? Work used to be simple: learn, make, improve, repeat. Now AI does the making. So our roles change from producing work to deciding what matters. The constraint is no longer effort; it is judgment.
+- Strategic Decision Design: examine alternatives, assumptions and trade-offs.
+- Behavioural Design: identify the conditions preventing intended change.
+- Human–AI Decision Design: define decision authority, review points and accountability.
 
-## The !Kharos Strategy
+## Website
 
-The !Kharos Strategy is derived from the Welwitschia mirabilis, a biological metaphor for surviving through wet and dry. In the Namib Desert, where Atlantic fog meets scorching dunes, it represents rhizomatic resilience: staying grounded through structural integrity as conditions change.
-
-A !Kharos practitioner is not overwhelmed by AI, but grounded within it.
-
-### The Three Pillars
-
-${orderedPillars.map(({ data }) => `- **${data.title}:** ${data.description} Foundation: ${data.foundation} Outcome: ${data.outcome}`).join('\n')}
-
-## Agentic Mastery: Five Stages
-
-${orderedStages.map(({ data }) => `- **${data.stageNumber} ${data.title} — ${data.automationLevel}:** ${data.summary}`).join('\n')}
-
-## Studio Services
-
-- AI Agent Design
-- Creative Direction
-- Strategic Oversight
-- System Training
+- [What We Do](https://thespottedape.com/#practice)
+- [Work and research](https://thespottedape.com/#evidence)
+- [Strategic Thinking](https://thespottedape.com/thinking/)
+- [The Strategy Illusion quadrant map](https://thespottedape.com/thinking/strategic-decision-maps/strategy-illusion/)
+- [About](https://thespottedape.com/about)
 
 ## Latest Substack Dispatches
 
-${latestInsights.map(({ data }) => `- [${data.title}](${data.substackUrl}) (${data.pubDate}, ${data.readingTime}): ${data.excerpt} Topics: ${data.tags.join(', ')}`).join('\n')}
-
-## Featured Case Study
-
-${featuredCase ? `- [${featuredCase.data.title}](https://thespottedape.com/cases/${featuredCase.data.slug}): ${featuredCase.data.clientContext} ${featuredCase.data.result}` : 'Case studies are published on the website as they become available.'}
+${latestInsights.map(({ data }) => `- [${data.title}](${data.substackUrl}) (${data.pubDate})`).join('\n')}
 
 ## Contact
 
-The Spotted Ape (Pty) Ltd is based in Cape Town, South Africa.
-
-- Email: [contact@spottedape.com](mailto:contact@spottedape.com)
+- Email: [hello@thespottedape.com](mailto:hello@thespottedape.com)
 - Website: [https://thespottedape.com](https://thespottedape.com)
 - Privacy: [https://thespottedape.com/privacy](https://thespottedape.com/privacy)
 - Terms: [https://thespottedape.com/terms](https://thespottedape.com/terms)
