@@ -1,0 +1,94 @@
+[
+  {
+    "id": "static-/",
+    "h1": 1,
+    "nativeMenu": true,
+    "overflow": false
+  },
+  {
+    "id": "static-/services/",
+    "h1": 1,
+    "nativeMenu": true,
+    "overflow": false
+  },
+  {
+    "id": "static-/learning/",
+    "h1": 1,
+    "nativeMenu": true,
+    "overflow": false
+  },
+  {
+    "id": "static-/work/",
+    "h1": 1,
+    "nativeMenu": true,
+    "overflow": false
+  },
+  {
+    "id": "static-/contact/",
+    "h1": 1,
+    "nativeMenu": true,
+    "overflow": false
+  },
+  {
+    "id": "no-js-contact-menu",
+    "contact": true
+  },
+  {
+    "id": "no-js-masterclass",
+    "sessions": 5,
+    "questionVisible": true
+  },
+  {
+    "id": "no-js-curriculum",
+    "modules": 6,
+    "links": [
+      {
+        "label": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/decide.html"
+      },
+      {
+        "label": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=05&source=%2Fcourses"
+      }
+    ]
+  },
+  {
+    "id": "no-js-native-keyboard-submit",
+    "capturedModule": "05",
+    "interest": "Strategy Course (DLA)",
+    "required": [
+      "name",
+      "email",
+      "context"
+    ],
+    "postAbortedBeforeNetwork": true
+  },
+  {
+    "id": "keyboard-menu",
+    "tabCycleInside": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "focusReturned": true,
+    "sequence": "12 Tab presses, then 3 Shift+Tab presses"
+  },
+  {
+    "id": "reduced-motion",
+    "mode": "stacked",
+    "scene": "static",
+    "buttonDuration": "1e-05s"
+  }
+]

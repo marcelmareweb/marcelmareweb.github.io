@@ -2,7 +2,7 @@
 
 Reference investigated **29 October 2026** using the live rendered site in Playwright. The reference evidence is retained. The current redesign follows the [Definitive direction](DEFINITIVE_DIRECTION.md), which supersedes earlier proposals and historical local-site observations.
 
-The local implementation and checks are documented in [Redesign review](REDESIGN_REVIEW.md).
+The local implementation and checks are documented in [Redesign review](REDESIGN_REVIEW.md). The later approved customer-centric navigation is recorded in [Navigation implementation](../navigation-strategy/implementation/IMPLEMENTATION.md), including current page connections and enquiry context.
 
 The later approved five-day executive programme is specified in [Masterclass implementation](MASTERCLASS_IMPLEMENTATION.md), including the shared Find Formation behaviour, programme-only curriculum and verification evidence.
 

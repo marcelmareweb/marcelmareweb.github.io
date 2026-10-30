@@ -1,0 +1,44 @@
+[
+  {
+    "id": "no-js-home",
+    "url": "http://localhost:4328/",
+    "menu": true,
+    "workedExample": true,
+    "fallbackChoices": 4
+  },
+  {
+    "id": "no-js-masterclass",
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+    "menu": true,
+    "nativeSessions": 5,
+    "openQuestion": "What must the organisation be able to do exceptionally well?"
+  },
+  {
+    "id": "no-js-courses",
+    "url": "http://localhost:4328/courses",
+    "menu": true,
+    "nativeModules": 6,
+    "link": "https://marcelmare.com/dla-course-2/decide.html"
+  },
+  {
+    "id": "reduced-motion-home",
+    "practiceMode": "stacked",
+    "scenePosition": "static",
+    "buttonDuration": "1e-05s"
+  },
+  {
+    "id": "desktop-breakpoint",
+    "viewport": 1024,
+    "headerOverflow": {
+      "scroll": 944,
+      "client": 944
+    },
+    "documentOverflow": false
+  },
+  {
+    "id": "short-menu",
+    "links": 6,
+    "dialogHeight": 390,
+    "contactVisible": true
+  }
+]

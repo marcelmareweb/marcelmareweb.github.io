@@ -1,0 +1,45 @@
+{
+  "slug": "masterclass",
+  "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 4672,
+  "overflow": false,
+  "h1": {
+    "text": "Strategic Design\nLeadership in\nthe Age of AI",
+    "top": 252.5,
+    "font": "44px"
+  },
+  "entryLinks": [
+    {
+      "text": "Explore the five days ↓",
+      "href": "#programme",
+      "top": 1196,
+      "inFirstViewport": false
+    },
+    {
+      "text": "← All decision workshops",
+      "href": "/workshops",
+      "top": 1256,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Discuss the masterclass ↗",
+      "href": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Executive%20masterclass%20enquiry",
+      "top": 3677,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Five decisions.One formation.",
+      "top": 1545
+    },
+    {
+      "text": "Bring a consequentialstrategic question.",
+      "top": 3395
+    }
+  ]
+}

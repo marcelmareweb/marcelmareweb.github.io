@@ -1,0 +1,145 @@
+[
+  {
+    "id": "deep-link",
+    "hash": "#session-practitioner",
+    "open": "practitioner",
+    "focus": "session-question-practitioner"
+  },
+  {
+    "id": "choose-next",
+    "hash": "#session-integrator",
+    "open": "integrator"
+  },
+  {
+    "id": "back",
+    "hash": "#session-practitioner",
+    "focus": "session-question-practitioner"
+  },
+  {
+    "id": "forward-reload",
+    "open": "integrator",
+    "focus": "session-question-integrator"
+  },
+  {
+    "id": "day-to-contact",
+    "url": "http://localhost:4328/contact/?interest=masterclass&day=integrator&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+    "day": "integrator",
+    "notice": "Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well?",
+    "returnHref": "/workshops/strategic-design-leadership/#session-integrator"
+  },
+  {
+    "id": "escape",
+    "hash": "#programme",
+    "open": 0,
+    "focus": "integrator"
+  },
+  {
+    "id": "back-to-top",
+    "scrollY": 0,
+    "hash": "#top",
+    "open": 0
+  },
+  {
+    "id": "module-to-contact",
+    "href": "/contact/?interest=course&module=05&source=%2Fcourses",
+    "module": "05",
+    "notice": "Solar learning case / Team session · Module 05 — Decide",
+    "returnHref": "/courses?module=05#syllabus"
+  },
+  {
+    "id": "return-to-module",
+    "selected": "05",
+    "title": "Decide"
+  },
+  {
+    "id": "legacy-course-form",
+    "module": "05",
+    "interest": "Strategy Course (DLA)"
+  },
+  {
+    "id": "capability-link-0",
+    "href": "/services/#strategic-decision-design"
+  },
+  {
+    "id": "capability-link-1",
+    "href": "/services/#behavioural-design"
+  },
+  {
+    "id": "capability-link-2",
+    "href": "/services/#human-ai-decision-design"
+  },
+  {
+    "id": "capability-geometry-reduced",
+    "geometry": [
+      {
+        "title": "StrategicDecisionDesign.",
+        "card": {
+          "top": 72.0546875,
+          "bottom": 633.6484375,
+          "left": 40,
+          "right": 1400
+        },
+        "parts": [
+          {
+            "tag": "",
+            "inside": true
+          },
+          {
+            "tag": "practice-summary",
+            "inside": true
+          },
+          {
+            "tag": "practice-card-link",
+            "inside": true
+          }
+        ]
+      },
+      {
+        "title": "BehaviouralDesign.",
+        "card": {
+          "top": 72.1484375,
+          "bottom": 633.7421875,
+          "left": 40,
+          "right": 1400
+        },
+        "parts": [
+          {
+            "tag": "",
+            "inside": true
+          },
+          {
+            "tag": "practice-summary",
+            "inside": true
+          },
+          {
+            "tag": "practice-card-link",
+            "inside": true
+          }
+        ]
+      },
+      {
+        "title": "Human–AIDecisionDesign.",
+        "card": {
+          "top": 72.2421875,
+          "bottom": 633.8359375,
+          "left": 40,
+          "right": 1400
+        },
+        "parts": [
+          {
+            "tag": "",
+            "inside": true
+          },
+          {
+            "tag": "practice-summary",
+            "inside": true
+          },
+          {
+            "tag": "practice-card-link",
+            "inside": true
+          }
+        ]
+      }
+    ]
+  }
+]

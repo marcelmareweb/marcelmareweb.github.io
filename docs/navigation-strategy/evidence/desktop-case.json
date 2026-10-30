@@ -1,0 +1,125 @@
+{
+  "slug": "case",
+  "url": "http://localhost:4328/cases/policy-analyst-strategic-review",
+  "title": "When more thinking makes everything worse. | The Spotted Ape",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "height": 3146,
+  "overflow": false,
+  "header": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "footer": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "When more thinking makes everything worse.",
+      "top": 300
+    },
+    {
+      "tag": "H2",
+      "text": "The report’sargument.",
+      "top": 1020
+    },
+    {
+      "tag": "H2",
+      "text": "Final draft in 9 days.",
+      "top": 1874
+    }
+  ],
+  "links": [
+    {
+      "text": "← Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    }
+  ],
+  "mainText": "CASE ACCOUNT / POLICY ANALYSIS\n\nINDEPENDENT PRACTICE / CAPE TOWN\n\nWhen more thinking makes everything worse.\n\nA senior policy analyst was weeks away from a major strategic review. Her research was strong. But the final report had stalled.\n\n← Work & research\nPrint / Save as PDF ↗\n\nDECISION FOCUS\n\nThe report’s\nargument.\n\n01 / THE PATTERN\n\nGenerate with AI. Over-edit. Rewrite. Repeat. Too many directions. No clear argument.\n\n02 / THE INTERVENTION\n\nWe removed the tools. One question only: What is the argument this report must make—if everything else is stripped away?\n\n03 / THE SHIFT\n\nClarity returned. AI became support—not noise. Whole sections were removed without hesitation.\n\nREPORTED OUTCOME / CASE ACCOUNT\n\nFinal draft in 9 days.\n\n“This is the first version that actually argues something.”\n\nTHE SPOTTED APE (PTY) LTD / CAPE TOWN, SOUTH AFRICA",
+  "buttons": [
+    {
+      "text": "Print / Save as PDF ↗",
+      "role": null
+    }
+  ]
+}

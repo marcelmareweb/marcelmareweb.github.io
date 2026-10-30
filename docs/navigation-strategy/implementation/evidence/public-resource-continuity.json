@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://thespottedape.com/research/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://thespottedape.com/Courses/solar-investment/learn/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/decide.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+    "status": 200,
+    "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+    "status": 200,
+    "contentType": "application/pdf"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+    "status": 200,
+    "contentType": "application/pdf"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+    "status": 200,
+    "contentType": "application/pdf"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+    "status": 200,
+    "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  {
+    "url": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://marcelmare.com",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8"
+  }
+]

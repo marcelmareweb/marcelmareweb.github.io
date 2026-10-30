@@ -1,0 +1,137 @@
+{
+  "slug": "decision-map",
+  "url": "http://localhost:4328/thinking/strategic-decision-maps/strategy-illusion/",
+  "title": "The Strategy Illusion — Strategic Decision Maps | The Spotted Ape",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "height": 5828,
+  "overflow": false,
+  "header": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "footer": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Are you following a strategy, or just a plan?",
+      "top": 300
+    },
+    {
+      "tag": "H2",
+      "text": "Let’s map two questions.",
+      "top": 1584
+    },
+    {
+      "tag": "H2",
+      "text": "One café. Four possible situations.",
+      "top": 3448
+    },
+    {
+      "tag": "H2",
+      "text": "What needs attentionin your team?",
+      "top": 4593
+    }
+  ],
+  "links": [
+    {
+      "text": "← All thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "View the quadrant map ↓",
+      "href": "#strategy-illusion-map",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "mainText": "THINKING / STRATEGIC DECISION MAP\n\nINDEPENDENT PRACTICE / CAPE TOWN\n\nAre you following a strategy, or just a plan?\n← All thinking\nView the quadrant map ↓\n\n“Everybody has a plan until they get punched in the mouth.”\n\n— Mike Tyson\n\nA fictional café expands its menu and opening hours. Everyone is busy. Who is it for, and why choose it?\n\nA plan organises work. A strategy chooses who to serve, what to offer and what to leave out.\n\nLet’s map two questions.\nAcross: are the decisions clear?\nThe team knows its customers, why they choose it and what it will refuse.\nUpwards: does the team follow through?\nPeople know their responsibilities and deliver what they promise.\n\nTHE DECISION MAP\n\nCLARITY OF CHOICE × CONSISTENCY OF ACTION\n\nHigh\nConsistency of action\nLow\nThe Strategy Illusion. Clarity of choice increases from left to right.Consistency of action increases from bottom to top.\n\tLow clarity of choice\tHigh clarity of choice\nHigh consistency of action\nThe Efficient Treadmill\n\nUnclear choices. Consistent action.\n\n\t\nCoherent Advantage\n\nClear choices. Consistent action.\n\n\n\nLow consistency of action\nStrategic Drift\n\nUnclear choices. Inconsistent action.\n\n\t\nUnrealised Strategy\n\nClear choices. Inconsistent action.\n\nLow\nHigh\n\nClarity of choice\n\nOne café. Four possible situations.\nBottom left — Strategic Drift\nCommuters, long lunches, evening diners: the café serves everyone. Priorities shift and orders arrive late.\nTop left — The Efficient Treadmill\nOrders arrive on time, but the broad offer remains. The owner cannot explain why customers should choose this café.\nBottom right — Unrealised Strategy\nThe owner chooses quick weekday breakfasts for office workers and drops evening service. Slow preparation still leaves customers waiting.\nTop right — Coherent Advantage\nThe breakfast choice shapes the menu, staffing and preparation. Customers are served on time. The owner must still test demand and profitability.\n\nThe Efficient Treadmill: delivering a plan well without examining whether its choices make sense.\n\nWhat needs attention\nin your team?\nLet’s talk\n↗",
+  "buttons": []
+}

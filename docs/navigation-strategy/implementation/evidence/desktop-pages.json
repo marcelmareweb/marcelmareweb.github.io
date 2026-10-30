@@ -1,0 +1,682 @@
+{
+  "records": [
+    {
+      "slug": "home",
+      "url": "http://localhost:4328/",
+      "title": "The Spotted Ape — Strategic Decisions & Behavioural Design",
+      "h1": [
+        "More possibilities.\nHarder choices."
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "firstActions": [
+        {
+          "text": "Explore how we can help",
+          "href": "/services/"
+        },
+        {
+          "text": "Workshops & learning\n↗",
+          "href": "/learning/"
+        },
+        {
+          "text": "Find your\nformation.",
+          "href": "#choice"
+        }
+      ],
+      "required": [],
+      "canonical": "https://thespottedape.com/"
+    },
+    {
+      "slug": "services",
+      "url": "http://localhost:4328/services/",
+      "title": "How we help | The Spotted Ape",
+      "h1": [
+        "Start with\nthe decision."
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": "page",
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nHow we help",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Find your starting point ↓",
+          "href": "#situations"
+        },
+        {
+          "text": "Discuss your question ↗",
+          "href": "/contact/"
+        },
+        {
+          "text": "01 / STRATEGIC DECISION DESIGN\nSeveral priorities. One commitment.\n↗",
+          "href": "/services/#strategic-decision-design"
+        },
+        {
+          "text": "02 / BEHAVIOURAL DESIGN\nAgreement has not become action.\n↗",
+          "href": "/services/#behavioural-design"
+        }
+      ],
+      "required": [],
+      "canonical": "https://thespottedape.com/services/"
+    },
+    {
+      "slug": "learning",
+      "url": "http://localhost:4328/learning/",
+      "title": "Workshops & Learning | The Spotted Ape",
+      "h1": [
+        "Learn by\ndeciding."
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": "page",
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nWorkshops & learning",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Custom workshops ↗",
+          "href": "/workshops"
+        },
+        {
+          "text": "Executive masterclass ↗",
+          "href": "/workshops/strategic-design-leadership/"
+        },
+        {
+          "text": "Solar learning case ↗",
+          "href": "/courses"
+        },
+        {
+          "text": "A live decision. A working session.",
+          "href": "/workshops"
+        }
+      ],
+      "required": [],
+      "canonical": "https://thespottedape.com/learning/"
+    },
+    {
+      "slug": "work",
+      "url": "http://localhost:4328/work/",
+      "title": "Work & Research | The Spotted Ape",
+      "h1": [
+        "The work.\nThe evidence."
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": "page",
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nWork & research",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Policy-analysis case ↓",
+          "href": "#case-account"
+        },
+        {
+          "text": "Behavioural research ↓",
+          "href": "#research"
+        },
+        {
+          "text": "Meet the practitioner ↗",
+          "href": "/about#section-05"
+        }
+      ],
+      "required": [],
+      "canonical": "https://thespottedape.com/work/"
+    },
+    {
+      "slug": "contact",
+      "url": "http://localhost:4328/contact/",
+      "title": "Let’s talk | The Spotted Ape",
+      "h1": [
+        "What needs deciding?"
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": "page",
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nLet’s talk",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "hello@thespottedape.com ↗",
+          "href": "mailto:hello@thespottedape.com"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "/privacy"
+        }
+      ],
+      "contact": "About your enquiryChange the subjectBack to the offering",
+      "required": [
+        "name",
+        "email",
+        "context"
+      ],
+      "canonical": "https://thespottedape.com/contact/"
+    },
+    {
+      "slug": "contact-day",
+      "url": "http://localhost:4328/contact/?interest=masterclass&day=practitioner&audience=individual&source=%2Flearning%2F",
+      "title": "Let’s talk | The Spotted Ape",
+      "h1": [
+        "What needs deciding?"
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning",
+          "href": "/learning/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": "page",
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nLet’s talk",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "hello@thespottedape.com ↗",
+          "href": "mailto:hello@thespottedape.com"
+        },
+        {
+          "text": "Change the subject",
+          "href": "#inquiry-engagement"
+        },
+        {
+          "text": "Back to the programme",
+          "href": "/workshops/strategic-design-leadership/#session-practitioner"
+        }
+      ],
+      "contact": "ABOUT YOUR ENQUIRY\n\nFive-day executive masterclass · Day 02 / Practitioner — Why will customers choose us over alternatives? · Individual attendance enquiry\n\nChange the subject\nBack to the programme",
+      "required": [
+        "name",
+        "email",
+        "context"
+      ],
+      "canonical": "https://thespottedape.com/contact/"
+    },
+    {
+      "slug": "workshops",
+      "url": "http://localhost:4328/workshops",
+      "title": "Strategic Decision Workshops | The Spotted Ape",
+      "h1": [
+        "From competing\nperspectives to\ncollective decisions."
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning (current section)",
+          "href": "/learning/",
+          "current": null,
+          "section": true
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nWorkshops & learning\n/\nCustom decision workshops",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Workshops & learning",
+          "href": "/learning/"
+        },
+        {
+          "text": "Discuss a workshop\n↗",
+          "href": "/contact/?interest=workshop&source=%2Fworkshops"
+        },
+        {
+          "text": "All workshops & learning ↗",
+          "href": "/learning/"
+        },
+        {
+          "text": "How it works ↓",
+          "href": "#section-02"
+        },
+        {
+          "text": "Situations & questions ↓",
+          "href": "#section-04"
+        },
+        {
+          "text": "Five-day executive masterclass ↗",
+          "href": "/workshops/strategic-design-leadership/"
+        },
+        {
+          "text": "Workshop enquiry form ↓",
+          "href": "#book"
+        }
+      ],
+      "contact": "ABOUT YOUR ENQUIRY\n\nCustom decision workshop\n\nChange the subject\nBack to the offering",
+      "required": [
+        "name",
+        "email",
+        "context"
+      ],
+      "canonical": "https://thespottedape.com/workshops"
+    },
+    {
+      "slug": "masterclass",
+      "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+      "title": "Strategic Design Leadership in the Age of AI | The Spotted Ape",
+      "h1": [
+        "Strategic Design\nLeadership in\nthe Age of AI"
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning (current section)",
+          "href": "/learning/",
+          "current": null,
+          "section": true
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nWorkshops & learning\n/\nExecutive masterclass",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Workshops & learning",
+          "href": "/learning/"
+        },
+        {
+          "text": "Discuss the programme\n↗",
+          "href": "/contact/?interest=masterclass&source=%2Fworkshops%2Fstrategic-design-leadership%2F"
+        },
+        {
+          "text": "Explore the five days ↓",
+          "href": "#programme"
+        }
+      ],
+      "required": [],
+      "canonical": "https://thespottedape.com/workshops/strategic-design-leadership/"
+    },
+    {
+      "slug": "courses",
+      "url": "http://localhost:4328/courses",
+      "title": "Applied Strategy & Digital Acumen Courses | The Spotted Ape",
+      "h1": [
+        "Should we invest\nin solar?"
+      ],
+      "overflow": false,
+      "headerWidth": 1360,
+      "headerClientWidth": 1360,
+      "header": [
+        {
+          "label": "How we help",
+          "href": "/services/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Workshops & learning (current section)",
+          "href": "/learning/",
+          "current": null,
+          "section": true
+        },
+        {
+          "label": "Work & research",
+          "href": "/work/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Thinking",
+          "href": "/thinking/",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "current": null,
+          "section": false
+        },
+        {
+          "label": "Let’s talk",
+          "href": "/contact/",
+          "current": null,
+          "section": false
+        }
+      ],
+      "breadcrumbs": "Home\n/\nWorkshops & learning\n/\nSolar learning case",
+      "firstActions": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Workshops & learning",
+          "href": "/learning/"
+        },
+        {
+          "text": "Open the learning case\n↗",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/"
+        },
+        {
+          "text": "Discuss a team session ↗",
+          "href": "/contact/?interest=course&source=%2Fcourses"
+        },
+        {
+          "text": "Explore the curriculum ↓",
+          "href": "#syllabus"
+        },
+        {
+          "text": "Workbook & resources ↓",
+          "href": "#outcomes"
+        },
+        {
+          "text": "All workshops & learning ↗",
+          "href": "/learning/"
+        }
+      ],
+      "contact": "ABOUT YOUR ENQUIRY\n\nSolar learning case / Team session\n\nChange the subject\nBack to the learning case",
+      "required": [
+        "name",
+        "email",
+        "context"
+      ],
+      "canonical": "https://thespottedape.com/courses"
+    }
+  ],
+  "errors": []
+}

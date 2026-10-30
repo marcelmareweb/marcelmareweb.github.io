@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "1a39ca9d28ff14331dbd0cdbbeb7d8b9de970562",
+  "current_commit": "1a39ca9d28ff14331dbd0cdbbeb7d8b9de970562",
+  "astro_check": {
+    "files": 71,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "production_pages": 16,
+  "local_link_occurrences": 690,
+  "fragment_links": 111,
+  "responsive_page_viewport_cases": 48,
+  "original_formation_unchanged": {
+    "src/components/home/FindFormation.astro": true,
+    "src/scripts/formation.js": true,
+    "src/scripts/formation-interactions.ts": true
+  },
+  "deployment_dependencies_config_and_assets_unchanged": true,
+  "real_enquiries_sent": false,
+  "push_or_deployment_performed": false,
+  "customer_research_or_conversion_claims": false
+}

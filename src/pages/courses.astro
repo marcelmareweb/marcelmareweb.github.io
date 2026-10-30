@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CourseSyllabus from '../components/CourseSyllabus.astro';
 import BookingSection from '../components/BookingSection.astro';
 import PageIntro from '../components/PageIntro.astro';
+import { contactHref } from '../lib/contact';
+import { publicResources } from '../data/practice';
 
 const pageTitle = 'Applied Strategy & Digital Acumen Courses | The Spotted Ape';
 const pageDescription =
@@ -150,22 +152,24 @@ const outcomesList = [
 ];
 ---
 <BaseLayout title={pageTitle} description={pageDescription}>
-<PageIntro eyebrow="Courses / Applied strategy" scale="long" description="A calculation is not a decision. Learn to question the evidence and defend a recommendation." id="premise">
-<Fragment slot="heading">The spreadsheet provides the evidence.<br />The decisions require your judgement.</Fragment>
+<PageIntro compact eyebrow="Courses / Solar learning case" scale="long" description="Three solar proposals. One decision to defend." id="premise">
+<Fragment slot="heading">Should we invest<br />in solar?</Fragment>
 <Fragment slot="aside">Flagship case simulation<br />65–80 minutes<br />Excel &amp; Google Sheets</Fragment>
+<div class="actions"><a class="button" href={publicResources.course} target="_blank" rel="noreferrer">Open the learning case <span aria-hidden="true">↗</span></a><a class="text-link" href={contactHref({ interest: 'course', source: '/courses' })}>Discuss a team session ↗</a></div>
+<p class="source-note">The fictional Cape Manufacturing case. Opens the learning case in a new tab.</p>
 <nav class="page-nav" aria-label="Course page sections">
 <a href="#syllabus">Explore the curriculum ↓</a>
-<a href="#outcomes">Course artifacts ↓</a>
-<a href="#book">Discuss a cohort ↗</a>
+<a href="#outcomes">Workbook &amp; resources ↓</a>
+<a href="/learning/">All workshops &amp; learning ↗</a>
 </nav>
 </PageIntro>
 <section class="course-feature theme-yellow section-y">
 <div class="wrap">
 <p class="meta">Cape Manufacturing / Western Cape</p>
 <div class="course-feature-grid">
-<h2>Should we invest<br />in solar?</h2>
+<h2>The evidence.<br />Your judgement.</h2>
 <div>
-<p class="lead">One case. Three proposals.<br />One decision to defend.</p>
+<p class="lead">The spreadsheet provides the evidence.<br />The decisions require your judgement.</p>
 <a class="button" href="#syllabus">Inspect the case <span aria-hidden="true">↓</span>
 </a>
 </div>
@@ -178,68 +182,10 @@ const outcomesList = [
 </div>)}</div>
 </div>
 </section>
-<section class="section-y" id="tension">
-<div class="wrap">
-<div class="section-top meta">
-<p>01 / What the case tests</p>
-<p>From operator to adviser</p>
-</div>
-<h2 class="section-title" data-reveal>Technical output.<br />Human judgement.</h2>
-<div class="tension-list">{tensionContrasts.map(item=>
-<article class="tension-row">
-<span class="meta">{item.number}</span>
-<div>
-<p class="meta">{item.conventionalLabel}</p>
-<h3>{item.conventionalTitle}.</h3>
-<p>{item.conventionalCopy}</p>
-</div>
-<div>
-<p class="meta">{item.spottedApeLabel}</p>
-<h3>{item.spottedApeTitle}.</h3>
-<p>{item.spottedApeCopy}</p>
-</div>
-</article>)}</div>
-</div>
-</section>
-<CourseSyllabus />
-<section class="section-y" id="outcomes">
-<div class="wrap">
-<div class="section-top meta">
-<p>03 / Course toolkit</p>
-<p>Work with the actual artifacts</p>
-</div>
-<h2 class="section-title" data-reveal>Open the model.<br />Question it.</h2>
-<div class="toolkit-layout">
-<aside class="course-video">
-<div class="video-frame">
-<iframe src="https://www.youtube.com/embed/nHSyLciFe1k" title="Introduction to Should We Invest in Solar?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
-</div>
-<h3>Should We Invest in Solar?</h3>
-<p>A one-minute introduction to the investment decision.</p>
-<a class="text-link" href="https://thespottedape.com/Courses/solar-investment/learn/" target="_blank" rel="noreferrer">Open the live course <span aria-hidden="true">↗</span>
-</a>
-<p class="source-note">
-<a href="https://marcelmare.com/dla-course-2/" target="_blank" rel="noreferrer">Alternative course host: marcelmare.com ↗</a>
-</p>
-</aside>
-<div class="resource-list">{toolkitResources.map((res,index)=>
-<a class="resource-row" href={res.href} target="_blank" rel="noreferrer">
-<span class="meta">0{index+1}<br />{res.code.split('//')[1]}</span>
-<div>
-<h3>{res.title}.</h3>
-<p>{res.description}</p>
-<span class="resource-action">{res.cta}</span>
-</div>
-<span class="resource-arrow" aria-hidden="true">↗</span>
-</a>)}</div>
-</div>
-</div>
-</section>
 <section class="section-y theme-grey">
 <div class="wrap">
 <div class="section-top meta">
-<p>04 / People &amp; outcomes</p>
+<p>01 / People &amp; outcomes</p>
 <p>Learning through observable work</p>
 </div>
 <div class="split-layout">
@@ -265,7 +211,66 @@ const outcomesList = [
 </div>
 </div>
 </section>
-<BookingSection defaultEngagement="Strategy Course (DLA)" eyebrow="05 / Let’s talk" />
+<section class="section-y" id="tension">
+<div class="wrap">
+<div class="section-top meta">
+<p>02 / What the case tests</p>
+<p>From operator to adviser</p>
+</div>
+<h2 class="section-title" data-reveal>Technical output.<br />Human judgement.</h2>
+<div class="tension-list">{tensionContrasts.map(item=>
+<article class="tension-row">
+<span class="meta">{item.number}</span>
+<div>
+<p class="meta">{item.conventionalLabel}</p>
+<h3>{item.conventionalTitle}.</h3>
+<p>{item.conventionalCopy}</p>
+</div>
+<div>
+<p class="meta">{item.spottedApeLabel}</p>
+<h3>{item.spottedApeTitle}.</h3>
+<p>{item.spottedApeCopy}</p>
+</div>
+</article>)}</div>
+</div>
+</section>
+<CourseSyllabus />
+<section class="section-y" id="outcomes">
+<div class="wrap">
+<div class="section-top meta">
+<p>04 / Course toolkit</p>
+<p>Work with the actual artifacts</p>
+</div>
+<h2 class="section-title" data-reveal>Open the model.<br />Question it.</h2>
+<div class="toolkit-layout">
+<aside class="course-video">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/nHSyLciFe1k" title="Introduction to Should We Invest in Solar?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+</div>
+<h3>Should We Invest in Solar?</h3>
+<p>A one-minute introduction to the investment decision.</p>
+<a class="text-link" href="https://thespottedape.com/Courses/solar-investment/learn/" target="_blank" rel="noreferrer">Open the learning case <span aria-hidden="true">↗</span>
+</a>
+<p class="source-note">
+<a href="https://marcelmare.com/dla-course-2/" target="_blank" rel="noreferrer">Alternative course host: marcelmare.com ↗</a>
+</p>
+</aside>
+<div class="resource-list">{toolkitResources.map((res,index)=>
+<a class="resource-row" href={res.href} target="_blank" rel="noreferrer">
+<span class="meta">0{index+1}<br />{res.code.split('//')[1]}</span>
+<div>
+<h3>{res.title}.</h3>
+<p>{res.description}</p>
+<span class="resource-action">{res.cta}</span>
+</div>
+<span class="resource-arrow" aria-hidden="true">↗</span>
+</a>)}</div>
+</div>
+</div>
+</section>
+
+<BookingSection defaultEngagement="Strategy Course (DLA)" eyebrow="05 / Team learning enquiry" heading="Discuss a team session." />
 </BaseLayout>
 <style>
 .course-feature > .wrap > .meta {

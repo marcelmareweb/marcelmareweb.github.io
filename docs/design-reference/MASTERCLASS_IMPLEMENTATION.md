@@ -14,7 +14,7 @@ Route: `/workshops/strategic-design-leadership/`. Title: **Strategic Design Lead
 | 04 | Architect | Where will we compete and exclude? | Strategic Choice Cascade |
 | 05 | Steward | How will we govern and sustain advantage? | Executive Strategy Dossier & Governance Charter |
 
-Each day can stand alone. The expanded session also explains its connection to the full progression. Visitors are free to open any day; there are no maturity levels, prerequisites or gated stages. Enquiry links carry the relevant day/programme in an email subject; the interface does not send messages or call an AI service.
+Each day can stand alone. The expanded session also explains its connection to the full progression. Visitors are free to open any day; there are no maturity levels, prerequisites or gated stages. Enquiry links now carry the relevant day/programme to `/contact/`, where the context is visible and editable. The programme interface does not itself send messages or call an AI service. Contact delivery and recovery remain explicit visitor actions.
 
 ## Reuse and architecture
 
@@ -28,7 +28,7 @@ The primary interaction model is the existing Find Formation instrument, not the
 | `MasterclassCard.astro` | Angular SVG outline, day/stage/question/cue, native disclosure button and yellow selected state. |
 | `MasterclassProgression.astro` | Sticky direct navigation across the five days. Mobile shows day numbers and E–P–I–A–S with complete accessible labels. |
 | `MasterclassDetail.astro` | Reusable editorial expansion: question, problem, decision tool, two working sessions, output, programme connection and enquiry/navigation. |
-| `masterclass-formation.ts` | Programme-only single-session state, focus/scroll positioning, keyboard movement, return and Escape. |
+| `masterclass-formation.ts` | Programme-only single-session state, `#session-<day-id>` deep links, reload/Back/Forward restoration, focus/scroll positioning, keyboard movement, return and Escape. |
 | Dedicated Astro page | Existing shared layout, measured long headline, introduction, formation and programme enquiry. |
 | `RaykisWorkshopTeaser.astro` | Existing teaser entry point rewritten for the current programme and added to Workshops. Technical filename retained; no unsupported partnership claim added. |
 
@@ -45,6 +45,8 @@ The original `FindFormation.astro` markup and styles are unchanged. Existing wor
 | Reactivate selected card / return / Escape | Restores the formation and returns focus to that card. |
 | Arrow keys / Home / End on a card | Moves exploration focus between the five cards. Enter/Space uses native button activation. |
 | No JavaScript | All five sessions remain available as native disclosures; enhanced-only controls remain hidden. |
+
+A selected day is represented by its existing session fragment. Direct loading and reload open that day; Back/Forward restore the session and question focus. Return/Escape expose the formation and restore the selected card. Other anchors, including Back to top, retain their native destination.
 
 The progression stays below the existing site header. Its measured height is shared with scroll-margin calculations so expanded sessions land 24px beneath it. This avoids counting the header offset twice. Native smooth scrolling preserves spatial continuity; reduced motion uses instant positioning. Fill/stroke responses use the existing 200ms `--out` role and become effectively instant under reduced motion.
 

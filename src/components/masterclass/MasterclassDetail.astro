@@ -1,6 +1,7 @@
 ---
 import type { MasterclassDay } from '../../data/executive-masterclass';
-import { masterclassDays, masterclassTitle } from '../../data/executive-masterclass';
+import { masterclassDays } from '../../data/executive-masterclass';
+import { contactHref } from '../../lib/contact';
 interface Props {
   day: MasterclassDay;
 }
@@ -8,7 +9,7 @@ const { day } = Astro.props;
 const index = masterclassDays.findIndex((item) => item.id === day.id);
 const previous = masterclassDays[index - 1];
 const next = masterclassDays[index + 1];
-const subject = encodeURIComponent(`${masterclassTitle} — Day ${day.number}: ${day.stage}`);
+const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/workshops/strategic-design-leadership/' });
 ---
 <article class="masterclass-detail" data-masterclass-detail={day.id} aria-labelledby={`session-question-${day.id}`}>
   <div class="detail-topline">
@@ -32,7 +33,7 @@ const subject = encodeURIComponent(`${masterclassTitle} — Day ${day.number}: $
     <div><p class="meta">Standalone day. Connected programme.</p><p>Work on a live decision in this session, or connect its output with the other four days.</p></div>
     <p class="thread-link">{previous ? `In the full programme, this day builds on the ${previous.outputName}.` : 'The Opportunity Landscape frames the options and assumptions explored across the full programme.'} {next ? `It creates a foundation for day ${next.number}: ${next.stage}.` : 'This final dossier brings the five days’ decisions into one accountable direction.'}</p>
   </div>
-  <div class="detail-actions"><a class="button" href={`mailto:hello@thespottedape.com?subject=${subject}`}>Discuss day {day.number} <span aria-hidden="true">↗</span></a><button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Return to the formation ↑</button></div>
+  <div class="detail-actions"><a class="button" href={enquiry}>Discuss day {day.number} <span aria-hidden="true">↗</span></a><button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Return to the formation ↑</button></div>
   <nav class="session-navigation" aria-label="Move between workshop days" data-masterclass-enhancement hidden>
     {previous ? <button type="button" data-masterclass-go={previous.id}><span class="meta">← Day {previous.number}</span><span>{previous.stage}</span></button> : <span class="first-day meta">The option space starts here.</span>}
     {next ? <button class="next-session" type="button" data-masterclass-go={next.id}><span class="meta">Day {next.number} →</span><span>{next.stage}</span></button> : <button class="next-session" type="button" data-masterclass-return><span class="meta">All five days ↑</span><span>Return to the formation</span></button>}

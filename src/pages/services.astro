@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import ProblemLinks from '../components/ProblemLinks.astro';
+import { services } from '../data/practice';
+import { contactHref } from '../lib/contact';
+---
+<BaseLayout title="How we help | The Spotted Ape" description="Strategic Decision Design, Behavioural Design and Human–AI Decision Design. Start with the question your organisation needs to resolve.">
+  <PageIntro compact scale="long" eyebrow="How we help / The practice" description="Independent strategic decision and behavioural design. Start with the situation you need to resolve.">
+    <Fragment slot="heading">Start with<br />the decision.</Fragment>
+    <nav class="page-nav" aria-label="How we help page sections"><a href="#situations">Find your starting point ↓</a><a href="/contact/">Discuss your question ↗</a></nav>
+  </PageIntro>
+  <section class="service-start wrap" id="situations" aria-label="Choose a situation"><ProblemLinks /></section>
+  {services.map((service, index) => (
+    <section class:list={['service-section section-y', { 'theme-dark': index === 1 }]} id={service.id}>
+      <div class="wrap">
+        <div class="section-top meta"><p>{service.number} / The practice</p><p>{service.problem}</p></div>
+        <div class="service-heading"><h2>{service.title}</h2><img src={'/images/practice/' + ['decision', 'behaviour', 'human-ai'][index] + '.svg'} width="240" height="240" alt="" aria-hidden="true" loading="lazy" /></div>
+        <div class="split-layout service-content">
+          <div><p class="service-question">{service.question}</p><p class="service-description">{service.description}</p><a class:list={['button', { 'button--yellow': index === 1 }]} href={contactHref({ interest: service.interest, source: '/services/' })}>{index === 0 ? 'Discuss a strategic decision' : index === 1 ? 'Discuss a behavioural question' : 'Discuss decision authority'} <span aria-hidden="true">↗</span></a></div>
+          <div>
+            <p class="meta">The work</p><ul>{service.work.map(item => <li>{item}</li>)}</ul>
+            <div class="service-output"><p class="meta">A concrete output</p><p>{service.output}</p></div>
+            <div class="service-evidence"><p class="meta">{service.evidence.note}</p><a class="text-link" href={service.evidence.href}>{service.evidence.label} <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+  <section class="section-y theme-yellow"><div class="wrap split-layout"><h2 class="h2">The question<br />comes first.</h2><div><p class="lead">A working session can help a team examine a live choice. Research, learning and advisory conversations offer other ways to develop the judgement behind it.</p><div class="actions"><a class="text-link" href="/workshops">Explore decision workshops ↗</a><a class="text-link" href="/learning/">Workshops &amp; learning ↗</a></div><p class="service-practitioner">The independent practice of Marcel Maré. <a href="/about#section-05">Meet the practitioner ↗</a></p></div></div></section>
+</BaseLayout>
+<style>
+  .service-start { padding-bottom: var(--space-sm); }
+  .service-section { scroll-margin-top: calc(var(--header-height) + 24px); }
+  .service-heading { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+  .service-heading h2 { max-width: 18ch; font-size: var(--heading-2); line-height: 1.02; }
+  .service-heading img { width: 160px; height: 160px; flex-shrink: 0; object-fit: contain; }
+  .service-content { margin-top: 48px; }
+  .service-question { max-width: 24ch; font-size: var(--heading-4); line-height: 1.16; letter-spacing: -.04em; font-weight: 600; }
+  .service-description { font-size: var(--body); line-height: 1.55; max-width: 47ch; margin-top: 28px; }
+  .button { margin-top: 36px; }
+  ul { list-style: none; margin-top: 20px; padding: 0; }
+  li { border-top: 1px solid var(--line); padding-block: 18px; font-size: var(--body); line-height: 1.5; }
+  .theme-dark li { border-color: #555; }
+  .service-output { margin-top: 24px; border-left: 4px solid var(--signal); padding-left: 24px; }
+  .service-output > p + p { font-size: var(--body-large); line-height: 1.35; max-width: 34ch; }
+  .service-evidence { margin-top: 36px; }
+  .service-evidence .text-link { margin-top: 12px; }
+  .service-practitioner { margin-top: 32px; font-size: 16px; line-height: 1.6; }
+  @media (max-width: 767px) {
+    .service-heading { align-items: start; gap: 20px; }
+    .service-heading h2 { font-size: 40px; max-width: 12ch; }
+    .service-heading img { width: 72px; height: 72px; }
+    .service-question { font-size: 30px; }
+    .service-description, li { font-size: 18px; }
+    .service-output > p + p { font-size: 24px; }
+    .button { gap: 20px; padding-inline: 22px; }
+  }
+  @media (max-width: 359px) { .service-heading img { display: none; } }
+</style>

@@ -12,6 +12,7 @@ document.querySelectorAll<HTMLElement>('[data-masterclass]').forEach((root) => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let selected: string | null = null;
   let preview: string | null = null;
+  let handledHash: string | null = null;
   const behavior = (): ScrollBehavior => (reduced.matches ? 'instant' : 'smooth');
 
   function render() {
@@ -41,26 +42,49 @@ document.querySelectorAll<HTMLElement>('[data-masterclass]').forEach((root) => {
     root.dataset.state = selected ? 'expanded' : preview ? 'exploring' : 'formation';
   }
 
-  function closeSession() {
-    const prior = selected;
-    selected = null;
-    status!.textContent = 'Back to the five-day formation. Choose any strategic question.';
-    interaction.clearPreview();
-    const card = cards.find((item) => item.dataset.masterclassCard === prior);
-    card?.focus({ preventScroll: true });
-    card?.scrollIntoView({ block: 'center', behavior: behavior() });
+  function writeHash(hash: string) {
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    handledHash = hash;
   }
 
-  function openSession(id: string) {
+  function closeSession(
+    updateHistory = true,
+    movement: ScrollBehavior = behavior(),
+    restoreCard = true,
+  ) {
+    const prior = selected;
+    selected = null;
+    preview = null;
+    if (updateHistory) writeHash('#programme');
+    status!.textContent = 'Back to the five-day formation. Choose any strategic question.';
+    interaction.clearPreview();
+    render();
+    const card = cards.find((item) => item.dataset.masterclassCard === prior);
+    if (restoreCard) {
+      card?.focus({ preventScroll: true });
+      card?.scrollIntoView({ block: 'center', behavior: movement });
+    }
+  }
+
+  function openSession(id: string, updateHistory = true, movement: ScrollBehavior = behavior()) {
     const session = sessions.find((item) => item.dataset.masterclassSession === id);
     const card = cards.find((item) => item.dataset.masterclassCard === id);
     if (!session || !card) return;
     selected = id;
+    preview = null;
+    if (updateHistory) writeHash('#session-' + id);
     const stage = card.querySelector('.card-stage')?.textContent;
-    status!.textContent = `${stage} session open. All five days remain available in the programme progression.`;
+    status!.textContent =
+      stage + ' session open. All five days remain available in the programme progression.';
     render();
-    session.scrollIntoView({ block: 'start', behavior: behavior() });
-    session.querySelector<HTMLElement>('h3')?.focus({ preventScroll: true });
+    session.scrollIntoView({ block: 'start', behavior: movement });
+    const focusQuestion = () => {
+      if (selected === id && !session.hidden)
+        session.querySelector<HTMLElement>('h3')?.focus({ preventScroll: true });
+    };
+    focusQuestion();
+    // Native fragment restoration can move focus after popstate; restore it after that step.
+    if (!updateHistory) requestAnimationFrame(focusQuestion);
   }
 
   const interaction = bindFormationChoices(root, {
@@ -82,7 +106,7 @@ document.querySelectorAll<HTMLElement>('[data-masterclass]').forEach((root) => {
   });
   root
     .querySelectorAll<HTMLButtonElement>('[data-masterclass-return]')
-    .forEach((control) => control.addEventListener('click', closeSession));
+    .forEach((control) => control.addEventListener('click', () => closeSession()));
   cards.forEach((card, index) =>
     card.addEventListener('keydown', (event) => {
       const moves: Record<string, number> = {
@@ -104,6 +128,21 @@ document.querySelectorAll<HTMLElement>('[data-masterclass]').forEach((root) => {
       closeSession();
     }
   });
+
+  // The fragment is the only persisted programme state; it contains no visitor data.
+  function restoreFromLocation() {
+    if (location.hash === handledHash) return;
+    handledHash = location.hash;
+    const id = location.hash.startsWith('#session-') ? location.hash.slice(9) : '';
+    if (sessions.some((session) => session.dataset.masterclassSession === id))
+      openSession(id, false, 'instant');
+    else if (selected)
+      closeSession(false, 'instant', !location.hash || location.hash === '#programme');
+    else render();
+  }
+  window.addEventListener('hashchange', restoreFromLocation);
+  window.addEventListener('popstate', restoreFromLocation);
+
   root.dataset.enhanced = 'true';
   root.querySelector<HTMLElement>('[data-masterclass-fallback]')?.setAttribute('hidden', '');
   root.querySelectorAll<HTMLElement>('[data-masterclass-enhancement]').forEach((element) => {
@@ -111,8 +150,9 @@ document.querySelectorAll<HTMLElement>('[data-masterclass]').forEach((root) => {
   });
   progression.hidden = false;
   const measureProgression = () =>
-    root.style.setProperty('--progression-height', `${progression.offsetHeight}px`);
+    root.style.setProperty('--progression-height', progression.offsetHeight + 'px');
   new ResizeObserver(measureProgression).observe(progression);
   measureProgression();
   render();
+  requestAnimationFrame(restoreFromLocation);
 });

@@ -1,0 +1,340 @@
+{
+  "checks": [
+    {
+      "url": "https://thespottedape.com/research/index.html",
+      "finalUrl": "https://thespottedape.com/research/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "10172"
+    },
+    {
+      "url": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "finalUrl": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "17656"
+    },
+    {
+      "url": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "finalUrl": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "10375"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/",
+      "finalUrl": "https://marcelmare.com/dla-course-2/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "10235"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/decide.html",
+      "finalUrl": "https://marcelmare.com/dla-course-2/decide.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "10273"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+      "finalUrl": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "length": "21845"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+      "finalUrl": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "length": "4771"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+      "finalUrl": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "length": "3345"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+      "finalUrl": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "length": "2792"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+      "finalUrl": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "length": "23874"
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+      "finalUrl": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "9190"
+    },
+    {
+      "url": "https://marcelmare.com",
+      "finalUrl": "https://marcelmare.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "length": "9609"
+    }
+  ],
+  "rendered": [
+    {
+      "slug": "research",
+      "status": 200,
+      "url": "https://thespottedape.com/research/index.html",
+      "title": "Research – The Spotted Ape",
+      "h1": [
+        "Research"
+      ],
+      "text": "Skip to content\nTHESPOTTEDAPE\nCourses\nWorkshops & Labs\nChallenges\nMethodology\nThinking\nAbout\nDiscuss a challenge ↗\n\nResearch\n\nAcademic Papers, Publications & Reports\nFigure 1: Application of Behaviour Centred Design to a cookstove intervention in South Africa.\nFigure 2: Investigated customer preferences for improved flame-based cookstove features in South Africa.\n\nMarcel’s scholarly work centres on advancing sustainable energy solutions in sub-Saharan Africa, with a specific focus on the strategic design and widespread dissemination of improved cookstoves. His interdisciplinary research approach integrates design thinking with behavioural insights and social marketing principles [1], [2].\n\nSocial Marketing and Consumer Preferences\n\nHis work has contributed to understanding the role of social marketing in the adoption of improved bio-energy technologies [3]. He has further investigated consumer preferences for cookstove features in South African regions, employing willingness-to-pay surveys to refine marketing strategies for stove dissemination [4], [5], as illustrated in Figure 2.\n\nService Design and Behavioural Goals\n\nHe has explored the application of service design principles to identify and implement behavioural goals that could boost the uptake of improved cookstoves [6], [7]. This approach signifies a shift from product-focused strategies to comprehensive service design strategies, emphasising human-centred design and observational field research.\n\nBehavioural Change through Design Approaches\n\nSince 2021 his research delves into the influence of Behaviour Centred Design (BCD) on the health and wellbeing of indigent households in South Africa [1], [8], [9]. As illustrated in Figure 1, he examined how BCD approaches can modify cookstove-related behaviours and address broader social, economic, and environmental challenges.\n\nGuest Lectures & Speaking Engagements\nFigure 3: Impact of digital learning platforms on design education.\nFigure 4: TEDx Stellenbosch 2010.\nFigure 5: Designing with Time at NID, India.\n\nMarcel’s guest lectures span themes of design education, African innovation, and sustainable development. His talks range from digital learning [10] to the economics of sustainable energy [11]. He has presented on the competitive advantage of African design [12], [13], [14]. His application of design for social impact is illustrated in his TEDx talk [15] (Figure 4). International engagements include courses at NID India [16] (Figure 5) and exploring educational approaches [17], [18].\n\nReferences\n[1]\nM. Maré, M. K. M’Rithaa, and A. Chisin, ‘Influencing motivations linked to the adoption of improved flame-based cookstoves among indigent South African households: A behaviour-centred design approach’, Sustain. Sci. Pract. Policy, vol. 15, no. 6, p. 5328, 2023, doi: 10.3390/su15065328.\n[2]\nM. Maré, ‘Influence of behaviour centred design approaches on the diffusion of flame-based cookstoves among indigent south african households’, Doctor of Technology: Design, Cape Peninsula University of Technology, 2023.\n[3]\nM. Maré and H. J. Annegarn, ‘The applicability of social marketing in the uptake of bio-energy based technologies’, in Proceedings of the people energy network (PEN) conference, Gaborone, Botswana: University of Botswana, 2010, pp. 1–5. doi: 10.5281/zenodo.8006433.\n[4]\nM. Maré, ‘The applicability of “willingness to pay” for the diffusion of energy-efficient domestic stove technologies in the Southern African market’, in 2013 Proceedings of the 21st Domestic Use of Energy Conference, Cape Town: IEEE Xplore, 2013, pp. 1–6.\n[5]\nM. Maré and H. J. Annegarn, ‘Customer preferences for improved flame-based cookstove features in two South African study areas’, in Proceedings of the 22nd Conference on the Domestic Use of Energy, DUE 2014, Cape Town: IEEE Xplore, 2014, pp. 1–8. doi: 10.1109/DUE.2014.6827749.\n[6]\nM. Maré, ‘User experience observations with improved flame-based cookstoves among a sample of South African households’, in Proceedings of the LeNSes Conference: Sustainable Energy for All by Design, E. Delfino and C. Vezzoli, Eds, in Volume 5. Cape Town: Cape Peninsula University of Technology, 2016, pp. 319–332. doi: 10.5281/zenodo.8006944.\n[7]\nM. Maré and H. J. Annegarn, ‘The use of Willingness to Pay in determining customer preferences for improved flame-based cookstove features in two South African study areas’, Social Marketing Quarterly, vol. 24, no. 3, pp. 335–353, 2017, doi: 10.1177/1524500417732773.\n[8]\n",
+      "links": [
+        {
+          "text": "Skip to content",
+          "href": "https://thespottedape.com/research/#content-start"
+        },
+        {
+          "text": "THESPOTTEDAPE",
+          "href": "https://thespottedape.com/"
+        },
+        {
+          "text": "Courses",
+          "href": "https://thespottedape.com/Courses/"
+        },
+        {
+          "text": "Workshops & Labs",
+          "href": "https://thespottedape.com/workshops/"
+        },
+        {
+          "text": "Challenges",
+          "href": "https://thespottedape.com/challenges/"
+        },
+        {
+          "text": "Methodology",
+          "href": "https://thespottedape.com/methodology/"
+        },
+        {
+          "text": "Thinking",
+          "href": "https://thespottedape.com/thinking/"
+        },
+        {
+          "text": "About",
+          "href": "https://thespottedape.com/about/"
+        },
+        {
+          "text": "Discuss a challenge ↗",
+          "href": "https://thespottedape.com/contact/"
+        },
+        {
+          "text": "",
+          "href": "#academic-papers-publications-reports"
+        },
+        {
+          "text": "",
+          "href": "#fig-bcd"
+        },
+        {
+          "text": "",
+          "href": "#fig-mamelodi"
+        },
+        {
+          "text": "[1]",
+          "href": "https://thespottedape.com/research/#ref-Mare2023-uu"
+        },
+        {
+          "text": "[2]",
+          "href": "https://thespottedape.com/research/#ref-mare2023thesis"
+        },
+        {
+          "text": "",
+          "href": "#social-marketing-and-consumer-preferences"
+        },
+        {
+          "text": "[3]",
+          "href": "https://thespottedape.com/research/#ref-Mare2010-hs"
+        },
+        {
+          "text": "[4]",
+          "href": "https://thespottedape.com/research/#ref-Mare2013-dz"
+        },
+        {
+          "text": "[5]",
+          "href": "https://thespottedape.com/research/#ref-Mare2014-hd"
+        }
+      ]
+    },
+    {
+      "slug": "live-course",
+      "status": 200,
+      "url": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "title": "Should We Invest in Solar?",
+      "h1": [
+        "Should We Invest in Solar?",
+        "Should We Invest in Solar?"
+      ],
+      "text": "THE SPOTTED APE\nCOURSES\nSHOULD WE INVEST IN SOLAR?\nSkip course navigation\n\nOpen course in new window ↗\n\nStart\nUnderstand\nSpreadsheet Essentials\nBuild\nTest\nDecide\nReflect\n\nCAPE MANUFACTURING · INVESTMENT CASE\n\nShould We Invest in Solar?\n\nThree solar proposals. One investment decision. Use Excel to build the evidence, test the assumptions and advise management.\n\n65–80 minutes\nBeginner spreadsheet level\nMicrosoft Excel\n\nCASE STUDY · CAPE MANUFACTURING · THE INVESTMENT BRIEF\n\nCape Manufacturing is a fictional Western Cape industrial producer facing material electricity costs. Three suppliers have proposed rooftop solar systems costing R650,000 to R990,000. Management wants to reduce grid purchases; any resilience benefit still needs verification. You have been employed as a trainee accountant to assist with the commercial analysis. The financial director has texted you with the following request:\n\nFD\n\nMonday 08:30 · Financial Director\n\nHelp us decide which solar proposal to take forward.\n\nWelcome as our new trainee accountant. Please could you assist. You need to compare the proposals on a common basis, test the assumptions and bring me a recommendation this afternoon. We need evidence before committing capital.\n\nWatch: Introduction to the learning activity · 1 minute\nWhat you will learn\n\nOn successful completion of this activity, you should be able to:\n\nBuild an auditable Excel model comparing alternative investments.\nAnalyse financial results using payback, NPV and sensitivity analysis.\nEvaluate assumptions and supplier claims using professional judgement and scepticism.\nCommunicate a concise, evidence-based recommendation to management.\nWhat you will produce\n\nYour workbook will contain a Year-1 comparison, one management chart with a short design rationale, a sensitivity table and a recommendation of 100 words or fewer. You will also request evidence for Supplier C’s environmental claim and briefly reflect on how your judgement developed.\n\nThe spreadsheet provides the evidence. The decisions require your judgement.\n\nGet your workbook\n\nComplete the activity in Microsoft Excel using the supplied workbook. Save a working copy with your name before entering formulas.\n\nStudent workbook\n.xlsx · download\nCase brief\nPDF · open\nQuick reference\nExcel + Sheets · PDF\nFormula help\nPDF · diagnostic\nGoogle Sheets compatibility\nBegin with the business problem\n\nOpen Start Here and read the brief. The five tabs keep the work traceable: Start Here provides orientation, Case Data holds inputs, Your Model contains your Year-1 calculations, Test Assumptions supports sensitivity analysis, and Recommendation records your advice.\n\nFollow Understand → Spreadsheet Essentials → Build → Test → Decide → Reflect. Start by interpreting the supplier data before entering formulas. Spreadsheet Essentials provides the few prerequisite moves a beginner needs; later checkpoints help you diagnose errors as you work.\n\nFor reviewers: the Reviewer Rationale provides a five-minute route through the Excel tasks, learning design and evidence of achievement.\n\nSOUTH AFRICAN COMMERCIAL CONTEXT\n\nCape Manufacturing is a fictional Western Cape industrial producer. All monetary values are in South African Rand (R). The electricity tariff, escalation rate and other financial parameters are assumptions, not forecasts of South African tariffs or investment conditions. Unless stated otherwise, use the figures exactly as provided and do not introduce VAT, tax, financing or feed-in revenue into the model.\n\nNext: understand the business data before building the model.\n\nGlossary & further reading · optional\nNext: Understand →",
+      "links": [
+        {
+          "text": "THE SPOTTED APE",
+          "href": "https://thespottedape.com/"
+        },
+        {
+          "text": "COURSES",
+          "href": "https://thespottedape.com/Courses/"
+        },
+        {
+          "text": "Skip course navigation",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/#learning-content"
+        },
+        {
+          "text": "Open course in new window ↗",
+          "href": "https://marcelmare.com/dla-course-2/"
+        },
+        {
+          "text": "Start",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/"
+        },
+        {
+          "text": "Understand",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/understand.html"
+        },
+        {
+          "text": "Spreadsheet Essentials",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/spreadsheet-essentials.html"
+        },
+        {
+          "text": "Build",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/build.html"
+        },
+        {
+          "text": "Test",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/test.html"
+        },
+        {
+          "text": "Decide",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/decide.html"
+        },
+        {
+          "text": "Reflect",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/reflect.html"
+        },
+        {
+          "text": "Student workbook\n.xlsx · download",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx"
+        },
+        {
+          "text": "Case brief\nPDF · open",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/downloads/Cape_Manufacturing_Case_Brief.pdf"
+        },
+        {
+          "text": "Quick reference\nExcel + Sheets · PDF",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf"
+        },
+        {
+          "text": "Formula help\nPDF · diagnostic",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/downloads/Formula_Troubleshooting_Card.pdf"
+        },
+        {
+          "text": "Reviewer Rationale",
+          "href": "https://thespottedape.com/Courses/solar-investment/learn/reviewer-rationale.html"
+        },
+        {
+          "text": "",
+          "href": "https://www.accountancysa.org.za/professional-scepticism-explained/"
+        },
+        {
+          "text": "",
+          "href": "https://www.accaglobal.com/uk/en/student/exam-support-resources/prodipsust-study-resources/technical-articles/investment-appraisal.html"
+        }
+      ]
+    },
+    {
+      "slug": "alternative-course",
+      "status": 200,
+      "url": "https://marcelmare.com/dla-course-2/",
+      "title": "Should We Invest in Solar? – Digital Acumen | Solar Investment Case",
+      "h1": [
+        "Should We Invest in Solar?",
+        "Should We Invest in Solar?"
+      ],
+      "text": "Should We Invest in Solar?\nDevelop your Digital Acumen with Excel: Cape Manufacturing solar investment case study\nSkip course navigation\n\nOpen course in new window ↗\n\nStart\nUnderstand\nSpreadsheet Essentials\nBuild\nTest\nDecide\nReflect\n\nCAPE MANUFACTURING · INVESTMENT CASE\n\nShould We Invest in Solar?\n\nThree solar proposals. One investment decision. Use Excel to build the evidence, test the assumptions and advise management.\n\n65–80 minutes\nBeginner spreadsheet level\nMicrosoft Excel\n\nCASE STUDY · CAPE MANUFACTURING · THE INVESTMENT BRIEF\n\nCape Manufacturing is a fictional Western Cape industrial producer facing material electricity costs. Three suppliers have proposed rooftop solar systems costing R650,000 to R990,000. Management wants to reduce grid purchases; any resilience benefit still needs verification. You have been employed as a trainee accountant to assist with the commercial analysis. The financial director has texted you with the following request:\n\nFD\n\nMonday 08:30 · Financial Director\n\nHelp us decide which solar proposal to take forward.\n\nWelcome as our new trainee accountant. Please could you assist. You need to compare the proposals on a common basis, test the assumptions and bring me a recommendation this afternoon. We need evidence before committing capital.\n\nWatch: Introduction to the learning activity · 1 minute\nWhat you will learn\n\nOn successful completion of this activity, you should be able to:\n\nBuild an auditable Excel model comparing alternative investments.\nAnalyse financial results using payback, NPV and sensitivity analysis.\nEvaluate assumptions and supplier claims using professional judgement and scepticism.\nCommunicate a concise, evidence-based recommendation to management.\nWhat you will produce\n\nYour workbook will contain a Year-1 comparison, one management chart with a short design rationale, a sensitivity table and a recommendation of 100 words or fewer. You will also request evidence for Supplier C’s environmental claim and briefly reflect on how your judgement developed.\n\nThe spreadsheet provides the evidence. The decisions require your judgement.\n\nGet your workbook\n\nComplete the activity in Microsoft Excel using the supplied workbook. Save a working copy with your name before entering formulas.\n\nStudent workbook\n.xlsx · download\nCase brief\nPDF · open\nQuick reference\nExcel + Sheets · PDF\nFormula help\nPDF · diagnostic\nGoogle Sheets compatibility\nBegin with the business problem\n\nOpen Start Here and read the brief. The five tabs keep the work traceable: Start Here provides orientation, Case Data holds inputs, Your Model contains your Year-1 calculations, Test Assumptions supports sensitivity analysis, and Recommendation records your advice.\n\nFollow Understand → Spreadsheet Essentials → Build → Test → Decide → Reflect. Start by interpreting the supplier data before entering formulas. Spreadsheet Essentials provides the few prerequisite moves a beginner needs; later checkpoints help you diagnose errors as you work.\n\nFor reviewers: the Reviewer Rationale provides a five-minute route through the Excel tasks, learning design and evidence of achievement.\n\nSOUTH AFRICAN COMMERCIAL CONTEXT\n\nCape Manufacturing is a fictional Western Cape industrial producer. All monetary values are in South African Rand (R). The electricity tariff, escalation rate and other financial parameters are assumptions, not forecasts of South African tariffs or investment conditions. Unless stated otherwise, use the figures exactly as provided and do not introduce VAT, tax, financing or feed-in revenue into the model.\n\nNext: understand the business data before building the model.\n\nGlossary & further reading · optional\nNext: Understand →",
+      "links": [
+        {
+          "text": "Skip course navigation",
+          "href": "https://marcelmare.com/dla-course-2/#learning-content"
+        },
+        {
+          "text": "Open course in new window ↗",
+          "href": "https://marcelmare.com/dla-course-2/"
+        },
+        {
+          "text": "Start",
+          "href": "https://marcelmare.com/dla-course-2/"
+        },
+        {
+          "text": "Understand",
+          "href": "https://marcelmare.com/dla-course-2/understand.html"
+        },
+        {
+          "text": "Spreadsheet Essentials",
+          "href": "https://marcelmare.com/dla-course-2/spreadsheet-essentials.html"
+        },
+        {
+          "text": "Build",
+          "href": "https://marcelmare.com/dla-course-2/build.html"
+        },
+        {
+          "text": "Test",
+          "href": "https://marcelmare.com/dla-course-2/test.html"
+        },
+        {
+          "text": "Decide",
+          "href": "https://marcelmare.com/dla-course-2/decide.html"
+        },
+        {
+          "text": "Reflect",
+          "href": "https://marcelmare.com/dla-course-2/reflect.html"
+        },
+        {
+          "text": "Student workbook\n.xlsx · download",
+          "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx"
+        },
+        {
+          "text": "Case brief\nPDF · open",
+          "href": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf"
+        },
+        {
+          "text": "Quick reference\nExcel + Sheets · PDF",
+          "href": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf"
+        },
+        {
+          "text": "Formula help\nPDF · diagnostic",
+          "href": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf"
+        },
+        {
+          "text": "Reviewer Rationale",
+          "href": "https://marcelmare.com/dla-course-2/reviewer-rationale.html"
+        },
+        {
+          "text": "",
+          "href": "https://www.accountancysa.org.za/professional-scepticism-explained/"
+        },
+        {
+          "text": "",
+          "href": "https://www.accaglobal.com/uk/en/student/exam-support-resources/prodipsust-study-resources/technical-articles/investment-appraisal.html"
+        },
+        {
+          "text": "Next: Understand →",
+          "href": "https://marcelmare.com/dla-course-2/understand.html"
+        }
+      ]
+    }
+  ]
+}

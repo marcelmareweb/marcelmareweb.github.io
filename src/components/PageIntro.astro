@@ -1,14 +1,17 @@
 ---
+import Breadcrumbs from './Breadcrumbs.astro';
 interface Props {
   eyebrow: string;
   description?: string;
   scale?: 'default' | 'short' | 'long';
   id?: string;
+  compact?: boolean;
 }
-const { eyebrow, description, scale = 'default', id } = Astro.props;
+const { eyebrow, description, scale = 'default', id, compact = false } = Astro.props;
 ---
-<section class={`page-intro page-intro--${scale}`} id={id}>
+<section class:list={['page-intro', 'page-intro--' + scale, { 'page-intro--compact': compact }]} id={id}>
 <div class="wrap">
+<Breadcrumbs />
 <div class="section-top meta">
 <p class="meta-dot">{eyebrow}</p>
 <p>Independent practice / Cape Town</p>

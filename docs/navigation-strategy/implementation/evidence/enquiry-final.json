@@ -1,0 +1,80 @@
+{
+  "scope": "All POSTs mocked; recovery mail click prevented.",
+  "records": [
+    {
+      "id": "success-edited-day",
+      "day": "integrator",
+      "audience": "individual",
+      "required": [
+        "name",
+        "email",
+        "context"
+      ],
+      "nameCleared": ""
+    },
+    {
+      "id": "recovery-uses-latest-edits",
+      "subject": "The Spotted Ape enquiry — Behavioural Design & Research",
+      "body": "Name: Navigation test\nEmail: audit@example.invalid\nArea: Behavioural Design & Research\nOrigin: /courses\nEdited synthetic behavioural question.",
+      "clearedModule": "",
+      "nameRetained": "Navigation test",
+      "mailNavigationPrevented": true
+    },
+    {
+      "id": "invalid-context-ignored",
+      "interest": "",
+      "contextHidden": true,
+      "module": "",
+      "day": "",
+      "returnHref": "/services/"
+    }
+  ],
+  "posts": [
+    {
+      "name": "Navigation test",
+      "email": "audit@example.invalid",
+      "context": "Synthetic programme question.",
+      "roleOrganization": "",
+      "teamSize": "",
+      "engagement": "Executive Masterclass",
+      "programme": "Strategic Design Leadership in the Age of AI",
+      "programmeDay": "integrator",
+      "courseModule": "",
+      "attendance": "individual",
+      "offeringContext": "Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well? · Individual attendance enquiry",
+      "source": "/learning",
+      "pageUrl": "http://localhost:4328/contact/",
+      "subject": "The Spotted Ape enquiry — Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well? · Individual attendance enquiry",
+      "_subject": "The Spotted Ape enquiry — Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well? · Individual attendance enquiry",
+      "replyto": "audit@example.invalid",
+      "_replyto": "audit@example.invalid",
+      "from_name": "The Spotted Ape Website",
+      "_captcha": "false",
+      "_template": "table",
+      "_honey": ""
+    },
+    {
+      "name": "Navigation test",
+      "email": "audit@example.invalid",
+      "context": "Synthetic module question.",
+      "roleOrganization": "",
+      "teamSize": "",
+      "engagement": "Strategy Course (DLA)",
+      "programme": "",
+      "programmeDay": "",
+      "courseModule": "05",
+      "attendance": "",
+      "offeringContext": "Solar learning case / Team session · Module 05 — Decide",
+      "source": "/courses",
+      "pageUrl": "http://localhost:4328/contact/",
+      "subject": "The Spotted Ape enquiry — Solar learning case / Team session · Module 05 — Decide",
+      "_subject": "The Spotted Ape enquiry — Solar learning case / Team session · Module 05 — Decide",
+      "replyto": "audit@example.invalid",
+      "_replyto": "audit@example.invalid",
+      "from_name": "The Spotted Ape Website",
+      "_captcha": "false",
+      "_template": "table",
+      "_honey": ""
+    }
+  ]
+}

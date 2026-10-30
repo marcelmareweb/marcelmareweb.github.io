@@ -1,0 +1,194 @@
+[
+  {
+    "width": 1024,
+    "path": "/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/services/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/work/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/courses",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1024,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 984,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/services/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/work/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/courses",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1440,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1400,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/services/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/work/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/courses",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  },
+  {
+    "width": 1920,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "headerOverlap": false,
+    "headerRight": 1860,
+    "controlsOutside": []
+  }
+]

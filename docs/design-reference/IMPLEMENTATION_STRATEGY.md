@@ -1,6 +1,6 @@
 # Implementation strategy — definitive direction
 
-This document replaces the earlier redesign proposal. The [Definitive direction](DEFINITIVE_DIRECTION.md) is authoritative. Reference observations in the investigation remain evidence; baseline local-site descriptions and archived prototypes are historical.
+This document replaces the earlier redesign proposal. The subsequently authorised [navigation implementation](../navigation-strategy/implementation/IMPLEMENTATION.md) updates page connections, homepage order and enquiry handling while retaining these visual foundations. The [Definitive direction](DEFINITIVE_DIRECTION.md) is authoritative. Reference observations in the investigation remain evidence; baseline local-site descriptions and archived prototypes are historical.
 
 ## Practice and content
 
@@ -22,9 +22,9 @@ The former AI-agency positioning, !Kharos Strategy and Agentic Mastery automatio
 
 ### Homepage
 
-Oversized two-line current proposition → dark Formation instrument → large practice feature-card sequence with native disclosures → research spread → decision map and editorial material → yellow decision invitation → shared dark footer. The yellow underline, explicit commitment relationships and ape wordmark retain the practice's identity.
+Oversized two-line proposition with direct support/learning routes → problem-led entry links → selected evidence → the original practice feature cards with capability-specific links → workshops/learning options → optional Formation exercise → decision map and editorial material → yellow contact invitation → shared dark footer. The full qualified research spread is retained on `/work/`. The yellow underline, explicit commitment relationships and ape wordmark retain the practice's identity.
 
-Formation retains all alternatives, the two-commitment limit, live status, consequence copy, reset and static worked example. The diagram is a labelled horizontally scrollable region at narrow widths; its readable HTML choices and consequences remain in normal flow.
+Formation retains all alternatives, the two-commitment limit, live status, consequence copy, reset and static worked example. The diagram keeps its aligned two-row layout at narrow widths; its readable HTML choices and consequences remain in normal flow.
 
 ### About
 
@@ -61,7 +61,7 @@ Privacy, terms and 404 use the same foundation. Legal substance is preserved; pr
 | `PracticeSection` | Three current capabilities in large editorial cards; original SVG visuals; desktop horizontal scroll progression, mobile native swipe, keyboard/direct navigation, native disclosures and a reduced-motion vertical stack |
 | `FindFormation` | Existing decision exercise and consequences |
 | `CourseSyllabus` | Real course data, proposal table, accessible module selection and static fallback |
-| `BookingSection` | Current service interests, optional course-module context, provider delivery/pending/success/failure, email fallback |
+| `BookingSection` | Shared native/enhanced form: three required fields, optional organisation/team information, editable programme/day/module context, provider delivery/pending/success/failure and current-value email recovery |
 | `StrategicMatrix` | Semantic table and explicit axes; no client runtime |
 
 Compatibility entry points for retired components do not render the retired methodology. Unused historical data and planning artifacts are not active brand direction.

@@ -2,6 +2,8 @@
 const capabilities = [
   {
     number: '01',
+    href: '/services/#strategic-decision-design',
+    action: 'Explore strategic decision support',
     lead: 'Strategic',
     lines: ['Decision', 'Design.'],
     image: 'decision',
@@ -13,6 +15,8 @@ const capabilities = [
   },
   {
     number: '02',
+    href: '/services/#behavioural-design',
+    action: 'Explore behavioural design support',
     lead: 'Behavioural',
     lines: ['Design.'],
     image: 'behaviour',
@@ -24,6 +28,8 @@ const capabilities = [
   },
   {
     number: '03',
+    href: '/services/#human-ai-decision-design',
+    action: 'Explore Human–AI decision support',
     lead: 'Human–AI',
     lines: ['Decision', 'Design.'],
     image: 'human-ai',
@@ -40,7 +46,7 @@ const capabilities = [
   <span id="work" aria-hidden="true"></span>
   <div class="wrap">
     <div class="section-top meta">
-      <p>01 / The practice</p>
+      <p>03 / The practice</p>
       <p>Choices. People. Consequences.</p>
     </div>
     <h2 class="section-title" data-reveal>Decide.<br />Make it happen.</h2>
@@ -61,6 +67,7 @@ const capabilities = [
                     <span class="practice-title-rest">{item.lines.map(line => <span>{line}</span>)}</span>
                   </h3>
                   <p class="practice-summary">{item.summary.map(line => <span>{line}</span>)}</p>
+                  <a class="practice-card-link" href={item.href}>{item.action} <span aria-hidden="true">↗</span></a>
                 </div>
                 <div class="practice-art" aria-hidden="true">
                   <img src={`/images/practice/${item.image}.svg`} alt="" width="600" height="600" loading="lazy" decoding="async" />
@@ -105,7 +112,7 @@ const capabilities = [
   <div class="wrap">
     <div class="evidence-foot">
       <p class="lead">Strategic decisions, behavioural science<br />and human judgement. Working together.</p>
-      <a class="text-link" href="/workshops">Explore decision workshops <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="/services/">Explore how we help <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
@@ -115,6 +122,11 @@ const capabilities = [
 </script>
 
 <style>
+  .practice-card-link { display: inline-flex; gap: 12px; align-items: center; width: fit-content; min-height: 44px; flex-shrink: 0; margin-top: 12px; color: white; border-bottom: 1px solid #777; text-decoration: none; font-size: 16px; line-height: 1.3; }
+  .practice-card-link:hover { border-color: var(--signal); }
+  .practice-card-link > span { color: var(--signal); }
+  @media (max-width: 1023px) { .practice-card-link { margin-top: 20px; } }
+
   .practice-section {
     --practice-card-height: clamp(520px, 39vw, 680px);
     --practice-stage-height: calc(100svh - var(--header-height) - 48px);

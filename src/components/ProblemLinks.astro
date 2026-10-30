@@ -1,0 +1,30 @@
+---
+import { services } from '../data/practice';
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+---
+<nav class:list={['problem-links', { 'problem-links--compact': compact }]} aria-label="Start with your situation">
+  {services.map(service => (
+    <a href={'/services/#' + service.id}>
+      <span class="meta">{service.number} / {service.title.replace(/\.$/, '')}</span>
+      <span class="problem-link-title">{service.problem}</span>
+      <span class="problem-link-arrow" aria-hidden="true">↗</span>
+    </a>
+  ))}
+</nav>
+<style>
+  .problem-links { border-top: 1px solid var(--line); }
+  a { display: grid; grid-template-columns: minmax(170px, .8fr) minmax(0, 2fr) 32px; gap: 32px; align-items: center; min-height: 112px; padding: 28px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+  .meta { max-width: 25ch; line-height: 1.5; }
+  .problem-link-title { font-size: var(--heading-4); font-weight: 600; letter-spacing: -.045em; line-height: 1.1; }
+  .problem-link-arrow { justify-self: end; font-size: 28px; transition: transform .3s var(--out); }
+  a:hover .problem-link-arrow { transform: translate(3px, -3px); }
+  a:hover .problem-link-title { text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 7px; text-decoration-thickness: 4px; }
+  .problem-links--compact .problem-link-title { font-size: var(--body-large); }
+  @media (max-width: 767px) {
+    a { grid-template-columns: 1fr 24px; gap: 18px; padding-block: 24px; }
+    .meta { grid-column: 1/-1; max-width: none; }
+    .problem-link-title { font-size: 30px; }
+    .problem-link-arrow { font-size: 24px; }
+  }
+</style>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mobile-menu-escape-settled",
+    "open": false,
+    "focusIsTrigger": true,
+    "bodyOverflow": ""
+  },
+  {
+    "id": "mobile-menu-to-courses",
+    "url": "http://localhost:4328/courses"
+  },
+  {
+    "id": "mobile-course-module",
+    "title": "Decide",
+    "selected": "05",
+    "liveLink": "https://marcelmare.com/dla-course-2/decide.html"
+  },
+  {
+    "id": "mobile-module-to-enquiry",
+    "module": "05",
+    "interest": "Strategy Course (DLA)",
+    "notice": "Course module 05 — Decide selected for your cohort enquiry."
+  },
+  {
+    "id": "mobile-masterclass-day02",
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+    "question": "Why will customers choose us over alternatives?",
+    "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2002%3A%20Practitioner",
+    "overflow": false
+  },
+  {
+    "id": "mobile-masterclass-day05",
+    "question": "How will we govern decisions and sustain advantage?"
+  },
+  {
+    "id": "mobile-formation",
+    "selected": [
+      "market",
+      "customers"
+    ],
+    "status": "Capacity is limited to two commitments. Select a yellow shape to clear it before backing another. Your earlier choices are unchanged."
+  },
+  {
+    "id": "mobile-behavioural-card",
+    "url": "http://localhost:4328/#practice",
+    "index": "02",
+    "copy": "02 / THE PRACTICE\n\nBehavioural\nDesign.\n\nBegin with what people actually do.\n\nQuestions & outcomes\n\nQUESTIONS WORTH ASKING\n\nWhich incentives, barriers and working conditions prevent people from acting on an agreed decision?\n\nTHE WORK\n\nResearch and interventions grounded in the conditions of real work.",
+    "overflow": false
+  }
+]

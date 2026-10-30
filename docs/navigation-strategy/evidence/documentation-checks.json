@@ -1,0 +1,13 @@
+{
+  "markdown_files": 5,
+  "local_markdown_links_checked": 131,
+  "missing_local_targets": [],
+  "invalid_markdown_fragments": [],
+  "json_records_parsed": 25,
+  "screenshots_decoded": 33,
+  "tracked_worktree_unchanged": true,
+  "index_unchanged": true,
+  "head_matches_baseline": true,
+  "changed_paths_outside_authorised_directory": [],
+  "astro_check_and_build": "Not run: no application .astro/.ts or other application source files were changed."
+}

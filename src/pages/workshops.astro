@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import BookingSection from '../components/BookingSection.astro';
 import RaykisWorkshopTeaser from '../components/RaykisWorkshopTeaser.astro';
+import { contactHref } from '../lib/contact';
 
 const facilitationPhases = [
   {
@@ -66,13 +67,15 @@ const clientDeliverables = [
 ];
 ---
 <BaseLayout title="Strategic Decision Workshops | The Spotted Ape" description="Facilitated examination of strategic alternatives, assumptions, trade-offs and responsibility. Independent strategic decision and behavioural design practice.">
-<PageIntro eyebrow="Workshops / Strategic decisions" description="Examine a live strategic choice: its alternatives, assumptions, trade-offs and responsibilities." id="section-01">
+<PageIntro compact scale="long" eyebrow="Workshops / Strategic decisions" description="Examine a live strategic choice: its alternatives, assumptions, trade-offs and responsibilities." id="section-01">
 <Fragment slot="heading">From competing<br />perspectives to<br />collective decisions.</Fragment>
+<Fragment slot="aside">For teams facing a live strategic choice.<br />Scope discussed around the decision.</Fragment>
+<div class="actions"><a class="button" href={contactHref({ interest: 'workshop', source: '/workshops' })}>Discuss a workshop <span aria-hidden="true">↗</span></a><a class="text-link" href="/learning/">All workshops &amp; learning ↗</a></div>
 <nav class="page-nav" aria-label="Workshop page sections">
 <a href="#section-02">How it works ↓</a>
 <a href="#section-04">Situations &amp; questions ↓</a>
 <a href="/workshops/strategic-design-leadership/">Five-day executive masterclass ↗</a>
-<a href="#book">Discuss a workshop ↗</a>
+<a href="#book">Workshop enquiry form ↓</a>
 </nav>
 </PageIntro>
 <section class="workshop-banner theme-yellow">
@@ -151,8 +154,9 @@ const clientDeliverables = [
 </dl>
 </div>
 </section>
+<section class="section-y theme-grey"><div class="wrap split-layout"><div><p class="meta">Evidence &amp; practice</p><h2 class="h2">Examine the<br />work behind it.</h2></div><div><p class="lead">Explore a policy-analysis case account and the research that informs the behavioural practice.</p><div class="actions"><a class="text-link" href="/work/">Work &amp; research ↗</a><a class="text-link" href="/about#section-05">Meet the practitioner ↗</a></div></div></div></section>
 <RaykisWorkshopTeaser />
-<BookingSection defaultEngagement="Strategic Decision Workshop" eyebrow="03 / Let’s talk" />
+<BookingSection defaultEngagement="Strategic Decision Workshop" eyebrow="Discuss a custom workshop" />
 </BaseLayout>
 <style>
 .workshop-banner {

@@ -1,0 +1,183 @@
+{
+  "html_pages": 16,
+  "route_records": [
+    {
+      "route": "/404.html",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/404/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/about/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/about/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/cases/policy-analyst-strategic-review/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/cases/policy-analyst-strategic-review"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/contact/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/contact/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/courses/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/courses/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/lab/monkey-factory/",
+      "h1": 1,
+      "canonical": [],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/learning/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/learning/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/privacy/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/privacy/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/services/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/services/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/terms/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/terms/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/thinking/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/thinking/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/thinking/strategic-decision-maps/strategy-illusion/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/thinking/strategic-decision-maps/strategy-illusion/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/work/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/work/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/workshops/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/workshops/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    },
+    {
+      "route": "/workshops/strategic-design-leadership/",
+      "h1": 1,
+      "canonical": [
+        "https://thespottedape.com/workshops/strategic-design-leadership/"
+      ],
+      "duplicate_ids": [],
+      "missing_aria_controls": []
+    }
+  ],
+  "local_links_checked": 690,
+  "fragment_links_checked": 111,
+  "failures": [],
+  "original_formation_unchanged": {
+    "src/components/home/FindFormation.astro": true,
+    "src/scripts/formation.js": true,
+    "src/scripts/formation-interactions.ts": true
+  },
+  "changes_to_deployment_dependencies_or_public_assets": [],
+  "external_handoffs": [
+    "https://doi.org/10.3390/su15065328",
+    "https://marcelmare.com",
+    "https://marcelmare.com/dla-course-2/",
+    "https://marcelmare.com/dla-course-2/build.html",
+    "https://marcelmare.com/dla-course-2/decide.html",
+    "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+    "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+    "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+    "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+    "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+    "https://marcelmare.com/dla-course-2/reflect.html",
+    "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+    "https://marcelmare.com/dla-course-2/spreadsheet-essentials.html",
+    "https://marcelmare.com/dla-course-2/test.html",
+    "https://marcelmare.com/dla-course-2/understand.html",
+    "https://thespottedape.com/Courses/solar-investment/learn/",
+    "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+    "https://thespottedape.com/research/index.html"
+  ],
+  "scope_notes": [
+    {
+      "route": "/lab/monkey-factory/",
+      "note": "Existing isolated noindex,nofollow prototype uses its own document and has no canonical. It is unchanged and excluded from the public-page canonical requirement."
+    }
+  ],
+  "public_pages_with_single_canonical": 15
+}

@@ -1,0 +1,77 @@
+{
+  "audit_date": "2026-10-30",
+  "recorded_at_utc": "2026-10-30T08:30:44.056500+00:00",
+  "local_origin": "http://localhost:4328",
+  "baseline_commit": "1a39ca9d28ff14331dbd0cdbbeb7d8b9de970562",
+  "head_at_completion": "1a39ca9d28ff14331dbd0cdbbeb7d8b9de970562",
+  "primary_viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "additional_viewports": [
+    [
+      1024,
+      768
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "application_changed": false,
+  "scope": "Strategy and supporting evidence only.",
+  "source_sha256": {
+    "AGENTS.md": "e1558e880717f1777a2a3066bd67f4a619ad2df675011539ee904a14d4d8040c",
+    "astro.config.mjs": "9daf60360725e0b24ef02ae682777f4547d277de47c246b35f6b27b98420aa92",
+    "package.json": "ddd20afda992d70dc1266e4ae6550ef2d1f32add33a1860035f0c0c73f1d034a",
+    "src/components/Header.astro": "72d528203d26471e2201e0cf7d7cc9beb470a58748a48af47ce1e903f6fbf303",
+    "src/components/Footer.astro": "1f474e934c0652b79c2408a6dd1a1984d79af253e85c635f3673bc88e0bb6215",
+    "src/components/PracticeSection.astro": "0cdbb0391237d89cf61a28ba9078ec1425ac7c95973020a37993c8584b9870eb",
+    "src/components/home/FindFormation.astro": "b13147a8cb1e2e63e5c11a0ac37933a45bfa2c86449af648e0669f0e5521e7cf",
+    "src/components/CourseSyllabus.astro": "d066714f4484e0926b554662d4371bdefd983a4b9bbcbff973ef7e70230d6c6c",
+    "src/components/BookingSection.astro": "dcc767fb54d2652c3b91aa4172594cae4edc2e8d0d03ca378ba7e2f184cf1dc7",
+    "src/components/masterclass/MasterclassFormation.astro": "b8503d662e4dfd1057a76b3959d44f6978ee0d4b04d322626f7f4e474dbb5958",
+    "src/components/masterclass/MasterclassDetail.astro": "3b5340355be777076fadf1c7e1003b9e4aa073429e7cfee1404284a2a1dbcb7d",
+    "src/components/masterclass/MasterclassProgression.astro": "18337666504b7c415cdb29b48731757cc78193e9896d2506da70609548cec086",
+    "src/components/RaykisWorkshopTeaser.astro": "cfdb149c2ce007e5b99ce8d721d16f68349c0b5411b64a0f8f7850eceb2b94d1",
+    "src/pages/index.astro": "cb32ef6302d3e8560e8acd86afb87384e591e2b0dc2404757bc515298fbec727",
+    "src/pages/workshops.astro": "b2ae90fc4f367e08fd573519cab236ab33bf5f2c299bcf2a7ad95ddb57fe6ddc",
+    "src/pages/workshops/strategic-design-leadership.astro": "4bcba730642a8dd05c8afb2991ceeff2851a36f9b216e7b3e9d6f774184fb745",
+    "src/pages/courses.astro": "bf4a3691a37dbffccbfc274f869d0b8f1090f23ec3c6a5dbc73a688e1cf3c8a3",
+    "src/pages/about.astro": "265c4d66d7584036789edd62603462a01d1c7d29a257a4b3560391c9eb7096ff",
+    "src/pages/thinking/index.astro": "ba0d60275fe03450fbb2fd58a3ba5d80383f106fb79deb2c611b2505507e08ae",
+    "src/pages/thinking/strategic-decision-maps/strategy-illusion.astro": "609238395569c08801df7d7f0a37d97412625c3d53c5586fe9bed015ac05cb26",
+    "src/pages/cases/[slug].astro": "d6d470f8d4d27c41c5f69a74eb28fd6b972e9f0c3b95e36da3332e18671baa06",
+    "src/scripts/masterclass-formation.ts": "25325f6c37cb2055cf3a5f6d03c3b57893492407657a69296daf5b4c89b6f704",
+    "src/scripts/practice-cards.ts": "1115da796d0dd5da0d43e1f04e7310704bd88c37957097617be6a50c9b7080d8",
+    "src/scripts/formation.js": "ae45c9b912b8e7898692b5668117910bcb9d7b2a540fb48f72175583f3226f62",
+    "src/data/executive-masterclass.ts": "0dafeda063e27f9acfe529a9439b603e6f00677102d7d04808c276a4d23f1541",
+    "src/content/cases/strategic-review.md": "e05bb0c4b5ca7041a4ba861ce284146244bb44b8cddb3569276d032f29393a7e",
+    "src/styles/global.css": "1b65c0c023dac49a88cee0d1008a0d8cadc719ab1cc7e33792030554c4427c99",
+    "docs/design-reference/README.md": "840b178b427504a5b09fd6093614ba31ac4242508fce6310914f2dae315542da",
+    "docs/design-reference/DEFINITIVE_DIRECTION.md": "c68a1d23fa517f98898c5181ededf6264591f13fa2bfb77f1fee9c11f363010e",
+    "docs/design-reference/DESIGN_ANALYSIS.md": "0a312f30951839fbb211ded75bfae247617364a9de0f6dfe51bc006ee1b7920b",
+    "docs/design-reference/DESIGN_TOKENS.md": "5cf602569f00cea4d2c77efda228bc161563bf6ed474cda9472c371d6f61efea",
+    "docs/design-reference/COMPONENT_LIBRARY.md": "1f72fe7086f4a41724380d5844afb329e4a625b7b1299f62a967447f487270f8",
+    "docs/design-reference/INTERACTION_PATTERNS.md": "4dfe8efbbcf77fb23b49c3f9f150934fe7b0e6fcccaa5f0e69823a51142986dd",
+    "docs/design-reference/ANIMATION_SPECIFICATIONS.md": "9989163e8817a4af8756cadcc1d8e117f8527691ad4e55b00b2e0117539540bb",
+    "docs/design-reference/IMPLEMENTATION_STRATEGY.md": "992261b31c302ffa818a24de6f0eb75566a1ca38615d68787a5c3780d4313f5a",
+    "docs/design-reference/MASTERCLASS_IMPLEMENTATION.md": "47d62db791600d5fdfb286c12e8b90727d12615d2e22b686537b4e49adc2e91c"
+  },
+  "input_attachments": [
+    "/Users/marem/.codex/attachments/9782c832-eff1-4cde-b685-7ff0cc438548/Pasted text.txt",
+    "/Users/marem/.codex/attachments/f2f3a099-903f-42bc-811c-09c864afeff4/Pasted text.txt"
+  ],
+  "limits": [
+    "No customer analytics or interviews supplied.",
+    "All enquiry POST requests intercepted.",
+    "Public resource checks are not a full deployed-site audit.",
+    "No payment or live enquiry delivery performed."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "about",
+  "url": "http://localhost:4328/about",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 5260,
+  "overflow": false,
+  "h1": {
+    "text": "Everyone is moving.\nAre we moving\ntogether?",
+    "top": 236,
+    "font": "56px"
+  },
+  "entryLinks": [
+    {
+      "text": "How we work ↓",
+      "href": "#section-02",
+      "top": 573,
+      "inFirstViewport": true
+    },
+    {
+      "text": "The practitioner ↓",
+      "href": "#section-05",
+      "top": 573,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Professional biography ↗",
+      "href": "https://marcelmare.com",
+      "top": 3518,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 4266,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Movement needsdirection.",
+      "top": 845
+    },
+    {
+      "text": "How we work.",
+      "top": 2002
+    },
+    {
+      "text": "MarcelMaré.",
+      "top": 3228
+    }
+  ]
+}

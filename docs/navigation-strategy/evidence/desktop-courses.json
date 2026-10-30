@@ -1,0 +1,555 @@
+{
+  "slug": "courses",
+  "url": "http://localhost:4328/courses",
+  "title": "Applied Strategy & Digital Acumen Courses | The Spotted Ape",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "height": 11066,
+  "overflow": false,
+  "header": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": "page"
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "footer": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "The spreadsheet provides the evidence.The decisions require your judgement.",
+      "top": 300,
+      "font": "98px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Should we investin solar?",
+      "top": 1233,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Technical output.Human judgement.",
+      "top": 2257,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Untraceable inputs.",
+      "top": 2719,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Traceable formulas.",
+      "top": 2719,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "One metric decides.",
+      "top": 2969,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Competing criteria.",
+      "top": 2969,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Claims without evidence.",
+      "top": 3219,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Operational evidence.",
+      "top": 3219,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "One case.One decision.",
+      "top": 3709,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Understand",
+      "top": 4928,
+      "font": "57.456px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Open the model.Question it.",
+      "top": 6120,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Should We Invest in Solar?",
+      "top": 6862,
+      "font": "32px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Student Workbook (V8).",
+      "top": 6527,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Cape Manufacturing Case Brief.",
+      "top": 6688,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Excel & Google Sheets Quick Reference.",
+      "top": 6872,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Formula Troubleshooting Diagnostic.",
+      "top": 7057,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Completed Reference Workbook (V8).",
+      "top": 7218,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "5-Minute Reviewer Rationale.",
+      "top": 7402,
+      "font": "30px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "For people who must defend their decisions.",
+      "top": 7857,
+      "font": "77.856px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Analysts and emerging managers.",
+      "top": 8175,
+      "font": "28px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Finance, strategy and operations teams.",
+      "top": 8323,
+      "font": "28px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Universities and executive education.",
+      "top": 8501,
+      "font": "28px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Auditable Financial & Operational Modelling.",
+      "top": 7943,
+      "font": "36px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Sensitivity & Crossover Stress-Testing.",
+      "top": 8217,
+      "font": "36px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Evidence-Based Verification of Claims.",
+      "top": 8492,
+      "font": "36px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "100-Word Decision Briefings & Pattern Transfer.",
+      "top": 8766,
+      "font": "36px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "What does your team need to decide?",
+      "top": 9436,
+      "font": "98px",
+      "weight": "600"
+    }
+  ],
+  "links": [
+    {
+      "text": "Explore the curriculum ↓",
+      "href": "#syllabus",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Course artifacts ↓",
+      "href": "#outcomes",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Discuss a cohort ↗",
+      "href": "#book",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Inspect the case ↓",
+      "href": "#syllabus",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/understand.html",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/understand.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/spreadsheet-essentials.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/build.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/test.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/decide.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/reflect.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Open the live course ↗",
+      "href": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "Alternative course host: marcelmare.com ↗",
+      "href": "https://marcelmare.com/dla-course-2/",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "01 .XLSXStudent Workbook (V8).Five linked sheets, including a 20-year NPV model.Download Student Workbook ↓↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "02 .PDFCape Manufacturing Case Brief.Supplier proposals, tariff assumptions and the Financial Director’s briefing.Open Case Brief PDF ↗↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "03 .PDFExcel & Google Sheets Quick Reference.Cell addresses, cross-sheet formulas, reference locking and currency formatting.Open Quick Reference PDF ↗↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "04 .PDFFormula Troubleshooting Diagnostic.Check shifted references, percentages and reversed ratios.Open Diagnostic Card PDF ↗↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "05 .XLSXCompleted Reference Workbook (V8).Compare your formulas and sensitivity analysis with the reference solution.Download Reference Model ↓↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "06 RATIONALE5-Minute Reviewer Rationale.Learning design, assessment checkpoints and competence criteria.Read Reviewer Rationale ↗↗",
+      "href": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+      "target": "_blank",
+      "current": null
+    },
+    {
+      "text": "Explore decision workshops ↗",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "hello@thespottedape.com ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Privacy policy",
+      "href": "/privacy",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Send your enquiry by email ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "forms": [
+    {
+      "action": "https://formsubmit.co/hello@thespottedape.com",
+      "method": "post",
+      "fields": [
+        {
+          "name": "botcheck",
+          "type": "text",
+          "required": false,
+          "label": "Leave this blank"
+        },
+        {
+          "name": "_honey",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name"
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Work email"
+        },
+        {
+          "name": "roleOrganization",
+          "type": "text",
+          "required": true,
+          "label": "Role & organisation"
+        },
+        {
+          "name": "engagement",
+          "type": "select-one",
+          "required": true,
+          "label": "Area of interest",
+          "value": "Strategy Course (DLA)",
+          "options": [
+            "Choose an area",
+            "Strategic Decision Workshop",
+            "Strategy Course (DLA)",
+            "Behavioural Design & Research",
+            "Human–AI Decision Design",
+            "Executive Advisory Conversation"
+          ]
+        },
+        {
+          "name": "teamSize",
+          "type": "select-one",
+          "required": false,
+          "label": "Team size (optional)",
+          "value": "",
+          "options": [
+            "Choose team size",
+            "1–10",
+            "11–50",
+            "50+"
+          ]
+        },
+        {
+          "name": "context",
+          "type": "textarea",
+          "required": true,
+          "label": "What needs deciding?"
+        }
+      ]
+    }
+  ],
+  "mainText": "COURSES / APPLIED STRATEGY\n\nINDEPENDENT PRACTICE / CAPE TOWN\n\nThe spreadsheet provides the evidence.\nThe decisions require your judgement.\n\nA calculation is not a decision. Learn to question the evidence and defend a recommendation.\n\nFlagship case simulation\n65–80 minutes\nExcel & Google Sheets\nExplore the curriculum ↓\nCourse artifacts ↓\nDiscuss a cohort ↗\n\nCAPE MANUFACTURING / WESTERN CAPE\n\nShould we invest\nin solar?\n\nOne case. Three proposals.\nOne decision to defend.\n\nInspect the case\n↓\n\nFLAGSHIP CASE SIMULATION\n\nShould We Invest in Solar? (Cape Manufacturing)\n\nCompare three proposals and defend a recommendation.\n\nDURATION\n\n65–80 minute interactive case\n\nSelf-paced learning with a working spreadsheet model.\n\nTECHNICAL ENVIRONMENT\n\nMicrosoft Excel & Google Sheets\n\nSpreadsheet essentials are included.\n\n01 / WHAT THE CASE TESTS\n\nFROM OPERATOR TO ADVISER\n\nTechnical output.\nHuman judgement.\n01\n\nCOMMON PITFALL\n\nUntraceable inputs.\n\nRetyped inputs obscure the assumptions behind a result.\n\nIN THIS CASE\n\nTraceable formulas.\n\nLink calculations to Case Data!A3:F17 and inspect broken references.\n\n02\n\nCOMMON PITFALL\n\nOne metric decides.\n\nPayback and long-term value can favour different proposals.\n\nIN THIS CASE\n\nCompeting criteria.\n\nA has the shortest payback (2.92 years); C has the highest base-case NPV (R2.871m).\n\n03\n\nCOMMON PITFALL\n\nClaims without evidence.\n\nAnnual averages hide when electricity is actually used.\n\nIN THIS CASE\n\nOperational evidence.\n\nCheck half-hourly load profiles and seek independent evidence for environmental claims.\n\n02 / THE CURRICULUM\n\nA FICTIONAL INVESTMENT CASE\n\nOne case.\nOne decision.\n\nTake the seat of a commercial analyst advising the Financial Director. Compare three rooftop solar proposals costing R650,000 to R990,000.\n\n65–80 MINUTES\nSIX MODULES\nA WORKING SPREADSHEET MODEL\n\nCape Manufacturing fictional case. Base-case proposal data; tariff R2.80 per kWh.\nCase data\tProposal A\tProposal B\tProposal C\nInvestment\tR650,000\tR820,000\tR990,000\nSystem size\t60 kWp\t80 kWp\t100 kWp\nSelf-consumption\t90%\t85%\t78%\nSimple payback\t2.92 years\t2.96 years\t3.22 years\n20-year NPV\tR2.152m\tR2.662m\tR2.871m\n\nILLUSTRATIVE CASE DATA / CASE DATA!A3:F17 / FIGURES ARE NOT AN INVESTMENT RECOMMENDATION.\n\n01\nUnderstand.\n↗\n02\nSpreadsheet Essentials.\n↗\n03\nBuild.\n↗\n04\nTest.\n↗\n05\nDecide.\n↗\n06\nReflect.\n↗\n\nMODULE 01 / 06 — INTERPRET THE INPUTS & SELF-CONSUMPTION BRIDGE\n\nUnderstand\n\nFOUNDATIONAL COMPETENCE\n\nFD / MONDAY 09:00 · FINANCIAL DIRECTOR\n\n“First, establish what we are buying—and what we can use.”\n\nCheck the proposal data before calculating. A larger system produces more electricity, but how much of that output will actually reduce our grid purchases?\n\nBefore entering a single formula, participants record an explicit initial prediction and examine why gross technical output (147,000 kWh for System C) does not automatically translate into economic value when unused electricity earns zero revenue.\n\nAnalytical & spreadsheet mechanics\nBehavioural & judgement shift\n\nOBSERVABLE WORKBOOK EVIDENCE\n\nRecorded pre-model metric prediction + concept-check explanation of why neither gross generation nor self-consumption alone identifies the best investment.\n\nOpen module in live course ↗\nCommission Module 01 Cohort\n↗\n\n03 / COURSE TOOLKIT\n\nWORK WITH THE ACTUAL ARTIFACTS\n\nOpen the model.\nQuestion it.\nShould We Invest in Solar?\n\nA one-minute introduction to the investment decision.\n\nOpen the live course\n↗\n\nAlternative course host: marcelmare.com ↗\n\n01\n.XLSX\nStudent Workbook (V8).\n\nFive linked sheets, including a 20-year NPV model.\n\nDownload Student Workbook ↓\n↗\n02\n.PDF\nCape Manufacturing Case Brief.\n\nSupplier proposals, tariff assumptions and the Financial Director’s briefing.\n\nOpen Case Brief PDF ↗\n↗\n03\n.PDF\nExcel & Google Sheets Quick Reference.\n\nCell addresses, cross-sheet formulas, reference locking and currency formatting.\n\nOpen Quick Reference PDF ↗\n↗\n04\n.PDF\nFormula Troubleshooting Diagnostic.\n\nCheck shifted references, percentages and reversed ratios.\n\nOpen Diagnostic Card PDF ↗\n↗\n05\n.XLSX\nCompleted Reference Workbook (V8).\n\nCompare your formulas and sensitivity analysis with the reference solution.\n\nDownload Reference Model ↓\n↗\n06\nRATIONALE\n5-Minute Reviewer Rationale.\n\nLearning design, assessment checkpoints and competence criteria.\n\nRead Reviewer Rationale ↗\n↗\n\n04 / PEOPLE & OUTCOMES\n\nLEARNING THROUGH OBSERVABLE WORK\n\nFor people who must defend their decisions.\nAnalysts and emerging managers.\n\nBuild, question and explain spreadsheet analyses.\n\nFinance, strategy and operations teams.\n\nExamine capital allocation, operational risks and investment criteria.\n\nUniversities and executive education.\n\nTeach analytical judgement through observable work.\n\n01 / LEARNING OUTCOME\nAuditable Financial & Operational Modelling.\n\nBuild linked models that translate operational inputs into comparable financial metrics.\n\n02 / LEARNING OUTCOME\nSensitivity & Crossover Stress-Testing.\n\nFind the self-consumption threshold where investment rankings change.\n\n03 / LEARNING OUTCOME\nEvidence-Based Verification of Claims.\n\nSpecify the operational and lifecycle evidence needed to test supplier claims.\n\n04 / LEARNING OUTCOME\n100-Word Decision Briefings & Pattern Transfer.\n\nWrite a qualified recommendation in 100 words or fewer.\n\nA live organisational decision?\nBring your alternatives and trade-offs.\n\nExplore decision workshops\n↗\n\n05 / LET’S TALK\n\nSTART WITH THE DECISION\n\nWhat does your team need to decide?\nhello@thespottedape.com ↗\n\nMARCEL MARÉ / CAPE TOWN, SOUTH AFRICA\n\nBring the alternatives, the assumptions and the difficult questions.\n\nLeave this blank\nName\nWork email\nRole & organisation\nArea of interest\nChoose an area\nStrategic Decision Workshop\nStrategy Course (DLA)\nBehavioural Design & Research\nHuman–AI Decision Design\nExecutive Advisory Conversation\nTeam size (optional)\nChoose team size\n1–10\n11–50\n50+\nWhat needs deciding?\nSend enquiry\n↗\n\nWe’ll use these details to respond to your enquiry. Privacy policy.",
+  "buttons": [
+    {
+      "text": "01Understand.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "02Spreadsheet Essentials.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "03Build.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "04Test.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "05Decide.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "06Reflect.↗",
+      "role": "tab",
+      "pressed": null
+    },
+    {
+      "text": "Analytical & spreadsheet mechanics",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Behavioural & judgement shift",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Commission Module 01 Cohort↗",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Send enquiry ↗",
+      "role": null,
+      "pressed": null
+    }
+  ]
+}

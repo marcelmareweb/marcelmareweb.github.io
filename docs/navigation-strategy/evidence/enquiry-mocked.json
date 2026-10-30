@@ -1,0 +1,955 @@
+{
+  "scope": "All POST requests intercepted and fulfilled locally; no live delivery tested.",
+  "success": {
+    "confirmation": "Thank you.\n\nYour enquiry has been submitted. We’ll reply to the email address you provided."
+  },
+  "failure": {
+    "status": "We couldn’t send your enquiry. Please try again or use the email link below. Your details are still here.",
+    "fallback": "mailto:hello@thespottedape.com?subject=The%20Spotted%20Ape%20enquiry%20%E2%80%94%20Strategy%20Course%20(DLA)&body=Name%3A%20Navigation%20audit%0AEmail%3A%20audit%40example.invalid%0ARole%20%26%20organisation%3A%20Synthetic%20audit%20organisation%0ATeam%20size%3A%20Not%20specified%0AArea%3A%20Strategy%20Course%20(DLA)%0ACourse%20module%3A%2005%0ASynthetic%20navigation%20audit.%20No%20enquiry%20should%20be%20delivered.",
+    "contextRetained": "Synthetic navigation audit. No enquiry should be delivered."
+  },
+  "captured": [
+    {
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "payload": [
+        "O43z0dpjhgX20SCx4KAo",
+        "$_mE5YQVRAAagS3bUgEveWClqSgyyXSOnAEABEArZ1EKvaVk4u5LIZ7yzbzvtbNVIe1rq7sO6-P4kbnoTRys1YuYHE4b1mx3ey8DeDaPUf2gzQYSJvgxeeZULngAAAb7OAAAAA_QBB-IAWzNH5t51AGm8yYyNqOliDn5XLqePGA6T58ucrG8tR9cas843UCeZU-XeqqLgXCXt49MMctVxMblPCJSGNOzLgC8KHtXNKalT70ki22xxpX74D8GYWEF_upDd0H8FBRdLRlocy5ZM72KMev0fxuiDiInmQqGtFZmL_oA_Q6hPTfqsMJ9XBo_2ckfB9QwreTm-JAzEkrjjR_-_BDCmSN4yjLQdV-i2Jp54mKGvBJnSGprNIj2yVQuWD14JM4___bHnMcy9b3FVHnSmrlvT7vPRd6dIEzf1CvRJxik_V-wdYqVeoy_oDHIfGhmoKWewbk1vHkStx89vpa0bKiof9NLMrFzwiEwrYjdHS_JMznpFcBMSdck1oY1XErAYAD0qGahgi3-SnczVQjy2jIXCDValV1CxXpkWLhjfhkndI10yZrNK0ee6z54cLYkPDD-vQ_KLIq5tY2VqtDL4m9bU7IsozPXsrKtK-LyvGdBQaS-haW4OXwmpK6cikhUmQ95zG4OZwDHj2Ml7YHnaZzwkT9_AKtmsYfDczV76tcnsQl1UG-qKHB53Ha2SEOiigwd1AXiLXtuJd4PK-N3RusQxkBUEw-vOLxrz3CqiKfSy2LDDyxJnkvZmBEKxXhakj5uSzvSRoPj3001T67yNIP-AAj7AEHNv2ilhTe2dHbKI3X1_AK9dwFb2NTj7pBVd6SImsU1pULyDHDwX-GbOkda2Z2S0LHYV5q07-BtPNMYqtS6LOt-kbYCkXJIqgdUdARRVr-jiNp1ldEBqQYuszF6khB5Q4R_f1MELTwUu7ZbdVwVHqqf-0pXyTYpTZsBxbsDJzKAcJzW3pZ_v4pl20ArCYv_u3yB2b7qwxKbQsOlWNYvFV3gwtWJLPwkdrrDfgX4hEk6C-8611rQHc8-c5ciAa1Nqz4qkhxgVDFgeOt941gqnMQ6xSe1ZUiY4Ax15c9EpcFP9XkcwWmz6IS-L2-QJkOMtHtwQyyr35WqmwYKrLjaX-hne-xMj4Z1ShKqgqynNjPsLX5w2u041CkIWPbQ_ErOhcYSf1HfWwylW-9nsm4c8WouDAGhnCzMpJ0nHemgJ3nyh7eg-3J-ibdH1QlN42fSA-BH4-XQ3fMaULw6kk51flvTtE4EetINDN9jbNRF11TF5ZZ5y5zz_WDVThUgsFQqhbSxFDo5qOAeoW748mDLCwDShzqPHlbG7UL6FCO5CtImhQMAqDPxkdhIiTe9GOMGn3B7TXvMhG4zeBPdXK1049kiR0RxwQe7a-aWrJW9Uc_JZipRg-K15g2sREsZbCb_DLxkvGD6e8vc2J4f-89k6V3BVeHFhpj1GixZJ-WuhYOIffwM3cPUV63eNWbxCcjpO3oTH9GxxNeRmO620bVKbl8WoHUFqqQ4WzK6uQkwQ99OqXbKFecU-rkai8roHPxRyHBVrKAzXL2DMeIa1vC4CyqI4rNIezIko8ouXQd2xcBVxBYytoCXxS8Cc84NDA4iUabkP6IPDcsQSD_-THukfNw4XhRseJjCj0KWgKl86-rb00uxfZfBV7k1t7iSk4RJxfhZQUfa_VWiLz9NP0S8XSCWDDb-2oAp2qa-f60X5dkNIkSruN_DWQJgWkj6hD0uQBmLSUqB6x_Rpe9H8TTA7Yvy1RvVih87ClB3n0dzYsmXUVI8Jk9amnNtTl-19oV0GQl7JdnH4vPUszesFFI5gGGOe3BIKd1w-JQxYuduTGcftosuoIYGG2SRi-G1PC-isFR7Lp46Rc0JXz_lv11H5W8RnpIVfqhf1fEAG2JVPEIIrfjpJhjYFwpQMvi7_5rEMz6ykCO6UebqiF3vjpZnNKBu697nNvKNm4cSD2O5CO8dxiVPMkC41"
+      ],
+      "mock": "success"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348050954,
+            "latencyActionTicked": {
+              "tickName": "mm_is",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050956,
+            "latencyActionTicked": {
+              "tickName": "mm_ie",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050966,
+            "latencyActionTicked": {
+              "tickName": "ep_init_cus",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050966,
+            "latencyActionTicked": {
+              "tickName": "ep_init_eps",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050967,
+            "latencyActionTicked": {
+              "tickName": "ep_init_epe",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050967,
+            "latencyActionTicked": {
+              "tickName": "ep_init_cue",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051117,
+            "latencyActionTicked": {
+              "tickName": "pe",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051117,
+            "latencyActionTicked": {
+              "tickName": "ep_init_wes",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050596,
+            "latencyActionTicked": {
+              "tickName": "srt",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348049925,
+            "latencyActionBaselined": {
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050266,
+            "latencyActionTicked": {
+              "tickName": "nreqs",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050596,
+            "latencyActionTicked": {
+              "tickName": "nress",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050764,
+            "latencyActionTicked": {
+              "tickName": "nrese",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348049950,
+            "latencyActionTicked": {
+              "tickName": "ndnss",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050009,
+            "latencyActionTicked": {
+              "tickName": "ndnse",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050009,
+            "latencyActionTicked": {
+              "tickName": "ntcps",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050266,
+            "latencyActionTicked": {
+              "tickName": "ntcpe",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050050,
+            "latencyActionTicked": {
+              "tickName": "nstcps",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050266,
+            "latencyActionTicked": {
+              "tickName": "ntcpe",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050735,
+            "latencyActionTicked": {
+              "tickName": "rsf_pj",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050991,
+            "latencyActionTicked": {
+              "tickName": "rse_pj",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050735,
+            "latencyActionTicked": {
+              "tickName": "rsf_pc",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050869,
+            "latencyActionTicked": {
+              "tickName": "rse_pc",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050735,
+            "latencyActionTicked": {
+              "tickName": "rsf_ecj",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050938,
+            "latencyActionTicked": {
+              "tickName": "rse_ecj",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050735,
+            "latencyActionTicked": {
+              "tickName": "rsf_ecc",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050863,
+            "latencyActionTicked": {
+              "tickName": "rse_ecc",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051130,
+            "latencyActionInfo": {
+              "isNavigation": true,
+              "actionType": "LATENCY_ACTION_VIDEO_PREVIEW",
+              "httpProtocol": "h2",
+              "transportProtocol": "tcp",
+              "isVisible": true,
+              "loadType": "cold",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348050941,
+            "latencyActionTicked": {
+              "tickName": "rses_dpj",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051147,
+            "latencyActionTicked": {
+              "tickName": "ep_init_wee",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "-1"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051218,
+            "screenCreated": {
+              "csn": "2mXWmSVtS3PczqIq",
+              "pageVe": {
+                "veType": 16623,
+                "youtubeData": {
+                  "servletData": {
+                    "serializedServletEventId": "0lHkatT2ILCI1LsPgbS7iQY"
+                  }
+                }
+              }
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051219,
+            "latencyActionInfo": {
+              "clientScreenNonce": "2mXWmSVtS3PczqIq",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051219,
+            "screenCreated": {
+              "csn": "T5FUo00fOB19-hcC",
+              "pageVe": {
+                "veType": 32594
+              },
+              "implicitGesture": {
+                "parentCsn": "2mXWmSVtS3PczqIq",
+                "gesturedVe": {
+                  "veType": 16623
+                },
+                "gestureType": "INTERACTION_LOGGING_GESTURE_TYPE_AUTOMATED"
+              }
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051219,
+            "visualElementHidden": {
+              "csn": "2mXWmSVtS3PczqIq",
+              "ve": {
+                "veType": 16623
+              },
+              "eventType": 16
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051219,
+            "latencyActionInfo": {
+              "clientScreenNonce": "T5FUo00fOB19-hcC",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051219,
+            "visualElementAttached": {
+              "csn": "T5FUo00fOB19-hcC",
+              "parentVe": {
+                "veType": 32594
+              },
+              "childVes": [
+                {
+                  "trackingParams": "CAAQru4BIhMI1-aMjKbhlwMV2xlgAh0aYjVIygEE2bNmQQ=="
+                }
+              ]
+            },
+            "context": {
+              "lastActivityMs": "52"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051223,
+            "latencyActionTicked": {
+              "tickName": "qoes",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "57"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051224,
+            "latencyActionTicked": {
+              "tickName": "fs",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "57"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051246,
+            "latencyActionInfo": {
+              "clientPlaybackNonce": "YRBp9KZ-UclI-GO1",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "80"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051247,
+            "latencyActionTicked": {
+              "tickName": "ep_init_pr",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "81"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051258,
+            "latencyActionTicked": {
+              "tickName": "pot_ist",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "92"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051260,
+            "latencyActionInfo": {
+              "serverTimeMs": 76,
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "93"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051404,
+            "latencyActionTicked": {
+              "tickName": "ep_init_ijs",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "238"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051405,
+            "latencyActionTicked": {
+              "tickName": "ep_init_ije",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "238"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051405,
+            "latencyActionTicked": {
+              "tickName": "ep_init_rs",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "239"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051406,
+            "latencyActionTicked": {
+              "tickName": "ep_init_re",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "240"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051411,
+            "visualElementAttached": {
+              "csn": "T5FUo00fOB19-hcC",
+              "parentVe": {
+                "veType": 32594
+              },
+              "childVes": [
+                {
+                  "veType": 28572,
+                  "veCounter": 2,
+                  "elementIndex": 0
+                }
+              ]
+            },
+            "context": {
+              "lastActivityMs": "244"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051411,
+            "visualElementShown": {
+              "csn": "T5FUo00fOB19-hcC",
+              "ve": {
+                "veType": 28572,
+                "veCounter": 2,
+                "elementIndex": 0
+              },
+              "eventType": 1
+            },
+            "context": {
+              "lastActivityMs": "244"
+            }
+          },
+          {
+            "eventTimeMs": 1793348051433,
+            "latencyActionTicked": {
+              "tickName": "ftr",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "267"
+            }
+          },
+          {
+            "eventTimeMs": 1793348052217,
+            "streamzIncremented": {
+              "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWMSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIRCgMKAW8KBgoEYUdJZhICCAEiEQoDCgF0CgYKBGFHSWYSAggBIhEKAwoBaAoGCgRhR0lmEgIIEA=="
+            },
+            "context": {
+              "lastActivityMs": "1050"
+            }
+          },
+          {
+            "eventTimeMs": 1793348052217,
+            "streamzIncremented": {
+              "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWwSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIYCgMKAWgKBgoEYUdJZhIJEQAAAACgmStAIhgKAwoBaAoGCgRhR0lmEgkRAAAAAAAzH0AiGAoDCgFoCgYKBGFHSWYSCREAAAAAADLjPyIYCgMKAWgKBgoEYUdJZhIJEQAAAACAmRNAIhgKAwoBaAoGCgRhR0lmEgkRAAAAAAAALkAiGAoDCgFoCgYKBGFHSWYSCREAAAAAgDMPQCIYCgMKAWgKBgoEYUdJZhIJEQAAAAAAgDRAIhgKAwoBaAoGCgRhR0lmEgkRAAAAAAA00z8iGAoDCgFoCgYKBGFHSWYSCREAAAAAAAAsQCIYCgMKAWgKBgoEYUdJZhIJEQAAAABgZidAIhgKAwoBaAoGCgRhR0lmEgkRAAAAAAAAKUAiGAoDCgFoCgYKBGFHSWYSCREAAAAAAAA1QCIYCgMKAWgKBgoEYUdJZhIJEQAAAAAyU2pAIhgKAwoBaAoGCgRhR0lmEgkRAAAAAAAAJkAiGAoDCgFoCgYKBGFHSWYSCREAAAAAQDMmQCIYCgMKAWgKBgoEYUdJZhIJEQAAAABoJl1AIhgKAwoBdAoGCgRhR0lmEgkRAADQzMzUgUA="
+            },
+            "context": {
+              "lastActivityMs": "1051"
+            }
+          },
+          {
+            "eventTimeMs": 1793348053218,
+            "streamzIncremented": {
+              "serializedIncrementBatch": "ChYvY2xpZW50X3N0cmVhbXovYmcvZnJzEhAKDgoIYm90Z3VhcmQSAjUzGgJtayITCgYKBGFHSWYSCREAAAAAAFSfQA=="
+            },
+            "context": {
+              "lastActivityMs": "2051"
+            }
+          },
+          {
+            "eventTimeMs": 1793348053218,
+            "streamzIncremented": {
+              "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWMSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIRCgMKAW4KBgoEYUdJZhICCAE="
+            },
+            "context": {
+              "lastActivityMs": "2051"
+            }
+          },
+          {
+            "eventTimeMs": 1793348053218,
+            "streamzIncremented": {
+              "serializedIncrementBatch": "ChUvY2xpZW50X3N0cmVhbXovYmcvZWwSEAoOCghib3RndWFyZBICNTMaAmVuGgJtayIYCgMKAW4KBgoEYUdJZhIJEQAAAHBmZgpA"
+            },
+            "context": {
+              "lastActivityMs": "2051"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12842"
+        }
+      },
+      "mock": "success"
+    },
+    {
+      "url": "https://formsubmit.co/ajax/hello@thespottedape.com",
+      "payload": {
+        "name": "Navigation audit",
+        "email": "audit@example.invalid",
+        "roleOrganization": "Synthetic audit organisation",
+        "teamSize": "",
+        "engagement": "Strategy Course (DLA)",
+        "courseModule": "05",
+        "context": "Synthetic navigation audit. No enquiry should be delivered.",
+        "pageUrl": "http://localhost:4328/courses?module=05#book",
+        "subject": "The Spotted Ape enquiry — Strategy Course (DLA)",
+        "_subject": "The Spotted Ape enquiry — Strategy Course (DLA)",
+        "replyto": "audit@example.invalid",
+        "_replyto": "audit@example.invalid",
+        "from_name": "The Spotted Ape Website",
+        "_captcha": "false",
+        "_template": "table",
+        "_honey": ""
+      },
+      "mock": "success"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348053635,
+            "finalPayload": {
+              "csn": "T5FUo00fOB19-hcC"
+            },
+            "context": {
+              "lastActivityMs": "2469"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12843"
+        }
+      },
+      "mock": "failure"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348053635,
+            "finalPayload": {
+              "csn": "T5FUo00fOB19-hcC"
+            },
+            "context": {
+              "lastActivityMs": "2469"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12843"
+        }
+      },
+      "mock": "failure"
+    },
+    {
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "payload": [
+        "O43z0dpjhgX20SCx4KAo",
+        "$MK85r8tRAAagS3bUgEveytOGbf9rnAqnAEABEArZ1LgBfbH-cM6gRKby3JCHBVZmcbGM6K02UvIaE_G9Ewk8IfB6N2Ix6Rsfoh7p4cd6p3HHB_WcW-i8uUYUngAAAGnOAAAAB_QBB-IAWtqjbRUhzb3jx16sENE2kGE-y0M5uAh9a-Uj1gP3wKC-gzGUxMIjjXnM9LytGiMzVRdX0b97rnZ88pvZ2eqgpuikWUKHiK-qJUOd_fhmIPPIO68uKQK4p6sohgUFD3ifhOGBVnzPTPah_-qZhHjs32kALDjWSM4CBn6TsWkHE2KVBfCd3rYaqq36qYQAiwh0_R2RkffVojZmeybnq6pTWQoX-VlLipXzRzNZuDEnGKBxHCzWJpB5eGXvC8dYCXVytJAqYrdLvCZSpkiB4vCvOEdx1oahFsc2g9gtqBNBmd6BgCrBoDX-Ok1rTUnKlrGMs-Iqox4X2ZUj8BVQ89U-q6DLmMmkrDDpFZwZGcWkrxqr1zC8G_5yNE8bUNOh5QHOy8kZGEiF1NX3jkfSDT3qjXSHTxFw0vi2RVkfeKqHKHUtNX5bLaaT-VvmsdgpWP8M7vY3wJRSkJTtrvP7ZB8GAYB1EYhQRm_fUriVwkda1xQWsusIqSQQtxjEZFH78rv0nmFhU19RL6cv2GMmLxZvr2ZFdrdMx0M0vAOUO1cwUpCOQeBPSJ5bX2BpldtcWELPNsKkkOcbrRWsTJ6lY1elbrKvnZYKKYv8aV4D1Ytajg2HQfNbEsL2oHVF3S1d_7cNMMUwNrbaz6awMG39I_g03rLgNkFBFOg_jJraugPQ_RoDAsm4Rvtk-XcvNffotFSnPaBy7Gf3uiK4x_TouIXnwl4Dl7iLqSBCfq85DXcTGXibVCd4mjdvJte2OwJLXFKJwtffNmfZ-xFJ2ygk91tTunuyTE67Wsm-A9PuQWskTl4JcT230sc3FsNbIYHAX2pgstyr4Eo_qQE_6Ti9AfqGbGWTK2a2Czk1y29wGm_ODTTdNt6rxASijznt50y5SdQySHQH439QminTBhWwdBBcGavnXDw250lNTYnckiCMRPEOiurSB5uuYCFq1bqxD6SayLgLgTNxplEhphsnPvbX_E_llbM2kKRxLlfNOk8fmM3rylSbAVTplZP6e90SW9yGO322k02fGIbdBbc833ysULKyQNkvNfX0iaoXg9xyqvi0iXIiNtMFJhdcxPm0CfwrCs-2t-k6Xgv893T4RHpngilLRrPLtzB_Op8UAHp_d9sjqCvHfoxZAsToGbalsjrGFw2oS7GCIhEFdFDOZMC4vClqufDQ-GtpVvusPL_vzMJ4pgcjaJ8wqlGSy6FZP1wG9B3wETQnSDuA3H4sjNdo1JaO-TIZqB23jfTkz5e3DBBTIATZ3muruNMqHUDyjD6RScJZXVzxEux2x28AqE7H0OIkbA6znJN7U1LPkvMuFfGJxZrQ4oQblFbt6m2GEHxXD2awWVZ9IGpw-DN0jFus7snLKfOYjLOgqawJWRAZo7FrRjba4ojDhSNAViBkdefGx09Qbq1YhYQIQzXUwxeFWHsm8JtAebLkMTwKnUo73qP9yrNzWWwFMZaog90_f2I5ope1tOwbXtaoUBAx4s6UjaGKTnjv0WZl7dw4Sg5ZJU7qNrF7cMjh0KkTBKlQcGPqUj0vIA5UJkEsYTc8Vn4poQrBKh0pMkkV44bjqFnIFLZCs5IXWVye1d_YgU8113usi93ymLy3BOTSC1EVIylJpLCfi76wv5ouX3fC-Hhw0f0TMLNsR9kOr6AgfHwBs8xrm_RHO9Geq4he6m9EpESYpbGKxwALNlu1UVIW2hEUwpjSippDxIsLZbLQRhDae6dsi-6SuLVFZrdSfmDJGIVRHg58lcVObEeJzq6pvJ7DpkKk2Eyf2ZGvZxBrzmf5pEb9ERtqHi6Wc-b5MuRklYEqbbaNRBaRxvFGzm_ebQUn1NS7V5C2GV6sUS3s4EEv"
+      ],
+      "mock": "failure"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348053635,
+            "finalPayload": {
+              "csn": "T5FUo00fOB19-hcC"
+            },
+            "context": {
+              "lastActivityMs": "2469"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12843"
+        }
+      },
+      "mock": "failure"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348053773,
+            "latencyActionTicked": {
+              "tickName": "mesv_s",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "2606"
+            }
+          },
+          {
+            "eventTimeMs": 1793348053782,
+            "finalPayload": {
+              "csn": "T5FUo00fOB19-hcC"
+            },
+            "context": {
+              "lastActivityMs": "2616"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12844"
+        }
+      },
+      "mock": "failure"
+    },
+    {
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "payload": [
+        "O43z0dpjhgX20SCx4KAo",
+        "$MK85r8tRAAagS3bUgEveytOGbf9rnAqnAEABEArZ1LgBfbH-cM6gRKby3JCHBVZmcbGM6K02UvIaE_G9Ewk8IfB6N2Ix6Rsfoh7p4cd6p3HHB_WcW-i8uUYUngAAAGnOAAAAB_QBB-IAWtqjbRUhzb3jx16sENE2kGE-y0M5uAh9a-Uj1gP3wKC-gzGUxMIjjXnM9LytGiMzVRdX0b97rnZ88pvZ2eqgpuikWUKHiK-qJUOd_fhmIPPIO68uKQK4p6sohgUFD3ifhOGBVnzPTPah_-qZhHjs32kALDjWSM4CBn6TsWkHE2KVBfCd3rYaqq36qYQAiwh0_R2RkffVojZmeybnq6pTWQoX-VlLipXzRzNZuDEnGKBxHCzWJpB5eGXvC8dYCXVytJAqYrdLvCZSpkiB4vCvOEdx1oahFsc2g9gtqBNBmd6BgCrBoDX-Ok1rTUnKlrGMs-Iqox4X2ZUj8BVQ89U-q6DLmMmkrDDpFZwZGcWkrxqr1zC8G_5yNE8bUNOh5QHOy8kZGEiF1NX3jkfSDT3qjXSHTxFw0vi2RVkfeKqHKHUtNX5bLaaT-VvmsdgpWP8M7vY3wJRSkJTtrvP7ZB8GAYB1EYhQRm_fUriVwkda1xQWsusIqSQQtxjEZFH78rv0nmFhU19RL6cv2GMmLxZvr2ZFdrdMx0M0vAOUO1cwUpCOQeBPSJ5bX2BpldtcWELPNsKkkOcbrRWsTJ6lY1elbrKvnZYKKYv8aV4D1Ytajg2HQfNbEsL2oHVF3S1d_7cNMMUwNrbaz6awMG39I_g03rLgNkFBFOg_jJraugPQ_RoDAsm4Rvtk-XcvNffotFSnPaBy7Gf3uiK4x_TouIXnwl4Dl7iLqSBCfq85DXcTGXibVCd4mjdvJte2OwJLXFKJwtffNmfZ-xFJ2ygk91tTunuyTE67Wsm-A9PuQWskTl4JcT230sc3FsNbIYHAX2pgstyr4Eo_qQE_6Ti9AfqGbGWTK2a2Czk1y29wGm_ODTTdNt6rxASijznt50y5SdQySHQH439QminTBhWwdBBcGavnXDw250lNTYnckiCMRPEOiurSB5uuYCFq1bqxD6SayLgLgTNxplEhphsnPvbX_E_llbM2kKRxLlfNOk8fmM3rylSbAVTplZP6e90SW9yGO322k02fGIbdBbc833ysULKyQNkvNfX0iaoXg9xyqvi0iXIiNtMFJhdcxPm0CfwrCs-2t-k6Xgv893T4RHpngilLRrPLtzB_Op8UAHp_d9sjqCvHfoxZAsToGbalsjrGFw2oS7GCIhEFdFDOZMC4vClqufDQ-GtpVvusPL_vzMJ4pgcjaJ8wqlGSy6FZP1wG9B3wETQnSDuA3H4sjNdo1JaO-TIZqB23jfTkz5e3DBBTIATZ3muruNMqHUDyjD6RScJZXVzxEux2x28AqE7H0OIkbA6znJN7U1LPkvMuFfGJxZrQ4oQblFbt6m2GEHxXD2awWVZ9IGpw-DN0jFus7snLKfOYjLOgqawJWRAZo7FrRjba4ojDhSNAViBkdefGx09Qbq1YhYQIQzXUwxeFWHsm8JtAebLkMTwKnUo73qP9yrNzWWwFMZaog90_f2I5ope1tOwbXtaoUBAx4s6UjaGKTnjv0WZl7dw4Sg5ZJU7qNrF7cMjh0KkTBKlQcGPqUj0vIA5UJkEsYTc8Vn4poQrBKh0pMkkV44bjqFnIFLZCs5IXWVye1d_YgU8113usi93ymLy3BOTSC1EVIylJpLCfi76wv5ouX3fC-Hhw0f0TMLNsR9kOr6AgfHwBs8xrm_RHO9Geq4he6m9EpESYpbGKxwALNlu1UVIW2hEUwpjSippDxIsLZbLQRhDae6dsi-6SuLVFZrdSfmDJGIVRHg58lcVObEeJzq6pvJ7DpkKk2Eyf2ZGvZxBrzmf5pEb9ERtqHi6Wc-b5MuRklYEqbbaNRBaRxvFGzm_ebQUn1NS7V5C2GV6sUS3s4EEv"
+      ],
+      "mock": "failure"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "payload": {
+        "context": {
+          "client": {
+            "hl": "en-GB",
+            "gl": "ZA",
+            "clientName": 56,
+            "clientVersion": "2.20261029.01.00",
+            "configInfo": {
+              "appInstallData": "CNKjkdcGEMn2gBMQyvuAExD36NIcEJj-0hwQmJLTHBDV8dIcEMGP0BwQ7PvSHBDditMcEL22rgUQnNnRHBCc5dIcENut0hwQkKDTHBC45M4cENr3zhwQh6zOHBDcirgiEJ_PgBMQzN-uBRDxntMcEN68zhwQrvDSHBDw3tEcEIHNzhwQmY2xBRD2q7AFEL6E0RwQoYDTHBCwhs8cEPza0hwQ5-vRHBCwg9McEK7e0RwQwZfTHBCkqdEcEMr70hwQrtbPHBDp8tIcEJ-W0xwQ8bTQHBCQ79IcEL2KsAUQntCwBRCYr9IcELyk0BwQpePSHBC_kNMcELmH0xwQj97SHBCv-NEcEImwzhwQtt7RHBCvxdIcEL340hwQy_LSHBDCwNIcEPb30RwQnKLTHBDE_dIcKmxDQU1TVFJWTy1acS1ETGlVRXBRQ25SdDJvQWFuOGdfUUZOd0VuUUl2ZkJTSUJ2VUdvZ1pSdkpycEN6S3JyQVNUekFPMjVBYmtoUmVzdXdQWjFRWGRMRHJhakFQMWMtTElEckVhWi0yZUJoMEgwAA%3D%3D"
+            },
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "screenDensityFloat": "2",
+            "connectionType": "CONN_CELLULAR_4G",
+            "browserName": "Chrome",
+            "deviceMake": "apple",
+            "browserVersion": "156.0.0.0",
+            "osName": "Macintosh",
+            "osVersion": "10_15_7",
+            "platform": "DESKTOP",
+            "windowWidthPoints": 591,
+            "windowHeightPoints": 333
+          },
+          "thirdParty": {
+            "embedUrl": "http://localhost:4328/"
+          }
+        },
+        "events": [
+          {
+            "eventTimeMs": 1793348053773,
+            "latencyActionTicked": {
+              "tickName": "mesv_s",
+              "clientActionNonce": "3xXrpUe2Q2Dg4q2E"
+            },
+            "context": {
+              "lastActivityMs": "2606"
+            }
+          },
+          {
+            "eventTimeMs": 1793348053782,
+            "finalPayload": {
+              "csn": "T5FUo00fOB19-hcC"
+            },
+            "context": {
+              "lastActivityMs": "2616"
+            }
+          }
+        ],
+        "serializedClientEventId": {
+          "serializedEventId": "0lHkatT2ILCI1LsPgbS7iQY",
+          "clientCounter": "12844"
+        }
+      },
+      "mock": "failure"
+    },
+    {
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "payload": [
+        "O43z0dpjhgX20SCx4KAo",
+        "$MK85r8tRAAagS3bUgEveytOGbf9rnAqnAEABEArZ1LgBfbH-cM6gRKby3JCHBVZmcbGM6K02UvIaE_G9Ewk8IfB6N2Ix6Rsfoh7p4cd6p3HHB_WcW-i8uUYUngAAAGnOAAAAB_QBB-IAWtqjbRUhzb3jx16sENE2kGE-y0M5uAh9a-Uj1gP3wKC-gzGUxMIjjXnM9LytGiMzVRdX0b97rnZ88pvZ2eqgpuikWUKHiK-qJUOd_fhmIPPIO68uKQK4p6sohgUFD3ifhOGBVnzPTPah_-qZhHjs32kALDjWSM4CBn6TsWkHE2KVBfCd3rYaqq36qYQAiwh0_R2RkffVojZmeybnq6pTWQoX-VlLipXzRzNZuDEnGKBxHCzWJpB5eGXvC8dYCXVytJAqYrdLvCZSpkiB4vCvOEdx1oahFsc2g9gtqBNBmd6BgCrBoDX-Ok1rTUnKlrGMs-Iqox4X2ZUj8BVQ89U-q6DLmMmkrDDpFZwZGcWkrxqr1zC8G_5yNE8bUNOh5QHOy8kZGEiF1NX3jkfSDT3qjXSHTxFw0vi2RVkfeKqHKHUtNX5bLaaT-VvmsdgpWP8M7vY3wJRSkJTtrvP7ZB8GAYB1EYhQRm_fUriVwkda1xQWsusIqSQQtxjEZFH78rv0nmFhU19RL6cv2GMmLxZvr2ZFdrdMx0M0vAOUO1cwUpCOQeBPSJ5bX2BpldtcWELPNsKkkOcbrRWsTJ6lY1elbrKvnZYKKYv8aV4D1Ytajg2HQfNbEsL2oHVF3S1d_7cNMMUwNrbaz6awMG39I_g03rLgNkFBFOg_jJraugPQ_RoDAsm4Rvtk-XcvNffotFSnPaBy7Gf3uiK4x_TouIXnwl4Dl7iLqSBCfq85DXcTGXibVCd4mjdvJte2OwJLXFKJwtffNmfZ-xFJ2ygk91tTunuyTE67Wsm-A9PuQWskTl4JcT230sc3FsNbIYHAX2pgstyr4Eo_qQE_6Ti9AfqGbGWTK2a2Czk1y29wGm_ODTTdNt6rxASijznt50y5SdQySHQH439QminTBhWwdBBcGavnXDw250lNTYnckiCMRPEOiurSB5uuYCFq1bqxD6SayLgLgTNxplEhphsnPvbX_E_llbM2kKRxLlfNOk8fmM3rylSbAVTplZP6e90SW9yGO322k02fGIbdBbc833ysULKyQNkvNfX0iaoXg9xyqvi0iXIiNtMFJhdcxPm0CfwrCs-2t-k6Xgv893T4RHpngilLRrPLtzB_Op8UAHp_d9sjqCvHfoxZAsToGbalsjrGFw2oS7GCIhEFdFDOZMC4vClqufDQ-GtpVvusPL_vzMJ4pgcjaJ8wqlGSy6FZP1wG9B3wETQnSDuA3H4sjNdo1JaO-TIZqB23jfTkz5e3DBBTIATZ3muruNMqHUDyjD6RScJZXVzxEux2x28AqE7H0OIkbA6znJN7U1LPkvMuFfGJxZrQ4oQblFbt6m2GEHxXD2awWVZ9IGpw-DN0jFus7snLKfOYjLOgqawJWRAZo7FrRjba4ojDhSNAViBkdefGx09Qbq1YhYQIQzXUwxeFWHsm8JtAebLkMTwKnUo73qP9yrNzWWwFMZaog90_f2I5ope1tOwbXtaoUBAx4s6UjaGKTnjv0WZl7dw4Sg5ZJU7qNrF7cMjh0KkTBKlQcGPqUj0vIA5UJkEsYTc8Vn4poQrBKh0pMkkV44bjqFnIFLZCs5IXWVye1d_YgU8113usi93ymLy3BOTSC1EVIylJpLCfi76wv5ouX3fC-Hhw0f0TMLNsR9kOr6AgfHwBs8xrm_RHO9Geq4he6m9EpESYpbGKxwALNlu1UVIW2hEUwpjSippDxIsLZbLQRhDae6dsi-6SuLVFZrdSfmDJGIVRHg58lcVObEeJzq6pvJ7DpkKk2Eyf2ZGvZxBrzmf5pEb9ERtqHi6Wc-b5MuRklYEqbbaNRBaRxvFGzm_ebQUn1NS7V5C2GV6sUS3s4EEv"
+      ],
+      "mock": "failure"
+    },
+    {
+      "url": "https://formsubmit.co/ajax/hello@thespottedape.com",
+      "payload": {
+        "name": "Navigation audit",
+        "email": "audit@example.invalid",
+        "roleOrganization": "Synthetic audit organisation",
+        "teamSize": "",
+        "engagement": "Strategy Course (DLA)",
+        "courseModule": "05",
+        "context": "Synthetic navigation audit. No enquiry should be delivered.",
+        "pageUrl": "http://localhost:4328/courses?module=05#book",
+        "subject": "The Spotted Ape enquiry — Strategy Course (DLA)",
+        "_subject": "The Spotted Ape enquiry — Strategy Course (DLA)",
+        "replyto": "audit@example.invalid",
+        "_replyto": "audit@example.invalid",
+        "from_name": "The Spotted Ape Website",
+        "_captcha": "false",
+        "_template": "table",
+        "_honey": ""
+      },
+      "mock": "failure"
+    }
+  ]
+}

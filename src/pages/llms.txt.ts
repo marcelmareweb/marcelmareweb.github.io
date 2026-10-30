@@ -20,8 +20,13 @@ Independent strategic decision and behavioural design practice in Cape Town, Sou
 
 ## Website
 
-- [What We Do](https://thespottedape.com/#practice)
-- [Work and research](https://thespottedape.com/#evidence)
+- [How we help](https://thespottedape.com/services/)
+- [Workshops & learning](https://thespottedape.com/learning/)
+- [Custom decision workshops](https://thespottedape.com/workshops)
+- [Executive masterclass](https://thespottedape.com/workshops/strategic-design-leadership/)
+- [Solar learning case](https://thespottedape.com/courses)
+- [Contact](https://thespottedape.com/contact/)
+- [Work and research](https://thespottedape.com/work/)
 - [Strategic Thinking](https://thespottedape.com/thinking/)
 - [The Strategy Illusion quadrant map](https://thespottedape.com/thinking/strategic-decision-maps/strategy-illusion/)
 - [About](https://thespottedape.com/about)

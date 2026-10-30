@@ -1,0 +1,85 @@
+[
+  {
+    "id": "workshops-to-masterclass",
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+    "activeHeader": [],
+    "pageLinks": "Explore the five days ↓\n← All decision workshops"
+  },
+  {
+    "id": "masterclass-preview",
+    "preview": "DAY 03 / INTEGRATOR\n\nCross-Functional Alignment & Capability Orchestration.\n\nStrategic choices fail when organisational capabilities, incentives and responsibilities remain disconnected.\n\nWORKING TOOL\nEnterprise Alignment & Friction Matrix",
+    "selected": 0
+  },
+  {
+    "id": "masterclass-day-03",
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+    "question": "What must the organisation be able to do exceptionally well?",
+    "activeFocus": "session-question-integrator",
+    "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2003%3A%20Integrator",
+    "selected": "true"
+  },
+  {
+    "id": "five-day-direct-navigation",
+    "sessions": [
+      {
+        "id": "explorer",
+        "question": "What does success mean for this organisation?",
+        "output": "Opportunity Landscape.",
+        "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2001%3A%20Explorer"
+      },
+      {
+        "id": "practitioner",
+        "question": "Why will customers choose us over alternatives?",
+        "output": "Strategic Hypothesis & Scenario Assessment.",
+        "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2002%3A%20Practitioner"
+      },
+      {
+        "id": "integrator",
+        "question": "What must the organisation be able to do exceptionally well?",
+        "output": "Enterprise Alignment Map.",
+        "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2003%3A%20Integrator"
+      },
+      {
+        "id": "architect",
+        "question": "Where will we compete—and where will we not?",
+        "output": "Strategic Choice Cascade.",
+        "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2004%3A%20Architect"
+      },
+      {
+        "id": "steward",
+        "question": "How will we govern decisions and sustain advantage?",
+        "output": "Executive Strategy Dossier & Governance Charter.",
+        "enquiry": "mailto:hello@thespottedape.com?subject=Strategic%20Design%20Leadership%20in%20the%20Age%20of%20AI%20%E2%80%94%20Day%2005%3A%20Steward"
+      }
+    ],
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/"
+  },
+  {
+    "id": "masterclass-escape",
+    "openSessions": 0,
+    "focus": "steward"
+  },
+  {
+    "id": "masterclass-reload",
+    "openSessions": 0,
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/"
+  },
+  {
+    "id": "course-module-05",
+    "title": "Decide",
+    "liveLink": "https://marcelmare.com/dla-course-2/decide.html",
+    "cta": "Commission Module 05 Cohort\n↗"
+  },
+  {
+    "id": "module-to-cohort-enquiry",
+    "url": "http://localhost:4328/courses",
+    "interest": "Strategy Course (DLA)",
+    "module": "05",
+    "context": "Course module 05 — Decide selected for your cohort enquiry."
+  },
+  {
+    "id": "course-keyboard-next",
+    "title": "Reflect",
+    "selected": "06"
+  }
+]

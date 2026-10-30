@@ -1,0 +1,33 @@
+{
+  "slug": "case",
+  "url": "http://localhost:4328/cases/policy-analyst-strategic-review",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 3091,
+  "overflow": false,
+  "h1": {
+    "text": "When more thinking makes everything worse.",
+    "top": 236,
+    "font": "44px"
+  },
+  "entryLinks": [
+    {
+      "text": "← Work & research",
+      "href": "/#evidence",
+      "top": 590,
+      "inFirstViewport": true
+    }
+  ],
+  "headings": [
+    {
+      "text": "The report’sargument.",
+      "top": 814
+    },
+    {
+      "text": "Final draft in 9 days.",
+      "top": 1862
+    }
+  ]
+}

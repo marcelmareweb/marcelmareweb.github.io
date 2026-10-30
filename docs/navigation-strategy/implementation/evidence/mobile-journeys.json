@@ -1,0 +1,52 @@
+[
+  {
+    "id": "behavioural-support",
+    "url": "http://localhost:4328/contact/?interest=behavioural-design&source=%2Fservices%2F",
+    "interest": "Behavioural Design & Research",
+    "context": "Behavioural Design & Research",
+    "contextTop": 586.5703125
+  },
+  {
+    "id": "programme-day",
+    "hash": "#session-practitioner",
+    "focus": "session-question-practitioner"
+  },
+  {
+    "id": "programme-contact",
+    "day": "practitioner",
+    "returnHref": "/workshops/strategic-design-leadership/#session-practitioner",
+    "required": [
+      "name",
+      "email",
+      "context"
+    ]
+  },
+  {
+    "id": "programme-return",
+    "hash": "#session-practitioner",
+    "open": "practitioner"
+  },
+  {
+    "id": "module-contact",
+    "module": "05",
+    "context": "Solar learning case / Team session · Module 05 — Decide"
+  },
+  {
+    "id": "formation-limit",
+    "selected": 2,
+    "status": "Capacity is limited to two commitments. Select a yellow shape to clear it before backing another. Your earlier choices are unchanged."
+  },
+  {
+    "id": "formation-reset",
+    "selected": 0
+  },
+  {
+    "id": "landscape-menu",
+    "contactVisible": true,
+    "overflow": false
+  },
+  {
+    "id": "menu-escape",
+    "focusIsTrigger": true
+  }
+]

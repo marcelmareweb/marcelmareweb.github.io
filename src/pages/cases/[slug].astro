@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
+import { contactHref } from '../../lib/contact';
 
 interface Props {
   caseStudy: CollectionEntry<'cases'>;
@@ -21,10 +22,10 @@ const { data } = caseStudy;
 const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://thespottedape.com');
 ---
 <BaseLayout title={`${data.title} | The Spotted Ape`} description={data.clientContext} canonicalURL={canonicalURL} schemaType="Article">
-<PageIntro eyebrow="Case account / Policy analysis" scale="long" description={data.clientContext}>
+<PageIntro compact eyebrow="Case account / Policy analysis" scale="long" description={data.clientContext}>
 <Fragment slot="heading">{data.title}</Fragment>
 <nav class="page-nav print-action" aria-label="Case actions">
-<a href="/#evidence">← Work &amp; research</a>
+<a href="/work/">← Work &amp; research</a>
 <button class="text-link" type="button" data-print-brief>Print / Save as PDF ↗</button>
 </nav>
 </PageIntro>
@@ -58,11 +59,13 @@ const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://thesp
 </div>
 <p class="case-caption meta">The Spotted Ape (Pty) Ltd / Cape Town, South Africa</p>
 </article>
+<section class="case-invitation section-y theme-grey"><div class="wrap split-layout"><h2 class="h2">A decision<br />of your own?</h2><div><p class="lead">Explore strategic decision support, or bring the question you need to resolve.</p><div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/cases/' + data.slug })}>Discuss a similar decision <span aria-hidden="true">↗</span></a><a class="text-link" href="/services/#strategic-decision-design">Strategic Decision Design ↗</a></div></div></div></section>
 </BaseLayout>
 <script>
 document.querySelector('[data-print-brief]')?.addEventListener('click', () => window.print());
 </script>
 <style>
+@media print { .case-invitation { display: none !important; } }
 .case-brief {
   padding-bottom: var(--space-lg);
 }

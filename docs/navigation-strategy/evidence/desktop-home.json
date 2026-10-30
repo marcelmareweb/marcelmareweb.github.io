@@ -1,0 +1,327 @@
+{
+  "slug": "home",
+  "url": "http://localhost:4328/",
+  "title": "The Spotted Ape — Strategic Decisions & Behavioural Design",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "height": 11647,
+  "overflow": false,
+  "header": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "footer": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "More possibilities.Harder choices.",
+      "top": 258,
+      "font": "174.944px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Find formation.",
+      "top": 1200,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Back up to two priorities.",
+      "top": 1501,
+      "font": "25.184px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Decide.Make it happen.",
+      "top": 2745,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Strategic Decision Design.",
+      "top": 3342,
+      "font": "77.856px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Behavioural Design.",
+      "top": 3342,
+      "font": "77.856px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Human–AI Decision Design.",
+      "top": 3342,
+      "font": "77.856px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "Begin with whatpeople actually do.",
+      "top": 7246,
+      "font": "145.648px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Cookstove adoption in South Africa.",
+      "top": 7666,
+      "font": "57.456px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "The Strategy Illusion.",
+      "top": 8853,
+      "font": "77.856px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "Make the reasoning visible.",
+      "top": 9673,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H3",
+      "text": "The Laboratory Fallacy.",
+      "top": 9845,
+      "font": "43.248px",
+      "weight": "600"
+    },
+    {
+      "tag": "H2",
+      "text": "What needsdeciding?",
+      "top": 10297,
+      "font": "145.648px",
+      "weight": "600"
+    }
+  ],
+  "links": [
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Explore the practice ↓",
+      "href": "#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Explore decision workshops ↗",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "doi:10.3390/su15065328",
+      "href": "https://doi.org/10.3390/su15065328",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Research & references ↗",
+      "href": "https://thespottedape.com/research/index.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "A decision in practice ↗",
+      "href": "/cases/policy-analyst-strategic-review",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Explore all thinking ↗",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Explore the map ↗",
+      "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "EssayThe Laboratory Fallacy.When a persuasive model meets the conditions of real work.↗",
+      "href": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "forms": [],
+  "mainText": "STRATEGIC DECISION & BEHAVIOURAL DESIGN\n\nCAPE TOWN / INDEPENDENT PRACTICE\n\nMore possibilities.\nHarder choices.\n\nWe help leaders make consequential choices when familiar assumptions no longer hold.\n\nLet’s talk\nExplore the practice\n↓\n\nFind your\nformation.\n\nMake a choice.\nOwn its consequences.\n\nSTRATEGIC DECISIONS\n\nFind formation.\n\nChoose what to back in the example below.\nWhat does each decision require? What will you defer?\n\nBack up to two priorities.\n\nHover over each priority to explore. Click or tap to back a decision. Select it again to clear it.\n\nReset choices ↺\n\n0 of 2 commitments backed. Choose a shape to back a priority.\n\nA FIELD OF COMMITMENTS / FICTIONAL ORGANISATION\n\nCUSTOMER EVIDENCE\nSERVICE CAPACITY\nTIME TO LEARN\nREVIEW RIGHTS\n01 / DECISION\n+\nAnother\nmarket\nOPEN\n02 / DECISION\n+\nCloser\nrelationships\nOPEN\n03 / DECISION\n+\nReliable\noperations\nOPEN\n04 / DECISION\n+\nAI in the\nworkflow\nOPEN\nCAPACITY\nFINITE / SHARED\nYellow = backed · dashed = deferred\nOpen questions remain.\n\nTHE IMPLICATIONS / YOUR CHOICE NOTES\n\nEXPLORE / NOTHING SELECTED\n\nA choice creates obligations.\n\nExplore a shape to see what it needs. Back a priority to keep its information here.\n\nRead the worked example and its trade-offs\n\nFictional exercise with an illustrative two-commitment limit. It is not an assessment. No information is saved or sent.\n\n01 / THE PRACTICE\n\nCHOICES. PEOPLE. CONSEQUENCES.\n\nDecide.\nMake it happen.\n\nScroll down to explore the three practice areas. Use the navigation buttons, or Left and Right arrow keys when this region is focused. Open Questions and outcomes for more detail.\n\n01 / THE PRACTICE\n\nStrategic\nDecision\nDesign.\n\nResolve competing priorities.\nMake the trade-offs explicit.\n\nQuestions & outcomes\n\n02 / THE PRACTICE\n\nBehavioural\nDesign.\n\nBegin with what people actually do.\n\nQuestions & outcomes\n\n03 / THE PRACTICE\n\nHuman–AI\nDecision\nDesign.\n\nDefine where people decide,\nreview and remain accountable.\n\nQuestions & outcomes\n\n01 / 03\n\nScroll to explore\n\n01\n02\n03\n←\n→\n\nPractice 1 of 3: Strategic Decision Design.\n\nStrategic decisions, behavioural science\nand human judgement. Working together.\n\nExplore decision workshops\n↗\n\n02 / THE EVIDENCE\n\nRESEARCH. METHODS. INSTRUMENTS.\n\nBegin with what\npeople actually do.\nRESEARCH / SOUTH AFRICA\nEDITORIAL DIAGRAM\n\nAvailable\ntechnology.\n\nEveryday\nbehaviour.\n\nTHE CONDITIONS BETWEEN THEM MATTER.\n\nBEHAVIOURAL DESIGN / RESEARCH\n\nCookstove adoption in South Africa.\nQUESTION\nWhat influences the adoption of improved cookstoves among households in Dunoon?\nAPPROACH\nCo-created interventions addressed cooking motivations, assessed through observations and questionnaires.\nFINDING\nThe pilot reported increased LPG and biomass stove ownership, but no significant reduction in paraffin stove ownership.\nIMPLICATION\nUnderstanding motivations and everyday cooking practices matters alongside the technology itself.\n\nResearch pilot. Maré et al., Sustainability (2023). doi:10.3390/su15065328.\n\nResearch & references\n↗\n\nObserve before\nprescribing.\n\nA decision in practice\n↗\n\n03 / THINKING & INSTRUMENTS\n\nEXPLORE ALL THINKING ↗\n\nSTRATEGIC DECISION MAP\n\nThe Strategy Illusion.\n\nAre you following a strategy, or just a plan?\n\nDoing the work well does not make the choice right.\n\nExplore the map\n↗\nHigh\nConsistency of action\nLow\nThe Strategy Illusion. Clarity of choice increases from left to right.Consistency of action increases from bottom to top.\n\tLow clarity of choice\tHigh clarity of choice\nHigh consistency of action\nThe Efficient Treadmill\n\nUnclear choices. Consistent action.\n\n\t\nCoherent Advantage\n\nClear choices. Consistent action.\n\n\n\nLow consistency of action\nStrategic Drift\n\nUnclear choices. Inconsistent action.\n\n\t\nUnrealised Strategy\n\nClear choices. Inconsistent action.\n\nLow\nHigh\n\nClarity of choice\n\nAN INSTRUMENT FOR THE CONVERSATION\n\nMake the reasoning visible.\nOpen an example decision record\nESSAY\nThe Laboratory Fallacy.\n\nWhen a persuasive model meets the conditions of real work.\n\n↗\n\nA CONSEQUENTIAL CHOICE?\n\nWhat needs\ndeciding?\n\nBring the alternatives, the assumptions\nand the difficult questions.\n\nLet’s talk",
+  "buttons": [
+    {
+      "text": "Reset choices ↺",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Enter another market",
+      "role": null,
+      "pressed": "false"
+    },
+    {
+      "text": "Deepen customer relationships",
+      "role": null,
+      "pressed": "false"
+    },
+    {
+      "text": "Improve operational reliability",
+      "role": null,
+      "pressed": "false"
+    },
+    {
+      "text": "Introduce AI into a workflow",
+      "role": null,
+      "pressed": "false"
+    },
+    {
+      "text": "Read the worked example and its trade-offs",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Questions & outcomes",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Questions & outcomes",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Questions & outcomes",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Show Strategic Decision Design.",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Show Behavioural Design.",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Show Human–AI Decision Design.",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Previous practice card",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Next practice card",
+      "role": null,
+      "pressed": null
+    },
+    {
+      "text": "Open an example decision record",
+      "role": null,
+      "pressed": null
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "width": 320,
+    "path": "/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 320,
+    "path": "/services/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 320,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 320,
+    "path": "/work/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 320,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 604.5703125
+  },
+  {
+    "width": 320,
+    "path": "/courses",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 13566.5234375
+  },
+  {
+    "width": 320,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 8212.5625
+  },
+  {
+    "width": 320,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 390,
+    "path": "/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 390,
+    "path": "/services/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 390,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 390,
+    "path": "/work/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 390,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 586.5703125
+  },
+  {
+    "width": 390,
+    "path": "/courses",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 12501.703125
+  },
+  {
+    "width": 390,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 7364.2265625
+  },
+  {
+    "width": 390,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 768,
+    "path": "/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 768,
+    "path": "/services/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 768,
+    "path": "/learning/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 768,
+    "path": "/work/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  },
+  {
+    "width": 768,
+    "path": "/contact/",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 717.6953125
+  },
+  {
+    "width": 768,
+    "path": "/courses",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 10396.5390625
+  },
+  {
+    "width": 768,
+    "path": "/workshops",
+    "documentOverflow": false,
+    "controlsOutside": [],
+    "contactTop": 6934.5703125
+  },
+  {
+    "width": 768,
+    "path": "/workshops/strategic-design-leadership/",
+    "documentOverflow": false,
+    "controlsOutside": []
+  }
+]

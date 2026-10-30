@@ -1,0 +1,112 @@
+[
+  {
+    "url": "http://localhost:4328/#practice",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/#evidence",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/thinking/",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/workshops",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/courses",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/about",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/cases/policy-analyst-strategic-review",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/thinking/strategic-decision-maps/strategy-illusion/",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/workshops#section-02",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/workshops#section-04",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/workshops#book",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/privacy",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/workshops/strategic-design-leadership/#programme",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/courses#syllabus",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/courses#outcomes",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/courses#book",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/about#section-02",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/about#section-05",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/thinking/strategic-decision-maps/strategy-illusion/#strategy-illusion-map",
+    "status": 200,
+    "anchorExists": true
+  },
+  {
+    "url": "http://localhost:4328/terms",
+    "status": 200,
+    "anchorExists": null
+  },
+  {
+    "url": "http://localhost:4328/#top",
+    "status": 200,
+    "anchorExists": true
+  }
+]

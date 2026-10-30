@@ -1,0 +1,139 @@
+{
+  "slug": "courses",
+  "url": "http://localhost:4328/courses",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 14264,
+  "overflow": false,
+  "h1": {
+    "text": "The spreadsheet provides the evidence.\nThe decisions require your judgement.",
+    "top": 236,
+    "font": "44px"
+  },
+  "entryLinks": [
+    {
+      "text": "Explore the curriculum ↓",
+      "href": "#syllabus",
+      "top": 745,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Course artifacts ↓",
+      "href": "#outcomes",
+      "top": 745,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Discuss a cohort ↗",
+      "href": "#book",
+      "top": 805,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Inspect the case ↓",
+      "href": "#syllabus",
+      "top": 1355,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Open module in live course ↗",
+      "href": "https://marcelmare.com/dla-course-2/understand.html",
+      "top": 6813,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Open the live course ↗",
+      "href": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "top": 7745,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Alternative course host: marcelmare.com ↗",
+      "href": "https://marcelmare.com/dla-course-2/",
+      "top": 7820,
+      "inFirstViewport": false
+    },
+    {
+      "text": "01 .XLSX Student Workbook (V8). Five linked sheets, including a 20-year NPV model. Download Student Workbook ↓ ↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+      "top": 7895,
+      "inFirstViewport": false
+    },
+    {
+      "text": "02 .PDF Cape Manufacturing Case Brief. Supplier proposals, tariff assumptions and the Financial Director’s briefing. Open Case Brief PDF ↗ ↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+      "top": 8127,
+      "inFirstViewport": false
+    },
+    {
+      "text": "03 .PDF Excel & Google Sheets Quick Reference. Cell addresses, cross-sheet formulas, reference locking and currency formatting. Open Quick Reference PDF ↗ ↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+      "top": 8387,
+      "inFirstViewport": false
+    },
+    {
+      "text": "04 .PDF Formula Troubleshooting Diagnostic. Check shifted references, percentages and reversed ratios. Open Diagnostic Card PDF ↗ ↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+      "top": 8647,
+      "inFirstViewport": false
+    },
+    {
+      "text": "05 .XLSX Completed Reference Workbook (V8). Compare your formulas and sensitivity analysis with the reference solution. Download Reference Model ↓ ↗",
+      "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+      "top": 8907,
+      "inFirstViewport": false
+    },
+    {
+      "text": "06 RATIONALE 5-Minute Reviewer Rationale. Learning design, assessment checkpoints and competence criteria. Read Reviewer Rationale ↗ ↗",
+      "href": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+      "top": 9166,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Explore decision workshops ↗",
+      "href": "/workshops",
+      "top": 11628,
+      "inFirstViewport": false
+    },
+    {
+      "text": "hello@thespottedape.com ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 12149,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Privacy policy",
+      "href": "/privacy",
+      "top": 13289,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Should we investin solar?",
+      "top": 1059
+    },
+    {
+      "text": "Technical output.Human judgement.",
+      "top": 2236
+    },
+    {
+      "text": "One case.One decision.",
+      "top": 4140
+    },
+    {
+      "text": "Open the model.Question it.",
+      "top": 7207
+    },
+    {
+      "text": "For people who must defend their decisions.",
+      "top": 9654
+    },
+    {
+      "text": "What does your team need to decide?",
+      "top": 11904
+    }
+  ]
+}

@@ -1,53 +1,41 @@
 ---
-const links = [
-  { label: 'Practice', href: '/#practice' },
-  { label: 'Work', href: '/#evidence' },
-  { label: 'Thinking', href: '/thinking/' },
-  { label: 'Workshops', href: '/workshops' },
-  { label: 'Courses', href: '/courses' },
-  { label: 'About', href: '/about' },
-];
-const current = (href: string) =>
-  !href.includes('#') && Astro.url.pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
+import { primaryNavigation, navigationState } from '../data/navigation';
+const links = primaryNavigation.map(item => ({ ...item, ...navigationState(Astro.url.pathname, item) }));
+const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
 ---
 <header class="site-header">
-<div class="wrap header-row">
-<a class="brand" href="/" aria-label="The Spotted Ape home">
-<img src="/logo.png" width="30" height="30" alt="" />
-<span class="brand-word">THE SPOTTED APE</span>
-</a>
-<nav class="desktop-nav" aria-label="Main navigation">{links.map(link=>
-<a href={link.href} aria-current={current(link.href)?'page':undefined}>{link.label}</a>)}<a class="button button--talk" href="mailto:hello@thespottedape.com">Let’s talk
-</a>
-</nav>
-<button class="button menu-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span>
-</button>
-<noscript>
-<details class="noscript-menu">
-<summary>Menu</summary>
-<nav aria-label="Mobile navigation">{links.map(link=>
-<a href={link.href}>{link.label}</a>)}</nav>
-</details>
-</noscript>
-</div>
-<dialog class="nav-dialog" id="site-menu" aria-label="Navigation menu">
-<div class="wrap dialog-top">
-<a class="brand" href="/" aria-label="The Spotted Ape home">
-<img src="/logo.png" width="30" height="30" alt="" />
-<span class="brand-word">THE SPOTTED APE</span>
-</a>
-<button class="icon-button" type="button" data-menu-close aria-label="Close navigation">×</button>
-</div>
-<div class="wrap dialog-content">
-<nav class="mobile-links" aria-label="Mobile navigation">{links.map(link=>
-<a href={link.href} aria-current={current(link.href)?'page':undefined}>{link.label}.</a>)}</nav>
-<div class="dialog-bottom">
-<a class="button button--talk" href="mailto:hello@thespottedape.com">Let’s talk
-</a>
-<p>Make a choice.<br />Own its consequences.</p>
-</div>
-</div>
-</dialog>
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="The Spotted Ape home">
+      <img src="/logo.png" width="30" height="30" alt="" />
+      <span class="brand-word">THE SPOTTED APE</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a>)}
+      <a class="button button--talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
+    </nav>
+    <button class="button menu-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
+    <noscript>
+      <details class="noscript-menu"><summary>Menu</summary><nav aria-label="Mobile navigation">
+        {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined}>{link.label}</a>)}
+        <a href="/contact/">Let’s talk</a>
+      </nav></details>
+    </noscript>
+  </div>
+  <dialog class="nav-dialog" id="site-menu" aria-label="Navigation menu">
+    <div class="wrap dialog-top">
+      <a class="brand" href="/" aria-label="The Spotted Ape home"><img src="/logo.png" width="30" height="30" alt="" /><span class="brand-word">THE SPOTTED APE</span></a>
+      <button class="icon-button" type="button" data-menu-close aria-label="Close navigation">×</button>
+    </div>
+    <div class="wrap dialog-content">
+      <nav class="mobile-links" aria-label="Mobile navigation">
+        {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a>)}
+      </nav>
+      <div class="dialog-bottom">
+        <a class="button button--talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
+        <p>Make a choice.<br />Own its consequences.</p>
+      </div>
+    </div>
+  </dialog>
 </header>
 <script>
 const dialog = document.querySelector<HTMLDialogElement>('#site-menu');
@@ -60,9 +48,21 @@ if (dialog && trigger) {
     trigger.setAttribute('aria-expanded', 'true');
   });
   dialog.querySelector('[data-menu-close]')?.addEventListener('click', () => dialog.close());
-  dialog
-    .querySelectorAll('a')
-    .forEach((link) => link.addEventListener('click', () => dialog.close()));
+  dialog.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => dialog.close()));
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const controls = [...dialog.querySelectorAll<HTMLElement>('a[href], button:not(:disabled)')]
+      .filter(element => element.getClientRects().length > 0);
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first?.focus();
+    }
+  });
   dialog.addEventListener('close', () => {
     document.body.style.overflow = '';
     trigger.setAttribute('aria-expanded', 'false');

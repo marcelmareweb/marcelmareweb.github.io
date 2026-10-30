@@ -1,0 +1,81 @@
+{
+  "slug": "workshops",
+  "url": "http://localhost:4328/workshops",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 8708,
+  "overflow": false,
+  "h1": {
+    "text": "From competing\nperspectives to\ncollective decisions.",
+    "top": 236,
+    "font": "56px"
+  },
+  "entryLinks": [
+    {
+      "text": "How it works ↓",
+      "href": "#section-02",
+      "top": 709,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Situations & questions ↓",
+      "href": "#section-04",
+      "top": 709,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Five-day executive masterclass ↗",
+      "href": "/workshops/strategic-design-leadership/",
+      "top": 769,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Discuss a workshop ↗",
+      "href": "#book",
+      "top": 769,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Explore the five-day masterclass ↗",
+      "href": "/workshops/strategic-design-leadership/",
+      "top": 5851,
+      "inFirstViewport": false
+    },
+    {
+      "text": "hello@thespottedape.com ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 6593,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Privacy policy",
+      "href": "/privacy",
+      "top": 7733,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Make thereasoning visible.",
+      "top": 1406
+    },
+    {
+      "text": "What needsresolving?",
+      "top": 2735
+    },
+    {
+      "text": "Designed aroundthe decision.",
+      "top": 4652
+    },
+    {
+      "text": "Five days.One coherent direction.",
+      "top": 5382
+    },
+    {
+      "text": "What does your team need to decide?",
+      "top": 6348
+    }
+  ]
+}

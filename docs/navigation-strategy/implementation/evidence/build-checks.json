@@ -1,0 +1,16 @@
+{
+  "astroCheck": {
+    "chunk_id": "dee506",
+    "wall_time_seconds": 0.000565292,
+    "exit_code": 0,
+    "original_token_count": 98,
+    "output": "11:29:01 [content] Syncing content\n11:29:01 [the-spotted-ape-substack-rss] Substack RSS unavailable (fetch failed); using local insight fallback entries.\n11:29:01 [content] Synced content\n11:29:01 [types] Generated 405ms\n11:29:01 [check] Getting diagnostics for Astro files in /Users/marem/Documents/astro-projects/the-spotted-ape...\nResult (71 files): \n- 0 errors\n- 0 warnings\n- 0 hints\n\n"
+  },
+  "productionBuild": {
+    "chunk_id": "b5613a",
+    "wall_time_seconds": 0.000600417,
+    "exit_code": 0,
+    "original_token_count": 516,
+    "output": "11:30:02 [content] Syncing content\n11:30:02 [the-spotted-ape-substack-rss] Substack RSS unavailable (fetch failed); using local insight fallback entries.\n11:30:02 [content] Synced content\n11:30:02 [types] Generated 337ms\n11:30:02 [build] output: \"static\"\n11:30:02 [build] mode: \"static\"\n11:30:02 [build] directory: /Users/marem/Documents/astro-projects/the-spotted-ape/dist/\n11:30:02 [build] Collecting build info...\n11:30:02 [build] ✓ Completed in 419ms.\n11:30:02 [build] Building static entrypoints...\n11:30:03 [vite] ✓ built in 880ms\n11:30:03 [vite] ✓ built in 81ms\n11:30:03 [build] Rearranging server assets...\n\n generating static routes \n11:30:03   ├─ /404.html (+13ms) \n11:30:03   ├─ /about/index.html (+7ms) \n11:30:03   ├─ /cases/policy-analyst-strategic-review/index.html (+3ms) \n11:30:03   ├─ /contact/index.html (+11ms) \n11:30:03   ├─ /courses/index.html (+9ms) \n11:30:04   ├─ /lab/monkey-factory/index.html (+3ms) \n11:30:04   ├─ /learning/index.html (+14ms) \n11:30:04   ├─ /llms.txt (+3ms) \n11:30:04   ├─ /privacy/index.html (+9ms) \n11:30:04   ├─ /services/index.html (+7ms) \n11:30:04   ├─ /terms/index.html (+8ms) \n11:30:04   ├─ /thinking/strategic-decision-maps/strategy-illusion/index.html (+19ms) \n11:30:04   ├─ /thinking/index.html (+7ms) \n11:30:04   ├─ /work/index.html (+3ms) \n11:30:04   ├─ /workshops/strategic-design-leadership/index.html (+9ms) \n11:30:04   ├─ /workshops/index.html (+3ms) \n11:30:04   ├─ /index.html (+4ms) \n11:30:04 ✓ Completed in 207ms.\n\n generating optimized images \n11:30:04   ▶ /_astro/mike-tyson2.MsPw68te_ZH2PkY.webp (reused cache entry) (+6ms) (1/3)\n11:30:04   ▶ /_astro/mike-tyson2.MsPw68te_1Pskky.webp (reused cache entry) (+3ms) (2/3)\n11:30:04   ▶ /_astro/mike-tyson2.MsPw68te_ZFhuP5.webp (reused cache entry) (+6ms) (3/3)\n11:30:04 ✓ Completed in 15ms.\n\n11:30:04 [build] ✓ Completed in 1.25s.\n11:30:04 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`\n11:30:04 [build] 16 page(s) built in 1.69s\n11:30:04 [build] Complete!\n"
+  }
+}

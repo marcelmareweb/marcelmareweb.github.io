@@ -53,6 +53,18 @@ Build original compositions for the practice's own material. Preserve the distin
 - Essential content must remain available without animation and without JavaScript. Respect reduced motion, keyboard operation, focus visibility and readable contrast.
 - Preserve qualified research findings, real case content, external course resources, SEO, canonical links and print functionality.
 
+## Navigation and customer journeys
+
+The approved navigation strategy is implemented locally. Read [the current implementation record](docs/navigation-strategy/implementation/IMPLEMENTATION.md) alongside the design-reference documents. The original audit and strategy remain the rationale and historical baseline.
+
+- Primary navigation is defined in `src/data/navigation.ts`: How we help, Workshops & learning, Work & research, Thinking, About, and the separate Let’s talk contact action. Keep desktop/mobile labels and category ancestry consistent.
+- `/services/`, `/learning/`, `/work/` and `/contact/` are the main destinations. Preserve existing workshop, course, case, thinking and homepage-anchor URLs.
+- Use `contactHref` from `src/lib/contact.ts` for offering context. Only offering/day/module/audience/origin identifiers belong in these URLs; never personal details or a visitor’s written question.
+- Contact requires name, email and the question only. Preserve optional organisation/team fields, editable programme/module context, provider order, native form fallback and email recovery. Test requests with interception, never real messages.
+- Programme sessions use `#session-<day-id>` fragments. Preserve direct loading, reload, Back/Forward, Escape, focus restoration and native disclosures.
+- Public research, article and uppercase `/Courses/` learning archives remain linked resources, separate from local lowercase `/courses`. Do not delete, case-fold or silently redirect these resources. Any future deployment must explicitly preserve or migrate their content; deployment is not authorised by this implementation.
+- No public cohort dates, seat prices, guarantees, cart or checkout are established. Keep enquiries and resource access truthful; preserve the original Find Formation exercise and its no-data-sent promise.
+
 ## Astro documentation
 
 Consult relevant official guides before related changes:

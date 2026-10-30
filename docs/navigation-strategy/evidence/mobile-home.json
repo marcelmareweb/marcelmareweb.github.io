@@ -1,0 +1,139 @@
+{
+  "slug": "home",
+  "url": "http://localhost:4328/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 8733,
+  "overflow": false,
+  "h1": {
+    "text": "More possibilities.\nHarder choices.",
+    "top": 236.5,
+    "font": "40px"
+  },
+  "entryLinks": [
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 519,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Explore the practice ↓",
+      "href": "#practice",
+      "top": 523,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Explore decision workshops ↗",
+      "href": "/workshops",
+      "top": 3684,
+      "inFirstViewport": false
+    },
+    {
+      "text": "doi:10.3390/su15065328",
+      "href": "https://doi.org/10.3390/su15065328",
+      "top": 5315,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Research & references ↗",
+      "href": "https://thespottedape.com/research/index.html",
+      "top": 5334,
+      "inFirstViewport": false
+    },
+    {
+      "text": "A decision in practice ↗",
+      "href": "/cases/policy-analyst-strategic-review",
+      "top": 5568,
+      "inFirstViewport": false
+    },
+    {
+      "text": "EXPLORE ALL THINKING ↗",
+      "href": "/thinking/",
+      "top": 5760,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Explore the map ↗",
+      "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+      "top": 6150,
+      "inFirstViewport": false
+    },
+    {
+      "text": "ESSAY The Laboratory Fallacy. When a persuasive model meets the conditions of real work. ↗",
+      "href": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "top": 7015,
+      "inFirstViewport": false
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 7739,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Find formation.",
+      "top": 874
+    },
+    {
+      "text": "Decide.Make it happen.",
+      "top": 2614
+    },
+    {
+      "text": "Begin with whatpeople actually do.",
+      "top": 3983
+    },
+    {
+      "text": "What needsdeciding?",
+      "top": 7448
+    }
+  ],
+  "menu": {
+    "open": true,
+    "bodyOverflow": "hidden",
+    "links": [
+      {
+        "text": "THE SPOTTED APE",
+        "href": "/"
+      },
+      {
+        "text": "Practice.",
+        "href": "/#practice"
+      },
+      {
+        "text": "Work.",
+        "href": "/#evidence"
+      },
+      {
+        "text": "Thinking.",
+        "href": "/thinking/"
+      },
+      {
+        "text": "Workshops.",
+        "href": "/workshops"
+      },
+      {
+        "text": "Courses.",
+        "href": "/courses"
+      },
+      {
+        "text": "About.",
+        "href": "/about"
+      },
+      {
+        "text": "Let’s talk",
+        "href": "mailto:hello@thespottedape.com"
+      }
+    ],
+    "height": 844
+  },
+  "menuClose": {
+    "open": false,
+    "focusIsMenuTrigger": true,
+    "bodyOverflow": "hidden"
+  }
+}

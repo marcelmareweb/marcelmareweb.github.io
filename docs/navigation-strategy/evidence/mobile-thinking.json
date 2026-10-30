@@ -1,0 +1,39 @@
+{
+  "slug": "thinking",
+  "url": "http://localhost:4328/thinking/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 2889,
+  "overflow": false,
+  "h1": {
+    "text": "Thinking.",
+    "top": 236,
+    "font": "78px"
+  },
+  "entryLinks": [
+    {
+      "text": "Explore the map & café story ↗",
+      "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+      "top": 926,
+      "inFirstViewport": false
+    },
+    {
+      "text": "ESSAY / EXTERNAL The Laboratory Fallacy. When a persuasive model meets the conditions of real work. ↗",
+      "href": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "top": 1625,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "The Strategy Illusion.",
+      "top": 664
+    },
+    {
+      "text": "The Laboratory Fallacy.",
+      "top": 1716
+    }
+  ]
+}

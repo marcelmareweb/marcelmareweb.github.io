@@ -1,42 +1,67 @@
 ---
+import { publicResources } from '../data/practice';
 const year = new Date().getFullYear();
+const groups = [
+  { title: 'Get support', links: [
+    { label: 'How we help', href: '/services/' },
+    { label: 'Strategic decisions', href: '/services/#strategic-decision-design' },
+    { label: 'Behavioural design', href: '/services/#behavioural-design' },
+    { label: 'Human–AI decisions', href: '/services/#human-ai-decision-design' },
+  ] },
+  { title: 'Workshops & learning', links: [
+    { label: 'Custom workshops', href: '/workshops' },
+    { label: 'Executive masterclass', href: '/workshops/strategic-design-leadership/' },
+    { label: 'Solar learning case', href: '/courses' },
+  ] },
+  { title: 'Evidence & thinking', links: [
+    { label: 'Work & research', href: '/work/' },
+    { label: 'Research references ↗', href: publicResources.research },
+    { label: 'Thinking', href: '/thinking/' },
+  ] },
+  { title: 'The practice', links: [
+    { label: 'About', href: '/about' },
+    { label: 'Professional biography ↗', href: publicResources.biography },
+    { label: 'Let’s talk', href: '/contact/' },
+  ] },
+];
 ---
 <footer class="site-footer">
-<div class="wrap">
-<div class="footer-invitation">
-<h2>Find your<br />formation.</h2>
-<a href="mailto:hello@thespottedape.com" aria-label="Talk to The Spotted Ape">
-<span aria-hidden="true">↗</span>
-</a>
-</div>
-<div class="footer-main">
-<div>
-<a class="brand" href="/" aria-label="The Spotted Ape home">
-<img src="/logo.png" width="30" height="30" alt="" />
-<span class="brand-word">THE SPOTTED APE</span>
-</a>
-<p>Independent strategic decision<br />and behavioural design practice.</p>
-</div>
-<nav class="footer-nav" aria-label="Footer navigation">
-<a href="/#practice">Practice</a>
-<a href="/workshops">Workshops</a>
-<a href="/#evidence">Work &amp; research</a>
-<a href="/courses">Courses</a>
-<a href="/thinking/">Thinking</a>
-<a href="/about">About</a>
-</nav>
-<div class="footer-contact">
-<a href="mailto:hello@thespottedape.com">hello@thespottedape.com ↗</a>
-<p>Cape Town, South Africa.<br />Working with organisations in transition.</p>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© {year} The Spotted Ape (Pty) Ltd</p>
-<nav aria-label="Legal">
-<a href="/privacy">Privacy</a>
-<a href="/terms">Terms</a>
-<a href="#top">Back to top ↑</a>
-</nav>
-</div>
-</div>
+  <div class="wrap">
+    <div class="footer-invitation">
+      <h2>Find your<br />formation.</h2>
+      <a href="/contact/" aria-label="Talk to The Spotted Ape"><span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-identity">
+        <a class="brand" href="/" aria-label="The Spotted Ape home"><img src="/logo.png" width="30" height="30" alt="" /><span class="brand-word">THE SPOTTED APE</span></a>
+        <p>Independent strategic decision<br />and behavioural design practice.</p>
+        <div class="footer-contact">
+          <a href="mailto:hello@thespottedape.com">hello@thespottedape.com ↗</a>
+          <p>Cape Town, South Africa.<br />Working with organisations in transition.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        {groups.map(group => <div class="footer-link-group"><p class="meta">{group.title}</p>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} The Spotted Ape (Pty) Ltd</p>
+      <nav aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#top">Back to top ↑</a></nav>
+    </div>
+  </div>
 </footer>
+<style>
+  .footer-main { grid-template-columns: minmax(240px, .8fr) minmax(0, 2.2fr); }
+  .footer-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+  .footer-link-group > .meta { color: var(--signal); font: 10px/1.5 var(--mono); margin-bottom: 20px; }
+  .footer-link-group a { display: block; font-size: 16px; margin-top: 14px; }
+  .footer-contact { margin-top: 32px; }
+  .footer-contact > a { font-size: 19px; }
+  .footer-contact p { margin-top: 24px; }
+  @media (max-width: 1199px) { .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; } }
+  @media (max-width: 767px) {
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-nav { gap: 36px 24px; }
+    .footer-link-group a { font-size: 16px; }
+  }
+</style>

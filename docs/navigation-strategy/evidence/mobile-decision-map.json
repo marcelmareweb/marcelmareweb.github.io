@@ -1,0 +1,49 @@
+{
+  "slug": "decision-map",
+  "url": "http://localhost:4328/thinking/strategic-decision-maps/strategy-illusion/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "height": 4885,
+  "overflow": false,
+  "h1": {
+    "text": "Are you following a strategy, or just a plan?",
+    "top": 236,
+    "font": "44px"
+  },
+  "entryLinks": [
+    {
+      "text": "← All thinking",
+      "href": "/thinking/",
+      "top": 392,
+      "inFirstViewport": true
+    },
+    {
+      "text": "View the quadrant map ↓",
+      "href": "#strategy-illusion-map",
+      "top": 392,
+      "inFirstViewport": true
+    },
+    {
+      "text": "Let’s talk ↗",
+      "href": "mailto:hello@thespottedape.com",
+      "top": 3907,
+      "inFirstViewport": false
+    }
+  ],
+  "headings": [
+    {
+      "text": "Let’s map two questions.",
+      "top": 1346
+    },
+    {
+      "text": "One café. Four possible situations.",
+      "top": 2443
+    },
+    {
+      "text": "What needs attentionin your team?",
+      "top": 3731
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ---
+import { contactHref } from '../lib/contact';
 const proposals = [
   {
     id: 'Proposal A',
@@ -172,7 +173,7 @@ const initialModule = modules[0];
 <section id="syllabus" class="section-y theme-dark" aria-labelledby="syllabus-title">
 <div class="wrap">
 <div class="section-top meta">
-<p>02 / The curriculum</p>
+<p>03 / The curriculum</p>
 <p>A fictional investment case</p>
 </div>
 <h2 class="section-title" id="syllabus-title" data-reveal>One case.<br />One decision.</h2>
@@ -240,12 +241,13 @@ const initialModule = modules[0];
 <p data-course-value="deliverable">{initialModule.deliverable}</p>
 </div>
 <div class="actions">
-<a class="text-link" href={initialModule.liveUrl} target="_blank" rel="noreferrer" data-course-live-link>Open module in live course ↗</a>
-<button class="button button--yellow" type="button" data-course-inquiry>
-<span data-course-inquiry-label>Commission Module {initialModule.number} Cohort</span>
+<a class="text-link" href={initialModule.liveUrl} target="_blank" rel="noreferrer" data-course-live-link>Open this learning module ↗</a>
+<a class="button button--yellow" href={contactHref({ interest: 'course', module: initialModule.number, source: '/courses' })} data-course-inquiry>
+<span data-course-inquiry-label>Discuss module {initialModule.number} for your team</span>
 <span aria-hidden="true">↗</span>
-</button>
+</a>
 </div>
+<p class="source-note">Learning modules open on marcelmare.com.</p>
 </div>
 </div>
 <div class="course-fallback" data-course-fallback>{modules.map(mod=>
@@ -253,11 +255,13 @@ const initialModule = modules[0];
 <summary>{mod.number} / {mod.title}</summary>
 <p>{mod.summary}</p>
 <p>{mod.deliverable}</p>
-<a href={mod.liveUrl}>Open module in live course ↗</a>
+<a href={mod.liveUrl}>Open this learning module ↗</a>
+<a href={contactHref({ interest: 'course', module: mod.number, source: '/courses' })}>Discuss this module for your team ↗</a>
 </details>)}</div>
 </div>
 </section>
 <script>
+import { contactHref } from '../lib/contact';
 const courseTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-course-tab]'));
 const courseInspector = document.querySelector<HTMLElement>('[data-course-inspector]');
 
@@ -285,6 +289,7 @@ const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) =>
   const promptBody = courseInspector.querySelector<HTMLElement>('[data-course-prompt-body]');
   const liveLink = courseInspector.querySelector<HTMLAnchorElement>('[data-course-live-link]');
   const inquiryLabel = courseInspector.querySelector<HTMLElement>('[data-course-inquiry-label]');
+  const inquiryLink = courseInspector.querySelector<HTMLAnchorElement>('[data-course-inquiry]');
 
   if (title) title.textContent = mod.moduleTitle ?? '';
   if (numberLabel)
@@ -295,7 +300,8 @@ const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) =>
   if (promptHeadline) promptHeadline.textContent = mod.promptHeadline ?? '';
   if (promptBody) promptBody.textContent = mod.promptBody ?? '';
   if (liveLink && mod.liveUrl) liveLink.href = mod.liveUrl;
-  if (inquiryLabel) inquiryLabel.textContent = `Commission Module ${mod.moduleNumber} Cohort`;
+  if (inquiryLabel) inquiryLabel.textContent = 'Discuss module ' + mod.moduleNumber + ' for your team';
+  if (inquiryLink) inquiryLink.href = contactHref({ interest: 'course', module: mod.moduleNumber, source: '/courses' });
 
   for (const field of ['summary', 'analyticalMechanics', 'behaviouralShift', 'deliverable']) {
     const target = courseInspector.querySelector<HTMLElement>(`[data-course-value="${field}"]`);
@@ -331,27 +337,6 @@ courseTabs.forEach((tab, index) => {
     selectCourseModule(nextTab.dataset.moduleNumber ?? '');
     nextTab.focus();
   });
-});
-
-const courseInquiryButton = document.querySelector<HTMLButtonElement>('[data-course-inquiry]');
-courseInquiryButton?.addEventListener('click', () => {
-  const selectedTab = courseTabs.find((tab) => tab.getAttribute('aria-selected') === 'true');
-  if (!selectedTab) return;
-
-  window.dispatchEvent(
-    new CustomEvent('select-course-module', {
-      detail: {
-        moduleNumber: selectedTab.dataset.moduleNumber,
-        moduleTitle: selectedTab.dataset.moduleTitle,
-      },
-    }),
-  );
-  document
-    .querySelector('#book')
-    ?.scrollIntoView({
-      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
-      block: 'start',
-    });
 });
 
 const initialModuleParam = new URLSearchParams(window.location.search).get('module');
@@ -520,7 +505,11 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   font-size: 18px;
 }
 .course-fallback a {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  min-height: 44px;
+  padding-block: 10px;
+  text-underline-offset: 4px;
   margin-top: 24px;
 }
 @media (max-width: 1023px) {

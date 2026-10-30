@@ -1,0 +1,172 @@
+{
+  "slug": "about",
+  "url": "http://localhost:4328/about",
+  "title": "About The Spotted Ape — Strategic Decisions & Behavioural Design",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "height": 5171,
+  "overflow": false,
+  "header": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": "page"
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "footer": [
+    {
+      "text": "Practice",
+      "href": "/#practice",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Workshops",
+      "href": "/workshops",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Work & research",
+      "href": "/#evidence",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Courses",
+      "href": "/courses",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Thinking",
+      "href": "/thinking/",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "target": null,
+      "current": null
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Everyone is moving.Are we movingtogether?",
+      "top": 300
+    },
+    {
+      "tag": "H2",
+      "text": "Movement needsdirection.",
+      "top": 1258
+    },
+    {
+      "tag": "H2",
+      "text": "How we work.",
+      "top": 2208
+    },
+    {
+      "tag": "H3",
+      "text": "Visibility creates orientation.",
+      "top": 2496
+    },
+    {
+      "tag": "H3",
+      "text": "Wise hands at the wheel.",
+      "top": 2698
+    },
+    {
+      "tag": "H3",
+      "text": "Good guidance eventually becomes unnecessary.",
+      "top": 2899
+    },
+    {
+      "tag": "H3",
+      "text": "Work together.",
+      "top": 3161
+    },
+    {
+      "tag": "H2",
+      "text": "MarcelMaré.",
+      "top": 3659
+    }
+  ],
+  "links": [
+    {
+      "text": "How we work ↓",
+      "href": "#section-02",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "The practitioner ↓",
+      "href": "#section-05",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Professional biography ↗",
+      "href": "https://marcelmare.com",
+      "target": null,
+      "current": null
+    },
+    {
+      "text": "Let’s talk",
+      "href": "mailto:hello@thespottedape.com",
+      "target": null,
+      "current": null
+    }
+  ],
+  "mainText": "THE PRACTICE / ABOUT\n\nINDEPENDENT PRACTICE / CAPE TOWN\n\nEveryone is moving.\nAre we moving\ntogether?\n\nWhen conditions turn chaotic, speed is not your friend.\n\nHow we work ↓\nThe practitioner ↓\n\nVISIBILITY CREATES ORIENTATION\n\nA FIELD OF COMPETING PRIORITIES\n\nMovement needs\ndirection.\n\nUnder pressure, capable teams can pursue conflicting priorities without recognising the disagreement.\n\nThe Spotted Ape helps organisations make consequential decisions, understand human behaviour and navigate the changing relationship between people and AI.\n\nORIENTATION FIELD / 01\nCHAOS\nFORMATION\nSTATE // COHERENT FORMATION\nALIGNMENT: 100%\nBEACON\nRAW SPEED WITHOUT DIRECTION CREATES NOISE\nVISIBILITY CREATES ORIENTATION\nORIENTATION\n01 / DISPERSION: COMPETING PRIORITIES & CROSSED SIGNALS\n02 / FORMATION: WISE HANDS AT THE WHEEL\n\n01 / PRINCIPLES\n\nCLARITY. JUDGEMENT. RESPONSIBILITY.\n\nHow we work.\n01\nVisibility creates orientation.\n\nMake competing priorities, assumptions and responsibilities visible.\n\n02\nWise hands at the wheel.\n\nExperience helps distinguish a difficult decision from a request for more information.\n\n03\nGood guidance eventually becomes unnecessary.\n\nLeave teams able to examine and own their decisions.\n\n04\nWork together.\n\nBring conflicting perspectives into the same conversation.\n\n02 / THE PRACTITIONER\n\nINDEPENDENT STRATEGIC PRACTICE\n\nBEHIND THE SPOTTED APE\nMarcel\nMaré.\n\nBehavioural designer.\nResearcher. Strategic consultant.\n\nProfessional biography\n↗\n\nWhat enables people to move from knowing what is possible to actually doing something worthwhile?\n\nThe Spotted Ape is the independent strategic practice of Marcel Maré, a behavioural designer, researcher and strategic consultant working across design, human behaviour and emerging technology.\n\nHis work has ranged from understanding why households adopt new energy technologies to helping organisations navigate strategic choices and technological change.\n\nLet’s talk",
+  "buttons": [
+    {
+      "text": "Chaos",
+      "role": null
+    },
+    {
+      "text": "Formation",
+      "role": null
+    }
+  ]
+}

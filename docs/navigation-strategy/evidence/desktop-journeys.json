@@ -1,0 +1,82 @@
+[
+  {
+    "id": "formation-preview",
+    "state": "01 / PREVIEW / NOT SELECTED\n\nEnter another market\nREQUIRES\nCustomer evidence and a local delivery capability.\nDRAWS ON\nLeadership attention.\nASK BEFORE COMMITTING\nWhat evidence would justify entering this market?",
+    "pressed": "false"
+  },
+  {
+    "id": "formation-two-choice-limit",
+    "selected": [
+      "market",
+      "customers"
+    ],
+    "status": "Capacity is limited to two commitments. Select a yellow shape to clear it before backing another. Your earlier choices are unchanged.",
+    "nextLinks": 0
+  },
+  {
+    "id": "header-practice",
+    "url": "http://localhost:4328/#practice",
+    "targetTop": 104.1953125
+  },
+  {
+    "id": "behavioural-card",
+    "index": "02",
+    "open": "",
+    "copy": "02 / THE PRACTICE\n\nBehavioural\nDesign.\n\nBegin with what people actually do.\n\nQuestions & outcomes\n\nQUESTIONS WORTH ASKING\n\nWhich incentives, barriers and working conditions prevent people from acting on an agreed decision?\n\nTHE WORK\n\nResearch and interventions grounded in the conditions of real work.",
+    "nextLinks": [
+      {
+        "label": "Explore decision workshops\n↗",
+        "href": "/workshops"
+      }
+    ]
+  },
+  {
+    "id": "header-work",
+    "url": "http://localhost:4328/#evidence",
+    "targetTop": 108.390625,
+    "heading": "Begin with what\npeople actually do.",
+    "links": [
+      {
+        "label": "doi:10.3390/su15065328",
+        "href": "https://doi.org/10.3390/su15065328"
+      },
+      {
+        "label": "Research & references\n↗",
+        "href": "https://thespottedape.com/research/index.html"
+      },
+      {
+        "label": "A decision in practice\n↗",
+        "href": "/cases/policy-analyst-strategic-review"
+      }
+    ]
+  },
+  {
+    "id": "evidence-to-case",
+    "url": "http://localhost:4328/cases/policy-analyst-strategic-review",
+    "actions": [
+      {
+        "label": "← Work & research",
+        "href": "/#evidence"
+      },
+      {
+        "label": "Print / Save as PDF ↗",
+        "href": null
+      }
+    ]
+  },
+  {
+    "id": "workshop-to-enquiry",
+    "url": "http://localhost:4328/workshops#book",
+    "selected": "Strategic Decision Workshop",
+    "heading": "What does your team need to decide?",
+    "fields": [
+      "Leave this blank",
+      "Name",
+      "Work email",
+      "Role & organisation",
+      "Area of interest",
+      "Team size (optional)",
+      "What needs deciding?"
+    ]
+  }
+]
