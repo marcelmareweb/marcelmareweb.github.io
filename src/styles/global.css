@@ -547,6 +547,8 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
   border: 1px solid #bbb;
   border-radius: 50%;
   width: 48px;
@@ -554,6 +556,11 @@ button:disabled {
   background: transparent;
   color: inherit;
   font-size: 24px;
+  line-height: 1;
+}
+.icon-button > svg {
+  display: block;
+  flex-shrink: 0;
 }
 .dialog-content {
   min-height: calc(100dvh - var(--header-height));
