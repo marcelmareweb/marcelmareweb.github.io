@@ -26,136 +26,59 @@ const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://marce
 <PageIntro scale="sentence" description={data.clientContext}>
 <Fragment slot="heading">{data.title}</Fragment>
 <nav class="page-nav print-action" aria-label="Case actions">
-<a href="/work/"><Arrow direction="left" /> Work &amp; research</a>
 <button class="text-link" type="button" data-print-brief>Print / Save as PDF <Arrow /></button>
 </nav>
 </PageIntro>
 <article class="case-brief wrap">
-<div class="case-layout">
-<aside>
-<p class="meta">Decision focus</p>
-<h2>The report’s<br />argument.</h2>
-</aside>
-<div class="case-sections">
-<section>
-<p class="meta">01 / The pattern</p>
-<p>{data.pattern}</p>
-</section>
-<section>
-<p class="meta">02 / The intervention</p>
-<p>{data.intervention}</p>
-</section>
-<section>
-<p class="meta">03 / The shift</p>
-<p>{data.shift}</p>
-</section>
-</div>
-</div>
-<div class="case-outcome theme-yellow">
-<p class="meta">Reported outcome / Case account</p>
-<h2>{data.result}</h2>
-<blockquote>
-<p>“{data.quote}”</p>
-</blockquote>
-</div>
-<p class="case-caption meta">The Spotted Ape (Pty) Ltd / Cape Town, South Africa</p>
+<dl class="record" aria-label="The case as a decision record">
+<div class="record-row"><dt>Decision focus</dt><dd><strong>The report’s argument.</strong></dd></div>
+<div class="record-row"><dt>The pattern</dt><dd>{data.pattern}</dd></div>
+<div class="record-row"><dt>The intervention</dt><dd>{data.intervention}</dd></div>
+<div class="record-row"><dt>The shift</dt><dd>{data.shift}</dd></div>
+<div class="record-row"><dt>Reported outcome</dt><dd><strong class="case-result">{data.result}</strong></dd></div>
+</dl>
+<blockquote class="case-quote"><p>“{data.quote}”</p></blockquote>
+<p class="case-caption">An account of this engagement. The reported result does not establish a typical or guaranteed outcome. The Spotted Ape (Pty) Ltd, Cape Town, South Africa.</p>
 </article>
-<section class="case-invitation section-y theme-grey"><div class="wrap split-layout"><h2 class="h2">A decision<br />of your own?</h2><div><p class="lead">Explore strategic decision support, or bring the question you need to resolve.</p><div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/cases/' + data.slug })}>Discuss a similar decision <Arrow /></a><a class="text-link" href="/services/#strategic-decision-design">Strategic Decision Design <Arrow /></a></div></div></div></section>
+<section class="case-invitation section-y section-rule"><div class="wrap split-layout"><h2 class="h2">A decision<br />of your own?</h2><div><p class="lead">Explore strategic decision support, or bring the question you need to resolve.</p><div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/cases/' + data.slug })}>Discuss a similar decision <Arrow /></a><a class="text-link" href="/services/#strategic-decision-design">Strategic Decision Design <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <script>
 document.querySelector('[data-print-brief]')?.addEventListener('click', () => window.print());
 </script>
 <style>
-@media print { .case-invitation { display: none !important; } }
+@media print { .case-invitation { display: none !important; } .case-brief { break-inside: auto; } .case-brief .record-row { break-inside: avoid; } }
 .case-brief {
   padding-bottom: var(--space-lg);
 }
-.case-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-sm);
-  padding-top: var(--space-sm);
-  border-top: 1px solid var(--line);
+.case-brief .record {
+  max-width: 1100px;
 }
-.case-layout aside h2 {
-  font-size: var(--heading-3);
-  line-height: 1;
-  margin-top: 32px;
-}
-.case-sections section {
-  padding-bottom: 40px;
-}
-.case-sections section + section {
-  padding-top: 40px;
-  border-top: 1px solid var(--line);
-}
-.case-sections section > p:last-child {
+.case-result {
   font-size: var(--heading-4);
-  line-height: 1.15;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+.case-quote {
+  max-width: 22ch;
+  margin-top: var(--space-md);
+  font-size: var(--heading-3);
   font-weight: 600;
-  letter-spacing: -0.05em;
-  margin-top: 24px;
-}
-.case-outcome {
-  margin-top: var(--space-sm);
-  padding: var(--space-sm);
-  border-radius: 8px;
-}
-.case-outcome h2 {
-  font-size: var(--heading-1);
-  max-width: 18ch;
-  line-height: 1;
-  margin-block: 40px;
-}
-.case-outcome blockquote {
-  font-size: var(--body-large);
-  max-width: 40ch;
-  line-height: 1.3;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
 .case-caption {
+  max-width: 62ch;
   margin-top: 32px;
+  font: 500 var(--text-small)/1.4 var(--narrow);
   color: var(--muted);
 }
 @media (max-width: 767px) {
-  .case-layout {
-    grid-template-columns: 1fr;
+  .case-result {
+    font-size: 32px;
   }
-  .case-layout aside h2 {
-    font-size: 40px;
-  }
-  .case-sections section > p:last-child {
-    font-size: 30px;
-  }
-  .case-outcome {
-    padding: 24px;
-  }
-  .case-outcome h2 {
-    font-size: 52px;
-  }
-  .case-brief {
-    padding-bottom: 64px;
-  }
-}
-@media print {
-  @page {
-    margin: 18mm;
-  }
-  .case-layout {
-    display: block;
-  }
-  .case-sections section {
-    break-inside: avoid;
-  }
-  .case-outcome {
-    background: var(--paper);
-    color: #000;
-    border: 1px solid var(--grey-400);
-  }
-  .case-outcome h2 {
-    font-size: 36pt;
-  }
-  .case-brief {
-    width: 100%;
+  .case-quote {
+    font-size: 36px;
   }
 }
 </style>

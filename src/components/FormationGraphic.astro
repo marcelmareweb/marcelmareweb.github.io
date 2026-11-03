@@ -53,12 +53,12 @@ const nodes: NodePoint[] = [
 
 const captionLeft =
   variant === 'about'
-    ? '01 / DISPERSION: Competing priorities & crossed signals'
-    : '01 / CHAOS: Capability without direction';
+    ? 'Dispersion: competing priorities and crossed signals.'
+    : 'Chaos: capability without direction.';
 const captionRight =
   variant === 'about'
-    ? '02 / FORMATION: Wise hands at the wheel'
-    : '02 / COHERENCE: Shared orientation & judgement';
+    ? 'Formation: wise hands at the wheel.'
+    : 'Coherence: shared orientation and judgement.';
 ---
 
 <figure
@@ -70,7 +70,7 @@ const captionRight =
     <div class="fg-title">
       <span class="fg-dot" data-formation-beacon-dot aria-hidden="true"></span>
       <span class="technical-label fg-name">
-        {variant === 'about' ? 'ORIENTATION FIELD / 01' : 'FORMATION SYSTEM / 01'}
+        {variant === 'about' ? 'Orientation field' : 'Formation system'}
       </span>
     </div>
 
@@ -227,7 +227,7 @@ const captionRight =
   <figcaption class="fg-caption">
     <div class="fg-scrub">
       <label class="technical-label fg-small" for={`formation-range-${variant}`}>
-        ORIENTATION
+        Orientation
       </label>
       <input
         id={`formation-range-${variant}`}

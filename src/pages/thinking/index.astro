@@ -3,6 +3,7 @@ import Arrow from '../../components/Arrow.astro';
 import HomeLayout from '../../layouts/HomeLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import StrategicMatrix from '../../components/StrategicMatrix.astro';
+import Ledger from '../../components/Ledger.astro';
 import { strategyIllusion } from '../../data/strategicMatrices';
 const mapPath = '/thinking/strategic-decision-maps/strategy-illusion/';
 const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html';
@@ -11,7 +12,7 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
 <PageIntro scale="short" description="Choices, assumptions and consequences.">
 <Fragment slot="heading">Thinking.</Fragment>
 </PageIntro>
-<section class="thinking-feature section-y theme-grey">
+<section class="thinking-feature section-y section-rule">
 <div class="wrap">
 <div class="split-layout">
 <div class="thinking-copy">
@@ -29,14 +30,8 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
 </section>
 <section class="section-y">
 <div class="wrap">
-<a class="thinking-essay" href={essayPath}>
-<span class="meta">Essay / External</span>
-<div>
-<h2>The Laboratory Fallacy.</h2>
-<p>When a persuasive model meets the conditions of real work.</p>
-</div>
-<Arrow />
-</a>
+<h2 class="h2 essays-title">Essays.</h2>
+<Ledger items={[{ name: 'The Laboratory Fallacy.', text: 'When a persuasive model meets the conditions of real work.', aside: 'Essay on thespottedape.com', href: essayPath, external: true }]} label="Essays" />
 </div>
 </section>
 </HomeLayout>
@@ -46,46 +41,12 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
   line-height: 1;
   max-width: 12ch;
 }
-.thinking-feature .thinking-preview {
-  background: var(--paper);
-}
-.thinking-essay {
-  display: grid;
-  grid-template-columns: 1fr 2fr 60px;
-  gap: 40px;
-  border-block: 1px solid var(--line);
-  padding-block: 48px;
-  text-decoration: none;
-}
-.thinking-essay h2 {
-  font-size: var(--heading-3);
-}
-.thinking-essay p {
-  font-size: var(--body-large);
-  line-height: 1.35;
-  margin-top: 24px;
-  max-width: 35ch;
-}
-.thinking-essay > span:last-child {
-  font-size: 56px;
-  line-height: 1;
-}
 @media (max-width: 767px) {
   .thinking-copy h2 {
     font-size: 48px;
   }
-  .thinking-essay {
-    grid-template-columns: 1fr 32px;
-    gap: 24px;
-  }
-  .thinking-essay > .meta {
-    grid-column: 1/-1;
-  }
-  .thinking-essay h2 {
-    font-size: 36px;
-  }
-  .thinking-essay > span:last-child {
-    font-size: 32px;
-  }
+}
+.essays-title {
+  margin-bottom: var(--space-sm);
 }
 </style>

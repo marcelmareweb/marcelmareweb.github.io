@@ -1,6 +1,7 @@
 ---
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Ledger from '../components/Ledger.astro';
 import FormationGraphic from '../components/FormationGraphic.astro';
 import PageIntro from '../components/PageIntro.astro';
 
@@ -31,10 +32,6 @@ const foundingPrinciples = [
 <BaseLayout title="About The Spotted Ape — Strategic Decisions & Behavioural Design" description="The independent practice of Marcel Maré. Behavioural science, strategic design and human judgement for organisations in transition.">
 <PageIntro scale="long" description="When conditions turn chaotic, speed is not your friend.">
 <Fragment slot="heading">Everyone is moving.<br />Are we moving<br />together?</Fragment>
-<nav class="page-nav" aria-label="About page sections">
-<a href="#section-02">How we work <Arrow direction="down" /></a>
-<a href="#section-05">The practitioner <Arrow direction="down" /></a>
-</nav>
 </PageIntro>
 <section class="about-field theme-dark section-y" id="section-01">
 <div class="wrap">
@@ -53,15 +50,10 @@ const foundingPrinciples = [
 <section class="section-y" id="section-02">
 <div class="wrap">
 <h2 class="section-title" data-reveal>How we work.</h2>
-<div class="principle-list">{foundingPrinciples.map(item=>
-<article class="principle">
-<span class="principle-number">{item.number}</span>
-<h3>{item.title}.</h3>
-<p>{item.body}</p>
-</article>)}</div>
+<div class="principle-list"><Ledger items={foundingPrinciples.map(item => ({ name: `${item.title}.`, text: item.body }))} label="How we work" /></div>
 </div>
 </section>
-<section class="section-y theme-grey" id="section-05">
+<section class="section-y section-rule" id="section-05">
 <div class="wrap">
 <div class="split-layout">
 <div class="practitioner-name">
@@ -102,32 +94,6 @@ const foundingPrinciples = [
 .principle-list {
   margin-top: var(--space-lg);
 }
-.principle {
-  display: grid;
-  grid-template-columns: 100px 1.4fr 1fr;
-  gap: 40px;
-  border-top: 1px solid var(--line);
-  padding-block: 40px;
-  align-items: start;
-}
-.principle:last-child {
-  border-bottom: 1px solid var(--line);
-}
-.principle-number {
-  font-size: var(--heading-3);
-  line-height: 1;
-  color: var(--grey-500);
-  letter-spacing: -0.05em;
-}
-.principle h3 {
-  font-size: var(--heading-3);
-  max-width: 17ch;
-}
-.principle > p {
-  font-size: var(--body-large);
-  line-height: 1.3;
-  max-width: 28ch;
-}
 .practitioner-name h2 {
   font-size: var(--display-l);
   line-height: 0.9;
@@ -145,16 +111,6 @@ const foundingPrinciples = [
   margin-top: 40px;
 }
 @media (max-width: 1023px) {
-  .principle {
-    grid-template-columns: 60px 1fr;
-    gap: 24px;
-  }
-  .principle > p {
-    grid-column: 2;
-  }
-  .principle h3 {
-    font-size: 44px;
-  }
   .about-statement h2 {
     font-size: 56px;
   }
@@ -165,20 +121,6 @@ const foundingPrinciples = [
 @media (max-width: 767px) {
   .about-statement h2 {
     font-size: 44px;
-  }
-  .principle {
-    grid-template-columns: 32px 1fr;
-    gap: 16px;
-    padding-block: 32px;
-  }
-  .principle-number {
-    font-size: var(--body-large);
-  }
-  .principle h3 {
-    font-size: 32px;
-  }
-  .principle > p {
-    font-size: var(--body);
   }
   .principle-list {
     margin-top: 48px;

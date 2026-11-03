@@ -3,6 +3,8 @@ import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CourseSyllabus from '../components/CourseSyllabus.astro';
 import BookingSection from '../components/BookingSection.astro';
+import Ledger from '../components/Ledger.astro';
+import DecisionRecord from '../components/DecisionRecord.astro';
 import PageIntro from '../components/PageIntro.astro';
 import { contactHref } from '../lib/contact';
 import { publicResources } from '../data/practice';
@@ -13,17 +15,17 @@ const pageDescription =
 
 const courseSpecs = [
   {
-    label: 'FLAGSHIP CASE SIMULATION',
+    label: 'Flagship case simulation',
     value: 'Should We Invest in Solar? (Cape Manufacturing)',
     detail: 'Compare three proposals and defend a recommendation.',
   },
   {
-    label: 'DURATION',
+    label: 'Duration',
     value: '65–80 minute interactive case',
     detail: 'Self-paced learning with a working spreadsheet model.',
   },
   {
-    label: 'TECHNICAL ENVIRONMENT',
+    label: 'Technical environment',
     value: 'Microsoft Excel & Google Sheets',
     detail: 'Spreadsheet essentials are included.',
   },
@@ -32,29 +34,29 @@ const courseSpecs = [
 const tensionContrasts = [
   {
     number: '01',
-    conventionalLabel: 'COMMON PITFALL',
+    conventionalLabel: 'Common pitfall',
     conventionalTitle: 'Untraceable inputs',
     conventionalCopy: 'Retyped inputs obscure the assumptions behind a result.',
-    spottedApeLabel: 'IN THIS CASE',
+    spottedApeLabel: 'In this case',
     spottedApeTitle: 'Traceable formulas',
     spottedApeCopy: 'Link calculations to Case Data!A3:F17 and inspect broken references.',
   },
   {
     number: '02',
-    conventionalLabel: 'COMMON PITFALL',
+    conventionalLabel: 'Common pitfall',
     conventionalTitle: 'One metric decides',
     conventionalCopy: 'Payback and long-term value can favour different proposals.',
-    spottedApeLabel: 'IN THIS CASE',
+    spottedApeLabel: 'In this case',
     spottedApeTitle: 'Competing criteria',
     spottedApeCopy:
       'A has the shortest payback (2.92 years); C has the highest base-case NPV (R2.871m).',
   },
   {
     number: '03',
-    conventionalLabel: 'COMMON PITFALL',
+    conventionalLabel: 'Common pitfall',
     conventionalTitle: 'Claims without evidence',
     conventionalCopy: 'Annual averages hide when electricity is actually used.',
-    spottedApeLabel: 'IN THIS CASE',
+    spottedApeLabel: 'In this case',
     spottedApeTitle: 'Operational evidence',
     spottedApeCopy:
       'Check half-hourly load profiles and seek independent evidence for environmental claims.',
@@ -63,42 +65,42 @@ const tensionContrasts = [
 
 const toolkitResources = [
   {
-    code: 'ARTIFACT 01 // .XLSX',
+    code: 'Artifact 01 // .xlsx',
     title: 'Student Workbook (V8)',
     description: 'Five linked sheets, including a 20-year NPV model.',
     href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx',
     cta: 'Download Student Workbook',
   },
   {
-    code: 'ARTIFACT 02 // .PDF',
+    code: 'Artifact 02 // .pdf',
     title: 'Cape Manufacturing Case Brief',
     description: 'Supplier proposals, tariff assumptions and the Financial Director’s briefing.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf',
     cta: 'Open Case Brief PDF',
   },
   {
-    code: 'ARTIFACT 03 // .PDF',
+    code: 'Artifact 03 // .pdf',
     title: 'Excel & Google Sheets Quick Reference',
     description: 'Cell addresses, cross-sheet formulas, reference locking and currency formatting.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf',
     cta: 'Open Quick Reference PDF',
   },
   {
-    code: 'ARTIFACT 04 // .PDF',
+    code: 'Artifact 04 // .pdf',
     title: 'Formula Troubleshooting Diagnostic',
     description: 'Check shifted references, percentages and reversed ratios.',
     href: 'https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf',
     cta: 'Open Diagnostic Card PDF',
   },
   {
-    code: 'ARTIFACT 05 // .XLSX',
+    code: 'Artifact 05 // .xlsx',
     title: 'Completed Reference Workbook (V8)',
     description: 'Compare your formulas and sensitivity analysis with the reference solution.',
     href: 'https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx',
     cta: 'Download Reference Model',
   },
   {
-    code: 'ARTIFACT 06 // RATIONALE',
+    code: 'Artifact 06 // Rationale',
     title: '5-Minute Reviewer Rationale',
     description: 'Learning design, assessment checkpoints and competence criteria.',
     href: 'https://marcelmare.com/dla-course-2/reviewer-rationale.html',
@@ -155,56 +157,18 @@ const outcomesList = [
 <BaseLayout title={pageTitle} description={pageDescription}>
 <PageIntro scale="long" description="Three solar proposals. One decision to defend." id="premise">
 <Fragment slot="heading">Should we invest<br />in solar?</Fragment>
-<Fragment slot="aside">Flagship case simulation<br />65–80 minutes<br />Excel &amp; Google Sheets</Fragment>
 <div class="actions"><a class="button" href={publicResources.course} target="_blank" rel="noreferrer">Open the learning case <Arrow /></a><a class="text-link" href={contactHref({ interest: 'course', source: '/courses' })}>Discuss a team session <Arrow /></a></div>
 <p class="source-note">The fictional Cape Manufacturing case. Opens the learning case in a new tab.</p>
-<nav class="page-nav" aria-label="Course page sections">
-<a href="#syllabus">Explore the curriculum <Arrow direction="down" /></a>
-<a href="#outcomes">Workbook &amp; resources <Arrow direction="down" /></a>
-<a href="/learning/">All workshops &amp; learning <Arrow /></a>
-</nav>
+<div class="intro-record"><DecisionRecord label="The learning case" fields={courseSpecs.map(spec => ({ label: spec.label, value: `${spec.value}. ${spec.detail}`.replace('?.', '?') }))} /></div>
 </PageIntro>
-<section class="course-feature theme-dark section-y">
-<div class="wrap">
-<p class="meta">Cape Manufacturing / Western Cape</p>
-<div class="course-feature-grid">
-<h2>The evidence.<br />Your judgement.</h2>
-<div>
-<p class="lead">The spreadsheet provides the evidence.<br />The decisions require your judgement.</p>
-<a class="button button--yellow" href="#syllabus">Inspect the case <Arrow direction="down" />
-</a>
-</div>
-</div>
-<div class="course-specs">{courseSpecs.map(spec=>
-<div>
-<p class="meta">{spec.label}</p>
-<p>{spec.value}</p>
-<span>{spec.detail}</span>
-</div>)}</div>
-</div>
-</section>
-<section class="section-y theme-grey">
+<section class="section-y section-rule">
 <div class="wrap">
 <div class="split-layout">
 <div>
 <h2 class="h2 audience-title">For people who must defend their decisions.</h2>
-<div class="audiences">{audienceProfiles.map(aud=>
-<article>
-<h3>{aud.title}.</h3>
-<p>{aud.description}</p>
-</article>)}</div>
+<div class="audiences"><Ledger items={audienceProfiles.map(aud => ({ name: `${aud.title}.`, text: aud.description }))} label="Who the case is for" /></div>
 </div>
-<div class="learning-outcomes">{outcomesList.map(item=>
-<article>
-<span class="meta">{item.number} / Learning outcome</span>
-<h3>{item.title}.</h3>
-<p>{item.description}</p>
-</article>)}</div>
-</div>
-<div class="evidence-foot">
-<p class="lead">A live organisational decision?<br />Bring your alternatives and trade-offs.</p>
-<a class="text-link" href="/workshops">Explore decision workshops <Arrow />
-</a>
+<div class="learning-outcomes"><h3 class="outcomes-title">Learning outcomes</h3><Ledger items={outcomesList.map(item => ({ name: `${item.title}.`, text: item.description }))} label="Learning outcomes" /></div>
 </div>
 </div>
 </section>
@@ -245,16 +209,7 @@ const outcomesList = [
 <a href="https://marcelmare.com/dla-course-2/" target="_blank" rel="noreferrer">Alternative course host: <span class="nowrap">marcelmare.com <Arrow /></span></a>
 </p>
 </aside>
-<div class="resource-list">{toolkitResources.map((res,index)=>
-<a class="resource-row" href={res.href} target="_blank" rel="noreferrer">
-<span class="meta">0{index+1}<br />{res.code.split('//')[1]}</span>
-<div>
-<h3>{res.title}.</h3>
-<p>{res.description}</p>
-<span class="resource-action">{res.cta}</span>
-</div>
-<Arrow class="resource-arrow" direction={res.cta.startsWith('Download') ? 'down' : 'up-right'} />
-</a>)}</div>
+<div class="resource-list"><Ledger items={toolkitResources.map(res => ({ name: `${res.title}.`, text: res.description, aside: `${res.cta} (${res.code.split('//')[1].trim()})`, href: res.href, external: true, arrow: res.cta.startsWith('Download') ? 'down' as const : 'up-right' as const }))} label="Course toolkit" /></div>
 </div>
 </div>
 </section>
@@ -262,48 +217,7 @@ const outcomesList = [
 <BookingSection defaultEngagement="Strategy Course (DLA)" heading="Discuss a team session." />
 </BaseLayout>
 <style>
-.course-feature > .wrap > .meta {
-  margin-bottom: 48px;
-}
-.course-feature-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: end;
-}
-.course-feature h2 {
-  font-size: var(--display-l);
-  max-width: 13ch;
-}
-.course-feature-grid .button {
-  margin-top: 32px;
-}
-.course-specs {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
-  border-top: 1px solid var(--line);
-  padding-top: 32px;
-  margin-top: var(--space-lg);
-}
-.course-specs .meta {
-  margin-bottom: 20px;
-}
-.course-specs p:not(.meta) {
-  font-size: var(--body-large);
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  max-width: 24ch;
-}
-.course-specs span {
-  display: block;
-  font-size: var(--text-ui);
-  line-height: 1.4;
-  margin-top: 16px;
-  max-width: 32ch;
-  color: var(--text-muted);
-}
+
 .tension-list {
   margin-top: var(--space-lg);
 }
@@ -334,7 +248,6 @@ const outcomesList = [
 .video-frame {
   aspect-ratio: 16/9;
   background: var(--ink);
-  border-radius: 8px;
   overflow: hidden;
 }
 .video-frame iframe {
@@ -355,58 +268,16 @@ const outcomesList = [
 .course-video .text-link {
   margin-top: 24px;
 }
-.resource-action {
-  display: block;
-  font-size: var(--text-small);
-  margin-top: 16px;
-}
+
 .audience-title {
   max-width: 15ch;
 }
 .audiences {
   margin-top: 48px;
 }
-.audiences article {
-  border-top: 1px solid var(--line);
-  padding-block: 24px;
-}
-.audiences h3 {
-  font-size: 28px;
-  max-width: 26ch;
-}
-.audiences p {
-  font-size: var(--body);
-  line-height: 1.5;
-  margin-top: 16px;
-  max-width: 38ch;
-  color: var(--muted);
-}
-.learning-outcomes article {
-  border-top: 1px solid var(--line);
-  padding-block: 32px;
-}
-.learning-outcomes h3 {
-  font-size: 36px;
-  max-width: 24ch;
-  margin-top: 24px;
-}
-.learning-outcomes article > p {
-  font-size: var(--body);
-  line-height: 1.4;
-  color: var(--muted);
-  max-width: 38ch;
-  margin-top: 24px;
-}
+
 @media (max-width: 1023px) {
-  .course-feature h2 {
-    font-size: 100px;
-  }
-  .course-feature-grid {
-    grid-template-columns: 1fr;
-  }
-  .course-specs {
-    gap: 24px;
-  }
+
   .toolkit-layout {
     grid-template-columns: 1fr;
   }
@@ -419,20 +290,7 @@ const outcomesList = [
   }
 }
 @media (max-width: 767px) {
-  .course-feature h2 {
-    font-size: 64px;
-  }
-  .course-feature-grid {
-    gap: 32px;
-  }
-  .course-specs {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-top: 48px;
-  }
-  .course-specs p:not(.meta) {
-    font-size: var(--body-large);
-  }
+
   .tension-list,
   .toolkit-layout {
     margin-top: 48px;
@@ -447,14 +305,22 @@ const outcomesList = [
   .tension-row div > p:last-child {
     font-size: var(--body);
   }
-  .learning-outcomes h3 {
-    font-size: 30px;
-  }
-  .learning-outcomes article > p {
-    font-size: var(--body);
-  }
+
   .audience-title {
     font-size: 44px;
   }
+}
+.intro-record {
+  max-width: 980px;
+  margin-top: var(--space-sm);
+}
+.audiences {
+  margin-top: 32px;
+}
+.outcomes-title {
+  margin-bottom: 16px;
+  font: 500 var(--text-ui)/1.4 var(--narrow);
+  letter-spacing: 0;
+  color: var(--muted);
 }
 </style>

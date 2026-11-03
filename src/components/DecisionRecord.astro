@@ -1,0 +1,22 @@
+---
+export interface RecordField {
+  label: string;
+  value: string;
+}
+interface Props {
+  fields: RecordField[];
+  panel?: boolean;
+  label?: string;
+  id?: string;
+}
+const { fields, panel = false, label, id } = Astro.props;
+---
+<dl class:list={['record', { 'record--panel': panel }]} aria-label={label} id={id}>
+  {fields.map(field => (
+    <div class="record-row">
+      <dt>{field.label}</dt>
+      <dd>{field.value}</dd>
+    </div>
+  ))}
+  <slot />
+</dl>

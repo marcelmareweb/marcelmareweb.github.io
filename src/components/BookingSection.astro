@@ -76,11 +76,16 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
             <option value="">Not specified</option><option value="individual">Myself / Ask about attendance options</option><option value="team">A team or organisation</option>
           </select>
         </div>
-        <div><label for="inquiry-role-organization">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="inquiry-role-organization" name="roleOrganization" autocomplete="organization" /></div>
-        <div>
-          <label for="inquiry-team-size">Team size <span>(optional)</span></label>
-          <select class="inquiry-field" id="inquiry-team-size" name="teamSize"><option value="">Not specified</option><option>1–10</option><option>11–50</option><option>50+</option></select>
-        </div>
+        <details class="form-wide form-more">
+          <summary>Add your organisation and team size <span>(optional)</span></summary>
+          <div class="form-more-fields">
+            <div><label for="inquiry-role-organization">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="inquiry-role-organization" name="roleOrganization" autocomplete="organization" /></div>
+            <div>
+              <label for="inquiry-team-size">Team size <span>(optional)</span></label>
+              <select class="inquiry-field" id="inquiry-team-size" name="teamSize"><option value="">Not specified</option><option>1–10</option><option>11–50</option><option>50+</option></select>
+            </div>
+          </div>
+        </details>
         <div class="form-wide">
           <button class="button" type="submit" data-submit-button>Send enquiry <Arrow /></button>
           <p class="form-note">We’ll use these details to respond by email and discuss the next step. <a href="/privacy">Privacy policy</a>.</p>
@@ -135,6 +140,23 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+.form-more {
+  border-top: 1px solid var(--line);
+}
+.form-more summary {
+  padding-block: 14px;
+  font-weight: 600;
+}
+.form-more summary span {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.form-more-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 12px;
 }
 .inquiry-form label {
   display: block;
@@ -226,6 +248,7 @@ textarea.inquiry-field {
   }
 }
 @media (max-width: 767px) {
+  .form-more-fields { grid-template-columns: 1fr; }
   .booking-section--standalone { padding-top: 32px; }
   .booking-section--standalone .booking-layout { gap: 32px; }
   .booking-section--standalone .booking-copy .lead { margin-top: 24px; }

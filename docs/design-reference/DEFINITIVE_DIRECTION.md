@@ -2,6 +2,8 @@
 
 This is the authoritative implementation direction. It supersedes earlier proposals and historical descriptions of the local site. Huge observations and measurements remain research evidence, not Spotted Ape positioning.
 
+The chosen visual direction, **The Decision Record** (November 2026), is recorded in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It refines this document: yellow marks commitment only, offerings are ledger rows rather than cards, Archivo Narrow replaces monospace for labels, and every page's first viewport holds content to read or use.
+
 ## Identity and practice
 
 The Spotted Ape is an independent strategic decision and behavioural design practice. Preserve the current narrative, services and content. Its capabilities are Strategic Decision Design, Behavioural Design and Human–AI Decision Design. Workshops, applied courses, research and advisory support the practice. AI is one relevant context, not the identity of the whole business.

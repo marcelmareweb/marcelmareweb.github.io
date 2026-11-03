@@ -43,9 +43,9 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
 <style>
   .masterclass-detail {
     padding: var(--space-sm);
-    background: white;
+    background: var(--paper);
     color: var(--ink);
-    border-left: 4px solid var(--signal);
+    border-top: 4px solid var(--signal);
   }
   .detail-topline {
     display: flex;
@@ -133,8 +133,9 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
   }
   .executive-output {
     margin-top: 40px;
-    padding: 32px;
-    background: var(--signal);
+    padding: 28px 32px 32px;
+    background: var(--surface);
+    border-top: 1px solid var(--ink);
   }
   .executive-output h4 {
     max-width: 28ch;

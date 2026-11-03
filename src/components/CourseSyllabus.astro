@@ -214,7 +214,7 @@ const initialModule = modules[0];
 <Arrow />
 </button>)}</nav>
 <div id="course-inspector" class="course-panel" role="tabpanel" aria-labelledby={`course-tab-${initialModule.number}`} tabindex="0" data-course-inspector>
-<p class="meta" data-course-number-label>MODULE {initialModule.number} / 06 — {initialModule.subtitle}</p>
+<p class="meta" data-course-number-label>Module {Number(initialModule.number)} of 6: {initialModule.subtitle}</p>
 <h3 data-course-title>{initialModule.title}</h3>
 <p class="meta course-tier" data-course-tier>{initialModule.competenceTier}</p>
 <div class="course-dispatch">
@@ -290,7 +290,7 @@ const selectCourseModule = (moduleNumber: string, shouldScrollMobile = false) =>
 
   if (title) title.textContent = mod.moduleTitle ?? '';
   if (numberLabel)
-    numberLabel.textContent = `MODULE ${mod.moduleNumber} / 06 — ${mod.moduleSubtitle ?? ''}`;
+    numberLabel.textContent = `Module ${Number(mod.moduleNumber)} of 6: ${mod.moduleSubtitle ?? ''}`;
   if (tier) tier.textContent = mod.competenceTier ?? '';
   if (sender) sender.textContent = mod.senderCode ?? '';
   if (timestamp) timestamp.textContent = mod.timestamp ?? '';
@@ -410,7 +410,6 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 .course-panel {
   background: var(--paper);
   color: var(--ink);
-  border-radius: 8px;
   padding: 40px;
   --text-primary: var(--ink);
   --text-muted: var(--muted);

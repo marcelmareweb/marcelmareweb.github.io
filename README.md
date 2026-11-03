@@ -1,43 +1,27 @@
-# Astro Starter Kit: Minimal
+# The Spotted Ape
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Website of The Spotted Ape (Pty) Ltd, an independent strategic decision and behavioural design practice in Cape Town. Published at https://marcelmareweb.github.io.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-## 🚀 Project Structure
+| Command | Action |
+| :-- | :-- |
+| `npm install` | Install dependencies (Node 22.22 or later) |
+| `npx astro dev --background` | Start the dev server; manage it with `npx astro dev status`, `logs` or `stop` |
+| `npx astro check` | Type-check `.astro` and `.ts` files |
+| `npm run build` | Build the static site to `dist/` |
+| `npm run preview` | Serve the built site |
 
-Inside of your Astro project, you'll see the following folders and files:
+Run `npx astro check` and `npm run build` after any `.astro` or `.ts` change.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Where things are
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- `src/pages/` — routes. `src/layouts/SiteLayout.astro` is the shared shell.
+- `src/components/` — shared components, including `PageIntro`, `Ledger` and `DecisionRecord`.
+- `src/data/` — offerings, navigation and masterclass content as typed data.
+- `src/styles/global.css` — design tokens and shared styles.
+- `docs/design-reference/` — the design research and specifications.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Rules
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[AGENTS.md](AGENTS.md) holds the positioning, design, navigation, contact and deployment rules. [CLAUDE.md](CLAUDE.md) adds the chosen design direction and architecture notes. Pushing to `main` deploys the site, so push only when a release is intended.
