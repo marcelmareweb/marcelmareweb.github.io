@@ -54,7 +54,7 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 - Titles are short, oversized and end in a period. Numbered labels (01, 02…) only where the cards form a list or sequence; numbering continues across groups of the same list.
 - Colour blocks and image frames use `--radius-card`; no shadows, no gradients. Optional field labels (“The question”, “What you leave with”) use `--font-label`.
 - One link per card: the title link is stretched over the whole card, so the card is a single tap target and its accessible name is the title alone. Set `headingLevel` to fit the page outline.
-- Rows: `.card-grid` is three columns on desktop; add `.card-grid--swipe` for a swipeable, snapping row below 1024px. Many items, or a strip of work, scroll horizontally at every width with step buttons (`work-strip.ts`).
+- Rows: `.card-grid` is three columns on desktop; add `.card-grid--swipe` for a swipeable, snapping row below 1024px. Many items, or a strip of work, scroll horizontally at every width with step buttons (`work-strip.ts`); with a mouse the strip can also be dragged, snapping to the nearest card on release, and a drag never opens a card.
 - Hover (fine pointers) and keyboard focus: the title underline draws in, a yellow bar draws along the foot of the card (or top of its media), the arrow nudges, and media zooms (scale 1.05, 500ms). Focus also shows a 3px ink outline and scrolls the whole card into view. Cards never fill yellow.
 - Cursor pill (`card-cue.ts`, the `cue` prop): styled like the header Let’s talk pill, an ink pill with a white label at 44px, Archivo 600 14px. Over a card it scales in at the pointer (300ms), fills yellow from the centre with the label turning ink (600ms), trails the pointer (400ms) and stays inside the card’s edges. Keyboard focus shows it filled in the card’s top-right corner. Labels are short and period-ended: “Read.” for cases, research and essays, “Explore.” for maps and offerings. It is `aria-hidden`; the title stays the link’s name. No pill on touch or under reduced motion.
 - Ledger rows (`src/components/Ledger.astro`) remain for dense reference lists on inner pages, such as schedules, resources and comparisons: a 1px ink opening rule, `--line` row rules, column heads in `--font-label`, rows stacking below 768px.
@@ -68,7 +68,9 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 - Easing: `cubic-bezier(0, 0, .2, 1)` is the standard ease for hover and entrance motion.
 - Cards below the fold fade and rise into view (an 80ms stagger capped at three cards; `card-reveal.ts`). Cards already on screen at load are never hidden, and focus reveals a waiting card at once.
 - Moments that answer an action or mark a commitment: a chosen alternative filling, the Find Formation exercise.
-- No entrance animation on non-card sections. Without JavaScript, everything is shown. Print shows every card.
+- Section headlines below the fold rise line by line from behind a mask (600ms per line, 60ms apart; `reveal.ts`). Only plain-text headlines are split, and each is restored to its original markup once its lines land. Other `[data-reveal]` elements fade and rise (600ms, 24px). The hero and page-intro headlines never animate: the first viewport is readable at once.
+- Mobile menu: the panel fades in (400ms), link lines rise in turn (500ms, 60ms apart), and closing fades out (300ms).
+- Without JavaScript, everything is shown. Print shows every card and headline.
 
 **Interaction rules.**
 - Pointer-only effects (cursor pill, image zoom, floating previews, drag) apply only under `(hover: hover) and (pointer: fine)`.

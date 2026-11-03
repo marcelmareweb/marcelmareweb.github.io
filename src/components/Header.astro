@@ -41,8 +41,8 @@ const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
       <h2 class="sr-only" id="site-menu-title">Menu</h2>
       <nav aria-label="Mobile navigation">
         <ul class="menu-list" role="list">
-          {links.map(link => (
-            <li><a class:list={['menu-link', { 'is-current-section': link.active && !link.exact }]} href={link.href} aria-current={link.exact ? 'page' : undefined}><span>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</span><Arrow /></a></li>
+          {links.map((link, index) => (
+            <li style={`--i: ${index}`}><a class:list={['menu-link', { 'is-current-section': link.active && !link.exact }]} href={link.href} aria-current={link.exact ? 'page' : undefined}><span>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</span><Arrow /></a></li>
           ))}
         </ul>
       </nav>
@@ -63,7 +63,22 @@ if (dialog && trigger) {
     document.body.style.overflow = 'hidden';
     trigger.setAttribute('aria-expanded', 'true');
   });
-  dialog.querySelector('[data-menu-close]')?.addEventListener('click', () => dialog.close());
+  // Close with a short fade; Escape uses the same path. Reduced motion closes at once.
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const closeMenu = () => {
+    if (!dialog.open || dialog.classList.contains('is-closing')) return;
+    if (reduced.matches) return dialog.close();
+    dialog.classList.add('is-closing');
+    window.setTimeout(() => {
+      dialog.classList.remove('is-closing');
+      dialog.close();
+    }, 300);
+  };
+  dialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeMenu();
+  });
+  dialog.querySelector('[data-menu-close]')?.addEventListener('click', closeMenu);
   dialog.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => dialog.close()));
   // Keep Tab and Shift+Tab inside the open menu, including past the browser's own controls.
   dialog.addEventListener('keydown', (event) => {
@@ -272,6 +287,39 @@ if (dialog && trigger) {
   }
   .noscript-menu {
     display: none;
+  }
+
+  /* Opening: the panel fades in, then each link line rises in turn. Closing fades out in 300ms. */
+  .nav-dialog[open] {
+    animation: menu-fade 0.4s var(--ease) both;
+  }
+  .nav-dialog[open] .menu-list > li {
+    animation: menu-rise 0.5s var(--ease) both;
+    animation-delay: calc(0.1s + var(--i, 0) * 60ms);
+  }
+  .nav-dialog[open] .dialog-bottom {
+    animation: menu-fade 0.4s var(--ease) both;
+    animation-delay: 0.35s;
+  }
+  .nav-dialog:global(.is-closing) {
+    animation: menu-fade-out 0.3s var(--ease) both;
+  }
+  @keyframes menu-fade {
+    from { opacity: 0; }
+  }
+  @keyframes menu-fade-out {
+    to { opacity: 0; }
+  }
+  @keyframes menu-rise {
+    from { opacity: 0; transform: translateY(24px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nav-dialog[open],
+    .nav-dialog[open] .menu-list > li,
+    .nav-dialog[open] .dialog-bottom,
+    .nav-dialog:global(.is-closing) {
+      animation: none;
+    }
   }
 
   @media (max-width: 1023px) {

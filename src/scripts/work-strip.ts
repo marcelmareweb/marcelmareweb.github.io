@@ -1,5 +1,6 @@
 // Progressive enhancement for the homepage work strip: step buttons over native horizontal scroll.
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const fine = matchMedia('(hover: hover) and (pointer: fine)');
 
 document.querySelectorAll<HTMLElement>('[data-work-strip]').forEach((strip) => {
   const track = strip.querySelector<HTMLElement>('[data-strip-track]');
@@ -30,6 +31,37 @@ document.querySelectorAll<HTMLElement>('[data-work-strip]').forEach((strip) => {
       });
     }),
   );
+
+  // Drag to scroll with a mouse. Touch keeps native swiping; a drag never opens the card under it.
+  let start = 0;
+  let origin = 0;
+  let dragged = false;
+  track.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'mouse' || event.button !== 0 || !fine.matches) return;
+    start = event.clientX;
+    origin = track.scrollLeft;
+    dragged = false;
+    track.classList.add('is-dragging');
+    const move = (moveEvent: PointerEvent) => {
+      const distance = moveEvent.clientX - start;
+      if (Math.abs(distance) > 6) dragged = true;
+      track.scrollLeft = origin - distance;
+    };
+    const end = () => {
+      track.classList.remove('is-dragging');
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', end);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', end);
+  });
+  track.addEventListener('click', (event) => {
+    if (!dragged) return;
+    event.preventDefault();
+    event.stopPropagation();
+    dragged = false;
+  }, true);
+  track.addEventListener('dragstart', (event) => event.preventDefault());
 
   track.addEventListener('scroll', update, { passive: true });
   new ResizeObserver(update).observe(track);

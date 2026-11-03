@@ -122,6 +122,11 @@ const items = [
     scrollbar-color: var(--ink) var(--line);
   }
   .strip-item { scroll-snap-align: start; padding-top: 8px; }
+  @media (hover: hover) and (pointer: fine) {
+    .strip-track { cursor: grab; }
+    .strip-track:global(.is-dragging) { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+    .strip-track:global(.is-dragging) :global(.card-cue) { opacity: 0; }
+  }
   .strip-media { height: 100%; display: flex; align-items: flex-end; aspect-ratio: 4 / 5; overflow: hidden; padding: 32px; background: var(--surface); color: var(--ink); }
   .strip-media--quote, .strip-media--matrix { background: var(--ink); color: var(--paper); }
   .strip-media--matrix { align-items: center; justify-content: center; }

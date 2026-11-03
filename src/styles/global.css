@@ -1021,14 +1021,35 @@ button:focus-visible .roll-char {
   line-height: 1.35;
   letter-spacing: var(--tracking-copy);
 }
-.reveal.is-pending {
+/* Entrances (reveal.ts): headline lines rise from a mask; other revealed elements fade and rise. */
+.is-pending {
   opacity: 0;
-  transform: translateY(24px);
 }
-.reveal {
-  transition:
-    opacity var(--duration-enter) var(--out),
-    transform var(--duration-enter) var(--out);
+.is-rising {
+  animation: rise 0.6s var(--ease) both;
+}
+.line-mask {
+  display: block;
+  overflow: hidden;
+  /* Room for descenders inside the mask without changing the headline's line spacing. */
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.line-inner {
+  display: block;
+  animation: line-rise 0.6s var(--ease) both;
+  animation-delay: calc(var(--l, 0) * 60ms);
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+}
+@keyframes line-rise {
+  from { transform: translateY(calc(100% + 0.2em)); }
+}
+@media print {
+  .is-pending {
+    opacity: 1;
+  }
 }
 .legal-page {
   padding-block: var(--space-lg);
@@ -1323,9 +1344,8 @@ button:focus-visible .roll-char {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal.is-pending {
+  .is-pending {
     opacity: 1;
-    transform: none;
   }
   .button--talk {
     transition-delay: 0s !important;
