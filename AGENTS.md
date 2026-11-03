@@ -44,6 +44,19 @@ Use black and white as the predominant visual system, with yellow as the distinc
 
 Typography is central to the identity: oversized expressive sans-serif, weight 600, sharp scale contrasts, deliberate line breaks, tight tracking and optical alignment. Use the measured Huge reference scale, leading, spacing and interaction timings documented in the investigation. Use self-hosted Archivo as the available sans-serif; do not copy proprietary reference fonts. Do not introduce editorial serifs: the actual reference provides no justification for them.
 
+### Structural reference: hugeinc.com
+
+Borrow hugeinc.com's structure and typography only, never its colours, text, images, logo or code:
+
+- Oversized display headlines, short and confident, ending in a period.
+- A full-width hero/showreel area directly under a big opening headline.
+- Minimal top navigation with a single call-to-action button.
+- A horizontally scrolling strip of project images, followed by a client logo wall.
+- A numbered services list (01, 02, 03…) with one-line descriptions.
+- Generous whitespace, a strong grid and a minimal footer of period-ended links.
+
+Apply these on black and white. Use yellow sparingly as the accent: CTAs, highlights and hover states. No terracotta, ochre, sand, stone or warm off-white backgrounds. The legacy branch name `design/phase-4-warm-mineral-home` does not indicate a direction.
+
 Build original compositions for the practice's own material. Preserve the distinctive ape identity, decision instruments, research and current narrative; do not copy Huge branding or assets. Historical audit observations describe the old site, not the required direction. Resolve conflicts in favour of the definitive direction; do not retain competing design systems.
 
 ## Architecture and accessibility

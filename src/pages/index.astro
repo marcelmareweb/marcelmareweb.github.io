@@ -1,79 +1,52 @@
 ---
 import HomeLayout from '../layouts/HomeLayout.astro';
+import Arrow from '../components/Arrow.astro';
 import FindFormation from '../components/home/FindFormation.astro';
-import PracticeSection from '../components/PracticeSection.astro';
-import StrategicMatrix from '../components/StrategicMatrix.astro';
-import { strategyIllusion } from '../data/strategicMatrices';
-import ProblemLinks from '../components/ProblemLinks.astro';
-import SelectedEvidence from '../components/SelectedEvidence.astro';
-import LearningOptions from '../components/LearningOptions.astro';
+import WorkStrip from '../components/home/WorkStrip.astro';
+import ServiceIndex from '../components/home/ServiceIndex.astro';
+import { publicResources } from '../data/practice';
 ---
 <HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="We help leaders make consequential choices when familiar assumptions no longer hold. Independent strategic decision and behavioural design practice, Cape Town.">
 <section class="home-intro" id="idea">
 <div class="wrap">
-<div class="section-top meta">
-<p class="meta-dot">Strategic decision &amp; behavioural design</p>
-<p>Cape Town / Independent practice</p>
-</div>
 <h1>
-<span>More possibilities.</span>
+<span>More <span class="hero-break">possibilities.</span></span>
 <span class="hero-choice">Harder choices.</span>
 </h1>
 <div class="hero-bottom">
-<div>
 <p class="hero-explanation">We help leaders make consequential choices when familiar assumptions no longer hold.</p>
 <div class="actions">
-<a class="button" href="/services/">Explore how we can help
-</a>
-<a class="text-link" href="/learning/">Workshops &amp; learning <span aria-hidden="true">↗</span>
-</a>
+<a class="button" href="/services/">Explore how we can help</a>
+<a class="text-link" href="#choice">Find your formation. <Arrow direction="down" /></a>
 </div>
 </div>
-<aside class="hero-notation">
-<p><a href="#choice">Find your<br />formation.</a></p>
-<span>Make a choice.<br />Own its consequences.</span>
-</aside>
 </div>
-</div>
+<figure class="hero-band" aria-labelledby="hero-band-caption">
+<picture>
+<source media="(max-width: 640px)" srcset="/images/judgement-factory/mobile.webp" width="1345" height="1169" />
+<img src="/images/judgement-factory/desktop.webp" width="1983" height="793" decoding="async"
+  alt="A hand-drawn miniature banana-bread factory: whole yellow bananas climb to a peeler, a pulley drives a mixer and an oven bakes the loaf. Tiny monkey workers supervise. At the end, an inspector holds the loaf before releasing it." />
+</picture>
+<figcaption class="wrap" id="hero-band-caption">
+<span class="band-title">The machine works. The monkey decides.</span>
+<span class="band-note">Machines handle repetition. The inspector owns the final release.</span>
+</figcaption>
+</figure>
 </section>
-<section class="home-start wrap" aria-label="Find your starting point">
-<p class="meta">01 / Start with your situation</p>
-<ProblemLinks />
-</section>
-<SelectedEvidence />
-<PracticeSection />
-<section class="section-y" id="learning">
-<div class="wrap">
-<div class="section-top meta"><p>04 / Workshops &amp; learning</p><a href="/learning/">Compare the formats ↗</a></div>
-<h2 class="section-title" data-reveal>A question.<br />A way to learn.</h2>
-<div class="home-learning-options"><LearningOptions compact /></div>
-</div>
-</section>
-<div class="wrap formation-entry"><p class="meta">05 / Try a decision exercise</p><a class="text-link" href="#thinking">Continue to thinking ↓</a></div>
+
+<WorkStrip />
+
+<ServiceIndex />
+
 <FindFormation />
-<section class="section-y" id="thinking">
+
+<section class="section-y" id="thinking" aria-labelledby="thinking-title">
+<span id="instrument" aria-hidden="true"></span>
 <div class="wrap">
-<div class="section-top meta">
-<p>06 / Thinking &amp; instruments</p>
-<a href="/thinking/">Explore all thinking ↗</a>
-</div>
-<div class="split-layout">
-<div class="thinking-copy">
-<p class="meta">Strategic decision map</p>
-<h3>{strategyIllusion.title}.</h3>
-<p>{strategyIllusion.question}</p>
-<p id={`${strategyIllusion.id}-note`}>{strategyIllusion.insight}</p>
-<a class="text-link" href="/thinking/strategic-decision-maps/strategy-illusion/">Explore the map <span aria-hidden="true">↗</span>
-</a>
-</div>
-<div class="thinking-preview" data-reveal>
-<StrategicMatrix matrix={strategyIllusion} compact />
-</div>
-</div>
-<div class="instrument-row" id="instrument">
+<div class="thinking-row">
 <div>
-<p class="meta">An instrument for the conversation</p>
-<h3>Make the reasoning visible.</h3>
+<h2 class="section-title" id="thinking-title" data-reveal>Make the reasoning visible.</h2>
+<a class="text-link" href="/thinking/">Explore all thinking. <Arrow /></a>
 </div>
 <details class="decision-record" id="decision-record">
 <summary>Open an example decision record</summary>
@@ -93,51 +66,35 @@ import LearningOptions from '../components/LearningOptions.astro';
 </dl>
 </details>
 </div>
-<a class="essay-row" href="https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html">
-<span class="meta">Essay</span>
-<div>
+<a class="essay-row" href={publicResources.essay}>
 <h3>The Laboratory Fallacy.</h3>
 <p>When a persuasive model meets the conditions of real work.</p>
-</div>
-<span aria-hidden="true">↗</span>
+<span class="essay-kind">Essay</span>
+<Arrow class="essay-arrow" />
 </a>
 </div>
 </section>
-<section class="home-invitation theme-yellow section-y" id="engagement">
-<span id="book" aria-hidden="true">
-</span>
+
+<section class="home-invitation section-y" id="engagement" aria-labelledby="invitation-title">
+<span id="book" aria-hidden="true"></span>
 <div class="wrap">
-<p class="meta">A consequential choice?</p>
-<h2 class="section-title">What needs<br />deciding?</h2>
+<h2 class="invitation-title" id="invitation-title">What needs deciding?</h2>
 <div class="invitation-bottom">
-<p class="lead">Bring the alternatives, the assumptions<br />and the difficult questions.</p>
-<a class="button button--talk" href="/contact/?source=%2F">Let’s talk
-</a>
+<p class="lead">Bring the alternatives, the assumptions and the difficult questions.</p>
+<a class="button button--talk button--yellow" href="/contact/?source=%2F">Let’s talk</a>
 </div>
 </div>
 </section>
 </HomeLayout>
 <style>
-.home-start { padding-block: 0 var(--space-lg); }
-.home-start > .meta { margin-bottom: 28px; }
-.home-learning-options { margin-top: var(--space-sm); }
-.formation-entry { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; }
-.formation-entry .text-link { font-size: 14px; }
-.hero-notation a { text-decoration: none; }
-.hero-notation a:hover { text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 6px; }
-@media (max-width: 767px) { .formation-entry { align-items: start; flex-direction: column; gap: 12px; } }
-
 .home-intro {
-  padding-block: var(--space-md) var(--space-lg);
-}
-.home-intro .section-top {
-  margin-bottom: var(--space-md);
+  padding-block: var(--space-md) 0;
 }
 .home-intro h1 {
-  font-size: var(--display-xl);
-  line-height: 0.9;
-  letter-spacing: -0.055em;
-  text-indent: -0.035em;
+  font-size: min(12.6vw, 15.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  text-indent: -0.04em;
 }
 .home-intro h1 > span {
   display: block;
@@ -146,171 +103,228 @@ import LearningOptions from '../components/LearningOptions.astro';
   content: '';
   display: block;
   width: 23%;
-  height: 10px;
+  height: 0.06em;
+  max-height: 14px;
   background: var(--signal);
-  margin-top: 22px;
+  margin-top: 0.12em;
+  transform-origin: left;
+  animation: hero-mark 1.1s var(--out) 0.25s both;
+}
+@keyframes hero-mark {
+  from { transform: scaleX(0); }
 }
 .hero-bottom {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 10%;
-  margin-top: var(--space-sm);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
   align-items: end;
+  margin-top: var(--space-md);
 }
 .hero-explanation {
+  grid-column: 1 / 7;
   font-size: var(--heading-4);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.05em;
-  max-width: 28ch;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  max-width: 24ch;
+  text-wrap: balance;
 }
-.hero-notation {
-  border-left: 1px solid var(--ink);
-  padding-left: 24px;
+.hero-bottom .actions {
+  grid-column: 8 / -1;
+  justify-content: end;
+  margin: 0;
 }
-.hero-notation p {
-  font-size: var(--heading-3);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-  font-weight: 600;
+.text-link :global(.arrow) {
+  font-size: 18px;
 }
-.hero-notation span {
+.hero-band {
+  margin-top: var(--space-lg);
+}
+.hero-band picture {
   display: block;
-  margin-top: 32px;
+  width: min(100%, 2200px);
+  margin-inline: auto;
+  padding-inline: clamp(8px, 2vw, 40px);
+}
+.hero-band img {
+  display: block;
+  width: 100%;
+}
+.hero-band figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding-block: 32px var(--space-sm);
+  border-bottom: 1px solid var(--line);
+}
+.band-title {
+  font-size: var(--body-large);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.band-note {
   font-size: 16px;
+  color: var(--muted);
 }
-.research-spread {
-  margin-top: var(--space-lg);
-}
-.instrument-row {
+
+.thinking-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: var(--space-sm);
-  margin-top: var(--space-lg);
-  border-top: 1px solid var(--line);
-  padding-top: 40px;
+  align-items: end;
 }
-.instrument-row h3 {
-  font-size: var(--heading-4);
-  margin-top: 24px;
-  max-width: 15ch;
+.thinking-row .section-title {
+  max-width: 11ch;
+}
+.thinking-row .text-link {
+  margin-top: 40px;
 }
 .essay-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 60px;
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: baseline;
+  margin-top: var(--space-lg);
   padding-block: 40px;
-  margin-top: 40px;
-  border-block: 1px solid var(--line);
+  border-block: 1px solid var(--ink);
   text-decoration: none;
 }
 .essay-row h3 {
-  font-size: var(--heading-4);
+  grid-column: 1 / 7;
+  font-size: var(--heading-3);
 }
 .essay-row p {
-  font-size: 18px;
-  margin-top: 20px;
-  max-width: 38ch;
+  grid-column: 7 / 11;
+  font-size: var(--body);
+  color: var(--muted);
 }
-.essay-row > span:last-child {
-  font-size: 48px;
-  line-height: 1;
+.essay-kind {
+  grid-column: 11 / 12;
+  font: 400 12px/1.5 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
-.home-invitation .meta {
-  margin-bottom: 40px;
+.essay-row :global(.essay-arrow) {
+  grid-column: 12 / 13;
+  justify-self: end;
+  font-size: 32px;
+  transition: transform 0.6s var(--out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .essay-row:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--signal);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 8px;
+  }
+  .essay-row:hover :global(.essay-arrow) {
+    transform: translate(4px, -4px);
+  }
+}
+
+.home-invitation {
+  border-top: 1px solid var(--line);
+}
+.invitation-title {
+  font-size: var(--display-xl);
+  line-height: 0.86;
+  max-width: 7ch;
 }
 .invitation-bottom {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   align-items: end;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
 }
+.invitation-bottom .button {
+  min-width: 200px;
+}
+
 @media (max-width: 1023px) {
-  .home-intro h1 {
-    font-size: clamp(64px, 11.5vw, 140px);
-  }
   .hero-explanation {
-    font-size: 32px;
+    grid-column: 1 / -1;
+    font-size: 34px;
   }
-  .hero-notation p {
-    font-size: 40px;
+  .hero-bottom .actions {
+    grid-column: 1 / -1;
+    justify-content: start;
+    margin-top: 8px;
   }
-  .hero-bottom {
-    gap: 40px;
+  .thinking-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .essay-row h3 {
+    grid-column: 1 / 11;
+  }
+  .essay-row p {
+    grid-column: 1 / 11;
+  }
+  .essay-kind {
+    grid-column: 1 / 11;
+    grid-row: 3;
+  }
+  .essay-row :global(.essay-arrow) {
+    grid-row: 1;
+  }
+  .invitation-title {
+    font-size: clamp(80px, 15vw, 150px);
   }
 }
 @media (max-width: 767px) {
   .home-intro {
-    padding-block: 48px 64px;
-  }
-  .home-intro .section-top {
-    margin-bottom: 56px;
+    padding-top: 40px;
   }
   .home-intro h1 {
-    font-size: clamp(40px, 9.5vw, 76px);
-    line-height: 0.96;
-    letter-spacing: -0.055em;
+    font-size: 14.4vw;
+    line-height: 0.9;
   }
-  .hero-choice:after {
-    height: 6px;
-    width: 35%;
-    margin-top: 16px;
-  }
-  .hero-bottom {
-    grid-template-columns: 1fr;
-    margin-top: 32px;
-    gap: 40px;
+  .hero-break {
+    display: block;
   }
   .hero-explanation {
     font-size: 26px;
-    max-width: 26ch;
   }
-  .hero-notation {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  .hero-notation p {
-    font-size: 32px;
-  }
-  .hero-notation span {
-    margin: 0;
-    align-self: end;
-    font-size: 14px;
-    max-width: 16ch;
-  }
-  .research-spread {
-    margin-top: 48px;
-  }
-  .instrument-row {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .hero-band {
     margin-top: 64px;
   }
-  .instrument-row h3 {
-    font-size: 32px;
+  .hero-band picture {
+    padding-inline: 8px;
+  }
+  .hero-band figcaption {
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 48px;
+  }
+  .band-title {
+    font-size: 22px;
   }
   .essay-row {
-    grid-template-columns: 1fr 32px;
+    grid-template-columns: minmax(0, 1fr) 24px;
+    margin-top: 72px;
+    padding-block: 28px;
   }
-  .essay-row > .meta {
-    grid-column: 1/-1;
+  .essay-row h3,
+  .essay-row p,
+  .essay-kind {
+    grid-column: 1;
   }
   .essay-row h3 {
-    font-size: 30px;
+    font-size: 34px;
   }
-  .essay-row > span:last-child {
-    font-size: 32px;
+  .essay-row :global(.essay-arrow) {
+    grid-column: 2;
+    font-size: 22px;
+  }
+  .invitation-title {
+    font-size: clamp(64px, 18vw, 100px);
   }
   .invitation-bottom {
     flex-direction: column;
     align-items: start;
     gap: 32px;
-  }
-  .home-invitation .section-title {
-    font-size: clamp(64px, 16vw, 100px);
   }
 }
 </style>

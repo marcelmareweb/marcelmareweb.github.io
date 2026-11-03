@@ -1,0 +1,14 @@
+---
+interface Props {
+  direction?: 'up-right' | 'right' | 'left' | 'down';
+  class?: string;
+}
+const { direction = 'up-right', class: className } = Astro.props;
+const rotation = { 'up-right': 0, right: 45, down: 135, left: 225 }[direction];
+---
+<svg class:list={['arrow', className]} viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" aria-hidden="true" focusable="false" style={`--arrow-rotate:${rotation}deg`}>
+  <path d="M7 17 17 7M9 7h8v8" />
+</svg>
+<style>
+  .arrow { width: 1em; height: 1em; flex-shrink: 0; transform: rotate(var(--arrow-rotate)); }
+</style>

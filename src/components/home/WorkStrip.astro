@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import Arrow from '../Arrow.astro';
+import { strategyIllusion } from '../../data/strategicMatrices';
+
+const cases = await getCollection('cases');
+const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
+const map = strategyIllusion.quadrants;
+
+const items = [
+  policy && {
+    kind: 'Case account',
+    title: policy.data.title,
+    line: 'A strategic report had stalled. The work returned to the argument it needed to make.',
+    href: `/cases/${policy.data.slug}`,
+    media: 'decision',
+  },
+  {
+    kind: 'Behavioural research',
+    title: 'Cookstove adoption.',
+    line: 'Motivations and everyday cooking practices, investigated alongside the technology itself.',
+    href: '/work/#research',
+    media: 'behaviour',
+  },
+  {
+    kind: 'Executive masterclass',
+    title: 'Strategic Design Leadership in the Age of AI.',
+    line: 'Five standalone strategic decision days, from what success means to how decisions are governed.',
+    href: '/workshops/strategic-design-leadership/',
+    media: 'human-ai',
+  },
+  {
+    kind: 'Strategic decision map',
+    title: `${strategyIllusion.title}.`,
+    line: strategyIllusion.insight,
+    href: '/thinking/strategic-decision-maps/strategy-illusion/',
+    media: 'matrix',
+  },
+  {
+    kind: 'Self-paced learning',
+    title: 'Should We Invest in Solar?',
+    line: 'Three solar proposals. One decision to defend.',
+    href: '/courses',
+    media: 'solar',
+  },
+].filter(Boolean) as { kind: string; title: string; line: string; href: string; media: string }[];
+---
+<section class="work-strip section-y" id="evidence" aria-labelledby="work-strip-title" data-work-strip>
+  <span id="case" aria-hidden="true"></span><span id="project" aria-hidden="true"></span><span id="method" aria-hidden="true"></span>
+  <div class="wrap strip-head">
+    <h2 class="section-title" id="work-strip-title" data-reveal>Observe before<br />prescribing.</h2>
+    <div class="strip-tools">
+      <a class="text-link" href="/work/">All work &amp; research. <Arrow /></a>
+      <div class="strip-controls" data-strip-controls hidden>
+        <button class="strip-step" type="button" data-strip-step="-1" aria-label="Previous work"><Arrow direction="left" /></button>
+        <button class="strip-step" type="button" data-strip-step="1" aria-label="Next work"><Arrow direction="right" /></button>
+      </div>
+    </div>
+  </div>
+  <ul class="strip-track" data-strip-track role="list">
+    {items.map(item => (
+      <li class="strip-item">
+        <a class="strip-card" href={item.href}>
+          <div class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden="true">
+            {['decision', 'behaviour', 'human-ai'].includes(item.media) && (
+              <img src={`/images/practice/${item.media}.svg`} width="600" height="600" alt="" loading="lazy" decoding="async" />
+            )}
+            {item.media === 'matrix' && (
+              <div class="mini-matrix">
+                <span class="is-marked">{map.topLeft.title}</span>
+                <span>{map.topRight.title}</span>
+                <span>{map.bottomLeft.title}</span>
+                <span>{map.bottomRight.title}</span>
+              </div>
+            )}
+            {item.media === 'solar' && (
+              <p class="solar-type"><span>Three</span><span>proposals.</span><span class="is-marked">One</span><span>decision.</span></p>
+            )}
+          </div>
+          <h3>{item.title}</h3>
+          <p class="strip-line">{item.line}</p>
+          <p class="strip-kind">{item.kind}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>
+<script>
+  import '../../scripts/work-strip';
+</script>
+<style>
+  .strip-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+  .strip-tools { display: flex; align-items: center; gap: 32px; flex-shrink: 0; }
+  .text-link .arrow { font-size: 18px; }
+  .strip-controls:not([hidden]) { display: flex; gap: 8px; }
+  .strip-step { display: grid; place-items: center; width: 56px; height: 56px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; color: var(--ink); font-size: 22px; transition: background-color .6s var(--out); }
+  .strip-step[aria-disabled='true'] { opacity: .3; cursor: default; }
+  @media (hover: hover) and (pointer: fine) {
+    .strip-step:hover:not([aria-disabled='true']) { background: var(--signal); }
+  }
+
+  .strip-track {
+    --strip-inset: max(var(--gutter), calc((100% - 1800px) / 2));
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(300px, 31vw, 560px);
+    gap: var(--grid-gap);
+    margin: var(--space-sm) 0 0;
+    padding: 0 var(--strip-inset) 24px;
+    list-style: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--strip-inset);
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink) var(--line);
+  }
+  .strip-item { scroll-snap-align: start; }
+  .strip-card { display: block; text-decoration: none; }
+  .strip-card:focus-visible { outline-offset: 8px; }
+
+  .strip-media { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+  .strip-media img { width: 78%; transition: transform .8s var(--out); }
+  .strip-media--matrix, .strip-media--solar { background: var(--ink); color: var(--paper); }
+
+  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 76%; aspect-ratio: 1; background: #555; border: 1px solid #555; }
+  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
+  .mini-matrix .is-marked { background: var(--signal); color: var(--ink); }
+
+  .solar-type { display: grid; align-self: stretch; justify-self: stretch; align-content: end; padding: 32px; font-size: clamp(48px, 4.6vw, 84px); font-weight: 600; line-height: .9; letter-spacing: -.05em; }
+  .solar-type .is-marked { color: var(--signal); margin-top: .2em; }
+
+  .strip-kind { margin-top: 20px; font: 400 12px/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .strip-card h3 { margin-top: 28px; max-width: 18ch; font-size: clamp(28px, 2.2vw, 40px); line-height: 1.05; text-wrap: balance; }
+  .strip-line { margin-top: 16px; max-width: 40ch; font-size: 17px; line-height: 1.5; color: var(--muted); }
+
+  @media (hover: hover) and (pointer: fine) {
+    .strip-card:hover .strip-media img { transform: scale(1.05); }
+    .strip-card:hover h3 { text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: 4px; text-underline-offset: 6px; }
+  }
+  @media (max-width: 767px) {
+    .strip-head { flex-direction: column; align-items: start; gap: 24px; }
+    .strip-controls { display: none !important; }
+    .strip-track { grid-auto-columns: 80%; margin-top: 40px; }
+    .strip-card h3 { font-size: 28px; }
+    .strip-line { font-size: 16px; }
+    .solar-type { padding: 24px; font-size: 52px; }
+    .mini-matrix span { padding: 10px; font-size: 13px; }
+  }
+</style>
