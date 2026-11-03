@@ -13,7 +13,7 @@ const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
     <nav class="desktop-nav" aria-label="Main navigation">
       <ul role="list">
         {links.map(link => (
-          <li><a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a></li>
+          <li><a href={link.href} data-roll aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a></li>
         ))}
       </ul>
       <a class="button button--talk header-talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
@@ -263,7 +263,7 @@ if (dialog && trigger) {
     display: grid;
     gap: 4px;
     text-align: right;
-    font: var(--weight-medium) var(--text-small)/1.4 var(--narrow);
+    font: var(--font-label);
     color: var(--muted);
   }
   .menu-contact a {

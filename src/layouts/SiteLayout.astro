@@ -20,7 +20,6 @@ interface Props {
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="icon" type="image/png" href="/logo.png" />
 <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/archivo-narrow-latin.woff2" as="font" type="font/woff2" crossorigin />
 <SeoHead {...Astro.props} />
 </head>
 <body id="top">
@@ -32,6 +31,7 @@ interface Props {
 <Footer />
 <script>
 import '../scripts/button-hover';
+import '../scripts/text-roll';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 if (!reduced.matches && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver(

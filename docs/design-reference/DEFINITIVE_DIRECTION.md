@@ -2,7 +2,7 @@
 
 This is the authoritative implementation direction. It supersedes earlier proposals and historical descriptions of the local site. Huge observations and measurements remain research evidence, not Spotted Ape positioning.
 
-The chosen visual direction, **The Decision Record** (November 2026), is recorded in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It refines this document: yellow marks commitment only, offerings are ledger rows rather than cards, Archivo Narrow replaces monospace for labels, and every page's first viewport holds content to read or use.
+The chosen visual direction, **The Decision Record** (November 2026), is recorded in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It refines this document: yellow is an accent only (commitment, current state, hover and focus), offerings, cases and thinking are Huge-style cards (`Card.astro`) with ledger rows kept for dense reference lists, Archivo (the `--font-label` token, no narrow faces) replaces monospace for labels, and every page's first viewport holds content to read or use.
 
 ## Identity and practice
 

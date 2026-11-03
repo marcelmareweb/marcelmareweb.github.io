@@ -33,7 +33,7 @@ const reading = [
   { token: '--body-large', sample: 'Bring the alternatives, the assumptions and the difficult questions.' },
   { token: '--body', sample: 'We help leaders make consequential choices when familiar assumptions no longer hold.' },
   { token: '--text-ui', sample: 'Navigation, buttons and form labels.' },
-  { token: '--text-small', sample: 'Record field labels and ledger column heads, set in Archivo Narrow.' },
+  { token: '--text-small', sample: 'Record field labels and ledger column heads (--font-label).' },
   { token: '--text-label', sample: 'The smallest text on the site.' },
 ];
 const compact = ['--compact-xl', '--compact-lg', '--compact-md', '--compact-sm', '--compact-xs'];
@@ -105,7 +105,6 @@ const ledgerSample = [
 <p style="font: var(--weight-regular) var(--body-large)/1.3 var(--ui)">Archivo 400. Reading text and descriptions.</p>
 <p style="font: var(--weight-medium) var(--body-large)/1.3 var(--ui)">Archivo 500. Interface text and labels.</p>
 <p style="font: var(--weight-display) var(--body-large)/1.3 var(--ui); letter-spacing: var(--tracking-heading)">Archivo 600. Display and headings.</p>
-<p style="font: var(--weight-medium) var(--body-large)/1.3 var(--narrow)">Archivo Narrow 500. Record fields, ledger heads, tables.</p>
 <p style="font: var(--weight-regular) var(--text-small)/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase">JetBrains Mono. Formation exercises only.</p>
 </div>
 <h3 class="guide-sub">Display and headings</h3>
@@ -130,7 +129,7 @@ const ledgerSample = [
 {reading.map(item => (
 <div class="type-row" data-size={item.token}>
 <p class="type-meta"><code>{item.token}</code><span data-px></span></p>
-<p class="type-sample type-sample--copy" style={`font-size: var(${item.token}); font-family: ${item.token === '--text-small' ? 'var(--narrow)' : 'var(--ui)'}`}>{item.sample}</p>
+<p class="type-sample type-sample--copy" style={`font-size: var(${item.token}); font-family: var(--ui)`}>{item.sample}</p>
 </div>
 ))}
 </div>
@@ -324,10 +323,10 @@ const ledgerSample = [
   .guide-index a { min-height: 32px; display: inline-flex; align-items: center; }
   .guide-section { padding-block: var(--space-lg); border-top: 1px solid var(--ink); }
   .guide-title { font-size: var(--heading-2); line-height: var(--leading-display); }
-  .guide-sub { margin-top: var(--space-sm); margin-bottom: 20px; font: var(--weight-medium) var(--text-ui)/1.4 var(--narrow); letter-spacing: 0; color: var(--muted); }
-  .guide-note { margin-top: 20px; max-width: 70ch; font: var(--weight-medium) var(--text-small)/1.5 var(--narrow); color: var(--text-muted); }
+  .guide-sub { margin-top: var(--space-sm); margin-bottom: 20px; font: var(--weight-medium) var(--text-ui)/1.4 var(--ui); letter-spacing: 0; color: var(--muted); }
+  .guide-note { margin-top: 20px; max-width: 70ch; font: var(--weight-medium) var(--text-small)/1.5 var(--ui); color: var(--text-muted); }
   .guide-note--ink { color: var(--muted-inverse); }
-  code { font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); }
+  code { font: var(--font-label); }
 
   .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--grid-gap); }
   .swatches--large { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -336,14 +335,14 @@ const ledgerSample = [
   .chip { display: block; aspect-ratio: 3 / 2; border: 1px solid var(--line); }
   .swatches--large .chip { aspect-ratio: 2 / 1; }
   .swatch--on-ink .chip { outline: 12px solid var(--ink); outline-offset: -12px; }
-  .swatch figcaption { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); }
+  .swatch figcaption { display: grid; gap: 2px; font: var(--font-label); }
   .swatch .value { font-variant-numeric: tabular-nums; }
   .swatch .contrast, .swatch .role { color: var(--muted); }
 
   .families { display: grid; gap: 12px; }
   .type-rows { border-top: 1px solid var(--ink); }
   .type-row { display: grid; grid-template-columns: minmax(10rem, 2fr) minmax(0, 10fr); gap: var(--grid-gap); align-items: baseline; padding-block: 20px; border-bottom: 1px solid var(--line); }
-  .type-meta { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); color: var(--muted); }
+  .type-meta { display: grid; gap: 2px; font: var(--font-label); color: var(--muted); }
   .type-sample { min-width: 0; overflow-wrap: anywhere; }
   .type-sample--copy { max-width: 62ch; line-height: var(--leading-copy); }
   .guide-h1 { font-size: var(--display-xl); font-weight: var(--weight-display); letter-spacing: var(--tracking-display); line-height: 0.88; }
@@ -351,7 +350,7 @@ const ledgerSample = [
   .token-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
   .token-list { margin: 0; border-top: 1px solid var(--ink); }
   .token-list > div { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); }
-  .token-list dd { margin: 0; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); font-variant-numeric: tabular-nums; }
+  .token-list dd { margin: 0; font: var(--font-label); font-variant-numeric: tabular-nums; }
   .token-list--wide { max-width: 720px; }
 
   .space-rows { display: grid; gap: 12px; }
@@ -360,7 +359,7 @@ const ledgerSample = [
 
   .shapes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--grid-gap); }
   .shape { margin: 0; display: grid; gap: 12px; }
-  .shape figcaption { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); color: var(--muted); }
+  .shape figcaption { display: grid; gap: 2px; font: var(--font-label); color: var(--muted); }
   .shape-box { display: block; aspect-ratio: 1; border: 1px solid var(--ink); background: var(--surface); }
   .shape-box--wide { aspect-ratio: 5 / 2; align-self: start; }
   .shape-box--shadow { border-color: var(--line-inverse); background: var(--grey-900); box-shadow: var(--shadow-instrument); }

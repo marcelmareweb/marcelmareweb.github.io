@@ -13,13 +13,6 @@
   font-weight: 400 800;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Archivo Narrow';
-  src: url('/fonts/archivo-narrow-latin.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-}
 /* Mono is reserved for the Find Formation and masterclass formation exercises. */
 @font-face {
   font-family: JetBrains;
@@ -68,7 +61,6 @@
   /* Font families. */
   --ui: Archivo, Arial, sans-serif;
   --read: var(--ui);
-  --narrow: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
   --mono: JetBrains, ui-monospace, monospace;
 
   /* Font weights. */
@@ -91,6 +83,8 @@
   --text-ui: 1rem;
   --text-small: 0.875rem;
   --text-label: 0.75rem;
+  /* One label style for record fields, ledger heads, captions and data, in Archivo like everything else. */
+  --font-label: var(--weight-medium) var(--text-small)/1.4 var(--ui);
   /* Compact headings for screens below 768px. Headlines that need their own size keep it. */
   --compact-xs: 1.75rem;
   --compact-sm: 2rem;
@@ -130,9 +124,11 @@
   --underline-offset: 0.2em;
   --focus-ring: 3px solid currentColor;
 
-  /* Radius. Panels, rows and choice controls are square; buttons are pills. */
+  /* Radius. Card colour blocks and image frames are rounded; choice controls, panels and rows stay square; buttons are pills. */
   --radius-none: 0;
   --radius-field: 4px;
+  --radius-tile: 8px;
+  --radius-card: 16px;
   --radius-pill: 999px;
   --radius-round: 50%;
 
@@ -143,6 +139,8 @@
 
   /* Motion (measured reference timings). */
   --out: cubic-bezier(0.625, 0.05, 0, 1);
+  /* Standard ease for hover and entrance motion; new animations stay within 600ms. */
+  --ease: cubic-bezier(0, 0, 0.2, 1);
   --duration-hover: 0.6s;
   --duration-fill: 0.7s;
   --duration-enter: 0.8s;

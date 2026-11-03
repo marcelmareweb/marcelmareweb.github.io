@@ -1,33 +1,34 @@
 ---
 import { getCollection } from 'astro:content';
 import Arrow from '../Arrow.astro';
+import Card from '../Card.astro';
+import { publicResources } from '../../data/practice';
 import { strategyIllusion } from '../../data/strategicMatrices';
 
 const cases = await getCollection('cases');
 const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
 const map = strategyIllusion.quadrants;
 
+// Each card's image is set from its own content, never a decorative illustration.
+type Item = { cue: string; kind: string; title: string; line: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title'; mediaText?: string; external?: boolean };
 const items = [
   policy && {
     kind: 'Case account',
     title: policy.data.title,
     line: 'A strategic report had stalled. The work returned to the argument it needed to make.',
     href: `/cases/${policy.data.slug}`,
-    media: 'decision',
+    media: 'quote',
+    cue: 'Read.',
+    mediaText: policy.data.quote,
   },
   {
     kind: 'Behavioural research',
     title: 'Cookstove adoption.',
     line: 'Motivations and everyday cooking practices, investigated alongside the technology itself.',
     href: '/work/#research',
-    media: 'behaviour',
-  },
-  {
-    kind: 'Executive masterclass',
-    title: 'Strategic Design Leadership in the Age of AI.',
-    line: 'Five standalone strategic decision days, from what success means to how decisions are governed.',
-    href: '/workshops/strategic-design-leadership/',
-    media: 'human-ai',
+    media: 'question',
+    cue: 'Read.',
+    mediaText: 'What influences the adoption of improved cookstoves among households in Dunoon?',
   },
   {
     kind: 'Strategic decision map',
@@ -35,22 +36,31 @@ const items = [
     line: strategyIllusion.insight,
     href: '/thinking/strategic-decision-maps/strategy-illusion/',
     media: 'matrix',
+    cue: 'Explore.',
   },
   {
-    kind: 'Self-paced learning',
-    title: 'Should We Invest in Solar?',
-    line: 'Three solar proposals. One decision to defend.',
-    href: '/courses',
-    media: 'solar',
+    kind: 'Essay',
+    title: 'The Laboratory Fallacy.',
+    line: 'When a persuasive model meets the conditions of real work.',
+    href: publicResources.essay,
+    media: 'title',
+    cue: 'Read.',
+    external: true,
   },
-].filter(Boolean) as { kind: string; title: string; line: string; href: string; media: string }[];
+].filter(Boolean) as Item[];
 ---
 <section class="work-strip section-y" id="evidence" aria-labelledby="work-strip-title" data-work-strip>
-  <span id="case" aria-hidden="true"></span><span id="project" aria-hidden="true"></span><span id="method" aria-hidden="true"></span>
+  <span id="case" aria-hidden="true"></span><span id="project" aria-hidden="true"></span><span id="method" aria-hidden="true"></span><span id="thinking" aria-hidden="true"></span>
   <div class="wrap strip-head">
-    <h2 class="section-title" id="work-strip-title" data-reveal>Observe before<br />prescribing.</h2>
+    <div>
+      <h2 class="section-title" id="work-strip-title">Observe before<br />prescribing.</h2>
+      <p class="strip-sub">Make the reasoning visible.</p>
+    </div>
     <div class="strip-tools">
-      <a class="text-link" href="/work/">All work &amp; research. <Arrow /></a>
+      <div class="strip-links">
+        <a class="text-link" href="/work/">All work &amp; research. <Arrow /></a>
+        <a class="text-link" href="/thinking/">All thinking <Arrow /></a>
+      </div>
       <div class="strip-controls" data-strip-controls hidden>
         <button class="strip-step" type="button" data-strip-step="-1" aria-label="Previous work"><Arrow direction="left" /></button>
         <button class="strip-step" type="button" data-strip-step="1" aria-label="Next work"><Arrow direction="right" /></button>
@@ -58,13 +68,12 @@ const items = [
     </div>
   </div>
   <ul class="strip-track" data-strip-track role="list">
-    {items.map(item => (
+    {items.map((item, index) => (
       <li class="strip-item">
-        <a class="strip-card" href={item.href}>
-          <div class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden="true">
-            {['decision', 'behaviour', 'human-ai'].includes(item.media) && (
-              <img src={`/images/practice/${item.media}.svg`} width="600" height="600" alt="" loading="lazy" decoding="async" />
-            )}
+        <Card layout="media" href={item.href} title={item.title} text={item.line} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
+          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden={item.media === 'title' || item.media === 'matrix' ? 'true' : undefined}>
+            {item.media === 'quote' && <blockquote class="media-type"><p>“{item.mediaText}”</p></blockquote>}
+            {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}
             {item.media === 'matrix' && (
               <div class="mini-matrix">
                 <span class="is-marked">{map.topLeft.title}</span>
@@ -73,14 +82,9 @@ const items = [
                 <span>{map.bottomRight.title}</span>
               </div>
             )}
-            {item.media === 'solar' && (
-              <p class="solar-type"><span>Three</span><span>proposals.</span><span class="is-marked">One</span><span>decision.</span></p>
-            )}
+            {item.media === 'title' && <p class="media-type media-type--title">{item.title}</p>}
           </div>
-          <h3>{item.title}</h3>
-          <p class="strip-line">{item.line}</p>
-          <p class="strip-kind">{item.kind}</p>
-        </a>
+        </Card>
       </li>
     ))}
   </ul>
@@ -90,7 +94,9 @@ const items = [
 </script>
 <style>
   .strip-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+  .strip-sub { margin-top: 20px; font-size: var(--heading-4); font-weight: var(--weight-display); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); color: var(--muted); }
   .strip-tools { display: flex; align-items: center; gap: 32px; flex-shrink: 0; }
+  .strip-links { display: grid; justify-items: start; gap: 8px; }
   .text-link .arrow { font-size: var(--body); }
   .strip-controls:not([hidden]) { display: flex; gap: 8px; }
   .strip-step { display: grid; place-items: center; width: 56px; height: 56px; border: 1px solid var(--ink); border-radius: var(--radius-round); background: transparent; color: var(--ink); font-size: var(--body-large); transition: background-color var(--duration-hover) var(--out); }
@@ -115,36 +121,29 @@ const items = [
     scrollbar-width: thin;
     scrollbar-color: var(--ink) var(--line);
   }
-  .strip-item { scroll-snap-align: start; }
-  .strip-card { display: block; text-decoration: none; }
-  .strip-card:focus-visible { outline-offset: 8px; }
+  .strip-item { scroll-snap-align: start; padding-top: 8px; }
+  .strip-media { height: 100%; display: flex; align-items: flex-end; aspect-ratio: 4 / 5; overflow: hidden; padding: 32px; background: var(--surface); color: var(--ink); }
+  .strip-media--quote, .strip-media--matrix { background: var(--ink); color: var(--paper); }
+  .strip-media--matrix { align-items: center; justify-content: center; }
+  .strip-media--title { background: var(--paper); }
 
-  .strip-media { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
-  .strip-media img { width: 78%; transition: transform var(--duration-enter) var(--out); }
-  .strip-media--matrix, .strip-media--solar { background: var(--ink); color: var(--paper); }
+  .media-type { margin: 0; font-size: clamp(32px, 2.6vw, 48px); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); text-wrap: balance; }
+  .media-type p { margin: 0; text-indent: -0.4em; }
+  .media-type--title { font-size: clamp(56px, 5vw, 96px); line-height: var(--leading-display); letter-spacing: var(--tracking-display); }
 
-  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 76%; aspect-ratio: 1; background: var(--line-inverse); border: 1px solid var(--line-inverse); }
+  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 88%; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-tile); background: var(--line-inverse); border: 1px solid var(--line-inverse); }
   .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: var(--text-small); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
   .mini-matrix .is-marked { background: var(--signal); color: var(--ink); }
 
-  .solar-type { display: grid; align-self: stretch; justify-self: stretch; align-content: end; padding: 32px; font-size: clamp(48px, 4.6vw, 84px); font-weight: 600; line-height: var(--leading-display); letter-spacing: var(--tracking-display); }
-  .solar-type .is-marked { color: var(--signal); margin-top: .2em; }
-
-  .strip-kind { margin-top: 16px; font: 500 var(--text-small)/1.4 var(--narrow); color: var(--muted); }
-  .strip-card h3 { margin-top: 28px; max-width: 18ch; font-size: clamp(28px, 2.2vw, 40px); line-height: var(--leading-heading); text-wrap: balance; }
-  .strip-line { margin-top: 16px; max-width: 40ch; font-size: var(--text-ui); line-height: var(--leading-copy); color: var(--muted); }
-
-  @media (hover: hover) and (pointer: fine) {
-    .strip-card:hover .strip-media img { transform: scale(1.05); }
-    .strip-card:hover h3 { text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: 4px; text-underline-offset: 6px; }
-  }
   @media (max-width: 767px) {
     .strip-head { flex-direction: column; align-items: start; gap: 24px; }
     .strip-controls { display: none !important; }
     .strip-track { grid-auto-columns: 80%; margin-top: 40px; }
-    .strip-card h3 { font-size: var(--compact-xs); }
-    .strip-line { font-size: var(--text-ui); }
-    .solar-type { padding: 24px; font-size: 52px; }
+    .strip-sub { margin-top: 12px; font-size: var(--compact-xs); }
+    .strip-tools { flex-direction: column; align-items: start; }
+    .strip-media { padding: 24px; }
+    .media-type { font-size: var(--compact-xs); }
+    .media-type--title { font-size: var(--compact-xl); }
     .mini-matrix span { padding: 10px; font-size: var(--text-small); }
   }
 </style>

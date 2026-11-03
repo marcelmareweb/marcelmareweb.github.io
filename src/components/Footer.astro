@@ -15,7 +15,7 @@ const links = [
     <div class="footer-top">
       <nav class="footer-nav" aria-label="Footer navigation">
         <ul role="list">
-          {links.map(link => <li><a href={link.href} class:list={{ 'is-talk': link.talk }}>{link.label}</a></li>)}
+          {links.map(link => <li><a href={link.href} data-roll class:list={{ 'is-talk': link.talk }}>{link.label}</a></li>)}
         </ul>
       </nav>
       <div class="footer-details">
@@ -49,7 +49,7 @@ const links = [
   .footer-nav a { display: inline-block; font-size: var(--heading-3); font-weight: var(--weight-display); line-height: 1.1; letter-spacing: var(--tracking-display); text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
   .footer-nav a.is-talk { color: var(--signal); }
   .footer-details { grid-column: 9 / -1; display: grid; gap: 36px; }
-  .footer-label { margin-bottom: 12px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); letter-spacing: 0; color: var(--muted-inverse); }
+  .footer-label { margin-bottom: 12px; font: var(--font-label); letter-spacing: 0; color: var(--muted-inverse); }
   .footer-details p { font-size: var(--text-ui); line-height: var(--leading-copy); color: var(--muted-inverse); max-width: 34ch; }
   .footer-email { display: inline-block; margin-bottom: 8px; font-size: var(--body-large); letter-spacing: var(--tracking-copy); text-decoration: none; border-bottom: 1px solid var(--grey-500); padding-bottom: 8px; overflow-wrap: anywhere; transition: border-color var(--duration-hover) var(--out); }
   .footer-out { display: inline-block; padding-block: 12px 8px; font-size: var(--text-ui); text-decoration: none; border-bottom: 1px solid var(--grey-500); transition: border-color var(--duration-hover) var(--out); }

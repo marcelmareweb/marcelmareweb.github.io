@@ -1,0 +1,386 @@
+---
+import Arrow from './Arrow.astro';
+
+interface Props {
+  href: string;
+  title: string;
+  /** Main line: the question an offering answers, or a one-line description. On media cards it continues the title in grey. */
+  text?: string;
+  /** Secondary line: what you leave with. */
+  aside?: string;
+  /** Small labels above text and aside, where the card needs them. */
+  textLabel?: string;
+  asideLabel?: string;
+  /** Kind of work. On media cards it is a tag over the image. */
+  kind?: string;
+  /** Sequence label (01, 02…). Use only when the cards form a list. */
+  number?: string;
+  external?: boolean;
+  /** block: the card is a colour block holding its text. media: an image or type block above the text (slot "media"). */
+  layout?: 'block' | 'media';
+  tone?: 'ink' | 'surface' | 'paper';
+  size?: 'default' | 'large';
+  /** Draw a 1px ink frame around a white media block. */
+  outlined?: boolean;
+  /** Position in its row, for a short stagger as the row scrolls into view. */
+  index?: number;
+  /** Heading level of the title, to fit the page outline. */
+  headingLevel?: 2 | 3 | 4;
+  /** Label of the cursor pill that follows the pointer over the card (decorative; the title stays the link name). */
+  cue?: string;
+}
+const { href, title, text, aside, textLabel, asideLabel, kind, number, external = false, layout = 'block', tone = 'paper', size = 'default', outlined = false, index = 0, headingLevel = 3, cue = 'Explore.' } = Astro.props;
+const Heading = `h${headingLevel}` as 'h2' | 'h3' | 'h4';
+const isMedia = layout === 'media';
+---
+<article class:list={['card', `card--${layout}`, `card--${tone}`, { 'card--large': size === 'large' }]} data-card style={`--i: ${index}`}>
+  <div class="card-body">
+    {number && <p class="card-num">{number}</p>}
+    {isMedia ? (
+      <div class="card-lede">
+        <Heading class="card-title"><a class="card-link" href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}><span class="card-title-text">{title}</span></a></Heading>{text && <>{' '}<p class="card-line">{text}</p></>}
+      </div>
+    ) : (
+      <Heading class="card-title"><a class="card-link" href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}><span class="card-title-text">{title}</span></a></Heading>
+    )}
+    {!isMedia && (text || aside) && (
+      <div class="card-fields">
+        {text && <div class="card-field">{textLabel && <p class="card-label">{textLabel}</p>}<p class="card-text">{text}</p></div>}
+        {aside && <div class="card-field">{asideLabel && <p class="card-label">{asideLabel}</p>}<p class="card-aside">{aside}</p></div>}
+      </div>
+    )}
+    {kind && <p class="card-kind">{kind}</p>}
+    <Arrow class="card-arrow" />
+  </div>
+  {isMedia && (
+    <div class:list={['card-media', { 'card-media--outlined': outlined }]}>
+      <div class="card-media-inner"><slot name="media" /></div>
+      <span class="card-accent" aria-hidden="true"></span>
+    </div>
+  )}
+  {!isMedia && <span class="card-accent" aria-hidden="true"></span>}
+  <span class="card-cue" aria-hidden="true" data-card-cue>{cue}</span>
+</article>
+<script>
+  import '../scripts/card-reveal';
+  import '../scripts/card-cue';
+</script>
+<style>
+  /* One link per card, stretched over the whole card, so the accessible name is the title alone. */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    transition-delay: calc(min(var(--i, 0), 3) * 80ms);
+  }
+  .card:global(.is-pending) {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .card-link {
+    text-decoration: none;
+    outline: none;
+  }
+  .card-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .card:has(.card-link:focus-visible) {
+    outline: 3px solid var(--ink);
+    outline-offset: 4px;
+  }
+  .card--block:has(.card-link:focus-visible),
+  .card--media:has(.card-link:focus-visible) {
+    border-radius: var(--radius-card);
+  }
+  .card-title-text {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+    transition: background-size 0.4s var(--ease);
+  }
+
+  /* Colour-block cards. */
+  .card--block {
+    min-height: clamp(380px, 34vw, 520px);
+    padding: 32px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+  .card--block .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card--ink { background: var(--ink); color: var(--paper); --card-muted: var(--muted-inverse); --card-line: var(--line-inverse); }
+  .card--surface { background: var(--surface); color: var(--ink); --card-muted: var(--muted); --card-line: var(--line); }
+  .card--paper { color: var(--ink); --card-muted: var(--muted); --card-line: var(--line); }
+
+  .card-num {
+    margin-bottom: var(--space-xs);
+    font: var(--font-label);
+    font-variant-numeric: tabular-nums;
+    color: var(--card-muted);
+  }
+  .card-title {
+    max-width: 16ch;
+    font-size: clamp(1.75rem, 1.3rem + 1vw, 2.5rem);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    text-wrap: balance;
+  }
+  .card--large .card-title {
+    font-size: clamp(2.75rem, 1.5rem + 2.4vw, 4.5rem);
+    letter-spacing: var(--tracking-display);
+  }
+  .card-fields {
+    display: grid;
+    gap: 20px;
+    margin-top: auto;
+    padding-top: var(--space-xs);
+  }
+  .card-field + .card-field {
+    padding-top: 20px;
+    border-top: 1px solid var(--card-line);
+  }
+  .card-label {
+    margin-bottom: 6px;
+    font: var(--font-label);
+    color: var(--card-muted);
+  }
+  .card-text {
+    max-width: 36ch;
+    font-size: var(--body);
+    line-height: 1.45;
+  }
+  .card-aside {
+    max-width: 40ch;
+    font-size: var(--text-ui);
+    line-height: 1.45;
+    color: var(--card-muted);
+  }
+  .card-kind {
+    margin-top: 16px;
+    font: var(--font-label);
+    color: var(--card-muted);
+  }
+  .card-body > :global(.card-arrow) {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-size: var(--compact-xs);
+    transition: translate 0.3s var(--ease);
+  }
+
+  /* Media cards: a rounded image or type frame above unboxed text. */
+  .card--media .card-media {
+    position: relative;
+    order: -1;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+  }
+  .card-media--outlined::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--ink);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .card-media-inner {
+    height: 100%;
+    transition: transform 0.5s var(--ease);
+  }
+  .card--media .card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 16px;
+    align-content: start;
+    padding-top: 24px;
+  }
+  .card--media .card-body > * {
+    grid-column: 1;
+  }
+  .card--media .card-body > :global(.card-arrow) {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 4px;
+    font-size: 24px;
+  }
+  /* Two-tone lede: the title in full colour, its line continuing in grey at the same size. */
+  .card-lede {
+    max-width: 24ch;
+    font-size: clamp(1.5rem, 1.1rem + 0.8vw, 2.125rem);
+    font-weight: var(--weight-display);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-heading);
+  }
+  .card--media .card-title,
+  .card-line {
+    display: inline;
+    font: inherit;
+    letter-spacing: inherit;
+  }
+  .card-line {
+    color: var(--card-muted);
+  }
+  /* The kind of work, as a tag over the image. */
+  .card--media .card-kind {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    margin: 0;
+    padding: 6px 12px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-pill);
+    background: var(--paper);
+    color: var(--ink);
+    pointer-events: none;
+  }
+
+  /* Yellow accent: a bar that draws along the foot of a block card or the top of a media frame. */
+  .card-accent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: var(--signal);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease);
+    pointer-events: none;
+  }
+  .card-media .card-accent {
+    top: auto;
+    bottom: 0;
+  }
+
+  /* Cursor pill: the header Let’s talk pill (ink, white label, yellow circle fill from the centre).
+     It follows the pointer over the card (card-cue.ts) and sits top right on keyboard focus. */
+  .card-cue {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--control-height-compact);
+    padding: 12px 24px;
+    border-radius: var(--radius-pill);
+    background: var(--ink);
+    color: var(--paper);
+    font-size: var(--text-small);
+    font-weight: var(--weight-display);
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    scale: 0.6;
+    translate: calc(var(--cue-x, 0px) - 50%) calc(var(--cue-y, 0px) - 50%);
+    transition:
+      opacity 0.3s var(--ease),
+      scale 0.3s var(--ease),
+      translate 0.4s var(--ease),
+      color 0.6s var(--ease),
+      background-color 0s;
+  }
+  .card-cue::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    width: 115%;
+    aspect-ratio: 1;
+    border-radius: var(--radius-round);
+    background: var(--signal);
+    transform: translate(-50%, -50%) scale(0) rotate(0.001deg);
+    transition: transform 0.6s var(--ease);
+  }
+  .card-cue:global(.is-placing) {
+    transition: none;
+  }
+  .card-cue:global(.is-active),
+  .card:has(.card-link:focus-visible) .card-cue {
+    opacity: 1;
+    scale: 1;
+    color: var(--ink);
+    /* Match the base to the fill once it completes, so black cannot fringe the rounded edge. */
+    background-color: var(--signal);
+    transition-delay: 0s, 0s, 0s, 0s, 0.6s;
+  }
+  .card-cue:global(.is-active)::before,
+  .card:has(.card-link:focus-visible) .card-cue::before {
+    transform: translate(-50%, -50%) scale(1) rotate(0.001deg);
+  }
+  .card:has(.card-link:focus-visible) .card-cue {
+    top: 24px;
+    right: 24px;
+    left: auto;
+    translate: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card:hover .card-title-text { background-size: 100% 2px; }
+    .card:hover .card-accent { transform: scaleX(1); }
+    .card:hover .card-media-inner { transform: scale(1.05); }
+    .card:hover :global(.card-arrow) { translate: 4px -4px; }
+  }
+  .card:has(.card-link:focus-visible) .card-title-text { background-size: 100% 2px; }
+  .card:has(.card-link:focus-visible) .card-accent { transform: scaleX(1); }
+  .card:has(.card-link:focus-visible) .card-media-inner { transform: scale(1.05); }
+  .card:has(.card-link:focus-visible) :global(.card-arrow) { translate: 4px -4px; }
+
+  @media (max-width: 767px) {
+    .card--block {
+      min-height: 0;
+      padding: 24px;
+    }
+    .card-num {
+      margin-bottom: 32px;
+    }
+    .card-title,
+    .card--large .card-title {
+      font-size: var(--compact-sm);
+    }
+    .card-lede {
+      font-size: var(--body-large);
+    }
+    .card-body > :global(.card-arrow) {
+      top: 24px;
+      right: 24px;
+      font-size: 24px;
+    }
+    .card-fields {
+      padding-top: 40px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-title-text,
+    .card-accent,
+    .card-media-inner,
+    .card-cue,
+    .card-cue::before,
+    .card :global(.card-arrow) {
+      transition: none;
+    }
+    .card-media-inner {
+      transform: none !important;
+    }
+  }
+  @media print {
+    .card:global(.is-pending) {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

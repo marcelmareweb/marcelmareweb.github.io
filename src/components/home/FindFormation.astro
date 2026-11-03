@@ -42,7 +42,6 @@ const choices = [
 <section class="movement choice theme-dark" id="choice" data-formation>
   <div class="wrap">
     <div class="section-heading">
-      <p class="meta">Strategic Decisions</p>
       <div>
         <h2>Find formation.</h2>
         <p>Choose what to back in the example below.<br />What does each decision require? What will you defer?</p>
@@ -154,10 +153,6 @@ const choices = [
 <style>
   .choice .section-heading {
     display: block;
-  }
-  .choice .section-heading > .meta {
-    margin-bottom: 40px;
-    color: var(--signal);
   }
   .choice .section-heading h2 {
     font-size: var(--display-l);
@@ -635,9 +630,6 @@ const choices = [
   @media (max-width: 767px) {
     .choice .section-heading h2 {
       font-size: clamp(56px, 14vw, 80px);
-    }
-    .choice .section-heading > .meta {
-      margin-bottom: 32px;
     }
     .choice .section-heading p:not(.meta) {
       margin-top: 24px;

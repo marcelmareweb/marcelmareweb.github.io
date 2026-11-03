@@ -10,6 +10,8 @@ AGENTS.md (imported above) is the authoritative source for positioning, design s
 
 Chosen November 2026. It applies the AGENTS.md visual system and Huge structural reference; where this section is more specific, follow it.
 
+**Reference.** hugeinc.com for structure, typography and motion only; never its colours, text, images or code.
+
 **Mood.** Rigorous and calm, like a working document you would trust with a real decision. The site is structured the way the practice structures a decision: question, alternatives, assumptions, trade-offs, owner, review. It demonstrates the method instead of describing it.
 
 **Fewest steps to engaging content.**
@@ -17,42 +19,62 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 - Remove anything whose only job is to point at the next thing: jump-link rows, labels that restate a heading, transitional sections, duplicate calls to action. Keep breadcrumbs, the primary nav and one Let’s talk action.
 - One click from any offering to an enquiry with its context (`contactHref`). Contact shows the three required fields first; optional organisation, team and programme fields stay available in a disclosure.
 
-**Palette.** Tokens in `src/styles/global.css`; components use the semantic roles, never raw hex.
+**Palette.** Tokens in `src/styles/tokens.css`; components use the semantic roles, never raw hex.
 
 | Token | Hex | Role |
 | --- | --- | --- |
 | `--paper` | `#FFFFFF` | Predominant ground (about 85% of each page) |
 | `--ink` | `#0D0B0A` | Text, rules, primary buttons, occasional full-bleed sections |
-| `--signal` | `#FFFF00` | Commitment only: a chosen alternative, the current nav item, the primary action’s hover/focus fill. Never a section background or decoration. Never text on white. |
+| `--signal` | `#FFFF00` | Accent only: a chosen alternative, the current-page bar, focus states, the primary action’s hover/focus fill, a card’s hover/focus bar and the cursor pill. Never a section or card background, never text on white. |
 | `--muted` | `#626262` | Secondary text on paper (pencil) |
 | `--line` | `#D9D9D9` | Row rules |
-| `--surface` | `#F3F3F3` | Worksheet surface for instruments |
+| `--surface` | `#F3F3F3` | Worksheet surface for instruments; grey card tone |
 | `--muted-inverse` / `--line-inverse` | `#B3B3B3` / `#555555` | Text and rules on ink |
 
 **Fonts.** All self-hosted from `public/fonts/` (OFL); never linked from Google’s servers. No serifs.
 - Archivo variable: 600 for display, 400 for reading, 500 for UI.
-- Archivo Narrow (400–600): record field labels, ledger column heads, tables and data. Sentence case, no tracking.
+- One family. No narrow or condensed faces: record field labels, ledger column heads, captions, tables and data use Archivo 500 at `--text-small` through the `--font-label` token, in sentence case.
 - JetBrains Mono is retired from site chrome. It remains only inside the Find Formation and masterclass formation exercises until they are restyled without changing their behaviour.
 
 **Type scale.** Existing tokens: `--display-2xl` … `--heading-4`, `--body-large`, `--body`, then `--text-ui` 16px, `--text-small` 14px, `--text-label` 12px (the minimum). Headlines are short, end in a period and break deliberately; mobile headline sizes are set per headline.
+
+**Corners.** `--radius-card: 16px` for card colour blocks and image frames; `--radius-tile: 8px` for small tiles. Pills keep their current radius (`--radius-pill`). Choice buttons stay square so the commitment control stays distinct. Text under media cards stays unboxed: no frame, fill or radius around it.
 
 **Spacing and grid.** `--space-xs` 44–48px, `--space-sm` 55–64px, `--space-md` 67–80px, `--space-lg` 102–128px, `--space-xl` 170–220px. Gutter 20px below 768px, 40px above; grid gap 8/16px; 4/8/12 columns; content max 1800px. Breakpoints: 375, 767/768, 1023/1024, 1199, 1800px. Sections are separated by space or a single rule, not by background bands.
 
 **Buttons and links.**
 - Primary: ink pill, 56px minimum height (44px in the header), Archivo 600 16px, yellow circle fill on hover and keyboard focus (700ms, `button-hover.ts`). One primary per view.
 - On ink: the same pill in yellow with an ink label.
-- Secondary: text link with a 1px underline and the SVG `Arrow` component. No Unicode arrows in links or buttons.
-- Choice control (record alternatives, decision exercises): square corners, 1px ink border, `aria-pressed`; the chosen state fills yellow. This is the only square-cornered control.
+- Secondary: text link with a 1px underline and the SVG `Arrow` component; its arrow nudges on hover and focus. No Unicode arrows in links or buttons.
+- Character roll (`text-roll.ts`) on text links, desktop nav links and footer nav links (`data-roll`): each letter slides up one line (600ms, 10ms per-letter stagger) and an identical copy rises from below. The label stays in a visually hidden span; the split letters are `aria-hidden`. Links are not split under reduced motion.
+- Choice control (record alternatives, decision exercises): square corners, 1px ink border, `aria-pressed`; the chosen state fills yellow. Its square corners keep the commitment control distinct from rounded cards and pill buttons.
 
-**Cards.** There are no cards. Lists of offerings, cases, resources and thinking are ledger rows:
-- The ledger opens with a 1px ink rule; rows are separated by 1px `--line` rules; no fills, radii or shadows.
-- Columns, left to right: number (only where the list is a sequence or the AGENTS.md numbered services list), name (Archivo 600), the question it answers, what you leave with. Column heads in Archivo Narrow. Rows stack to one column below 768px.
-- Hover and focus: the name underlines and the arrow nudges; the row never fills yellow.
-- The decision record is the one bordered instrument: the same row structure inside a `--surface` panel or between ink rules.
+**Cards.** Items that people choose between or browse (offerings, cases, research, thinking) are cards in the Huge style, built with `src/components/Card.astro`:
+- Two layouts. `block`: the card is a colour block (`ink`, `surface` or `paper` tone) holding its number, title and fields. `media`: a rounded image or type frame (slot `media`) above unboxed text. The title and its line read as one two-tone block (title in full colour, line in grey at the same size), and the kind of work is a pill tag over the frame’s top-left corner. A media block is built from the item’s own content (a quote, a research question, a map, a title), never a decorative illustration.
+- Titles are short, oversized and end in a period. Numbered labels (01, 02…) only where the cards form a list or sequence; numbering continues across groups of the same list.
+- Colour blocks and image frames use `--radius-card`; no shadows, no gradients. Optional field labels (“The question”, “What you leave with”) use `--font-label`.
+- One link per card: the title link is stretched over the whole card, so the card is a single tap target and its accessible name is the title alone. Set `headingLevel` to fit the page outline.
+- Rows: `.card-grid` is three columns on desktop; add `.card-grid--swipe` for a swipeable, snapping row below 1024px. Many items, or a strip of work, scroll horizontally at every width with step buttons (`work-strip.ts`).
+- Hover (fine pointers) and keyboard focus: the title underline draws in, a yellow bar draws along the foot of the card (or top of its media), the arrow nudges, and media zooms (scale 1.05, 500ms). Focus also shows a 3px ink outline and scrolls the whole card into view. Cards never fill yellow.
+- Cursor pill (`card-cue.ts`, the `cue` prop): styled like the header Let’s talk pill, an ink pill with a white label at 44px, Archivo 600 14px. Over a card it scales in at the pointer (300ms), fills yellow from the centre with the label turning ink (600ms), trails the pointer (400ms) and stays inside the card’s edges. Keyboard focus shows it filled in the card’s top-right corner. Labels are short and period-ended: “Read.” for cases, research and essays, “Explore.” for maps and offerings. It is `aria-hidden`; the title stays the link’s name. No pill on touch or under reduced motion.
+- Ledger rows (`src/components/Ledger.astro`) remain for dense reference lists on inner pages, such as schedules, resources and comparisons: a 1px ink opening rule, `--line` row rules, column heads in `--font-label`, rows stacking below 768px.
+- The decision record is the one bordered instrument: field-and-value rows inside a `--surface` panel or between ink rules.
 
-**Components.** Use `src/components/Ledger.astro` for any list of offerings, cases, resources or thinking (it drops columns no row uses), `src/components/DecisionRecord.astro` or the `.record` / `.record-row` classes for field-and-value instruments, and `.choice` / `.choice-group` for single-choice controls. `PageIntro` provides every inner page's breadcrumbs, headline (`short`, `default`, `long`, `sentence`) and description.
+**Components.** `src/components/Card.astro` for offerings, cases, research and thinking that people browse; `src/components/Ledger.astro` for dense reference lists (it drops columns no row uses, and `start` keeps a split numbered list in one sequence); `src/components/DecisionRecord.astro` or the `.record` / `.record-row` classes for field-and-value instruments; `.choice` / `.choice-group` for single-choice controls. `PageIntro` provides every inner page's breadcrumbs, headline (`short`, `default`, `long`, `sentence`) and description.
 
-**Motion.** One moment per page at most, answering an action or marking a commitment (a chosen alternative filling, the inspection pause in the hero band). No entrance animation on every section. Everything is readable at rest and under reduced motion.
+**Motion.**
+- Duration: every new animation stays within 600ms. A per-letter stagger may extend the total time, but each letter’s own motion is 600ms. Entrances are our own 600ms, not Huge’s 800ms.
+- The existing 700ms primary-button fill (`button-hover.ts`) is kept as the one exception.
+- Easing: `cubic-bezier(0, 0, .2, 1)` is the standard ease for hover and entrance motion.
+- Cards below the fold fade and rise into view (an 80ms stagger capped at three cards; `card-reveal.ts`). Cards already on screen at load are never hidden, and focus reveals a waiting card at once.
+- Moments that answer an action or mark a commitment: a chosen alternative filling, the Find Formation exercise.
+- No entrance animation on non-card sections. Without JavaScript, everything is shown. Print shows every card.
+
+**Interaction rules.**
+- Pointer-only effects (cursor pill, image zoom, floating previews, drag) apply only under `(hover: hover) and (pointer: fine)`.
+- Every effect has a keyboard-focus equivalent.
+- Everything is off under `prefers-reduced-motion`.
+- Duplicate or decorative text (rolled letters, marquee copies, media type that repeats a title) is `aria-hidden`, so accessible names stay clean.
 
 ## Commands
 
@@ -68,7 +90,7 @@ There is no test runner, linter or Playwright dependency in the repo. "Tests" me
 
 - **Static Astro 7 site** with MDX and sitemap integrations; no CSS framework (the base reset adapted from Tailwind preflight is inlined at the top of `global.css`). `site` is `https://marcelmareweb.github.io` in [astro.config.mjs](astro.config.mjs). No client framework; interactivity lives in plain TS/JS modules in `src/scripts/` imported from components/layouts as scoped scripts.
 - **Layouts**: `SiteLayout.astro` is the single shell (SeoHead, Header, Footer, skip link, `global.css`, global `button-hover` script). `BaseLayout` and `HomeLayout` are thin wrappers around it — put shared chrome changes in `SiteLayout`.
-- **Styling**: design tokens are CSS custom properties on `:root` in `src/styles/global.css` (ink/paper/signal palette, a nine-step grey scale with semantic roles, type and spacing scales, documented breakpoints), with the scale taken from `docs/design-reference/DESIGN_TOKENS.md`. Fonts are self-hosted from `public/fonts/`. `monkey-factory.css` belongs to the isolated lab page; `home.css` is empty.
+- **Styling**: design tokens are CSS custom properties on `:root` in `src/styles/tokens.css`, imported first by `src/styles/global.css`: the ink/paper/signal palette, a nine-step grey scale with semantic roles, type and spacing scales and documented breakpoints. The scale is taken from `docs/design-reference/DESIGN_TOKENS.md`. Fonts are self-hosted from `public/fonts/`. `monkey-factory.css` belongs to the isolated lab page; `home.css` is empty.
 - **Content data**: most page copy and offerings are typed TS data in `src/data/` — `navigation.ts` (primary nav, active-state and breadcrumb logic), `practice.ts` (services, learning options, external public resources), `executive-masterclass.ts` (the five E–P–I–A–S masterclass days), `strategicMatrices.ts`.
 - **Content collections** ([src/content.config.ts](src/content.config.ts)):
   - `cases` — Markdown in `src/content/cases/`, rendered by `src/pages/cases/[slug].astro` and listed on `/work`.

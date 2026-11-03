@@ -360,7 +360,7 @@ button:disabled {
 }
 .meta,
 .technical-label {
-  font: 500 var(--text-small)/1.4 var(--narrow);
+  font: var(--font-label);
   letter-spacing: 0;
   color: var(--text-muted);
 }
@@ -426,7 +426,7 @@ textarea.inquiry-field {
   border-bottom: 1px solid var(--line);
 }
 .record-row > dt {
-  font: 500 var(--text-small)/1.4 var(--narrow);
+  font: var(--font-label);
   color: var(--text-muted);
 }
 .record-row > dd {
@@ -448,12 +448,13 @@ textarea.inquiry-field {
 }
 .choice {
   min-height: var(--control-height-compact);
-  padding: 10px 16px;
+  padding: 10px 14px;
   border: 1px solid var(--ink);
   border-radius: var(--radius-none);
   background: transparent;
   color: var(--ink);
-  font: 500 var(--text-ui)/1.2 var(--narrow);
+  font: var(--weight-medium) var(--text-ui)/1.2 var(--ui);
+  letter-spacing: var(--tracking-ui);
   text-align: left;
   transition: background-color 0.5s var(--out);
 }
@@ -506,7 +507,7 @@ textarea.inquiry-field {
 .ledger-head {
   padding-block: 12px;
   border-bottom: 1px solid var(--line);
-  font: 500 var(--text-small)/1.4 var(--narrow);
+  font: var(--font-label);
   color: var(--text-muted);
 }
 .ledger-row {
@@ -516,7 +517,7 @@ textarea.inquiry-field {
   color: inherit;
 }
 .ledger-num {
-  font: 500 var(--text-small)/1.4 var(--narrow);
+  font: var(--font-label);
   font-variant-numeric: tabular-nums;
   color: var(--text-muted);
 }
@@ -535,7 +536,7 @@ textarea.inquiry-field {
   line-height: 1.45;
 }
 .ledger-aside {
-  font: 400 var(--text-ui)/1.45 var(--narrow);
+  font: var(--weight-regular) var(--text-ui)/1.45 var(--ui);
   color: var(--text-muted);
 }
 .ledger-row > .arrow {
@@ -745,6 +746,74 @@ a.ledger-row:focus-visible {
   border-bottom: 1px solid currentColor;
   width: fit-content;
 }
+.text-link .arrow {
+  transition: translate 0.3s var(--ease);
+}
+
+/* Character roll (text-roll.ts): letters move up one line; a text shadow one line below supplies the copy. */
+.roll-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.roll-char {
+  display: inline-block;
+  text-shadow: 0 1lh 0 currentColor;
+  transition: translate 0.6s var(--ease);
+  transition-delay: calc(var(--c, 0) * 10ms);
+}
+/* The roll replaces any hover underline; decoration would only reach the spaces between split words. */
+[data-roll-ready]:hover {
+  text-decoration-line: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  a:hover .roll-char,
+  button:hover .roll-char {
+    translate: 0 -1lh;
+  }
+}
+a:focus-visible .roll-char,
+button:focus-visible .roll-char {
+  translate: 0 -1lh;
+}
+.text-link:hover .arrow,
+.text-link:focus-visible .arrow {
+  translate: 3px -3px;
+}
+
+/* Card rows (src/components/Card.astro): a grid on desktop, a swipeable row below 1024px. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 1023px) {
+  .card-grid--swipe {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(80vw, 440px);
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 8px var(--gutter) 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink) var(--line);
+  }
+  .card-grid--swipe > li {
+    scroll-snap-align: start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-link .arrow {
+    transition: none;
+  }
+}
+
 .actions {
   display: flex;
   gap: 24px;

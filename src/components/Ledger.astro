@@ -16,10 +16,12 @@ interface Props {
   heads?: string[];
   /** Number the rows. Use only when the list is a sequence or the numbered services list. */
   numbered?: boolean;
+  /** First row number, so a numbered list split into groups keeps one sequence. */
+  start?: number;
   size?: 'default' | 'large';
   label?: string;
 }
-const { items, heads, numbered = false, size = 'default', label } = Astro.props;
+const { items, heads, numbered = false, start = 1, size = 'default', label } = Astro.props;
 const List = numbered ? 'ol' : 'ul';
 // Drop columns no row uses, so short lists in narrow columns do not reserve empty space.
 const hasAside = items.some(item => item.aside);
@@ -32,13 +34,13 @@ const hasLink = items.some(item => item.href);
       {heads.map(head => <span>{head}</span>)}
     </div>
   )}
-  <List class="ledger-list" role="list" aria-label={label}>
+  <List class="ledger-list" role="list" aria-label={label} start={numbered && start !== 1 ? start : undefined}>
     {items.map((item, index) => {
       const Row = item.href ? 'a' : 'div';
       return (
         <li>
           <Row class="ledger-row" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
-            {numbered && <span class="ledger-num">{String(index + 1).padStart(2, '0')}</span>}
+            {numbered && <span class="ledger-num">{String(index + start).padStart(2, '0')}</span>}
             <span class="ledger-name">{item.name}</span>
             {item.text && <span class="ledger-text">{item.text}</span>}
             {item.aside && <span class="ledger-aside">{item.aside}</span>}
