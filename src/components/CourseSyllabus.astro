@@ -387,7 +387,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   color: var(--paper);
 }
 .course-tab > span:nth-child(2) {
-  font-size: 32px;
+  font-size: var(--compact-sm);
   line-height: 1;
   letter-spacing: -0.045em;
   font-weight: 600;
@@ -405,7 +405,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   color: var(--signal);
 }
 .course-tab:hover {
-  background: #ffffff0a;
+  background: var(--paper-tint);
 }
 .course-panel {
   background: var(--paper);
@@ -442,13 +442,13 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 }
 .course-dispatch > p:last-child {
   font-size: var(--text-ui);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   color: var(--muted);
   margin-top: 20px;
 }
 .module-summary {
   font-size: var(--body);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
 }
 .module-detail {
   border-bottom: 1px solid var(--line);
@@ -457,12 +457,12 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 .module-detail summary {
   font-size: var(--text-ui);
   padding-block: 12px;
-  min-height: 44px;
+  min-height: var(--control-height-compact);
   font-weight: 500;
 }
 .module-detail p {
   font-size: var(--text-ui);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   color: var(--muted);
   padding-block: 12px;
 }
@@ -472,7 +472,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 .module-output > p:last-child {
   font-size: var(--body-large);
   line-height: 1.25;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-ui);
   margin-top: 16px;
 }
 .course-panel .text-link {
@@ -493,7 +493,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   padding-block: 20px;
 }
 .course-fallback summary {
-  font-size: 28px;
+  font-size: var(--compact-xs);
 }
 .course-fallback p {
   max-width: 60ch;
@@ -503,7 +503,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 .course-fallback a {
   display: block;
   width: fit-content;
-  min-height: 44px;
+  min-height: var(--control-height-compact);
   padding-block: 10px;
   text-underline-offset: 4px;
   margin-top: 24px;
@@ -521,7 +521,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
     font-size: 52px;
   }
   .course-tab > span:nth-child(2) {
-    font-size: 28px;
+    font-size: var(--compact-xs);
   }
 }
 @media (max-width: 767px) {
@@ -542,13 +542,13 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
     padding-block: 24px;
   }
   .course-tab > span:nth-child(2) {
-    font-size: 28px;
+    font-size: var(--compact-xs);
   }
   .course-panel {
     padding: 24px;
   }
   .course-panel > h3 {
-    font-size: 40px;
+    font-size: var(--compact-md);
   }
   .course-panel > .meta {
     font-size: var(--text-label);

@@ -55,7 +55,7 @@ document.querySelector('[data-print-brief]')?.addEventListener('click', () => wi
 }
 .case-result {
   font-size: var(--heading-4);
-  line-height: 1.05;
+  line-height: var(--leading-heading);
   letter-spacing: -0.045em;
 }
 .case-quote {
@@ -75,7 +75,7 @@ document.querySelector('[data-print-brief]')?.addEventListener('click', () => wi
 }
 @media (max-width: 767px) {
   .case-result {
-    font-size: 32px;
+    font-size: var(--compact-sm);
   }
   .case-quote {
     font-size: 36px;

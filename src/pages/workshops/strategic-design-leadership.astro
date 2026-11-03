@@ -27,10 +27,10 @@ const enquiry = contactHref({ interest: 'masterclass', source: '/workshops/strat
   <section class="masterclass-invitation section-y section-rule" id="discuss-programme"><div class="wrap"><h2>Bring a consequential<br />strategic question.</h2><div class="invitation-copy"><p class="lead">Discuss a standalone working day or the complete five-day progression around your organisation’s decisions.</p><a class="button" href={enquiry}>Discuss the masterclass <Arrow /></a></div></div></section>
 </BaseLayout>
 <style>
-  .programme-authority { font-size: var(--body); line-height: 1.5; max-width: 42ch; margin-top: 32px; }
+  .programme-authority { font-size: var(--body); line-height: var(--leading-copy); max-width: 42ch; margin-top: 32px; }
   .programme-questions details { border-top: 1px solid var(--line); padding-block: 24px; }
-  .programme-questions summary { min-height: 44px; font-size: var(--body-large); line-height: 1.3; font-weight: 600; }
-  .programme-questions p { margin-top: 20px; font-size: var(--body); line-height: 1.5; }
+  .programme-questions summary { min-height: var(--control-height-compact); font-size: var(--body-large); line-height: 1.3; font-weight: 600; }
+  .programme-questions p { margin-top: 20px; font-size: var(--body); line-height: var(--leading-copy); }
   .programme-questions > .text-link { margin-top: 24px; }
 
   .masterclass-introduction {
@@ -43,7 +43,7 @@ const enquiry = contactHref({ interest: 'masterclass', source: '/workshops/strat
     max-width: 56ch;
     font-size: var(--body-large);
     line-height: 1.4;
-    letter-spacing: -0.025em;
+    letter-spacing: var(--tracking-copy);
   }
   .masterclass-introduction aside {
     max-width: 34ch;
@@ -62,7 +62,7 @@ const enquiry = contactHref({ interest: 'masterclass', source: '/workshops/strat
     margin-top: 0;
     font-size: var(--heading-2);
     line-height: 0.98;
-    letter-spacing: -0.05em;
+    letter-spacing: var(--tracking-display);
   }
   .invitation-copy {
     display: flex;

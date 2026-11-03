@@ -42,7 +42,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
     max-width: 16ch;
     font-size: var(--heading-2);
     line-height: 0.96;
-    letter-spacing: -0.05em;
+    letter-spacing: var(--tracking-display);
   }
   .formation-heading > p {
     margin-top: 32px;
@@ -50,7 +50,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
     color: var(--muted-inverse);
     font-size: var(--body-large);
     line-height: 1.35;
-    letter-spacing: -0.025em;
+    letter-spacing: var(--tracking-copy);
   }
   .formation-overview {
     scroll-margin-top: var(--progression-height);
@@ -63,7 +63,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
   }
   .formation-instructions > p:first-child {
     font-size: var(--text-ui);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
     color: var(--muted-inverse);
   }
   .formation-status {
@@ -71,7 +71,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
     min-height: 3em;
     margin: 0;
     color: var(--signal);
-    font: var(--text-label)/1.5 var(--mono);
+    font: var(--text-label)/var(--leading-copy) var(--mono);
   }
   .masterclass-grid {
     position: relative;
@@ -112,9 +112,9 @@ import MasterclassProgression from './MasterclassProgression.astro';
   }
   .preview-empty > p:last-child {
     margin: 0;
-    font-size: 28px;
+    font-size: var(--compact-xs);
     line-height: 1.15;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-heading);
     font-weight: 600;
   }
   .preview-empty .meta,
@@ -129,19 +129,19 @@ import MasterclassProgression from './MasterclassProgression.astro';
   .day-preview h3 {
     max-width: 28ch;
     margin-top: 20px;
-    font-size: 32px;
+    font-size: var(--compact-sm);
     line-height: 1.1;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-heading);
   }
   .day-preview > div > p:first-child:not(.meta) {
     max-width: 55ch;
     font-size: var(--body);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
   }
   .preview-tool {
     max-width: 55ch;
     font-size: var(--text-ui);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
     color: var(--muted-inverse);
   }
   .preview-tool > span {
@@ -242,7 +242,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
       font-size: var(--body-large);
     }
     .day-preview h3 {
-      font-size: 28px;
+      font-size: var(--compact-xs);
     }
     .day-preview > div > p:first-child:not(.meta) {
       font-size: var(--text-ui);

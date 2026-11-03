@@ -166,7 +166,7 @@ const choices = [
   .choice .section-heading p:not(.meta) {
     max-width: 44ch;
     font-size: clamp(26px, 2.25vw, 36px);
-    line-height: 1.2;
+    line-height: var(--leading-snug);
     margin-top: 32px;
     text-wrap: pretty;
   }
@@ -179,21 +179,21 @@ const choices = [
   }
   .formation-toolbar h3 {
     font-size: var(--body-large);
-    line-height: 1.2;
-    letter-spacing: -0.04em;
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-heading);
   }
   .choice-hint {
     margin-top: 8px;
     max-width: 68ch;
     font-size: var(--text-small);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
     color: var(--muted-inverse);
   }
   .reset {
-    min-height: 44px;
+    min-height: var(--control-height-compact);
     padding: 10px 18px;
     border: 1px solid var(--grey-500);
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     font-size: var(--text-small);
     white-space: nowrap;
   }
@@ -210,7 +210,7 @@ const choices = [
     max-width: 90ch;
     margin: 0;
     color: var(--signal);
-    font: var(--text-label)/1.5 var(--mono);
+    font: var(--text-label)/var(--leading-copy) var(--mono);
   }
   .choice-grid {
     display: grid;
@@ -386,7 +386,7 @@ const choices = [
     font-size: clamp(21px, 4.2cqi, 30px);
     font-weight: 600;
     line-height: 1.04;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-heading);
   }
   .shape-name > span {
     display: block;
@@ -439,7 +439,7 @@ const choices = [
     gap: 8px 24px;
     padding-top: 24px;
     color: var(--muted-inverse);
-    font: var(--text-label)/1.5 var(--mono);
+    font: var(--text-label)/var(--leading-copy) var(--mono);
   }
   .choice-details {
     display: grid;
@@ -460,7 +460,7 @@ const choices = [
     border-color: var(--grey-500);
   }
   .choice-detail.is-backed {
-    box-shadow: inset 3px 0 0 var(--signal);
+    box-shadow: var(--shadow-current);
   }
   .detail-state {
     margin-bottom: 14px;
@@ -474,7 +474,7 @@ const choices = [
     margin-bottom: 20px;
     font-size: clamp(24px, 1.95vw, 30px);
     line-height: 1.08;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-heading);
     text-wrap: balance;
   }
   .empty-choice > p:last-child,
@@ -482,7 +482,7 @@ const choices = [
     max-width: 54ch;
     color: var(--muted-inverse);
     font-size: var(--text-ui);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
   }
   .choice-detail dl {
     display: grid;
@@ -516,7 +516,7 @@ const choices = [
   .consequence h4 {
     margin-bottom: 12px;
     font-size: var(--body-large);
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-heading);
     line-height: 1.1;
   }
   .consequence dl {
@@ -533,7 +533,7 @@ const choices = [
     max-width: 80ch;
   }
   .fallback summary {
-    min-height: 44px;
+    min-height: var(--control-height-compact);
     font-size: var(--body);
   }
   .fallback p,
@@ -559,7 +559,7 @@ const choices = [
     margin-top: 24px;
     color: var(--grey-400);
     font-size: var(--text-label);
-    line-height: 1.5;
+    line-height: var(--leading-copy);
   }
   @media (min-width: 1024px) {
     .choice-inspector {

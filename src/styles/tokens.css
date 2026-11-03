@@ -1,0 +1,154 @@
+/*
+ * Design tokens: The Decision Record (see CLAUDE.md).
+ * The single source for colour, type, spacing, radius, shadow and motion.
+ * Components use the semantic roles, never raw values.
+ * Type and spacing scales are measured from docs/design-reference/DESIGN_TOKENS.md.
+ */
+
+/* Fonts: self-hosted variable files in public/fonts (SIL Open Font License). */
+@font-face {
+  font-family: Archivo;
+  src: url('/fonts/archivo-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('/fonts/archivo-narrow-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+/* Mono is reserved for the Find Formation and masterclass formation exercises. */
+@font-face {
+  font-family: JetBrains;
+  src: url('/fonts/jetbrains-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+
+:root {
+  /* Colour: ink, paper and signal. Signal marks commitment only. */
+  --ink: #0d0b0a;
+  --paper: #fff;
+  --signal: #ff0;
+
+  /* Neutral scale. Use the semantic roles below in components. */
+  --grey-100: #f3f3f3;
+  --grey-200: #d9d9d9;
+  --grey-300: #b3b3b3;
+  --grey-400: #aaa;
+  --grey-500: #777;
+  --grey-600: #626262;
+  --grey-700: #555;
+  --grey-800: #363636;
+  --grey-900: #202020;
+
+  /* Semantic roles on paper. */
+  --surface: var(--grey-100);
+  --line: var(--grey-200);
+  --muted: var(--grey-600);
+  /* On ink surfaces. */
+  --muted-inverse: var(--grey-300);
+  --line-inverse: var(--grey-700);
+  /* Translucent paper: the sticky header and raised panels on ink. */
+  --paper-veil: color-mix(in srgb, var(--paper) 96%, transparent);
+  --paper-tint: color-mix(in srgb, var(--paper) 4%, transparent);
+
+  /* Theme-aware roles. .theme-dark redefines these. */
+  --bg-primary: var(--paper);
+  --bg-elevated: var(--surface);
+  --text-primary: var(--ink);
+  --text-muted: var(--muted);
+  --accent-signal: var(--signal);
+  --border-subtle: var(--line);
+
+  /* Font families. */
+  --ui: Archivo, Arial, sans-serif;
+  --read: var(--ui);
+  --narrow: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+  --mono: JetBrains, ui-monospace, monospace;
+
+  /* Font weights. */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-display: 600;
+
+  /* Type scale: display and headings (fluid, measured at 1440px). */
+  --display-2xl: clamp(11.875rem, 2.8rem + 14.18vw, 18.75rem);
+  --display-xl: clamp(9.125rem, 4.67rem + 6.96vw, 12.5rem);
+  --display-l: clamp(7.625rem, 4rem + 5.67vw, 10.375rem);
+  --heading-1: clamp(5.25rem, 3.11rem + 3.35vw, 6.875rem);
+  --heading-2: clamp(4.125rem, 2.31rem + 2.84vw, 5.5rem);
+  --heading-3: clamp(3.25rem, 2.43rem + 1.29vw, 3.875rem);
+  --heading-4: clamp(2.5rem, 2.01rem + 0.77vw, 2.875rem);
+  /* Reading scale. */
+  --body-large: clamp(1.5rem, 1.34rem + 0.26vw, 1.625rem);
+  --body: clamp(1.125rem, 0.96rem + 0.26vw, 1.25rem);
+  /* Fixed UI steps below the reading scale. 12px is the smallest text on the site. */
+  --text-ui: 1rem;
+  --text-small: 0.875rem;
+  --text-label: 0.75rem;
+  /* Compact headings for screens below 768px. Headlines that need their own size keep it. */
+  --compact-xs: 1.75rem;
+  --compact-sm: 2rem;
+  --compact-md: 2.5rem;
+  --compact-lg: 3rem;
+  --compact-xl: 3.5rem;
+
+  /* Leading. */
+  --leading-display: 0.9;
+  --leading-heading: 1.05;
+  --leading-snug: 1.2;
+  --leading-copy: 1.5;
+  --leading-body: 1.55;
+
+  /* Tracking. Display type is tight; reading text is untracked. */
+  --tracking-display: -0.05em;
+  --tracking-heading: -0.04em;
+  --tracking-ui: -0.03em;
+  --tracking-copy: -0.025em;
+
+  /* Spacing scale (fluid section rhythm). */
+  --space-xs: clamp(2.75rem, 2.42rem + 0.52vw, 3rem);
+  --space-sm: clamp(3.4375rem, 2.7rem + 1.16vw, 4rem);
+  --space-md: clamp(4.1875rem, 3.12rem + 1.68vw, 5rem);
+  --space-lg: clamp(6.375rem, 4.23rem + 3.35vw, 8rem);
+  --space-xl: clamp(10.625rem, 6.5rem + 6.44vw, 13.75rem);
+
+  /* Layout. --gutter becomes 20px below 768px. */
+  --gutter: 40px;
+  --grid-gap: 16px;
+  --content-max: 1800px;
+  --header-height: 80px;
+
+  /* Controls. */
+  --control-height: 56px;
+  --control-height-compact: 44px;
+  --underline-offset: 0.2em;
+  --focus-ring: 3px solid currentColor;
+
+  /* Radius. Panels, rows and choice controls are square; buttons are pills. */
+  --radius-none: 0;
+  --radius-field: 4px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* Shadow. Only the formation instrument on About is raised; nothing else casts a shadow. */
+  --shadow-none: none;
+  --shadow-instrument: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --shadow-current: inset 3px 0 0 var(--signal);
+
+  /* Motion (measured reference timings). */
+  --out: cubic-bezier(0.625, 0.05, 0, 1);
+  --duration-hover: 0.6s;
+  --duration-fill: 0.7s;
+  --duration-enter: 0.8s;
+
+  /* Breakpoints (media queries cannot read custom properties):
+     max 375px small phone · max 767px / min 768px phone–tablet ·
+     max 1023px / min 1024px tablet–desktop · max 1199px narrow desktop · min 1800px content max. */
+  color-scheme: light;
+}

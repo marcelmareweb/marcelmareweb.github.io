@@ -100,13 +100,13 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
 }
 .axis-definitions dt {
   font-weight: 600;
-  font-size: 28px;
+  font-size: var(--compact-xs);
   letter-spacing: -0.035em;
-  line-height: 1.2;
+  line-height: var(--leading-snug);
 }
 .axis-definitions dd {
   font-size: var(--body-large);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   margin: 16px 0 0;
   color: var(--muted);
 }
@@ -128,21 +128,21 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
   padding-block: 32px;
 }
 .map-story dt {
-  font-size: 28px;
+  font-size: var(--compact-xs);
   line-height: 1.1;
   letter-spacing: -0.035em;
   font-weight: 600;
 }
 .map-story dd {
   font-size: var(--body-large);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   color: var(--muted);
   margin: 20px 0 0;
   max-width: 62ch;
 }
 .map-story > p {
   font-size: var(--body-large);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   margin-top: 32px;
   border-left: 5px solid var(--signal);
   padding-left: 24px;
@@ -160,7 +160,7 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
 }
 @media (max-width: 767px) {
   .quote-spread :global(blockquote p) {
-    font-size: 40px;
+    font-size: var(--compact-md);
   }
   .map-reading {
     padding-block: 64px;
@@ -178,7 +178,7 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
     font-size: 44px;
   }
   .map-ending h2 {
-    font-size: 48px;
+    font-size: var(--compact-lg);
   }
   .map-ending {
     padding-bottom: 64px;

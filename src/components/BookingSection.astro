@@ -106,7 +106,7 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 .enquiry-context > .meta { color: var(--muted); font-size: var(--text-label); }
 .enquiry-context [data-module-status] { margin-top: 12px; font-size: var(--body); line-height: 1.4; font-weight: 500; }
 .enquiry-context > div { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 8px; font-size: var(--text-small); }
-.enquiry-context > div a { display: inline-flex; align-items: center; min-height: 44px; }
+.enquiry-context > div a { display: inline-flex; align-items: center; min-height: var(--control-height-compact); }
 
 .booking-layout {
   display: grid;
@@ -172,12 +172,12 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 .inquiry-field {
   width: 100%;
   min-width: 0;
-  min-height: 56px;
+  min-height: var(--control-height);
   padding: 16px;
   background: var(--paper);
   color: var(--ink);
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: var(--radius-field);
   font-size: var(--text-ui);
   line-height: 1.4;
 }
@@ -198,7 +198,7 @@ textarea.inquiry-field {
 .form-note {
   font-size: var(--text-small);
   color: var(--muted);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   max-width: 52ch;
   margin-top: 24px;
 }
@@ -216,11 +216,11 @@ textarea.inquiry-field {
   padding-top: 24px;
 }
 .inquiry-confirmation :is(h2, h3) {
-  font-size: 40px;
+  font-size: var(--compact-md);
 }
 .inquiry-confirmation p {
   font-size: var(--body);
-  line-height: 1.5;
+  line-height: var(--leading-copy);
   margin-top: 16px;
 }
 .module-context {
@@ -255,7 +255,7 @@ textarea.inquiry-field {
   .booking-section--standalone .booking-email { margin-top: 24px; padding-bottom: 8px; }
   .booking-section--standalone .booking-copy > .meta { margin-top: 16px; }
   .booking-copy :is(h1, h2) {
-    font-size: 56px;
+    font-size: var(--compact-xl);
     max-width: 12ch;
   }
   .booking-email {

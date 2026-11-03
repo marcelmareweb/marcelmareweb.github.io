@@ -36,8 +36,8 @@ const situations = services.map(service => ({ name: service.problem, text: servi
   .service-heading h2 { max-width: 18ch; font-size: var(--heading-2); line-height: 1.02; }
   .service-heading img { width: 160px; height: 160px; flex-shrink: 0; object-fit: contain; }
   .service-content { margin-top: 48px; }
-  .service-question { max-width: 24ch; font-size: var(--heading-4); line-height: 1.16; letter-spacing: -.04em; font-weight: 600; }
-  .service-description { font-size: var(--body); line-height: 1.55; max-width: 47ch; margin-top: 28px; }
+  .service-question { max-width: 24ch; font-size: var(--heading-4); line-height: 1.16; letter-spacing: var(--tracking-heading); font-weight: 600; }
+  .service-description { font-size: var(--body); line-height: var(--leading-body); max-width: 47ch; margin-top: 28px; }
   .button { margin-top: 36px; }
   ul { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
   .record .text-link { min-height: 40px; }
@@ -45,7 +45,7 @@ const situations = services.map(service => ({ name: service.problem, text: servi
   .service-practitioner { margin-top: 32px; font-size: var(--text-ui); line-height: 1.6; }
   @media (max-width: 767px) {
     .service-heading { align-items: start; gap: 20px; }
-    .service-heading h2 { font-size: 40px; max-width: 12ch; }
+    .service-heading h2 { font-size: var(--compact-md); max-width: 12ch; }
     .service-heading img { width: 72px; height: 72px; }
     .service-question { font-size: 30px; }
     .service-description { font-size: var(--body); }
