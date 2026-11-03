@@ -1,4 +1,5 @@
 ---
+import Arrow from './Arrow.astro';
 const year = new Date().getFullYear();
 const links = [
   { label: 'How we help.', href: '/services/' },
@@ -13,11 +14,24 @@ const links = [
   <div class="wrap">
     <div class="footer-top">
       <nav class="footer-nav" aria-label="Footer navigation">
-        {links.map(link => <a href={link.href} class:list={{ 'is-talk': link.talk }}>{link.label}</a>)}
+        <ul role="list">
+          {links.map(link => <li><a href={link.href} class:list={{ 'is-talk': link.talk }}>{link.label}</a></li>)}
+        </ul>
       </nav>
-      <div class="footer-contact">
-        <a href="mailto:hello@thespottedape.com">hello@thespottedape.com</a>
-        <p>Cape Town, South Africa.<br />Independent strategic decision<br />and behavioural design practice.</p>
+      <div class="footer-details">
+        <section aria-labelledby="footer-contact">
+          <h2 class="footer-label" id="footer-contact">Contact</h2>
+          <a class="footer-email" href="mailto:hello@thespottedape.com">hello@thespottedape.com</a>
+          <p>Cape Town, South Africa.</p>
+        </section>
+        <section aria-labelledby="footer-elsewhere">
+          <h2 class="footer-label" id="footer-elsewhere">Elsewhere</h2>
+          <a class="footer-out" href="https://thespottedape.substack.com" target="_blank" rel="noreferrer">Essays on <span class="nowrap">Substack <Arrow /></span></a>
+        </section>
+        <section aria-labelledby="footer-practice">
+          <h2 class="footer-label" id="footer-practice">The practice</h2>
+          <p>Independent strategic decision and behavioural design practice.</p>
+        </section>
       </div>
     </div>
     <div class="footer-bottom">
@@ -30,31 +44,36 @@ const links = [
 <style>
   .site-footer { background: var(--ink); color: var(--paper); padding-block: var(--space-lg) 28px; }
   .footer-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--grid-gap); align-items: start; }
-  .footer-nav { grid-column: 1 / 8; display: grid; justify-items: start; }
-  .footer-nav a { font-size: var(--heading-3); font-weight: 600; line-height: 1.1; letter-spacing: var(--tracking-display); text-decoration: none; transition: color var(--duration-hover) var(--out); }
+  .footer-nav { grid-column: 1 / 8; }
+  .footer-nav ul { display: grid; justify-items: start; margin: 0; padding: 0; list-style: none; }
+  .footer-nav a { display: inline-block; font-size: var(--heading-3); font-weight: var(--weight-display); line-height: 1.1; letter-spacing: var(--tracking-display); text-decoration: none; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
   .footer-nav a.is-talk { color: var(--signal); }
-  .footer-contact { grid-column: 9 / -1; }
-  .footer-contact > a { display: inline-block; font-size: var(--body-large); letter-spacing: var(--tracking-copy); text-decoration: none; border-bottom: 1px solid var(--grey-500); padding-bottom: 10px; overflow-wrap: anywhere; transition: border-color var(--duration-hover) var(--out); }
-  .footer-contact p { margin-top: 28px; font-size: var(--text-ui); line-height: var(--leading-copy); color: var(--muted-inverse); }
+  .footer-details { grid-column: 9 / -1; display: grid; gap: 36px; }
+  .footer-label { margin-bottom: 12px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); letter-spacing: 0; color: var(--muted-inverse); }
+  .footer-details p { font-size: var(--text-ui); line-height: var(--leading-copy); color: var(--muted-inverse); max-width: 34ch; }
+  .footer-email { display: inline-block; margin-bottom: 8px; font-size: var(--body-large); letter-spacing: var(--tracking-copy); text-decoration: none; border-bottom: 1px solid var(--grey-500); padding-bottom: 8px; overflow-wrap: anywhere; transition: border-color var(--duration-hover) var(--out); }
+  .footer-out { display: inline-block; padding-block: 12px 8px; font-size: var(--text-ui); text-decoration: none; border-bottom: 1px solid var(--grey-500); transition: border-color var(--duration-hover) var(--out); }
+  .footer-out :global(.arrow) { font-size: 18px; }
   .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: var(--space-lg); padding-top: 24px; border-top: 1px solid var(--line-inverse); font-size: var(--text-small); color: var(--muted-inverse); }
   .footer-bottom .brand { color: var(--paper); }
   .footer-bottom nav { display: flex; gap: 24px; }
-  .footer-bottom nav a { display: inline-flex; align-items: center; min-height: 32px; text-decoration: none; }
+  .footer-bottom nav a { display: inline-flex; align-items: center; min-height: var(--control-height-compact); text-decoration: none; }
   .site-footer a:focus-visible { outline-color: var(--signal); }
   @media (hover: hover) and (pointer: fine) {
-    .footer-nav a:hover { color: var(--signal); }
-    .footer-nav a.is-talk:hover { color: var(--paper); }
-    .footer-contact > a:hover { border-color: var(--signal); }
-    .footer-bottom nav a:hover { color: var(--paper); text-decoration: underline; text-decoration-color: var(--signal); }
+    .footer-nav a:hover { text-decoration-line: underline; }
+    .footer-email:hover, .footer-out:hover { border-color: var(--paper); }
+    .footer-bottom nav a:hover { color: var(--paper); text-decoration: underline; }
   }
   @media (max-width: 1023px) {
     .footer-nav { grid-column: 1 / -1; }
-    .footer-contact { grid-column: 1 / -1; margin-top: 56px; }
+    .footer-details { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px var(--grid-gap); margin-top: 56px; }
+    .footer-details > section:first-child { grid-column: 1 / -1; }
     .footer-bottom { flex-wrap: wrap; }
   }
   @media (max-width: 767px) {
     .site-footer { padding-top: 72px; }
     .footer-nav a { font-size: 34px; padding-block: 2px; }
-    .footer-bottom { flex-direction: column; align-items: start; gap: 12px; margin-top: 64px; }
+    .footer-details { grid-template-columns: 1fr; margin-top: 48px; }
+    .footer-bottom { flex-direction: column; align-items: start; gap: 4px; margin-top: 56px; }
   }
 </style>

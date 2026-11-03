@@ -169,29 +169,6 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
   font-weight: 400;
   color: var(--muted);
 }
-.inquiry-field {
-  width: 100%;
-  min-width: 0;
-  min-height: var(--control-height);
-  padding: 16px;
-  background: var(--paper);
-  color: var(--ink);
-  border: 1px solid transparent;
-  border-radius: var(--radius-field);
-  font-size: var(--text-ui);
-  line-height: 1.4;
-}
-.inquiry-field:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
-}
-.inquiry-field:user-invalid {
-  border-color: var(--ink);
-}
-textarea.inquiry-field {
-  min-height: 160px;
-  resize: vertical;
-}
 .form-wide {
   grid-column: 1/-1;
 }

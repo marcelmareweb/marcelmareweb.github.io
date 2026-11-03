@@ -1,4 +1,5 @@
 ---
+import Arrow from './Arrow.astro';
 import { primaryNavigation, navigationState } from '../data/navigation';
 const links = primaryNavigation.map(item => ({ ...item, ...navigationState(Astro.url.pathname, item) }));
 const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
@@ -10,10 +11,17 @@ const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
       <span class="brand-word">THE SPOTTED APE</span>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a>)}
-      <a class="button button--talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
+      <ul role="list">
+        {links.map(link => (
+          <li><a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a></li>
+        ))}
+      </ul>
+      <a class="button button--talk header-talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
     </nav>
-    <button class="button menu-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
+    <button class="menu-trigger" type="button" data-menu-open aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false" hidden>
+      <span>Menu</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true" focusable="false"><path d="M2 6h16M2 14h16" /></svg>
+    </button>
     <noscript>
       <details class="noscript-menu"><summary>Menu</summary><nav aria-label="Mobile navigation">
         {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined}>{link.label}</a>)}
@@ -21,22 +29,26 @@ const isContact = Astro.url.pathname.replace(/\/$/, '') === '/contact';
       </nav></details>
     </noscript>
   </div>
-  <dialog class="nav-dialog" id="site-menu" aria-label="Navigation menu">
+  <dialog class="nav-dialog" id="site-menu" aria-labelledby="site-menu-title">
     <div class="wrap dialog-top">
       <a class="brand" href="/" aria-label="The Spotted Ape home"><img src="/logo.png" width="30" height="30" alt="" /><span class="brand-word">THE SPOTTED APE</span></a>
-      <button class="icon-button" type="button" data-menu-close aria-label="Close navigation">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true" focusable="false">
-          <path d="m7 7 10 10M17 7 7 17" />
-        </svg>
+      <button class="menu-close" type="button" data-menu-close autofocus>
+        <span>Close</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true" focusable="false"><path d="m4 4 12 12M16 4 4 16" /></svg>
       </button>
     </div>
     <div class="wrap dialog-content">
-      <nav class="mobile-links" aria-label="Mobile navigation">
-        {links.map(link => <a href={link.href} aria-current={link.exact ? 'page' : undefined} class:list={{ 'is-current-section': link.active && !link.exact }}>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</a>)}
+      <h2 class="sr-only" id="site-menu-title">Menu</h2>
+      <nav aria-label="Mobile navigation">
+        <ul class="menu-list" role="list">
+          {links.map(link => (
+            <li><a class:list={['menu-link', { 'is-current-section': link.active && !link.exact }]} href={link.href} aria-current={link.exact ? 'page' : undefined}><span>{link.label}{link.active && !link.exact && <span class="sr-only"> (current section)</span>}</span><Arrow /></a></li>
+          ))}
+        </ul>
       </nav>
       <div class="dialog-bottom">
         <a class="button button--talk" href="/contact/" aria-current={isContact ? 'page' : undefined}>Let’s talk</a>
-        <p>Make a choice.<br />Own its consequences.</p>
+        <p class="menu-contact"><a href="mailto:hello@thespottedape.com">hello@thespottedape.com</a><span>Cape Town, South Africa.</span></p>
       </div>
     </div>
   </dialog>
@@ -53,6 +65,7 @@ if (dialog && trigger) {
   });
   dialog.querySelector('[data-menu-close]')?.addEventListener('click', () => dialog.close());
   dialog.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => dialog.close()));
+  // Keep Tab and Shift+Tab inside the open menu, including past the browser's own controls.
   dialog.addEventListener('keydown', (event) => {
     if (event.key !== 'Tab') return;
     const controls = [...dialog.querySelectorAll<HTMLElement>('a[href], button:not(:disabled)')]
@@ -77,3 +90,269 @@ if (dialog && trigger) {
   });
 }
 </script>
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .header-row {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  /* Desktop: links right, one call to action. Yellow marks only the current page. */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 3vw, 48px);
+  }
+  .desktop-nav ul {
+    display: flex;
+    gap: clamp(20px, 2.5vw, 40px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .desktop-nav li a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--control-height-compact);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+    line-height: 1;
+    letter-spacing: var(--tracking-ui);
+    text-decoration: none;
+  }
+  .desktop-nav li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 1px;
+    background: var(--ink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--duration-hover) var(--out);
+  }
+  .desktop-nav li a:hover:after,
+  .desktop-nav li a:focus-visible:after {
+    transform: scaleX(1);
+  }
+  .desktop-nav li a[aria-current]:after,
+  .desktop-nav li a.is-current-section:after {
+    height: 3px;
+    background: var(--signal);
+    transform: scaleX(1);
+  }
+  .header-talk {
+    min-height: var(--control-height-compact);
+    padding: 12px 24px;
+    font-size: var(--text-small);
+  }
+
+  /* Phone and tablet: one menu button. */
+  .menu-trigger {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    min-height: var(--control-height-compact);
+    padding: 10px 20px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-pill);
+    background: var(--ink);
+    color: var(--paper);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-display);
+  }
+  .menu-trigger svg,
+  .menu-close svg {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .nav-dialog {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: var(--paper);
+    color: var(--ink);
+    z-index: 100;
+  }
+  .nav-dialog::backdrop {
+    background: var(--paper);
+  }
+  .dialog-top {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .menu-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: var(--control-height-compact);
+    padding: 10px 20px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--ink);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-display);
+  }
+  .dialog-content {
+    min-height: calc(100dvh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    padding-block: 24px;
+  }
+  .menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+  .menu-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-block: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    font-size: clamp(var(--compact-sm), 7vw, 4rem);
+    font-weight: var(--weight-display);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-display);
+    text-decoration: none;
+  }
+  .menu-link :global(.arrow) {
+    font-size: 24px;
+  }
+  .menu-link[aria-current] > span,
+  .menu-link.is-current-section > span {
+    text-decoration: underline;
+    text-decoration-color: var(--signal);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.12em;
+  }
+  .dialog-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-top: auto;
+    padding-top: 32px;
+  }
+  .menu-contact {
+    display: grid;
+    gap: 4px;
+    text-align: right;
+    font: var(--weight-medium) var(--text-small)/1.4 var(--narrow);
+    color: var(--muted);
+  }
+  .menu-contact a {
+    color: var(--ink);
+    font-size: var(--text-ui);
+  }
+  .noscript-menu {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    .desktop-nav {
+      display: none;
+    }
+    .menu-trigger:not([hidden]) {
+      display: inline-flex;
+    }
+    .noscript-menu {
+      display: block;
+      position: relative;
+    }
+    .noscript-menu summary {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--control-height-compact);
+      padding: 10px 20px;
+      border: 1px solid var(--ink);
+      border-radius: var(--radius-pill);
+      font-weight: var(--weight-display);
+    }
+    .noscript-menu nav {
+      position: absolute;
+      right: 0;
+      top: 52px;
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 20px;
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      font-size: var(--body);
+    }
+    .noscript-menu nav a {
+      display: flex;
+      align-items: center;
+      min-height: var(--control-height-compact);
+    }
+  }
+  @media (max-width: 767px) {
+    .header-row {
+      gap: 16px;
+    }
+    .dialog-bottom {
+      flex-direction: column;
+      align-items: start;
+    }
+    .menu-contact {
+      text-align: left;
+    }
+  }
+  @media (max-width: 375px) {
+    .header-row {
+      gap: 12px;
+    }
+    .menu-trigger,
+    .menu-close {
+      padding-inline: 14px;
+      gap: 8px;
+    }
+  }
+  /* Short landscape phones: two columns so every link and the call to action fit. */
+  @media (orientation: landscape) and (max-height: 480px) and (max-width: 1023px) {
+    .dialog-content {
+      padding-block: 16px;
+    }
+    .menu-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+    }
+    .menu-link {
+      padding-block: 8px 10px;
+      font-size: var(--compact-xs);
+    }
+    .dialog-bottom {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 16px;
+    }
+  }
+</style>

@@ -5,6 +5,8 @@ interface Props {
   canonicalURL?: string | URL;
   ogImage?: string | URL;
   schemaType?: string;
+  /** Keep a working page out of search results. */
+  noindex?: boolean;
 }
 
 const {
@@ -13,6 +15,7 @@ const {
   canonicalURL,
   ogImage = '/og-card.svg',
   schemaType = 'ProfessionalService',
+  noindex = false,
 } = Astro.props;
 
 const siteURL = Astro.site ?? new URL('https://marcelmareweb.github.io');
@@ -44,6 +47,7 @@ const structuredData = {
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical.href} />
+{noindex && <meta name="robots" content="noindex,nofollow" />}
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Spotted Ape" />

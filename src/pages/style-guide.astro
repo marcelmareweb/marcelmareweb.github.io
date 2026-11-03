@@ -1,0 +1,397 @@
+---
+// Temporary review page for the design tokens. Not linked from navigation, excluded from the sitemap and marked noindex.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import Ledger from '../components/Ledger.astro';
+import DecisionRecord from '../components/DecisionRecord.astro';
+
+const base = [
+  { token: '--ink', role: 'Text, rules, primary buttons, occasional full-bleed sections' },
+  { token: '--paper', role: 'Predominant ground' },
+  { token: '--signal', role: 'Commitment only: chosen alternative, current nav item, primary hover fill' },
+];
+const greys = ['--grey-100', '--grey-200', '--grey-300', '--grey-400', '--grey-500', '--grey-600', '--grey-700', '--grey-800', '--grey-900'].map(token => ({ token }));
+const roles = [
+  { token: '--surface', role: 'Worksheet surface for instruments' },
+  { token: '--line', role: 'Row rules on paper' },
+  { token: '--muted', role: 'Secondary text on paper' },
+  { token: '--muted-inverse', role: 'Secondary text on ink' },
+  { token: '--line-inverse', role: 'Rules on ink' },
+  { token: '--paper-veil', role: 'Sticky header' },
+  { token: '--paper-tint', role: 'Raised panel on ink' },
+];
+const display = [
+  { token: '--display-2xl', sample: 'Thinking.' },
+  { token: '--display-xl', sample: 'Harder choices.' },
+  { token: '--display-l', sample: 'Decide.' },
+  { token: '--heading-1', sample: 'What needs deciding?' },
+  { token: '--heading-2', sample: 'Designed around the decision.' },
+  { token: '--heading-3', sample: 'Strategic Decision Design.' },
+  { token: '--heading-4', sample: 'Make the reasoning visible.' },
+];
+const reading = [
+  { token: '--body-large', sample: 'Bring the alternatives, the assumptions and the difficult questions.' },
+  { token: '--body', sample: 'We help leaders make consequential choices when familiar assumptions no longer hold.' },
+  { token: '--text-ui', sample: 'Navigation, buttons and form labels.' },
+  { token: '--text-small', sample: 'Record field labels and ledger column heads, set in Archivo Narrow.' },
+  { token: '--text-label', sample: 'The smallest text on the site.' },
+];
+const compact = ['--compact-xl', '--compact-lg', '--compact-md', '--compact-sm', '--compact-xs'];
+const leading = ['--leading-display', '--leading-heading', '--leading-snug', '--leading-copy', '--leading-body'];
+const tracking = ['--tracking-display', '--tracking-heading', '--tracking-ui', '--tracking-copy'];
+const spacing = ['--space-xs', '--space-sm', '--space-md', '--space-lg', '--space-xl'];
+const layout = ['--gutter', '--grid-gap', '--content-max', '--header-height', '--control-height', '--control-height-compact'];
+const radii = ['--radius-none', '--radius-field', '--radius-pill', '--radius-round'];
+const motion = ['--duration-hover', '--duration-fill', '--duration-enter'];
+
+const ledgerSample = [
+  { name: 'Strategic Decision Design.', text: 'Which alternatives deserve comparison, and what are we choosing to leave out?', aside: 'A clearly framed decision, examined assumptions and explicit commitments.', href: '/services/#strategic-decision-design' },
+  { name: 'Behavioural Design.', text: 'Which incentives, barriers and working conditions shape what people actually do?', aside: 'Research and interventions grounded in the conditions of real work.', href: '/services/#behavioural-design' },
+];
+---
+<BaseLayout title="Style guide | The Spotted Ape" description="Temporary review page for the design tokens." noindex>
+<section class="page-intro page-intro--default">
+<div class="wrap">
+<h1>Style guide.</h1>
+<div class="intro-bottom">
+<p class="intro-description">Every colour, type size, button and form field, rendered from the live tokens in <code>src/styles/tokens.css</code>.</p>
+<div class="intro-aside">Temporary review page. Not linked, not in the sitemap, marked noindex. Values are read from the browser, so they always match the CSS.</div>
+</div>
+<nav class="guide-index" aria-label="Style guide sections">
+<a href="#colour">Colour</a><a href="#type">Type</a><a href="#space">Spacing and layout</a><a href="#shape">Radius, shadow and motion</a><a href="#buttons">Buttons and links</a><a href="#forms">Form fields</a><a href="#components">Components</a>
+</nav>
+</div>
+</section>
+
+<section class="guide-section" id="colour" aria-labelledby="colour-title">
+<div class="wrap">
+<h2 class="guide-title" id="colour-title">Colour.</h2>
+<h3 class="guide-sub">Base</h3>
+<div class="swatches swatches--large">
+{base.map(item => (
+<figure class="swatch" data-colour={item.token}>
+<span class="chip" style={`background: var(${item.token})`}></span>
+<figcaption><code>{item.token}</code><span class="value" data-hex></span><span class="contrast" data-contrast></span><span class="role">{item.role}</span></figcaption>
+</figure>
+))}
+</div>
+<h3 class="guide-sub">Grey scale</h3>
+<div class="swatches swatches--greys">
+{greys.map(item => (
+<figure class="swatch" data-colour={item.token}>
+<span class="chip" style={`background: var(${item.token})`}></span>
+<figcaption><code>{item.token}</code><span class="value" data-hex></span><span class="contrast" data-contrast></span></figcaption>
+</figure>
+))}
+</div>
+<h3 class="guide-sub">Semantic roles</h3>
+<div class="swatches">
+{roles.map(item => (
+<figure class:list={['swatch', { 'swatch--on-ink': item.token.endsWith('inverse') || item.token === '--paper-tint' }]} data-colour={item.token}>
+<span class="chip" style={`background: var(${item.token})`}></span>
+<figcaption><code>{item.token}</code><span class="value" data-hex></span><span class="contrast" data-contrast></span><span class="role">{item.role}</span></figcaption>
+</figure>
+))}
+</div>
+<p class="guide-note">Contrast is measured against paper, and against ink for roles used on ink. Body text needs 4.5:1; text of 24px and above needs 3:1. Signal is never text on paper.</p>
+</div>
+</section>
+
+<section class="guide-section" id="type" aria-labelledby="type-title">
+<div class="wrap">
+<h2 class="guide-title" id="type-title">Type.</h2>
+<h3 class="guide-sub">Families and weights</h3>
+<div class="families">
+<p style="font: var(--weight-regular) var(--body-large)/1.3 var(--ui)">Archivo 400. Reading text and descriptions.</p>
+<p style="font: var(--weight-medium) var(--body-large)/1.3 var(--ui)">Archivo 500. Interface text and labels.</p>
+<p style="font: var(--weight-display) var(--body-large)/1.3 var(--ui); letter-spacing: var(--tracking-heading)">Archivo 600. Display and headings.</p>
+<p style="font: var(--weight-medium) var(--body-large)/1.3 var(--narrow)">Archivo Narrow 500. Record fields, ledger heads, tables.</p>
+<p style="font: var(--weight-regular) var(--text-small)/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase">JetBrains Mono. Formation exercises only.</p>
+</div>
+<h3 class="guide-sub">Display and headings</h3>
+<div class="type-rows">
+{display.map(item => (
+<div class="type-row" data-size={item.token}>
+<p class="type-meta"><code>{item.token}</code><span data-px></span></p>
+<p class="type-sample" style={`font-size: var(${item.token}); font-weight: var(--weight-display); letter-spacing: var(--tracking-display); line-height: var(--leading-display)`}>{item.sample}</p>
+</div>
+))}
+</div>
+<h3 class="guide-sub">Heading elements</h3>
+<div class="type-rows">
+<div class="type-row"><p class="type-meta"><code>h1</code> page intro</p><p class="guide-h1">Start with the decision.</p></div>
+<div class="type-row"><p class="type-meta"><code>h2</code> <code>.section-title</code></p><h2 class="section-title guide-sample-heading">Decide. Make it happen.</h2></div>
+<div class="type-row"><p class="type-meta"><code>h2</code> <code>.h2</code></p><h2 class="h2 guide-sample-heading">The question comes first.</h2></div>
+<div class="type-row"><p class="type-meta"><code>h3</code> <code>.h3</code></p><h3 class="h3">Cookstove adoption in South Africa.</h3></div>
+<div class="type-row"><p class="type-meta"><code>h4</code> <code>.h4</code></p><h4 class="h4">The executive output.</h4></div>
+</div>
+<h3 class="guide-sub">Reading and interface</h3>
+<div class="type-rows">
+{reading.map(item => (
+<div class="type-row" data-size={item.token}>
+<p class="type-meta"><code>{item.token}</code><span data-px></span></p>
+<p class="type-sample type-sample--copy" style={`font-size: var(${item.token}); font-family: ${item.token === '--text-small' ? 'var(--narrow)' : 'var(--ui)'}`}>{item.sample}</p>
+</div>
+))}
+</div>
+<h3 class="guide-sub">Compact headings, below 768px</h3>
+<div class="type-rows">
+{compact.map(token => (
+<div class="type-row" data-size={token}>
+<p class="type-meta"><code>{token}</code><span data-px></span></p>
+<p class="type-sample" style={`font-size: var(${token}); font-weight: var(--weight-display); letter-spacing: var(--tracking-heading); line-height: var(--leading-heading)`}>Agreement has not become action.</p>
+</div>
+))}
+</div>
+<div class="token-grid">
+<div><h3 class="guide-sub">Leading</h3><dl class="token-list">{leading.map(token => <div data-raw={token}><dt><code>{token}</code></dt><dd data-raw-value></dd></div>)}</dl></div>
+<div><h3 class="guide-sub">Tracking</h3><dl class="token-list">{tracking.map(token => <div data-raw={token}><dt><code>{token}</code></dt><dd data-raw-value></dd></div>)}</dl></div>
+</div>
+</div>
+</section>
+
+<section class="guide-section" id="space" aria-labelledby="space-title">
+<div class="wrap">
+<h2 class="guide-title" id="space-title">Spacing and layout.</h2>
+<h3 class="guide-sub">Section spacing</h3>
+<div class="space-rows">
+{spacing.map(token => (
+<div class="space-row" data-length={token}>
+<p class="type-meta"><code>{token}</code><span data-px></span></p>
+<span class="space-bar" style={`width: var(${token})`}></span>
+</div>
+))}
+</div>
+<h3 class="guide-sub">Layout and controls</h3>
+<dl class="token-list token-list--wide">{layout.map(token => <div data-length={token}><dt><code>{token}</code></dt><dd data-px></dd></div>)}</dl>
+<p class="guide-note">Breakpoints: 375px small phone, 767/768px phone to tablet, 1023/1024px tablet to desktop, 1199px narrow desktop, 1800px content maximum.</p>
+</div>
+</section>
+
+<section class="guide-section" id="shape" aria-labelledby="shape-title">
+<div class="wrap">
+<h2 class="guide-title" id="shape-title">Radius, shadow and motion.</h2>
+<div class="shapes">
+{radii.map(token => (
+<figure class="shape" data-raw={token}>
+<span class:list={['shape-box', { 'shape-box--wide': token === '--radius-pill' }]} style={`border-radius: var(${token})`}></span>
+<figcaption><code>{token}</code><span data-raw-value></span></figcaption>
+</figure>
+))}
+<figure class="shape" data-raw="--shadow-instrument">
+<span class="shape-box shape-box--shadow"></span>
+<figcaption><code>--shadow-instrument</code><span>About formation graphic only</span></figcaption>
+</figure>
+<figure class="shape" data-raw="--shadow-current">
+<span class="shape-box shape-box--current"></span>
+<figcaption><code>--shadow-current</code><span>Current item in the menu</span></figcaption>
+</figure>
+</div>
+<h3 class="guide-sub">Motion</h3>
+<dl class="token-list token-list--wide">{motion.map(token => <div data-raw={token}><dt><code>{token}</code></dt><dd data-raw-value></dd></div>)}<div data-raw="--out"><dt><code>--out</code></dt><dd data-raw-value></dd></div></dl>
+</div>
+</section>
+
+<section class="guide-section" id="buttons" aria-labelledby="buttons-title">
+<div class="wrap">
+<h2 class="guide-title" id="buttons-title">Buttons and links.</h2>
+<div class="demo-grid">
+<div class="demo">
+<h3 class="guide-sub">On paper</h3>
+<div class="demo-row">
+<a class="button button--talk" href="#buttons">Let’s talk</a>
+<a class="button" href="#buttons">Discuss a strategic decision <Arrow /></a>
+<button class="button" type="button" disabled>Sending…</button>
+</div>
+<div class="demo-row">
+<a class="text-link" href="#buttons">Read the case account <Arrow /></a>
+<a class="text-link" href="#buttons">Explore the five days <Arrow direction="down" /></a>
+<p class="inline-demo">An inline link inside running text: <a href="#buttons">the independent practice</a>.</p>
+</div>
+<p class="guide-note">Primary pill fills yellow from the pointer on hover and on keyboard focus. One primary per view. Disabled state shown with the third button.</p>
+</div>
+<div class="demo theme-dark">
+<h3 class="guide-sub">On ink</h3>
+<div class="demo-row">
+<a class="button button--yellow" href="#buttons">Open the learning case <Arrow /></a>
+<a class="text-link" href="#buttons">Examine the research <Arrow /></a>
+</div>
+<p class="guide-note guide-note--ink">On ink the pill is yellow with an ink label; it fills white on hover.</p>
+</div>
+</div>
+<h3 class="guide-sub">Choice control</h3>
+<div class="choice-group" role="group" aria-label="Example alternatives" data-guide-choices>
+<button class="choice" type="button" aria-pressed="false">Enter another market</button>
+<button class="choice" type="button" aria-pressed="true">Deepen customer relationships</button>
+<button class="choice" type="button" aria-pressed="false">Continue as we are</button>
+</div>
+<p class="guide-note">Square corners, 1px ink border. Only the chosen alternative fills yellow. Example only; nothing is saved.</p>
+</div>
+</section>
+
+<section class="guide-section" id="forms" aria-labelledby="forms-title">
+<div class="wrap">
+<h2 class="guide-title" id="forms-title">Form fields.</h2>
+<p class="guide-note">The same <code>.field-label</code> and <code>.inquiry-field</code> styles as the enquiry form, on its worksheet surface. These fields are not a form and send nothing.</p>
+<div class="form-demo">
+<div><label class="field-label" for="guide-name">Name</label><input class="inquiry-field" id="guide-name" autocomplete="off" placeholder="Required field" required /></div>
+<div><label class="field-label" for="guide-email">Email</label><input class="inquiry-field" id="guide-email" type="email" autocomplete="off" value="not-an-email" required /></div>
+<div class="form-wide"><label class="field-label" for="guide-question">What would you like to explore?</label><textarea class="inquiry-field" id="guide-question" rows="4"></textarea></div>
+<div><label class="field-label" for="guide-area">Area of interest <span>(optional)</span></label><select class="inquiry-field" id="guide-area"><option>I’m not sure yet</option><option>Strategic Decision Design</option><option>Behavioural Design</option></select></div>
+<div><label class="field-label" for="guide-disabled">Disabled field <span>(example)</span></label><input class="inquiry-field" id="guide-disabled" value="Not editable" disabled /></div>
+<details class="form-wide guide-more"><summary>Add your organisation and team size <span>(optional)</span></summary><div class="guide-more-fields"><div><label class="field-label" for="guide-org">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="guide-org" autocomplete="off" /></div></div></details>
+</div>
+<p class="guide-note">Focus: tab into a field for the 2px ink outline. Invalid: the email field shows the ink border once you edit it and leave it invalid.</p>
+</div>
+</section>
+
+<section class="guide-section" id="components" aria-labelledby="components-title">
+<div class="wrap">
+<h2 class="guide-title" id="components-title">Components.</h2>
+<h3 class="guide-sub">Ledger, numbered, with column heads</h3>
+<Ledger items={ledgerSample} numbered heads={['Area', 'The question', 'What you leave with']} label="Ledger example" />
+<h3 class="guide-sub">Decision record, panel</h3>
+<DecisionRecord panel label="Decision record example" fields={[
+  { label: 'Question', value: 'What needs to be decided?' },
+  { label: 'Assumptions', value: 'What would have to be true? What evidence could change our view?' },
+  { label: 'Owner and review', value: 'Who decides, and who acts? When will we revisit the choice?' },
+]} />
+</div>
+</section>
+</BaseLayout>
+<script>
+  const root = document.documentElement;
+  const probe = document.createElement('span');
+  probe.style.position = 'absolute';
+  probe.style.visibility = 'hidden';
+  document.body.append(probe);
+
+  const rgb = (value: string) => (value.match(/[\d.]+/g) ?? []).map(Number);
+  const hex = (value: string) => {
+    const [r, g, b, a = 1] = rgb(value);
+    const h = '#' + [r, g, b].map((n) => Math.round(n).toString(16).padStart(2, '0')).join('').toUpperCase();
+    return a < 1 ? `${h} at ${Math.round(a * 100)}%` : h;
+  };
+  const luminance = ([r, g, b]: number[]) => {
+    const c = [r, g, b].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  };
+  const ratio = (a: number[], b: number[]) => { const [x, y] = [luminance(a), luminance(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
+  const resolve = (property: 'color' | 'fontSize' | 'width', token: string) => {
+    probe.style[property] = `var(${token})`;
+    const value = getComputedStyle(probe)[property];
+    probe.style[property] = '';
+    return value;
+  };
+  const paper = rgb(resolve('color', '--paper'));
+  const ink = rgb(resolve('color', '--ink'));
+
+  document.querySelectorAll<HTMLElement>('[data-colour]').forEach((el) => {
+    const token = el.dataset.colour!;
+    const value = resolve('color', token);
+    const parts = rgb(value);
+    el.querySelector('[data-hex]')!.textContent = hex(value);
+    const onInk = el.classList.contains('swatch--on-ink');
+    const vsPaper = ratio(parts, paper).toFixed(1);
+    const vsInk = ratio(parts, ink).toFixed(1);
+    el.querySelector('[data-contrast]')!.textContent = onInk ? `${vsInk}:1 on ink` : `${vsPaper}:1 on paper · ${vsInk}:1 on ink`;
+  });
+  document.querySelectorAll<HTMLElement>('[data-size]').forEach((el) => {
+    el.querySelector('[data-px]')!.textContent = `${Math.round(parseFloat(resolve('fontSize', el.dataset.size!)))}px at this width`;
+  });
+  document.querySelectorAll<HTMLElement>('[data-length]').forEach((el) => {
+    el.querySelector('[data-px]')!.textContent = `${Math.round(parseFloat(resolve('width', el.dataset.length!)))}px at this width`;
+  });
+  document.querySelectorAll<HTMLElement>('[data-raw]').forEach((el) => {
+    const target = el.querySelector('[data-raw-value]');
+    if (target) target.textContent = getComputedStyle(root).getPropertyValue(el.dataset.raw!).trim();
+  });
+  // Refresh fluid values when the viewport changes.
+  let pending = 0;
+  addEventListener('resize', () => {
+    cancelAnimationFrame(pending);
+    pending = requestAnimationFrame(() => {
+      document.querySelectorAll<HTMLElement>('[data-size]').forEach((el) => { el.querySelector('[data-px]')!.textContent = `${Math.round(parseFloat(resolve('fontSize', el.dataset.size!)))}px at this width`; });
+      document.querySelectorAll<HTMLElement>('[data-length]').forEach((el) => { el.querySelector('[data-px]')!.textContent = `${Math.round(parseFloat(resolve('width', el.dataset.length!)))}px at this width`; });
+    });
+  });
+
+  const choices = [...document.querySelectorAll<HTMLButtonElement>('[data-guide-choices] .choice')];
+  choices.forEach((choice) => choice.addEventListener('click', () => choices.forEach((other) => other.setAttribute('aria-pressed', String(other === choice)))));
+</script>
+<style>
+  .guide-index { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: var(--space-sm); padding-top: 20px; border-top: 1px solid var(--line); font-size: var(--text-small); }
+  .guide-index a { min-height: 32px; display: inline-flex; align-items: center; }
+  .guide-section { padding-block: var(--space-lg); border-top: 1px solid var(--ink); }
+  .guide-title { font-size: var(--heading-2); line-height: var(--leading-display); }
+  .guide-sub { margin-top: var(--space-sm); margin-bottom: 20px; font: var(--weight-medium) var(--text-ui)/1.4 var(--narrow); letter-spacing: 0; color: var(--muted); }
+  .guide-note { margin-top: 20px; max-width: 70ch; font: var(--weight-medium) var(--text-small)/1.5 var(--narrow); color: var(--text-muted); }
+  .guide-note--ink { color: var(--muted-inverse); }
+  code { font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); }
+
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--grid-gap); }
+  .swatches--large { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .swatches--greys { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+  .swatch { margin: 0; display: grid; gap: 12px; align-content: start; }
+  .chip { display: block; aspect-ratio: 3 / 2; border: 1px solid var(--line); }
+  .swatches--large .chip { aspect-ratio: 2 / 1; }
+  .swatch--on-ink .chip { outline: 12px solid var(--ink); outline-offset: -12px; }
+  .swatch figcaption { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); }
+  .swatch .value { font-variant-numeric: tabular-nums; }
+  .swatch .contrast, .swatch .role { color: var(--muted); }
+
+  .families { display: grid; gap: 12px; }
+  .type-rows { border-top: 1px solid var(--ink); }
+  .type-row { display: grid; grid-template-columns: minmax(10rem, 2fr) minmax(0, 10fr); gap: var(--grid-gap); align-items: baseline; padding-block: 20px; border-bottom: 1px solid var(--line); }
+  .type-meta { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); color: var(--muted); }
+  .type-sample { min-width: 0; overflow-wrap: anywhere; }
+  .type-sample--copy { max-width: 62ch; line-height: var(--leading-copy); }
+  .guide-h1 { font-size: var(--display-xl); font-weight: var(--weight-display); letter-spacing: var(--tracking-display); line-height: 0.88; }
+  .guide-sample-heading { max-width: none; }
+  .token-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  .token-list { margin: 0; border-top: 1px solid var(--ink); }
+  .token-list > div { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+  .token-list dd { margin: 0; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); font-variant-numeric: tabular-nums; }
+  .token-list--wide { max-width: 720px; }
+
+  .space-rows { display: grid; gap: 12px; }
+  .space-row { display: grid; grid-template-columns: minmax(10rem, 2fr) minmax(0, 10fr); gap: var(--grid-gap); align-items: center; }
+  .space-bar { display: block; height: 16px; background: var(--ink); }
+
+  .shapes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--grid-gap); }
+  .shape { margin: 0; display: grid; gap: 12px; }
+  .shape figcaption { display: grid; gap: 2px; font: var(--weight-medium) var(--text-small)/1.4 var(--narrow); color: var(--muted); }
+  .shape-box { display: block; aspect-ratio: 1; border: 1px solid var(--ink); background: var(--surface); }
+  .shape-box--wide { aspect-ratio: 5 / 2; align-self: start; }
+  .shape-box--shadow { border-color: var(--line-inverse); background: var(--grey-900); box-shadow: var(--shadow-instrument); }
+  .shape-box--current { border: 0; background: var(--ink); box-shadow: var(--shadow-current); }
+
+  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--grid-gap); margin-top: var(--space-sm); }
+  .demo { padding: 32px; border: 1px solid var(--line); }
+  .demo .guide-sub { margin-top: 0; }
+  .demo.theme-dark .guide-sub { color: var(--muted-inverse); }
+  .demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 20px; }
+  .inline-demo { font-size: var(--body); }
+
+  .form-demo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; padding: 32px; background: var(--surface); }
+  .form-wide { grid-column: 1 / -1; }
+  .guide-more { border-top: 1px solid var(--line); }
+  .guide-more summary { padding-block: 14px; font-weight: var(--weight-display); }
+  .guide-more summary span { font-weight: var(--weight-regular); color: var(--muted); }
+  .guide-more-fields { padding-top: 12px; max-width: 50%; }
+
+  @media (max-width: 1023px) {
+    .swatches--greys { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .shapes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .demo-grid, .token-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 767px) {
+    .swatches--large { grid-template-columns: 1fr; }
+    .type-row, .space-row { grid-template-columns: 1fr; gap: 8px; }
+    .guide-h1 { font-size: 13.4vw; line-height: 0.92; }
+    .guide-title { font-size: var(--compact-lg); }
+    .form-demo { grid-template-columns: 1fr; padding: 20px; }
+    .guide-more-fields { max-width: none; }
+    .demo { padding: 20px; }
+  }
+</style>
