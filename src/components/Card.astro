@@ -64,6 +64,7 @@ const isMedia = layout === 'media';
 <script>
   import '../scripts/card-reveal';
   import '../scripts/card-cue';
+  import '../scripts/card-stack';
 </script>
 <style>
   /* One link per card, stretched over the whole card, so the accessible name is the title alone. */
@@ -113,6 +114,12 @@ const isMedia = layout === 'media';
     display: flex;
     flex-direction: column;
     flex: 1;
+    opacity: var(--stack-content, 1);
+  }
+  /* Set by card-stack.ts while a later sheet covers this one. */
+  .card--block {
+    scale: var(--stack-scale, 1);
+    transform-origin: 50% 0;
   }
   .card--ink { background: var(--ink); color: var(--paper); --card-muted: var(--muted-inverse); --card-line: var(--line-inverse); }
   .card--surface { background: var(--surface); color: var(--ink); --card-muted: var(--muted); --card-line: var(--line); }
@@ -338,6 +345,26 @@ const isMedia = layout === 'media';
   .card:has(.card-link:focus-visible) .card-accent { transform: scaleX(1); }
   .card:has(.card-link:focus-visible) .card-media-inner { transform: scale(1.05); }
   .card:has(.card-link:focus-visible) :global(.card-arrow) { translate: 4px -4px; }
+
+  /* Sheet layout inside a stack: number and title left, fields right. */
+  @media (min-width: 1024px) and (min-height: 760px) and (prefers-reduced-motion: no-preference) {
+    :global(.card-stack) .card--block {
+      min-height: min(460px, calc(100vh - var(--header-height) - 160px));
+      padding: 40px;
+      /* Ink sheets overlap ink sheets; a rule marks each edge. */
+      border: 1px solid var(--card-line);
+    }
+    :global(.card-stack) .card--block .card-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      column-gap: var(--grid-gap);
+    }
+    :global(.card-stack) .card-num { grid-column: 1; grid-row: 1; }
+    :global(.card-stack) .card-title { grid-column: 1; grid-row: 2; align-self: start; max-width: 12ch; }
+    :global(.card-stack) .card-fields { grid-column: 2; grid-row: 1 / 3; align-self: end; max-width: 48ch; margin-top: 0; padding-top: 0; }
+    :global(.card-stack) .card-body > :global(.card-arrow) { top: 40px; right: 40px; }
+  }
 
   @media (max-width: 767px) {
     .card--block {

@@ -74,8 +74,8 @@ const contexts = idealContexts.map(item => ({ name: `${item.title}.`, text: item
 const deliverables = clientDeliverables.map(item => ({ name: `${item.title}.`, text: item.description }));
 const policy = (await getCollection('cases')).find(item => item.data.slug === 'policy-analyst-strategic-review');
 const evidence = [
-  ...(policy ? [{ name: policy.data.title, text: `Reported outcome: ${policy.data.result}`, aside: 'Case account', href: `/cases/${policy.data.slug}` }] : []),
-  { name: 'Cookstove adoption.', text: 'The pilot reported increased LPG and biomass stove ownership, but no significant reduction in paraffin stove ownership.', aside: 'Behavioural research', href: '/work/#research' },
+  ...(policy ? [{ name: policy.data.title, text: `Reported outcome: ${policy.data.result}`, aside: 'Case account', href: `/cases/${policy.data.slug}`, preview: `“${policy.data.quote}”` }] : []),
+  { name: 'Cookstove adoption.', text: 'The pilot reported increased LPG and biomass stove ownership, but no significant reduction in paraffin stove ownership.', aside: 'Behavioural research', href: '/work/#research', preview: 'What influences the adoption of improved cookstoves among households in Dunoon?' },
 ];
 ---
 <BaseLayout title="Strategic Decision Workshops | The Spotted Ape" description="Facilitated examination of strategic alternatives, assumptions, trade-offs and responsibility. Independent strategic decision and behavioural design practice.">

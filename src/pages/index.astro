@@ -60,9 +60,9 @@ const waysToLearn = offerings.slice(services.length);
 <div class="offering-groups">
 <div class="offering-group">
 <h3 class="group-title" id="practice-areas-title">Areas of practice</h3>
-<ol class="card-grid card-grid--swipe" role="list" aria-labelledby="practice-areas-title">
+<ol class="card-grid card-grid--swipe card-stack" role="list" aria-labelledby="practice-areas-title">
 {practiceAreas.map((item, index) => (
-<li><Card href={item.href} title={item.name} text={item.text} aside={item.aside} textLabel="The question" asideLabel="What you leave with" number={String(index + 1).padStart(2, '0')} tone="ink" size="large" index={index} headingLevel={4} /></li>
+<li style={`--i: ${index}`}><Card href={item.href} title={item.name} text={item.text} aside={item.aside} textLabel="The question" asideLabel="What you leave with" number={String(index + 1).padStart(2, '0')} tone="ink" size="large" index={index} headingLevel={4} /></li>
 ))}
 </ol>
 </div>

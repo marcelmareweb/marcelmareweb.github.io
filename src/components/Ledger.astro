@@ -9,6 +9,8 @@ export interface LedgerItem {
   external?: boolean;
   /** Arrow direction for the row link; defaults to up-right. */
   arrow?: 'up-right' | 'down';
+  /** Short content shown in a floating preview over the row on hover or keyboard focus (decorative). */
+  preview?: string;
 }
 interface Props {
   items: LedgerItem[];
@@ -26,6 +28,7 @@ const List = numbered ? 'ol' : 'ul';
 // Drop columns no row uses, so short lists in narrow columns do not reserve empty space.
 const hasAside = items.some(item => item.aside);
 const hasLink = items.some(item => item.href);
+const hasPreview = items.some(item => item.preview);
 ---
 <div class:list={['ledger', { 'ledger--plain': !numbered, 'ledger--large': size === 'large', 'ledger--no-aside': !hasAside, 'ledger--no-link': !hasLink }]}>
   {heads && (
@@ -39,7 +42,7 @@ const hasLink = items.some(item => item.href);
       const Row = item.href ? 'a' : 'div';
       return (
         <li>
-          <Row class="ledger-row" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+          <Row class="ledger-row" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined} data-preview={item.preview}>
             {numbered && <span class="ledger-num">{String(index + start).padStart(2, '0')}</span>}
             <span class="ledger-name">{item.name}</span>
             {item.text && <span class="ledger-text">{item.text}</span>}
@@ -50,4 +53,8 @@ const hasLink = items.some(item => item.href);
       );
     })}
   </List>
+  {hasPreview && <div class="ledger-preview" aria-hidden="true" data-ledger-preview><p></p></div>}
 </div>
+<script>
+  import '../scripts/ledger-preview';
+</script>
