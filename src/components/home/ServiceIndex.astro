@@ -66,7 +66,7 @@ const rows = [
     transform-origin: bottom;
     transition: transform .6s var(--out);
   }
-  .index-number { grid-column: 1 / 2; font: 400 12px/1.5 var(--mono); letter-spacing: .06em; }
+  .index-number { grid-column: 1 / 2; font: 400 var(--text-label)/1.5 var(--mono); letter-spacing: .06em; }
   .index-title { grid-column: 2 / 8; font-size: var(--heading-3); font-weight: 600; line-height: 1.05; letter-spacing: -.05em; }
   .index-line { grid-column: 8 / 12; font-size: var(--body); line-height: 1.45; color: var(--muted); transition: color .6s var(--out); }
   .index-list :global(.index-arrow) { grid-column: 12 / 13; justify-self: end; align-self: center; font-size: 32px; transition: transform .6s var(--out); }
@@ -91,7 +91,7 @@ const rows = [
     .index-list a:before { inset-inline: -20px; }
     .index-number { grid-column: 1; }
     .index-title { grid-column: 2; font-size: 30px; }
-    .index-line { grid-column: 2; font-size: 16px; }
-    .index-list :global(.index-arrow) { grid-column: 3; font-size: 22px; }
+    .index-line { grid-column: 2; font-size: var(--text-ui); }
+    .index-list :global(.index-arrow) { grid-column: 3; font-size: var(--body-large); }
   }
 </style>

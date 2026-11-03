@@ -1,4 +1,5 @@
 ---
+import Arrow from '../Arrow.astro';
 import type { MasterclassDay } from '../../data/executive-masterclass';
 import { masterclassDays } from '../../data/executive-masterclass';
 import { contactHref } from '../../lib/contact';
@@ -14,7 +15,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
 <article class="masterclass-detail" data-masterclass-detail={day.id} aria-labelledby={`session-question-${day.id}`}>
   <div class="detail-topline">
     <p class="meta">Day {day.number} / {day.stage}</p>
-    <button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Back to the five-day formation <span aria-hidden="true">↑</span></button>
+    <button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Back to the five-day formation <Arrow direction="up" /></button>
   </div>
   <header class="detail-heading">
     <h3 id={`session-question-${day.id}`} tabindex="-1">{day.question}</h3>
@@ -33,10 +34,10 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     <div><p class="meta">Standalone day. Connected programme.</p><p>Work on a live decision in this session, or connect its output with the other four days.</p></div>
     <p class="thread-link">{previous ? `In the full programme, this day builds on the ${previous.outputName}.` : 'The Opportunity Landscape frames the options and assumptions explored across the full programme.'} {next ? `It creates a foundation for day ${next.number}: ${next.stage}.` : 'This final dossier brings the five days’ decisions into one accountable direction.'}</p>
   </div>
-  <div class="detail-actions"><a class="button" href={enquiry}>Discuss day {day.number} <span aria-hidden="true">↗</span></a><button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Return to the formation ↑</button></div>
+  <div class="detail-actions"><a class="button" href={enquiry}>Discuss day {day.number} <Arrow /></a><button class="return-button" type="button" data-masterclass-return data-masterclass-enhancement hidden>Return to the formation <Arrow direction="up" /></button></div>
   <nav class="session-navigation" aria-label="Move between workshop days" data-masterclass-enhancement hidden>
-    {previous ? <button type="button" data-masterclass-go={previous.id}><span class="meta">← Day {previous.number}</span><span>{previous.stage}</span></button> : <span class="first-day meta">The option space starts here.</span>}
-    {next ? <button class="next-session" type="button" data-masterclass-go={next.id}><span class="meta">Day {next.number} →</span><span>{next.stage}</span></button> : <button class="next-session" type="button" data-masterclass-return><span class="meta">All five days ↑</span><span>Return to the formation</span></button>}
+    {previous ? <button type="button" data-masterclass-go={previous.id}><span class="meta"><Arrow direction="left" /> Day {previous.number}</span><span>{previous.stage}</span></button> : <span class="first-day meta">The option space starts here.</span>}
+    {next ? <button class="next-session" type="button" data-masterclass-go={next.id}><span class="meta">Day {next.number} <Arrow direction="right" /></span><span>{next.stage}</span></button> : <button class="next-session" type="button" data-masterclass-return><span class="meta">All five days <Arrow direction="up" /></span><span>Return to the formation</span></button>}
   </nav>
 </article>
 <style>
@@ -56,7 +57,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
   .return-button {
     min-height: 44px;
     padding-block: 10px;
-    font-size: 14px;
+    font-size: var(--text-small);
     text-decoration: underline;
     text-underline-offset: 5px;
     text-align: left;
@@ -90,7 +91,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 64px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid var(--grey-400);
     margin-top: 48px;
     padding-top: 32px;
   }
@@ -114,7 +115,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid var(--grey-400);
     margin-top: 40px;
     padding-top: 32px;
   }
@@ -155,17 +156,17 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     gap: 48px;
     margin-top: 32px;
     padding-top: 32px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid var(--grey-400);
   }
   .programme-thread p:not(.meta) {
     margin-top: 16px;
-    font-size: 16px;
+    font-size: var(--text-ui);
     line-height: 1.5;
     max-width: 55ch;
   }
   .programme-thread .thread-link {
     margin: 0;
-    color: #626262;
+    color: var(--muted);
   }
   .detail-actions {
     display: flex;
@@ -182,7 +183,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     gap: 32px;
     margin-top: 40px;
     padding-top: 24px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid var(--grey-400);
   }
   .session-navigation button {
     display: grid;
@@ -191,7 +192,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     text-align: left;
   }
   .session-navigation button > span:last-child {
-    font-size: 24px;
+    font-size: var(--body-large);
     font-weight: 600;
     letter-spacing: -0.04em;
   }
@@ -233,7 +234,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
       line-height: 1.03;
     }
     .session-focus > p:last-child {
-      font-size: 24px;
+      font-size: var(--body-large);
     }
     .session-context,
     .working-sessions,
@@ -243,7 +244,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
       padding-top: 24px;
     }
     .session-context > div > p:last-child {
-      font-size: 22px;
+      font-size: var(--body-large);
     }
     .session-tool h4,
     .working-sessions h4 {
@@ -251,7 +252,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
     }
     .working-sessions section > p:last-child,
     .executive-output > p:last-child {
-      font-size: 18px;
+      font-size: var(--body);
     }
     .executive-output {
       margin-top: 32px;
@@ -264,7 +265,7 @@ const enquiry = contactHref({ interest: 'masterclass', day: day.id, source: '/wo
       gap: 20px;
     }
     .session-navigation button > span:last-child {
-      font-size: 21px;
+      font-size: var(--body);
     }
     .first-day {
       max-width: 14ch;

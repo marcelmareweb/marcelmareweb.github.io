@@ -1,20 +1,20 @@
 ---
+import Arrow from './Arrow.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import { enquiryInterests, courseModuleNames } from '../lib/contact';
 import { masterclassDays, masterclassTitle } from '../data/executive-masterclass';
 interface Props {
   defaultEngagement?: string;
-  eyebrow?: string;
   standalone?: boolean;
   heading?: string;
 }
 const {
   defaultEngagement = '',
-  eyebrow = 'Let’s talk',
   standalone = false,
   heading = 'What needs deciding?',
 } = Astro.props;
 const Heading = standalone ? 'h1' : 'h2';
+const ConfirmationHeading = standalone ? 'h2' : 'h3';
 const defaultInterest = enquiryInterests.find(item => item.value === defaultEngagement)?.id ?? '';
 const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
 const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
@@ -22,12 +22,11 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 <section id="book" class:list={['booking-section section-y theme-grey', { 'booking-section--standalone': standalone }]} aria-labelledby="booking-title">
   <div class="wrap">
     {standalone && <Breadcrumbs />}
-    <div class="section-top meta"><p>{eyebrow}</p><p>Start with the decision</p></div>
     <div class="booking-layout">
       <div class="booking-copy">
         <Heading id="booking-title">{heading}</Heading>
         <p class="lead">Bring the alternatives, the assumptions and the difficult questions.</p>
-        <a class="booking-email" href="mailto:hello@thespottedape.com">hello@thespottedape.com ↗</a>
+        <a class="booking-email" href="mailto:hello@thespottedape.com"><span class="nowrap">hello@thespottedape.com <Arrow /></span></a>
         <p class="meta">Marcel Maré / Cape Town, South Africa</p>
       </div>
       <form class="inquiry-form" action="https://formsubmit.co/hello@thespottedape.com" method="POST" data-inquiry-form data-default-interest={defaultInterest} data-web3forms-key={web3FormsKey} data-endpoint={inquiryEndpoint}>
@@ -83,11 +82,11 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
           <select class="inquiry-field" id="inquiry-team-size" name="teamSize"><option value="">Not specified</option><option>1–10</option><option>11–50</option><option>50+</option></select>
         </div>
         <div class="form-wide">
-          <button class="button" type="submit" data-submit-button>Send enquiry <span aria-hidden="true">↗</span></button>
+          <button class="button" type="submit" data-submit-button>Send enquiry <Arrow /></button>
           <p class="form-note">We’ll use these details to respond by email and discuss the next step. <a href="/privacy">Privacy policy</a>.</p>
           <p class="inquiry-status" role="status" aria-live="polite" data-inquiry-status></p>
-          <div class="inquiry-confirmation" data-inquiry-confirmation hidden><h3>Thank you.</h3><p>Your enquiry has been submitted. We’ll reply to the email address you provided.</p></div>
-          <a class="text-link" href="mailto:hello@thespottedape.com" data-email-fallback hidden>Send your enquiry by email ↗</a>
+          <div class="inquiry-confirmation" data-inquiry-confirmation hidden><ConfirmationHeading>Thank you.</ConfirmationHeading><p>Your enquiry has been submitted. We’ll reply to the email address you provided.</p></div>
+          <a class="text-link" href="mailto:hello@thespottedape.com" data-email-fallback hidden>Send your enquiry by email <Arrow /></a>
         </div>
       </form>
     </div>
@@ -98,10 +97,11 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 </script>
 <style>
 .booking-section--standalone { padding-block: var(--space-sm) var(--space-lg); }
-.enquiry-context { padding: 20px 24px; border-left: 4px solid var(--signal); background: #fff; }
-.enquiry-context > .meta { color: #626262; font-size: 10px; }
-.enquiry-context [data-module-status] { margin-top: 12px; font-size: 20px; line-height: 1.4; font-weight: 500; }
-.enquiry-context > div { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 16px; font-size: 13px; }
+.enquiry-context { padding: 20px 24px; border: 1px solid var(--line); border-top: 4px solid var(--signal); background: var(--paper); }
+.enquiry-context > .meta { color: var(--muted); font-size: var(--text-label); }
+.enquiry-context [data-module-status] { margin-top: 12px; font-size: var(--body); line-height: 1.4; font-weight: 500; }
+.enquiry-context > div { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 8px; font-size: var(--text-small); }
+.enquiry-context > div a { display: inline-flex; align-items: center; min-height: 44px; }
 
 .booking-layout {
   display: grid;
@@ -125,7 +125,7 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 }
 .booking-copy > .meta {
   margin-top: 24px;
-  color: #626262;
+  color: var(--muted);
 }
 .booking-copy .lead {
   margin-top: 48px;
@@ -138,25 +138,25 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
 }
 .inquiry-form label {
   display: block;
-  font-size: 16px;
+  font-size: var(--text-ui);
   font-weight: 500;
   line-height: 1.4;
   margin-bottom: 12px;
 }
 .inquiry-form label span {
   font-weight: 400;
-  color: #626262;
+  color: var(--muted);
 }
 .inquiry-field {
   width: 100%;
   min-width: 0;
   min-height: 56px;
   padding: 16px;
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   border: 1px solid transparent;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: var(--text-ui);
   line-height: 1.4;
 }
 .inquiry-field:focus-visible {
@@ -174,14 +174,14 @@ textarea.inquiry-field {
   grid-column: 1/-1;
 }
 .form-note {
-  font-size: 13px;
-  color: #626262;
+  font-size: var(--text-small);
+  color: var(--muted);
   line-height: 1.5;
   max-width: 52ch;
   margin-top: 24px;
 }
 .inquiry-status {
-  font-size: 16px;
+  font-size: var(--text-ui);
   margin-top: 24px;
   max-width: 50ch;
 }
@@ -189,21 +189,21 @@ textarea.inquiry-field {
   display: none;
 }
 .inquiry-confirmation {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid var(--muted-inverse);
   margin-top: 32px;
   padding-top: 24px;
 }
-.inquiry-confirmation h3 {
+.inquiry-confirmation :is(h2, h3) {
   font-size: 40px;
 }
 .inquiry-confirmation p {
-  font-size: 18px;
+  font-size: var(--body);
   line-height: 1.5;
   margin-top: 16px;
 }
 .module-context {
-  font-size: 14px;
-  border-left: 4px solid var(--signal);
+  font-size: var(--text-small);
+  border-left: 1px solid var(--ink);
   padding-left: 16px;
 }
 .inquiry-form [data-email-fallback] {
@@ -237,7 +237,7 @@ textarea.inquiry-field {
   }
   .booking-email {
     margin-top: 32px;
-    font-size: 22px;
+    font-size: var(--body-large);
   }
   .booking-copy .lead {
     margin-top: 32px;
@@ -252,7 +252,7 @@ textarea.inquiry-field {
     gap: 48px;
   }
   .inquiry-form label {
-    font-size: 16px;
+    font-size: var(--text-ui);
   }
 }
 </style>

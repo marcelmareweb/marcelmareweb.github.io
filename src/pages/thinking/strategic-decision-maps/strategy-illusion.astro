@@ -1,4 +1,5 @@
 ---
+import Arrow from '../../../components/Arrow.astro';
 import HomeLayout from '../../../layouts/HomeLayout.astro';
 import PageIntro from '../../../components/PageIntro.astro';
 import EditorialQuote from '../../../components/EditorialQuote.astro';
@@ -7,11 +8,11 @@ import { strategyIllusion } from '../../../data/strategicMatrices';
 import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
 ---
 <HomeLayout title="The Strategy Illusion — Strategic Decision Maps | The Spotted Ape" description="One café, four possible situations. A story about clear choices, consistent action and the trap of confusing a busy team with a strategy." schemaType="Article">
-<PageIntro compact eyebrow="Thinking / Strategic decision map" scale="long">
+<PageIntro scale="sentence">
 <Fragment slot="heading">{strategyIllusion.question}</Fragment>
 <nav class="page-nav" aria-label="Article navigation">
-<a href="/thinking/">← All thinking</a>
-<a href="#strategy-illusion-map">View the quadrant map ↓</a>
+<a href="/thinking/"><Arrow direction="left" /> All thinking</a>
+<a href="#strategy-illusion-map">View the quadrant map <Arrow direction="down" /></a>
 </nav>
 </PageIntro>
 <article class="decision-map">
@@ -72,7 +73,7 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
 </div>
 <div class="map-ending wrap">
 <h2>What needs attention<br />in your team?</h2>
-<a class="text-link" href="/contact/?interest=strategic-decision&amp;source=%2Fthinking%2Fstrategic-decision-maps%2Fstrategy-illusion%2F">Discuss this question <span aria-hidden="true">↗</span>
+<a class="text-link" href="/contact/?interest=strategic-decision&amp;source=%2Fthinking%2Fstrategic-decision-maps%2Fstrategy-illusion%2F">Discuss this question <Arrow />
 </a>
 </div>
 </article>
@@ -108,10 +109,10 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
   line-height: 1.2;
 }
 .axis-definitions dd {
-  font-size: 22px;
+  font-size: var(--body-large);
   line-height: 1.5;
   margin: 16px 0 0;
-  color: #626262;
+  color: var(--muted);
 }
 .map-figure-inner {
   max-width: 1000px;
@@ -137,14 +138,14 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
   font-weight: 600;
 }
 .map-story dd {
-  font-size: 22px;
+  font-size: var(--body-large);
   line-height: 1.5;
-  color: #626262;
+  color: var(--muted);
   margin: 20px 0 0;
   max-width: 62ch;
 }
 .map-story > p {
-  font-size: 22px;
+  font-size: var(--body-large);
   line-height: 1.5;
   margin-top: 32px;
   border-left: 5px solid var(--signal);
@@ -170,12 +171,12 @@ import mikeTyson from '../../../assets/editorial/mike-tyson2.png';
   }
   .axis-definitions dt,
   .map-story dt {
-    font-size: 24px;
+    font-size: var(--body-large);
   }
   .axis-definitions dd,
   .map-story dd,
   .map-story > p {
-    font-size: 20px;
+    font-size: var(--body);
   }
   .map-story h2 {
     font-size: 44px;

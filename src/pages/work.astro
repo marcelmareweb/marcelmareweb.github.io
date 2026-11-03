@@ -1,4 +1,5 @@
 ---
+import Arrow from '../components/Arrow.astro';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
@@ -8,31 +9,30 @@ const cases = await getCollection('cases');
 const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
 ---
 <BaseLayout title="Work & Research | The Spotted Ape" description="Examine a strategic decision case account and behavioural research on cookstove adoption. Source-labelled evidence, methods and qualified findings.">
-  <PageIntro compact scale="long" eyebrow="Work & research" description="Case accounts, research and the questions behind the work. Examine the evidence and its limits.">
+  <PageIntro description="Case accounts, research and the questions behind the work. Examine the evidence and its limits.">
     <Fragment slot="heading">The work.<br />The evidence.</Fragment>
-    <nav class="page-nav" aria-label="Work and research page sections"><a href="#case-account">Policy-analysis case ↓</a><a href="#research">Behavioural research ↓</a><a href="/about#section-05">Meet the practitioner ↗</a></nav>
+    <nav class="page-nav" aria-label="Work and research page sections"><a href="#case-account">Policy-analysis case <Arrow direction="down" /></a><a href="#research">Behavioural research <Arrow direction="down" /></a><a href="/about#section-05">Meet the practitioner <Arrow /></a></nav>
   </PageIntro>
   {policy && <section class="case-feature section-y theme-dark" id="case-account">
     <div class="wrap">
-      <div class="section-top meta"><p>01 / Case account</p><p>Policy analysis / Reported outcome</p></div>
       <div class="split-layout">
         <h2><a href={'/cases/' + policy.data.slug}>{policy.data.title}</a></h2>
-        <div><p class="lead">{policy.data.clientContext}</p><p class="case-shift">{policy.data.shift}</p><p class="case-result"><span class="meta">Reported outcome</span>{policy.data.result}</p><a class="text-link" href={'/cases/' + policy.data.slug}>Read the case account <span aria-hidden="true">↗</span></a></div>
+        <div><p class="lead">{policy.data.clientContext}</p><p class="case-shift">{policy.data.shift}</p><p class="case-result"><span class="meta">Reported outcome</span>{policy.data.result}</p><a class="text-link" href={'/cases/' + policy.data.slug}>Read the case account <Arrow /></a></div>
       </div>
       <p class="source-note">An account of this engagement. The reported result does not establish a typical or guaranteed outcome.</p>
     </div>
   </section>}
   <ResearchEvidence />
-  <section class="section-y"><div class="wrap split-layout"><h2 class="h2">From evidence<br />to a question.</h2><div><p class="lead">Explore the kinds of strategic and behavioural questions the practice helps examine, or bring a question of your own.</p><div class="actions"><a class="text-link" href="/services/">How we help ↗</a><a class="button" href={contactHref({ source: '/work/' })}>Discuss your question <span aria-hidden="true">↗</span></a></div></div></div></section>
+  <section class="section-y"><div class="wrap split-layout"><h2 class="h2">From evidence<br />to a question.</h2><div><p class="lead">Explore the kinds of strategic and behavioural questions the practice helps examine, or bring a question of your own.</p><div class="actions"><a class="text-link" href="/services/">How we help <Arrow /></a><a class="button" href={contactHref({ source: '/work/' })}>Discuss your question <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <style>
   .case-feature h2 { font-size: var(--heading-2); line-height: 1.03; max-width: 20ch; }
   h2 a { text-decoration: none; }
   h2 a:hover { text-decoration: underline; text-decoration-color: var(--signal); }
-  .case-shift { margin-top: 28px; max-width: 45ch; color: #b3b3b3; font-size: var(--body); line-height: 1.5; }
+  .case-shift { margin-top: 28px; max-width: 45ch; color: var(--muted-inverse); font-size: var(--body); line-height: 1.5; }
   .case-result { margin-top: 40px; color: var(--signal); font-size: var(--heading-4); line-height: 1.1; letter-spacing: -.04em; font-weight: 600; }
-  .case-result .meta { display: block; color: #b3b3b3; margin-bottom: 16px; letter-spacing: .04em; }
+  .case-result .meta { display: block; color: var(--muted-inverse); margin-bottom: 16px; letter-spacing: .04em; }
   .case-feature .text-link { margin-top: 32px; }
-  .case-feature .source-note { margin-top: 48px; max-width: 65ch; color: #b3b3b3; }
+  .case-feature .source-note { margin-top: 48px; max-width: 65ch; color: var(--muted-inverse); }
   @media (max-width: 767px) { .case-feature h2 { font-size: 44px; } }
 </style>

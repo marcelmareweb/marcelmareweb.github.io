@@ -1,4 +1,5 @@
 ---
+import Arrow from './Arrow.astro';
 import { contactHref } from '../lib/contact';
 const proposals = [
   {
@@ -172,10 +173,6 @@ const initialModule = modules[0];
 ---
 <section id="syllabus" class="section-y theme-dark" aria-labelledby="syllabus-title">
 <div class="wrap">
-<div class="section-top meta">
-<p>03 / The curriculum</p>
-<p>A fictional investment case</p>
-</div>
 <h2 class="section-title" id="syllabus-title" data-reveal>One case.<br />One decision.</h2>
 <div class="syllabus-intro">
 <p class="lead">Take the seat of a commercial analyst advising the Financial Director. Compare three rooftop solar proposals costing R650,000 to R990,000.</p>
@@ -214,7 +211,7 @@ const initialModule = modules[0];
 <button class="course-tab" type="button" role="tab" id={`course-tab-${mod.number}`} aria-controls="course-inspector" aria-selected={index===0?'true':'false'} tabindex={index===0?0:-1} data-course-tab data-module-number={mod.number} data-module-title={mod.title} data-module-subtitle={mod.subtitle} data-competence-tier={mod.competenceTier} data-sender-code={mod.senderCode} data-timestamp={mod.timestamp} data-prompt-headline={mod.promptHeadline} data-prompt-body={mod.promptBody} data-summary={mod.summary} data-analytical-mechanics={mod.analyticalMechanics} data-behavioural-shift={mod.behaviouralShift} data-deliverable={mod.deliverable} data-live-url={mod.liveUrl}>
 <span class="meta">{mod.number}</span>
 <span>{mod.title}.</span>
-<span aria-hidden="true">↗</span>
+<Arrow />
 </button>)}</nav>
 <div id="course-inspector" class="course-panel" role="tabpanel" aria-labelledby={`course-tab-${initialModule.number}`} tabindex="0" data-course-inspector>
 <p class="meta" data-course-number-label>MODULE {initialModule.number} / 06 — {initialModule.subtitle}</p>
@@ -241,10 +238,10 @@ const initialModule = modules[0];
 <p data-course-value="deliverable">{initialModule.deliverable}</p>
 </div>
 <div class="actions">
-<a class="text-link" href={initialModule.liveUrl} target="_blank" rel="noreferrer" data-course-live-link>Open this learning module ↗</a>
+<a class="text-link" href={initialModule.liveUrl} target="_blank" rel="noreferrer" data-course-live-link>Open this learning module <Arrow /></a>
 <a class="button button--yellow" href={contactHref({ interest: 'course', module: initialModule.number, source: '/courses' })} data-course-inquiry>
 <span data-course-inquiry-label>Discuss module {initialModule.number} for your team</span>
-<span aria-hidden="true">↗</span>
+<Arrow />
 </a>
 </div>
 <p class="source-note">Learning modules open on marcelmare.com.</p>
@@ -255,8 +252,8 @@ const initialModule = modules[0];
 <summary>{mod.number} / {mod.title}</summary>
 <p>{mod.summary}</p>
 <p>{mod.deliverable}</p>
-<a href={mod.liveUrl}>Open this learning module ↗</a>
-<a href={contactHref({ interest: 'course', module: mod.number, source: '/courses' })}>Discuss this module for your team ↗</a>
+<a href={mod.liveUrl}>Open this learning module <Arrow /></a>
+<a href={contactHref({ interest: 'course', module: mod.number, source: '/courses' })}>Discuss this module for your team <Arrow /></a>
 </details>)}</div>
 </div>
 </section>
@@ -359,11 +356,11 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   max-width: 44ch;
 }
 .syllabus-intro > .meta {
-  color: #b3b3b3;
+  color: var(--muted-inverse);
   flex-shrink: 0;
 }
 .syllabus-source {
-  color: #aaa;
+  color: var(--grey-400);
   margin-top: 20px;
   max-width: 70ch;
 }
@@ -374,7 +371,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   margin-top: var(--space-lg);
 }
 .course-tabs {
-  border-top: 1px solid #555;
+  border-top: 1px solid var(--line-inverse);
 }
 .course-tab {
   width: 100%;
@@ -385,9 +382,9 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   text-align: left;
   padding: 28px 0;
   border: 0;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid var(--line-inverse);
   background: transparent;
-  color: #fff;
+  color: var(--paper);
 }
 .course-tab > span:nth-child(2) {
   font-size: 32px;
@@ -396,10 +393,10 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   font-weight: 600;
 }
 .course-tab > .meta {
-  color: #aaa;
+  color: var(--grey-400);
 }
 .course-tab > span:last-child {
-  font-size: 24px;
+  font-size: var(--body-large);
 }
 .course-tab[aria-selected='true'] {
   color: var(--signal);
@@ -411,13 +408,13 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   background: #ffffff0a;
 }
 .course-panel {
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   border-radius: 8px;
   padding: 40px;
-  --text-primary: #0d0b0a;
-  --text-muted: #626262;
-  --border-subtle: #ddd;
+  --text-primary: var(--ink);
+  --text-muted: var(--muted);
+  --border-subtle: var(--line);
 }
 .course-panel > h3 {
   font-size: var(--heading-3);
@@ -426,64 +423,64 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 }
 .course-tier {
   margin-top: 24px;
-  color: #626262;
+  color: var(--muted);
 }
 .course-dispatch {
-  border-block: 1px solid #ddd;
+  border-block: 1px solid var(--line);
   padding-block: 24px;
   margin-block: 32px;
 }
 .course-dispatch .meta {
-  color: #626262;
-  font-size: 10px;
+  color: var(--muted);
+  font-size: var(--text-label);
 }
 .course-dispatch .dispatch-title {
-  font-size: 26px;
+  font-size: var(--body-large);
   line-height: 1.15;
   letter-spacing: -0.035em;
   font-weight: 600;
   margin-top: 24px;
 }
 .course-dispatch > p:last-child {
-  font-size: 17px;
+  font-size: var(--text-ui);
   line-height: 1.5;
-  color: #626262;
+  color: var(--muted);
   margin-top: 20px;
 }
 .module-summary {
-  font-size: 20px;
+  font-size: var(--body);
   line-height: 1.5;
 }
 .module-detail {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--line);
   padding-block: 12px;
 }
 .module-detail summary {
-  font-size: 16px;
+  font-size: var(--text-ui);
   padding-block: 12px;
   min-height: 44px;
   font-weight: 500;
 }
 .module-detail p {
-  font-size: 16px;
+  font-size: var(--text-ui);
   line-height: 1.5;
-  color: #626262;
+  color: var(--muted);
   padding-block: 12px;
 }
 .module-output {
   margin-top: 32px;
 }
 .module-output > p:last-child {
-  font-size: 22px;
+  font-size: var(--body-large);
   line-height: 1.25;
   letter-spacing: -0.03em;
   margin-top: 16px;
 }
 .course-panel .text-link {
-  font-size: 14px;
+  font-size: var(--text-small);
 }
 .course-panel .button {
-  font-size: 13px;
+  font-size: var(--text-small);
   gap: 16px;
 }
 .course-panel:focus-visible {
@@ -493,7 +490,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
   margin-top: 48px;
 }
 .course-fallback details {
-  border-top: 1px solid #555;
+  border-top: 1px solid var(--line-inverse);
   padding-block: 20px;
 }
 .course-fallback summary {
@@ -502,7 +499,7 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
 .course-fallback p {
   max-width: 60ch;
   margin-top: 24px;
-  font-size: 18px;
+  font-size: var(--body);
 }
 .course-fallback a {
   display: block;
@@ -555,19 +552,19 @@ document.querySelector<HTMLElement>('[data-course-fallback]')!.hidden = true;
     font-size: 40px;
   }
   .course-panel > .meta {
-    font-size: 10px;
+    font-size: var(--text-label);
   }
   .course-dispatch .dispatch-title {
-    font-size: 24px;
+    font-size: var(--body-large);
   }
   .module-summary {
-    font-size: 18px;
+    font-size: var(--body);
   }
   .module-output > p:last-child {
-    font-size: 20px;
+    font-size: var(--body);
   }
   .syllabus-source {
-    font-size: 10px;
+    font-size: var(--text-label);
   }
   .course-panel .actions {
     align-items: start;

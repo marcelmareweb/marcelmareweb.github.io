@@ -62,22 +62,22 @@ const captionRight =
 ---
 
 <figure
-  class="formation-graphic m-0 w-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] shadow-[0_24px_64px_rgba(0,0,0,0.55)]"
+  class="formation-graphic"
   data-formation-root
   data-variant={variant}
 >
-  <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 py-3 sm:px-5">
-    <div class="flex items-center gap-2.5">
-      <span class="inline-block size-2 rounded-full bg-[var(--accent-signal)]" data-formation-beacon-dot aria-hidden="true"></span>
-      <span class="technical-label text-[11px] tracking-widest text-[var(--text-primary)]">
+  <div class="fg-bar">
+    <div class="fg-title">
+      <span class="fg-dot" data-formation-beacon-dot aria-hidden="true"></span>
+      <span class="technical-label fg-name">
         {variant === 'about' ? 'ORIENTATION FIELD / 01' : 'FORMATION SYSTEM / 01'}
       </span>
     </div>
 
-    <div class="flex items-center gap-1.5" role="group" aria-label="Toggle between chaotic dispersion and coherent formation">
+    <div class="fg-modes" role="group" aria-label="Toggle between chaotic dispersion and coherent formation">
       <button
         type="button"
-        class="formation-mode-btn technical-label border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-2.5 py-1 text-[10px] tracking-widest text-[var(--text-muted)] transition-colors hover:border-[var(--accent-signal)] hover:text-[var(--text-primary)]"
+        class="formation-mode-btn technical-label"
         data-formation-set="0"
         aria-pressed="false"
       >
@@ -85,7 +85,7 @@ const captionRight =
       </button>
       <button
         type="button"
-        class="formation-mode-btn technical-label border border-[var(--accent-signal)] bg-[var(--accent-signal)]/15 px-2.5 py-1 text-[10px] tracking-widest text-[var(--accent-signal)] transition-colors"
+        class="formation-mode-btn technical-label"
         data-formation-set="1"
         aria-pressed="true"
       >
@@ -94,9 +94,9 @@ const captionRight =
     </div>
   </div>
 
-  <div class="relative overflow-hidden bg-[#0D0B0A]">
+  <div class="fg-stage">
     <svg
-      class="block h-auto w-full select-none"
+      class="fg-svg"
       viewBox="0 0 540 400"
       role="img"
       aria-labelledby={`formation-title-${variant} formation-desc-${variant}`}
@@ -224,9 +224,9 @@ const captionRight =
   </div>
 
   <!-- Interactive Scrubber & Caption Footer -->
-  <figcaption class="border-t border-[var(--border-subtle)] bg-[var(--bg-primary)] px-4 py-3.5 sm:px-5">
-    <div class="mb-2.5 flex items-center gap-3">
-      <label class="technical-label text-[10px] tracking-widest text-[var(--text-muted)]" for={`formation-range-${variant}`}>
+  <figcaption class="fg-caption">
+    <div class="fg-scrub">
+      <label class="technical-label fg-small" for={`formation-range-${variant}`}>
         ORIENTATION
       </label>
       <input
@@ -235,14 +235,14 @@ const captionRight =
         min="0"
         max="100"
         value="100"
-        class="formation-slider h-1 w-full cursor-pointer appearance-none bg-[var(--border-subtle)] accent-[var(--accent-signal)]"
+        class="formation-slider"
         aria-label="Scrub between chaotic dispersion and coherent formation"
         data-formation-slider
       />
     </div>
-    <div class="technical-label flex flex-col justify-between gap-1 text-[10px] tracking-wider text-[var(--text-muted)] sm:flex-row sm:gap-4">
+    <div class="technical-label fg-small fg-captions">
       <span>{captionLeft}</span>
-      <span class="text-[var(--accent-signal)] sm:text-right">{captionRight}</span>
+      <span class="fg-caption-right">{captionRight}</span>
     </div>
   </figcaption>
 </figure>
@@ -341,13 +341,6 @@ const captionRight =
           const btnTarget = Number(btn.dataset.formationSet ?? 1);
           const isActive = (btnTarget === 0 && pct < 50) || (btnTarget === 1 && pct >= 50);
           btn.setAttribute('aria-pressed', String(isActive));
-          if (isActive) {
-            btn.classList.add('border-[var(--accent-signal)]', 'text-[var(--accent-signal)]', 'bg-[var(--accent-signal)]/15');
-            btn.classList.remove('border-[var(--border-subtle)]', 'text-[var(--text-muted)]');
-          } else {
-            btn.classList.remove('border-[var(--accent-signal)]', 'text-[var(--accent-signal)]', 'bg-[var(--accent-signal)]/15');
-            btn.classList.add('border-[var(--border-subtle)]', 'text-[var(--text-muted)]');
-          }
         });
       };
 
@@ -459,4 +452,27 @@ const captionRight =
   initFormationGraphics();
   document.addEventListener('astro:page-load', initFormationGraphics);
 </script>
-
+<style>
+  .formation-graphic { margin: 0; width: 100%; border: 1px solid var(--border-subtle); background: var(--bg-elevated); box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55); }
+  .fg-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-primary); }
+  .fg-title { display: flex; align-items: center; gap: 10px; }
+  .fg-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-signal); }
+  .fg-name { color: var(--text-primary); }
+  .fg-modes { display: flex; align-items: center; gap: 6px; }
+  .formation-mode-btn { padding: 4px 10px; border: 1px solid var(--border-subtle); background: var(--bg-elevated); color: var(--text-muted); transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
+  .formation-mode-btn:hover { border-color: var(--accent-signal); color: var(--text-primary); }
+  .formation-mode-btn[aria-pressed='true'] { border-color: var(--accent-signal); background: color-mix(in oklab, var(--accent-signal) 15%, transparent); color: var(--accent-signal); }
+  .fg-stage { position: relative; overflow: hidden; background: var(--ink); }
+  .fg-svg { display: block; width: 100%; height: auto; user-select: none; }
+  .fg-caption { padding: 14px 16px; border-top: 1px solid var(--border-subtle); background: var(--bg-primary); }
+  .fg-scrub { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .fg-small { color: var(--text-muted); }
+  .formation-slider { width: 100%; height: 4px; cursor: pointer; appearance: none; background: var(--border-subtle); accent-color: var(--accent-signal); }
+  .fg-captions { display: flex; flex-direction: column; justify-content: space-between; gap: 4px; }
+  .fg-caption-right { color: var(--accent-signal); }
+  @media (min-width: 768px) {
+    .fg-bar, .fg-caption { padding-inline: 20px; }
+    .fg-captions { flex-direction: row; gap: 16px; }
+    .fg-caption-right { text-align: right; }
+  }
+</style>

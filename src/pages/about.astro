@@ -1,4 +1,5 @@
 ---
+import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormationGraphic from '../components/FormationGraphic.astro';
 import PageIntro from '../components/PageIntro.astro';
@@ -28,19 +29,15 @@ const foundingPrinciples = [
 ];
 ---
 <BaseLayout title="About The Spotted Ape — Strategic Decisions & Behavioural Design" description="The independent practice of Marcel Maré. Behavioural science, strategic design and human judgement for organisations in transition.">
-<PageIntro compact eyebrow="The practice / About" description="When conditions turn chaotic, speed is not your friend.">
+<PageIntro scale="long" description="When conditions turn chaotic, speed is not your friend.">
 <Fragment slot="heading">Everyone is moving.<br />Are we moving<br />together?</Fragment>
 <nav class="page-nav" aria-label="About page sections">
-<a href="#section-02">How we work ↓</a>
-<a href="#section-05">The practitioner ↓</a>
+<a href="#section-02">How we work <Arrow direction="down" /></a>
+<a href="#section-05">The practitioner <Arrow direction="down" /></a>
 </nav>
 </PageIntro>
 <section class="about-field theme-dark section-y" id="section-01">
 <div class="wrap">
-<div class="section-top meta">
-<p>Visibility creates orientation</p>
-<p>A field of competing priorities</p>
-</div>
 <div class="split-layout">
 <div class="about-statement">
 <h2>Movement needs<br />direction.</h2>
@@ -55,10 +52,6 @@ const foundingPrinciples = [
 </section>
 <section class="section-y" id="section-02">
 <div class="wrap">
-<div class="section-top meta">
-<p>01 / Principles</p>
-<p>Clarity. Judgement. Responsibility.</p>
-</div>
 <h2 class="section-title" data-reveal>How we work.</h2>
 <div class="principle-list">{foundingPrinciples.map(item=>
 <article class="principle">
@@ -70,16 +63,11 @@ const foundingPrinciples = [
 </section>
 <section class="section-y theme-grey" id="section-05">
 <div class="wrap">
-<div class="section-top meta">
-<p>02 / The practitioner</p>
-<p>Independent strategic practice</p>
-</div>
 <div class="split-layout">
 <div class="practitioner-name">
-<span class="meta">Behind The Spotted Ape</span>
 <h2>Marcel<br />Maré.</h2>
 <p class="lead">Behavioural designer.<br />Researcher. Strategic consultant.</p>
-<a class="text-link" href="https://marcelmare.com">Professional biography <span aria-hidden="true">↗</span>
+<a class="text-link" href="https://marcelmare.com">Professional biography <Arrow />
 </a>
 </div>
 <div class="practitioner-copy">
@@ -128,7 +116,7 @@ const foundingPrinciples = [
 .principle-number {
   font-size: var(--heading-3);
   line-height: 1;
-  color: #777;
+  color: var(--grey-500);
   letter-spacing: -0.05em;
 }
 .principle h3 {
@@ -143,7 +131,7 @@ const foundingPrinciples = [
 .practitioner-name h2 {
   font-size: var(--display-l);
   line-height: 0.9;
-  margin-block: 40px;
+  margin-block: 0 40px;
 }
 .practitioner-name .text-link {
   margin-top: 32px;
@@ -184,13 +172,13 @@ const foundingPrinciples = [
     padding-block: 32px;
   }
   .principle-number {
-    font-size: 24px;
+    font-size: var(--body-large);
   }
   .principle h3 {
     font-size: 32px;
   }
   .principle > p {
-    font-size: 20px;
+    font-size: var(--body);
   }
   .principle-list {
     margin-top: 48px;

@@ -1,14 +1,15 @@
 ---
+import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 ---
 <BaseLayout title="404 — A Different Direction | The Spotted Ape" description="This page could not be found. Return to The Spotted Ape’s strategic decision and behavioural design practice.">
-<PageIntro eyebrow="404 / Page not found" description="This route has reached a dead end. There’s another way forward.">
+<PageIntro description="This route has reached a dead end. There’s another way forward.">
 <Fragment slot="heading">A different<br />direction.</Fragment>
 <div class="actions">
-<a class="button" href="/">Back to the homepage <span aria-hidden="true">↗</span>
+<a class="button" href="/">Back to the homepage <Arrow />
 </a>
-<a class="text-link" href="/thinking/">Explore thinking ↗</a>
+<a class="text-link" href="/thinking/">Explore thinking <Arrow /></a>
 </div>
 </PageIntro>
 </BaseLayout>

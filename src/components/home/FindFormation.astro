@@ -185,16 +185,16 @@ const choices = [
   .choice-hint {
     margin-top: 8px;
     max-width: 68ch;
-    font-size: 14px;
+    font-size: var(--text-small);
     line-height: 1.5;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
   }
   .reset {
     min-height: 44px;
     padding: 10px 18px;
-    border: 1px solid #777;
+    border: 1px solid var(--grey-500);
     border-radius: 999px;
-    font-size: 14px;
+    font-size: var(--text-small);
     white-space: nowrap;
   }
   .reset:hover,
@@ -210,7 +210,7 @@ const choices = [
     max-width: 90ch;
     margin: 0;
     color: var(--signal);
-    font: 12px/1.5 var(--mono);
+    font: var(--text-label)/1.5 var(--mono);
   }
   .choice-grid {
     display: grid;
@@ -223,7 +223,7 @@ const choices = [
   .choice-board,
   .choice-inspector {
     min-width: 0;
-    border-top: 1px solid #777;
+    border-top: 1px solid var(--grey-500);
     padding-top: 16px;
   }
   .choice-board {
@@ -232,8 +232,8 @@ const choices = [
   .board-tag {
     min-height: 2.8em;
     max-width: 50ch;
-    color: #b3b3b3;
-    font: 11px/1.4 var(--mono);
+    color: var(--muted-inverse);
+    font: var(--text-label)/1.4 var(--mono);
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
@@ -257,7 +257,7 @@ const choices = [
   }
   .board-link {
     fill: none;
-    stroke: #777;
+    stroke: var(--grey-500);
     stroke-width: 1.3px;
     stroke-dasharray: 4px 5px;
     vector-effect: non-scaling-stroke;
@@ -278,8 +278,8 @@ const choices = [
     top: calc(var(--node-height) + 18px);
     padding-inline: 6px;
     background: var(--ink);
-    font: 11px/1.4 var(--mono);
-    color: #b3b3b3;
+    font: var(--text-label)/1.4 var(--mono);
+    color: var(--muted-inverse);
     text-align: center;
     text-transform: uppercase;
     pointer-events: none;
@@ -340,7 +340,7 @@ const choices = [
   }
   .choice-outline polygon {
     fill: var(--ink);
-    stroke: #aaa;
+    stroke: var(--grey-400);
     stroke-width: 1.3px;
     vector-effect: non-scaling-stroke;
     transition:
@@ -353,7 +353,7 @@ const choices = [
   }
   .board-choice.is-preview .choice-outline polygon {
     stroke: var(--signal);
-    fill: #1b1b1b;
+    fill: var(--grey-900);
   }
   .board-choice.is-deferred .choice-outline polygon {
     stroke-dasharray: 5px 5px;
@@ -371,7 +371,7 @@ const choices = [
   }
   .shape-title {
     padding-right: 18px;
-    font: 11px/12px var(--mono);
+    font: var(--text-label)/12px var(--mono);
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
@@ -379,7 +379,7 @@ const choices = [
     position: absolute;
     top: 19px;
     right: 24px;
-    font: 18px/1 var(--ui);
+    font: var(--body)/1 var(--ui);
   }
   .shape-name {
     align-self: center;
@@ -392,10 +392,10 @@ const choices = [
     display: block;
   }
   .status-word {
-    font: 11px/12px var(--mono);
+    font: var(--text-label)/12px var(--mono);
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
   }
   .board-choice.is-backed .status-word {
     color: inherit;
@@ -415,7 +415,7 @@ const choices = [
   }
   .constraint-label {
     padding: 6px 8px;
-    font: 11px/1.2 var(--mono);
+    font: var(--text-label)/1.2 var(--mono);
     text-align: center;
     text-transform: uppercase;
   }
@@ -425,9 +425,9 @@ const choices = [
     padding-inline: 8px;
     background: var(--ink);
     white-space: nowrap;
-    font: 10px/1.2 var(--mono);
+    font: var(--text-label)/1.2 var(--mono);
     text-transform: uppercase;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
   }
   .constraint-ring.is-contested {
     border-style: dashed;
@@ -438,8 +438,8 @@ const choices = [
     flex-wrap: wrap;
     gap: 8px 24px;
     padding-top: 24px;
-    color: #b3b3b3;
-    font: 11px/1.5 var(--mono);
+    color: var(--muted-inverse);
+    font: var(--text-label)/1.5 var(--mono);
   }
   .choice-details {
     display: grid;
@@ -449,7 +449,7 @@ const choices = [
   .empty-choice,
   .choice-detail {
     padding: 22px 24px;
-    border: 1px solid #555;
+    border: 1px solid var(--line-inverse);
   }
   .empty-choice {
     min-height: 280px;
@@ -457,7 +457,7 @@ const choices = [
   .choice-detail.is-preview {
     order: 1;
     border-style: dashed;
-    border-color: #777;
+    border-color: var(--grey-500);
   }
   .choice-detail.is-backed {
     box-shadow: inset 3px 0 0 var(--signal);
@@ -465,7 +465,7 @@ const choices = [
   .detail-state {
     margin-bottom: 14px;
     color: var(--signal);
-    font: 11px/1.4 var(--mono);
+    font: var(--text-label)/1.4 var(--mono);
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
@@ -480,8 +480,8 @@ const choices = [
   .empty-choice > p:last-child,
   .consequence p {
     max-width: 54ch;
-    color: #b3b3b3;
-    font-size: 16px;
+    color: var(--muted-inverse);
+    font-size: var(--text-ui);
     line-height: 1.5;
   }
   .choice-detail dl {
@@ -492,8 +492,8 @@ const choices = [
   }
   .choice-detail dt,
   .consequence dt {
-    color: #b3b3b3;
-    font: 11px/1.4 var(--mono);
+    color: var(--muted-inverse);
+    font: var(--text-label)/1.4 var(--mono);
     text-transform: uppercase;
   }
   .choice-detail dt {
@@ -502,7 +502,7 @@ const choices = [
   .choice-detail dd,
   .consequence dd {
     margin: 0;
-    font-size: 16px;
+    font-size: var(--text-ui);
     line-height: 1.45;
   }
   .consequence {
@@ -510,7 +510,7 @@ const choices = [
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     column-gap: 48px;
-    border-top: 1px solid #777;
+    border-top: 1px solid var(--grey-500);
     padding-top: 24px;
   }
   .consequence h4 {
@@ -527,20 +527,20 @@ const choices = [
     margin-top: 10px;
   }
   .fallback {
-    border-block: 1px solid #555;
+    border-block: 1px solid var(--line-inverse);
     padding-block: 20px;
     margin-top: 40px;
     max-width: 80ch;
   }
   .fallback summary {
     min-height: 44px;
-    font-size: 18px;
+    font-size: var(--body);
   }
   .fallback p,
   .fallback-choices dd {
     margin-top: 20px;
-    color: #b3b3b3;
-    font-size: 16px;
+    color: var(--muted-inverse);
+    font-size: var(--text-ui);
     line-height: 1.6;
   }
   .fallback-choices {
@@ -549,7 +549,7 @@ const choices = [
     margin-top: 24px;
   }
   .fallback-choices dt {
-    font-size: 18px;
+    font-size: var(--body);
   }
   .fallback-choices dd {
     margin: 8px 0 0;
@@ -557,8 +557,8 @@ const choices = [
   .scenario-note {
     max-width: 75ch;
     margin-top: 24px;
-    color: #aaa;
-    font-size: 12px;
+    color: var(--grey-400);
+    font-size: var(--text-label);
     line-height: 1.5;
   }
   @media (min-width: 1024px) {
@@ -591,7 +591,7 @@ const choices = [
       padding-left: 20px;
     }
     .shape-name {
-      font-size: 22px;
+      font-size: var(--body-large);
     }
     .choice-detail dl {
       grid-template-columns: 70px minmax(0, 1fr);
@@ -641,7 +641,7 @@ const choices = [
     }
     .choice .section-heading p:not(.meta) {
       margin-top: 24px;
-      font-size: 26px;
+      font-size: var(--body-large);
     }
     .formation-toolbar {
       align-items: start;
@@ -654,7 +654,7 @@ const choices = [
     .formation-toolbar h3 {
       grid-area: 1 / 1;
       max-width: 15ch;
-      font-size: 24px;
+      font-size: var(--body-large);
     }
     .choice-hint {
       grid-area: 2 / 1 / 3 / -1;
@@ -664,14 +664,14 @@ const choices = [
     .reset {
       grid-area: 1 / 2;
       padding: 10px 14px;
-      font-size: 12px;
+      font-size: var(--text-label);
     }
     .reset span {
       margin-left: 6px;
     }
     .selection-status {
       grid-row: 3;
-      font-size: 11px;
+      font-size: var(--text-label);
       min-height: 3em;
     }
     .choice-grid {
@@ -679,7 +679,7 @@ const choices = [
       margin-top: 20px;
     }
     .board-tag {
-      font-size: 10px;
+      font-size: var(--text-label);
     }
     .choice-field {
       --node-height: 144px;
@@ -698,7 +698,7 @@ const choices = [
     }
     .shape-title,
     .status-word {
-      font-size: 10px;
+      font-size: var(--text-label);
     }
     .choice-mark {
       top: 16px;
@@ -708,21 +708,21 @@ const choices = [
       font-size: clamp(18px, 5.8cqi, 26px);
     }
     .dependency-label {
-      font-size: 10px;
+      font-size: var(--text-label);
     }
     .constraint-ring {
       width: 60%;
       min-height: 38px;
     }
     .constraint-label {
-      font-size: 10px;
+      font-size: var(--text-label);
     }
     .constraint-note {
-      font-size: 9px;
+      font-size: var(--text-label);
     }
     .board-tail {
       gap: 8px 16px;
-      font-size: 10px;
+      font-size: var(--text-label);
       padding-top: 20px;
     }
     .choice-details {
@@ -733,7 +733,7 @@ const choices = [
       padding: 20px;
     }
     .choice-details h4 {
-      font-size: 26px;
+      font-size: var(--body-large);
     }
     .consequence {
       grid-template-columns: 1fr;
@@ -741,7 +741,7 @@ const choices = [
       padding-top: 24px;
     }
   }
-  @media (max-width: 359px) {
+  @media (max-width: 375px) {
     .board-choice[data-node] {
       padding-inline: 14px;
     }
@@ -750,13 +750,13 @@ const choices = [
       padding-left: 18px;
     }
     .shape-title {
-      font-size: 9px;
+      font-size: var(--text-label);
     }
     .choice-mark {
       right: 16px;
     }
     .shape-name {
-      font-size: 18px;
+      font-size: var(--body);
     }
   }
 </style>

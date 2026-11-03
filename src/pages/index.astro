@@ -135,7 +135,7 @@ import { publicResources } from '../data/practice';
   margin: 0;
 }
 .text-link :global(.arrow) {
-  font-size: 18px;
+  font-size: var(--body);
 }
 .hero-band {
   margin-top: var(--space-lg);
@@ -164,7 +164,7 @@ import { publicResources } from '../data/practice';
   letter-spacing: -0.03em;
 }
 .band-note {
-  font-size: 16px;
+  font-size: var(--text-ui);
   color: var(--muted);
 }
 
@@ -201,7 +201,7 @@ import { publicResources } from '../data/practice';
 }
 .essay-kind {
   grid-column: 11 / 12;
-  font: 400 12px/1.5 var(--mono);
+  font: 400 var(--text-label)/1.5 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -285,7 +285,7 @@ import { publicResources } from '../data/practice';
     display: block;
   }
   .hero-explanation {
-    font-size: 26px;
+    font-size: var(--body-large);
   }
   .hero-band {
     margin-top: 64px;
@@ -299,7 +299,7 @@ import { publicResources } from '../data/practice';
     padding-bottom: 48px;
   }
   .band-title {
-    font-size: 22px;
+    font-size: var(--body-large);
   }
   .essay-row {
     grid-template-columns: minmax(0, 1fr) 24px;
@@ -316,7 +316,7 @@ import { publicResources } from '../data/practice';
   }
   .essay-row :global(.essay-arrow) {
     grid-column: 2;
-    font-size: 22px;
+    font-size: var(--body-large);
   }
   .invitation-title {
     font-size: clamp(64px, 18vw, 100px);

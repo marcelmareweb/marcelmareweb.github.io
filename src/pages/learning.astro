@@ -1,4 +1,5 @@
 ---
+import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import LearningOptions from '../components/LearningOptions.astro';
@@ -6,18 +7,18 @@ import { publicResources } from '../data/practice';
 import { contactHref } from '../lib/contact';
 ---
 <BaseLayout title="Workshops & Learning | The Spotted Ape" description="Compare custom decision workshops, five executive working days and a self-paced solar investment case. Find a format for your question or start learning now.">
-  <PageIntro compact scale="long" eyebrow="Workshops & learning" description="Work on a live decision. Or develop the judgement to make the next one.">
+  <PageIntro description="Work on a live decision. Or develop the judgement to make the next one.">
     <Fragment slot="heading">Learn by<br />deciding.</Fragment>
-    <nav class="page-nav" aria-label="Choose a learning format"><a href="/workshops">Custom workshops ↗</a><a href="/workshops/strategic-design-leadership/">Executive masterclass ↗</a><a href="/courses">Solar learning case ↗</a></nav>
+    <nav class="page-nav" aria-label="Choose a learning format"><a href="/workshops">Custom workshops <Arrow /></a><a href="/workshops/strategic-design-leadership/">Executive masterclass <Arrow /></a><a href="/courses">Solar learning case <Arrow /></a></nav>
   </PageIntro>
-  <section class="learning-formats wrap" id="formats" aria-label="Workshop and learning formats"><LearningOptions /></section>
-  <section class="section-y theme-yellow"><div class="wrap split-layout"><div><p class="meta">Learning for yourself</p><h2 class="h2">Start with<br />a real question.</h2></div><div><p class="lead">The solar investment case is ready to explore. Open the material, get the workbook and work through a recommendation at your own pace.</p><p class="learning-detail">65–80 minutes. Beginner spreadsheet guidance. Excel &amp; Google Sheets.</p><a class="button" href={publicResources.course} target="_blank" rel="noreferrer">Open the learning case <span aria-hidden="true">↗</span></a><p class="source-note">Opens the learning case in a new tab.</p></div></div></section>
-  <section class="section-y"><div class="wrap split-layout"><div><p class="meta">Working with a team</p><h2 class="h2">Bring the<br />decision.</h2></div><div><p class="lead">Discuss a custom working session, an executive day or a facilitated learning case around the question your team needs to examine.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <span aria-hidden="true">↗</span></a><a class="text-link" href="/services/">Explore how we help ↗</a></div><p class="learning-detail">Considering the executive programme for yourself? <a href={contactHref({ interest: 'masterclass', audience: 'individual', source: '/learning/' })}>Ask about attendance options ↗</a>.</p></div></div></section>
+  <section class="learning-formats wrap" id="formats" aria-labelledby="formats-title"><h2 class="sr-only" id="formats-title">Workshop and learning formats</h2><LearningOptions /></section>
+  <section class="section-y theme-dark"><div class="wrap split-layout"><div><p class="meta">Learning for yourself</p><h2 class="h2">Start with<br />a real question.</h2></div><div><p class="lead">The solar investment case is ready to explore. Open the material, get the workbook and work through a recommendation at your own pace.</p><p class="learning-detail">65–80 minutes. Beginner spreadsheet guidance. Excel &amp; Google Sheets.</p><a class="button button--yellow" href={publicResources.course} target="_blank" rel="noreferrer">Open the learning case <Arrow /></a><p class="source-note">Opens the learning case in a new tab.</p></div></div></section>
+  <section class="section-y"><div class="wrap split-layout"><div><p class="meta">Working with a team</p><h2 class="h2">Bring the<br />decision.</h2></div><div><p class="lead">Discuss a custom working session, an executive day or a facilitated learning case around the question your team needs to examine.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a><a class="text-link" href="/services/">Explore how we help <Arrow /></a></div><p class="learning-detail">Considering the executive programme for yourself? <a href={contactHref({ interest: 'masterclass', audience: 'individual', source: '/learning/' })}>Ask about attendance <span class="nowrap">options <Arrow /></span></a>.</p></div></div></section>
 </BaseLayout>
 <style>
   .learning-formats { padding-bottom: var(--space-lg); }
   .h2 { margin-top: 24px; }
-  .learning-detail { margin-top: 24px; font-size: 18px; line-height: 1.5; max-width: 47ch; }
+  .learning-detail { margin-top: 24px; font-size: var(--body); line-height: 1.5; max-width: 47ch; }
   .button { margin-top: 28px; }
   .actions .button { margin-top: 0; }
 </style>

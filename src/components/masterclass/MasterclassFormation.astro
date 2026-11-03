@@ -6,7 +6,6 @@ import MasterclassProgression from './MasterclassProgression.astro';
 ---
 <section class="masterclass-formation section-y theme-dark" id="programme" data-masterclass>
   <div class="wrap">
-    <div class="section-top meta"><p>01 / The working programme</p><p>Five standalone days. One connected progression.</p></div>
     <div class="formation-heading"><h2>Five decisions.<br />One formation.</h2><p>Explorer → Practitioner → Integrator → Architect → Steward.<br />Choose the question your organisation needs to resolve.</p></div>
     <MasterclassProgression />
     <div class="formation-overview" data-masterclass-overview>
@@ -48,7 +47,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
   .formation-heading > p {
     margin-top: 32px;
     max-width: 65ch;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
     font-size: var(--body-large);
     line-height: 1.35;
     letter-spacing: -0.025em;
@@ -63,16 +62,16 @@ import MasterclassProgression from './MasterclassProgression.astro';
     padding-block: 28px;
   }
   .formation-instructions > p:first-child {
-    font-size: 16px;
+    font-size: var(--text-ui);
     line-height: 1.5;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
   }
   .formation-status {
     max-width: 42ch;
     min-height: 3em;
     margin: 0;
     color: var(--signal);
-    font: 11px/1.5 var(--mono);
+    font: var(--text-label)/1.5 var(--mono);
   }
   .masterclass-grid {
     position: relative;
@@ -91,7 +90,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
   }
   .formation-connections path {
     fill: none;
-    stroke: #777;
+    stroke: var(--grey-500);
     stroke-width: 1.3px;
     stroke-dasharray: 4px 5px;
     vector-effect: non-scaling-stroke;
@@ -104,7 +103,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
     min-height: 210px;
     margin-top: 32px;
     padding-block: 28px;
-    border-block: 1px solid #555;
+    border-block: 1px solid var(--line-inverse);
   }
   .preview-empty {
     display: grid;
@@ -136,25 +135,25 @@ import MasterclassProgression from './MasterclassProgression.astro';
   }
   .day-preview > div > p:first-child:not(.meta) {
     max-width: 55ch;
-    font-size: 18px;
+    font-size: var(--body);
     line-height: 1.5;
   }
   .preview-tool {
     max-width: 55ch;
-    font-size: 16px;
+    font-size: var(--text-ui);
     line-height: 1.5;
-    color: #b3b3b3;
+    color: var(--muted-inverse);
   }
   .preview-tool > span {
     display: block;
     margin-bottom: 8px;
-    font: 10px/1.4 var(--mono);
+    font: var(--text-label)/1.4 var(--mono);
     text-transform: uppercase;
     color: var(--signal);
   }
   .fallback-heading {
     margin-top: 40px;
-    font-size: 18px;
+    font-size: var(--body);
   }
   .masterclass-sessions {
     margin-top: 32px;
@@ -167,10 +166,10 @@ import MasterclassProgression from './MasterclassProgression.astro';
     gap: 16px;
     min-height: 72px;
     padding-block: 24px;
-    border-top: 1px solid #777;
+    border-top: 1px solid var(--grey-500);
   }
   .session-summary > span:last-child {
-    font-size: 24px;
+    font-size: var(--body-large);
     letter-spacing: -0.035em;
   }
   [data-enhanced] .session-summary {
@@ -179,8 +178,8 @@ import MasterclassProgression from './MasterclassProgression.astro';
   .programme-principle {
     max-width: 76ch;
     margin-top: 32px;
-    color: #b3b3b3;
-    font-size: 14px;
+    color: var(--muted-inverse);
+    font-size: var(--text-small);
     line-height: 1.6;
   }
   @media (min-width: 768px) and (max-width: 1199px) {
@@ -206,7 +205,7 @@ import MasterclassProgression from './MasterclassProgression.astro';
       font-size: clamp(44px, 11.5vw, 68px);
     }
     .formation-heading > p {
-      font-size: 22px;
+      font-size: var(--body-large);
     }
     .formation-instructions {
       display: block;
@@ -240,19 +239,19 @@ import MasterclassProgression from './MasterclassProgression.astro';
       padding-block: 24px;
     }
     .preview-empty > p:last-child {
-      font-size: 26px;
+      font-size: var(--body-large);
     }
     .day-preview h3 {
       font-size: 28px;
     }
     .day-preview > div > p:first-child:not(.meta) {
-      font-size: 17px;
+      font-size: var(--text-ui);
     }
     .masterclass-sessions {
       margin-top: 24px;
     }
     .programme-principle {
-      font-size: 13px;
+      font-size: var(--text-small);
     }
   }
 </style>

@@ -91,9 +91,9 @@ const items = [
 <style>
   .strip-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
   .strip-tools { display: flex; align-items: center; gap: 32px; flex-shrink: 0; }
-  .text-link .arrow { font-size: 18px; }
+  .text-link .arrow { font-size: var(--body); }
   .strip-controls:not([hidden]) { display: flex; gap: 8px; }
-  .strip-step { display: grid; place-items: center; width: 56px; height: 56px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; color: var(--ink); font-size: 22px; transition: background-color .6s var(--out); }
+  .strip-step { display: grid; place-items: center; width: 56px; height: 56px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; color: var(--ink); font-size: var(--body-large); transition: background-color .6s var(--out); }
   .strip-step[aria-disabled='true'] { opacity: .3; cursor: default; }
   @media (hover: hover) and (pointer: fine) {
     .strip-step:hover:not([aria-disabled='true']) { background: var(--signal); }
@@ -123,16 +123,16 @@ const items = [
   .strip-media img { width: 78%; transition: transform .8s var(--out); }
   .strip-media--matrix, .strip-media--solar { background: var(--ink); color: var(--paper); }
 
-  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 76%; aspect-ratio: 1; background: #555; border: 1px solid #555; }
-  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
+  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 76%; aspect-ratio: 1; background: var(--line-inverse); border: 1px solid var(--line-inverse); }
+  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: var(--text-small); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
   .mini-matrix .is-marked { background: var(--signal); color: var(--ink); }
 
   .solar-type { display: grid; align-self: stretch; justify-self: stretch; align-content: end; padding: 32px; font-size: clamp(48px, 4.6vw, 84px); font-weight: 600; line-height: .9; letter-spacing: -.05em; }
   .solar-type .is-marked { color: var(--signal); margin-top: .2em; }
 
-  .strip-kind { margin-top: 20px; font: 400 12px/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .strip-kind { margin-top: 20px; font: 400 var(--text-label)/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
   .strip-card h3 { margin-top: 28px; max-width: 18ch; font-size: clamp(28px, 2.2vw, 40px); line-height: 1.05; text-wrap: balance; }
-  .strip-line { margin-top: 16px; max-width: 40ch; font-size: 17px; line-height: 1.5; color: var(--muted); }
+  .strip-line { margin-top: 16px; max-width: 40ch; font-size: var(--text-ui); line-height: 1.5; color: var(--muted); }
 
   @media (hover: hover) and (pointer: fine) {
     .strip-card:hover .strip-media img { transform: scale(1.05); }
@@ -143,8 +143,8 @@ const items = [
     .strip-controls { display: none !important; }
     .strip-track { grid-auto-columns: 80%; margin-top: 40px; }
     .strip-card h3 { font-size: 28px; }
-    .strip-line { font-size: 16px; }
+    .strip-line { font-size: var(--text-ui); }
     .solar-type { padding: 24px; font-size: 52px; }
-    .mini-matrix span { padding: 10px; font-size: 13px; }
+    .mini-matrix span { padding: 10px; font-size: var(--text-small); }
   }
 </style>

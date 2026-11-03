@@ -5,6 +5,7 @@ document.querySelectorAll<HTMLFormElement>('[data-inquiry-form]').forEach((form)
   const confirmation = form.querySelector<HTMLElement>('[data-inquiry-confirmation]')!;
   const fallback = form.querySelector<HTMLAnchorElement>('[data-email-fallback]')!;
   const submit = form.querySelector<HTMLButtonElement>('[data-submit-button]')!;
+  const submitLabel = submit.innerHTML;
   const engagement = form.querySelector<HTMLSelectElement>('#inquiry-engagement')!;
   const moduleSelect = form.querySelector<HTMLSelectElement>('[data-course-module-value]')!;
   const daySelect = form.querySelector<HTMLSelectElement>('[data-programme-day]')!;
@@ -229,7 +230,7 @@ document.querySelectorAll<HTMLFormElement>('[data-inquiry-form]').forEach((form)
       fallback.hidden = false;
     } finally {
       submit.disabled = false;
-      submit.innerHTML = 'Send enquiry <span aria-hidden="true">↗</span>';
+      submit.innerHTML = submitLabel;
       form.removeAttribute('aria-busy');
     }
   });

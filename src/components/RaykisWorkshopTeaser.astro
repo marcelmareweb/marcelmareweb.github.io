@@ -1,13 +1,13 @@
 ---
+import Arrow from './Arrow.astro';
 // Kept as the existing workshop teaser entry point; programme content is independent of legacy maturity frameworks.
 const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'];
 ---
 <section class="masterclass-teaser section-y" id="executive-masterclass" aria-labelledby="masterclass-teaser-title">
   <div class="wrap">
-    <div class="section-top meta"><p>Executive programme / Five standalone working days</p><p>E—P—I—A—S</p></div>
     <div class="teaser-layout">
       <div><h2 id="masterclass-teaser-title">Five days.<br />One coherent direction.</h2><p class="teaser-name">Strategic Design Leadership in the Age of AI</p></div>
-      <div class="teaser-copy"><p>Five strategic decisions: what success means, why customers choose you, the capabilities you need, where to compete and how to govern the choices.</p><p>Choose a standalone executive working day or connect all five as one programme.</p><a class="button" href="/workshops/strategic-design-leadership/">Explore the five-day masterclass <span aria-hidden="true">↗</span></a></div>
+      <div class="teaser-copy"><p>Five strategic decisions: what success means, why customers choose you, the capabilities you need, where to compete and how to govern the choices.</p><p>Choose a standalone executive working day or connect all five as one programme.</p><a class="button" href="/workshops/strategic-design-leadership/">Explore the five-day masterclass <Arrow /></a></div>
     </div>
     <ol class="teaser-progression" aria-label="Programme progression">{stages.map((stage,index) => <li><span>{String(index+1).padStart(2,'0')}</span>{stage}</li>)}</ol>
   </div>
@@ -37,7 +37,7 @@ const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'
   }
   .teaser-copy {
     max-width: 44ch;
-    font-size: 20px;
+    font-size: var(--body);
     line-height: 1.45;
   }
   .teaser-copy .button {
@@ -56,13 +56,13 @@ const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 19px;
+    font-size: var(--body);
     letter-spacing: -0.025em;
   }
   .teaser-progression span {
     padding: 4px;
     background: var(--signal);
-    font: 11px/1.4 var(--mono);
+    font: var(--text-label)/1.4 var(--mono);
   }
   @media (max-width: 1023px) {
     .teaser-layout {
@@ -81,14 +81,14 @@ const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'
       font-size: 44px;
     }
     .teaser-copy {
-      font-size: 19px;
+      font-size: var(--body);
     }
     .teaser-progression {
       grid-template-columns: 1fr 1fr;
       gap: 20px 16px;
     }
     .teaser-progression li {
-      font-size: 16px;
+      font-size: var(--text-ui);
       gap: 8px;
     }
     .teaser-progression li:last-child {

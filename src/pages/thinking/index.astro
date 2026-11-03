@@ -1,4 +1,5 @@
 ---
+import Arrow from '../../components/Arrow.astro';
 import HomeLayout from '../../layouts/HomeLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import StrategicMatrix from '../../components/StrategicMatrix.astro';
@@ -7,42 +8,34 @@ const mapPath = '/thinking/strategic-decision-maps/strategy-illusion/';
 const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html';
 ---
 <HomeLayout title="Strategic Thinking — Decision Maps & Essays | The Spotted Ape" description="Choices, assumptions and consequences. Explore strategic decision maps and essays on human judgement.">
-<PageIntro compact eyebrow="Thinking / Maps & essays" scale="short" description="Choices, assumptions and consequences.">
+<PageIntro scale="short" description="Choices, assumptions and consequences.">
 <Fragment slot="heading">Thinking.</Fragment>
 </PageIntro>
 <section class="thinking-feature section-y theme-grey">
 <div class="wrap">
-<div class="section-top meta">
-<p>01 / Strategic decision map</p>
-<p>An instrument for the conversation</p>
-</div>
 <div class="split-layout">
 <div class="thinking-copy">
 <h2>{strategyIllusion.title}.</h2>
 <p>{strategyIllusion.question}</p>
 <p id={`${strategyIllusion.id}-note`}>{strategyIllusion.insight}</p>
-<a class="text-link" href={mapPath}>Explore the map &amp; café story <span aria-hidden="true">↗</span>
+<a class="text-link" href={mapPath}>Explore the map &amp; café story <Arrow />
 </a>
 </div>
 <div class="thinking-preview" data-reveal>
-<StrategicMatrix matrix={strategyIllusion} compact />
+<StrategicMatrix matrix={strategyIllusion} />
 </div>
 </div>
 </div>
 </section>
 <section class="section-y">
 <div class="wrap">
-<div class="section-top meta">
-<p>02 / Essays</p>
-<p>Thinking in the conditions of real work</p>
-</div>
 <a class="thinking-essay" href={essayPath}>
 <span class="meta">Essay / External</span>
 <div>
 <h2>The Laboratory Fallacy.</h2>
 <p>When a persuasive model meets the conditions of real work.</p>
 </div>
-<span aria-hidden="true">↗</span>
+<Arrow />
 </a>
 </div>
 </section>
@@ -54,7 +47,7 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
   max-width: 12ch;
 }
 .thinking-feature .thinking-preview {
-  background: #fff;
+  background: var(--paper);
 }
 .thinking-essay {
   display: grid;

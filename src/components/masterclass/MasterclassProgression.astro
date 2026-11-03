@@ -13,7 +13,7 @@ import { masterclassDays } from '../../data/executive-masterclass';
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 8px;
     padding-block: 12px;
-    border-block: 1px solid #555;
+    border-block: 1px solid var(--line-inverse);
     background: var(--ink);
   }
   button {
@@ -31,18 +31,18 @@ import { masterclassDays } from '../../data/executive-masterclass';
   }
   button:hover,
   button:focus-visible {
-    background: #242424;
+    background: var(--grey-900);
   }
   button[aria-current='step'] {
     border-color: var(--signal);
     color: var(--signal);
   }
   .progress-day {
-    font: 11px/1 var(--mono);
-    color: #aaa;
+    font: var(--text-label)/1 var(--mono);
+    color: var(--grey-400);
   }
   .progress-name {
-    font-size: 18px;
+    font-size: var(--body);
     font-weight: 600;
     letter-spacing: -0.03em;
   }
@@ -56,7 +56,7 @@ import { masterclassDays } from '../../data/executive-masterclass';
       gap: 8px;
     }
     .progress-name {
-      font-size: 15px;
+      font-size: var(--text-small);
     }
   }
   @media (max-width: 767px) {
@@ -71,14 +71,14 @@ import { masterclassDays } from '../../data/executive-masterclass';
       padding: 8px 4px;
     }
     .progress-day {
-      font-size: 9px;
+      font-size: var(--text-label);
     }
     .progress-name {
       display: none;
     }
     .progress-letter {
       display: block;
-      font-size: 22px;
+      font-size: var(--body-large);
       line-height: 1;
       font-weight: 600;
     }
