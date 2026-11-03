@@ -13,14 +13,6 @@
   font-weight: 400 800;
   font-display: swap;
 }
-/* Mono is reserved for the Find Formation and masterclass formation exercises. */
-@font-face {
-  font-family: JetBrains;
-  src: url('/fonts/jetbrains-latin.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-}
 
 :root {
   /* Colour: ink, paper and signal. Signal marks commitment only. */
@@ -61,7 +53,6 @@
   /* Font families. */
   --ui: Archivo, Arial, sans-serif;
   --read: var(--ui);
-  --mono: JetBrains, ui-monospace, monospace;
 
   /* Font weights. */
   --weight-regular: 400;
@@ -85,6 +76,8 @@
   --text-label: 0.75rem;
   /* One label style for record fields, ledger heads, captions and data, in Archivo like everything else. */
   --font-label: var(--weight-medium) var(--text-small)/1.4 var(--ui);
+  /* Labels inside the formation diagrams, where space is tight. */
+  --font-label-small: var(--weight-medium) var(--text-label)/1.25 var(--ui);
   /* Compact headings for screens below 768px. Headlines that need their own size keep it. */
   --compact-xs: 1.75rem;
   --compact-sm: 2rem;

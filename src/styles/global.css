@@ -59,7 +59,7 @@
   kbd,
   samp,
   pre {
-    font-family: var(--mono);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-feature-settings: normal;
     font-variation-settings: normal;
     font-size: 1em;
@@ -364,12 +364,10 @@ button:disabled {
   letter-spacing: 0;
   color: var(--text-muted);
 }
-/* The two formation exercises keep their original instrument labels. */
+/* The formation exercises use the site label, in their own colour. */
 [data-formation] .meta,
 [data-masterclass] .meta {
-  font: 400 var(--text-label)/var(--leading-copy) var(--mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: var(--font-label);
   color: inherit;
 }
 

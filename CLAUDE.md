@@ -34,7 +34,7 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 **Fonts.** All self-hosted from `public/fonts/` (OFL); never linked from Google’s servers. No serifs.
 - Archivo variable: 600 for display, 400 for reading, 500 for UI.
 - One family. No narrow or condensed faces: record field labels, ledger column heads, captions, tables and data use Archivo 500 at `--text-small` through the `--font-label` token, in sentence case.
-- JetBrains Mono is retired from site chrome. It remains only inside the Find Formation and masterclass formation exercises until they are restyled without changing their behaviour.
+- No monospace face. The Find Formation, masterclass and About formation exercises use `--font-label`, and `--font-label-small` (Archivo 500, 12px) for labels inside their diagrams, in sentence case with no tracking.
 
 **Type scale.** Existing tokens: `--display-2xl` … `--heading-4`, `--body-large`, `--body`, then `--text-ui` 16px, `--text-small` 14px, `--text-label` 12px (the minimum). Headlines are short, end in a period and break deliberately; mobile headline sizes are set per headline.
 

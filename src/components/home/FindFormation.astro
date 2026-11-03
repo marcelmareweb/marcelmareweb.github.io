@@ -205,7 +205,7 @@ const choices = [
     max-width: 90ch;
     margin: 0;
     color: var(--signal);
-    font: var(--text-label)/var(--leading-copy) var(--mono);
+    font: var(--font-label);
   }
   .choice-grid {
     display: grid;
@@ -228,9 +228,7 @@ const choices = [
     min-height: 2.8em;
     max-width: 50ch;
     color: var(--muted-inverse);
-    font: var(--text-label)/1.4 var(--mono);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    font: var(--font-label);
   }
   .choice-field {
     --node-height: 156px;
@@ -273,10 +271,9 @@ const choices = [
     top: calc(var(--node-height) + 18px);
     padding-inline: 6px;
     background: var(--ink);
-    font: var(--text-label)/1.4 var(--mono);
+    font: var(--font-label-small);
     color: var(--muted-inverse);
     text-align: center;
-    text-transform: uppercase;
     pointer-events: none;
     transform: translateX(-50%);
   }
@@ -366,9 +363,7 @@ const choices = [
   }
   .shape-title {
     padding-right: 18px;
-    font: var(--text-label)/12px var(--mono);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    font: var(--font-label-small);
   }
   .choice-mark {
     position: absolute;
@@ -387,9 +382,7 @@ const choices = [
     display: block;
   }
   .status-word {
-    font: var(--text-label)/12px var(--mono);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    font: var(--font-label-small);
     color: var(--muted-inverse);
   }
   .board-choice.is-backed .status-word {
@@ -410,9 +403,8 @@ const choices = [
   }
   .constraint-label {
     padding: 6px 8px;
-    font: var(--text-label)/1.2 var(--mono);
+    font: var(--font-label-small);
     text-align: center;
-    text-transform: uppercase;
   }
   .constraint-note {
     position: absolute;
@@ -420,8 +412,7 @@ const choices = [
     padding-inline: 8px;
     background: var(--ink);
     white-space: nowrap;
-    font: var(--text-label)/1.2 var(--mono);
-    text-transform: uppercase;
+    font: var(--font-label-small);
     color: var(--muted-inverse);
   }
   .constraint-ring.is-contested {
@@ -434,7 +425,7 @@ const choices = [
     gap: 8px 24px;
     padding-top: 24px;
     color: var(--muted-inverse);
-    font: var(--text-label)/var(--leading-copy) var(--mono);
+    font: var(--font-label);
   }
   .choice-details {
     display: grid;
@@ -460,9 +451,7 @@ const choices = [
   .detail-state {
     margin-bottom: 14px;
     color: var(--signal);
-    font: var(--text-label)/1.4 var(--mono);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    font: var(--font-label);
   }
   .choice-details h4 {
     max-width: 26ch;
@@ -488,8 +477,7 @@ const choices = [
   .choice-detail dt,
   .consequence dt {
     color: var(--muted-inverse);
-    font: var(--text-label)/1.4 var(--mono);
-    text-transform: uppercase;
+    font: var(--font-label);
   }
   .choice-detail dt {
     padding-top: 3px;
