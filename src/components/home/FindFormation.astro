@@ -39,7 +39,7 @@ const choices = [
 ];
 ---
 
-<section class="movement choice theme-dark" id="choice" data-formation>
+<section class="movement formation-exercise theme-dark" id="choice" data-formation>
   <div class="wrap">
     <div class="section-heading">
       <div>
@@ -151,14 +151,14 @@ const choices = [
 </script>
 
 <style>
-  .choice .section-heading {
+  .formation-exercise .section-heading {
     display: block;
   }
-  .choice .section-heading h2 {
+  .formation-exercise .section-heading h2 {
     font-size: var(--display-l);
     max-width: none;
   }
-  .choice .section-heading p:not(.meta) {
+  .formation-exercise .section-heading p:not(.meta) {
     max-width: 44ch;
     font-size: clamp(26px, 2.25vw, 36px);
     line-height: var(--leading-snug);
@@ -586,7 +586,7 @@ const choices = [
     }
   }
   @media (max-width: 1023px) {
-    .choice .section-heading h2 {
+    .formation-exercise .section-heading h2 {
       font-size: clamp(68px, 10vw, 110px);
     }
     .choice-grid {
@@ -616,10 +616,10 @@ const choices = [
     }
   }
   @media (max-width: 767px) {
-    .choice .section-heading h2 {
+    .formation-exercise .section-heading h2 {
       font-size: clamp(56px, 14vw, 80px);
     }
-    .choice .section-heading p:not(.meta) {
+    .formation-exercise .section-heading p:not(.meta) {
       margin-top: 24px;
       font-size: var(--body-large);
     }
