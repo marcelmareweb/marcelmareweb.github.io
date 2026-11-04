@@ -5,6 +5,11 @@ import Arrow from './Arrow.astro';
 <div class="wrap">
 <h2 class="section-title" data-reveal>Begin with what<br />people actually do.</h2>
 <article class="research-spread split-layout" id="project">
+<div class="project-copy project-intro">
+<p class="meta">Participatory behavioural research</p>
+<h3>Cookstove adoption in South Africa.</h3>
+<p class="research-lead">Instead of a safety lecture, bread. Five women from Dunoon co-designed the intervention over five baking sessions at a community bakery. BREADrev then took it into Dunoon.</p>
+</div>
 <div class="research-photos">
 <figure>
 <img src="/images/research/bakery-workshop.jpg" width="1058" height="793" loading="lazy" decoding="async" alt="Workshop participants with mugs of coffee stand around a bakery table while the facilitator works dough in a large tub, an oven behind him." />
@@ -20,10 +25,7 @@ import Arrow from './Arrow.astro';
 </figure>
 <p class="meta">Faces obscured as in the published study.</p>
 </div>
-<div class="project-copy">
-<p class="meta">Participatory behavioural research</p>
-<h3>Cookstove adoption in South Africa.</h3>
-<p class="research-lead">Instead of a safety lecture, bread. Five women from Dunoon co-designed the intervention over five baking sessions at a community bakery. BREADrev then took it into Dunoon.</p>
+<div class="project-copy project-body">
 <dl class="record" aria-label="Cookstove research">
 <div class="record-row">
 <dt>Question</dt>
@@ -65,12 +67,16 @@ import Arrow from './Arrow.astro';
 </div>
 </section>
 <style>
-.research-spread { margin-top: var(--space-sm); }
+.research-spread { margin-top: var(--space-sm); grid-template-areas: "photos intro" "photos body"; grid-template-rows: auto 1fr; row-gap: 0; }
+/* On phones the label, title and lead come before the photos they explain. */
+.project-intro { grid-area: intro; }
+.research-photos { grid-area: photos; }
+.project-body { grid-area: body; }
 .research-photos { display: grid; gap: 32px; }
 .research-photos figure { margin: 0; }
 .research-photos img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); }
 .research-photos figcaption { margin-top: 12px; }
 .research-lead { max-width: 44ch; margin-block: 20px 32px; font-size: var(--body-large); line-height: var(--leading-snug); letter-spacing: var(--tracking-copy-large); }
 .workshop-days { display: grid; gap: 12px; margin: 12px 0; padding: 0; list-style: none; }
-@media (max-width: 767px) { .research-spread { margin-top: 40px; } .research-photos { gap: 24px; } }
+@media (max-width: 767px) { .research-spread { margin-top: 40px; grid-template-areas: "intro" "photos" "body"; grid-template-rows: auto; row-gap: 40px; } .research-lead { margin-bottom: 0; } .research-photos { gap: 24px; } }
 </style>

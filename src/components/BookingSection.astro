@@ -78,8 +78,20 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
             <option value="">Not specified</option><option value="individual">Myself / Ask about attendance options</option><option value="team">A team or organisation</option>
           </select>
         </div>
+        <script is:inline>
+          // Hide the context-only fields before first paint so they don't shift the form; enquiry-form.ts keeps them in sync afterwards. Without JavaScript all of them stay available.
+          (() => {
+            const form = document.currentScript.closest('form');
+            const params = new URLSearchParams(location.search);
+            const id = params.get('interest') || (/^0?[1-6]$/.test(params.get('module') || '') ? 'course' : params.get('focus') === 'workshops' ? 'workshop' : form.dataset.defaultInterest);
+            form.querySelector('[data-programme-day-field]').hidden = id !== 'masterclass';
+            form.querySelector('[data-attendance-field]').hidden = id !== 'masterclass';
+            form.querySelector('[data-course-module-field]').hidden = id !== 'course';
+            form.querySelector('[data-enquiry-context]').hidden = !id;
+          })();
+        </script>
         <details class="form-wide form-more">
-          <summary>Add your organisation and team size <span>(optional)</span></summary>
+          <summary class="disclosure"><span class="disclosure-label">Add your organisation and team size <span>(optional)</span></span><Arrow direction="down" /></summary>
           <div class="form-more-fields">
             <div><label for="inquiry-role-organization">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="inquiry-role-organization" name="roleOrganization" autocomplete="organization" /></div>
             <div>
@@ -151,7 +163,7 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
   padding-block: 14px;
   font-weight: 600;
 }
-.form-more summary span {
+.form-more .disclosure-label > span {
   font-weight: 400;
   color: var(--text-muted);
 }

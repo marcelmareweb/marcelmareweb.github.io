@@ -242,7 +242,7 @@ const ledgerSample = [
 <div class="form-wide"><label class="field-label" for="guide-question">What would you like to explore?</label><textarea class="inquiry-field" id="guide-question" rows="4"></textarea></div>
 <div><label class="field-label" for="guide-area">Area of interest <span>(optional)</span></label><select class="inquiry-field" id="guide-area"><option>I’m not sure yet</option><option>Strategic Decision Design</option><option>Behavioural Design</option></select></div>
 <div><label class="field-label" for="guide-disabled">Disabled field <span>(example)</span></label><input class="inquiry-field" id="guide-disabled" value="Not editable" disabled /></div>
-<details class="form-wide guide-more"><summary>Add your organisation and team size <span>(optional)</span></summary><div class="guide-more-fields"><div><label class="field-label" for="guide-org">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="guide-org" autocomplete="off" /></div></div></details>
+<details class="form-wide guide-more"><summary class="disclosure"><span class="disclosure-label">Add your organisation and team size <span>(optional)</span></span><Arrow direction="down" /></summary><div class="guide-more-fields"><div><label class="field-label" for="guide-org">Role &amp; organisation <span>(optional)</span></label><input class="inquiry-field" id="guide-org" autocomplete="off" /></div></div></details>
 </div>
 <p class="guide-note">Focus: tab into a field for the 2px ink outline. Invalid: the email field shows the ink border once you edit it and leave it invalid.</p>
 </div>
@@ -380,7 +380,7 @@ const ledgerSample = [
   .form-wide { grid-column: 1 / -1; }
   .guide-more { border-top: 1px solid var(--line); }
   .guide-more summary { padding-block: 14px; font-weight: var(--weight-display); }
-  .guide-more summary span { font-weight: var(--weight-regular); color: var(--muted); }
+  .guide-more .disclosure-label > span { font-weight: var(--weight-regular); color: var(--muted); }
   .guide-more-fields { padding-top: 12px; max-width: 50%; }
 
   @media (max-width: 1023px) {

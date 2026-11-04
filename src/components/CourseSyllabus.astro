@@ -226,11 +226,11 @@ const initialModule = modules[0];
 </div>
 <p class="module-summary" data-course-value="summary">{initialModule.summary}</p>
 <details class="module-detail">
-<summary>Analytical &amp; spreadsheet mechanics</summary>
+<summary class="disclosure"><span>Analytical &amp; spreadsheet mechanics</span><Arrow direction="down" /></summary>
 <p data-course-value="analyticalMechanics">{initialModule.analyticalMechanics}</p>
 </details>
 <details class="module-detail">
-<summary>Behavioural &amp; judgement shift</summary>
+<summary class="disclosure"><span>Behavioural &amp; judgement shift</span><Arrow direction="down" /></summary>
 <p data-course-value="behaviouralShift">{initialModule.behaviouralShift}</p>
 </details>
 <div class="module-output">
@@ -249,7 +249,7 @@ const initialModule = modules[0];
 </div>
 <div class="course-fallback" data-course-fallback>{modules.map(mod=>
 <details>
-<summary>{mod.number} / {mod.title}</summary>
+<summary class="disclosure"><span>{mod.number} / {mod.title}</span><Arrow direction="down" /></summary>
 <p>{mod.summary}</p>
 <p>{mod.deliverable}</p>
 <a href={mod.liveUrl}>Open this learning module <Arrow /></a>

@@ -265,6 +265,23 @@ summary {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+/* Disclosures use the site arrow instead of the browser's triangle: down when closed, up when open. */
+summary.disclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  list-style: none;
+}
+summary.disclosure::-webkit-details-marker {
+  display: none;
+}
+summary.disclosure > .arrow {
+  transition: transform 300ms cubic-bezier(0, 0, .2, 1);
+}
+details[open] > summary.disclosure > .arrow {
+  transform: rotate(-45deg);
+}
 a {
   color: inherit;
   text-underline-offset: var(--underline-offset);
@@ -307,6 +324,13 @@ h4 {
 }
 p + p {
   margin-top: 1em;
+}
+/* Avoid one-word last lines in running text; display headlines keep their authored breaks. */
+p,
+li,
+dd,
+figcaption {
+  text-wrap: pretty;
 }
 em {
   font-style: normal;

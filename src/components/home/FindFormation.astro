@@ -1,4 +1,5 @@
 ---
+import Arrow from '../Arrow.astro';
 const choices = [
   {
     id: 'market',
@@ -52,7 +53,7 @@ const choices = [
         <h3>Back up to two priorities.</h3>
         <p class="choice-hint" id="formation-hint">Hover over each priority to explore. Click or tap to back a decision. Select it again to clear it.</p>
       </div>
-      <button class="reset" type="button" data-reset>Reset choices <span aria-hidden="true">↺</span></button>
+      <button class="reset" type="button" data-reset>Reset choices</button>
       <p class="selection-status" data-status role="status" aria-live="polite" aria-atomic="true"></p>
     </div>
     <div class="choice-grid">
@@ -130,7 +131,7 @@ const choices = [
       </div>
     </div>
     <details class="fallback" data-worked-example open>
-      <summary>Read the worked example and its trade-offs</summary>
+      <summary class="disclosure"><span>Read the worked example and its trade-offs</span><Arrow direction="down" /></summary>
       <p><strong>Backing another market and closer customer relationships</strong> requires customer evidence and service capacity. Both compete for leadership attention. Reliability and AI workflow changes are deferred.</p>
       <p>Investigate demand and capacity before committing. There is no correct formation.</p>
       <dl class="fallback-choices">
