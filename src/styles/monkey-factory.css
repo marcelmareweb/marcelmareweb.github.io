@@ -1,5 +1,5 @@
-@font-face{font-family:FactoryArchivo;src:url('/fonts/archivo-latin.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
-.factory-lab{margin:0;background:#fff;color:#121211;font-family:FactoryArchivo,Arial,sans-serif;line-height:1.6}
+@font-face{font-family:FactoryInter;src:url('/fonts/inter-latin.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+.factory-lab{margin:0;background:#fff;color:#121211;font-family:FactoryInter,Arial,sans-serif;line-height:1.6}
 .factory-lab *{box-sizing:border-box}.factory-lab a{color:inherit;text-underline-offset:4px}.factory-lab a:focus-visible,.factory-lab button:focus-visible{outline:3px solid #121211;outline-offset:4px}
 .factory-lab-header,.factory-lab-footer,.monkey-factory{width:min(1320px,calc(100% - 40px));margin-inline:auto}
 .factory-lab-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid #d8d8d8;font-size:12px}.factory-lab-header>a{font-weight:700;letter-spacing:.03em;text-decoration:none}.factory-lab-header>span{color:#555;text-align:right}

@@ -42,7 +42,7 @@ Before any visual or interaction change, consult [docs/design-reference/README.m
 
 Use black and white as the predominant visual system, with yellow as the distinctive accent. Neutral greys may support hierarchy. Do not use the previous terracotta, ochre, sand or stone palette.
 
-Typography is central to the identity: oversized expressive sans-serif, weight 600, sharp scale contrasts, deliberate line breaks, tight tracking and optical alignment. Use the measured Huge reference scale, leading, spacing and interaction timings documented in the investigation. Use self-hosted Archivo as the available sans-serif; do not copy proprietary reference fonts. Do not introduce editorial serifs: the actual reference provides no justification for them.
+Typography is central to the identity: oversized expressive sans-serif, weight 600, sharp scale contrasts, deliberate line breaks, tight tracking and optical alignment. Use the measured Huge reference scale, leading, spacing and interaction timings documented in the investigation. Use self-hosted Inter (variable, with optical sizes) as the available sans-serif, the closest open-licence match to the reference's Matter; do not copy proprietary reference fonts. Do not introduce editorial serifs: the actual reference provides no justification for them.
 
 ### Structural reference: hugeinc.com
 

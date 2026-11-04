@@ -18,13 +18,13 @@ const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'
   }
   .teaser-layout {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: end;
     gap: 64px;
   }
   h2 {
     max-width: 18ch;
-    font-size: var(--heading-2);
+    font-size: min(var(--heading-2), calc((100vw - 144px) * 0.06)); /* keeps "One coherent direction." on one line in its column */
     line-height: 0.98;
     letter-spacing: var(--tracking-display);
   }
@@ -33,7 +33,7 @@ const stages = ['Explorer', 'Practitioner', 'Integrator', 'Architect', 'Steward'
     margin-top: 32px;
     font-size: var(--body-large);
     line-height: 1.25;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.022em;
   }
   .teaser-copy {
     max-width: 44ch;

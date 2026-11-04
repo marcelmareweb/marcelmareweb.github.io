@@ -6,12 +6,23 @@
  */
 
 /* Fonts: self-hosted variable files in public/fonts (SIL Open Font License). */
+/* Inter variable: weight and optical size (opsz 14–32), so headlines get the Display cut. */
 @font-face {
-  font-family: Archivo;
-  src: url('/fonts/archivo-latin.woff2') format('woff2');
+  font-family: Inter;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
   font-style: normal;
-  font-weight: 400 800;
+  font-weight: 100 900;
   font-display: swap;
+}
+
+/* Arial scaled to Inter's metrics, so text barely moves when Inter arrives. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.12%;
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
 }
 
 :root {
@@ -51,7 +62,7 @@
   --border-subtle: var(--line);
 
   /* Font families. */
-  --ui: Archivo, Arial, sans-serif;
+  --ui: Inter, 'Inter Fallback', Arial, sans-serif;
   --read: var(--ui);
 
   /* Font weights. */
@@ -74,7 +85,7 @@
   --text-ui: 1rem;
   --text-small: 0.875rem;
   --text-label: 0.75rem;
-  /* One label style for record fields, ledger heads, captions and data, in Archivo like everything else. */
+  /* One label style for record fields, ledger heads, captions and data, in Inter like everything else. */
   --font-label: var(--weight-medium) var(--text-small)/1.4 var(--ui);
   /* Labels inside the formation diagrams, where space is tight. */
   --font-label-small: var(--weight-medium) var(--text-label)/1.25 var(--ui);
@@ -86,17 +97,18 @@
   --compact-xl: 3.5rem;
 
   /* Leading. */
-  --leading-display: 0.9;
+  --leading-display: 0.92;
   --leading-heading: 1.05;
   --leading-snug: 1.2;
   --leading-copy: 1.5;
   --leading-body: 1.55;
 
-  /* Tracking. Display type is tight; reading text is untracked. */
-  --tracking-display: -0.05em;
-  --tracking-heading: -0.04em;
-  --tracking-ui: -0.03em;
-  --tracking-copy: -0.025em;
+  /* Tracking, following Inter's size-dependent spacing: tight at display sizes, near zero for labels. */
+  --tracking-display: -0.035em;
+  --tracking-heading: -0.03em;
+  --tracking-ui: -0.011em;
+  --tracking-copy: -0.014em;
+  --tracking-copy-large: -0.019em;
 
   /* Spacing scale (fluid section rhythm). */
   --space-xs: clamp(2.75rem, 2.42rem + 0.52vw, 3rem);

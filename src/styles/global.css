@@ -12,6 +12,15 @@
     border: 0 solid;
   }
 
+  /* Inter: round quotes and commas (ss03), a tailed l so l, I and 1 stay distinct (cv05).
+     Important, because every `font:` shorthand would otherwise reset it; a layered important
+     still yields to an inline style. */
+  *,
+  ::before,
+  ::after {
+    font-feature-settings: 'ss03', 'cv05' !important;
+  }
+
   html,
   :host {
     line-height: 1.5;
@@ -20,6 +29,7 @@
     font-family: var(--ui);
     font-feature-settings: normal;
     font-variation-settings: normal;
+    font-optical-sizing: auto;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -435,7 +445,7 @@ textarea.inquiry-field {
 }
 .record-row > dd strong {
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-copy);
 }
 
 /* Choice control: square corners; the chosen alternative fills yellow. */
@@ -523,7 +533,7 @@ textarea.inquiry-field {
   font-size: clamp(1.625rem, 1.2rem + 1vw, 2.5rem);
   font-weight: 600;
   line-height: 1.04;
-  letter-spacing: -0.045em;
+  letter-spacing: var(--tracking-heading);
   text-wrap: balance;
 }
 .ledger--large .ledger-name {
@@ -888,13 +898,14 @@ button:focus-visible .roll-char {
 
 .brand {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  font-size: var(--text-small);
-  font-weight: 700;
-  letter-spacing: 0.035em;
+  /* 15px caps sit at the nav's cap height; Inter capitals need open tracking at this size. */
+  font-size: 0.9375rem;
+  font-weight: var(--weight-display);
+  letter-spacing: 0.06em;
   line-height: 1.1;
 }
 .brand img {
@@ -905,6 +916,14 @@ button:focus-visible .roll-char {
 .brand-word {
   display: block;
   white-space: nowrap;
+  /* Cancel the tracking after the final letter so the lockup's right edge is true. */
+  margin-right: -0.06em;
+}
+/* The narrowest phones keep room for the Menu pill. */
+@media (max-width: 374px) {
+  .brand {
+    font-size: var(--text-small);
+  }
 }
 
 .page-intro {
@@ -946,7 +965,7 @@ button:focus-visible .roll-char {
   font-size: var(--heading-4);
   font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -0.045em;
+  letter-spacing: var(--tracking-heading);
   max-width: 26ch;
   text-wrap: balance;
 }
@@ -1096,8 +1115,8 @@ button:focus-visible .roll-char {
   display: block;
   overflow: hidden;
   /* Room for descenders inside the mask without changing the headline's line spacing. */
-  padding-bottom: 0.14em;
-  margin-bottom: -0.14em;
+  padding-bottom: 0.18em;
+  margin-bottom: -0.18em;
 }
 .line-inner {
   display: block;

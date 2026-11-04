@@ -2,7 +2,7 @@
 
 This is the authoritative implementation direction. It supersedes earlier proposals and historical descriptions of the local site. Huge observations and measurements remain research evidence, not Spotted Ape positioning.
 
-The chosen visual direction, **The Decision Record** (November 2026), is recorded in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It refines this document: yellow is an accent only (commitment, current state, hover and focus), offerings, cases and thinking are Huge-style cards (`Card.astro`) with ledger rows kept for dense reference lists, Archivo (the `--font-label` token, no narrow faces) replaces monospace for labels, and every page's first viewport holds content to read or use.
+The chosen visual direction, **The Decision Record** (November 2026), is recorded in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It refines this document: yellow is an accent only (commitment, current state, hover and focus), offerings, cases and thinking are Huge-style cards (`Card.astro`) with ledger rows kept for dense reference lists, Inter (the `--font-label` token, no narrow faces) replaces monospace for labels, and every page's first viewport holds content to read or use.
 
 ## Identity and practice
 
@@ -22,7 +22,7 @@ Use confident editorial compositions, substantial changes of scale, generous mea
 
 ## Typography from actual reference evidence
 
-The reference uses Matter at 400/500/600, not an editorial serif. The implementation uses the existing self-hosted Archivo at 400–800 as a practical sans-serif alternative, predominantly 400 for reading and 600 for display.
+The reference uses Matter at 400/500/600, not an editorial serif. The implementation uses self-hosted Inter (variable weight and optical size, OFL) as the closest open sans-serif to Matter: 400 for reading, 500 for UI and 600 for display, with optical sizing on so headlines use the Display cut.
 
 At 1440px, the measured reference scale is:
 

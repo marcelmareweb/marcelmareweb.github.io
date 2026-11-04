@@ -93,7 +93,7 @@ const items = [
   import '../../scripts/work-strip';
 </script>
 <style>
-  .strip-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+  .strip-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px 40px; }
   .strip-sub { margin-top: 20px; font-size: var(--heading-4); font-weight: var(--weight-display); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); color: var(--muted); }
   .strip-tools { display: flex; align-items: center; gap: 32px; flex-shrink: 0; }
   .strip-links { display: grid; justify-items: start; gap: 8px; }
@@ -137,7 +137,7 @@ const items = [
   .media-type--title { font-size: clamp(56px, 5vw, 96px); line-height: var(--leading-display); letter-spacing: var(--tracking-display); }
 
   .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 88%; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-tile); background: var(--line-inverse); border: 1px solid var(--line-inverse); }
-  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: var(--text-small); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
+  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: var(--text-small); font-weight: 600; line-height: 1.1; letter-spacing: -0.006em; }
   .mini-matrix .is-marked { background: var(--signal); color: var(--ink); }
 
   @media (max-width: 767px) {

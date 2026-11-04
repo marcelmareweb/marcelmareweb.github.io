@@ -112,7 +112,7 @@ The full-bleed outer grid has named `full` and `content` lines; `.layout-grid` h
 
 ## 5. Definitive Spotted Ape implementation
 
-See [DEFINITIVE_DIRECTION.md](DEFINITIVE_DIRECTION.md). Use the measured reference display/heading clamp formulas above with self-hosted Archivo, weights 400 and 600. Black `#0D0B0A`, white `#FFFFFF`, yellow `#FFFF00`; greys `#F3F3F3`, `#D9D9D9`, `#626262`. No warm neutral palette or serif option.
+See [DEFINITIVE_DIRECTION.md](DEFINITIVE_DIRECTION.md). Use the measured reference display/heading clamp formulas above with self-hosted Inter (optical sizing on), weights 400, 500 and 600; tracking follows Inter's size-dependent curve in `src/styles/tokens.css`, not the reference's −.07em. Black `#0D0B0A`, white `#FFFFFF`, yellow `#FFFF00`; greys `#F3F3F3`, `#D9D9D9`, `#626262`. No warm neutral palette or serif option.
 
 Use 174.944px display for the longer homepage lines and 145.648px section display at 1440px. Short page openings may use 248.992px; longer course/about titles use the measured 98/145.648px roles with deliberate wrapping. Preserve .88/.9 display leading and −.05em tracking; allow readable leading for substantive body text. Shared navigation is 16px with −.03em tracking.
 
