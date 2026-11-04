@@ -9,7 +9,7 @@ const cases = await getCollection('cases');
 const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
 ---
 <BaseLayout title="Work & Research | The Spotted Ape" description="Examine a strategic decision case account and behavioural research on cookstove adoption. Source-labelled evidence, methods and qualified findings.">
-  <PageIntro description="Case accounts, research and the questions behind the work. Examine the evidence and its limits.">
+  <PageIntro description="What did we assume? What do people actually do? The evidence, and its limits.">
     <Fragment slot="heading">The work.<br />The evidence.</Fragment>
   </PageIntro>
   {policy && <section class="case-feature section-y theme-dark" id="case-account">
@@ -22,7 +22,7 @@ const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-r
     </div>
   </section>}
   <ResearchEvidence />
-  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">From evidence<br />to a question.</h2><div><p class="lead">Explore the kinds of strategic and behavioural questions the practice helps examine, or bring a question of your own.</p><div class="actions"><a class="text-link" href="/services/">How we help <Arrow /></a><a class="button" href={contactHref({ source: '/work/' })}>Discuss your question <Arrow /></a></div></div></div></section>
+  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">From evidence<br />to a question.</h2><div><p class="lead">Bring one of your own.</p><div class="actions"><a class="text-link" href="/services/">How we help <Arrow /></a><a class="button" href={contactHref({ source: '/work/' })}>Discuss your question <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <style>
   .case-feature h2 { font-size: var(--heading-2); line-height: 1.03; max-width: 20ch; }

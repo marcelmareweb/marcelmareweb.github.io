@@ -416,22 +416,18 @@ textarea.inquiry-field {
   min-height: 160px;
   resize: vertical;
 }
-/* Decision record: the one bordered instrument. */
+/* Decision record: one ink opening rule, then field-and-value rows separated by space alone.
+   No panel fill and no row rules: the label column already marks each row. */
 .record {
   margin: 0;
   border-top: 1px solid var(--ink);
-}
-.record--panel {
-  padding-inline: 24px;
-  background: var(--surface);
 }
 .record-row {
   display: grid;
   grid-template-columns: minmax(7rem, 2fr) minmax(0, 10fr);
   gap: 8px var(--grid-gap);
   align-items: baseline;
-  padding-block: 16px 18px;
-  border-bottom: 1px solid var(--line);
+  padding-block: 16px;
 }
 .record-row > dt {
   font: var(--font-label);
@@ -1243,9 +1239,6 @@ button:focus-visible .roll-char {
   .record-row {
     grid-template-columns: 1fr;
     gap: 6px;
-  }
-  .record--panel {
-    padding-inline: 16px;
   }
   .ledger-head {
     display: none;

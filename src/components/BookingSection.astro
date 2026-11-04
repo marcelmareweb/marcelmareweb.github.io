@@ -7,11 +7,13 @@ interface Props {
   defaultEngagement?: string;
   standalone?: boolean;
   heading?: string;
+  lead?: string;
 }
 const {
   defaultEngagement = '',
   standalone = false,
   heading = 'What needs deciding?',
+  lead = 'Bring the alternatives, the assumptions and the difficult questions.',
 } = Astro.props;
 const Heading = standalone ? 'h1' : 'h2';
 const ConfirmationHeading = standalone ? 'h2' : 'h3';
@@ -25,7 +27,7 @@ const inquiryEndpoint = import.meta.env.PUBLIC_INQUIRY_ENDPOINT ?? '';
     <div class="booking-layout">
       <div class="booking-copy">
         <Heading id="booking-title">{heading}</Heading>
-        <p class="lead">Bring the alternatives, the assumptions and the difficult questions.</p>
+        <p class="lead">{lead}</p>
         <a class="booking-email" href="mailto:hello@thespottedape.com"><span class="nowrap">hello@thespottedape.com <Arrow /></span></a>
         <p class="meta">Marcel Maré / Cape Town, South Africa</p>
       </div>

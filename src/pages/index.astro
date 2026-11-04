@@ -1,89 +1,41 @@
 ---
 import HomeLayout from '../layouts/HomeLayout.astro';
 import Arrow from '../components/Arrow.astro';
-import Card from '../components/Card.astro';
-import FindFormation from '../components/home/FindFormation.astro';
 import WorkStrip from '../components/home/WorkStrip.astro';
-import { services, learningOptions } from '../data/practice';
-
-// The example decision comes from the fictional organisation used in Find Formation.
-const alternatives = [
-  { label: 'Enter another market', tradeOff: 'Choosing growth elsewhere. Setting aside deeper work with current customers.' },
-  { label: 'Deepen customer relationships', tradeOff: 'Choosing depth with current customers. Setting aside a new market for now.' },
-  { label: 'Continue as we are', tradeOff: 'Choosing stability. Setting aside both new commitments until the next review.' },
-];
-const chosen = 1;
-
-const offerings = [
-  ...services.map(service => ({ name: service.title, text: service.question, aside: service.output, href: `/services/#${service.id}` })),
-  { name: 'Decision workshops.', text: 'Bring competing perspectives into the same conversation.', aside: learningOptions[0].output, href: learningOptions[0].href },
-  { name: 'Executive masterclass.', text: 'Five strategic questions, from what success means to how decisions are governed.', aside: learningOptions[1].output, href: learningOptions[1].href },
-  { name: 'Self-paced learning.', text: 'Compare three proposals, question the assumptions and defend a recommendation.', aside: learningOptions[2].output, href: learningOptions[2].href },
-];
-const practiceAreas = offerings.slice(0, services.length);
-const waysToLearn = offerings.slice(services.length);
+import { services } from '../data/practice';
 ---
-<HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="We help leaders make consequential choices when familiar assumptions no longer hold. Independent strategic decision and behavioural design practice, Cape Town.">
+<HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="The world is changing faster than the assumptions we use to make decisions. The Spotted Ape helps leaders see differently, make consequential choices and turn them into action.">
 <section class="home-intro" id="idea">
+<span id="instrument" aria-hidden="true"></span><span id="decision-record" aria-hidden="true"></span>
 <div class="wrap">
 <h1>
 <span>More <span class="hero-break">possibilities.</span></span>
 <span>Harder choices.</span>
 </h1>
 <div class="hero-body">
-<div class="hero-copy">
-<p class="hero-explanation">We help leaders make consequential choices when familiar assumptions no longer hold.</p>
-<a class="text-link" href="/services/">How we help <Arrow /></a>
-</div>
-<div class="hero-record" id="instrument">
-<dl class="record record--panel" id="decision-record" aria-label="An example decision record">
-<div class="record-row"><dt>Question</dt><dd><strong>What needs to be decided?</strong></dd></div>
-<div class="record-row"><dt>Alternatives</dt><dd>
-<div class="choice-group" role="group" aria-label="Choose one alternative" data-record-choices>
-{alternatives.map((alt, index) => <button class="choice" type="button" aria-pressed={index === chosen ? 'true' : 'false'} data-trade-off={alt.tradeOff}>{alt.label}</button>)}
-</div>
-</dd></div>
-<div class="record-row"><dt>Trade-offs</dt><dd aria-live="polite" data-record-trade-off>{alternatives[chosen].tradeOff}</dd></div>
-<div class="record-row"><dt>Assumptions</dt><dd>What would have to be true? What evidence could change our view?</dd></div>
-<div class="record-row"><dt>Owner and review</dt><dd>Who decides, and who acts? When will we revisit the choice and its consequences?</dd></div>
-</dl>
-<p class="record-note">An example from the fictional organisation in Find Formation. Nothing you choose is saved or sent.</p>
-</div>
+<p class="hero-explanation">The world is changing faster than the assumptions we use to make decisions.</p>
 </div>
 </div>
 </section>
 
-<section class="section-y home-offerings" id="practice" aria-labelledby="offerings-title">
+<section class="section-y home-practice" id="practice" aria-labelledby="practice-title">
 <span id="work" aria-hidden="true"></span><span id="learning" aria-hidden="true"></span>
-<div class="wrap">
-<h2 class="section-title" id="offerings-title">Decide.<br />Make it happen.</h2>
-<div class="offering-groups">
-<div class="offering-group">
-<h3 class="group-title" id="practice-areas-title">Areas of practice</h3>
-<ol class="card-grid card-grid--swipe card-stack" role="list" aria-labelledby="practice-areas-title">
-{practiceAreas.map((item, index) => (
-<li style={`--i: ${index}`}><Card href={item.href} title={item.name} text={item.text} aside={item.aside} textLabel="The question" asideLabel="What you leave with" number={String(index + 1).padStart(2, '0')} tone="ink" size="large" index={index} headingLevel={4} /></li>
-))}
-</ol>
-</div>
-<div class="offering-group">
-<h3 class="group-title" id="ways-to-learn-title">Ways to learn</h3>
-<ol class="card-grid card-grid--swipe" role="list" start={practiceAreas.length + 1} aria-labelledby="ways-to-learn-title">
-{waysToLearn.map((item, index) => (
-<li><Card href={item.href} title={item.name} text={item.text} aside={item.aside} number={String(practiceAreas.length + index + 1).padStart(2, '0')} tone="surface" index={index} headingLevel={4} /></li>
-))}
-</ol>
-</div>
+<div class="wrap split-layout">
+<h2 class="section-title" id="practice-title">Decide.<br />Make it happen.</h2>
+<div class="practice-copy">
+<p class="lead">We help leaders see differently, make consequential choices and turn them into action.</p>
+<ul class="capabilities" role="list" aria-label="Capabilities">
+{services.map(service => <li><a href={`/services/#${service.id}`}>{service.title}</a></li>)}
+</ul>
+<div class="actions"><a class="text-link" href="/services/">How we help <Arrow /></a><a class="text-link" href="/learning/">Workshops &amp; learning <Arrow /></a></div>
 </div>
 </div>
 </section>
 
 <WorkStrip />
 
-<FindFormation />
-
 <section class="home-invitation section-y section-rule" id="engagement" aria-labelledby="invitation-title">
-<span id="book" aria-hidden="true"></span>
+<span id="book" aria-hidden="true"></span><span id="choice" aria-hidden="true"></span>
 <div class="wrap">
 <h2 class="invitation-title" id="invitation-title">What needs deciding?</h2>
 <div class="invitation-bottom">
@@ -93,19 +45,6 @@ const waysToLearn = offerings.slice(services.length);
 </div>
 </section>
 </HomeLayout>
-<script>
-  // Decision record: one alternative is chosen at a time; the trade-off follows it.
-  document.querySelectorAll<HTMLElement>('[data-record-choices]').forEach((group) => {
-    const tradeOff = group.closest('dl')?.querySelector<HTMLElement>('[data-record-trade-off]');
-    const choices = [...group.querySelectorAll<HTMLButtonElement>('.choice')];
-    choices.forEach((choice) =>
-      choice.addEventListener('click', () => {
-        choices.forEach((other) => other.setAttribute('aria-pressed', String(other === choice)));
-        if (tradeOff) tradeOff.textContent = choice.dataset.tradeOff ?? '';
-      }),
-    );
-  });
-</script>
 <style>
 .home-intro {
   padding-block: var(--space-xs) var(--space-lg);
@@ -120,50 +59,38 @@ const waysToLearn = offerings.slice(services.length);
   display: block;
 }
 .hero-body {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--grid-gap);
-  align-items: start;
   margin-top: var(--space-xs);
 }
-.hero-copy {
-  grid-column: 1 / 5;
-  display: grid;
-  gap: 32px;
-  justify-items: start;
-}
 .hero-explanation {
+  max-width: 20ch;
   font-size: var(--heading-4);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: var(--tracking-heading);
   text-wrap: balance;
 }
-.hero-record {
-  grid-column: 6 / -1;
-}
-.hero-record .record-row > dt {
-  padding-top: 2px;
-}
-.record-note {
-  margin-top: 12px;
-  font: var(--font-label);
-  color: var(--muted);
-}
 .text-link :global(.arrow) {
   font-size: 18px;
 }
-.offering-groups {
+.capabilities {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-md);
-  margin-top: var(--space-sm);
+  gap: 4px;
+  margin: 32px 0 40px;
+  padding: 0;
+  list-style: none;
 }
-.group-title {
-  margin-bottom: 20px;
+.capabilities a {
   font-size: var(--body-large);
+  font-weight: var(--weight-display);
   line-height: var(--leading-snug);
-  letter-spacing: var(--tracking-ui);
+  letter-spacing: var(--tracking-copy-large);
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .capabilities a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
 }
 .invitation-title {
   font-size: var(--display-xl);
@@ -182,16 +109,9 @@ const waysToLearn = offerings.slice(services.length);
 }
 
 @media (max-width: 1023px) {
-  .hero-copy,
-  .hero-record {
-    grid-column: 1 / -1;
-  }
   .hero-explanation {
     font-size: 34px;
     max-width: 24ch;
-  }
-  .hero-record {
-    margin-top: 16px;
   }
   .invitation-title {
     font-size: clamp(80px, 15vw, 150px);
@@ -211,20 +131,8 @@ const waysToLearn = offerings.slice(services.length);
   .hero-body {
     margin-top: 32px;
   }
-  .hero-copy {
-    gap: 20px;
-  }
   .hero-explanation {
     font-size: var(--body-large);
-  }
-  .hero-record {
-    margin-top: 8px;
-  }
-  .offering-groups {
-    gap: var(--space-xs);
-  }
-  .group-title {
-    margin-bottom: 12px;
   }
   .invitation-title {
     font-size: clamp(64px, 18vw, 100px);

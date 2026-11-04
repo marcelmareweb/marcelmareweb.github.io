@@ -1,33 +1,9 @@
 ---
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Ledger from '../components/Ledger.astro';
 import FormationGraphic from '../components/FormationGraphic.astro';
 import PageIntro from '../components/PageIntro.astro';
 
-const foundingPrinciples = [
-  {
-    number: '01',
-    title: 'Visibility creates orientation',
-    body: 'Make competing priorities, assumptions and responsibilities visible.',
-  },
-  {
-    number: '02',
-    title: 'Wise hands at the wheel',
-    subtitle: '',
-    body: 'Experience helps distinguish a difficult decision from a request for more information.',
-  },
-  {
-    number: '03',
-    title: 'Good guidance eventually becomes unnecessary',
-    body: 'Leave teams able to examine and own their decisions.',
-  },
-  {
-    number: '04',
-    title: 'Work together',
-    body: 'Bring conflicting perspectives into the same conversation.',
-  },
-];
 ---
 <BaseLayout title="About The Spotted Ape — Strategic Decisions & Behavioural Design" description="The independent practice of Marcel Maré. Behavioural science, strategic design and human judgement for organisations in transition.">
 <PageIntro scale="long" description="When conditions turn chaotic, speed is not your friend.">
@@ -39,7 +15,6 @@ const foundingPrinciples = [
 <div class="about-statement">
 <h2>Movement needs<br />direction.</h2>
 <p class="lead" data-sweep>Under pressure, capable teams can pursue conflicting priorities without recognising the disagreement.</p>
-<p class="p-body">The Spotted Ape helps organisations make consequential decisions, understand human behaviour and navigate the changing relationship between people and AI.</p>
 </div>
 <div class="formation-frame">
 <FormationGraphic variant="about" />
@@ -47,13 +22,8 @@ const foundingPrinciples = [
 </div>
 </div>
 </section>
-<section class="section-y" id="section-02">
-<div class="wrap">
-<h2 class="section-title" data-reveal>How we work.</h2>
-<div class="principle-list"><Ledger items={foundingPrinciples.map(item => ({ name: `${item.title}.`, text: item.body }))} label="How we work" /></div>
-</div>
-</section>
-<section class="section-y section-rule" id="section-05">
+<section class="section-y" id="section-05">
+<span id="section-02" aria-hidden="true"></span>
 <div class="wrap">
 <div class="split-layout">
 <div class="practitioner-name">
@@ -84,15 +54,9 @@ const foundingPrinciples = [
 .about-statement .lead {
   margin-top: 40px;
 }
-.about-statement .p-body {
-  margin-top: 32px;
-}
 .formation-frame {
   min-width: 0;
   align-self: center;
-}
-.principle-list {
-  margin-top: var(--space-lg);
 }
 .practitioner-name h2 {
   font-size: var(--display-l);
@@ -121,9 +85,6 @@ const foundingPrinciples = [
 @media (max-width: 767px) {
   .about-statement h2 {
     font-size: 44px;
-  }
-  .principle-list {
-    margin-top: 48px;
   }
   .practitioner-name h2 {
     font-size: 88px;

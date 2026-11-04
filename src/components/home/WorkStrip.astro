@@ -10,12 +10,11 @@ const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-r
 const map = strategyIllusion.quadrants;
 
 // Each card's image is set from its own content, never a decorative illustration.
-type Item = { cue: string; kind: string; title: string; line: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title'; mediaText?: string; external?: boolean };
+type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title'; mediaText?: string; external?: boolean };
 const items = [
   policy && {
     kind: 'Case account',
     title: policy.data.title,
-    line: 'A strategic report had stalled. The work returned to the argument it needed to make.',
     href: `/cases/${policy.data.slug}`,
     media: 'quote',
     cue: 'Read.',
@@ -24,7 +23,6 @@ const items = [
   {
     kind: 'Behavioural research',
     title: 'Cookstove adoption.',
-    line: 'Motivations and everyday cooking practices, investigated alongside the technology itself.',
     href: '/work/#research',
     media: 'question',
     cue: 'Read.',
@@ -33,7 +31,6 @@ const items = [
   {
     kind: 'Strategic decision map',
     title: `${strategyIllusion.title}.`,
-    line: strategyIllusion.insight,
     href: '/thinking/strategic-decision-maps/strategy-illusion/',
     media: 'matrix',
     cue: 'Explore.',
@@ -41,7 +38,6 @@ const items = [
   {
     kind: 'Essay',
     title: 'The Laboratory Fallacy.',
-    line: 'When a persuasive model meets the conditions of real work.',
     href: publicResources.essay,
     media: 'title',
     cue: 'Read.',
@@ -70,7 +66,7 @@ const items = [
   <ul class="strip-track" data-strip-track role="list">
     {items.map((item, index) => (
       <li class="strip-item">
-        <Card layout="media" href={item.href} title={item.title} text={item.line} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
+        <Card layout="media" href={item.href} title={item.title} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
           <div slot="media" class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden={item.media === 'title' || item.media === 'matrix' ? 'true' : undefined}>
             {item.media === 'quote' && <blockquote class="media-type"><p>“{item.mediaText}”</p></blockquote>}
             {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}

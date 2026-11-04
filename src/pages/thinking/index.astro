@@ -4,11 +4,12 @@ import HomeLayout from '../../layouts/HomeLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import StrategicMatrix from '../../components/StrategicMatrix.astro';
 import Ledger from '../../components/Ledger.astro';
+import FindFormation from '../../components/home/FindFormation.astro';
 import { strategyIllusion } from '../../data/strategicMatrices';
 const mapPath = '/thinking/strategic-decision-maps/strategy-illusion/';
 const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html';
 ---
-<HomeLayout title="Strategic Thinking — Decision Maps & Essays | The Spotted Ape" description="Choices, assumptions and consequences. Explore strategic decision maps and essays on human judgement.">
+<HomeLayout title="Strategic Thinking — Decision Maps & Essays | The Spotted Ape" description="Choices, assumptions and consequences. Explore a strategic decision map, an exercise in commitment and essays on human judgement.">
 <PageIntro scale="short" description="Choices, assumptions and consequences.">
 <Fragment slot="heading">Thinking.</Fragment>
 </PageIntro>
@@ -28,6 +29,7 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
 </div>
 </div>
 </section>
+<FindFormation />
 <section class="section-y">
 <div class="wrap">
 <h2 class="h2 essays-title">Essays.</h2>
