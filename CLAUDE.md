@@ -16,6 +16,7 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 
 **Fewest steps to engaging content.**
 - Every page's first viewport contains something to read or use, not an introduction to it. The homepage opens with the headline and one supporting statement, then four moments only: provocation, practice, evidence, invitation. Detail lives on the six core pages, never on the homepage.
+- Exception, approved November 2026: the homepage's hold-to-enter intro (`public/beacon-gate.js`) covers the first viewport once per browser session, with Skip intro and Escape. Under reduced motion its animation is slowed, but the hold remains. No other page has an intro.
 - Remove anything whose only job is to point at the next thing: jump-link rows, labels that restate a heading, transitional sections, duplicate calls to action. Keep breadcrumbs, the primary nav and one Let’s talk action.
 - One click from any offering to an enquiry with its context (`contactHref`). Contact shows the three required fields first; optional organisation, team and programme fields stay available in a disclosure.
 

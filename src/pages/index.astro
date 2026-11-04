@@ -5,6 +5,15 @@ import WorkStrip from '../components/home/WorkStrip.astro';
 import { services } from '../data/practice';
 ---
 <HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="We help leaders make consequential choices when familiar assumptions no longer hold. Independent strategic decision and behavioural design practice, Cape Town.">
+<Fragment slot="head">
+<style is:inline>
+  html.bgate-pending { background: #0d0b0a; }
+  html.bgate-pending body > :not(.bgate) { visibility: hidden; }
+</style>
+<script is:inline>
+  try { if (!sessionStorage.getItem('beacon-gate-seen')) document.documentElement.classList.add('bgate-pending'); } catch (e) {}
+</script>
+</Fragment>
 <section class="home-intro" id="idea">
 <span id="instrument" aria-hidden="true"></span><span id="decision-record" aria-hidden="true"></span>
 <div class="wrap">
@@ -44,6 +53,14 @@ import { services } from '../data/practice';
 </div>
 </div>
 </section>
+<Fragment slot="body-end">
+<script is:inline src="/beacon-gate.js"></script>
+<script is:inline>
+  // If the gate script fails to load, still reveal the page.
+  try { BeaconGate.mount({ brand: 'The Spotted Ape', logo: '/logo.png' }); }
+  finally { document.documentElement.classList.remove('bgate-pending'); }
+</script>
+</Fragment>
 </HomeLayout>
 <style>
 .home-intro {
