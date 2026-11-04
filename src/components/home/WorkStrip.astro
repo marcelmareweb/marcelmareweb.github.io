@@ -2,15 +2,14 @@
 import { getCollection } from 'astro:content';
 import Arrow from '../Arrow.astro';
 import Card from '../Card.astro';
-import { publicResources } from '../../data/practice';
 import { strategyIllusion } from '../../data/strategicMatrices';
 
 const cases = await getCollection('cases');
 const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
 const map = strategyIllusion.quadrants;
 
-// Each card's image is set from its own content, never a decorative illustration.
-type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title'; mediaText?: string; external?: boolean };
+// Each card's image is set from its own content or the item's own published imagery, never a decorative illustration.
+type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title' | 'image'; mediaText?: string; image?: string; external?: boolean };
 const items = [
   policy && {
     kind: 'Case account',
@@ -21,7 +20,15 @@ const items = [
     mediaText: policy.data.quote,
   },
   {
-    kind: 'Behavioural research',
+    kind: 'Applied learning design',
+    title: 'Should We Invest in Solar?',
+    href: '/work/#solar',
+    media: 'image',
+    image: '/images/courses/solar-cape-manufacturing.jpg',
+    cue: 'Read.',
+  },
+  {
+    kind: 'Participatory behavioural research',
     title: 'Cookstove adoption.',
     href: '/work/#research',
     media: 'question',
@@ -34,14 +41,6 @@ const items = [
     href: '/thinking/strategic-decision-maps/strategy-illusion/',
     media: 'matrix',
     cue: 'Explore.',
-  },
-  {
-    kind: 'Essay',
-    title: 'The Laboratory Fallacy.',
-    href: publicResources.essay,
-    media: 'title',
-    cue: 'Read.',
-    external: true,
   },
 ].filter(Boolean) as Item[];
 ---
@@ -67,7 +66,7 @@ const items = [
     {items.map((item, index) => (
       <li class="strip-item">
         <Card layout="media" href={item.href} title={item.title} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
-          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden={item.media === 'title' || item.media === 'matrix' ? 'true' : undefined}>
+          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden={item.media === 'title' || item.media === 'matrix' || item.media === 'image' ? 'true' : undefined}>
             {item.media === 'quote' && <blockquote class="media-type"><p>“{item.mediaText}”</p></blockquote>}
             {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}
             {item.media === 'matrix' && (
@@ -79,6 +78,7 @@ const items = [
               </div>
             )}
             {item.media === 'title' && <p class="media-type media-type--title">{item.title}</p>}
+            {item.media === 'image' && <img class="strip-photo" src={item.image} alt="" loading="lazy" decoding="async" />}
           </div>
         </Card>
       </li>
@@ -127,6 +127,8 @@ const items = [
   .strip-media--quote, .strip-media--matrix { background: var(--ink); color: var(--paper); }
   .strip-media--matrix { align-items: center; justify-content: center; }
   .strip-media--title { background: var(--paper); }
+  .strip-media--image { padding: 0; }
+  .strip-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
 
   .media-type { margin: 0; font-size: clamp(32px, 2.6vw, 48px); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); text-wrap: balance; }
   .media-type p { margin: 0; text-indent: -0.4em; }

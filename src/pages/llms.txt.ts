@@ -26,7 +26,7 @@ Independent strategic decision and behavioural design practice in Cape Town, Sou
 - [Workshops & learning](${siteURL}/learning/)
 - [Custom decision workshops](${siteURL}/workshops)
 - [Executive masterclass](${siteURL}/workshops/strategic-design-leadership/)
-- [Solar learning case](${siteURL}/courses)
+- [Self-paced solar learning case](${siteURL}/courses)
 - [Contact](${siteURL}/contact/)
 - [Work and research](${siteURL}/work/)
 - [Strategic Thinking](${siteURL}/thinking/)

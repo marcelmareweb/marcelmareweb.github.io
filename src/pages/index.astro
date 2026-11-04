@@ -4,7 +4,7 @@ import Arrow from '../components/Arrow.astro';
 import WorkStrip from '../components/home/WorkStrip.astro';
 import { services } from '../data/practice';
 ---
-<HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="The world is changing faster than the assumptions we use to make decisions. The Spotted Ape helps leaders see differently, make consequential choices and turn them into action.">
+<HomeLayout title="The Spotted Ape — Strategic Decisions & Behavioural Design" description="We help leaders make consequential choices when familiar assumptions no longer hold. Independent strategic decision and behavioural design practice, Cape Town.">
 <section class="home-intro" id="idea">
 <span id="instrument" aria-hidden="true"></span><span id="decision-record" aria-hidden="true"></span>
 <div class="wrap">
@@ -13,7 +13,7 @@ import { services } from '../data/practice';
 <span>Harder choices.</span>
 </h1>
 <div class="hero-body">
-<p class="hero-explanation">The world is changing faster than the assumptions we use to make decisions.</p>
+<p class="hero-explanation">We help leaders make consequential choices when familiar assumptions no longer hold.</p>
 </div>
 </div>
 </section>
@@ -23,7 +23,7 @@ import { services } from '../data/practice';
 <div class="wrap split-layout">
 <h2 class="section-title" id="practice-title">Decide.<br />Make it happen.</h2>
 <div class="practice-copy">
-<p class="lead">We help leaders see differently, make consequential choices and turn them into action.</p>
+<p class="lead">See differently. Choose deliberately. Turn the choice into action.</p>
 <ul class="capabilities" role="list" aria-label="Capabilities">
 {services.map(service => <li><a href={`/services/#${service.id}`}>{service.title}</a></li>)}
 </ul>
@@ -47,7 +47,7 @@ import { services } from '../data/practice';
 </HomeLayout>
 <style>
 .home-intro {
-  padding-block: var(--space-xs) var(--space-lg);
+  padding-block: var(--space-md) var(--space-lg);
 }
 .home-intro h1 {
   font-size: min(12.6vw, 15.5rem);
@@ -62,7 +62,7 @@ import { services } from '../data/practice';
   margin-top: var(--space-xs);
 }
 .hero-explanation {
-  max-width: 20ch;
+  max-width: 30ch;
   font-size: var(--heading-4);
   font-weight: 600;
   line-height: 1.1;
@@ -119,7 +119,7 @@ import { services } from '../data/practice';
 }
 @media (max-width: 767px) {
   .home-intro {
-    padding-block: 32px 64px;
+    padding-block: 48px 64px;
   }
   .home-intro h1 {
     font-size: 13.2vw;

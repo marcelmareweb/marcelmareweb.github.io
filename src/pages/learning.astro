@@ -1,20 +1,109 @@
 ---
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
 import PageIntro from '../components/PageIntro.astro';
-import LearningOptions from '../components/LearningOptions.astro';
 import { contactHref } from '../lib/contact';
+import { publicResources } from '../data/practice';
+
+const steps = [
+  { title: 'Meet a situation.', text: 'A real choice, or a case with figures that matter.' },
+  { title: 'Examine the alternatives.', text: 'Compare the options, and test what would have to be true for each.' },
+  { title: 'Decide, or act.', text: 'Commit to a recommendation, an experiment or a next step, and say why.' },
+];
 ---
-<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Compare custom decision workshops, five executive working days and a self-paced solar investment case. Find a format for your question or start learning now.">
-  <PageIntro description="Work through a difficult decision together. Or build the judgement to make the next one.">
-    <Fragment slot="heading">Learn by<br />deciding.</Fragment>
+<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Some things are better learned by doing. Live strategy workshops and self-paced courses that turn complex ideas into decisions, experiments and practical action.">
+  <PageIntro scale="long" description="We design learning experiences that turn complex ideas into decisions, experiments and practical action.">
+    <Fragment slot="heading">Some things are<br />better learned<br />by doing.</Fragment>
   </PageIntro>
-  <section class="learning-formats wrap" id="formats" aria-labelledby="formats-title"><h2 class="sr-only" id="formats-title">Workshop and learning formats</h2><LearningOptions /></section>
-  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">Bring the<br />decision.</h2><div><p class="lead">Start with the question your team needs to examine. The format follows from it.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a></div><p class="learning-detail">Considering the executive programme for yourself? <a href={contactHref({ interest: 'masterclass', audience: 'individual', source: '/learning/' })}>Ask about attendance <span class="nowrap">options <Arrow /></span></a>.</p></div></div></section>
+
+  <section class="section-y section-rule" id="approach" aria-labelledby="approach-title">
+    <div class="wrap split-layout">
+      <h2 class="h2" id="approach-title">From knowledge<br />to judgement<br />to action.</h2>
+      <ol class="steps" role="list">
+        {steps.map((step, index) => (
+          <li><span class="step-num">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-y section-rule" id="formats" aria-labelledby="formats-title">
+    <div class="wrap">
+      <h2 class="sr-only" id="formats-title">Two formats</h2>
+      <div class="formats">
+        <article class="format">
+          <h3>Live strategy workshops.</h3>
+          <p>Facilitated online sessions in which participants examine alternatives, challenge assumptions and work through a consequential strategic choice.</p>
+          <ul class="format-links" role="list">
+            <li><a class="text-link" href="/workshops">Custom decision workshops <Arrow /></a></li>
+            <li><a class="text-link" href="/workshops/strategic-design-leadership/">The executive masterclass <Arrow /></a></li>
+          </ul>
+        </article>
+        <article class="format">
+          <h3>Self-paced courses.</h3>
+          <p>Carefully produced lessons, interactive cases and practical tools through which learners test understanding and exercise judgement.</p>
+          <ul class="format-links" role="list">
+            <li><a class="text-link" href="/courses">Should We Invest in Solar? <Arrow /></a></li>
+            <li><a class="text-link" href={publicResources.course} target="_blank" rel="noreferrer">Open the case now <Arrow /></a></li>
+          </ul>
+        </article>
+      </div>
+      <div class="in-development" id="series">
+        <p class="meta">In development</p>
+        <p>A strategy learning series is being developed for possible delivery under the Raykis brand. Marcel Maré designs the curriculum, facilitates the live sessions and teaches. In the planned self-paced courses a digital avatar presents; the substance is the case, the choices, the feedback and the reflection.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-y section-rule" id="examples" aria-labelledby="examples-title">
+    <div class="wrap examples-layout">
+      <h2 class="h2" id="examples-title">Two worked<br />examples.</h2>
+      <ul class="examples" role="list">
+        <li>
+          <Card layout="media" href="/work/#solar" title="Should We Invest in Solar?" text="Compare three proposals, test the assumptions in a spreadsheet and defend a qualified recommendation." kind="Applied learning design" cue="Read." index={0}>
+            <img slot="media" class="example-photo example-photo--solar" src="/images/courses/solar-cape-manufacturing.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="" />
+          </Card>
+        </li>
+        <li>
+          <Card layout="media" href="/work/#research" title="Baking as research." text="Workshops in a community bakery made clean cooking something to do, smell and share." kind="Participatory behavioural research" cue="Read." index={1}>
+            <img slot="media" class="example-photo" src="/images/research/pilot-baking-scones.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="" />
+          </Card>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">Bring the<br />decision.</h2><div><p class="lead">Start with the question your team needs to examine. The format follows from it.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <style>
-  .learning-formats { padding-bottom: var(--space-lg); }
-  .learning-detail { margin-top: 24px; font-size: var(--body); line-height: var(--leading-copy); max-width: 47ch; }
-  .button { margin-top: 28px; }
+  .steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+  .steps li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--grid-gap); padding-block: 20px; }
+  .step-num { font: var(--font-label); font-variant-numeric: tabular-nums; color: var(--muted); padding-top: 6px; }
+  .steps h3 { font-size: var(--heading-4); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
+  .steps p { margin-top: 8px; max-width: 44ch; font-size: var(--body); line-height: var(--leading-copy); color: var(--muted); }
+
+  .formats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
+  .format h3 { font-size: var(--heading-3); line-height: 1.04; letter-spacing: var(--tracking-heading); }
+  .format p { max-width: 44ch; margin-top: 24px; font-size: var(--body-large); line-height: 1.35; letter-spacing: var(--tracking-copy-large); }
+  .format-links { display: grid; justify-items: start; gap: 12px; margin: 32px 0 0; padding: 0; list-style: none; }
+  .in-development { display: grid; grid-template-columns: minmax(7rem, 2fr) minmax(0, 10fr); gap: 8px var(--grid-gap); margin-top: var(--space-md); padding-top: 16px; border-top: 1px solid var(--ink); }
+  .in-development p:last-child { max-width: 65ch; font-size: var(--body); line-height: var(--leading-copy); }
+
+  .examples-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--space-sm) var(--grid-gap); align-items: start; }
+  .examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin: 0; padding: 0; list-style: none; }
+  .example-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 78% center; }
+  .example-photo--solar { object-position: center; }
+
   .actions .button { margin-top: 0; }
+
+  @media (max-width: 1023px) {
+    .formats, .examples-layout { grid-template-columns: 1fr; }
+    .formats { gap: var(--space-xs); }
+  }
+  @media (max-width: 767px) {
+    .examples { grid-template-columns: 1fr; }
+    .format h3 { font-size: 34px; }
+    .in-development { grid-template-columns: 1fr; }
+  }
 </style>

@@ -29,6 +29,8 @@ The explicitly approved **Strategic Design Leadership in the Age of AI** executi
 
 Website: https://marcelmareweb.github.io. Use the current public contact: hello@thespottedape.com. Existing research, article and course resources on thespottedape.com remain external links on their current host; this GitHub Pages site does not replace or migrate that domain.
 
+Source materials live outside the repository in `../the-spotted-ape-sources/` (a sibling folder, never committed). Check research, course and case claims against them, and check its `CLEARANCES.md` before publishing an image or quote.
+
 ## Authoritative design system
 
 Before any visual or interaction change, consult [docs/design-reference/README.md](docs/design-reference/README.md) and [DEFINITIVE_DIRECTION.md](docs/design-reference/DEFINITIVE_DIRECTION.md), then the relevant specifications:

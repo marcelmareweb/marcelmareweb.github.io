@@ -5,22 +5,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import ResearchEvidence from '../components/ResearchEvidence.astro';
 import { contactHref } from '../lib/contact';
+import { publicResources } from '../data/practice';
 const cases = await getCollection('cases');
 const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
 ---
-<BaseLayout title="Work & Research | The Spotted Ape" description="Examine a strategic decision case account and behavioural research on cookstove adoption. Source-labelled evidence, methods and qualified findings.">
+<BaseLayout title="Work & Research | The Spotted Ape" description="A strategic decision case account, an applied learning case on solar investment and participatory research on cookstove adoption. Each labelled by the kind of evidence it is.">
   <PageIntro description="What did we assume? What do people actually do? The evidence, and its limits.">
     <Fragment slot="heading">The work.<br />The evidence.</Fragment>
   </PageIntro>
   {policy && <section class="case-feature section-y theme-dark" id="case-account">
     <div class="wrap">
       <div class="split-layout">
-        <h2><a href={'/cases/' + policy.data.slug}>{policy.data.title}</a></h2>
+        <div><p class="meta evidence-type">Strategic decision case account</p><h2><a href={'/cases/' + policy.data.slug}>{policy.data.title}</a></h2></div>
         <div><dl class="record" aria-label="Case account summary"><div class="record-row"><dt>Context</dt><dd>{policy.data.clientContext}</dd></div><div class="record-row"><dt>The shift</dt><dd>{policy.data.shift}</dd></div><div class="record-row"><dt>Reported outcome</dt><dd><strong>{policy.data.result}</strong></dd></div></dl><a class="text-link case-link" href={'/cases/' + policy.data.slug}>Read the case account <Arrow /></a></div>
       </div>
       <p class="source-note">An account of this engagement. The reported result does not establish a typical or guaranteed outcome.</p>
     </div>
   </section>}
+  <section class="section-y" id="solar" aria-labelledby="solar-title">
+    <div class="wrap split-layout">
+      <div>
+        <p class="meta evidence-type">Applied learning design</p>
+        <h2 class="solar-title" id="solar-title">Should We<br />Invest in Solar?</h2>
+        <p class="lead solar-lead">A fictional Western Cape manufacturer has three rooftop solar proposals. The learner has to recommend one.</p>
+        <figure class="solar-brief">
+          <img src="/images/courses/solar-case-brief.jpg" width="1241" height="1060" loading="lazy" decoding="async" alt="The first page of the Cape Manufacturing case brief: the Financial Director’s request, the decision question, a table comparing the capacity, cost, generation, self-consumption and maintenance of proposals A, B and C, and the case assumptions." />
+          <figcaption class="meta">The learner’s case brief, page 1.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <dl class="record" aria-label="Should We Invest in Solar?">
+          <div class="record-row"><dt>Situation</dt><dd>Cape Manufacturing wants to buy less grid electricity. Three suppliers propose systems costing R650,000 to R990,000. The Financial Director asks for evidence before committing capital.</dd></div>
+          <div class="record-row"><dt>What the learner does</dt><dd><ol class="task-list">
+            <li>Build an auditable Year-1 comparison of the three proposals.</li>
+            <li>Calculate payback and NPV, then test how much of System C’s solar output is actually used.</li>
+            <li>Question the suppliers’ claims, and ask for the evidence behind them.</li>
+            <li>Make one management chart.</li>
+            <li>Write a recommendation of 100 words or fewer.</li>
+            <li>Reflect on how the judgement developed.</li>
+          </ol></dd></div>
+          <div class="record-row"><dt>Materials</dt><dd>A five-tab workbook, a case brief, a quick reference and a formula help card. Excel or Google Sheets, 65 to 80 minutes.</dd></div>
+        </dl>
+        <p class="source-note">This describes what learners do. It makes no claim about learning outcomes.</p>
+        <div class="actions"><a class="text-link" href={publicResources.course} target="_blank" rel="noreferrer">Open the learning case <Arrow /></a><a class="text-link" href="/courses">About the course <Arrow /></a></div>
+      </div>
+    </div>
+  </section>
   <ResearchEvidence />
   <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">From evidence<br />to a question.</h2><div><p class="lead">Bring one of your own.</p><div class="actions"><a class="text-link" href="/services/">How we help <Arrow /></a><a class="button" href={contactHref({ source: '/work/' })}>Discuss your question <Arrow /></a></div></div></div></section>
 </BaseLayout>
@@ -32,4 +62,16 @@ const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-r
   .case-feature .source-note { margin-top: 48px; max-width: 65ch; color: var(--muted-inverse); }
   @media (max-width: 767px) { .case-feature h2 { font-size: 44px; } }
   .case-link { margin-top: 28px; }
+  .evidence-type { margin-bottom: 20px; }
+  .case-feature .evidence-type { color: var(--muted-inverse); }
+  .solar-title { font-size: var(--heading-2); line-height: 1.03; }
+  .solar-lead { margin-top: 32px; max-width: 34ch; }
+  .task-list { margin: 0; padding-left: 1.4em; list-style: decimal; display: grid; gap: 6px; }
+  .task-list li::marker { font-variant-numeric: tabular-nums; color: var(--muted); }
+  #solar .source-note { margin-top: 24px; }
+  .solar-brief { margin: var(--space-xs) 0 0; max-width: 560px; }
+  .solar-brief img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius-card); }
+  .solar-brief figcaption { margin-top: 12px; }
+  #solar .actions { margin-top: 28px; }
+  @media (max-width: 767px) { .solar-title { font-size: 44px; } }
 </style>

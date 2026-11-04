@@ -64,48 +64,6 @@ export const services = [
   },
 ] as const;
 
-export const learningOptions = [
-  {
-    number: '01',
-    type: 'Custom workshop',
-    title: 'A live decision. A working session.',
-    description:
-      'Bring competing perspectives into the same conversation. Examine alternatives, assumptions and responsibility.',
-    audience: 'Teams facing a consequential choice',
-    format: 'Facilitated / Scope discussed around your decision',
-    output: 'A framed decision, explicit trade-offs and ownership.',
-    status: 'Discuss a team engagement',
-    href: '/workshops',
-    action: 'Explore decision workshops',
-  },
-  {
-    number: '02',
-    type: 'Executive programme',
-    title: 'Strategic Design Leadership in the Age of AI.',
-    description:
-      'Five strategic questions, from what success means to how decisions are governed. Explore a standalone day or the connected programme.',
-    audience: 'Executive leaders, strategy directors and business-unit owners',
-    format: 'Five standalone working days / Connected progression',
-    output: 'Five executive outputs, including a Strategic Choice Cascade and Governance Charter.',
-    status: 'Discuss delivery and attendance options',
-    href: '/workshops/strategic-design-leadership/',
-    action: 'Explore the five-day masterclass',
-  },
-  {
-    number: '03',
-    type: 'Self-paced learning',
-    title: 'Should We Invest in Solar?',
-    description:
-      'Compare three proposals, question the assumptions and defend a recommendation in the fictional Cape Manufacturing case.',
-    audience: 'Individual learners, analysts and teams',
-    format: '65–80 minutes / Excel & Google Sheets',
-    output: 'A working comparison model and a qualified recommendation.',
-    status: 'Open the material now / Team sessions by enquiry',
-    href: '/courses',
-    action: 'Explore the solar learning case',
-  },
-] as const;
-
 export const publicResources = {
   course: 'https://thespottedape.com/Courses/solar-investment/learn/',
   alternativeCourse: 'https://marcelmare.com/dla-course-2/',
