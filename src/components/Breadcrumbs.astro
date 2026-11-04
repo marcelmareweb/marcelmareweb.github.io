@@ -16,7 +16,8 @@ const breadcrumbs = breadcrumbsFor(Astro.url.pathname);
   .breadcrumbs { margin-bottom: 28px; font-size: var(--text-label); line-height: var(--leading-copy); color: var(--muted); }
   ol { display: flex; flex-wrap: wrap; gap: 6px 12px; list-style: none; padding: 0; margin: 0; }
   li { display: inline-flex; align-items: baseline; gap: 12px; }
-  a { text-decoration: none; }
+  /* A 44px tap area around 12px text, with negative margins so the trail keeps its spacing. */
+  a { display: inline-flex; align-items: center; min-height: 44px; margin-block: -13px; padding-inline: 6px; margin-inline: -6px; text-decoration: none; }
   a:hover { text-decoration: underline; text-underline-offset: 4px; }
   [aria-current] { color: var(--ink); }
 </style>

@@ -123,13 +123,6 @@ const captionRight =
       <rect width="540" height="400" fill="#0D0B0A" />
       <rect width="540" height="400" fill={`url(#formation-grid-${variant})`} />
 
-      <!-- Top HUD metadata inside SVG -->
-      <text x="28" y="34" fill="#B3B3B3" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="11.5" data-svg-state-label>
-        State: coherent formation
-      </text>
-      <text x="512" y="34" text-anchor="end" fill="#FFFF00" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="11.5" data-svg-coherence-metric font-variant-numeric="tabular-nums">
-        Alignment: 100%
-      </text>
       <line x1="28" y1="48" x2="512" y2="48" stroke="#FFFFFF" stroke-opacity="0.12" />
 
       <!-- Coherent Structural Lattice Lines (fade in as t -> 1) -->
@@ -162,9 +155,6 @@ const captionRight =
         <circle r="44" fill={`url(#beacon-glow-${variant})`} />
         <circle r="18" fill="none" stroke="#FFFF00" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="3 3" />
         <circle r="6" fill="#FFFF00" />
-        <text x="0" y="-26" text-anchor="middle" fill="#FFFF00" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="10.5">
-          Beacon
-        </text>
       </g>
 
       <!-- 24 Dynamic Nodes with Velocity Vectors -->
@@ -214,13 +204,19 @@ const captionRight =
 
       <!-- Bottom HUD Axis inside SVG -->
       <line x1="28" y1="348" x2="512" y2="348" stroke="#FFFFFF" stroke-opacity="0.12" />
-      <text x="28" y="372" fill="#B3B3B3" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="11">
-        Raw speed without direction creates noise
-      </text>
-      <text x="512" y="372" text-anchor="end" fill="#FFFF00" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="11">
-        Visibility creates orientation
-      </text>
     </svg>
+    <!-- HUD labels sit in HTML over the field so they stay at least 12px however far the drawing scales down. -->
+    <div class="fg-hud" aria-hidden="true">
+      <div class="fg-hud-row fg-hud-row--top">
+        <span class="fg-hud-muted" data-svg-state-label>State: coherent formation</span>
+        <span class="fg-hud-signal" data-svg-coherence-metric>Alignment: 100%</span>
+      </div>
+      <span class="fg-hud-beacon fg-hud-signal">Beacon</span>
+      <div class="fg-hud-row fg-hud-row--bottom">
+        <span class="fg-hud-muted">Raw speed without direction creates noise</span>
+        <span class="fg-hud-signal">Visibility creates orientation</span>
+      </div>
+    </div>
   </div>
 
   <!-- Interactive Scrubber & Caption Footer -->
@@ -260,8 +256,8 @@ const captionRight =
       const lattice = root.querySelector<SVGGElement>('[data-formation-lattice]');
       const chaosNoise = root.querySelector<SVGGElement>('[data-chaos-noise]');
       const beacon = root.querySelector<SVGGElement>('[data-orientation-beacon]');
-      const stateLabel = root.querySelector<SVGTextElement>('[data-svg-state-label]');
-      const metricLabel = root.querySelector<SVGTextElement>('[data-svg-coherence-metric]');
+      const stateLabel = root.querySelector<HTMLElement>('[data-svg-state-label]');
+      const metricLabel = root.querySelector<HTMLElement>('[data-svg-coherence-metric]');
       const slider = root.querySelector<HTMLInputElement>('[data-formation-slider]');
       const modeButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-formation-set]'));
 
@@ -459,15 +455,26 @@ const captionRight =
   .fg-dot { display: inline-block; width: 8px; height: 8px; border-radius: var(--radius-round); background: var(--accent-signal); }
   .fg-name { color: var(--text-primary); }
   .fg-modes { display: flex; align-items: center; gap: 6px; }
-  .formation-mode-btn { padding: 4px 10px; border: 1px solid var(--border-subtle); background: var(--bg-elevated); color: var(--text-muted); transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
+  .formation-mode-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 4px 14px; border: 1px solid var(--border-subtle); background: var(--bg-elevated); color: var(--text-muted); transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
   .formation-mode-btn:hover { border-color: var(--accent-signal); color: var(--text-primary); }
   .formation-mode-btn[aria-pressed='true'] { border-color: var(--accent-signal); background: color-mix(in oklab, var(--accent-signal) 15%, transparent); color: var(--accent-signal); }
-  .fg-stage { position: relative; overflow: hidden; background: var(--ink); }
+  .fg-stage { position: relative; overflow: hidden; background: var(--ink); container-type: inline-size; }
+  /* Rows match the drawing's 48-unit top and 52-unit bottom bands and its 28-unit side inset. */
+  .fg-hud { position: absolute; inset: 0; pointer-events: none; font: var(--font-label-small); font-variant-numeric: tabular-nums; }
+  .fg-hud-row { position: absolute; inset-inline: 5.2%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .fg-hud-row--top { top: 0; height: 12%; }
+  .fg-hud-row--bottom { bottom: 0; height: 13%; }
+  .fg-hud-beacon { position: absolute; left: 87.8%; top: 44.75%; transform: translate(-50%, -100%); }
+  .fg-hud-muted { color: var(--muted-inverse); }
+  .fg-hud-signal { color: var(--signal); }
+  @container (max-width: 520px) {
+    .fg-hud-row--bottom { flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; line-height: 1.2; }
+  }
   .fg-svg { display: block; width: 100%; height: auto; user-select: none; }
   .fg-caption { padding: 14px 16px; border-top: 1px solid var(--border-subtle); background: var(--bg-primary); }
   .fg-scrub { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   .fg-small { color: var(--text-muted); }
-  .formation-slider { width: 100%; height: 4px; cursor: pointer; appearance: none; background: var(--border-subtle); accent-color: var(--accent-signal); }
+  .formation-slider { width: 100%; height: 44px; background: linear-gradient(var(--border-subtle), var(--border-subtle)) center / 100% 4px no-repeat; cursor: pointer; appearance: none; accent-color: var(--accent-signal); }
   .fg-captions { display: flex; flex-direction: column; justify-content: space-between; gap: 4px; }
   .fg-caption-right { color: var(--accent-signal); }
   @media (min-width: 768px) {

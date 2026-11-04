@@ -74,12 +74,16 @@ import { services } from '../data/practice';
 }
 .capabilities {
   display: grid;
-  gap: 4px;
+  justify-items: start;
+  gap: 0;
   margin: 32px 0 40px;
   padding: 0;
   list-style: none;
 }
 .capabilities a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: var(--body-large);
   font-weight: var(--weight-display);
   line-height: var(--leading-snug);

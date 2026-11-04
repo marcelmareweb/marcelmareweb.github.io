@@ -535,6 +535,12 @@ textarea.inquiry-field {
 .ledger--large .ledger-name {
   font-size: var(--heading-3);
 }
+/* Tablet columns are too narrow for the large names; use the standard ledger size. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ledger--large .ledger-name {
+    font-size: clamp(1.625rem, 1.2rem + 1vw, 2.5rem);
+  }
+}
 .ledger-text {
   font-size: var(--body);
   line-height: 1.45;
@@ -896,6 +902,7 @@ button:focus-visible .roll-char {
   display: inline-flex;
   gap: 10px;
   align-items: center;
+  min-height: 44px;
   text-decoration: none;
   flex-shrink: 0;
   /* 15px caps sit at the nav's cap height; Inter capitals need open tracking at this size. */
@@ -1142,6 +1149,7 @@ button:focus-visible .roll-char {
 .legal-page h1 {
   font-size: var(--heading-1);
   line-height: 1;
+  margin-bottom: 24px;
 }
 .legal-page > div {
   max-width: 780px;
