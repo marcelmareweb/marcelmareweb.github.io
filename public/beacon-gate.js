@@ -225,6 +225,8 @@
       cv.addEventListener('pointerdown', onDown);
       cv.addEventListener('pointermove', onMove);
       cv.addEventListener('pointerup', letGo);
+      root.addEventListener('touchend', unlockAudio, { passive: true });
+      root.addEventListener('pointerup', unlockAudio);
       cv.addEventListener('pointercancel', letGo);
       cv.addEventListener('contextmenu', prevent);
       cv.addEventListener('keydown', onKeyDown);
@@ -367,7 +369,7 @@
         letGo();
         if (audio) audio.ac.suspend();
       } else if (audio) {
-        audio.ac.resume();
+        audio.ac.resume().catch(() => {});
       }
     }
 
@@ -387,14 +389,39 @@
       soundOn = !soundOn;
       if (prefs) { try { prefs.setItem(SOUND_KEY, soundOn ? 'on' : 'off'); } catch (_) {} }
       renderSoundButton();
-      if (soundOn && holding) startAudio();
+      if (soundOn) unlockAudio();
       try { cv.focus({ preventScroll: true }); } catch (_) {}
     }
 
     function startAudio() {
-      if (!soundOn) return;
+      unlockAudio();
+    }
+
+    // iPhone needs more than other browsers:
+    // - It only lets audio start from a finished tap (touchend), not a press, so this also runs on
+    //   every release and on the Sound button. A press-and-hold then sounds from the next press,
+    //   or at once if iOS accepts the press.
+    // - It mutes page audio with the silent switch unless the session is marked as playback.
+    // - A context can be 'interrupted' as well as 'suspended'; anything but 'running' needs a resume,
+    //   and a silent one-sample buffer completes the unlock on older iOS.
+    function unlockAudio() {
+      if (!soundOn || state === 'done') return;
+      try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (_) {}
       if (!audio) audio = createAudio();
-      if (audio && audio.ac.state === 'suspended') audio.ac.resume();
+      if (!audio) return;
+      const ac = audio.ac;
+      if (ac.state !== 'running') {
+        try { const r = ac.resume(); if (r && r.catch) r.catch(() => {}); } catch (_) {}
+      }
+      if (!audio.unlocked) {
+        try {
+          const src = ac.createBufferSource();
+          src.buffer = ac.createBuffer(1, 1, 22050);
+          src.connect(ac.destination);
+          src.start(0);
+          audio.unlocked = true;
+        } catch (_) {}
+      }
     }
 
     function stopAudio() {

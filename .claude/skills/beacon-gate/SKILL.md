@@ -49,7 +49,10 @@ flights join into one arrowhead that flies off as the layer opens and the homepa
 - **Sound:** Web Audio, synthesised, no files. Two detuned saws plus a sub go through a resonant low-pass, with
   band-passed noise for air. An LFO on the level gives the "whup-whup", whose rate follows ring speed
   (2.5 → ~50 Hz) until it blurs into a whine. The pitch rises 45 → ~390 Hz. On reveal it spins down and plays a rush of air.
-  The AudioContext is created on the first press, because browsers only allow audio after a user gesture. The audio is suspended when the tab is hidden.
+  The AudioContext is created on the first press, because browsers only allow audio after a user gesture.
+  iPhone: iOS only counts a finished tap (touchend), not a press, so `unlockAudio` also runs on every release
+  and on the Sound button, resumes any non-running context and plays a silent one-sample buffer. It sets
+  `navigator.audioSession.type = 'playback'` (iOS 17+) so the silent switch doesn't mute the intro. The audio is suspended when the tab is hidden.
   The Sound on/off choice is stored in localStorage `beacon-gate-sound`.
 - **Returning visitors:** `remember: 'session'` (default) uses sessionStorage `beacon-gate-seen`.
   The alternatives are `'always'` (localStorage) and `'never'`.
