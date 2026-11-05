@@ -1,5 +1,6 @@
 /* Beacon Gate: a hold-to-enter intro layer that sits over a page.
-   Nodes drift at random; pressing and holding drops a beacon that pulls them into rings.
+   24 planes wander on their own; pressing and holding drops a beacon they circle in six flights
+   of four, and when the hold completes they join into one arrowhead that flies off as the page opens.
    Holding builds speed for holdMs, then the layer opens and reveals the page beneath.
 
    Usage:  const gate = BeaconGate.mount({ holdMs: 5000, reveal: 'iris' });
@@ -29,7 +30,6 @@
     onReveal: null,
     colors: {
       bg: '#0d0b0a',
-      grid: '#1c1a18',
       idle: '#b9b6b0',
       beacon: '#ffff00',
       ink: '#f4f2ee',
@@ -67,17 +67,22 @@
 
   const WAVE = 650;        // px/s: speed of the activation front from the beacon
   const MARGIN = 18;
-  const CLIMAX = 0.45;     // s: rings collapse into the beacon before the reveal
+  const CLIMAX = 1.1;      // s: the flights join into one arrowhead before the reveal
+  const FLIGHTS = 6;
+  // Finger-four, in plane spacings: [ahead, to the right] of the lead, which flies at [0, 0].
+  const FINGER = [[0, 0], [-1, -1], [-1, 1], [-2, 2]];
   const REVEAL = { iris: 1.25, fade: 0.9, dissolve: 1.6, skip: 0.45 };
 
   // Built-in copy of public/plane.svg (500×500, nose up), used until or unless the file loads.
   const PLANE_D = 'M250 20C290 100 300 150 300 170L460 300L460 360L300 290L270 380L340 430L340 480L250 440'
     + 'L160 480L160 430L230 380L200 290L40 360L40 300L200 170C200 150 210 100 250 20Z';
   const PLANE_BOX = 500;
-  const PLANE_LAYERS = [   // background flocks, furthest first
+  const PLANE_LAYERS = [   // background flights of four, furthest first; density is px² per plane
     { size: 9, alpha: 0.16, speed: 0.45, density: 26000 },
     { size: 13, alpha: 0.26, speed: 0.7, density: 42000 },
   ];
+  // Rotate [ahead, right] by heading a into screen x/y.
+  const rot = (fx, ly, a) => [fx * Math.cos(a) - ly * Math.sin(a), fx * Math.sin(a) + ly * Math.cos(a)];
 
   const rand = (a, b) => a + Math.random() * (b - a);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -124,7 +129,9 @@
     let audio = null;
     let root, cv, ctx, hintEl, skipEl, soundEl;
     let W = 0, H = 0, dpr = 1, scale = 1;
-    let nodes = [], links = [], rings = [], flock = [];
+    let nodes = [], flights = [], ring = null, flock = [];
+    let planeSize = 24, spacing = 28;
+    const V = { x: 0, y: 0, ang: -Math.PI / 2, v: 0, v0: 0, a: 0 };   // the arrowhead's centre and flight
     let plane = new Path2D(PLANE_D), planeBox = PLANE_BOX;
     let state = 'done', holding = false, p = 0, raf = 0, last = 0;
     let tCommit = 0, tReveal = 0, revealMode = 'iris', revealDur = 1;
@@ -233,7 +240,7 @@
       resize();
       seed();
       state = 'idle'; p = 0; holding = false;
-      B.active = false; B.s = 0; B.pulses = []; rings = [];
+      B.active = false; B.s = 0; B.pulses = []; ring = null;
       last = now();
       raf = requestAnimationFrame(frame);
       try { cv.focus({ preventScroll: true }); } catch (_) {}
@@ -313,7 +320,10 @@
       B.px = B.x = x; B.py = B.y = y;
       B.active = true; B.t0 = t; B.lastPulse = -1;
       assignFormation();
-      for (const n of nodes) n.t0 = t + Math.hypot(n.x - x, n.y - y) / WAVE;
+      for (const fl of flights) {
+        const t0 = t + Math.hypot(fl.lead.x - x, fl.lead.y - y) / WAVE;
+        for (const n of fl.members) n.t0 = t0;
+      }
       hintEl.textContent = opts.holdingHint;
       hintEl.classList.add('is-holding');
     }
@@ -323,10 +333,8 @@
       holding = false;
       if (state !== 'idle') return;   // past the point of no return
       B.active = false;
-      for (const n of nodes) {
-        n.t0 = Infinity;
-        kickOutward(n, rand(40, 120) * (reduced ? 0.4 : 1));
-      }
+      for (const n of nodes) { n.t0 = Infinity; kickOutward(n, rand(40, 120) * (reduced ? 0.4 : 1)); }
+      ungroupFlock();
       hintEl.textContent = opts.hint;
       hintEl.classList.remove('is-holding');
     }
@@ -493,71 +501,116 @@
       W = cv.clientWidth; H = cv.clientHeight;
       cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
       scale = clamp(Math.min(W, H) / 820, 0.55, 1);
+      planeSize = 24 * clamp(scale, 0.7, 1);
+      spacing = planeSize * 1.15;
+      const m = edge();
       for (const n of nodes) {
-        n.x = clamp(n.x, MARGIN, W - MARGIN);
-        n.y = clamp(n.y, MARGIN, H - MARGIN);
+        n.x = clamp(n.x, m, W - m);
+        n.y = clamp(n.y, m, H - m);
       }
     }
 
+    function edge() { return MARGIN + planeSize; }
+
+    // 24 planes, each wandering on its own until the beacon calls them into flights.
     function seed() {
-      const count = Math.round(clamp((W * H) / 30000, 16, 34));
-      nodes = Array.from({ length: count }, () => {
-        const h = rand(0, Math.PI * 2), sp = rand(18, 42) * (reduced ? 0.4 : 1);
-        return {
-          x: rand(MARGIN, W - MARGIN), y: rand(MARGIN, H - MARGIN),
-          vx: Math.cos(h) * sp, vy: Math.sin(h) * sp,
-          h, sp, charge: 0, t0: Infinity, ring: -1, slot: 0,
-        };
+      const m = edge();
+      nodes = Array.from({ length: FLIGHTS * 4 }, () => {
+        const h = rand(0, Math.PI * 2), sp = rand(22, 40) * (reduced ? 0.4 : 1);
+        return { x: rand(m, W - m), y: rand(m, H - m), vx: Math.cos(h) * sp, vy: Math.sin(h) * sp,
+          h, sp, ang: h, charge: 0, t0: Infinity, fl: null, k: 0 };
       });
+      flights = [];
       flock = [];
       for (const layer of PLANE_LAYERS) {
-        const n = Math.round(clamp((W * H) / layer.density, 8, 60));
-        for (let i = 0; i < n; i++) {
+        const count = 4 * Math.round(clamp((W * H) / layer.density / 4, 2, 15));
+        for (let i = 0; i < count; i++) {
           const h = rand(0, Math.PI * 2), sp = rand(18, 42) * layer.speed * (reduced ? 0.4 : 1);
           flock.push({ x: rand(0, W), y: rand(0, H), vx: Math.cos(h) * sp, vy: Math.sin(h) * sp,
-            h, sp, ang: h, layer });
+            h, sp, ang: h, layer, lead: null, k: 0 });
         }
       }
-      for (const n of nodes) n.ang = n.h;
-      links = nodes.map((n, i) => {
-        let j = Math.floor(Math.random() * count);
-        if (j === i) j = (j + 1) % count;
-        return [n, nodes[j]];
-      });
     }
 
-    // Nearest nodes take the inner ring; each ring keeps its members' angular order.
+    // On a press the planes split into six flights of four by their angle round the beacon, so
+    // neighbours fly together and paths don't cross. Within a flight, the plane furthest along
+    // the direction of travel leads. The flights share one ring, 60° apart, and circle the way
+    // most planes are already flying.
     function assignFormation() {
-      const R0 = 72 * scale, RSTEP = 60 * scale, SPACING = 50 * scale;
-      const d2 = (n) => (n.x - B.x) ** 2 + (n.y - B.y) ** 2;
-      const sorted = nodes.slice().sort((a, b) => d2(a) - d2(b));
-      rings = [];
-      let i = 0, k = 0;
-      while (i < sorted.length) {
-        const R = R0 + k * RSTEP;
-        const cap = Math.max(5, Math.floor((2 * Math.PI * R) / SPACING));
-        const members = sorted.slice(i, i + cap);
-        i += cap;
-        members.forEach((n) => { n._a = Math.atan2(n.y - B.y, n.x - B.x); });
-        members.sort((a, b) => a._a - b._a);
-        const m = members.length;
-        let sx = 0, sy = 0;
-        members.forEach((n, j) => {
-          const d = n._a - (2 * Math.PI * j) / m;
-          sx += Math.cos(d); sy += Math.sin(d);
-        });
-        const off = Math.atan2(sy, sx);
-        const omega = (k % 2 ? -1 : 1) * (0.34 / (1 + k * 0.4));
-        members.forEach((n, j) => { n.ring = k; n.slot = off + (2 * Math.PI * j) / m; });
-        rings.push({ R, omega, phase: 0, members });
-        k++;
+      let turn = 0;
+      for (const n of nodes) {
+        n._a = Math.atan2(n.y - B.y, n.x - B.x);
+        turn += (n.x - B.x) * n.vy - (n.y - B.y) * n.vx;
       }
+      const dir = turn < 0 ? -1 : 1;
+      const sorted = nodes.slice().sort((a, b) => a._a - b._a);
+      // Start the split at a random plane so the six groups don't always break at the same angle.
+      const start = Math.floor(Math.random() * sorted.length);
+      const order = [];
+      for (let f = 0; f < FLIGHTS; f++) {
+        const members = [];
+        for (let j = 0; j < 4; j++) members.push(sorted[(start + f * 4 + j) % sorted.length]);
+        if (dir < 0) members.reverse();
+        // members now run with the turn; the last one is furthest ahead.
+        const lead = members.pop(), a = members.pop(), b = members.pop(), c = members.pop();
+        const fl = { members: [lead, a, b, c], lead, slot: 0, mirror: 1 };
+        fl.members.forEach((n, k) => { n.fl = fl; n.k = k; });
+        fl._a = Math.atan2(lead.y - B.y, lead.x - B.x);
+        order.push(fl);
+      }
+      order.sort((a, b) => a._a - b._a);
+      let sx = 0, sy = 0;
+      order.forEach((fl, j) => {
+        const d = fl._a - (2 * Math.PI * j) / FLIGHTS;
+        sx += Math.cos(d); sy += Math.sin(d);
+      });
+      const off = Math.atan2(sy, sx);
+      order.forEach((fl, j) => { fl.slot = off + (2 * Math.PI * j) / FLIGHTS; });
+      flights = order;
+      ring = { R: 150 * scale, dir, phase: 0, order };
+      groupFlock();
+    }
+
+    // Background planes pair up with their nearest neighbours in the same layer: a lead and three wingmen.
+    function groupFlock() {
+      for (const layer of PLANE_LAYERS) {
+        const free = flock.filter((f) => f.layer === layer);
+        while (free.length >= 4) {
+          const lead = free.shift();
+          lead.lead = null; lead.k = 0;
+          free.sort((a, b) => Math.hypot(a.x - lead.x, a.y - lead.y) - Math.hypot(b.x - lead.x, b.y - lead.y));
+          free.splice(0, 3).forEach((f, j) => { f.lead = lead; f.k = j + 1; });
+        }
+      }
+    }
+
+    function ungroupFlock() {
+      for (const f of flock) if (f.lead) { f.lead = null; f.h = Math.atan2(f.vy, f.vx); }
+    }
+
+    // The arrowhead flies off upward, towards whichever side of the screen has more room.
+    // Flights keep their left-to-right order; the left side mirrors its finger-four so both wings sweep out.
+    function formArrowhead() {
+      const room = W - B.x - B.x;
+      const tx = Math.abs(room) < W * 0.16 ? B.x : room > 0 ? W : 0;
+      V.ang = Math.atan2(-Math.max(B.y, H * 0.35), tx - B.x);
+      V.x = B.x; V.y = B.y; V.v = 0;
+      const DX = spacing * 4, DY0 = spacing * 2.2, DY = spacing * 4.6;
+      const slots = [];
+      for (const side of [-1, 1]) for (let r = 0; r < 3; r++) slots.push({ fx: -r * DX, ly: side * (DY0 + r * DY), side });
+      const mx = slots.reduce((a, sl) => a + sl.fx, 0) / slots.length;
+      slots.sort((a, b) => a.ly - b.ly);
+      const px = -Math.sin(V.ang), py = Math.cos(V.ang);
+      flights.slice()
+        .sort((a, b) => ((a.lead.x - B.x) * px + (a.lead.y - B.y) * py) - ((b.lead.x - B.x) * px + (b.lead.y - B.y) * py))
+        .forEach((fl, j) => { fl.vslot = { fx: slots[j].fx - mx, ly: slots[j].ly }; fl.mirror = slots[j].side; });
     }
 
     function commit(t) {
       state = 'climax';
       tCommit = t;
-      for (const n of nodes) n.t0 = Math.min(n.t0, t);
+      for (const n of nodes) { n.t0 = Math.min(n.t0, t); n.charge = Math.max(n.charge, 0.6); }
+      formArrowhead();
       root.classList.add('is-leaving');
     }
 
@@ -567,13 +620,16 @@
       tReveal = t;
       revealMode = mode === 'skip' ? 'fade' : mode;
       revealDur = REVEAL[mode] || 1;
-      const burst = mode === 'skip' ? 0 : 1;
       B.active = false;
-      for (const n of nodes) {
-        n.t0 = Infinity;
-        if (burst) kickOutward(n, rand(380, 820) * (reduced ? 0.3 : 1));
+      if (mode === 'skip') {
+        for (const n of nodes) n.t0 = Infinity;
+        V.a = 0;
+      } else {
+        // Accelerate so the arrowhead is well off screen as the reveal ends.
+        const dist = Math.hypot(W, H) + 400, T = revealDur;
+        V.v0 = V.v; V.a = Math.max(0, (2 * (dist - V.v0 * T)) / (T * T));
+        for (const f of flock) if (!f.lead) kickOutward(f, rand(200, 500) * f.layer.speed * (reduced ? 0.3 : 1));
       }
-      if (burst) for (const f of flock) kickOutward(f, rand(200, 500) * f.layer.speed * (reduced ? 0.3 : 1));
       root.style.background = 'transparent';
     }
 
@@ -587,67 +643,98 @@
       const e = Math.pow(p, opts.accel);
 
       // Hold progress drives everything: ring speed, tightness, spring stiffness, pulse rate.
-      let radiusF = 1 - 0.38 * e;
+      const radiusF = 1 - 0.38 * e;
       const mult = 1 + 13 * e * (reduced ? 0.25 : 1);
-      if (state === 'climax') {
-        const q = Math.min(1, (t - tCommit) / CLIMAX);
-        radiusF = 0.62 - 0.56 * q * q;
-        if (q >= 1) beginReveal(t, opts.reveal);
-      }
-      const k = 10 + 26 * e, c = 2 * Math.sqrt(k) * 0.85;
+      if (state === 'climax' && t - tCommit >= CLIMAX) beginReveal(t, opts.reveal);
+      const formed = state === 'climax' || (state === 'reveal' && V.a > 0);
+      if (state === 'climax') V.v = 40 + 80 * clamp((t - tCommit) / CLIMAX, 0, 1);
+      else if (formed) V.v = V.v0 + V.a * (t - tReveal);
+      if (formed) { V.x += Math.cos(V.ang) * V.v * dt; V.y += Math.sin(V.ang) * V.v * dt; }
 
       if (B.active) {
         const f = Math.min(1, dt * 12);
         B.x += (B.px - B.x) * f; B.y += (B.py - B.y) * f;
         B.s = Math.min(1, B.s + dt * 4);
         const interval = 0.85 - 0.68 * e;
-        if (!reduced && t - B.lastPulse > interval) { B.pulses.push(t); B.lastPulse = t; }
-        for (const ring of rings) ring.phase += ring.omega * mult * dt;
+        if (!reduced && state === 'idle' && t - B.lastPulse > interval) { B.pulses.push(t); B.lastPulse = t; }
+        if (ring) ring.phase += ring.dir * 0.34 * mult * dt;
       } else {
         B.s = Math.max(0, B.s - dt * (state === 'reveal' ? 2.2 : 1.6));
       }
       B.pulses = B.pulses.filter((pt) => t - pt < 2.2);
 
+      // Free planes wander and steer back in from the edges.
+      const m = edge();
       for (const n of nodes) {
-        const engaged = B.active && t >= n.t0;
-        if (engaged) {
+        if (formed || (B.active && t >= n.t0)) continue;
+        n.h += (Math.random() - 0.5) * dt * 2.6;
+        if (state === 'idle' && (n.x < m || n.x > W - m || n.y < m || n.y > H - m)) {
+          let d = Math.atan2(H / 2 - n.y, W / 2 - n.x) - n.h;
+          d = Math.atan2(Math.sin(d), Math.cos(d));
+          n.h += d * Math.min(1, dt * 2.5);
+        }
+      }
+
+      for (const n of nodes) {
+        const fl = n.fl;
+        const [fx, ly] = FINGER[n.k];
+        const engaged = B.active && t >= n.t0 && state === 'idle';
+        let tx, ty, tvx, tvy, k;
+        if (formed) {
+          // Into the arrowhead, then away with it.
+          const [sx, sy] = rot(fl.vslot.fx + fx * spacing, fl.vslot.ly + ly * spacing * fl.mirror, V.ang);
+          tx = V.x + sx; ty = V.y + sy;
+          tvx = Math.cos(V.ang) * V.v; tvy = Math.sin(V.ang) * V.v;
+          k = state === 'reveal' ? 60 : 9 + 30 * clamp((t - tCommit) / CLIMAX, 0, 1);
           n.charge = Math.min(1, n.charge + dt * 2.5);
-          const ring = rings[n.ring];
-          const R = ring.R * radiusF, w = ring.omega * mult;
-          const a = n.slot + ring.phase, ca = Math.cos(a), sa = Math.sin(a);
-          const tx = B.x + R * ca, ty = B.y + R * sa;
-          n.vx += (k * (tx - n.x) + c * (-R * w * sa - n.vx)) * dt;
-          n.vy += (k * (ty - n.y) + c * (R * w * ca - n.vy)) * dt;
+        } else if (engaged) {
+          // Around the beacon, nose first; the flight turns as one.
+          n.charge = Math.min(1, n.charge + dt * 2.5);
+          const R = ring.R * radiusF, w = ring.dir * 0.34 * mult;
+          const a = fl.slot + ring.phase, hd = a + ring.dir * Math.PI / 2;
+          const [sx, sy] = rot(fx * spacing, ly * spacing, hd);
+          tx = B.x + R * Math.cos(a) + sx; ty = B.y + R * Math.sin(a) + sy;
+          tvx = -w * (ty - B.y); tvy = w * (tx - B.x);
+          k = 10 + 26 * e;
         } else {
           n.charge = Math.max(0, n.charge - dt * 0.55);
-          n.h += (Math.random() - 0.5) * dt * 2.6;
           n.vx += (Math.cos(n.h) * n.sp - n.vx) * dt * 0.9;
           n.vy += (Math.sin(n.h) * n.sp - n.vy) * dt * 0.9;
         }
-        n.x += n.vx * dt; n.y += n.vy * dt;
-
-        if (!engaged && state === 'idle') {
-          let hit = false;
-          if (n.x < MARGIN) { n.x = MARGIN; n.vx = Math.abs(n.vx); hit = true; }
-          if (n.x > W - MARGIN) { n.x = W - MARGIN; n.vx = -Math.abs(n.vx); hit = true; }
-          if (n.y < MARGIN) { n.y = MARGIN; n.vy = Math.abs(n.vy); hit = true; }
-          if (n.y > H - MARGIN) { n.y = H - MARGIN; n.vy = -Math.abs(n.vy); hit = true; }
-          if (hit) n.h = Math.atan2(n.vy, n.vx);
+        if (k) {
+          const c = 2 * Math.sqrt(k) * 0.85;
+          n.vx += (k * (tx - n.x) + c * (tvx - n.vx)) * dt;
+          n.vy += (k * (ty - n.y) + c * (tvy - n.vy)) * dt;
         }
+        n.x += n.vx * dt; n.y += n.vy * dt;
       }
-      // Background flocks wander the same way, a little faster as the charge builds, and wrap at the edges.
+
+      // Background planes wander the same way, a little faster as the charge builds, and wrap at the edges.
+      // While grouped, wingmen close up on their lead and wrap with it.
       const boost = 1 + 1.5 * e * (reduced ? 0.25 : 1);
       for (const f of flock) {
-        if (state !== 'reveal') {
+        const L = f.lead;
+        if (L) {
+          const sp = f.layer.size * 1.15, [fx, ly] = FINGER[f.k];
+          const [sx, sy] = rot(fx * sp, ly * sp, L.ang);
+          const k = 3, c = 2 * Math.sqrt(k) * 0.9;
+          f.vx += (k * (L.x + sx - f.x) + c * (L.vx - f.vx)) * dt;
+          f.vy += (k * (L.y + sy - f.y) + c * (L.vy - f.vy)) * dt;
+        } else if (state !== 'reveal') {
           f.h += (Math.random() - 0.5) * dt * 2.6;
           f.vx += (Math.cos(f.h) * f.sp * boost - f.vx) * dt * 0.9;
           f.vy += (Math.sin(f.h) * f.sp * boost - f.vy) * dt * 0.9;
         }
         f.x += f.vx * dt; f.y += f.vy * dt;
-        if (state !== 'reveal') {
-          const pad = f.layer.size;
+      }
+      if (state !== 'reveal') {
+        for (const f of flock) {
+          if (f.lead) continue;
+          const pad = f.layer.size * 4, x0 = f.x, y0 = f.y;
           if (f.x < -pad) f.x = W + pad; else if (f.x > W + pad) f.x = -pad;
           if (f.y < -pad) f.y = H + pad; else if (f.y > H + pad) f.y = -pad;
+          const dx = f.x - x0, dy = f.y - y0;
+          if (dx || dy) for (const w of flock) if (w.lead === f) { w.x += dx; w.y += dy; }
         }
       }
       for (const n of nodes.concat(flock)) {
@@ -664,16 +751,35 @@
     // ---- drawing ---------------------------------------------------------
 
     // The plane's nose points up in the SVG, so turn it a quarter to face its heading.
-    function drawPlane(x, y, ang, size, color) {
+    function drawPlane(x, y, ang, size, color, outline) {
       const k = size / planeBox;
       ctx.save();
       ctx.translate(x, y);
       ctx.rotate(ang + Math.PI / 2);
       ctx.scale(k, k);
       ctx.translate(-planeBox / 2, -planeBox / 2);
+      if (outline) {
+        ctx.strokeStyle = outline; ctx.lineWidth = 3 / k; ctx.lineJoin = 'round';
+        ctx.stroke(plane);
+      }
       ctx.fillStyle = color;
       ctx.fill(plane);
       ctx.restore();
+    }
+
+    // The 24 planes. Over the opening page they get an ink edge so the yellow still reads on white.
+    function drawFlights(overPage) {
+      for (const n of nodes) {
+        if (n.charge > 0.02 && !overPage) {
+          const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 22);
+          glow.addColorStop(0, rgba(C.beacon, 0.32 * n.charge));
+          glow.addColorStop(1, rgba(C.beacon, 0));
+          ctx.fillStyle = glow;
+          ctx.beginPath(); ctx.arc(n.x, n.y, 22, 0, Math.PI * 2); ctx.fill();
+        }
+        drawPlane(n.x, n.y, n.ang, planeSize, rgba(mix(C.idle, C.beacon, n.charge), 1),
+          overPage ? rgba(C.bg, 1) : null);
+      }
     }
 
     function draw(t, e, radiusF) {
@@ -689,13 +795,6 @@
       ctx.clearRect(0, 0, W, H);
       ctx.fillStyle = rgba(C.bg, bgA);
       ctx.fillRect(0, 0, W, H);
-
-      ctx.strokeStyle = rgba(C.grid, bgA); ctx.lineWidth = 1; ctx.setLineDash([]);
-      ctx.beginPath();
-      const g = 44;
-      for (let x = (W % g) / 2; x < W; x += g) { ctx.moveTo(Math.round(x) + 0.5, 0); ctx.lineTo(Math.round(x) + 0.5, H); }
-      for (let y = (H % g) / 2; y < H; y += g) { ctx.moveTo(0, Math.round(y) + 0.5); ctx.lineTo(W, Math.round(y) + 0.5); }
-      ctx.stroke();
 
       for (const f of flock) drawPlane(f.x, f.y, f.ang, f.layer.size, rgba(C.idle, f.layer.alpha * nodeA));
 
@@ -721,65 +820,22 @@
         ctx.beginPath(); ctx.arc(B.x, B.y, r, 0, Math.PI * 2); ctx.stroke();
       }
 
-      if (B.s > 0.01) {
+      const circling = ring && state === 'idle' ? B.s : 0;
+      if (circling > 0.01) {
         ctx.setLineDash([2, 6]);
         ctx.lineWidth = 1;
-        ctx.strokeStyle = rgba(C.beacon, (0.13 + 0.12 * e) * B.s);
-        for (const ring of rings) {
-          ctx.beginPath(); ctx.arc(B.x, B.y, ring.R * radiusF, 0, Math.PI * 2); ctx.stroke();
-        }
-      }
-
-      ctx.setLineDash([5, 5]);
-      ctx.lineWidth = 1;
-      for (const [a, b] of links) {
-        const c = Math.min(a.charge, b.charge);
-        const alpha = 0.34 * (1 - 0.8 * c);
-        if (alpha < 0.01) continue;
-        ctx.strokeStyle = rgba(mix(C.idle, C.beacon, c), alpha);
-        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        ctx.strokeStyle = rgba(C.beacon, (0.13 + 0.12 * e) * circling);
+        ctx.beginPath(); ctx.arc(B.x, B.y, ring.R * radiusF, 0, Math.PI * 2); ctx.stroke();
       }
 
       ctx.setLineDash([]);
-      for (const ring of rings) {
-        const m = ring.members;
-        if (m.length < 2) continue;
-        for (let j = 0; j < m.length; j++) {
-          const a = m[j], b = m[(j + 1) % m.length];
-          const c = Math.min(a.charge, b.charge);
-          if (c < 0.02) continue;
-          ctx.strokeStyle = rgba(C.beacon, (0.32 + 0.25 * e) * c);
-          ctx.lineWidth = 1 + e;
-          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-        }
-      }
-      if (B.s > 0.01 && rings[0]) {
-        ctx.lineWidth = 1.6;
-        for (const n of rings[0].members) {
-          const c = n.charge * B.s;
-          if (c < 0.02) continue;
-          ctx.strokeStyle = rgba(C.beacon, 0.55 * c);
-          ctx.beginPath(); ctx.moveTo(B.x, B.y); ctx.lineTo(n.x, n.y); ctx.stroke();
-        }
-      }
 
-      const PLANE = 24;
-      for (const n of nodes) {
-        const col = mix(C.idle, C.beacon, n.charge);
-        if (n.charge > 0.02) {
-          const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 22);
-          glow.addColorStop(0, rgba(C.beacon, 0.32 * n.charge));
-          glow.addColorStop(1, rgba(C.beacon, 0));
-          ctx.fillStyle = glow;
-          ctx.beginPath(); ctx.arc(n.x, n.y, 22, 0, Math.PI * 2); ctx.fill();
-        }
-        drawPlane(n.x, n.y, n.ang, PLANE, rgba(col, 1));
-      }
+      if (state !== 'reveal') drawFlights(false);
 
       if (B.s > 0.01) {
         const s = B.s;
         const cq = state === 'climax' ? clamp((t - tCommit) / CLIMAX, 0, 1) : state === 'reveal' ? 1 : 0;
-        const haloR = 70 + 160 * e + 220 * cq;
+        const haloR = 70 + 160 * e + 60 * cq;
         const halo = ctx.createRadialGradient(B.x, B.y, 0, B.x, B.y, haloR);
         halo.addColorStop(0, rgba(C.beacon, (0.3 + 0.25 * e) * s));
         halo.addColorStop(1, rgba(C.beacon, 0));
@@ -807,7 +863,7 @@
         ctx.fillStyle = rgba(mix(C.bg, C.beacon, 0.45), s);
         ctx.beginPath(); ctx.arc(B.x, B.y, 11 + 6 * e, 0, Math.PI * 2); ctx.fill();
         ctx.fillStyle = rgba(C.beacon, s);
-        ctx.beginPath(); ctx.arc(B.x, B.y, 4.5 + 3 * e + 20 * cq, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(B.x, B.y, 4.5 + 3 * e + 6 * cq, 0, Math.PI * 2); ctx.fill();
       }
       ctx.restore();
 
@@ -822,6 +878,11 @@
         ctx.fillStyle = hole;
         ctx.beginPath(); ctx.arc(B.x, B.y, r, 0, Math.PI * 2); ctx.fill();
         ctx.globalCompositeOperation = 'source-over';
+      }
+      if (state === 'reveal') {
+        ctx.globalAlpha = nodeA;
+        drawFlights(true);
+        ctx.globalAlpha = 1;
       }
 
       return q;

@@ -5,9 +5,9 @@ description: How the homepage's hold-to-enter intro (public/beacon-gate.js) work
 
 # Beacon Gate: hold-to-enter intro
 
-A full-screen canvas layer over the homepage. Nodes drift at random; pressing and holding
-drops a yellow beacon that pulls them into rotating rings. Holding builds speed for 5 s,
-then the layer opens and the homepage underneath becomes usable.
+A full-screen canvas layer over the homepage, with no grid. 24 planes wander on their own; pressing
+and holding drops a yellow beacon, and they form six flights of four that circle it. Holding builds speed for 5 s, then the
+flights join into one arrowhead that flies off as the layer opens and the homepage becomes usable.
 
 ## Design intent (keep these unless the owner asks otherwise)
 - Metaphor: chaotic dispersion → coherent form, which matches the site's message about consequential choices.
@@ -18,20 +18,34 @@ then the layer opens and the homepage underneath becomes usable.
 
 ## How it works (all in public/beacon-gate.js)
 - **One number drives everything:** hold progress `p` from 0 to 1 over `holdMs`. `e = p^accel`
-  (ease-in) scales ring speed (×1 → ×14), ring tightness, spring stiffness, pulse rate, glow,
-  arrow length and, near the end, a slight tremor.
-- **Planes:** each node is drawn as the plane from `public/plane.svg` (nose up in the file, turned to face its heading).
+  (ease-in) scales ring speed (×1 → ×14), ring tightness, spring stiffness, pulse rate, glow
+  and, near the end, a slight tremor.
+- **Planes:** each is drawn as the plane from `public/plane.svg` (nose up in the file, turned to face its heading).
   The file is fetched on mount (option `plane`); a built-in copy of its path is used until or unless it loads.
-  Two fainter, smaller background flocks (`PLANE_LAYERS`) wander the same way, wrap at the edges, speed up slightly
-  with the hold and burst outward on reveal. They never join the rings.
-- **Releasing early** scatters the nodes and drains `p` over `drainMs`. Pressing again continues from the remaining charge.
-- **Point of no return** at p = 1: state `climax` (0.45 s; the rings collapse into the beacon), then
-  `reveal`, where the nodes burst outward and the layer opens, then `done`, when the layer is removed and the page unlocked.
+  Plane size and spacing scale with the screen (`planeSize`, `spacing`).
+- **Flights:** always 24 planes. Before a press each wanders on its own and steers back in from the edges; there
+  is no formation. On a press, `assignFormation` splits them into `FLIGHTS` (6) groups of four by angle round the
+  beacon (neighbours fly together), and the plane furthest along the turn leads. Each flight is a finger-four
+  (`FINGER`: lead, wingman back-left, element lead back-right, its wingman further back-right). No lines
+  are drawn between planes or from the beacon to them.
+- **Background:** two fainter, smaller layers (`PLANE_LAYERS`) wander singly, wrap at the edges and speed up
+  slightly with the hold. On a press (`groupFlock`) each plane joins its three nearest neighbours in the same layer
+  as a finger-four that wanders and wraps together. Letting go ungroups them. They burst outward on reveal and
+  never join the main formation.
+- **Releasing early** breaks up the flights: every plane gets its own outward kick and flies singly again, and `p` drains over `drainMs`. Pressing again continues from the remaining charge.
+- **Point of no return** at p = 1: state `climax` (`CLIMAX` 1.1 s; the flights join into the arrowhead, `formArrowhead`),
+  then `reveal`, where the arrowhead accelerates off screen as the layer opens, then `done`, when the layer is removed
+  and the page unlocked.
+- **Arrowhead:** three flights down each side of a V, keeping their left-to-right order; the left side's
+  finger-fours are mirrored so both wings sweep outward. It flies upward toward the side of the screen with more
+  room from the press point (straight up when the press is near the middle), creeping during the join and then
+  accelerating so it is off screen as the reveal ends. During the reveal the planes are drawn above the iris with an
+  ink edge so they read on the white page. Skip/Escape opens without the fly-off.
 - **Reveal styles:** `iris` (a soft-edged hole grows from the beacon via canvas `destination-out`,
-  the default), `fade` (overlay opacity), `dissolve` (background fades first, nodes float over the page).
-- **Formation:** the nodes nearest the beacon fill the inner ring first; each ring keeps its members' angular
-  order so paths don't cross; neighbouring rings rotate in opposite directions. Each ring integrates its own `phase`
-  so a change in speed doesn't jump the angle.
+  the default), `fade` (overlay opacity), `dissolve` (background fades first, planes float over the page).
+- **Ring:** the six flights share one ring, 60° apart, nose first, each taking the nearest free place in its
+  current angular order so paths don't cross. They circle the way most leads were already flying. The ring integrates
+  its own `phase` so a change in speed doesn't jump the angle.
 - **Sound:** Web Audio, synthesised, no files. Two detuned saws plus a sub go through a resonant low-pass, with
   band-passed noise for air. An LFO on the level gives the "whup-whup", whose rate follows ring speed
   (2.5 → ~50 Hz) until it blurs into a whine. The pitch rises 45 → ~390 Hz. On reveal it spins down and plays a rush of air.
@@ -58,7 +72,7 @@ API: `gate.set({...})`, `gate.replay()`, `gate.skip()`, `gate.destroy()`, `gate.
 
 ## Testing
 Synthetic `PointerEvent('pointerdown'/'pointerup')` dispatched on `.bgate-canvas` work for checking timing.
-Expected: the state reaches `climax` at ~5.0 s, `reveal` at ~5.45 s and `done` at ~6.7 s. Audio needs one real click first,
+Expected: the state reaches `climax` at ~5.0 s, `reveal` at ~6.1 s and `done` at ~7.35 s. Audio needs one real click first,
 because synthetic events don't count as a user gesture.
 
 ## Possible next tweaks the owner has considered
