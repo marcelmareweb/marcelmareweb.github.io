@@ -12,7 +12,7 @@ const map = strategyIllusion.quadrants;
 type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title' | 'image'; mediaText?: string; image?: string; external?: boolean };
 const items = [
   policy && {
-    kind: 'Case account',
+    //kind: 'Case account',
     title: policy.data.title,
     href: `/cases/${policy.data.slug}`,
     media: 'quote',
@@ -20,7 +20,7 @@ const items = [
     mediaText: policy.data.quote,
   },
   {
-    kind: 'Applied learning design',
+    //kind: 'Applied strategy',
     title: 'Should We Invest in Solar?',
     href: '/work/#solar',
     media: 'image',
@@ -28,19 +28,19 @@ const items = [
     cue: 'Read.',
   },
   {
-    kind: 'Participatory behavioural research',
+    //kind: 'Behavioural research',
     title: 'Cookstove adoption.',
     href: '/work/#research',
     media: 'question',
     cue: 'Read.',
-    mediaText: 'What influences the adoption of improved cookstoves among households in Dunoon?',
+    mediaText: 'What influences the adoption of improved cookstoves in Africa?',
   },
   {
-    kind: 'Strategic decision map',
+    //kind: 'Strategic decision mapping',
     title: `${strategyIllusion.title}.`,
     href: '/thinking/strategic-decision-maps/strategy-illusion/',
     media: 'matrix',
-    cue: 'Explore.',
+    cue: 'Design Strategy.',
   },
 ].filter(Boolean) as Item[];
 ---
@@ -71,10 +71,11 @@ const items = [
             {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}
             {item.media === 'matrix' && (
               <div class="mini-matrix">
-                <span class="is-marked">{map.topLeft.title}</span>
-                <span>{map.topRight.title}</span>
-                <span>{map.bottomLeft.title}</span>
-                <span>{map.bottomRight.title}</span>
+                <img src="/matrix-black.svg" alt="" width="1254" height="1254" loading="lazy" decoding="async" />
+                <span class="mm-tl">{map.topLeft.title}</span>
+                <span class="mm-tr">{map.topRight.title}</span>
+                <span class="mm-bl">{map.bottomLeft.title}</span>
+                <span class="mm-br">{map.bottomRight.title}</span>
               </div>
             )}
             {item.media === 'title' && <p class="media-type media-type--title">{item.title}</p>}
@@ -134,9 +135,14 @@ const items = [
   .media-type p { margin: 0; text-indent: -0.4em; }
   .media-type--title { font-size: clamp(56px, 5vw, 96px); line-height: var(--leading-display); letter-spacing: var(--tracking-display); }
 
-  .mini-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; width: 88%; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-tile); background: var(--line-inverse); border: 1px solid var(--line-inverse); }
-  .mini-matrix span { display: flex; align-items: end; padding: 16px; background: var(--ink); font-size: var(--text-small); font-weight: 600; line-height: 1.1; letter-spacing: -0.006em; }
-  .mini-matrix .is-marked { background: var(--signal); color: var(--ink); }
+  /* The quadrant titles sit over the illustrated matrix, top-left of each quadrant, sized to the image. */
+  .mini-matrix { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-tile); container-type: inline-size; }
+  .mini-matrix img { display: block; width: 100%; height: 100%; }
+  .mini-matrix span { position: absolute; max-width: 30cqi; font-size: max(var(--text-label), 4.8cqi); font-weight: 600; line-height: 1.08; letter-spacing: var(--tracking-heading); text-wrap: balance; }
+  .mini-matrix .mm-tl { top: 4.6cqi; left: 5.2cqi; color: var(--ink); }
+  .mini-matrix .mm-tr { top: 4.6cqi; left: 54.8cqi; color: var(--signal); }
+  .mini-matrix .mm-bl { top: 55.4cqi; left: 5.2cqi; max-width: 42cqi; color: var(--signal); }
+  .mini-matrix .mm-br { top: 55.4cqi; left: 53.8cqi; max-width: 46cqi; color: var(--ink); }
 
   @media (max-width: 767px) {
     .strip-head { flex-direction: column; align-items: start; gap: 24px; }
@@ -147,6 +153,5 @@ const items = [
     .strip-media { padding: 24px; }
     .media-type { font-size: var(--compact-xs); }
     .media-type--title { font-size: var(--compact-xl); }
-    .mini-matrix span { padding: 10px; font-size: var(--text-small); }
   }
 </style>
