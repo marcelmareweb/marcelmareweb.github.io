@@ -20,6 +20,10 @@ then the layer opens and the homepage underneath becomes usable.
 - **One number drives everything:** hold progress `p` from 0 to 1 over `holdMs`. `e = p^accel`
   (ease-in) scales ring speed (×1 → ×14), ring tightness, spring stiffness, pulse rate, glow,
   arrow length and, near the end, a slight tremor.
+- **Planes:** each node is drawn as the plane from `public/plane.svg` (nose up in the file, turned to face its heading).
+  The file is fetched on mount (option `plane`); a built-in copy of its path is used until or unless it loads.
+  Two fainter, smaller background flocks (`PLANE_LAYERS`) wander the same way, wrap at the edges, speed up slightly
+  with the hold and burst outward on reveal. They never join the rings.
 - **Releasing early** scatters the nodes and drains `p` over `drainMs`. Pressing again continues from the remaining charge.
 - **Point of no return** at p = 1: state `climax` (0.45 s; the rings collapse into the beacon), then
   `reveal`, where the nodes burst outward and the layer opens, then `done`, when the layer is removed and the page unlocked.

@@ -16,6 +16,7 @@
     storageKey: 'beacon-gate-seen',
     brand: '',             // wordmark text, top-left
     logo: '',              // logo image URL, top-left
+    plane: '/plane.svg',   // SVG whose <path> data draws each plane (nose pointing up)
     label: 'Intro',
     hint: 'Press and hold anywhere to enter',
     holdingHint: 'Keep holding',
@@ -69,6 +70,15 @@
   const CLIMAX = 0.45;     // s: rings collapse into the beacon before the reveal
   const REVEAL = { iris: 1.25, fade: 0.9, dissolve: 1.6, skip: 0.45 };
 
+  // Built-in copy of public/plane.svg (500×500, nose up), used until or unless the file loads.
+  const PLANE_D = 'M250 20C290 100 300 150 300 170L460 300L460 360L300 290L270 380L340 430L340 480L250 440'
+    + 'L160 480L160 430L230 380L200 290L40 360L40 300L200 170C200 150 210 100 250 20Z';
+  const PLANE_BOX = 500;
+  const PLANE_LAYERS = [   // background flocks, furthest first
+    { size: 9, alpha: 0.16, speed: 0.45, density: 26000 },
+    { size: 13, alpha: 0.26, speed: 0.7, density: 42000 },
+  ];
+
   const rand = (a, b) => a + Math.random() * (b - a);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const easeInOut = (q) => (q < 0.5 ? 4 * q * q * q : 1 - Math.pow(-2 * q + 2, 3) / 2);
@@ -114,7 +124,8 @@
     let audio = null;
     let root, cv, ctx, hintEl, skipEl, soundEl;
     let W = 0, H = 0, dpr = 1, scale = 1;
-    let nodes = [], links = [], rings = [];
+    let nodes = [], links = [], rings = [], flock = [];
+    let plane = new Path2D(PLANE_D), planeBox = PLANE_BOX;
     let state = 'done', holding = false, p = 0, raf = 0, last = 0;
     let tCommit = 0, tReveal = 0, revealMode = 'iris', revealDur = 1;
     let locked = [], prevOverflow = '';
@@ -217,6 +228,7 @@
       global.addEventListener('resize', resize);
       document.addEventListener('visibilitychange', onVisibility);
 
+      loadPlane();
       lockPage();
       resize();
       seed();
@@ -317,6 +329,22 @@
       }
       hintEl.textContent = opts.hint;
       hintEl.classList.remove('is-holding');
+    }
+
+    // Use the plane from the SVG file when it loads; keep the built-in copy otherwise.
+    function loadPlane() {
+      if (!opts.plane || typeof fetch !== 'function') return;
+      fetch(opts.plane).then((r) => (r.ok ? r.text() : '')).then((text) => {
+        const doc = new DOMParser().parseFromString(text, 'image/svg+xml');
+        const svg = doc.querySelector('svg');
+        const paths = doc.querySelectorAll('path[d]');
+        if (!svg || !paths.length) return;
+        const path = new Path2D();
+        paths.forEach((el) => path.addPath(new Path2D(el.getAttribute('d'))));
+        const vb = (svg.getAttribute('viewBox') || '').split(/[\s,]+/).map(Number);
+        plane = path;
+        planeBox = vb.length === 4 && vb[2] > 0 ? Math.max(vb[2], vb[3]) : PLANE_BOX;
+      }).catch(() => {});
     }
 
     function kickOutward(n, speed) {
@@ -481,6 +509,16 @@
           h, sp, charge: 0, t0: Infinity, ring: -1, slot: 0,
         };
       });
+      flock = [];
+      for (const layer of PLANE_LAYERS) {
+        const n = Math.round(clamp((W * H) / layer.density, 8, 60));
+        for (let i = 0; i < n; i++) {
+          const h = rand(0, Math.PI * 2), sp = rand(18, 42) * layer.speed * (reduced ? 0.4 : 1);
+          flock.push({ x: rand(0, W), y: rand(0, H), vx: Math.cos(h) * sp, vy: Math.sin(h) * sp,
+            h, sp, ang: h, layer });
+        }
+      }
+      for (const n of nodes) n.ang = n.h;
       links = nodes.map((n, i) => {
         let j = Math.floor(Math.random() * count);
         if (j === i) j = (j + 1) % count;
@@ -535,6 +573,7 @@
         n.t0 = Infinity;
         if (burst) kickOutward(n, rand(380, 820) * (reduced ? 0.3 : 1));
       }
+      if (burst) for (const f of flock) kickOutward(f, rand(200, 500) * f.layer.speed * (reduced ? 0.3 : 1));
       root.style.background = 'transparent';
     }
 
@@ -596,21 +635,45 @@
           if (hit) n.h = Math.atan2(n.vy, n.vx);
         }
       }
+      // Background flocks wander the same way, a little faster as the charge builds, and wrap at the edges.
+      const boost = 1 + 1.5 * e * (reduced ? 0.25 : 1);
+      for (const f of flock) {
+        if (state !== 'reveal') {
+          f.h += (Math.random() - 0.5) * dt * 2.6;
+          f.vx += (Math.cos(f.h) * f.sp * boost - f.vx) * dt * 0.9;
+          f.vy += (Math.sin(f.h) * f.sp * boost - f.vy) * dt * 0.9;
+        }
+        f.x += f.vx * dt; f.y += f.vy * dt;
+        if (state !== 'reveal') {
+          const pad = f.layer.size;
+          if (f.x < -pad) f.x = W + pad; else if (f.x > W + pad) f.x = -pad;
+          if (f.y < -pad) f.y = H + pad; else if (f.y > H + pad) f.y = -pad;
+        }
+      }
+      for (const n of nodes.concat(flock)) {
+        const sp = Math.hypot(n.vx, n.vy);
+        if (sp > 3) {
+          let d = Math.atan2(n.vy, n.vx) - n.ang;
+          d = Math.atan2(Math.sin(d), Math.cos(d));
+          n.ang += d * Math.min(1, dt * 10);
+        }
+      }
       return { e, radiusF };
     }
 
     // ---- drawing ---------------------------------------------------------
 
-    function arrow(x, y, ux, uy, len, color) {
-      const ex = x + ux * len, ey = y + uy * len;
-      ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 1.6;
-      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(ex - ux * 4, ey - uy * 4); ctx.stroke();
-      const px = -uy, py = ux;
-      ctx.beginPath();
-      ctx.moveTo(ex, ey);
-      ctx.lineTo(ex - ux * 8 + px * 4.2, ey - uy * 8 + py * 4.2);
-      ctx.lineTo(ex - ux * 8 - px * 4.2, ey - uy * 8 - py * 4.2);
-      ctx.closePath(); ctx.fill();
+    // The plane's nose points up in the SVG, so turn it a quarter to face its heading.
+    function drawPlane(x, y, ang, size, color) {
+      const k = size / planeBox;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(ang + Math.PI / 2);
+      ctx.scale(k, k);
+      ctx.translate(-planeBox / 2, -planeBox / 2);
+      ctx.fillStyle = color;
+      ctx.fill(plane);
+      ctx.restore();
     }
 
     function draw(t, e, radiusF) {
@@ -633,6 +696,8 @@
       for (let x = (W % g) / 2; x < W; x += g) { ctx.moveTo(Math.round(x) + 0.5, 0); ctx.lineTo(Math.round(x) + 0.5, H); }
       for (let y = (H % g) / 2; y < H; y += g) { ctx.moveTo(0, Math.round(y) + 0.5); ctx.lineTo(W, Math.round(y) + 0.5); }
       ctx.stroke();
+
+      for (const f of flock) drawPlane(f.x, f.y, f.ang, f.layer.size, rgba(C.idle, f.layer.alpha * nodeA));
 
       // A slight tremor as the charge nears the threshold.
       const shake = reduced || state === 'reveal' ? 0
@@ -698,7 +763,7 @@
         }
       }
 
-      const R = 6.5;
+      const PLANE = 24;
       for (const n of nodes) {
         const col = mix(C.idle, C.beacon, n.charge);
         if (n.charge > 0.02) {
@@ -708,14 +773,7 @@
           ctx.fillStyle = glow;
           ctx.beginPath(); ctx.arc(n.x, n.y, 22, 0, Math.PI * 2); ctx.fill();
         }
-        const sp = Math.hypot(n.vx, n.vy);
-        if (sp > 3) {
-          const ux = n.vx / sp, uy = n.vy / sp;
-          const len = Math.min(34 + 26 * e, 12 + sp * 0.22);
-          arrow(n.x + ux * (R + 1), n.y + uy * (R + 1), ux, uy, len, rgba(col, 0.55 + 0.3 * n.charge));
-        }
-        ctx.fillStyle = rgba(col, 1);
-        ctx.beginPath(); ctx.arc(n.x, n.y, R, 0, Math.PI * 2); ctx.fill();
+        drawPlane(n.x, n.y, n.ang, PLANE, rgba(col, 1));
       }
 
       if (B.s > 0.01) {
