@@ -32,6 +32,7 @@ const items = [
     title: 'Cookstove adoption.',
     href: '/work/#research',
     media: 'question',
+    image: '/images/research/pilot-baking-001.jpg',
     cue: 'Read.',
     mediaText: 'What influences the adoption of improved cookstoves in Africa?',
   },
@@ -66,8 +67,9 @@ const items = [
     {items.map((item, index) => (
       <li class="strip-item">
         <Card layout="media" href={item.href} title={item.title} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
-          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`]} aria-hidden={item.media === 'title' || item.media === 'matrix' || item.media === 'image' ? 'true' : undefined}>
+          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`, item.media === 'question' && item.image && 'strip-media--backed']} aria-hidden={item.media === 'title' || item.media === 'matrix' || item.media === 'image' ? 'true' : undefined}>
             {item.media === 'quote' && <blockquote class="media-type"><p>“{item.mediaText}”</p></blockquote>}
+            {item.media === 'question' && item.image && <img class="strip-photo strip-backdrop" src={item.image} alt="" loading="lazy" decoding="async" />}
             {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}
             {item.media === 'matrix' && (
               <div class="mini-matrix">
@@ -130,6 +132,11 @@ const items = [
   .strip-media--title { background: var(--paper); }
   .strip-media--image { padding: 0; }
   .strip-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+  /* A question set over the study's own photo: an even ink veil keeps the type readable. */
+  .strip-media--backed { position: relative; background: var(--ink); color: var(--paper); }
+  .strip-backdrop { position: absolute; inset: 0; }
+  .strip-media--backed::after { content: ''; position: absolute; inset: 0; background: color-mix(in srgb, var(--ink) 55%, transparent); }
+  .strip-media--backed .media-type { position: relative; z-index: 1; }
 
   .media-type { margin: 0; font-size: clamp(32px, 2.6vw, 48px); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); text-wrap: balance; }
   .media-type p { margin: 0; text-indent: -0.4em; }
