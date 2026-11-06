@@ -26,6 +26,7 @@ const items = [
     media: 'image',
     image: '/images/courses/solar-cape-manufacturing.jpg',
     cue: 'Read.',
+    mediaText: 'Which of three rooftop solar proposals should Cape Manufacturing choose?',
   },
   {
     //kind: 'Behavioural research',
@@ -41,7 +42,7 @@ const items = [
     title: `${strategyIllusion.title}.`,
     href: '/thinking/strategic-decision-maps/strategy-illusion/',
     media: 'matrix',
-    cue: 'Design Strategy.',
+    cue: 'Explore.',
   },
 ].filter(Boolean) as Item[];
 ---
@@ -67,10 +68,10 @@ const items = [
     {items.map((item, index) => (
       <li class="strip-item">
         <Card layout="media" href={item.href} title={item.title} kind={item.kind} external={item.external} outlined={item.media === 'title'} cue={item.cue} index={index}>
-          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`, item.media === 'question' && item.image && 'strip-media--backed']} aria-hidden={item.media === 'title' || item.media === 'matrix' || item.media === 'image' ? 'true' : undefined}>
+          <div slot="media" class:list={['strip-media', `strip-media--${item.media}`, item.image && item.mediaText && 'strip-media--backed']} aria-hidden={item.media === 'title' || item.media === 'matrix' || item.media === 'image' ? 'true' : undefined}>
+            {item.image && item.mediaText && <img class="strip-photo strip-backdrop" src={item.image} alt="" loading="lazy" decoding="async" />}
             {item.media === 'quote' && <blockquote class="media-type"><p>“{item.mediaText}”</p></blockquote>}
-            {item.media === 'question' && item.image && <img class="strip-photo strip-backdrop" src={item.image} alt="" loading="lazy" decoding="async" />}
-            {item.media === 'question' && <p class="media-type">{item.mediaText}</p>}
+            {(item.media === 'question' || item.media === 'image') && item.mediaText && <p class="media-type">{item.mediaText}</p>}
             {item.media === 'matrix' && (
               <div class="mini-matrix">
                 <img src="/matrix-black.svg" alt="" width="1254" height="1254" loading="lazy" decoding="async" />
@@ -81,7 +82,7 @@ const items = [
               </div>
             )}
             {item.media === 'title' && <p class="media-type media-type--title">{item.title}</p>}
-            {item.media === 'image' && <img class="strip-photo" src={item.image} alt="" loading="lazy" decoding="async" />}
+            {item.media === 'image' && !item.mediaText && <img class="strip-photo" src={item.image} alt="" loading="lazy" decoding="async" />}
           </div>
         </Card>
       </li>
@@ -130,9 +131,9 @@ const items = [
   .strip-media--quote, .strip-media--matrix { background: var(--ink); color: var(--paper); }
   .strip-media--matrix { align-items: center; justify-content: center; }
   .strip-media--title { background: var(--paper); }
-  .strip-media--image { padding: 0; }
+  .strip-media--image:not(.strip-media--backed) { padding: 0; }
   .strip-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
-  /* A question set over the study's own photo: an even ink veil keeps the type readable. */
+  /* Media text set over the item's own photo: an even ink veil keeps the type readable. */
   .strip-media--backed { position: relative; background: var(--ink); color: var(--paper); }
   .strip-backdrop { position: absolute; inset: 0; }
   .strip-media--backed::after { content: ''; position: absolute; inset: 0; background: color-mix(in srgb, var(--ink) 55%, transparent); }

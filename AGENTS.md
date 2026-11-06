@@ -42,6 +42,8 @@ Before any visual or interaction change, consult [docs/design-reference/README.m
 - [Animation](docs/design-reference/ANIMATION_SPECIFICATIONS.md)
 - [Implementation strategy](docs/design-reference/IMPLEMENTATION_STRATEGY.md)
 
+For copy, naming, evidence labels and the logo, also consult the [brand strategy](docs/brand-strategy/BRAND_STRATEGY.md): its brand idea (*helping teams find formation*), principle (*Useful, never indispensable.*), voice rules and evidence discipline, and its [implementation plan](docs/brand-strategy/IMPLEMENTATION.md). It works within this file; where they differ, this file governs.
+
 Use black and white as the predominant visual system, with yellow as the distinctive accent. Neutral greys may support hierarchy. Do not use the previous terracotta, ochre, sand or stone palette.
 
 Typography is central to the identity: oversized expressive sans-serif, weight 600, sharp scale contrasts, deliberate line breaks, tight tracking and optical alignment. Use the measured Huge reference scale, leading, spacing and interaction timings documented in the investigation. Use self-hosted Inter (variable, with optical sizes) as the available sans-serif, the closest open-licence match to the reference's Matter; do not copy proprietary reference fonts. Do not introduce editorial serifs: the actual reference provides no justification for them.

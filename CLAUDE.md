@@ -14,6 +14,10 @@ Chosen November 2026. It applies the AGENTS.md visual system and Huge structural
 
 **Mood.** Rigorous and calm, like a working document you would trust with a real decision. The site is structured the way the practice structures a decision: question, alternatives, assumptions, trade-offs, owner, review. It demonstrates the method instead of describing it.
 
+**Brand.** The decision record is the site's structural method, not the brand idea. The brand idea, *helping teams find formation*, its voice and evidence rules live in [docs/brand-strategy/BRAND_STRATEGY.md](docs/brand-strategy/BRAND_STRATEGY.md).
+
+**Logo.** The yellow Spotted Ape logo (`public/logo.png`) is the key brand asset and the only ape in the brand's imagery. Use the artwork as supplied: never redraw, recolour, outline, rotate or crop it. Icons and the social card are made from it (`public/favicon.ico`, `public/favicon.svg`, `public/brand/`, `public/og-card.png`); the old ring-and-spot mark is retired. Generated images are captioned as illustrations, never presented as photographs.
+
 **Fewest steps to engaging content.**
 - Every page's first viewport contains something to read or use, not an introduction to it. The homepage opens with the headline and one supporting statement, then four moments only: provocation, practice, evidence, invitation. Detail lives on the six core pages, never on the homepage.
 - Exception, approved November 2026: the homepage's hold-to-enter intro (`public/beacon-gate.js`) covers the first viewport once per browser session, with Skip intro and Escape. Under reduced motion its animation is slowed, but the hold remains. No other page has an intro.
@@ -111,5 +115,6 @@ There is no test runner, linter or Playwright dependency in the repo. "Tests" me
 ## Docs in the repo
 
 - `docs/design-reference/` — authoritative design specs (read README + DEFINITIVE_DIRECTION first).
+- `docs/brand-strategy/` — brand strategy (brand idea, voice, evidence rules, logo) and its implementation plan.
 - `docs/navigation-strategy/` — navigation audit, strategy and `implementation/IMPLEMENTATION.md`.
 - `docs/usability-review/`, `audit/`, `planning/` — review and historical material; observations about the old site are not the target direction.

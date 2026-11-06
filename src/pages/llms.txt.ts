@@ -12,7 +12,9 @@ export async function GET({ site }: APIContext) {
 
   const markdown = `# The Spotted Ape
 
-Independent strategic decision and behavioural design practice in Cape Town, South Africa.
+Independent strategic decision and behavioural design practice in Cape Town, South Africa, helping leaders navigate uncertainty, make consequential choices and create the conditions for purposeful action.
+
+Helping teams find formation. Useful, never indispensable.
 
 ## Capabilities
 
