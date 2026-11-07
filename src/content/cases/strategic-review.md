@@ -9,7 +9,8 @@ shift: Clarity returned. AI became support—not noise. Whole sections were remo
 result: Final draft in 9 days.
 quote: This is the first version that actually argues something.
 timeframe: 9 days
-featured: true
+featured: false
+scenario: true
 ---
 
 A senior analyst moved from an overworked draft to a clear strategic argument by returning to the judgment the report required.

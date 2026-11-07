@@ -48,7 +48,7 @@ No client interviews, competitor research, trademark searches, archival checks o
 - the cookstove study (peer-reviewed behavioural research);
 - the Creative x AI workshops (human–AI learning and behavioural design) [Unresolved: permissions];
 - Should We Invest in Solar? (an educational simulation);
-- the policy-analyst account [Unresolved: permission].
+- *not* the policy-analyst story: it is a fictional teaching scenario (owner, 7 November 2026), labelled as such on its page and used nowhere as evidence.
 
 **What it will not be.** An AI agency, an automation-maturity framework, a generic innovation studio, a source of guaranteed outcomes, or a guide that makes clients dependent on it. [Supplied/Decided]
 
@@ -166,7 +166,7 @@ The word “only” is not substantiated. Use this sentence internally to sharpe
 | Pillar | Claim | Proof (with its limit) |
 | --- | --- | --- |
 | **Orient** | A point of reference when conditions are confusing. | The name story [Supplied, essay; independently checked 7 November 2026]; the logo; the formation motif; Find Formation |
-| **Choose** | Examine the decision before committing to a plan. | The decision record; the Strategy Illusion map; the policy-analyst account [Unresolved: permission] |
+| **Choose** | Examine the decision before committing to a plan. | The decision record; the Strategy Illusion map; the Solar case (an educational simulation). *Gap:* no real strategic decision case yet. |
 | **Act** | Begin with what people actually do. | The cookstove study: published, with qualified findings and no claim of lasting adoption |
 | **Own the judgement** | Use AI without surrendering authorship or accountability. | The Creative x AI workshops: *Identity before tools*; reported gains in confidence and creative identity, and observed reductions in hesitation and increases in peer feedback [Supplied, case; Unresolved: permissions]. The Solar course: a model that supports, not replaces, judgement. *Gap:* no executive AI governance case. |
 
@@ -446,14 +446,14 @@ The logo is a fixed mark and the only place where yellow fills a large shape. Ev
 
 [Decided]
 
-**Common case format:** Challenge → Investigation → Designed experience → What was observed → What remains uncertain. It suits research, workshops and courses better than the decision-record structure. The existing policy-analyst account (context, shift, reported outcome) should move to this format when it is next edited.
+**Common case format:** Challenge → Investigation → Designed experience → What was observed → What remains uncertain. It suits research, workshops and courses better than the decision-record structure. The policy-analyst story is fictional teaching material, not a case, so it stays in its own format with a fictional label.
 
 | Case | Type | Question | Priority | Before publishing |
 | --- | --- | --- | --- | --- |
 | **Creative x AI Workshops** | Human–AI learning and behavioural design | How can emerging creatives use AI without losing authorship and professional identity? | High | Client, participant and image permissions. Separate reported outcomes (confidence, articulation of creative identity) from observed ones (experimentation, peer feedback). State that it is not executive AI governance. [Unresolved] |
 | **Cookstove research and participatory baking** | Peer-reviewed behavioural research | How can a familiar activity open up unfamiliar cooking practices? | High (on site) | Keep the publication's qualified findings; images per `CLEARANCES.md`. [Supplied] |
 | **Should We Invest in Solar?** | Applied digital course | How can a financial model support judgement without replacing it? | High (on site) | Label it an educational simulation, not a client engagement. |
-| **Policy-analyst review** | Strategic decision case account | — | Candidate | Permission to publish the account, outcome and quotation. [Unresolved] |
+| **Policy-analyst review** | Fictional teaching scenario | — | Not evidence | Labelled “Teaching scenario (fictional)” on its page (7 November 2026); removed from every evidence position. |
 
 **Remaining evidence gap:** executive-level AI decision governance.
 
@@ -589,7 +589,7 @@ These are not approved facts.
 3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
 4. **Logo files.** A vector master, and a favicon and social card made from the logo.
 5. **Creative x AI.** Published as a five-part case (`/cases/creative-x-ai-workshop`, 7 November 2026): one session in 2024 with the NFVF and QuiteFrankly, under 20 participants. The portfolio account on marcelmare.com still describes a multi-session series; correct it there.
-6. **Policy-analyst permission.** Permission to publish the account, outcome and quotation.
+6. **Policy-analyst story.** Resolved 7 November 2026: it is fictional teaching material, now labelled so and unlinked from evidence. Strategic Decision Design needs a real case account.
 7. **Raykis agreement.** Content ownership, reuse rights, commercial terms, learner support, branding and existing intellectual property.
 8. **Domain migration.** Stage A inventory, then an explicit instruction before Stage B; AGENTS.md is updated only then.
 9. **Executive AI governance evidence.** Still a gap; no case yet.

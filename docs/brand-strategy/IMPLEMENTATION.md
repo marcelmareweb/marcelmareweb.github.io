@@ -109,7 +109,7 @@ Each workstream lists its prerequisites, the work, the files involved and how to
 
 ### W4. Evidence and case accounts
 
-**Prerequisites (gated):** Creative x AI client, participant and image permissions, plus the missing facts (client, dates, participant numbers); policy-analyst publication permission.
+**Prerequisites (gated):** Creative x AI client, participant and image permissions, plus the missing facts (client, dates, participant numbers) (resolved 7 November 2026). The policy-analyst story is a fictional teaching scenario and is no longer used as evidence.
 
 **Work:**
 

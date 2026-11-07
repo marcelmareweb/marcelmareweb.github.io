@@ -26,6 +26,7 @@ document.querySelectorAll<HTMLFormElement>('[data-inquiry-form]').forEach((form)
     '/thinking',
     '/workshops/strategic-design-leadership',
     '/cases/policy-analyst-strategic-review',
+    '/cases/creative-x-ai-workshop',
     '/thinking/strategic-decision-maps/strategy-illusion',
   ];
   const proposedOrigin = (params.get('source') ?? '').replace(/\/$/, '') || '/';

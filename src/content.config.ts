@@ -18,6 +18,8 @@ const caseAccount = z.object({
   quote: z.string(),
   timeframe: z.string(),
   featured: z.boolean(),
+  /** A fictional teaching scenario, not an account of a real engagement. */
+  scenario: z.boolean().default(false),
 });
 
 const caseFivePart = z.object({

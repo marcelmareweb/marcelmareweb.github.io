@@ -1,30 +1,32 @@
 [
   {
-    "id": "knowledge-work-shift",
-    "title": "If AI Does the Work, What Are You Doing?",
-    "pubDate": "2026-10-14",
-    "readingTime": "4 min read",
-    "excerpt": "As AI takes on more production, knowledge work shifts from effort toward editorial judgment: deciding what matters, what is credible, and what deserves attention.",
-    "substackUrl": "https://spottedape.substack.com",
-    "tags": [
-      "knowledge work",
-      "judgment",
-      "AI literacy"
-    ],
+    "id": "the-deaf-leading-the-blind",
+    "title": "The Deaf Leading the Blind",
+    "pubDate": "2026-04-29",
+    "readingTime": "6 min read",
+    "excerpt": "What Silicon Valley’s LLMs Cannot See",
+    "substackUrl": "https://spottedape.substack.com/p/the-deaf-leading-the-blind",
+    "tags": [],
     "isFallback": true
   },
   {
-    "id": "human-in-the-loop-governance",
-    "title": "When More Thinking Makes Everything Worse",
-    "pubDate": "2026-09-12",
-    "readingTime": "5 min read",
-    "excerpt": "Inside a 9-day strategic policy review intervention: one clear argument replaced endless AI generation, over-editing, and rewrites.",
-    "substackUrl": "https://spottedape.substack.com",
-    "tags": [
-      "governance",
-      "human-in-the-loop",
-      "agentic systems"
-    ],
+    "id": "the-laboratory-fallacy",
+    "title": "The Laboratory Fallacy",
+    "pubDate": "2026-02-14",
+    "readingTime": "18 min read",
+    "excerpt": "What Argentine Anti-Fútbol Teaches Us About Modern Design",
+    "substackUrl": "https://spottedape.substack.com/p/the-laboratory-fallacy",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "the-hinterland-paradox-in-south-africa",
+    "title": "The Hinterland Paradox in South Africa",
+    "pubDate": "2026-02-05",
+    "readingTime": "13 min read",
+    "excerpt": "Explore how South Africa's institutional erosion has turned it into a vital \"back office\" for transnational insurgents. While SANDF soldiers fought M23 rebels in the DRC in 2024, the group's leaders operated freely from Johannesburg, fundraising and coordinating logistics. Even after M23's shift to controlled territories in 2025, networks persist for groups like al-Shabaab and ISIS affiliates, exploiting hawala systems, diaspora communities, and regulatory gaps. Highlighting women's pivotal roles in these operations and the risk of domestic blowback, this analysis warns of South Africa's precarious path and calls for urgent reforms to dismantle these hidden architectures before violence hits home.",
+    "substackUrl": "https://spottedape.substack.com/p/the-hinterland-paradox-in-south-africa",
+    "tags": [],
     "isFallback": true
   }
 ]

@@ -15,9 +15,9 @@ export const services = [
       'Assign responsibility and the evidence that would prompt a review.',
     ],
     evidence: {
-      label: 'Read the policy-analysis case account',
-      href: '/cases/policy-analyst-strategic-review',
-      note: 'Case account / Reported outcome',
+      label: 'Open the solar investment case',
+      href: '/work/#solar',
+      note: 'Educational simulation / No outcome claim',
     },
   },
   {

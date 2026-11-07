@@ -47,6 +47,6 @@ export function breadcrumbsFor(path: string): Breadcrumb[] {
       { label: 'The Strategy Illusion' },
     ],
   };
-  if (current.startsWith('/cases/')) return [home, work, { label: 'Case account' }];
+  if (current.startsWith('/cases/')) return [home, work, { label: current.startsWith('/cases/policy-analyst-strategic-review') ? 'Teaching scenario' : 'Case account' }];
   return known[current] ?? [];
 }

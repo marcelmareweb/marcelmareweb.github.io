@@ -5,19 +5,19 @@ import Card from '../Card.astro';
 import { strategyIllusion } from '../../data/strategicMatrices';
 
 const cases = await getCollection('cases');
-const policy = cases.flatMap(({ data }) => (data.format === 'account' && data.slug === 'policy-analyst-strategic-review' ? [data] : []))[0];
+const creative = cases.flatMap(({ data }) => (data.format === 'five-part' && data.slug === 'creative-x-ai-workshop' ? [data] : []))[0];
 const map = strategyIllusion.quadrants;
 
 // Each card's image is set from its own content or the item's own published imagery, never a decorative illustration.
 type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title' | 'image'; mediaText?: string; image?: string; external?: boolean };
 const items = [
-  policy && {
-    //kind: 'Case account',
-    title: policy.title,
-    href: `/cases/${policy.slug}`,
-    media: 'quote',
+  creative && {
+    //kind: 'Workshop',
+    title: creative.title,
+    href: `/cases/${creative.slug}`,
+    media: 'question',
     cue: 'Read.',
-    mediaText: policy.quote,
+    mediaText: creative.question,
   },
   {
     //kind: 'Applied strategy',
