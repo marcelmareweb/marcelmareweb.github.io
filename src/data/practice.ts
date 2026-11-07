@@ -4,11 +4,11 @@ export const services = [
     interest: 'strategic-decision',
     number: '01',
     title: 'Strategic Decision Design.',
-    problem: 'Several priorities. One commitment.',
-    question: 'Which alternatives deserve comparison, and what are we choosing to leave out?',
+    problem: 'Twelve priorities is another word for none.',
+    question: 'What are you willing to stop doing?',
     description:
-      'When familiar assumptions no longer hold, examine the decision before committing more effort to a plan.',
-    output: 'A clearly framed decision, examined assumptions and explicit commitments.',
+      'Every yes costs something you only notice later. We put the costs on the table while you can still change your mind.',
+    output: 'One choice, the reasons for it, and a short list of what you’ve agreed not to do.',
     work: [
       'Frame the question and the constraints.',
       'Compare alternatives and make trade-offs explicit.',
@@ -25,11 +25,11 @@ export const services = [
     interest: 'behavioural-design',
     number: '02',
     title: 'Behavioural Design.',
-    problem: 'Agreement has not become action.',
-    question: 'Which incentives, barriers and working conditions shape what people actually do?',
+    problem: 'Everyone agreed. Nobody changed.',
+    question: 'What makes the old way easier than the new one?',
     description:
-      'Begin with the conditions of real work. Understand motivations and everyday practices before prescribing an intervention.',
-    output: 'Research and interventions grounded in the conditions of real work.',
+      'People rarely resist a plan. They do what’s easier, more normal or more noticed. So we start where the behaviour happens, not where it was decided. Our cookstove research began with fresh bread, not a safety lecture.',
+    output: 'What actually gets in the way, and small changes worth testing.',
     work: [
       'Observe behaviour in its actual context.',
       'Examine motivations, incentives and practical barriers.',
@@ -46,11 +46,11 @@ export const services = [
     interest: 'human-ai',
     number: '03',
     title: 'Human–AI Decision Design.',
-    problem: 'AI is entering consequential work.',
+    problem: 'If AI does the work, what are you doing?',
     question: 'Where must people decide, review, challenge or stop an action?',
     description:
-      'Make decision authority and retained human judgement explicit as AI becomes part of a workflow.',
-    output: 'Decision authority, review points and clear responsibility for consequences.',
+      'As machines do more of the work, the valuable part is knowing who decides, who checks and who can say stop. We draw those lines with you before something goes wrong.',
+    output: 'Who decides, who reviews, and who answers for the result.',
     work: [
       'Identify consequential choices in the workflow.',
       'Define what AI may recommend and where human review is required.',
