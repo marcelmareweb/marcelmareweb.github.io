@@ -15,7 +15,7 @@ interface InsightEntry extends InsightData {
   id: string;
 }
 
-const DEFAULT_FEED_URL = 'https://thespottedape.substack.com/feed';
+const DEFAULT_FEED_URL = 'https://spottedape.substack.com/feed';
 const fallbackEntries = fallbackData as InsightEntry[];
 
 function decodeEntities(value: string): string {
