@@ -248,7 +248,7 @@ The 458th Bombardment Group, at RAF Horsham St Faith near Norwich, had two assem
 
 Sources: [458th Bomb Group association: the Spotted Ape](https://458bg.com/stories/spotted-ape-458th-assembly-ship/); [American Air Museum: 41-28697](https://americanairmuseum.com/aircraft/20148?page=2); [Wikipedia: Assembly ship](https://en.wikipedia.org/wiki/Assembly_ship). Wikipedia also records one occasion when *Spotted Ass Ape* stayed with its formation to the target rather than turning back. That is an exception; do not build the story on “always”.
 
-**Is the essay's photograph the Spotted Ape?** It shows a glazed nose without a nose turret, which is typical of the B-24D (*First Sergeant*) rather than the B-24H. Both wore the same scheme, so the photograph may show *First Sergeant*. Check the original's archive caption before naming the aircraft. [Unresolved]
+**The essay's photograph** (traced 7 November 2026). It is based on a wartime press photograph that the 458th Bomb Group association files as the *Spotted Ape* ([458bg.com](https://458bg.com/stories/spotted-ape-458th-assembly-ship/), file `ST-SpottedApe-MajJohnHensler.jpg`). The press caption calls it “THE SHOW OFF SHIP” and names Major John A. Hensler, a squadron commander, walking away from the aircraft, “used as a ‘formation’ plane”. The owner's version was colourised **and extended** with AI: the sky, apron, background bomber and figure are regenerated. Its colours are also wrong: the association's colour photographs show red and black spots and a red mouth, not black spots only.
 
 The essay draws three qualities from it:
 
@@ -407,14 +407,14 @@ The logo is a fixed mark and the only place where yellow fills a large shape. Ev
 
 | Image | What it shows | Use |
 | --- | --- | --- |
-| `spotted-ape-1.jpg` / `-3.jpg` (identical) | A white B-24 with black polka dots, a painted eye and a shark mouth, with a crewman on the apron and a second bomber behind | An archival photograph colourised with AI by the owner (7 November 2026). The AI colourisation is interpretive: the colours are not evidence. It may show *First Sergeant* rather than the *Spotted Ape* (6.1). Usable with a caption naming the archive and the colourisation, once its source and the colourist's rights are recorded in `CLEARANCES.md`. The shark mouth adds an aggression the brand avoids, so prefer the formation image for brand use. |
+| `spotted-ape-1.jpg` / `-3.jpg` (identical) | The *Spotted Ape*'s nose, with a figure on the apron and a second bomber behind | An AI rework of a wartime press photograph (6.1): colourised and extended, with inaccurate colours. Do not use it as a historical image. For the site, use the original black-and-white press photograph, credited to the 458th Bomb Group association, or one of the association's period colour photographs, after asking the association for permission. |
 | `spotted-ape-2.jpg` | B-24s forming up above cloud | The best fit for *finding formation*. It carries a generator's sparkle mark (bottom right), so it is AI-generated. Use only as a labelled illustration, and check the tool's terms. |
 | `spotted-ape-4.jpg` / `.png` | A realistic chimpanzee in a vintage spacesuit | Do not use as a brand image. It tells a different story (space flight), and a realistic ape competes with the yellow logo. |
 
 **Imagery rules.**
 
 - Never present a generated or reconstructed image as a historical photograph. Caption it as an illustration.
-- The Substack essay uses the colourised aircraft photograph (figure 1) and the AI-generated formation image (figure 2). Figure 1's caption should name the archive and say the photograph was colourised with AI; figure 2's should say it is an AI-generated illustration.
+- The Substack essay uses the colourised aircraft photograph (figure 1) and the AI-generated formation image (figure 2). Figure 1's caption should say it is based on a wartime press photograph (458th Bomb Group association) and was colourised and extended with AI; figure 2's should say it is an AI-generated illustration.
 - For the name story on About, prefer a cleared archival photograph. Otherwise use the formation illustration, labelled, or the site's own abstract formation graphics.
 - The logo is the only ape in the brand's imagery.
 
@@ -584,8 +584,8 @@ Measure the fame and uniqueness of the ape logo and the formation motif only aft
 
 These are not approved facts.
 
-1. **Imagery.** The aircraft photograph is colourised archival: record its archive source and the colourist's rights. The formation image is AI-generated: caption it as an illustration. Update both Substack captions (8.4).
-2. **Historical facts.** Checked 7 November 2026 (6.1): the serial is 41-28697, not the essay's 42-50346, and assembly duty ran June 1944 to March 1945. Correct the essay. Still open: whether the essay's photograph shows *First Sergeant* (B-24D) or the *Spotted Ape*.
+1. **Imagery.** The aircraft image is an AI rework of a press photograph held by the 458th Bomb Group association (6.1); the formation image is AI-generated. Update both Substack captions. For the About page, ask the association for permission to use the original photograph, and record it in `CLEARANCES.md`.
+2. **Historical facts.** Checked 7 November 2026 (6.1): the serial is 41-28697, not the essay's 42-50346, and assembly duty ran June 1944 to March 1945. Correct the essay.
 3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
 4. **Logo files.** A vector master, and a favicon and social card made from the logo.
 5. **Creative x AI permissions and facts.** Client, dates, participant numbers and image permissions are missing from the account. Keep reported outcomes (confidence, identity) separate from observed ones (hesitation, peer feedback), and drop the account's “scalable model” claim, which it does not evidence.
