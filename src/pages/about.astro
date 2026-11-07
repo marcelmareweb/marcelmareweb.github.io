@@ -22,6 +22,27 @@ import PageIntro from '../components/PageIntro.astro';
 </div>
 </div>
 </section>
+<section class="section-y name-story" id="name" aria-labelledby="name-title">
+<div class="wrap">
+<div class="split-layout">
+<h2 class="section-title" id="name-title" data-reveal>Why The<br />Spotted Ape?</h2>
+<div>
+<div class="prose">
+<p>During the Second World War, hundreds of bombers took off from airfields across East Anglia and had to find one another in fog before they could set out together.</p>
+<p>Each group was gathered by an assembly ship, an aircraft painted to be seen. The 458th Bomb Group’s was a polka-dotted Liberator its crews called the Spotted Ape. From June 1944 it climbed first, circled a fixed point and fired its flares until the formation held.</p>
+<p>Then it turned for home.</p>
+<p>That is the idea behind The Spotted Ape: a point of orientation when conditions are confusing, help in finding direction, and people left able to carry on without us.</p>
+</div>
+<p class="display-copy name-principle">Useful, never indispensable.</p>
+<a class="text-link" href="https://spottedape.substack.com/p/the-flying-spotted-ass-ape-and-the">Read the essay <Arrow /></a>
+<figure class="name-photo">
+<img src="/images/history/spotted-ape-show-off-ship.jpg" width="1600" height="1235" alt="The nose of the Spotted Ape, painted white with dark polka dots, a large eye and a shark’s mouth. A pilot in flying gear walks away across the airfield." loading="lazy" decoding="async" />
+<figcaption>The Spotted Ape at its base in England. Wartime press photograph, courtesy of the 458th Bomb Group association.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section class="section-y" id="section-05">
 <span id="section-02" aria-hidden="true"></span>
 <div class="wrap">
@@ -57,6 +78,26 @@ import PageIntro from '../components/PageIntro.astro';
 .formation-frame {
   min-width: 0;
   align-self: center;
+}
+.name-principle {
+  margin-top: 40px;
+}
+.name-story .text-link {
+  margin-top: 24px;
+}
+.name-photo {
+  margin: var(--space-md) 0 0;
+}
+.name-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}
+.name-photo figcaption {
+  margin-top: 12px;
+  font: var(--font-label);
+  color: var(--text-muted);
 }
 .practitioner-name h2 {
   font-size: var(--display-l);
