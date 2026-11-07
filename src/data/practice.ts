@@ -57,9 +57,9 @@ export const services = [
       'Clarify who can authorise, challenge or stop an action.',
     ],
     evidence: {
-      label: 'Explore a map of strategic choices',
-      href: '/thinking/strategic-decision-maps/strategy-illusion/',
-      note: 'Thinking / A discussion instrument',
+      label: 'Read the Creative x AI workshop account',
+      href: '/cases/creative-x-ai-workshop',
+      note: 'Case account / One workshop session',
     },
   },
 ] as const;

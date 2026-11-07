@@ -1,4 +1,5 @@
 ---
+format: account
 slug: policy-analyst-strategic-review
 title: When more thinking makes everything worse.
 clientContext: A senior policy analyst was weeks away from a major strategic review. Her research was strong. But the final report had stalled.

@@ -588,7 +588,7 @@ These are not approved facts.
 2. **Historical facts.** Checked 7 November 2026 (6.1): the serial is 41-28697, not the essay's 42-50346, and assembly duty ran June 1944 to March 1945. Correct the essay.
 3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
 4. **Logo files.** A vector master, and a favicon and social card made from the logo.
-5. **Creative x AI permissions and facts.** Client, dates, participant numbers and image permissions are missing from the account. Keep reported outcomes (confidence, identity) separate from observed ones (hesitation, peer feedback), and drop the account's “scalable model” claim, which it does not evidence.
+5. **Creative x AI.** Published as a five-part case (`/cases/creative-x-ai-workshop`, 7 November 2026): one session in 2024 with the NFVF and QuiteFrankly, under 20 participants. The portfolio account on marcelmare.com still describes a multi-session series; correct it there.
 6. **Policy-analyst permission.** Permission to publish the account, outcome and quotation.
 7. **Raykis agreement.** Content ownership, reuse rights, commercial terms, learner support, branding and existing intellectual property.
 8. **Domain migration.** Stage A inventory, then an explicit instruction before Stage B; AGENTS.md is updated only then.

@@ -72,9 +72,9 @@ const clientDeliverables = [
 const phases = facilitationPhases.map(phase => ({ name: `${phase.title}.`, text: phase.problem, aside: phase.action }));
 const contexts = idealContexts.map(item => ({ name: `${item.title}.`, text: item.description }));
 const deliverables = clientDeliverables.map(item => ({ name: `${item.title}.`, text: item.description }));
-const policy = (await getCollection('cases')).find(item => item.data.slug === 'policy-analyst-strategic-review');
+const policy = (await getCollection('cases')).flatMap(({ data }) => (data.format === 'account' && data.slug === 'policy-analyst-strategic-review' ? [data] : []))[0];
 const evidence = [
-  ...(policy ? [{ name: policy.data.title, text: `Reported outcome: ${policy.data.result}`, aside: 'Case account', href: `/cases/${policy.data.slug}`, preview: `“${policy.data.quote}”` }] : []),
+  ...(policy ? [{ name: policy.title, text: `Reported outcome: ${policy.result}`, aside: 'Case account', href: `/cases/${policy.slug}`, preview: `“${policy.quote}”` }] : []),
   { name: 'Cookstove adoption.', text: 'The pilot reported increased LPG and biomass stove ownership, but no significant reduction in paraffin stove ownership.', aside: 'Behavioural research', href: '/work/#research', preview: 'What influences the adoption of improved cookstoves among households in Dunoon?' },
 ];
 ---

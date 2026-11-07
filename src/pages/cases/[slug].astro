@@ -20,16 +20,22 @@ export async function getStaticPaths() {
 
 const { caseStudy } = Astro.props;
 const { data } = caseStudy;
+const intro = data.format === 'account' ? data.clientContext : data.context;
+const interest = data.format === 'account' ? 'strategic-decision' : data.interest;
+const invitation = data.format === 'account' ? 'Explore strategic decision support, or bring the question you need to resolve.' : 'Bring the question your team needs to work through, with or without AI.';
+const service = data.format === 'account' ? { href: '/services/#strategic-decision-design', label: 'Strategic Decision Design' } : { href: `/services/#${data.service}`, label: 'Human–AI Decision Design' };
 const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://marcelmareweb.github.io');
 ---
-<BaseLayout title={`${data.title} | The Spotted Ape`} description={data.clientContext} canonicalURL={canonicalURL} schemaType="Article">
-<PageIntro scale="sentence" description={data.clientContext}>
+<BaseLayout title={`${data.title} | The Spotted Ape`} description={intro} canonicalURL={canonicalURL} schemaType="Article">
+<PageIntro scale="sentence" description={intro}>
 <Fragment slot="heading">{data.title}</Fragment>
 <nav class="page-nav print-action" aria-label="Case actions">
 <button class="text-link" type="button" data-print-brief>Print / Save as PDF <Arrow /></button>
 </nav>
 </PageIntro>
 <article class="case-brief wrap">
+{data.format === 'account' ? (
+<>
 <dl class="record" aria-label="The case as a decision record">
 <div class="record-row"><dt>Decision focus</dt><dd><strong>The report’s argument.</strong></dd></div>
 <div class="record-row"><dt>The pattern</dt><dd>{data.pattern}</dd></div>
@@ -39,8 +45,25 @@ const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://marce
 </dl>
 <blockquote class="case-quote"><p>“{data.quote}”</p></blockquote>
 <p class="case-caption">An account of this engagement. The reported result does not establish a typical or guaranteed outcome. The Spotted Ape (Pty) Ltd, Cape Town, South Africa.</p>
+</>
+) : (
+<>
+<p class="case-question">{data.question}</p>
+<dl class="record" aria-label="The case in five parts">
+<div class="record-row"><dt>Evidence</dt><dd>{data.evidenceType}</dd></div>
+<div class="record-row"><dt>Role</dt><dd>{data.role}</dd></div>
+<div class="record-row"><dt>The challenge</dt><dd>{data.challenge}</dd></div>
+<div class="record-row"><dt>Investigation</dt><dd>{data.investigation}</dd></div>
+<div class="record-row"><dt>Designed experience</dt><dd>{data.designedExperience}</dd></div>
+<div class="record-row"><dt>Reported by participants</dt><dd>{data.reported}</dd></div>
+<div class="record-row"><dt>Observed in the session</dt><dd>{data.observed}</dd></div>
+<div class="record-row"><dt>What remains uncertain</dt><dd><strong>{data.uncertain}</strong></dd></div>
+</dl>
+<p class="case-caption">An account of one workshop session. Reported outcomes are participants’ own descriptions; observations are the facilitator’s. Neither establishes lasting change. The Spotted Ape (Pty) Ltd, Cape Town, South Africa.</p>
+</>
+)}
 </article>
-<section class="case-invitation section-y section-rule"><div class="wrap split-layout"><h2 class="h2">A decision<br />of your own?</h2><div><p class="lead">Explore strategic decision support, or bring the question you need to resolve.</p><div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/cases/' + data.slug })}>Discuss a similar decision <Arrow /></a><a class="text-link" href="/services/#strategic-decision-design">Strategic Decision Design <Arrow /></a></div></div></div></section>
+<section class="case-invitation section-y section-rule"><div class="wrap split-layout"><h2 class="h2">A decision<br />of your own?</h2><div><p class="lead">{invitation}</p><div class="actions"><a class="button" href={contactHref({ interest, source: '/cases/' + data.slug })}>Discuss a similar decision <Arrow /></a><a class="text-link" href={service.href}>{service.label} <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <script>
 document.querySelector('[data-print-brief]')?.addEventListener('click', () => window.print());
@@ -67,6 +90,15 @@ document.querySelector('[data-print-brief]')?.addEventListener('click', () => wi
   letter-spacing: var(--tracking-heading);
   text-wrap: balance;
 }
+.case-question {
+  max-width: 24ch;
+  margin-bottom: var(--space-sm);
+  font-size: var(--heading-3);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+}
 .case-caption {
   max-width: 62ch;
   margin-top: 32px;
@@ -77,7 +109,8 @@ document.querySelector('[data-print-brief]')?.addEventListener('click', () => wi
   .case-result {
     font-size: var(--compact-sm);
   }
-  .case-quote {
+  .case-quote,
+  .case-question {
     font-size: 36px;
   }
 }

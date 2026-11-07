@@ -5,7 +5,7 @@ import Card from '../Card.astro';
 import { strategyIllusion } from '../../data/strategicMatrices';
 
 const cases = await getCollection('cases');
-const policy = cases.find(item => item.data.slug === 'policy-analyst-strategic-review');
+const policy = cases.flatMap(({ data }) => (data.format === 'account' && data.slug === 'policy-analyst-strategic-review' ? [data] : []))[0];
 const map = strategyIllusion.quadrants;
 
 // Each card's image is set from its own content or the item's own published imagery, never a decorative illustration.
@@ -13,11 +13,11 @@ type Item = { cue: string; kind: string; title: string; href: string; media: 'qu
 const items = [
   policy && {
     //kind: 'Case account',
-    title: policy.data.title,
-    href: `/cases/${policy.data.slug}`,
+    title: policy.title,
+    href: `/cases/${policy.slug}`,
     media: 'quote',
     cue: 'Read.',
-    mediaText: policy.data.quote,
+    mediaText: policy.quote,
   },
   {
     //kind: 'Applied strategy',
