@@ -155,7 +155,7 @@ Owner-led, with templates supplied from the repository's tokens.
 | Slide master | Paper ground, Inter 600 period-ended headline, logo top left, yellow only for a chosen option |
 | Proposal template | Logo and wordmark cover; opens with a decision record (question, alternatives, assumptions, trade-offs, owner, review); closes with “What you will be able to do without us” |
 | Case-account template | The five-part format (W4) |
-| Substack essay | Correct the aircraft image's caption if it is the generated image (strategy 8.4) |
+| Substack essay | Figure 1: name the archive and say the photograph is colourised. Figure 2: say it is an AI-generated illustration (strategy 8.4) |
 
 ### W7. Documentation and governance
 

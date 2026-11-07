@@ -392,14 +392,14 @@ The logo is a fixed mark and the only place where yellow fills a large shape. Ev
 
 | Image | What it shows | Use |
 | --- | --- | --- |
-| `spotted-ape-1.jpg` / `-3.jpg` (identical) | A white B-24 with black polka dots, a painted eye and a shark mouth, with a crewman on the apron and a second bomber behind | Only as a labelled illustration, if at all. It looks generated or heavily reconstructed rather than an archival photograph. The shark mouth adds an aggression that the brand avoids. |
+| `spotted-ape-1.jpg` / `-3.jpg` (identical) | A white B-24 with black polka dots, a painted eye and a shark mouth, with a crewman on the apron and a second bomber behind | A colourised archival photograph (owner, 7 November 2026). Usable with a caption naming the archive and the colourisation, once its source and the colourist's rights are recorded in `CLEARANCES.md`. The shark mouth adds an aggression the brand avoids, so prefer the formation image for brand use. |
 | `spotted-ape-2.jpg` | B-24s forming up above cloud | The best fit for *finding formation*. It carries a generator's sparkle mark (bottom right), so it is AI-generated. Use only as a labelled illustration, and check the tool's terms. |
 | `spotted-ape-4.jpg` / `.png` | A realistic chimpanzee in a vintage spacesuit | Do not use as a brand image. It tells a different story (space flight), and a realistic ape competes with the yellow logo. |
 
 **Imagery rules.**
 
 - Never present a generated or reconstructed image as a historical photograph. Caption it as an illustration.
-- The essay on Substack appears to caption the aircraft image as the aircraft “on the tarmac”. Check whether it is the same image; if so, correct the caption to say it is an illustration.
+- The Substack essay uses the colourised aircraft photograph (figure 1) and the AI-generated formation image (figure 2). Figure 1's caption should name the archive and say the photograph is colourised; figure 2's should say it is an AI-generated illustration.
 - For the name story on About, prefer a cleared archival photograph. Otherwise use the formation illustration, labelled, or the site's own abstract formation graphics.
 - The logo is the only ape in the brand's imagery.
 
@@ -569,7 +569,7 @@ Measure the fame and uniqueness of the ape logo and the formation motif only aft
 
 These are not approved facts.
 
-1. **Imagery.** The aircraft and formation images reviewed in 8.4 appear to be generated. Use them only as labelled illustrations, and check the Substack essay's caption.
+1. **Imagery.** The aircraft photograph is colourised archival: record its archive source and the colourist's rights. The formation image is AI-generated: caption it as an illustration. Update both Substack captions (8.4).
 2. **Historical verification.** The essay gives B-24H 42-50346, 458th Bombardment Group, RAF Horsham St Faith, citing Wolf (2023). Confirm in one independent source before publishing.
 3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
 4. **Logo files.** A vector master, and a favicon and social card made from the logo.
