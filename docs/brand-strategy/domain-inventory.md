@@ -33,13 +33,13 @@ Stage A only: an inventory and a proposed map. Nothing here changes hosting, DNS
 | `/posts/substack/…` | 20 essays and an RSS feed | Mirror of the Substack essays | **Preserve.** The Laboratory Fallacy is linked from the new site. The Flying Spotted Ass Ape copy needs the serial correction (strategy 6.1) |
 | `/portfolio/…` | 7 pages and an RSS feed | Creative x AI, CSIR remote video, CSIR Veza Tourism, Momentum Recharge, Sibabalwe Bakery, Vantage HIV | **Review.** Personal portfolio: preserve, or move to marcelmare.com with a link. The Creative x AI page still says “multi-session” |
 | `/khairos/` | 1 | “The !Khairos Capability Progression” | **Retire.** Retired positioning (AGENTS.md); it is still live and in the sitemap |
-| `/pitchdeck/…` | 8 pages and 1 video | Pitch decks and drafts: BMC grant, Gees.Studio, Parmalat predatory-pricing analysis, “Deaf Leading the Blind” column drafts | **Review now.** Linked from nowhere, but listed in `sitemap.xml`, so search engines can index them |
+| `/pitchdeck/…` | 8 pages and 1 video | Pitch decks and drafts: BMC grant, Gees.Studio, Parmalat predatory-pricing analysis, “Deaf Leading the Blind” column drafts | Hidden from search (7 November 2026); URLs kept. Review at Stage B |
 | `/images/`, `/site_libs/`, `/site-components/` | 70 or so | Images, Quarto CSS and JS | Keep whatever the preserved pages need |
 
 ## 3. Findings that need action before Stage B
 
-1. **Pitch decks in the sitemap** (high, owner). Internal-looking decks and drafts are publicly listed. If they aren't meant to be public, remove them from the old site's sitemap and output, or add `noindex`. This can be done now, on the old site, independently of migration.
-2. **!Khairos still live** (high). It contradicts the current positioning on the main domain. Retiring it on the old site now is consistent with AGENTS.md.
+1. **Pitch decks in the sitemap.** Resolved 7 November 2026 (old repository, commit cd5bc76): a post-render script (`scripts/hide-pitchdeck.py`) removes `/pitchdeck/` from `sitemap.xml` and adds `noindex` to each page. The pages still open by link. Search engines that already list them will drop them over time; Search Console's removals tool is faster.
+2. **!Khairos still live.** The owner chose to keep it until Stage B (7 November 2026); retire it then.
 3. **Case collision on macOS** (blocker for Stage B design). The new site already has a lowercase `/courses` page, and the preserved archive needs uppercase `/Courses/`. GitHub Pages treats the two as different paths, but macOS's case-insensitive file system would merge `dist/courses/` and `dist/Courses/` in local builds. Options:
    - keep the archive on its own host (for example `archive.thespottedape.com`) and accept new URLs, which AGENTS.md currently forbids;
    - copy it into the new site under `public/Courses/` and build only on Linux (CI), verifying locally on a case-sensitive volume;
