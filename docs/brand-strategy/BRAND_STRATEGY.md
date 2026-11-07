@@ -65,7 +65,7 @@ No client interviews, competitor research, trademark searches, archival checks o
 | Learning proposition | “Some things are better learned by doing.” Organising idea: *From knowledge to judgement to action.* | Supplied |
 | Evidence on the site | One case account; one applied course with real materials; one doctoral study with a peer-reviewed article. Each is labelled with what it does not prove. | Observed |
 | Evidence not yet on the site | The Creative x AI Workshop Series: a multi-session series with emerging young Black creatives, built on three pillars (Identity before tools, Structured experimentation, Translation to employability). Marcel's role: Co-Designer & Lead Research Facilitator. The account gives no client, dates or participant numbers. | Supplied, case |
-| Name origin | The essay (November 2025): the B-24H assembly ship 42-50346 of the 458th Bombardment Group at RAF Horsham St Faith, cited to Wolf (2023). | Supplied, essay |
+| Name origin | The essay (November 2025) and independent sources (7 November 2026): the 458th Bombardment Group's assembly ship *Spotted Ape*, B-24H 41-28697, at RAF Horsham St Faith. The essay's serial, 42-50346, is not supported. | Supplied, essay; checked |
 | Visual system | Ink, paper, yellow signal; Inter 600 display; Huge-derived structure; cards, ledgers and the decision record; a hold-to-enter intro with flights of planes forming up. | Supplied |
 | Identity marks | The Spotted Ape logo (yellow ape face on a black circle, `public/logo.png`) beside the wordmark “THE SPOTTED APE” in the header and footer. The favicon is a different mark: an ink square with a white ring and a yellow spot. | Observed |
 | People | The independent practice of Marcel Maré: behavioural designer, researcher, strategic consultant, Doctor of Technology (CPUT). | Supplied |
@@ -165,7 +165,7 @@ The word “only” is not substantiated. Use this sentence internally to sharpe
 
 | Pillar | Claim | Proof (with its limit) |
 | --- | --- | --- |
-| **Orient** | A point of reference when conditions are confusing. | The name story [Supplied, essay; Unresolved: independent check]; the logo; the formation motif; Find Formation |
+| **Orient** | A point of reference when conditions are confusing. | The name story [Supplied, essay; independently checked 7 November 2026]; the logo; the formation motif; Find Formation |
 | **Choose** | Examine the decision before committing to a plan. | The decision record; the Strategy Illusion map; the policy-analyst account [Unresolved: permission] |
 | **Act** | Begin with what people actually do. | The cookstove study: published, with qualified findings and no claim of lasting adoption |
 | **Own the judgement** | Use AI without surrendering authorship or accountability. | The Creative x AI workshops: *Identity before tools*; reported gains in confidence and creative identity, and observed reductions in hesitation and increases in peer feedback [Supplied, case; Unresolved: permissions]. The Solar course: a model that supports, not replaces, judgement. *Gap:* no executive AI governance case. |
@@ -229,11 +229,26 @@ The Spotted Ape site may feature Marcel's workshop design and facilitation exper
 
 ### 6.1 The story of the name
 
-[Decided; Supplied, essay; Unresolved: independent check]
+[Decided; Supplied, essay; independently checked 7 November 2026, see sources below]
 
 From late 1943, the US Eighth Air Force grew from a few hundred bombers to formations of more than a thousand. Crews took off from dozens of airfields in East Anglia, often in fog and low light, and had to find each other and form up. Each bomb group used an *assembly ship*: a war-weary aircraft painted in loud colours and fitted with flares. It climbed first, circled a fixed point and signalled until its group had formed, then dropped away and returned to base.
 
-The 458th Bombardment Group's assembly ship at RAF Horsham St Faith was a polka-dotted B-24H Liberator, serial 42-50346, known as the *Flying Spotted Ass Ape*, or the *Spotted Ape*. Flown by experienced crews for nearly a year, it guided the group's missions without firing a shot. (Essay, citing Wolf 2023.)
+The 458th Bombardment Group, at RAF Horsham St Faith near Norwich, had two assembly ships. The first, a polka-dotted B-24D called *First Sergeant*, was destroyed in a flare accident on the runway on 27 May 1944. Its replacement was B-24H-10-DT **41-28697**, which had flown eight combat missions as *Dixie Bell II* between March and May 1944. Repainted in the same scheme, it became the *Spotted Ape* (also *Spotted Ass Ape* and *Wonder Bread*). It carried coloured flares and a lit fuselage band, and flew 69 assembly missions, from 12 June 1944 to 9 March 1945, when a brake failure on landing at Horsham wrote it off. At least 59 pilots from the group's four squadrons flew it.
+
+**Checked facts and corrections to the essay** (7 November 2026):
+
+| Fact | Essay | Independent sources | Status |
+| --- | --- | --- | --- |
+| Serial | 42-50346 | 41-28697 (B-24H-10-DT) | **Essay wrong**: correct before publishing |
+| Group and base | 458th BG, Horsham St Faith | Same | Confirmed |
+| Nicknames | *Flying Spotted Ass Ape*, *Spotted Ape* | *Spotted Ape*, *Spotted Ass Ape*, *Wonder Bread*; earlier *Dixie Bell II* | Confirmed; “Flying” not found |
+| Period | “From 1943”; “nearly a year” | Assembly duty 12 June 1944 to 9 March 1945 (about nine months, 69 missions) | **Essay overstated** |
+| Paint | Polka dots | Same scheme as *First Sergeant* (polka dots); red circle with a lit white band | Confirmed |
+| Practice | Climbed first, circled, fired flares, returned home | Stripped bombers with extra flares, a colour per group; formed the group, then returned to base | Confirmed as the general practice |
+
+Sources: [458th Bomb Group association: the Spotted Ape](https://458bg.com/stories/spotted-ape-458th-assembly-ship/); [American Air Museum: 41-28697](https://americanairmuseum.com/aircraft/20148?page=2); [Wikipedia: Assembly ship](https://en.wikipedia.org/wiki/Assembly_ship). Wikipedia also records one occasion when *Spotted Ass Ape* stayed with its formation to the target rather than turning back. That is an exception; do not build the story on “always”.
+
+**Is the essay's photograph the Spotted Ape?** It shows a glazed nose without a nose turret, which is typical of the B-24D (*First Sergeant*) rather than the B-24H. Both wore the same scheme, so the photograph may show *First Sergeant*. Check the original's archive caption before naming the aircraft. [Unresolved]
 
 The essay draws three qualities from it:
 
@@ -243,20 +258,20 @@ The essay draws three qualities from it:
 
 **Accuracy rules.**
 
-- Before publishing on the practice site, confirm the serial, unit, base and nicknames in one source independent of the essay, alongside Wolf (2023).
+- Use the checked facts above. Name the serial only if needed, and then as 41-28697.
 - Present assembly ships as a practice, with this aircraft as one example. Do not suggest that one aircraft solved assembly for the whole Eighth Air Force.
 - Tell it as a story of orientation and coordination. Leave out the essay's combat framing (“Judas Goat”, “the slaughter”) and the Ploiești loss figures.
 - Do not repeat the essay's claim that early mentorship “can halve misalignment issues” as a practice claim; it breaks the rule against unsourced or overextended figures.
 
 ### 6.2 Draft About-page section
 
-[Decided in principle; publish only after the independent check and image clearance]
+[Decided in principle; facts checked 7 November 2026; publish after the image clearance]
 
 > **Why The Spotted Ape?**
 >
 > During the Second World War, hundreds of bombers took off from airfields across East Anglia and had to find one another in fog before they could set out together.
 >
-> Each group was gathered by an assembly ship, an old aircraft painted to be seen. The 458th Bomb Group's was a polka-dotted Liberator its crews called the *Spotted Ape*. It climbed first, circled a fixed point and signalled until the formation held.
+> Each group was gathered by an assembly ship, an aircraft painted to be seen. The 458th Bomb Group's was a polka-dotted Liberator its crews called the *Spotted Ape*. From June 1944 it climbed first, circled a fixed point and fired its flares until the formation held.
 >
 > Then it turned for home.
 >
@@ -392,14 +407,14 @@ The logo is a fixed mark and the only place where yellow fills a large shape. Ev
 
 | Image | What it shows | Use |
 | --- | --- | --- |
-| `spotted-ape-1.jpg` / `-3.jpg` (identical) | A white B-24 with black polka dots, a painted eye and a shark mouth, with a crewman on the apron and a second bomber behind | A colourised archival photograph (owner, 7 November 2026). Usable with a caption naming the archive and the colourisation, once its source and the colourist's rights are recorded in `CLEARANCES.md`. The shark mouth adds an aggression the brand avoids, so prefer the formation image for brand use. |
+| `spotted-ape-1.jpg` / `-3.jpg` (identical) | A white B-24 with black polka dots, a painted eye and a shark mouth, with a crewman on the apron and a second bomber behind | An archival photograph colourised with AI by the owner (7 November 2026). The AI colourisation is interpretive: the colours are not evidence. It may show *First Sergeant* rather than the *Spotted Ape* (6.1). Usable with a caption naming the archive and the colourisation, once its source and the colourist's rights are recorded in `CLEARANCES.md`. The shark mouth adds an aggression the brand avoids, so prefer the formation image for brand use. |
 | `spotted-ape-2.jpg` | B-24s forming up above cloud | The best fit for *finding formation*. It carries a generator's sparkle mark (bottom right), so it is AI-generated. Use only as a labelled illustration, and check the tool's terms. |
 | `spotted-ape-4.jpg` / `.png` | A realistic chimpanzee in a vintage spacesuit | Do not use as a brand image. It tells a different story (space flight), and a realistic ape competes with the yellow logo. |
 
 **Imagery rules.**
 
 - Never present a generated or reconstructed image as a historical photograph. Caption it as an illustration.
-- The Substack essay uses the colourised aircraft photograph (figure 1) and the AI-generated formation image (figure 2). Figure 1's caption should name the archive and say the photograph is colourised; figure 2's should say it is an AI-generated illustration.
+- The Substack essay uses the colourised aircraft photograph (figure 1) and the AI-generated formation image (figure 2). Figure 1's caption should name the archive and say the photograph was colourised with AI; figure 2's should say it is an AI-generated illustration.
 - For the name story on About, prefer a cleared archival photograph. Otherwise use the formation illustration, labelled, or the site's own abstract formation graphics.
 - The logo is the only ape in the brand's imagery.
 
@@ -469,7 +484,7 @@ Each finding uses the format observation → evidence → consequence → fix �
    - *Fix:* frame the capabilities as the three parts of the positioning (where to go, what enables action, where judgement stays human). Move “A real decision rarely fits one capability…” to the top of How we help.
    - *Priority:* High.
 2. **The name is unexplained.**
-   - *Fix:* add the About section (6.2) and the homepage *Why the name?* link once the independent check and image clearance are done.
+   - *Fix:* add the About section (6.2) and the homepage *Why the name?* link once the image clearance is done (facts checked 7 November 2026).
    - *Priority:* High. [Unresolved: verification]
 3. **The favicon is not the logo.**
    - *Evidence:* `public/favicon.svg` is a ring with a yellow spot, while the header and footer use the ape logo (`public/logo.png`). [Observed]
@@ -491,7 +506,7 @@ Each finding uses the format observation → evidence → consequence → fix �
 
 - **LinkedIn headline:** *Strategic decision and behavioural design · Helping leaders find direction in uncertainty · Cape Town*
 - **Email signature:** *Marcel Maré · The Spotted Ape · Strategic decision and behavioural design · Useful, never indispensable. · hello@thespottedape.com*
-- **Speaking abstract opener:** *More possibilities. Harder choices. During the Second World War, bombers found their formation by following a brightly painted aircraft that then flew home. What would it take for your team to find its direction, and keep it once the guide has gone?* (Subject to the independent check.)
+- **Speaking abstract opener:** *More possibilities. Harder choices. During the Second World War, bombers found their formation by following a brightly painted aircraft that then flew home. What would it take for your team to find its direction, and keep it once the guide has gone?* (Facts checked 7 November 2026.)
 
 ---
 
@@ -570,7 +585,7 @@ Measure the fame and uniqueness of the ape logo and the formation motif only aft
 These are not approved facts.
 
 1. **Imagery.** The aircraft photograph is colourised archival: record its archive source and the colourist's rights. The formation image is AI-generated: caption it as an illustration. Update both Substack captions (8.4).
-2. **Historical verification.** The essay gives B-24H 42-50346, 458th Bombardment Group, RAF Horsham St Faith, citing Wolf (2023). Confirm in one independent source before publishing.
+2. **Historical facts.** Checked 7 November 2026 (6.1): the serial is 41-28697, not the essay's 42-50346, and assembly duty ran June 1944 to March 1945. Correct the essay. Still open: whether the essay's photograph shows *First Sergeant* (B-24D) or the *Spotted Ape*.
 3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
 4. **Logo files.** A vector master, and a favicon and social card made from the logo.
 5. **Creative x AI permissions and facts.** Client, dates, participant numbers and image permissions are missing from the account. Keep reported outcomes (confidence, identity) separate from observed ones (hesitation, peer feedback), and drop the account's “scalable model” claim, which it does not evidence.
