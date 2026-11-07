@@ -142,7 +142,8 @@ if (dialog && trigger) {
     min-height: var(--control-height-compact);
     font-size: var(--text-ui);
     font-weight: var(--weight-medium);
-    line-height: 1;
+    /* Room for descenders inside the letter-roll's one-line mask. */
+    line-height: 1.25;
     letter-spacing: var(--tracking-ui);
     text-decoration: none;
     white-space: nowrap;
