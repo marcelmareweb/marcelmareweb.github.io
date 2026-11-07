@@ -145,6 +145,7 @@ if (dialog && trigger) {
     line-height: 1;
     letter-spacing: var(--tracking-ui);
     text-decoration: none;
+    white-space: nowrap;
   }
   .desktop-nav li a:after {
     content: '';
@@ -167,6 +168,12 @@ if (dialog && trigger) {
     height: 3px;
     background: var(--signal);
     transform: scaleX(1);
+  }
+  /* Small desktops: tighter spacing keeps every label on one line beside the wordmark. */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .header-row { gap: 24px; }
+    .desktop-nav { gap: 20px; }
+    .desktop-nav ul { gap: 16px; }
   }
   .header-talk {
     min-height: var(--control-height-compact);
