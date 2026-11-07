@@ -455,7 +455,15 @@ The logo is a fixed mark and the only place where yellow fills a large shape. Ev
 | **Should We Invest in Solar?** | Applied digital course | How can a financial model support judgement without replacing it? | High (on site) | Label it an educational simulation, not a client engagement. |
 | **Policy-analyst review** | Fictional teaching scenario | — | Not evidence | Labelled “Teaching scenario (fictional)” on its page (7 November 2026); removed from every evidence position. |
 
-**Remaining evidence gap:** executive-level AI decision governance.
+**Remaining evidence gaps:** a real Strategic Decision Design case, and executive-level AI decision governance.
+
+**Portfolio review** (thespottedape.com `/portfolio/`, 7 November 2026). None of these fills either gap:
+- **Vantage HIV** (2022, with the BCA team): the best candidate for a second Behavioural Design case. Needs BCA's permission, a clear statement of Marcel's role and any measured results; its outcomes are currently “aimed to”.
+- **Momentum Recharge** (2022): a possible Behavioural Design case, given client permission and real results.
+- **Sibabalwe Bakery**: the cookstove research already on the site. Its portfolio page overstates the result against the published study.
+- **CSIR remote video** (2002) and **Veza Tourism** (2000): not relevant to the current practice.
+
+The masterclass and decision workshops are the natural source of the missing cases once they run with real clients.
 
 ### 9.3 Domain and web architecture
 
