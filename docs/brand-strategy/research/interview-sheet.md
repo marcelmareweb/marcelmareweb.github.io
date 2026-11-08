@@ -1,39 +1,46 @@
-# Ten conversations: interview sheet
+# Buyer conversations: interview sheet
 
-**Status:** draft for one week of conversations · **Date:** 8 November 2026 · **Replaces, if approved:** the eight interviews over three weeks in [IMPLEMENTATION.md](../IMPLEMENTATION.md) W8 and strategy Section 11.1
+**Status:** for days 3–7 of Phase 2 · **Date:** 8 November 2026 · **Implements:** [IMPLEMENTATION.md](../IMPLEMENTATION.md) Phase 2, strategy Section 12.3
 
 ## Who
 
-Ten people who match the working audience bet. **The bet is not decided yet.**
+Five people to start, then keep going as the business develops.
 
-- **The bet:** the head of strategy, or the chief executive's right hand, at a South African organisation of roughly 200 to 2,000 people: a mid-sized company, a development-finance or public entity, or a large NGO. They have had to take one recommendation to the exco or board and defend it.
-- **Fallback:** a programme lead in a development or research organisation.
+- **Profile:** the owner-manager or managing director of an established South African business with roughly 20–250 employees.
+- **Situation:** familiar ways of deciding no longer work. Examples: new competitors, AI disruption, conflicting growth options, or a team that agrees but changes little.
+- **Best fit:** a consequential decision is due within the next 90 days.
 
-List fifteen people, ask ten. Thirty minutes each, by phone or video. Don't pitch.
+Thirty minutes each, by phone or video. Don't pitch. We're looking for evidence of buying behaviour, not compliments about the website.
 
 ## Before the call
 
-- Say why you're calling: *"I'm trying to understand how hard decisions actually get made. I'm not selling anything on this call."*
+- Say why you're calling: *"I'm trying to understand how owners make the big calls. I'm not selling anything on this call."*
 - Ask permission to take notes. Ask separately before quoting anyone, even anonymously.
-- Don't say *decision record*, *formation*, *orientation* or *behavioural design*. Their own words are the finding.
+- Don't say *decision record*, *formation*, *orientation*, *behavioural design* or *Sprint*. Their own words are the finding.
 
 ## The five questions
 
-1. **Tell me about the last important choice your team had to make. What made it hard?**
-2. **What did you take to the board or exco, and what happened when you did?**
-3. **Six months later, what had actually changed?**
-4. **Who decided in the end, and who would have been blamed if it went wrong?**
-5. **If someone had helped you with that, what would they have had to do for you to pay them?**
+1. **Tell me about a recent decision that really mattered to the business.**
+2. **What made it difficult?**
+3. **What outside help did you consider, and why did you use it or not?**
+4. **What happened after the decision was made?**
+5. **What would it have been worth to get that decision right, and what would someone have had to do for you to pay them?**
 
 Follow-ups, only to go deeper: *"What do you mean by that?"*, *"Can you give me an example?"*, *"What did you do next?"*
 
 ## Straight after each call
 
-Spend ten minutes filling a row in [words.md](words.md): their exact phrases, not your summary. Record the role and the type of organisation, never a name.
+Spend ten minutes filling a row in [words.md](words.md): their exact phrases, not your summary. Record the role, the sector and the rough headcount, never a name.
+
+## What counts as a buying signal
+
+- They have paid for outside help on a decision before, or budgeted for it.
+- They name a decision that's open now, with a date.
+- They ask what working together would involve, or who else should be in the room.
 
 ## Rules for the copy
 
-- **A problem phrase heard from three or more people** replaces our problem line for that route.
-- **Their words for what they wanted** become the change line ("A team that can make the next hard decision without us" is our draft, not theirs).
+- **A problem phrase heard from three or more people** replaces our problem line for that capability.
+- **Their words for the outcome they wanted** become the Sprint's promise.
 - **Anything on our pages that nobody said** comes off, or moves lower.
-- **Question 5** tests the record. If nobody mentions a written trace of the reasoning, the record proves the change but does not sell it.
+- **Question 5:** if nobody mentions a written trace of the reasoning, the record proves the work but does not sell it.

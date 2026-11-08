@@ -11,6 +11,19 @@ This plan turns the brand strategy into changes to the site, its sources and the
 
 **What changes.** The brand idea, *helping teams find formation*, and its key asset, the yellow Spotted Ape logo, become visible and consistent. The name gets its story, the evidence base broadens, and the copy follows the voice rules. The look of the site does not change.
 
+## Phase 2: commercial proof (from 8 November 2026)
+
+Implements strategy Section 12.3. Work is on branch `brand/godin-pass`; nothing is merged or deployed without an explicit instruction.
+
+| Days | Step | Done when |
+| --- | --- | --- |
+| 1–2 | **Freeze the architecture.** Confirm the first buyer, the Sprint, the three capabilities, the record's role and the Raykis separation. | Strategy 12.3 approved; Sprint scope confirmed |
+| 3–7 | **Test the buying problem.** Five conversations with owner-managers and managing directors ([research/interview-sheet.md](research/interview-sheet.md)). Look for buying behaviour, not compliments. | Five rows in [research/words.md](research/words.md) |
+| 8–10 | **Revise and test the pages.** Home, How we help and Workshops & learning as one journey, in the buyers' words; five-second tests with people new to the practice. | Most participants name the offer and its buyer |
+| 11–14 | **Seek a real engagement.** Offer the Sprint to two or three qualified prospects. | One serious commercial conversation |
+
+This replaces W8's eight interviews over three weeks. Ten interviews are not a condition for publishing; five good conversations expose the obvious problems, and interviewing continues as the business develops.
+
 ---
 
 ## 1. Current state

@@ -2,57 +2,70 @@
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
-import Ledger from '../components/Ledger.astro';
 import PageIntro from '../components/PageIntro.astro';
+import { getCollection } from 'astro:content';
 import { contactHref } from '../lib/contact';
 
-const formats = [
-  { name: 'Custom decision workshops.', href: '/workshops', text: 'Facilitated online sessions on a choice your team actually faces: its alternatives, assumptions and trade-offs.', aside: 'Leadership teams' },
-  { name: 'The executive masterclass.', href: '/workshops/strategic-design-leadership/', text: 'Strategic Design Leadership in the Age of AI: five standalone days, one strategic decision each.', aside: 'Executives' },
-  { name: 'Should We Invest in Solar?', href: '/courses', text: 'A self-paced case: three proposals, a spreadsheet to test and one recommendation to defend.', aside: 'Individual learners' },
-];
+const creative = (await getCollection('cases')).flatMap(({ data }) => (data.format === 'five-part' && data.slug === 'creative-x-ai-workshop' ? [data] : []))[0];
 
 const steps = [
-  { title: 'Meet a situation.', text: 'A real choice, or a case with figures that matter.' },
-  { title: 'Examine the alternatives.', text: 'Compare the options, and test what would have to be true for each.' },
-  { title: 'Decide, and say why.', text: 'Commit to a recommendation, an experiment or a next step.' },
-  { title: 'Do it again without us.', text: 'The next decision is real, and we won’t be in the room.' },
+  { title: 'Start with something real.', text: 'A choice, a case or a practice that matters to the people in the room.' },
+  { title: 'Try it.', text: 'Build the model, bake the bread, put the tool to work. Understanding comes from doing.' },
+  { title: 'Look at what happened.', text: 'Compare results, test assumptions and name what changed your mind.' },
+  { title: 'Do it again without us.', text: 'The next time is real, and we won’t be in the room.' },
 ];
 ---
-<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Workshops and courses that end in a decision: live workshops for leadership teams, an executive masterclass and a self-paced investment case.">
-  <PageIntro scale="long" description="Live workshops for leadership teams, an executive masterclass and a self-paced course. Your team works through a real choice, and leaves able to make the next one on its own.">
-    <Fragment slot="heading">Workshops that<br />end in a decision.</Fragment>
-    <figure class="intro-photo">
-      <img src="/images/research/bakery-workshop.jpg" width="1058" height="793" decoding="async" alt="Workshop participants with mugs of coffee stand around a bakery table while the facilitator works dough in a large tub, an oven behind him." />
-      <figcaption>Learning by doing: a workshop in a community bakery, from our clean-cooking research.</figcaption>
-    </figure>
+<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Less watching, more doing: live workshops and self-paced courses where people work through real problems, test ideas and practise what they need to do differently.">
+  <PageIntro description="Workshops and courses where people work through real problems, test ideas and practise what they need to do differently.">
+    <Fragment slot="heading">Less watching.<br />More doing.</Fragment>
   </PageIntro>
 
   <section class="section-y section-rule" id="formats" aria-labelledby="formats-title">
     <div class="wrap">
-      <h2 class="h2" id="formats-title">Three ways in.</h2>
-      <div class="formats">
-        <Ledger items={formats} heads={['Format', 'What happens', 'For']} label="Workshops and courses" />
-        <div class="in-development" id="series">
-          <p class="meta">In development</p>
-          <p>A strategy learning series is being developed for possible delivery under the Raykis brand. Marcel Maré designs the curriculum, facilitates the live sessions and teaches. In the planned self-paced courses a digital avatar presents; the substance is the case, the choices, the feedback and the reflection.</p>
-        </div>
+      <h2 class="sr-only" id="formats-title">Formats</h2>
+      <ul class="formats card-grid card-grid--swipe" role="list">
+        <li>
+          <Card layout="media" href="/workshops" title="Live workshops." text="Facilitated sessions built around a consequential question and practical exercises." kind="For teams" cue="Explore." index={0}>
+            <img slot="media" class="format-photo" src="/images/research/bakery-workshop.jpg" width="1058" height="793" decoding="async" alt="" />
+          </Card>
+        </li>
+        <li>
+          <Card layout="media" href="/workshops/strategic-design-leadership/" title="The executive masterclass." text="Strategic Design Leadership in the Age of AI: five standalone days, one strategic decision each." kind="For executives" cue="Explore." index={1}>
+            <div slot="media" class="type-media" aria-hidden="true"><p>Five days. Five strategic decisions.</p></div>
+          </Card>
+        </li>
+        <li>
+          <Card layout="media" href="/courses" title="Digital courses." text="Self-paced cases and simulations, with real figures and no real losses." kind="Self-paced" cue="Explore." index={2}>
+            <div slot="media" class="type-media" aria-hidden="true"><p>Make the expensive mistake somewhere cheap.</p></div>
+          </Card>
+        </li>
+      </ul>
+      <div class="in-development" id="series">
+        <p class="meta">In development</p>
+        <p>A strategy learning series is being developed with Raykis as a possible partner channel. The commercial arrangement is not yet agreed. Marcel Maré designs the curriculum, facilitates the live sessions and teaches. In the planned self-paced courses a digital avatar presents; the substance is the case, the choices, the feedback and the reflection.</p>
       </div>
     </div>
   </section>
 
   <section class="section-y section-rule" id="examples" aria-labelledby="examples-title">
-    <div class="wrap examples-layout">
-      <h2 class="h2" id="examples-title">Two worked<br />examples.</h2>
-      <ul class="examples" role="list">
+    <div class="wrap">
+      <h2 class="h2" id="examples-title">Three ways<br />it has worked.</h2>
+      <ul class="examples card-grid card-grid--swipe" role="list">
         <li>
           <Card layout="media" href="/work/#solar" title="Should We Invest in Solar?" text="Compare three proposals, test the assumptions in a spreadsheet and defend a qualified recommendation." kind="Educational simulation" cue="Read." index={0}>
-            <img slot="media" class="example-photo example-photo--solar" src="/images/courses/solar-cape-manufacturing.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="" />
+            <img slot="media" class="format-photo" src="/images/courses/solar-cape-manufacturing.jpg" width="1400" height="788" loading="lazy" decoding="async" alt="" />
           </Card>
         </li>
+        {creative && (
+          <li>
+            <Card layout="media" href={`/cases/${creative.slug}`} title={creative.title} text="Emerging creatives used AI on their own terms: identity first, then structured experiments, then work they could show." kind="Workshop" cue="Read." index={1}>
+              <div slot="media" class="type-media type-media--ink" aria-hidden="true"><p>{creative.question}</p></div>
+            </Card>
+          </li>
+        )}
         <li>
-          <Card layout="media" href="/work/#research" title="Baking as research." text="Workshops in a community bakery made clean cooking something to do, smell and share." kind="Participatory behavioural research" cue="Read." index={1}>
-            <img slot="media" class="example-photo" src="/images/research/pilot-baking-scones.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="" />
+          <Card layout="media" href="/work/#research" title="Baking as research." text="Workshops in a community bakery made clean cooking something to do, smell and share." kind="Participatory research" cue="Read." index={2}>
+            <img slot="media" class="format-photo format-photo--right" src="/images/research/pilot-baking-scones.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="" />
           </Card>
         </li>
       </ul>
@@ -61,7 +74,7 @@ const steps = [
 
   <section class="section-y section-rule" id="approach" aria-labelledby="approach-title">
     <div class="wrap split-layout">
-      <h2 class="h2" id="approach-title">Make the expensive<br />mistake somewhere<br />cheap.</h2>
+      <h2 class="h2" id="approach-title">Practise here.<br />Then do it<br />for real.</h2>
       <ol class="steps" role="list">
         {steps.map((step, index) => (
           <li><span class="step-num">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>
@@ -70,7 +83,7 @@ const steps = [
     </div>
   </section>
 
-  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">Bring the<br />decision.</h2><div><p class="lead">Start with the question your team needs to examine. The format follows from it.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a></div></div></div></section>
+  <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">What should<br />your team practise?</h2><div><p class="lead">Tell us what people need to do differently. The format follows from it.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <style>
   .steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
@@ -79,28 +92,19 @@ const steps = [
   .steps h3 { font-size: var(--heading-4); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
   .steps p { margin-top: 8px; max-width: 44ch; font-size: var(--body); line-height: var(--leading-copy); color: var(--muted); }
 
-  .intro-photo { margin: var(--space-sm) 0 0; }
-  .intro-photo img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: center 40%; border-radius: var(--radius-card); }
-  .intro-photo figcaption { margin-top: 12px; font: var(--font-label); color: var(--text-muted); }
-
-  .formats { margin-top: var(--space-sm); }
-
   .in-development { display: grid; grid-template-columns: minmax(7rem, 2fr) minmax(0, 10fr); gap: 8px var(--grid-gap); margin-top: var(--space-md); padding-top: 16px; border-top: 1px solid var(--ink); }
   .in-development p:last-child { max-width: 65ch; font-size: var(--body); line-height: var(--leading-copy); }
 
-  .examples-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--space-sm) var(--grid-gap); align-items: start; }
-  .examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); margin: 0; padding: 0; list-style: none; }
-  .example-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 78% center; }
-  .example-photo--solar { object-position: center; }
+  .examples { margin-top: var(--space-sm); }
+  .format-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .format-photo--right { object-position: 78% center; }
+  .type-media { display: flex; align-items: flex-end; height: 100%; padding: 24px; background: var(--surface); }
+  .type-media--ink { background: var(--ink); color: var(--paper); }
+  .type-media p { margin: 0; font-size: clamp(26px, 2.2vw, 40px); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); text-wrap: balance; }
 
   .actions .button { margin-top: 0; }
 
-  @media (max-width: 1023px) {
-    .examples-layout { grid-template-columns: 1fr; }
-  }
   @media (max-width: 767px) {
-    .examples { grid-template-columns: 1fr; gap: var(--space-xs); }
-    .intro-photo img { aspect-ratio: 4 / 3; }
     .in-development { grid-template-columns: 1fr; }
   }
 </style>

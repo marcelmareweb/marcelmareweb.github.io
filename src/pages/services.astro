@@ -1,6 +1,7 @@
 ---
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DecisionRecord from '../components/DecisionRecord.astro';
 import PageIntro from '../components/PageIntro.astro';
 import { services } from '../data/practice';
 import { contactHref } from '../lib/contact';
@@ -9,6 +10,27 @@ import { contactHref } from '../lib/contact';
   <PageIntro description="One decision, three questions: where to go, what enables people to act, and where human judgement stays accountable.">
     <Fragment slot="heading">Start with<br />the decision.</Fragment>
   </PageIntro>
+  <section class="section-y section-rule sprint" id="sprint" aria-labelledby="sprint-title">
+    <div class="wrap split-layout">
+      <div>
+        <p class="meta">Pilot offer · Strategic Choices Sprint</p>
+        <h2 class="h2" id="sprint-title">One decision.<br />Properly made.</h2>
+        <p class="sprint-lead">For a leadership team facing a choice that another planning meeting won’t settle. You leave with the choice, the reasons for it, and what happens next.</p>
+        <div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/services/' })}>Discuss a Sprint <Arrow /></a><a class="text-link" href="/decision-record/">See a sample decision record <Arrow /></a></div>
+      </div>
+      <div>
+        <DecisionRecord label="What the Sprint includes" fields={[
+          { label: 'Start', value: 'A 60-minute conversation with the person who owns the decision.' },
+          { label: 'Listen', value: 'Up to six interviews with the people the decision affects.' },
+          { label: 'Read', value: 'Up to five documents that bear on the choice.' },
+          { label: 'Decide', value: 'One facilitated decision workshop with the leadership team.' },
+          { label: 'Keep', value: 'A concise decision record and the agreed follow-through.' },
+          { label: 'Review', value: 'One follow-up conversation to check the decision is holding.' },
+        ]} />
+        <p class="sprint-note">Pilot scope. Format and fees are agreed with each client.</p>
+      </div>
+    </div>
+  </section>
   <span id="situations" aria-hidden="true"></span>
   {services.map((service, index) => (
     <section class:list={['service-section section-y', { 'theme-dark': index === 1 }]} id={service.id}>
@@ -26,6 +48,11 @@ import { contactHref } from '../lib/contact';
   ))}
 </BaseLayout>
 <style>
+  .sprint-lead { max-width: 44ch; margin-top: 24px; font-size: var(--body-large); line-height: 1.35; letter-spacing: var(--tracking-copy-large); }
+  .sprint .meta { margin-bottom: 16px; }
+  .sprint .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; margin-top: 36px; }
+  .sprint .actions .button { margin-top: 0; }
+  .sprint-note { margin-top: 16px; font: var(--font-label); color: var(--text-muted); }
   .service-section { scroll-margin-top: calc(var(--header-height) + 24px); }
   .service-heading { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
   .service-heading h2 { max-width: 18ch; font-size: var(--heading-2); line-height: 1.02; }

@@ -1,10 +1,10 @@
 # Brand strategy — The Spotted Ape
 
-**Status:** Version 2.2, owner decisions recorded · **Date:** 6 November 2026 · **Owner:** Marcel Maré
+**Status:** Version 2.3, commercial architecture recorded · **Date:** 8 November 2026 (v2.2: 6 November) · **Owner:** Marcel Maré
 
 This document sets out the brand strategy for The Spotted Ape (Pty) Ltd. It builds on the positioning in [AGENTS.md](../../AGENTS.md) and the visual direction in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It does not replace either: they remain the authority for positioning, design system and site rules.
 
-Version 2.2 records the owner's decisions on the seven open questions from version 1 (Section 12). The main change: **the decision record is now a signature method, not the central brand idea.** The brand idea is *helping teams find formation*, taken from the story behind the name, and the yellow Spotted Ape logo is the key brand asset.
+Version 2.3 adds the commercial architecture (Section 12.3): the first buyer, the entry offer and the job of each brand element. Version 2.2 records the owner's decisions on the seven open questions from version 1 (Section 12). The main change: **the decision record is now a signature method, not the central brand idea.** The brand idea is *helping teams find formation*, taken from the story behind the name, and the yellow Spotted Ape logo is the key brand asset.
 
 **Evidence key.** Every claim carries one of these tags:
 
@@ -140,6 +140,8 @@ These are categories, not named firms, because no competitor research was done. 
 2. **The team whose agreement has not become action.** *Trigger:* an adoption or uptake problem.
 3. **The organisation bringing AI into consequential work.** *Trigger:* a pilot moving into a live workflow, or people unsure what remains theirs to judge.
 4. **The learner or the learning buyer.** *Trigger:* a programme brief, or the search for a practical, participatory format.
+
+**Superseded for sales, 8 November 2026:** the first buyer is now the owner-manager or managing director (Section 12.3). These situations remain the problems that buyer faces.
 
 Situations 1 to 3 are the core. Situation 4 builds reach and reputation, and the evidence for it is now the strongest (cookstove, Creative x AI, Solar).
 
@@ -335,8 +337,10 @@ There is no villain. The antagonist is a condition (uncertainty, overload), neve
 | More possibilities. Harder choices. | Master line, homepage | Decided |
 | See differently. Choose deliberately. Turn the choice into action. | Promise | Decided |
 | Useful, never indispensable. | Principle: About, proposals, sign-off | Decided |
-| Make the expensive mistake somewhere cheap. | Learning (replaces “From knowledge to judgement to action”, which failed the swap test) | Decided |
-| Do it again without us. | Learning: the last step of the method | Decided |
+| Less watching. More doing. | Learning page headline (replaces “From knowledge to judgement to action”, which failed the swap test) | Decided |
+| Make the expensive mistake somewhere cheap. | Simulations and case-based courses only, not all learning | Decided |
+| Do it again without us. | The last step of the learning method; a closing principle | Decided |
+| One decision. Properly made. | The Strategic Choices Sprint (entry offer) | Decided |
 | Observe before prescribing. | Evidence | Supplied |
 
 ### 7.4 Before and after
@@ -588,6 +592,43 @@ Measure the fame and uniqueness of the ape logo and the formation motif only aft
 | 5 | Case accounts | Expand. Prioritise Creative x AI, cookstove and Solar, using the common case format and correct evidence labels. |
 | 6 | Raykis | Recognised internally; public co-branding deferred until an agreement exists. |
 | 7 | Research | Approved. Interviews first, then five-second tests, recognition later. |
+
+### 12.3 Commercial architecture (8 November 2026)
+
+Recorded from the owner's memo *From brand strategy to a business people will buy*. The aim of this phase is to prove the commercial proposition through conversations and paid work, not to refine the brand further. Stop generating alternative positioning unless new evidence warrants it.
+
+**The business.** A specialist practice that helps leadership teams make difficult choices and equips them to act without continued dependence on the consultant. Research, workshops, courses, behavioural methods and AI expertise are capabilities and delivery mechanisms, not separate businesses. [Decided]
+
+**First buyer.** The owner-manager or managing director of an established South African business with roughly 20–250 employees, where familiar ways of deciding no longer work (new competitors, AI disruption, conflicting growth options, or a team that agrees but changes little). *Trigger:* a consequential decision due within 90 days. They control both the problem and the budget. Heads of strategy in larger institutions remain influencers and secondary buyers, chiefly through executive learning and Raykis. [Decided as a hypothesis, to test]
+
+**Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Format, fees and partner arrangements are not yet agreed. [Decided as a pilot; scope needs the owner's confirmation before publication]
+
+| Element | Its job |
+| --- | --- |
+| Find formation | The brand's organising metaphor |
+| More possibilities. Harder choices. | The homepage's central tension |
+| Strategic Choices Sprint | The commercial entry offer |
+| Decision record | A tangible output and proof of the approach, not the central promise |
+| Useful, never indispensable. | The principle governing client relationships |
+
+**Capabilities.** Keep the three names, led by the agreed problem lines (01 “Twelve priorities is another word for none.”, 02 “Everyone agreed. Nobody changed.”, 03 “If AI does the work, what are you doing?”). [Decided]
+
+**Learning.** Positioned around participation and practical capability, not decisions alone: Creative x AI concerned confidence and identity, the bakery concerned practice, the Solar course concerns analytical judgement. Offerings and examples come before the method. Raykis is shown as a developing partner channel until an agreement exists. [Decided]
+
+**Sample decision record.** `/decision-record/`, from the fictional Solar case, publishable as a labelled teaching example once its figures and reasoning are independently checked. [Decided; check outstanding]
+
+**Measures for this phase** (working targets, not forecasts):
+
+| Measure | Target |
+| --- | --- |
+| Qualified buyer conversations | 5 in the first week |
+| Concrete buying problems identified | At least 3 |
+| Serious engagement discussions | 2–3 within 14 days |
+| Paid pilot | 1 within 30–60 days |
+| Case accounts cleared for publication | 2 |
+| Website comprehension | Most five-second test participants identify the practice and its buyer |
+
+Website traffic is not a lead measure at this stage.
 
 ### 12.2 Unresolved implementation matters
 
