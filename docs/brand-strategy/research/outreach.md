@@ -2,7 +2,7 @@
 
 **Status:** draft for days 3–7 · **Date:** 8 November 2026 · **Goes with:** [interview-sheet.md](interview-sheet.md)
 
-Send these personally, from Marcel's own address or phone, never as a mailing. Ask for 30 minutes, offer two times, and don't attach anything. These are research calls, not sales calls.
+Send these personally, from Marcel's own address or phone, never as a mailing. Ask for 30 minutes, offer two times, and don't attach anything. These are research calls, not sales calls. Worked, fictional examples for five kinds of contact are in `../the-spotted-ape-sources/buyer-example/hypothetical-outreach.md`.
 
 ## Who to ask first
 
@@ -29,10 +29,18 @@ Check each person against the profile: owner-manager or MD, a South African busi
 
 ## Asking for an introduction
 
-> Hi [name], I'm trying to speak to a few owners or MDs of businesses with roughly 20 to 250 people who've had a hard decision to make recently. It's a 30-minute research conversation, not a pitch. Is there someone you'd be comfortable introducing me to?
+> Hi [name], I'm trying to speak to a few owners or MDs of businesses with roughly 20 to 250 people who've had a hard decision to make recently. It's a 30-minute research conversation, not a pitch. Is there someone you'd be comfortable introducing me to? Please ask them first before passing on their details.
 
 ## After the call
 
-> Thank you for your time today. It helped a lot. If anything you said turns up on our website, it will be anonymous, and I'll ask you first before quoting you, even without your name.
+If they allowed quotes after checking:
 
-If they show a buying signal (see the interview sheet), don't pitch on the call. Ask: *"Would it be useful if I sent you a note on how we'd approach that?"* Then send the [Sprint brief](../sales/sprint-brief.md).
+> Thank you for your time today. It helped me understand how that choice unfolded. I won't use anything publicly without first asking you about the exact wording, even anonymously.
+
+If they asked not to be quoted:
+
+> Thank you for your time today. It was useful to hear what happened in practice. As agreed, I won't quote our conversation.
+
+Don't attach anything to the thank-you unless they asked for it.
+
+If they show a buying signal (see the interview sheet), don't pitch on the call. Ask: *"Would it be useful if I sent you a note on how we'd approach that?"* Then send the [Sprint brief](../sales/sprint-brief.md) with its covering note, to the person who said yes. If that person can't commission the work, they decide whether to pass it on; don't contact their MD or finance head directly. If they declined a proposal, send nothing further.

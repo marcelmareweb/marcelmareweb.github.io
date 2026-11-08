@@ -1,10 +1,10 @@
 # Brand strategy — The Spotted Ape
 
-**Status:** Version 2.3, commercial architecture recorded · **Date:** 8 November 2026 (v2.2: 6 November) · **Owner:** Marcel Maré
+**Status:** Version 2.4, Sprint pilot terms recorded · **Date:** 8 November 2026 (v2.2: 6 November) · **Owner:** Marcel Maré
 
 This document sets out the brand strategy for The Spotted Ape (Pty) Ltd. It builds on the positioning in [AGENTS.md](../../AGENTS.md) and the visual direction in [CLAUDE.md](../../CLAUDE.md#design-direction-the-decision-record). It does not replace either: they remain the authority for positioning, design system and site rules.
 
-Version 2.3 adds the commercial architecture (Section 12.3): the first buyer, the entry offer and the job of each brand element. Version 2.2 records the owner's decisions on the seven open questions from version 1 (Section 12). The main change: **the decision record is now a signature method, not the central brand idea.** The brand idea is *helping teams find formation*, taken from the story behind the name, and the yellow Spotted Ape logo is the key brand asset.
+Version 2.4 (8 November 2026) adds the Sprint's pilot terms and fit boundary (Section 12.3). Version 2.3 adds the commercial architecture (Section 12.3): the first buyer, the entry offer and the job of each brand element. Version 2.2 records the owner's decisions on the seven open questions from version 1 (Section 12). The main change: **the decision record is now a signature method, not the central brand idea.** The brand idea is *helping teams find formation*, taken from the story behind the name, and the yellow Spotted Ape logo is the key brand asset.
 
 **Evidence key.** Every claim carries one of these tags:
 
@@ -601,7 +601,25 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 
 **First buyer.** The owner-manager or managing director of an established South African business with roughly 20–250 employees, where familiar ways of deciding no longer work (new competitors, AI disruption, conflicting growth options, or a team that agrees but changes little). *Trigger:* a consequential decision due within 90 days. They control both the problem and the budget. Heads of strategy in larger institutions remain influencers and secondary buyers, chiefly through executive learning and Raykis. [Decided as a hypothesis, to test]
 
-**Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Scope confirmed by the owner on 8 November 2026; the workshop is one day. Not yet defined: the elapsed time in weeks, online or in person, who attends, fees, any partner delivery, and what happens if the interviews show the question itself is wrong. [Decided]
+**Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Scope confirmed by the owner on 8 November 2026; the workshop is one day. [Decided]
+
+**Pilot terms** (adopted by the owner on 8 November 2026 from the rehearsal package's recommendation; a starting hypothesis, not a validated price, and never published on the site):
+
+| Term | Pilot |
+| --- | --- |
+| Fee | R45 000 fixed, excluding VAT if applicable. Travel, accommodation and an external venue only if agreed in advance. Not described as a discount; not conditional on a testimonial. |
+| Elapsed time | Three weeks (15 working days) from the sponsor conversation, including the review |
+| Mode | The workshop in person at the client's own venue; sponsor conversation, interviews and review online. A dispersed team gets a separately designed online version, never a mixed room-and-screen day. |
+| Who attends | 4–6 leadership participants, at most 8; one facilitator |
+| Limits | One question; up to six 45-minute interviews; up to five documents, about 100 pages; a 1–3 page record with one factual correction round; one 60-minute review |
+| Not included | New market research, financial models, legal, compliance or engineering advice, software, ongoing change management |
+| Partners | Direct delivery. Raykis or any partner: agree role, cost and share before using this fee. |
+
+**If the question is wrong:** *If the interviews show that the original question is not the one the team needs to resolve, we explain why and agree a revised question with the sponsor before the workshop. If that changes the scope, fee or timing, we agree those changes before continuing.* [Decided, 8 November 2026]
+
+**When not to offer it:** the sponsor cannot commission the work or make the choice; the missing input is specialist analysis or new customer evidence, not a decision; the owner already knows the choice and is overriding it; the deadline leaves no time for interviews. Then say so and suggest the proportionate next step.
+
+Basis: a fictional rehearsal of five interviews in `../the-spotted-ape-sources/buyer-example/` (8 November 2026). It contains no real interviews, quotes or demand evidence and changes no site copy.
 
 | Element | Its job |
 | --- | --- |
