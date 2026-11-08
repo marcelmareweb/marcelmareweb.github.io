@@ -172,13 +172,15 @@ if (dialog && trigger) {
   }
   /* Small desktops: tighter spacing keeps every label on one line beside the wordmark. */
   @media (min-width: 1024px) and (max-width: 1199px) {
-    .header-row { gap: 24px; }
-    .desktop-nav { gap: 20px; }
+    .header-row { gap: 16px; }
+    .desktop-nav { gap: 16px; }
     .desktop-nav ul { gap: 16px; }
+    .header-talk { padding-inline: 20px; }
   }
   .header-talk {
     min-height: var(--control-height-compact);
     padding: 12px 24px;
+    white-space: nowrap;
     font-size: var(--text-small);
   }
 

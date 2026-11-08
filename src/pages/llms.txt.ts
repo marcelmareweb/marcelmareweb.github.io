@@ -31,7 +31,7 @@ Helping teams find formation. Useful, never indispensable.
 - [Self-paced solar learning case](${siteURL}/courses)
 - [Contact](${siteURL}/contact/)
 - [Work and research](${siteURL}/work/)
-- [Strategic Thinking](${siteURL}/thinking/)
+- [Tools & essays](${siteURL}/thinking/)
 - [The Strategy Illusion quadrant map](${siteURL}/thinking/strategic-decision-maps/strategy-illusion/)
 - [About](${siteURL}/about)
 

@@ -6,7 +6,7 @@ export const primaryNavigation = [
     paths: ['/learning', '/workshops', '/courses'],
   },
   { label: 'Work & research', href: '/work/', paths: ['/work', '/cases'] },
-  { label: 'Thinking', href: '/thinking/', paths: ['/thinking'] },
+  { label: 'Tools & essays', href: '/thinking/', paths: ['/thinking'] },
   { label: 'About', href: '/about', paths: ['/about'] },
 ] as const;
 
@@ -30,7 +30,7 @@ export function breadcrumbsFor(path: string): Breadcrumb[] {
   const home = { label: 'Home', href: '/' };
   const learning = { label: 'Workshops & learning', href: '/learning/' };
   const work = { label: 'Work & research', href: '/work/' };
-  const thinking = { label: 'Thinking', href: '/thinking/' };
+  const thinking = { label: 'Tools & essays', href: '/thinking/' };
   const known: Record<string, Breadcrumb[]> = {
     '/services': [home, { label: 'How we help' }],
     '/decision-record': [home, { label: 'How we help', href: '/services/' }, { label: 'Sample decision record' }],

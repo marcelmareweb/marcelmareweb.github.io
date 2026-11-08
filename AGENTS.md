@@ -74,7 +74,7 @@ Build original compositions for the practice's own material. Preserve the distin
 
 The approved navigation strategy is implemented. Read [the implementation record](docs/navigation-strategy/implementation/IMPLEMENTATION.md) alongside the design-reference documents. Its local-only scope records that task's status; later publication instructions take precedence. The original audit and strategy remain the rationale and historical baseline.
 
-- Primary navigation is defined in `src/data/navigation.ts`: How we help, Workshops & learning, Work & research, Thinking, About, and the separate Let’s talk contact action. Keep desktop/mobile labels and category ancestry consistent.
+- Primary navigation is defined in `src/data/navigation.ts`: How we help, Workshops & learning, Work & research, Tools & essays (`/thinking/`), About, and the separate Let’s talk contact action. Keep desktop/mobile labels and category ancestry consistent.
 - `/services/`, `/learning/`, `/work/` and `/contact/` are the main destinations. Preserve existing workshop, course, case, thinking and homepage-anchor URLs.
 - Use `contactHref` from `src/lib/contact.ts` for offering context. Only offering/day/module/audience/origin identifiers belong in these URLs; never personal details or a visitor’s written question.
 - Contact requires name, email and the question only. Preserve optional organisation/team fields, editable programme/module context, provider order, native form fallback and email recovery. Test requests with interception, never real messages.
