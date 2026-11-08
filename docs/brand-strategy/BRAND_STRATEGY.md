@@ -62,7 +62,7 @@ No client interviews, competitor research, trademark searches, archival checks o
 | --- | --- | --- |
 | Positioning | Three connected capabilities: Strategic Decision Design, Behavioural Design, Human–AI Decision Design. Workshops, courses, research and advisory support them. | Supplied |
 | Homepage proposition | “More possibilities. Harder choices.” / “We help leaders make consequential choices when familiar assumptions no longer hold.” | Supplied |
-| Learning proposition | “Some things are better learned by doing.” Organising idea: *From knowledge to judgement to action.* | Supplied |
+| Learning proposition | “Some things are better learned by doing.” Organising idea, replaced 8 November 2026: *Make the expensive mistake somewhere cheap.* The method ends with the guide stepping back: *Do it again without us.* | Decided |
 | Evidence on the site | One case account; one applied course with real materials; one doctoral study with a peer-reviewed article. Each is labelled with what it does not prove. | Observed |
 | Evidence not yet on the site | The Creative x AI Workshop Series: a multi-session series with emerging young Black creatives, built on three pillars (Identity before tools, Structured experimentation, Translation to employability). Marcel's role: Co-Designer & Lead Research Facilitator. The account gives no client, dates or participant numbers. | Supplied, case |
 | Name origin | The essay (November 2025) and independent sources (7 November 2026): the 458th Bombardment Group's assembly ship *Spotted Ape*, B-24H 41-28697, at RAF Horsham St Faith. The essay's serial, 42-50346, is not supported. | Supplied, essay; checked |
@@ -335,7 +335,8 @@ There is no villain. The antagonist is a condition (uncertainty, overload), neve
 | More possibilities. Harder choices. | Master line, homepage | Decided |
 | See differently. Choose deliberately. Turn the choice into action. | Promise | Decided |
 | Useful, never indispensable. | Principle: About, proposals, sign-off | Decided |
-| From knowledge to judgement to action. | Learning | Supplied |
+| Make the expensive mistake somewhere cheap. | Learning (replaces “From knowledge to judgement to action”, which failed the swap test) | Decided |
+| Do it again without us. | Learning: the last step of the method | Decided |
 | Observe before prescribing. | Evidence | Supplied |
 
 ### 7.4 Before and after

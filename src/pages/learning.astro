@@ -9,7 +9,8 @@ import { publicResources } from '../data/practice';
 const steps = [
   { title: 'Meet a situation.', text: 'A real choice, or a case with figures that matter.' },
   { title: 'Examine the alternatives.', text: 'Compare the options, and test what would have to be true for each.' },
-  { title: 'Decide, or act.', text: 'Commit to a recommendation, an experiment or a next step, and say why.' },
+  { title: 'Decide, and say why.', text: 'Commit to a recommendation, an experiment or a next step.' },
+  { title: 'Do it again without us.', text: 'The next decision is real, and we won’t be in the room.' },
 ];
 ---
 <BaseLayout title="Workshops & Learning | The Spotted Ape" description="Some things are better learned by doing. Live strategy workshops and self-paced courses that turn complex ideas into decisions, experiments and practical action.">
@@ -19,7 +20,7 @@ const steps = [
 
   <section class="section-y section-rule" id="approach" aria-labelledby="approach-title">
     <div class="wrap split-layout">
-      <h2 class="h2" id="approach-title">From knowledge<br />to judgement<br />to action.</h2>
+      <h2 class="h2" id="approach-title">Make the expensive<br />mistake somewhere<br />cheap.</h2>
       <ol class="steps" role="list">
         {steps.map((step, index) => (
           <li><span class="step-num">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>
