@@ -1,6 +1,6 @@
 # Strategic Choices Sprint: brief for a prospect
 
-**Status:** for days 11–14 · **Date:** 8 November 2026 · **Source:** strategy 12.3 (scope confirmed and pilot terms adopted 8 November 2026) · **Worked example:** `../the-spotted-ape-sources/buyer-example/fictional-sprint-brief.md` (fiction; never send it)
+**Status:** for days 11–14 · **Date:** 8 November 2026 · **Source:** strategy 12.3 (scope confirmed; provisional pilot terms confirmed 8 November 2026) · **Worked example:** `../the-spotted-ape-sources/buyer-example/fictional-sprint-brief.md` (fiction; never send it)
 
 Send this after a conversation, never cold, and only when the prospect has said yes to a note. Fill in the bracketed parts from what the prospect said. Fees and timing are never published on the site; they appear only in this brief.
 

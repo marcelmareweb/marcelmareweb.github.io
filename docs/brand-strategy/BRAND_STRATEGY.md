@@ -603,7 +603,7 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 
 **Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Scope confirmed by the owner on 8 November 2026; the workshop is one day. [Decided]
 
-**Pilot terms** (adopted by the owner on 8 November 2026 from the rehearsal package's recommendation; a starting hypothesis, not a validated price, and never published on the site):
+**Provisional pilot terms** (confirmed by the owner on 8 November 2026: R45 000 excluding VAT if applicable; three weeks including review; one in-person workshop with remote preparation and follow-up. A starting hypothesis, not a validated price, and never published on the site):
 
 | Term | Pilot |
 | --- | --- |
