@@ -18,6 +18,7 @@ document.querySelectorAll<HTMLFormElement>('[data-inquiry-form]').forEach((form)
   const knownOrigins = [
     '/',
     '/services',
+    '/decision-record',
     '/learning',
     '/work',
     '/workshops',

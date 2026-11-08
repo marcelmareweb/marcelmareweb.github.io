@@ -1,0 +1,126 @@
+---
+import Arrow from '../components/Arrow.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { contactHref } from '../lib/contact';
+
+// Figures: our own model of the Cape Manufacturing case assumptions (R2.80/kWh, 6% tariff escalation,
+// 10% discount rate, 0.5% degradation, 5% maintenance escalation, 20 years, year-end cash flows).
+const alternatives = [
+  { name: 'A', size: '60 kWp', cost: 'R650\u00a0000', npv: 'R2.15m', payback: 'Year 3', use: '90%' },
+  { name: 'B', size: '80 kWp', cost: 'R820\u00a0000', npv: 'R2.66m', payback: 'Year 3', use: '85%' },
+  { name: 'C', size: '100 kWp', cost: 'R990\u00a0000', npv: 'R2.87m', payback: 'Year 4', use: '78%', chosen: true },
+];
+---
+<BaseLayout title="Sample Decision Record | The Spotted Ape" description="One page, not a deck: a sample decision record from our fictional Cape Manufacturing solar case. What was chosen, why, what was given up, who owns it and what would reopen it.">
+  <PageIntro scale="default" description="This is what a team keeps after working with us: what it chose, why, what it gave up, who owns it, and what would make it look again. The sample comes from our fictional solar teaching case.">
+    <Fragment slot="heading">One page.<br />Not a deck.</Fragment>
+    <div class="actions intro-actions"><a class="text-link" href="/downloads/sample-decision-record.pdf" download>Download the one-page PDF <Arrow /></a><a class="text-link" href="/courses">Work through the case yourself <Arrow /></a></div>
+  </PageIntro>
+
+  <section class="section-y section-rule" aria-labelledby="record-title">
+    <div class="wrap split-layout">
+      <div class="record-head">
+        <p class="print-brand"><img src="/logo.png" width="28" height="28" alt="" />The Spotted Ape · hello@thespottedape.com</p>
+        <p class="meta">Sample decision record</p>
+        <h2 class="h3" id="record-title">Cape Manufacturing: rooftop solar.</h2>
+        <p class="record-note">Fictional teaching case. Not investment advice.</p>
+      </div>
+      <dl class="record" aria-labelledby="record-title">
+        <div class="record-row">
+          <dt>The question</dt>
+          <dd>Which solar proposal should we take forward, and what must we verify before signing a contract?</dd>
+        </div>
+        <div class="record-row">
+          <dt>Alternatives</dt>
+          <dd>
+            <table class="alternatives">
+              <thead><tr><th scope="col">Proposal</th><th scope="col">Cost</th><th scope="col">Value over 20 years</th><th scope="col">Pays back</th><th scope="col">Supplier’s self-use</th></tr></thead>
+              <tbody>
+                {alternatives.map((item) => (
+                  <tr class:list={{ chosen: item.chosen }}><th scope="row">{item.name} <span class="size">{item.size}</span></th><td>{item.cost}</td><td>{item.npv}</td><td>{item.payback}</td><td>{item.use}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </dd>
+        </div>
+        <div class="record-row">
+          <dt>We chose</dt>
+          <dd><strong>Proposal C, on one condition.</strong> It is worth about R210 000 more than B over 20 years, but only if we really use 74% or more of what it generates. The supplier says 78%. Nobody has checked.</dd>
+        </div>
+        <div class="record-row">
+          <dt>What would have to be true</dt>
+          <dd>The factory uses at least 74% of the electricity C generates. Below that, B is worth more.</dd>
+        </div>
+        <div class="record-row">
+          <dt>What we gave up</dt>
+          <dd>R170 000 more capital than B, a payback one year slower, and B’s margin for error if our usage falls.</dd>
+        </div>
+        <div class="record-row">
+          <dt>What we won’t do</dt>
+          <dd>Let Supplier C’s claim of lower environmental impact count until it is independently verified. Model tax, VAT or financing in this decision.</dd>
+        </div>
+        <div class="record-row">
+          <dt>Owner</dt>
+          <dd>The Financial Director. Prepared by the commercial analyst.</dd>
+        </div>
+        <div class="record-row">
+          <dt>Look again when</dt>
+          <dd>Before signing: twelve months of meter data put our self-use below 74%. Then take B. After installation: year-one generation or self-use runs more than 10% below the proposal.</dd>
+        </div>
+      </dl>
+      <p class="source-note print-note">Figures are our own model of the case assumptions: R2.80/kWh rising 6% a year, a 10% discount rate, 0.5% annual panel degradation, maintenance rising 5% a year, 20 years of year-end cash flows. Cape Manufacturing is fictional.</p>
+    </div>
+  </section>
+
+  <section class="section-y section-rule no-print">
+    <div class="wrap split-layout">
+      <h2 class="h2">Bring the<br />decision.</h2>
+      <div>
+        <p class="lead">Your record starts with the question your team can’t settle. We work through it with you, then you keep the page.</p>
+        <div class="actions"><a class="button" href={contactHref({ interest: 'strategic-decision', source: '/decision-record/' })}>Discuss a decision <Arrow /></a></div>
+        <p class="source-note">Figures are our own model of the case assumptions: R2.80/kWh rising 6% a year, a 10% discount rate, 0.5% annual panel degradation, maintenance rising 5% a year, 20 years of year-end cash flows. Cape Manufacturing is fictional.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .intro-actions { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 32px; }
+  .record-head .meta { margin-bottom: 12px; }
+  .record-head h2 { max-width: 14ch; }
+  .record-note { margin-top: 12px; font: var(--font-label); color: var(--text-muted); }
+  .record-row > dd { min-width: 0; }
+  .alternatives { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .alternatives th, .alternatives td { padding: 8px 12px 8px 0; text-align: left; vertical-align: baseline; border-bottom: 1px solid var(--line); }
+  .alternatives td { white-space: nowrap; }
+  .alternatives thead th { font: var(--font-label); color: var(--text-muted); }
+  .alternatives tbody th { font-weight: 600; white-space: nowrap; }
+  .alternatives .size { font-weight: 400; color: var(--text-muted); }
+  .alternatives tr.chosen th { box-shadow: inset 4px 0 0 var(--signal); padding-left: 12px; }
+  .alternatives tr:not(.chosen) th { padding-left: 12px; }
+  .source-note { margin-top: 32px; max-width: 62ch; font: var(--font-label); color: var(--text-muted); }
+  @media (max-width: 767px) {
+    .alternatives { display: block; overflow-x: auto; }
+    .alternatives .size { display: block; }
+  }
+  .print-brand, .print-note { display: none; }
+  @media print {
+    @page { size: A4; margin: 14mm 16mm; }
+    .no-print, :global(.page-intro) { display: none !important; }
+    .section-y { padding-block: 0 !important; border: 0 !important; }
+    .split-layout { display: block !important; }
+    .print-brand { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; font-size: 11px; font-weight: 600; }
+    .record-head { margin-bottom: 14px; }
+    .record-head .meta { margin-bottom: 4px; }
+    .record-head h2 { max-width: none; font-size: 26px; }
+    .record-note { margin-top: 4px; }
+    .record-row { display: grid !important; grid-template-columns: 9.5rem minmax(0, 1fr) !important; padding-block: 7px !important; }
+    .record-row > dd { font-size: 11.5px; max-width: none; }
+    .record-row > dt { font-size: 11px; }
+    .alternatives { display: table !important; font-size: 11px; }
+    .alternatives thead th { font-size: 10px; white-space: nowrap; }
+    .alternatives .size { display: inline !important; }
+    .alternatives th, .alternatives td { padding-block: 5px; }
+    .print-note { display: block; margin-top: 16px; max-width: none; font-size: 9.5px; }
+  }
+</style>

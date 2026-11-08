@@ -1,5 +1,5 @@
 export const primaryNavigation = [
-  { label: 'How we help', href: '/services/', paths: ['/services'] },
+  { label: 'How we help', href: '/services/', paths: ['/services', '/decision-record'] },
   {
     label: 'Workshops & learning',
     href: '/learning/',
@@ -33,6 +33,7 @@ export function breadcrumbsFor(path: string): Breadcrumb[] {
   const thinking = { label: 'Thinking', href: '/thinking/' };
   const known: Record<string, Breadcrumb[]> = {
     '/services': [home, { label: 'How we help' }],
+    '/decision-record': [home, { label: 'How we help', href: '/services/' }, { label: 'Sample decision record' }],
     '/learning': [home, { label: learning.label }],
     '/work': [home, { label: work.label }],
     '/contact': [home, { label: 'Let’s talk' }],
