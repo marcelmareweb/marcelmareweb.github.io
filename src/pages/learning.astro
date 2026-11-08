@@ -2,9 +2,15 @@
 import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+import Ledger from '../components/Ledger.astro';
 import PageIntro from '../components/PageIntro.astro';
 import { contactHref } from '../lib/contact';
-import { publicResources } from '../data/practice';
+
+const formats = [
+  { name: 'Custom decision workshops.', href: '/workshops', text: 'Facilitated online sessions on a choice your team actually faces: its alternatives, assumptions and trade-offs.', aside: 'Leadership teams' },
+  { name: 'The executive masterclass.', href: '/workshops/strategic-design-leadership/', text: 'Strategic Design Leadership in the Age of AI: five standalone days, one strategic decision each.', aside: 'Executives' },
+  { name: 'Should We Invest in Solar?', href: '/courses', text: 'A self-paced case: three proposals, a spreadsheet to test and one recommendation to defend.', aside: 'Individual learners' },
+];
 
 const steps = [
   { title: 'Meet a situation.', text: 'A real choice, or a case with figures that matter.' },
@@ -13,46 +19,24 @@ const steps = [
   { title: 'Do it again without us.', text: 'The next decision is real, and we won’t be in the room.' },
 ];
 ---
-<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Some things are better learned by doing. Live strategy workshops and self-paced courses that turn complex ideas into decisions, experiments and practical action.">
-  <PageIntro scale="long" description="We design learning experiences that turn complex ideas into decisions, experiments and practical action.">
-    <Fragment slot="heading">Some things are<br />better learned<br />by doing.</Fragment>
+<BaseLayout title="Workshops & Learning | The Spotted Ape" description="Workshops and courses that end in a decision: live workshops for leadership teams, an executive masterclass and a self-paced investment case.">
+  <PageIntro scale="long" description="Live workshops for leadership teams, an executive masterclass and a self-paced course. Your team works through a real choice, and leaves able to make the next one on its own.">
+    <Fragment slot="heading">Workshops that<br />end in a decision.</Fragment>
+    <figure class="intro-photo">
+      <img src="/images/research/bakery-workshop.jpg" width="1058" height="793" decoding="async" alt="Workshop participants with mugs of coffee stand around a bakery table while the facilitator works dough in a large tub, an oven behind him." />
+      <figcaption>Learning by doing: a workshop in a community bakery, from our clean-cooking research.</figcaption>
+    </figure>
   </PageIntro>
-
-  <section class="section-y section-rule" id="approach" aria-labelledby="approach-title">
-    <div class="wrap split-layout">
-      <h2 class="h2" id="approach-title">Make the expensive<br />mistake somewhere<br />cheap.</h2>
-      <ol class="steps" role="list">
-        {steps.map((step, index) => (
-          <li><span class="step-num">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>
-        ))}
-      </ol>
-    </div>
-  </section>
 
   <section class="section-y section-rule" id="formats" aria-labelledby="formats-title">
     <div class="wrap">
-      <h2 class="sr-only" id="formats-title">Two formats</h2>
+      <h2 class="h2" id="formats-title">Three ways in.</h2>
       <div class="formats">
-        <article class="format">
-          <h3>Live strategy workshops.</h3>
-          <p>Facilitated online sessions in which participants examine alternatives, challenge assumptions and work through a consequential strategic choice.</p>
-          <ul class="format-links" role="list">
-            <li><a class="text-link" href="/workshops">Custom decision workshops <Arrow /></a></li>
-            <li><a class="text-link" href="/workshops/strategic-design-leadership/">The executive masterclass <Arrow /></a></li>
-          </ul>
-        </article>
-        <article class="format">
-          <h3>Self-paced courses.</h3>
-          <p>Carefully produced lessons, interactive cases and practical tools through which learners test understanding and exercise judgement.</p>
-          <ul class="format-links" role="list">
-            <li><a class="text-link" href="/courses">Should We Invest in Solar? <Arrow /></a></li>
-            <li><a class="text-link" href={publicResources.course} target="_blank" rel="noreferrer">Open the case now <Arrow /></a></li>
-          </ul>
-        </article>
-      </div>
-      <div class="in-development" id="series">
-        <p class="meta">In development</p>
-        <p>A strategy learning series is being developed for possible delivery under the Raykis brand. Marcel Maré designs the curriculum, facilitates the live sessions and teaches. In the planned self-paced courses a digital avatar presents; the substance is the case, the choices, the feedback and the reflection.</p>
+        <Ledger items={formats} heads={['Format', 'What happens', 'For']} label="Workshops and courses" />
+        <div class="in-development" id="series">
+          <p class="meta">In development</p>
+          <p>A strategy learning series is being developed for possible delivery under the Raykis brand. Marcel Maré designs the curriculum, facilitates the live sessions and teaches. In the planned self-paced courses a digital avatar presents; the substance is the case, the choices, the feedback and the reflection.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -75,6 +59,17 @@ const steps = [
     </div>
   </section>
 
+  <section class="section-y section-rule" id="approach" aria-labelledby="approach-title">
+    <div class="wrap split-layout">
+      <h2 class="h2" id="approach-title">Make the expensive<br />mistake somewhere<br />cheap.</h2>
+      <ol class="steps" role="list">
+        {steps.map((step, index) => (
+          <li><span class="step-num">{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
   <section class="section-y section-rule"><div class="wrap split-layout"><h2 class="h2">Bring the<br />decision.</h2><div><p class="lead">Start with the question your team needs to examine. The format follows from it.</p><div class="actions"><a class="button" href={contactHref({ interest: 'workshop', audience: 'team', source: '/learning/' })}>Discuss team learning <Arrow /></a></div></div></div></section>
 </BaseLayout>
 <style>
@@ -84,10 +79,12 @@ const steps = [
   .steps h3 { font-size: var(--heading-4); line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); }
   .steps p { margin-top: 8px; max-width: 44ch; font-size: var(--body); line-height: var(--leading-copy); color: var(--muted); }
 
-  .formats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
-  .format h3 { font-size: var(--heading-3); line-height: 1.04; letter-spacing: var(--tracking-heading); }
-  .format p { max-width: 44ch; margin-top: 24px; font-size: var(--body-large); line-height: 1.35; letter-spacing: var(--tracking-copy-large); }
-  .format-links { display: grid; justify-items: start; gap: 12px; margin: 32px 0 0; padding: 0; list-style: none; }
+  .intro-photo { margin: var(--space-sm) 0 0; }
+  .intro-photo img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: center 40%; border-radius: var(--radius-card); }
+  .intro-photo figcaption { margin-top: 12px; font: var(--font-label); color: var(--text-muted); }
+
+  .formats { margin-top: var(--space-sm); }
+
   .in-development { display: grid; grid-template-columns: minmax(7rem, 2fr) minmax(0, 10fr); gap: 8px var(--grid-gap); margin-top: var(--space-md); padding-top: 16px; border-top: 1px solid var(--ink); }
   .in-development p:last-child { max-width: 65ch; font-size: var(--body); line-height: var(--leading-copy); }
 
@@ -99,12 +96,11 @@ const steps = [
   .actions .button { margin-top: 0; }
 
   @media (max-width: 1023px) {
-    .formats, .examples-layout { grid-template-columns: 1fr; }
-    .formats { gap: var(--space-xs); }
+    .examples-layout { grid-template-columns: 1fr; }
   }
   @media (max-width: 767px) {
     .examples { grid-template-columns: 1fr; gap: var(--space-xs); }
-    .format h3 { font-size: 34px; }
+    .intro-photo img { aspect-ratio: 4 / 3; }
     .in-development { grid-template-columns: 1fr; }
   }
 </style>
