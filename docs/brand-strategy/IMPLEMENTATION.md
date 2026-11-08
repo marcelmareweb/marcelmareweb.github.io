@@ -17,7 +17,7 @@ Implements strategy Section 12.3. Work is on branch `brand/godin-pass`; nothing 
 
 | Days | Step | Done when |
 | --- | --- | --- |
-| 1–2 | **Freeze the architecture.** Confirm the first buyer, the Sprint, the three capabilities, the record's role and the Raykis separation. | Strategy 12.3 approved; Sprint scope confirmed |
+| 1–2 | **Freeze the architecture.** Confirm the first buyer, the Sprint, the three capabilities, the record's role and the Raykis separation. | Done 8 November 2026: Sprint scope confirmed (one-day workshop), record figures checked |
 | 3–7 | **Test the buying problem.** Five conversations with owner-managers and managing directors ([research/interview-sheet.md](research/interview-sheet.md)). Look for buying behaviour, not compliments. | Five rows in [research/words.md](research/words.md) |
 | 8–10 | **Revise and test the pages.** Home, How we help and Workshops & learning as one journey, in the buyers' words; five-second tests with people new to the practice. | Most participants name the offer and its buyer |
 | 11–14 | **Seek a real engagement.** Offer the Sprint to two or three qualified prospects. | One serious commercial conversation |
