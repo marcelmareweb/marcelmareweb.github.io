@@ -601,7 +601,7 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 
 **First buyer.** The owner-manager or managing director of an established South African business with roughly 20–250 employees, where familiar ways of deciding no longer work (new competitors, AI disruption, conflicting growth options, or a team that agrees but changes little). *Trigger:* a consequential decision due within 90 days. They control both the problem and the budget. Heads of strategy in larger institutions remain influencers and secondary buyers, chiefly through executive learning and Raykis. [Decided as a hypothesis, to test]
 
-**Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Format, fees and partner arrangements are not yet agreed. [Decided as a pilot; scope needs the owner's confirmation before publication]
+**Entry offer.** The *Strategic Choices Sprint* (pilot): a 60-minute sponsor conversation, up to six stakeholder interviews, review of up to five documents, one facilitated decision workshop, a concise decision record and agreed follow-through, and one follow-up review. Scope confirmed by the owner on 8 November 2026. Not yet defined: duration in weeks, online or in person, workshop length, who attends, fees, any partner delivery, and what happens if the interviews show the question itself is wrong. Decide at least the duration and workshop length before deploying, because buyers ask for both first. [Decided]
 
 | Element | Its job |
 | --- | --- |
@@ -615,7 +615,9 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 
 **Learning.** Positioned around participation and practical capability, not decisions alone: Creative x AI concerned confidence and identity, the bakery concerned practice, the Solar course concerns analytical judgement. Offerings and examples come before the method. Raykis is shown as a developing partner channel until an agreement exists. [Decided]
 
-**Sample decision record.** `/decision-record/`, from the fictional Solar case, publishable as a labelled teaching example once its figures and reasoning are independently checked. [Decided; check outstanding]
+**Sample decision record.** `/decision-record/`, from the fictional Solar case, publishable as a labelled teaching example once its figures and reasoning are independently checked. Our own check (8 November 2026) reproduced the workbook's method: NPV at 10% over 20 years of R2.15m, R2.66m and R2.87m; undiscounted payback in years 3, 3 and 4; C beats B only from about 74% self-consumption (R2 659 398 at 73.9%, R2 664 566 at 74%, against B's R2 662 435). Outstanding: someone else rebuilds them in the workbook. [Decided; independent check outstanding]
+
+**Image briefs** for the Sprint, capabilities and Learning: [image-briefs.md](image-briefs.md).
 
 **Measures for this phase** (working targets, not forecasts):
 

@@ -35,7 +35,7 @@ const alternatives = [
           <dt>Alternatives</dt>
           <dd>
             <table class="alternatives">
-              <thead><tr><th scope="col">Proposal</th><th scope="col">Cost</th><th scope="col">Value over 20 years</th><th scope="col">Pays back</th><th scope="col">Supplier’s self-use</th></tr></thead>
+              <thead><tr><th scope="col">Proposal</th><th scope="col">Cost</th><th scope="col">Net present value (20 years, 10%)</th><th scope="col">Pays back (undiscounted)</th><th scope="col">Self-consumption (supplier’s figure)</th></tr></thead>
               <tbody>
                 {alternatives.map((item) => (
                   <tr class:list={{ chosen: item.chosen }}><th scope="row">{item.name} <span class="size">{item.size}</span></th><td>{item.cost}</td><td>{item.npv}</td><td>{item.payback}</td><td>{item.use}</td></tr>
@@ -46,11 +46,11 @@ const alternatives = [
         </div>
         <div class="record-row">
           <dt>We chose</dt>
-          <dd><strong>Proposal C, on one condition.</strong> It is worth about R210 000 more than B over 20 years, but only if we really use 74% or more of what it generates. The supplier says 78%. Nobody has checked.</dd>
+          <dd><strong>Proposal C, on one condition.</strong> It is worth about R210 000 more than B over 20 years, but only if self-consumption is 74% or more. The supplier says 78%. Nobody has checked.</dd>
         </div>
         <div class="record-row">
           <dt>What would have to be true</dt>
-          <dd>The factory uses at least 74% of the electricity C generates. Below that, B is worth more.</dd>
+          <dd>Self-consumption of at least 74%: the factory uses that share of what C generates. Below that, B is worth more.</dd>
         </div>
         <div class="record-row">
           <dt>What we gave up</dt>
@@ -66,7 +66,7 @@ const alternatives = [
         </div>
         <div class="record-row">
           <dt>Look again when</dt>
-          <dd>Before signing: twelve months of meter data put our self-use below 74%. Then take B. After installation: year-one generation or self-use runs more than 10% below the proposal.</dd>
+          <dd>Before signing: twelve months of meter data put self-consumption below 74%. Then take B. After installation: year-one generation or self-consumption runs more than 10% below the proposal.</dd>
         </div>
       </dl>
       <p class="source-note print-note">Figures are our own model of the case assumptions: R2.80/kWh rising 6% a year, a 10% discount rate, 0.5% annual panel degradation, maintenance rising 5% a year, 20 years of year-end cash flows. Cape Manufacturing is fictional.</p>
