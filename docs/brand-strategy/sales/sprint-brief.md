@@ -27,11 +27,13 @@ Send this after a conversation, never cold, and only when the prospect has said 
 
 **If the question turns out to be the wrong one.** If the interviews show that the original question is not the one the team needs to resolve, we explain why and agree a revised question with you before the workshop. If that changes the scope, fee or timing, we agree those changes before continuing.
 
-**Timing.** Three weeks from our first conversation, including the review. The workshop is in person at your premises, around day 9; the record follows within three working days; the review is online at the end of week three. Our conversation and the interviews are online. Proposed dates: [first conversation], [workshop], [review].
+**Timing.** Three weeks from our first conversation, including the review. The workshop is in person, around day 9, at [your premises or an agreed venue]; the record follows within three working days; the review is online at the end of week three. Our conversation and the interviews are online. Proposed dates: [first conversation], [workshop], [review].
 
 **Your team's time.** You: the first conversation, the workshop and the review. [4–6, at most 8] leadership participants for the workshop day. Up to six people for a 45-minute interview each.
 
 **Fee.** R45 000, fixed, excluding VAT if applicable. [Travel or an outside venue, only if agreed: amount.] It covers one question, the interviews, up to five documents (about 100 pages in all), the workshop for up to eight people, the record with one round of factual corrections, and the review. It doesn't cover [the specialist work they already have or need: engineering, legal, financial modelling, market research].
+
+**Terms.** Half on signing, half when the record is delivered, invoices due in seven days. The workshop can move once without charge with five working days' notice. Everything you share stays confidential; we'd ask separately, after the review, before writing about the work.
 
 **How we work.** Useful, never indispensable. The aim is a team that can make the next hard decision without us.
 
@@ -50,7 +52,9 @@ Marcel Maré · The Spotted Ape · hello@thespottedape.com
 - [ ] The person receiving it can commission the work, or has said who can and how they'll pass it on.
 - [ ] Their deadline leaves three weeks, or the schedule is back-planned to fit (a board pack is due before the board meets).
 - [ ] The specialist work they need first (finance, engineering, legal) is named as outside the fee.
-- [ ] A gap between their budget and the fee is stated plainly, not discounted away.
+- [ ] A gap between their budget and the fee is stated plainly, not discounted away. Scope only comes down where a step is unnecessary, at R1 250 an hour.
+- [ ] Venue agreed: theirs, or an outside venue with its cost agreed in advance.
+- [ ] The team can meet in one room. If not, don't send; the pilot has no online version.
 - [ ] Any partner role (Raykis or other) is agreed before this fee is used.
 - [ ] The sample record link works.
 

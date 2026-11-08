@@ -609,7 +609,7 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 | --- | --- |
 | Fee | R45 000 fixed, excluding VAT if applicable. Travel, accommodation and an external venue only if agreed in advance. Not described as a discount; not conditional on a testimonial. |
 | Elapsed time | Three weeks (15 working days) from the sponsor conversation, including the review |
-| Mode | The workshop in person at the client's own venue; sponsor conversation, interviews and review online. A dispersed team gets a separately designed online version, never a mixed room-and-screen day. |
+| Mode | The workshop in person, at a venue agreed with each client (open: their premises or an outside venue, costed and agreed in advance); sponsor conversation, interviews and review online. A dispersed team gets a separately designed online version, never a mixed room-and-screen day. |
 | Who attends | 4–6 leadership participants, at most 8; one facilitator |
 | Limits | One question; up to six 45-minute interviews; up to five documents, about 100 pages; a 1–3 page record with one factual correction round; one 60-minute review |
 | Not included | New market research, financial models, legal, compliance or engineering advice, software, ongoing change management |
@@ -618,6 +618,19 @@ Recorded from the owner's memo *From brand strategy to a business people will bu
 **If the question is wrong:** *If the interviews show that the original question is not the one the team needs to resolve, we explain why and agree a revised question with the sponsor before the workshop. If that changes the scope, fee or timing, we agree those changes before continuing.* [Decided, 8 November 2026]
 
 **When not to offer it:** the sponsor cannot commission the work or make the choice; the missing input is specialist analysis or new customer evidence, not a decision; the owner already knows the choice and is overriding it; the deadline leaves no time for interviews. Then say so and suggest the proportionate next step.
+
+**Commercial terms for the pilot** (*decided by delegation*, 8 November 2026; the owner can reverse them):
+
+| Matter | Decision |
+| --- | --- |
+| Paperwork | A one-page engagement letter: the brief's scope, fee, dates, these terms. No separate contract for the pilot. |
+| Payment | 50% on signing, 50% when the record is delivered; invoices due in 7 days. |
+| Budget below the fee | No discount. State the gap plainly. Scope comes down only where a step is genuinely unnecessary (for example, fewer interviews), and the fee falls by that step's hours at R1 250 an hour, the rate implied by the effort model. |
+| Rescheduling | The workshop can move once without charge with five working days' notice. Later, agree a new date and any venue cost. |
+| Online version | Not offered in the pilot. A dispersed team is told so and offered a call to discuss a separately designed online version later. |
+| Confidentiality | Everything the client shares stays confidential by default. A case account or quote needs separate written permission, asked after the review. |
+| VAT | **Owner action:** confirm registration. Registration is compulsory once taxable supplies exceed R1 million in 12 months; until then the brief keeps “excluding VAT if applicable”. |
+| Fee review | After the first two paid Sprints, compare hours actually spent with the 36-hour model and reprice on that evidence. |
 
 Basis: a fictional rehearsal of five interviews in `../the-spotted-ape-sources/buyer-example/` (8 November 2026). It contains no real interviews, quotes or demand evidence and changes no site copy.
 
@@ -652,14 +665,19 @@ Website traffic is not a lead measure at this stage.
 
 ### 12.2 Unresolved implementation matters
 
-These are not approved facts.
+Status on 8 November 2026. Items marked *Decided by delegation* were settled by Claude on the owner's instruction of 8 November 2026 ("make an executive decision on outstanding matters"); the owner can reverse any of them. *Owner action* means only the owner can do it (their accounts, relationships or signature).
 
-1. **Imagery.** The aircraft image is an AI rework of a press photograph held by the 458th Bomb Group association (6.1); the formation image is AI-generated. Update both Substack captions. For the About page, ask the association for permission to use the original photograph, and record it in `CLEARANCES.md`.
-2. **Historical facts.** Checked 7 November 2026 (6.1): the serial is 41-28697, not the essay's 42-50346, and assembly duty ran June 1944 to March 1945. Correct the essay.
-3. **Historical image.** Confirm the source and licence of any photograph and record it in `CLEARANCES.md`. The essay's Substack-hosted images are not cleared.
-4. **Logo files.** A vector master, and a favicon and social card made from the logo.
-5. **Creative x AI.** Published as a five-part case (`/cases/creative-x-ai-workshop`, 7 November 2026): one session in 2024 with the NFVF and QuiteFrankly, under 20 participants. The portfolio account on marcelmare.com still describes a multi-session series; correct it there.
-6. **Policy-analyst story.** Resolved 7 November 2026: it is fictional teaching material, now labelled so and unlinked from evidence. Strategic Decision Design needs a real case account.
-7. **Raykis agreement.** Content ownership, reuse rights, commercial terms, learner support, branding and existing intellectual property.
-8. **Domain migration.** Stage A inventory, then an explicit instruction before Stage B; AGENTS.md is updated only then.
-9. **Executive AI governance evidence.** Still a gap; no case yet.
+| # | Matter | Status and decision |
+| --- | --- | --- |
+| 1 | Imagery | **Done** for About: the association's permission is recorded in `CLEARANCES.md` (7 November 2026) and the photograph is on the page. **Owner action:** Substack captions. *Decided by delegation:* caption the aircraft image “AI-assisted rework of a photograph from the 458th Bomb Group association” and the formation image “AI-generated illustration”. |
+| 2 | Historical facts | **Decided** (checked 7 November 2026). **Owner action:** correct the essay: serial 41-28697 (not 42-50346); assembly duty June 1944 to March 1945. |
+| 3 | Historical image licence | **Done**, 7 November 2026. |
+| 4 | Logo files | Favicon, touch icons and social card made from the logo: **done** (`public/favicon.*`, `public/brand/`, `public/og-card.png`). *Decided by delegation:* no vector is traced or redrawn by us, since the logo rules forbid redrawing. The 895 × 809 PNG stays the master until the original artwork's vector is found; a professional trace needs the owner's sign-off against the PNG. |
+| 5 | Creative x AI on marcelmare.com | **Owner action.** *Decided by delegation,* replacement wording: “A workshop in 2024 with the NFVF and QuiteFrankly for fewer than 20 emerging creatives.” Remove “multi-session series”. |
+| 6 | Policy-analyst story | **Done**, 7 November 2026. |
+| 7 | Raykis | *Decided by delegation,* opening position until a written agreement exists: no co-branding and no Raykis logo on this site; the Sprint is always direct delivery; Raykis is a possible channel for executive learning and courses only. The Spotted Ape keeps ownership of its existing material and offers a non-exclusive licence for co-developed programmes; revenue share, learner support and reuse rights are agreed in writing before anything is promoted. The Learning page keeps its “possible partner channel” note. |
+| 8 | Domain migration | *Decided by delegation:* see [domain-inventory.md](domain-inventory.md) Section 5. Stage B still needs an explicit instruction and an AGENTS.md update. |
+| 9 | Executive AI governance evidence | Still a gap. *Decided by delegation:* claim nothing beyond Creative x AI, which stays labelled as not executive AI governance. The first Sprint on a Human–AI question is the case candidate. |
+| 10 | Strategic Decision Design case | Still a gap. *Decided by delegation:* the first paid Sprint is the candidate. Ask for case permission after the review, separately from the fee, and never as a condition of it. |
+| 11 | Second Behavioural Design case | *Decided by delegation:* defer Vantage HIV and Momentum Recharge until Phase 2 ends; then ask BCA's permission for Vantage HIV first. |
+| 12 | Workshop photograph | The bakery photograph stays on the Learning card. *Decided by delegation:* no stock photography for now; ask photo permission in the first Sprint's engagement letter (people's faces only with each person's consent). |

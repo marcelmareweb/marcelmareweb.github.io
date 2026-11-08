@@ -49,7 +49,7 @@ Stage A only: an inventory and a proposed map. Nothing here changes hosting, DNS
 
 ## 4. Stage B checklist (not started)
 
-- [ ] Owner decisions on findings 1–3 and on `/portfolio/`
+- [x] Decisions on findings 1–3 and on `/portfolio/` (Section 5, by delegation, 8 November 2026)
 - [ ] A URL-by-URL file of old path, new path and method, generated from this inventory
 - [ ] The preserved content copied or hosted, with checksums for the downloads
 - [ ] Analytics and Search Console set up for both hosts
@@ -58,3 +58,12 @@ Stage A only: an inventory and a proposed map. Nothing here changes hosting, DNS
 - [ ] An explicit instruction from the owner, and an AGENTS.md update (the “no custom domain” rule)
 
 The raw crawl (every URL, status, type, title and number of inbound links) and the script that made it are in `../the-spotted-ape-sources/domain/`. Re-run it at Stage B.
+
+## 5. Decisions (8 November 2026)
+
+*Decided by delegation:* Claude, on the owner's instruction to make executive decisions on outstanding matters. The owner can reverse any of them. None of this authorises Stage B.
+
+1. **Case collision: option 3.** Leave thespottedape.com in place as the home of `/Courses/`, `/research/` and `/posts/substack/`, and at Stage B move only the practice pages. It is the only option that keeps every preserved URL, case included, without depending on case-sensitive builds. The lowercase `/courses` page stays on the new site.
+2. **Pitch decks.** Keep them hidden now; retire `/pitchdeck/` at Stage B. Drafts of a third-party pricing analysis and unpublished columns are no asset to a decision practice.
+3. **!Khairos.** Retire at Stage B, as the owner chose.
+4. **`/portfolio/`.** Keep it on the old host as it is. **Owner action:** correct the Sibabalwe Bakery page against the published study and the Creative x AI page's “multi-session”; move the portfolio to marcelmare.com when that site is next updated.

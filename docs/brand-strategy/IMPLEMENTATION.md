@@ -17,7 +17,7 @@ Implements strategy Section 12.3. Work is on branch `brand/godin-pass`; nothing 
 
 | Days | Step | Done when |
 | --- | --- | --- |
-| 1–2 | **Freeze the architecture.** Confirm the first buyer, the Sprint, the three capabilities, the record's role and the Raykis separation. | Done 8 November 2026: Sprint scope confirmed (one-day workshop), record figures checked |
+| 1–2 | **Freeze the architecture.** Confirm the first buyer, the Sprint, the three capabilities, the record's role and the Raykis separation. | Done 8 November 2026: Sprint scope confirmed (one-day workshop), record figures checked, provisional pilot terms confirmed; remaining matters decided by delegation (strategy 12.2, 12.3) |
 | 3–7 | **Test the buying problem.** Five conversations with owner-managers and managing directors ([research/interview-sheet.md](research/interview-sheet.md)). Look for buying behaviour, not compliments. | Five rows in [research/words.md](research/words.md). Rehearsed with five fictional scripts on 8 November 2026 (`../the-spotted-ape-sources/buyer-example/`); real interviews: 0 |
 | 8–10 | **Revise and test the pages.** Home, How we help and Workshops & learning as one journey, in the buyers' words; five-second tests with people new to the practice. | Most participants name the offer and its buyer |
 | 11–14 | **Seek a real engagement.** Offer the Sprint to two or three qualified prospects. | One serious commercial conversation |
@@ -38,7 +38,7 @@ Checked in the repository on 6 November 2026.
 | Social card | `SeoHead.astro:16` → `public/og-card.svg` | Shows a yellow dot, not the logo. LinkedIn, Facebook and X do not render SVG social images, so shared links may show no image. |
 | Name story | — | Not on the site. |
 | Services throughline | `services.astro:27` | “A real decision rarely fits one capability…” sits last on the page. |
-| Human–AI copy | `src/data/practice.ts:49–50` | Uncommitted owner edit: problem “If AI does the work, what are you doing?”; the question has no closing question mark. Owner to confirm. |
+| Human–AI copy | `src/data/practice.ts:49–50` | Problem “If AI does the work, what are you doing?” and question “Where must people decide, review, challenge or stop an action?”, both committed. Resolved (checked 8 November 2026). |
 | Work strip | `src/components/home/WorkStrip.astro` | Map card cue “Design Strategy.” (card rules: “Explore.”); the solar card's media text repeats its title. Uncommitted edits present. |
 | Cases collection | `src/content.config.ts`, `src/content/cases/` | One entry. Its fields are `clientContext`, `pattern`, `intervention`, `shift`, `result`, `quote`, `timeframe`, `featured`; no fields for the five-part case format. |
 | Sources | `../the-spotted-ape-sources/` | The essay and the Creative x AI account were added on 6 November 2026. Neither is cleared for publication. |
