@@ -24,8 +24,178 @@
     "title": "The Hinterland Paradox in South Africa",
     "pubDate": "2026-02-05",
     "readingTime": "13 min read",
-    "excerpt": "Explore how South Africa's institutional erosion has turned it into a vital \"back office\" for transnational insurgents. While SANDF soldiers fought M23 rebels in the DRC in 2024, the group's leaders operated freely from Johannesburg, fundraising and coordinating logistics. Even after M23's shift to controlled territories in 2025, networks persist for groups like al-Shabaab and ISIS affiliates, exploiting hawala systems, diaspora communities, and regulatory gaps. Highlighting women's pivotal roles in these operations and the risk of domestic blowback, this analysis warns of South Africa's precarious path and calls for urgent reforms to dismantle these hidden architectures before violence hits home.",
+    "excerpt": "Explore how South Africa's institutional erosion has turned it into a vital \"back office\" for transnational insurgents. While SANDF soldiers fought M23 rebels in the DRC in 2024, the group's leaders operated…",
     "substackUrl": "https://spottedape.substack.com/p/the-hinterland-paradox-in-south-africa",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "from-seabed-to-orbit",
+    "title": "From Seabed to Orbit",
+    "pubDate": "2026-01-13",
+    "readingTime": "5 min read",
+    "excerpt": "Why Greenland and the Arctic now anchor global power: satellites, seabed cables, and legal gray zones are reshaping competition below the threshold of war.",
+    "substackUrl": "https://spottedape.substack.com/p/from-seabed-to-orbit-why-the-arctic",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "wisdom-is-like-a-baobab-tree",
+    "title": "Wisdom is Like a Baobab Tree",
+    "pubDate": "2025-12-08",
+    "readingTime": "5 min read",
+    "excerpt": "The baobab is more than a tree. It symbolises a way of knowing.Its roots don't drill down. They spread sideways in a rhizomatic tangle without centre. Philosophers propose this as a different mode of…",
+    "substackUrl": "https://spottedape.substack.com/p/wisdom-is-like-a-baobab-tree",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "the-matthew-effect-why-a-harvard-degree-works-like-a-birkin-bag",
+    "title": "The Matthew Effect: Why a Harvard Degree Works Like a Birkin Bag",
+    "pubDate": "2025-11-21",
+    "readingTime": "12 min read",
+    "excerpt": "“For to everyone who has, more will be given.” — Matthew 25:29. How does status become an engine of cumulative advantage, and why is escaping it not about diversifying the anointed elite, but about taking…",
+    "substackUrl": "https://spottedape.substack.com/p/the-matthew-effect-why-a-harvard",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "the-flying-spotted-ass-ape-and-the-psychology-of-creative-formation",
+    "title": "The Flying Spotted Ass Ape and the Psychology of Creative Formation",
+    "pubDate": "2025-11-12",
+    "readingTime": "5 min read",
+    "excerpt": "What a polka-dotted bomber can teach today’s creative teams.",
+    "substackUrl": "https://spottedape.substack.com/p/the-flying-spotted-ass-ape-and-the",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "hal-9000-and-the-market-s-moloch-problem",
+    "title": "HAL 9000 and the Market’s Moloch Problem",
+    "pubDate": "2025-10-30",
+    "readingTime": "11 min read",
+    "excerpt": "I’m sorry, Dave. I’m afraid I can’t do that. We all remember HAL as the murderous AI from 2001: A Space Odyssey, Stanley Kubrick’s cinematic masterpiece.But what if he was just obeying impossible…",
+    "substackUrl": "https://spottedape.substack.com/p/hal-9000-and-the-markets-moloch-problem",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "playing-in-the-river-before-the-fire",
+    "title": "Playing in the River Before the Fire",
+    "pubDate": "2025-10-23",
+    "readingTime": "3 min read",
+    "excerpt": "Nagasaki, Memory, and the Breath Before the Plunge",
+    "substackUrl": "https://spottedape.substack.com/p/playing-in-the-river-before-the-fire",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "moholy-nagy-and-the-art-of-remote-creation",
+    "title": "Moholy-Nagy and the Art of Remote Creation",
+    "pubDate": "2025-08-21",
+    "readingTime": "4 min read",
+    "excerpt": "Germany, 1922. Inflation is spiraling, politics are fractured, and the Bauhaus experiments with radical new forms of art and life. In this moment, László Moholy-Nagy picks up the telephone and dictates a…",
+    "substackUrl": "https://spottedape.substack.com/p/one",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "the-ai-ux-iceberg-that-could-sink-figma",
+    "title": "The AI-UX Iceberg That Could Sink Figma",
+    "pubDate": "2025-05-28",
+    "readingTime": "4 min read",
+    "excerpt": "User Experience (UX) expert Greg Nudelman recently published a provocative piece arguing that the collaborative web application Figma “is the Titanic that is about to hit that new UX iceberg at full speed…",
+    "substackUrl": "https://spottedape.substack.com/p/the-ai-ux-iceberg-that-could-sink-figma",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "creativity-in-the-age-of-machines",
+    "title": "Creativity in the Age of Machines",
+    "pubDate": "2025-05-08",
+    "readingTime": "1 min read",
+    "excerpt": "On 60 Minutes, Bill Whitaker asked Giacomo Massari of LITIX (a company using robots to carve marble sculptures) what many are thinking:",
+    "substackUrl": "https://spottedape.substack.com/p/creativity-in-the-age-of-machines",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "designing-neural-media-allado-mcdowell-s-compelling-typology-incorporating-ai",
+    "title": "Designing Neural Media: Allado-McDowell’s Compelling Typology Incorporating AI",
+    "pubDate": "2025-05-08",
+    "readingTime": "3 min read",
+    "excerpt": "“It’s the end of explanations, a great increase in reality is here.” –K Allado-McDowell and GPT-3, Air Age Blueprint",
+    "substackUrl": "https://spottedape.substack.com/p/designing-neural-media-allado-mcdowells-compelling-typology-incorporating-ai",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "frog-goes-hip-hop-jumping-into-creative-ai",
+    "title": "Frog Goes Hip-Hop: Jumping Into Creative AI",
+    "pubDate": "2025-05-08",
+    "readingTime": "2 min read",
+    "excerpt": "Berlin-based artist David Szauder recently shared a video that left me both mesmerised and unsettled.",
+    "substackUrl": "https://spottedape.substack.com/p/frog-goes-hip-hop-jumping-into-creative-ai",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "ai-s-avalanche-is-coming-are-you-ready",
+    "title": "AI’s Avalanche Is Coming – Are You Ready?",
+    "pubDate": "2025-05-08",
+    "readingTime": "5 min read",
+    "excerpt": "The recent viral clip, shared by Harry Shimmin, mirrors the seismic upheaval generative AI is bringing to the design space.",
+    "substackUrl": "https://spottedape.substack.com/p/ais-avalanche-is-coming-are-you-ready",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "klarna-s-karma-on-black-friday-when-ai-devours-marketing",
+    "title": "Klarna’s Karma on Black Friday: When AI Devours Marketing",
+    "pubDate": "2025-05-08",
+    "readingTime": "3 min read",
+    "excerpt": "Klarna, the Swedish payments giant, has taken a revolutionary approach to its marketing strategy by handing over complete control of 30 campaigns across 45 countries to generative AI.",
+    "substackUrl": "https://spottedape.substack.com/p/klarnas-karma-on-black-friday-when-ai-devours-marketing",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "co-create-or-die-key-mit-insights-on-ai-s-impact-in-r-d",
+    "title": "Co-Create or Die! Key MIT Insights on AI’s Impact in R&D",
+    "pubDate": "2025-05-08",
+    "readingTime": "2 min read",
+    "excerpt": "“You have to swim with the sharks in the sea…” — Johnny Clegg, “Cruel, Crazy, Beautiful World,” 1989",
+    "substackUrl": "https://spottedape.substack.com/p/co-create-or-die-key-mit-insights-on-ais-impact-in-rd",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "will-ai-take-my-job-unlikely-but-it-might-eat-my-admin",
+    "title": "Will AI Take My Job? Unlikely—But it Might Eat My Admin",
+    "pubDate": "2025-05-08",
+    "readingTime": "3 min read",
+    "excerpt": "Harvard Business School’s latest paper, Generative AI and the Nature of Work, has some eye-opening insights for creatives.",
+    "substackUrl": "https://spottedape.substack.com/p/will-ai-take-my-job-unlikely-but-it-might-eat-my-admin",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "baudrillard-dor-channeling-lies-wide-shut",
+    "title": "Baudrillard’Dor: Channeling Lies Wide Shut",
+    "pubDate": "2025-05-08",
+    "readingTime": "2 min read",
+    "excerpt": "During this time of saturation in American media coverage, especially surrounding the U.S.",
+    "substackUrl": "https://spottedape.substack.com/p/baudrillarddor-channeling-lies-wide",
+    "tags": [],
+    "isFallback": true
+  },
+  {
+    "id": "warren-mcculloch-pioneer-of-neural-networks-and-ai",
+    "title": "Warren McCulloch: Pioneer of Neural Networks and AI",
+    "pubDate": "2025-05-07",
+    "readingTime": "1 min read",
+    "excerpt": "“What is a number, that a man may know it, and a man that he may know a number.”",
+    "substackUrl": "https://spottedape.substack.com/p/warren-mcculloch-pioneer-of-neural",
     "tags": [],
     "isFallback": true
   }

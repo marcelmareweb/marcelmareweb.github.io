@@ -151,14 +151,25 @@ export function substackLoader(): Loader {
 
       try {
         const response = await fetch(feedUrl, {
-          headers: { Accept: 'application/rss+xml, application/xml, text/xml;q=0.9' },
+          headers: {
+            Accept: 'application/rss+xml, application/xml, text/xml;q=0.9',
+            'User-Agent': 'Mozilla/5.0 (compatible; TheSpottedApeSite/1.0; +https://marcelmareweb.github.io)',
+          },
           signal: controller.signal,
         });
         if (!response.ok) throw new Error(`Feed request returned HTTP ${response.status}.`);
 
         const xml = await response.text();
-        entries = parseItems(xml);
-        if (entries.length === 0) throw new Error('Feed contained no usable RSS items.');
+        const liveEntries = parseItems(xml);
+        if (liveEntries.length === 0) throw new Error('Feed contained no usable RSS items.');
+
+        // The feed carries only the latest posts; keep older archived ones listed.
+        const liveUrls = new Set(liveEntries.map((entry) => entry.substackUrl));
+        const liveIds = new Set(liveEntries.map((entry) => entry.id));
+        const archived = fallbackEntries.filter(
+          (entry) => !liveUrls.has(entry.substackUrl) && !liveIds.has(entry.id),
+        );
+        entries = [...liveEntries, ...archived];
       } catch (error) {
         const reason = error instanceof Error ? error.message : 'Unknown feed error.';
         logger.info(`Substack RSS unavailable (${reason}); using local insight fallback entries.`);
