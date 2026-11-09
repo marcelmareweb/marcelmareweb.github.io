@@ -3,6 +3,9 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches: [main]
+  # Rebuild daily so new Substack essays appear without a push (03:00 UTC, 05:00 in Cape Town).
+  schedule:
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
