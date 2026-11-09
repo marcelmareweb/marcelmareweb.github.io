@@ -5,9 +5,19 @@ import PageIntro from '../../components/PageIntro.astro';
 import StrategicMatrix from '../../components/StrategicMatrix.astro';
 import Ledger from '../../components/Ledger.astro';
 import FindFormation from '../../components/home/FindFormation.astro';
+import { getCollection } from 'astro:content';
 import { strategyIllusion } from '../../data/strategicMatrices';
 const mapPath = '/thinking/strategic-decision-maps/strategy-illusion/';
-const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html';
+const essayDate = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const essays = (await getCollection('insights'))
+  .sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate))
+  .map(({ data }) => ({
+    name: /[.?!…]$/.test(data.title) ? data.title : `${data.title}.`,
+    text: data.excerpt,
+    aside: `${essayDate.format(new Date(data.pubDate))} · ${data.readingTime}`,
+    href: data.substackUrl,
+    external: true,
+  }));
 ---
 <HomeLayout title="Tools & Essays — Notes from the Work | The Spotted Ape" description="Maps, exercises and essays from The Spotted Ape's practice, shared freely. Take what's useful, and pass it on.">
 <PageIntro scale="default" description="Maps, exercises and essays from our practice, shared freely. Take what’s useful, and pass it on.">
@@ -33,7 +43,7 @@ const essayPath = 'https://thespottedape.com/posts/substack/2026-02-14-the-labor
 <section class="section-y">
 <div class="wrap">
 <h2 class="h2 essays-title">Essays.</h2>
-<Ledger items={[{ name: 'The Laboratory Fallacy.', text: 'When a persuasive model meets the conditions of real work.', aside: 'Essay on thespottedape.com', href: essayPath, external: true }]} label="Essays" />
+<Ledger items={essays} label="Essays" />
 </div>
 </section>
 </HomeLayout>
