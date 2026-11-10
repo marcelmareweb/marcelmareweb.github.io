@@ -1113,10 +1113,6 @@ button:focus-visible .roll-char {
   padding-top: 32px;
   margin-top: var(--space-sm);
 }
-.thinking-preview {
-  background: var(--surface);
-  padding: 40px;
-}
 .thinking-copy h3 {
   font-size: var(--heading-2);
   max-width: 14ch;
@@ -1396,9 +1392,6 @@ button:focus-visible .roll-char {
   }
   .evidence-foot > .text-link {
     margin-top: 24px;
-  }
-  .thinking-preview {
-    padding: 20px;
   }
   .thinking-copy h3 {
     font-size: var(--compact-lg);
