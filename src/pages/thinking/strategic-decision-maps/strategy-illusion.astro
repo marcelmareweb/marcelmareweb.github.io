@@ -22,7 +22,8 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
 <p>Tyson’s point has of course implications far deeper than boxing. Every plan is written somewhere calm: a meeting room, a spreadsheet, an away day with good biscuits. It is the sum of everything you know before you begin. Then you step into the real world. Once reality gets its say most plans fail. Usually they weren’t badly made. They were just made before reality had its turn. Customers behave differently from the research, a competitor does something rude, and the thing you were sure of turns out to have been an assumption all along.</p>
 <p>So a strategy that only works if the plan survives isn’t much of a strategy. A good one expects the punch. It is a decision about who you are for, what you offer them and what you will cheerfully refuse to do, held firmly enough that when the plan goes down, you still know which way to get up.</p>
 <p>The awkward part is that a busy team looks a lot like a team with a strategy. Take a small café. It’s made up, so nobody’s feelings get hurt.</p>
-<h2>Let’s map two questions.</h2>
+<p>To see where it stands, we’ll use a simple strategy tool: a map with two questions on it. Has the café made a clear choice? And does the work follow that choice? Most teams answer yes to one and quietly assume the other. The map makes you answer both, and where you land tells you what needs attention first.</p>
+<h2>Two questions. One map.</h2>
 <dl class="axis-definitions">
 <div>
 <dt>Across: are the decisions clear?</dt>
@@ -35,11 +36,15 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
 </dl>
 </div>
 </div>
-<section class="map-figure section-y" id="strategy-illusion-map" aria-label="The Strategy Illusion quadrant map">
+<section class="map-figure section-y" id="strategy-illusion-map" aria-labelledby="story-heading">
 <div class="wrap">
 <div class="section-top meta">
 <p>The decision map</p>
 <p>Clarity of choice × Consistency of action</p>
+</div>
+<div class="map-figure-head">
+<h2 id="story-heading">One café. Four places on the map.</h2>
+<p>Start bottom left. There are two ways out, and only one of them feels like progress.</p>
 </div>
 <figure class="map-figure-inner">
 <Image
@@ -47,7 +52,7 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
   src={cafeMap}
   alt="Illustration of one café on a four-part map. Top left, The Efficient Treadmill: a tidy kitchen and a board with every task ticked. Top right, Coherent Advantage: a weekday breakfast board and a customer leaving with a coffee. Bottom left, Strategic Drift: a crowded room under a board of unticked questions. Bottom right, Unrealised Strategy: office workers checking their watches at the counter."
   widths={[640, 1000, 1254]}
-  sizes="(max-width: 1039px) calc(100vw - 40px), 1000px"
+  sizes="(max-width: 899px) calc(100vw - 40px), 860px"
   format="webp"
   quality={80}
   loading="lazy"
@@ -58,9 +63,7 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
 </div>
 </section>
 <div class="map-reading wrap">
-<section class="map-story prose" aria-labelledby="story-heading">
-<h2 id="story-heading">One café. Four possible situations.</h2>
-<p>Start bottom left. There are two ways out, and only one of them feels like progress.</p>
+<div class="map-story prose">
 <p><strong>{strategyIllusion.quadrants.bottomLeft.title}.</strong> The café serves commuters at seven, long lunches at one and diners at eight, and none of them especially well. Every week brings a new priority. Orders arrive late. Nothing is going badly wrong, exactly. Nothing in particular is going right.</p>
 <p><strong>{strategyIllusion.quadrants.topLeft.title}.</strong> The kitchen is organised and orders arrive on time. Everyone feels better. But ask why anyone should walk past three other cafés to get here, and the room goes quiet.</p>
 <p><strong>{strategyIllusion.quadrants.bottomRight.title}.</strong> The owner finally picks: quick weekday breakfasts for people on their way to the office. Evening service goes, which hurts. But the kitchen still works at lunch pace, and the very people the café chose are standing at the counter checking their watches.</p>
@@ -68,7 +71,16 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
 <p id={`${strategyIllusion.id}-note`}>The Efficient Treadmill: delivering a plan well without examining whether its choices make sense.</p>
 <h3>Then the punch lands.</h3>
 <p>Six months later, half the office workers start staying home on Mondays and Fridays. The breakfast plan takes a knock. But the owner knows who the café is for: people in a hurry who want something good, quickly. So they know where to look next, perhaps a coffee window for the school run, perhaps a faster lunch for the people who still come in. The plan has to change. The choice tells them how.</p>
-</section>
+<h3>Where the map comes from.</h3>
+<p>The map is our own teaching device, not a validated diagnostic, but each axis has a long pedigree. Clarity of choice follows Porter (1996): strategy means choosing a distinct position and what not to do, and operational effectiveness, however good, is not strategy. Lafley and Martin (2013) reduce that choice to where to play and how to win. Consistency of action follows Mintzberg (1987), who saw strategy as a pattern in a stream of actions, and Mintzberg and Waters (1985), whose intended strategies that never happen give the bottom right its name. Rumelt (2011) joins the two: a good strategy pairs a guiding policy with coherent action.</p>
+<ol class="map-references" aria-label="References">
+<li>Lafley, A. G. and Martin, R. L. (2013) Playing to Win: How Strategy Really Works. Boston: Harvard Business Review Press.</li>
+<li>Mintzberg, H. (1987) ‘The strategy concept I: Five Ps for strategy’, California Management Review, 30(1), pp. 11–24.</li>
+<li>Mintzberg, H. and Waters, J. A. (1985) ‘Of strategies, deliberate and emergent’, Strategic Management Journal, 6(3), pp. 257–272.</li>
+<li>Porter, M. E. (1996) ‘What is strategy?’, Harvard Business Review, 74(6), pp. 61–78.</li>
+<li>Rumelt, R. (2011) Good Strategy/Bad Strategy: The Difference and Why It Matters. New York: Crown Business.</li>
+</ol>
+</div>
 </div>
 <div class="map-ending wrap">
 <h2>What still stands<br />when your plan fails?</h2>
@@ -113,9 +125,19 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
   margin: 16px 0 0;
   color: var(--muted);
 }
+.map-figure-head,
 .map-figure-inner {
-  max-width: 1000px;
+  max-width: 860px;
   margin-inline: auto;
+}
+.map-figure-head {
+  margin-bottom: 40px;
+}
+.map-figure-head p {
+  margin-top: 24px;
+  font-size: var(--body-large);
+  line-height: var(--leading-copy);
+  max-width: 62ch;
 }
 .map-figure-inner {
   margin-block: 0;
@@ -131,14 +153,21 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
   font: var(--font-label);
   color: var(--muted);
 }
+.map-references {
+  margin-top: 24px;
+  font: var(--font-label);
+  color: var(--muted);
+}
+.map-references li + li {
+  margin-top: 8px;
+}
 .map-story strong {
   font-weight: 600;
 }
-.map-story h2 {
+.map-figure-head h2 {
   font-size: var(--heading-2);
   line-height: 1;
   max-width: 15ch;
-  margin-bottom: 48px;
 }
 .map-ending {
   padding-bottom: var(--space-lg);
@@ -160,10 +189,11 @@ import cafeMap from '../../../assets/editorial/cafe-strategy-map.png';
   }
   .axis-definitions dt,
   .axis-definitions dd,
+  .map-figure-head p,
   .map-story p {
     font-size: var(--body);
   }
-  .map-story h2 {
+  .map-figure-head h2 {
     font-size: 44px;
   }
   .map-ending h2 {
