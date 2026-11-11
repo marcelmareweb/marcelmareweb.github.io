@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# large source documents parked locally (originals live in ../the-spotted-ape-sources/)
+planning/orphaned-files/*.pdf
+planning/marcel-research/

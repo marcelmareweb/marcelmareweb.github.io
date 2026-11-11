@@ -48,7 +48,7 @@ The browser animates transform/opacity keyframes through the Web Animations API.
 | --- | --- |
 | [MonkeyFactory.astro](../../../src/components/interactive/MonkeyFactory.astro) | Semantic still, live scene, description and native controls |
 | [FactoryScene.astro](../../../src/components/interactive/FactoryScene.astro) | Desktop/mobile registered cutouts and articulated SVG layers |
-| [factory-animation.ts](../../../src/lib/factory-animation.ts) | Native animation timing, inspection hold, queued approval, pause reasons and local reactions |
+| [factory-animation.ts](../../../src/scripts/factory-animation.ts) | Native animation timing, inspection hold, queued approval, pause reasons and local reactions |
 | [monkey-factory.css](../../../src/styles/monkey-factory.css) | Isolated layout, responsive scene, focus and control states |
 | [Lab route](../../../src/pages/lab/monkey-factory/index.astro) | Dedicated noindex review page |
 | `public/images/judgement-factory/*.webp` | WebP delivery copies of the approved PNG masters |

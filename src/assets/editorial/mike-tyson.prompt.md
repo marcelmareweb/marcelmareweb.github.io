@@ -1,6 +1,6 @@
 # Mike Tyson editorial portrait
 
-Generated with the built-in image_gen tool, with transparent_background enabled. The final selected image is mike-tyson.png. The portrait contains no quotation text; the reusable Astro component supplies accessible HTML text and the small yellow accent.
+Generated with the built-in image_gen tool, with transparent_background enabled. The final selected image is mike-tyson2.png; its GIMP source is planning/editorial-sources/mike-tyson.xcf. The portrait contains no quotation text; the reusable Astro component supplies accessible HTML text and the small yellow accent.
 
 ## Initial generation prompt
 
