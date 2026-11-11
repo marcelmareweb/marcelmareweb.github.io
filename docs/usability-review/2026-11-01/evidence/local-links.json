@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/services/",
+      "status": 200
+    },
+    {
+      "path": "/learning/",
+      "status": 200
+    },
+    {
+      "path": "/work/",
+      "status": 200
+    },
+    {
+      "path": "/thinking/",
+      "status": 200
+    },
+    {
+      "path": "/about/",
+      "status": 200
+    },
+    {
+      "path": "/contact/",
+      "status": 200
+    },
+    {
+      "path": "/cases/policy-analyst-strategic-review/",
+      "status": 200
+    },
+    {
+      "path": "/workshops/",
+      "status": 200
+    },
+    {
+      "path": "/workshops/strategic-design-leadership/",
+      "status": 200
+    },
+    {
+      "path": "/courses/",
+      "status": 200
+    },
+    {
+      "path": "/thinking/strategic-decision-maps/strategy-illusion/",
+      "status": 200
+    },
+    {
+      "path": "/privacy/",
+      "status": 200
+    },
+    {
+      "path": "/terms/",
+      "status": 200
+    }
+  ],
+  "localLinkOccurrences": 649,
+  "fragmentReferences": 105,
+  "missingFragments": [],
+  "assets": [],
+  "capReached": false
+}

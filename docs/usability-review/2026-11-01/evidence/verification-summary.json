@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Africa/Johannesburg",
+  "revision": "a4dd6f1",
+  "scope": "Expert review of the current local implementation, with public-site spot checks; no source changes, deployment, analytics or participant study.",
+  "publicSpotChecks": [
+    {
+      "path": "/",
+      "localStatus": 200,
+      "publicStatus": 200,
+      "sameHeadings": true,
+      "sameMainLinks": true,
+      "sameNavigation": true
+    },
+    {
+      "path": "/learning/",
+      "localStatus": 200,
+      "publicStatus": 200,
+      "sameHeadings": true,
+      "sameMainLinks": true,
+      "sameNavigation": true
+    },
+    {
+      "path": "/contact/",
+      "localStatus": 200,
+      "publicStatus": 200,
+      "sameHeadings": true,
+      "sameMainLinks": true,
+      "sameNavigation": true
+    },
+    {
+      "path": "/workshops/strategic-design-leadership/",
+      "localStatus": 200,
+      "publicStatus": 200,
+      "sameHeadings": true,
+      "sameMainLinks": true,
+      "sameNavigation": true
+    }
+  ],
+  "externalChecks": [
+    {
+      "url": "https://thespottedape.com/Courses/solar-investment/learn/",
+      "status": 200
+    },
+    {
+      "url": "https://thespottedape.com/research/index.html",
+      "status": 200
+    },
+    {
+      "url": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+      "status": 200
+    },
+    {
+      "url": "https://marcelmare.com/dla-course-2/",
+      "status": 200
+    }
+  ],
+  "noJavaScript": [
+    {
+      "name": "Mobile menu",
+      "servicesVisible": true,
+      "contactVisible": true
+    },
+    {
+      "name": "Programme",
+      "nativeSessions": 5,
+      "day03Opened": true,
+      "dayEnquiryVisible": true
+    },
+    {
+      "name": "Course",
+      "nativeModuleSummaries": 6,
+      "directLearningLinkVisible": true
+    },
+    {
+      "name": "Contact",
+      "requiredFields": 3,
+      "submitVisible": true,
+      "nativeMethod": "POST",
+      "submitted": false
+    }
+  ],
+  "caveats": [
+    "All enquiry POSTs used for interaction testing were intercepted and answered synthetically; no real message was sent.",
+    "Four public pages matched the inspected local headings, main links and primary navigation. This does not establish complete deployment or asset parity.",
+    "Screen-height equivalents describe document geometry, not measured scroll gestures or completion time.",
+    "An early interaction sample read state before scripts settled; final journeys.json contains the settled checks.",
+    "Screenshots hide the Astro development toolbar through temporary browser styling only."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "name": "Mocked enquiry success",
+      "confirmation": true,
+      "request": {
+        "method": "POST",
+        "day": "integrator",
+        "area": "Executive Masterclass",
+        "namePresent": true,
+        "emailPresent": true,
+        "questionPresent": true
+      }
+    },
+    {
+      "name": "Mocked enquiry failure",
+      "status": "We couldn’t send your enquiry. Please try again or use the email link below. Your details are still here.",
+      "retainsQuestion": "Synthetic failure check; no message sent.",
+      "emailRecoveryVisible": true
+    },
+    {
+      "name": "Course keyboard",
+      "selectedTab": "06\nReflect.\n↗",
+      "moduleTitle": "Reflect"
+    },
+    {
+      "name": "Course module enquiry context",
+      "context": "Solar learning case / Team session · Module 06 — Reflect",
+      "module": "06"
+    },
+    {
+      "name": "Reduced motion",
+      "matches": true,
+      "scenePosition": "static",
+      "trackDisplay": "grid",
+      "trackTransform": "none"
+    },
+    {
+      "name": "Landscape menu",
+      "contactVisible": true,
+      "contactBox": {
+        "x": 20,
+        "y": 314,
+        "width": 121.140625,
+        "height": 56
+      }
+    },
+    {
+      "name": "Laptop hero CTA",
+      "y": 831.6328125,
+      "bottom": 887.6328125,
+      "viewportHeight": 768
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "journeys": [
+    {
+      "name": "Desktop header to day enquiry",
+      "clicks": 4,
+      "steps": [
+        "Workshops & learning",
+        "Executive masterclass",
+        "Day 03 card",
+        "Discuss day 03"
+      ],
+      "url": "http://localhost:4321/contact/?interest=masterclass&day=integrator&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+      "context": "Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well?"
+    },
+    {
+      "name": "Mobile menu to day enquiry",
+      "clicks": 5,
+      "steps": [
+        "Menu",
+        "Workshops & learning",
+        "Executive masterclass",
+        "Day 03 card",
+        "Discuss day 03"
+      ],
+      "url": "http://localhost:4321/contact/?interest=masterclass&day=integrator&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+      "context": "Five-day executive masterclass · Day 03 / Integrator — What must the organisation be able to do exceptionally well?"
+    },
+    {
+      "name": "Mobile homepage behavioural enquiry",
+      "clicks": 2,
+      "steps": [
+        "Agreement has not become action",
+        "Discuss a behavioural question"
+      ],
+      "url": "http://localhost:4321/contact/?interest=behavioural-design&source=%2Fservices%2F",
+      "context": "Behavioural Design & Research"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Return to selected day",
+      "url": "http://localhost:4321/workshops/strategic-design-leadership/#session-integrator",
+      "open": true,
+      "focused": "session-question-integrator"
+    },
+    {
+      "name": "Reload selected day",
+      "url": "http://localhost:4321/workshops/strategic-design-leadership/#session-integrator",
+      "open": true
+    },
+    {
+      "name": "Escape day",
+      "open": false,
+      "focused": "card-integrator"
+    },
+    {
+      "name": "Mobile menu keyboard",
+      "trapped12Tabs": true,
+      "triggerFocused": true,
+      "bodyOverflow": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Find Formation two-choice limit",
+    "selected": 2,
+    "status": "Capacity is limited to two commitments. Select a yellow shape to clear it before backing another. Your earlier choices are unchanged."
+  },
+  {
+    "name": "Find Formation reset",
+    "selected": 0
+  },
+  {
+    "name": "Small-width geometry",
+    "path": "/",
+    "overflow": false
+  },
+  {
+    "name": "Small-width geometry",
+    "path": "/learning/",
+    "overflow": false
+  },
+  {
+    "name": "Small-width geometry",
+    "path": "/contact/",
+    "overflow": false
+  },
+  {
+    "name": "Desktop reduced motion practice",
+    "stagePosition": "static",
+    "trackTransform": "none"
+  },
+  {
+    "name": "External research shell",
+    "title": "Research – The Spotted Ape",
+    "headerLinks": []
+  }
+]

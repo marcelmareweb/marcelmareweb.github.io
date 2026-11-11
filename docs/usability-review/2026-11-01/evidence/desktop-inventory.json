@@ -1,0 +1,1557 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "title": "The Spotted Ape — Strategic Decisions & Behavioural Design",
+    "height": 13282,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "More possibilities.Harder choices.",
+        "y": 258
+      },
+      {
+        "text": "Observe beforeprescribing.",
+        "y": 1734
+      },
+      {
+        "text": "Decide.Make it happen.",
+        "y": 2785
+      },
+      {
+        "text": "A question.A way to learn.",
+        "y": 7174
+      },
+      {
+        "text": "Find formation.",
+        "y": 8784
+      },
+      {
+        "text": "What needsdeciding?",
+        "y": 11811
+      }
+    ],
+    "links": [
+      {
+        "text": "Explore how we can help",
+        "href": "/services/",
+        "y": 846,
+        "hidden": false
+      },
+      {
+        "text": "Workshops & learning ↗",
+        "href": "/learning/",
+        "y": 850,
+        "hidden": false
+      },
+      {
+        "text": "Find yourformation.",
+        "href": "#choice",
+        "y": 707,
+        "hidden": false
+      },
+      {
+        "text": "01 / Strategic Decision DesignSeveral priorities. One commitment.↗",
+        "href": "/services/#strategic-decision-design",
+        "y": 1065,
+        "hidden": false
+      },
+      {
+        "text": "02 / Behavioural DesignAgreement has not become action.↗",
+        "href": "/services/#behavioural-design",
+        "y": 1177,
+        "hidden": false
+      },
+      {
+        "text": "03 / Human–AI Decision DesignAI is entering consequential work.↗",
+        "href": "/services/#human-ai-decision-design",
+        "y": 1289,
+        "hidden": false
+      },
+      {
+        "text": "All work & research ↗",
+        "href": "/work/",
+        "y": 1633,
+        "hidden": false
+      },
+      {
+        "text": "When more thinking makes everything worse.",
+        "href": "/cases/policy-analyst-strategic-review",
+        "y": 2111,
+        "hidden": false
+      },
+      {
+        "text": "Read the case account ↗",
+        "href": "/cases/policy-analyst-strategic-review",
+        "y": 2392,
+        "hidden": false
+      },
+      {
+        "text": "Cookstove adoption.",
+        "href": "/work/#research",
+        "y": 2111,
+        "hidden": false
+      },
+      {
+        "text": "Examine the research ↗",
+        "href": "/work/#research",
+        "y": 2378,
+        "hidden": false
+      },
+      {
+        "text": "Explore strategic decision support ↗",
+        "href": "/services/#strategic-decision-design",
+        "y": 3666,
+        "hidden": false
+      },
+      {
+        "text": "Explore behavioural design support ↗",
+        "href": "/services/#behavioural-design",
+        "y": 3666,
+        "hidden": false
+      },
+      {
+        "text": "Explore Human–AI decision support ↗",
+        "href": "/services/#human-ai-decision-design",
+        "y": 3666,
+        "hidden": false
+      },
+      {
+        "text": "Explore how we help ↗",
+        "href": "/services/",
+        "y": 6782,
+        "hidden": false
+      },
+      {
+        "text": "Compare the formats ↗",
+        "href": "/learning/",
+        "y": 7072,
+        "hidden": false
+      },
+      {
+        "text": "A live decision. A working session.",
+        "href": "/workshops",
+        "y": 7508,
+        "hidden": false
+      },
+      {
+        "text": "Explore decision workshops ↗",
+        "href": "/workshops",
+        "y": 7706,
+        "hidden": false
+      },
+      {
+        "text": "Strategic Design Leadership in the Age of AI.",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 7826,
+        "hidden": false
+      },
+      {
+        "text": "Explore the five-day masterclass ↗",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 8025,
+        "hidden": false
+      },
+      {
+        "text": "Should We Invest in Solar?",
+        "href": "/courses",
+        "y": 8145,
+        "hidden": false
+      },
+      {
+        "text": "Explore the solar learning case ↗",
+        "href": "/courses",
+        "y": 8297,
+        "hidden": false
+      },
+      {
+        "text": "Continue to thinking ↓",
+        "href": "#thinking",
+        "y": 8526,
+        "hidden": false
+      },
+      {
+        "text": "Explore all thinking ↗",
+        "href": "/thinking/",
+        "y": 10239,
+        "hidden": false
+      },
+      {
+        "text": "Explore the map ↗",
+        "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+        "y": 10646,
+        "hidden": false
+      },
+      {
+        "text": "EssayThe Laboratory Fallacy.When a persuasive model meets the conditions of real work.↗",
+        "href": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+        "y": 11318,
+        "hidden": false
+      },
+      {
+        "text": "Let’s talk",
+        "href": "/contact/?source=%2F",
+        "y": 12145,
+        "hidden": false
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Questions & outcomes",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "Questions & outcomes",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "Questions & outcomes",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "01",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "02",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "03",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "←",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "→",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Reset choices ↺",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "01 / Decision +AnothermarketOpen",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "02 / Decision +CloserrelationshipsOpen",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "03 / Decision +ReliableoperationsOpen",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "04 / Decision +AI in theworkflowOpen",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Read the worked example and its trade-offs",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "Open an example decision record",
+        "tag": "SUMMARY",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "path": "/services/",
+    "status": 200,
+    "title": "How we help | The Spotted Ape",
+    "height": 5622,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Start withthe decision.",
+        "y": 248
+      },
+      {
+        "text": "Strategic Decision Design.",
+        "y": 1350
+      },
+      {
+        "text": "Behavioural Design.",
+        "y": 2404
+      },
+      {
+        "text": "Human–AI Decision Design.",
+        "y": 3378
+      },
+      {
+        "text": "The questioncomes first.",
+        "y": 4302
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Find your starting point ↓",
+        "href": "#situations",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "Discuss your question ↗",
+        "href": "/contact/",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "01 / Strategic Decision DesignSeveral priorities. One commitment.↗",
+        "href": "/services/#strategic-decision-design",
+        "y": 748,
+        "hidden": false
+      },
+      {
+        "text": "02 / Behavioural DesignAgreement has not become action.↗",
+        "href": "/services/#behavioural-design",
+        "y": 860,
+        "hidden": false
+      },
+      {
+        "text": "03 / Human–AI Decision DesignAI is entering consequential work.↗",
+        "href": "/services/#human-ai-decision-design",
+        "y": 972,
+        "hidden": false
+      },
+      {
+        "text": "Discuss a strategic decision ↗",
+        "href": "/contact/?interest=strategic-decision&source=%2Fservices%2F",
+        "y": 1832,
+        "hidden": false
+      },
+      {
+        "text": "Read the policy-analysis case account ↗",
+        "href": "/cases/policy-analyst-strategic-review",
+        "y": 1994,
+        "hidden": false
+      },
+      {
+        "text": "Discuss a behavioural question ↗",
+        "href": "/contact/?interest=behavioural-design&source=%2Fservices%2F",
+        "y": 2875,
+        "hidden": false
+      },
+      {
+        "text": "Examine the cookstove research ↗",
+        "href": "/work/#research",
+        "y": 3008,
+        "hidden": false
+      },
+      {
+        "text": "Discuss decision authority ↗",
+        "href": "/contact/?interest=human-ai&source=%2Fservices%2F",
+        "y": 3859,
+        "hidden": false
+      },
+      {
+        "text": "Explore a map of strategic choices ↗",
+        "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+        "y": 4022,
+        "hidden": false
+      },
+      {
+        "text": "Explore decision workshops ↗",
+        "href": "/workshops",
+        "y": 4436,
+        "hidden": false
+      },
+      {
+        "text": "Workshops & learning ↗",
+        "href": "/learning/",
+        "y": 4436,
+        "hidden": false
+      },
+      {
+        "text": "Meet the practitioner ↗",
+        "href": "/about#section-05",
+        "y": 4520,
+        "hidden": false
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "path": "/learning/",
+    "status": 200,
+    "title": "Workshops & Learning | The Spotted Ape",
+    "height": 4688,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Learn bydeciding.",
+        "y": 248
+      },
+      {
+        "text": "Start witha real question.",
+        "y": 2839
+      },
+      {
+        "text": "Bring thedecision.",
+        "y": 3381
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Custom workshops ↗",
+        "href": "/workshops",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "Executive masterclass ↗",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "Solar learning case ↗",
+        "href": "/courses",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "A live decision. A working session.",
+        "href": "/workshops",
+        "y": 807,
+        "hidden": false
+      },
+      {
+        "text": "Explore decision workshops ↗",
+        "href": "/workshops",
+        "y": 1234,
+        "hidden": false
+      },
+      {
+        "text": "Strategic Design Leadership in the Age of AI.",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 1402,
+        "hidden": false
+      },
+      {
+        "text": "Explore the five-day masterclass ↗",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 1922,
+        "hidden": false
+      },
+      {
+        "text": "Should We Invest in Solar?",
+        "href": "/courses",
+        "y": 2090,
+        "hidden": false
+      },
+      {
+        "text": "Explore the solar learning case ↗",
+        "href": "/courses",
+        "y": 2456,
+        "hidden": false
+      },
+      {
+        "text": "Open the learning case ↗",
+        "href": "https://thespottedape.com/Courses/solar-investment/learn/",
+        "y": 3005,
+        "hidden": false
+      },
+      {
+        "text": "Discuss team learning ↗",
+        "href": "/contact/?interest=workshop&audience=team&source=%2Flearning%2F",
+        "y": 3473,
+        "hidden": false
+      },
+      {
+        "text": "Explore how we help ↗",
+        "href": "/services/",
+        "y": 3477,
+        "hidden": false
+      },
+      {
+        "text": "Ask about attendance options ↗",
+        "href": "/contact/?interest=masterclass&audience=individual&source=%2Flearning%2F",
+        "y": 3557,
+        "hidden": false
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "path": "/workshops/",
+    "status": 200,
+    "title": "Strategic Decision Workshops | The Spotted Ape",
+    "height": 7925,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "From competingperspectives tocollective decisions.",
+        "y": 248
+      },
+      {
+        "text": "Make thereasoning visible.",
+        "y": 1437
+      },
+      {
+        "text": "What needsresolving?",
+        "y": 2831
+      },
+      {
+        "text": "Designed aroundthe decision.",
+        "y": 4304
+      },
+      {
+        "text": "Examine thework behind it.",
+        "y": 4827
+      },
+      {
+        "text": "Five days.One coherent direction.",
+        "y": 5350
+      },
+      {
+        "text": "What needs deciding?",
+        "y": 5999
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Workshops & learning",
+        "href": "/learning/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Discuss a workshop ↗",
+        "href": "/contact/?interest=workshop&source=%2Fworkshops",
+        "y": 733,
+        "hidden": false
+      },
+      {
+        "text": "All workshops & learning ↗",
+        "href": "/learning/",
+        "y": 737,
+        "hidden": false
+      },
+      {
+        "text": "How it works ↓",
+        "href": "#section-02",
+        "y": 829,
+        "hidden": false
+      },
+      {
+        "text": "Situations & questions ↓",
+        "href": "#section-04",
+        "y": 829,
+        "hidden": false
+      },
+      {
+        "text": "Five-day executive masterclass ↗",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 829,
+        "hidden": false
+      },
+      {
+        "text": "Workshop enquiry form ↓",
+        "href": "#book",
+        "y": 829,
+        "hidden": false
+      },
+      {
+        "text": "Work & research ↗",
+        "href": "/work/",
+        "y": 4909,
+        "hidden": false
+      },
+      {
+        "text": "Meet the practitioner ↗",
+        "href": "/about#section-05",
+        "y": 4909,
+        "hidden": false
+      },
+      {
+        "text": "Explore the five-day masterclass ↗",
+        "href": "/workshops/strategic-design-leadership/",
+        "y": 5510,
+        "hidden": false
+      },
+      {
+        "text": "hello@thespottedape.com ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 6383,
+        "hidden": false
+      },
+      {
+        "text": "Change the subject",
+        "href": "#inquiry-engagement",
+        "y": 6090,
+        "hidden": false
+      },
+      {
+        "text": "Back to the offering",
+        "href": "/workshops",
+        "y": 6090,
+        "hidden": false
+      },
+      {
+        "text": "Privacy policy",
+        "href": "/privacy",
+        "y": 6827,
+        "hidden": false
+      },
+      {
+        "text": "Send your enquiry by email ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 0,
+        "hidden": true
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Send enquiry ↗",
+        "tag": "BUTTON",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "path": "/workshops/strategic-design-leadership/",
+    "status": 200,
+    "title": "Strategic Design Leadership in the Age of AI | The Spotted Ape",
+    "height": 4685,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Strategic DesignLeadership inthe Age of AI",
+        "y": 248
+      },
+      {
+        "text": "Five decisions.One formation.",
+        "y": 1340
+      },
+      {
+        "text": "A day.Or a direction.",
+        "y": 2712
+      },
+      {
+        "text": "Bring a consequentialstrategic question.",
+        "y": 3335
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Workshops & learning",
+        "href": "/learning/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Discuss the programme ↗",
+        "href": "/contact/?interest=masterclass&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 733,
+        "hidden": false
+      },
+      {
+        "text": "Explore the five days ↓",
+        "href": "#programme",
+        "y": 737,
+        "hidden": false
+      },
+      {
+        "text": "Discuss day 01 ↗",
+        "href": "/contact/?interest=masterclass&day=explorer&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss day 02 ↗",
+        "href": "/contact/?interest=masterclass&day=practitioner&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss day 03 ↗",
+        "href": "/contact/?interest=masterclass&day=integrator&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss day 04 ↗",
+        "href": "/contact/?interest=masterclass&day=architect&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss day 05 ↗",
+        "href": "/contact/?interest=masterclass&day=steward&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Meet the practitioner ↗",
+        "href": "/about#section-05",
+        "y": 2971,
+        "hidden": false
+      },
+      {
+        "text": "Examine work & research ↗",
+        "href": "/work/",
+        "y": 2997,
+        "hidden": false
+      },
+      {
+        "text": "Discuss the programme ↗",
+        "href": "/contact/?interest=masterclass&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 2972,
+        "hidden": false
+      },
+      {
+        "text": "Ask about attendance options ↗",
+        "href": "/contact/?interest=masterclass&audience=individual&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 3049,
+        "hidden": false
+      },
+      {
+        "text": "All workshops & learning ↗",
+        "href": "/learning/",
+        "y": 2997,
+        "hidden": false
+      },
+      {
+        "text": "Discuss the masterclass ↗",
+        "href": "/contact/?interest=masterclass&source=%2Fworkshops%2Fstrategic-design-leadership%2F",
+        "y": 3548,
+        "hidden": false
+      }
+    ],
+    "buttons": [
+      {
+        "text": "01ExplorerE",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "02PractitionerP",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "03IntegratorI",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "04ArchitectA",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "05StewardS",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 01 EExplorerWhat does success mean for this organisation?Explore day",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 02 PPractitionerWhy will customers choose us over alternatives?Explore day",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 03 IIntegratorWhat must we be able to do exceptionally well?Explore day",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 04 AArchitectWhere will we compete—and where will we not?Explore day",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 05 SStewardHow will we govern decisions and sustain advantage?Explore day",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Day 01 / ExplorerWhat does success mean for this organisation?",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Back to the five-day formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Return to the formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 02 →Practitioner",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 02 / PractitionerWhy will customers choose us over alternatives?",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Back to the five-day formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Return to the formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "← Day 01Explorer",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 03 →Integrator",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 03 / IntegratorWhat must the organisation be able to do exceptionally well?",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Back to the five-day formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Return to the formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "← Day 02Practitioner",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 04 →Architect",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 04 / ArchitectWhere will we compete—and where will we not?",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Back to the five-day formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Return to the formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "← Day 03Integrator",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 05 →Steward",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Day 05 / StewardHow will we govern decisions and sustain advantage?",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Back to the five-day formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Return to the formation ↑",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "← Day 04Architect",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "All five days ↑Return to the formation",
+        "tag": "BUTTON",
+        "hidden": true
+      },
+      {
+        "text": "Can a working day stand alone?",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "How is AI used?",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "How are delivery and attendance arranged?",
+        "tag": "SUMMARY",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "path": "/courses/",
+    "status": 200,
+    "title": "Applied Strategy & Digital Acumen Courses | The Spotted Ape",
+    "height": 11317,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Should we investin solar?",
+        "y": 248
+      },
+      {
+        "text": "The evidence.Your judgement.",
+        "y": 1027
+      },
+      {
+        "text": "For people who must defend their decisions.",
+        "y": 2051
+      },
+      {
+        "text": "Technical output.Human judgement.",
+        "y": 3653
+      },
+      {
+        "text": "One case.One decision.",
+        "y": 5104
+      },
+      {
+        "text": "Open the model.Question it.",
+        "y": 7562
+      },
+      {
+        "text": "Discuss a team session.",
+        "y": 9276
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Workshops & learning",
+        "href": "/learning/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Open the learning case ↗",
+        "href": "https://thespottedape.com/Courses/solar-investment/learn/",
+        "y": 599,
+        "hidden": false
+      },
+      {
+        "text": "Discuss a team session ↗",
+        "href": "/contact/?interest=course&source=%2Fcourses",
+        "y": 603,
+        "hidden": false
+      },
+      {
+        "text": "Explore the curriculum ↓",
+        "href": "#syllabus",
+        "y": 741,
+        "hidden": false
+      },
+      {
+        "text": "Workbook & resources ↓",
+        "href": "#outcomes",
+        "y": 741,
+        "hidden": false
+      },
+      {
+        "text": "All workshops & learning ↗",
+        "href": "/learning/",
+        "y": 741,
+        "hidden": false
+      },
+      {
+        "text": "Inspect the case ↓",
+        "href": "#syllabus",
+        "y": 1364,
+        "hidden": false
+      },
+      {
+        "text": "Explore decision workshops ↗",
+        "href": "/workshops",
+        "y": 3251,
+        "hidden": false
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/understand.html",
+        "y": 7079,
+        "hidden": false
+      },
+      {
+        "text": "Discuss module 01 for your team↗",
+        "href": "/contact/?interest=course&module=01&source=%2Fcourses",
+        "y": 7075,
+        "hidden": false
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/understand.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=01&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/spreadsheet-essentials.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=02&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/build.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=03&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/test.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=04&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/decide.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=05&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open this learning module ↗",
+        "href": "https://marcelmare.com/dla-course-2/reflect.html",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Discuss this module for your team ↗",
+        "href": "/contact/?interest=course&module=06&source=%2Fcourses",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Open the learning case ↗",
+        "href": "https://thespottedape.com/Courses/solar-investment/learn/",
+        "y": 8387,
+        "hidden": false
+      },
+      {
+        "text": "Alternative course host: marcelmare.com ↗",
+        "href": "https://marcelmare.com/dla-course-2/",
+        "y": 8462,
+        "hidden": false
+      },
+      {
+        "text": "01 .XLSXStudent Workbook (V8).Five linked sheets, including a 20-year NPV model.Download Student Workbook ↓↗",
+        "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Student_Workbook_V8.xlsx",
+        "y": 7919,
+        "hidden": false
+      },
+      {
+        "text": "02 .PDFCape Manufacturing Case Brief.Supplier proposals, tariff assumptions and the Financial Director’s briefing.Open Case Brief PDF ↗↗",
+        "href": "https://marcelmare.com/dla-course-2/downloads/Cape_Manufacturing_Case_Brief.pdf",
+        "y": 8079,
+        "hidden": false
+      },
+      {
+        "text": "03 .PDFExcel & Google Sheets Quick Reference.Cell addresses, cross-sheet formulas, reference locking and currency formatting.Open Quick Reference PDF ↗↗",
+        "href": "https://marcelmare.com/dla-course-2/downloads/Spreadsheet_Quick_Reference_Excel_Google_Sheets.pdf",
+        "y": 8264,
+        "hidden": false
+      },
+      {
+        "text": "04 .PDFFormula Troubleshooting Diagnostic.Check shifted references, percentages and reversed ratios.Open Diagnostic Card PDF ↗↗",
+        "href": "https://marcelmare.com/dla-course-2/downloads/Formula_Troubleshooting_Card.pdf",
+        "y": 8449,
+        "hidden": false
+      },
+      {
+        "text": "05 .XLSXCompleted Reference Workbook (V8).Compare your formulas and sensitivity analysis with the reference solution.Download Reference Model ↓↗",
+        "href": "https://marcelmare.com/dla-course-2/downloads/SU_DLA_Solar_Completed_Reference_Workbook_V8.xlsx",
+        "y": 8609,
+        "hidden": false
+      },
+      {
+        "text": "06 RATIONALE5-Minute Reviewer Rationale.Learning design, assessment checkpoints and competence criteria.Read Reviewer Rationale ↗↗",
+        "href": "https://marcelmare.com/dla-course-2/reviewer-rationale.html",
+        "y": 8794,
+        "hidden": false
+      },
+      {
+        "text": "hello@thespottedape.com ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 9660,
+        "hidden": false
+      },
+      {
+        "text": "Change the subject",
+        "href": "#inquiry-engagement",
+        "y": 9367,
+        "hidden": false
+      },
+      {
+        "text": "Back to the learning case",
+        "href": "/courses",
+        "y": 9367,
+        "hidden": false
+      },
+      {
+        "text": "Privacy policy",
+        "href": "/privacy",
+        "y": 10219,
+        "hidden": false
+      },
+      {
+        "text": "Send your enquiry by email ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 0,
+        "hidden": true
+      }
+    ],
+    "buttons": [
+      {
+        "text": "01Understand.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "02Spreadsheet Essentials.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "03Build.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "04Test.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "05Decide.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "06Reflect.↗",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Analytical & spreadsheet mechanics",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "Behavioural & judgement shift",
+        "tag": "SUMMARY",
+        "hidden": false
+      },
+      {
+        "text": "01 / Understand",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "02 / Spreadsheet Essentials",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "03 / Build",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "04 / Test",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "05 / Decide",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "06 / Reflect",
+        "tag": "SUMMARY",
+        "hidden": true
+      },
+      {
+        "text": "Send enquiry ↗",
+        "tag": "BUTTON",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "path": "/work/",
+    "status": 200,
+    "title": "Work & Research | The Spotted Ape",
+    "height": 4424,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "The work.The evidence.",
+        "y": 248
+      },
+      {
+        "text": "When more thinking makes everything worse.",
+        "y": 953
+      },
+      {
+        "text": "Begin with whatpeople actually do.",
+        "y": 1779
+      },
+      {
+        "text": "From evidenceto a question.",
+        "y": 3180
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Policy-analysis case ↓",
+        "href": "#case-account",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "Behavioural research ↓",
+        "href": "#research",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "Meet the practitioner ↗",
+        "href": "/about#section-05",
+        "y": 643,
+        "hidden": false
+      },
+      {
+        "text": "When more thinking makes everything worse.",
+        "href": "/cases/policy-analyst-strategic-review",
+        "y": 950,
+        "hidden": false
+      },
+      {
+        "text": "Read the case account ↗",
+        "href": "/cases/policy-analyst-strategic-review",
+        "y": 1294,
+        "hidden": false
+      },
+      {
+        "text": "doi:10.3390/su15065328",
+        "href": "https://doi.org/10.3390/su15065328",
+        "y": 2688,
+        "hidden": false
+      },
+      {
+        "text": "Research & references ↗",
+        "href": "https://thespottedape.com/research/index.html",
+        "y": 2707,
+        "hidden": false
+      },
+      {
+        "text": "Discuss a behavioural question ↗",
+        "href": "/contact/?interest=behavioural-design&source=%2Fwork%2F",
+        "y": 2874,
+        "hidden": false
+      },
+      {
+        "text": "How we help ↗",
+        "href": "/services/",
+        "y": 3284,
+        "hidden": false
+      },
+      {
+        "text": "Discuss your question ↗",
+        "href": "/contact/?source=%2Fwork%2F",
+        "y": 3280,
+        "hidden": false
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "path": "/thinking/",
+    "status": 200,
+    "title": "Strategic Thinking — Decision Maps & Essays | The Spotted Ape",
+    "height": 3159,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Thinking.",
+        "y": 248
+      },
+      {
+        "text": "The Strategy Illusion.",
+        "y": 842
+      },
+      {
+        "text": "The Laboratory Fallacy.",
+        "y": 1885
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "Explore the map & café story ↗",
+        "href": "/thinking/strategic-decision-maps/strategy-illusion/",
+        "y": 1114,
+        "hidden": false
+      },
+      {
+        "text": "Essay / ExternalThe Laboratory Fallacy.When a persuasive model meets the conditions of real work.↗",
+        "href": "https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html",
+        "y": 1836,
+        "hidden": false
+      }
+    ],
+    "buttons": []
+  },
+  {
+    "path": "/about/",
+    "status": 200,
+    "title": "About The Spotted Ape — Strategic Decisions & Behavioural Design",
+    "height": 5185,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "Everyone is moving.Are we movingtogether?",
+        "y": 248
+      },
+      {
+        "text": "Movement needsdirection.",
+        "y": 1150
+      },
+      {
+        "text": "How we work.",
+        "y": 2123
+      },
+      {
+        "text": "MarcelMaré.",
+        "y": 3551
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "How we work ↓",
+        "href": "#section-02",
+        "y": 841,
+        "hidden": false
+      },
+      {
+        "text": "The practitioner ↓",
+        "href": "#section-05",
+        "y": 841,
+        "hidden": false
+      },
+      {
+        "text": "Professional biography ↗",
+        "href": "https://marcelmare.com",
+        "y": 3953,
+        "hidden": false
+      },
+      {
+        "text": "Let’s talk",
+        "href": "/contact/?source=%2Fabout",
+        "y": 4048,
+        "hidden": false
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Chaos",
+        "tag": "BUTTON",
+        "hidden": false
+      },
+      {
+        "text": "Formation",
+        "tag": "BUTTON",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "path": "/contact/",
+    "status": 200,
+    "title": "Let’s talk | The Spotted Ape",
+    "height": 2047,
+    "width": 1440,
+    "overflow": false,
+    "headings": [
+      {
+        "text": "What needs deciding?",
+        "y": 276
+      }
+    ],
+    "links": [
+      {
+        "text": "Home",
+        "href": "/",
+        "y": 140,
+        "hidden": false
+      },
+      {
+        "text": "hello@thespottedape.com ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 660,
+        "hidden": false
+      },
+      {
+        "text": "Change the subject",
+        "href": "#inquiry-engagement",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Back to the offering",
+        "href": "/services/",
+        "y": 0,
+        "hidden": true
+      },
+      {
+        "text": "Privacy policy",
+        "href": "/privacy",
+        "y": 949,
+        "hidden": false
+      },
+      {
+        "text": "Send your enquiry by email ↗",
+        "href": "mailto:hello@thespottedape.com",
+        "y": 0,
+        "hidden": true
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Send enquiry ↗",
+        "tag": "BUTTON",
+        "hidden": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,420 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "The Spotted Ape home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: THE SPOTTED APE
+      - navigation "Main navigation" [ref=e7]:
+        - link "How we help" [ref=e8] [cursor=pointer]:
+          - /url: /services/
+        - link "Workshops & learning" [ref=e9] [cursor=pointer]:
+          - /url: /learning/
+        - link "Work & research" [ref=e10] [cursor=pointer]:
+          - /url: /work/
+        - link "Thinking" [ref=e11] [cursor=pointer]:
+          - /url: /thinking/
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "Let’s talk" [ref=e13] [cursor=pointer]:
+          - /url: /contact/
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Strategic decision & behavioural design
+        - paragraph [ref=e19]: Cape Town / Independent practice
+      - heading "More possibilities. Harder choices." [level=1] [ref=e20]:
+        - generic [ref=e21]: More possibilities.
+        - generic [ref=e22]: Harder choices.
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: We help leaders make consequential choices when familiar assumptions no longer hold.
+          - generic [ref=e26]:
+            - link "Explore how we can help" [ref=e27] [cursor=pointer]:
+              - /url: /services/
+            - link "Workshops & learning" [ref=e28] [cursor=pointer]:
+              - /url: /learning/
+              - text: Workshops & learning
+              - generic [aria-hidden] [ref=e29]: ↗
+        - complementary [ref=e30]:
+          - paragraph [ref=e31]:
+            - link "Find your formation." [ref=e32] [cursor=pointer]:
+              - /url: "#choice"
+              - text: Find yourformation.
+          - generic [ref=e33]: Make a choice.Own its consequences.
+    - region "Find your starting point" [ref=e34]:
+      - paragraph [ref=e35]: 01 / Start with your situation
+      - navigation "Start with your situation" [ref=e36]:
+        - link "01 / Strategic Decision Design Several priorities. One commitment." [ref=e37] [cursor=pointer]:
+          - /url: /services/#strategic-decision-design
+          - generic [ref=e38]: 01 / Strategic Decision Design
+          - generic [ref=e39]: Several priorities. One commitment.
+          - generic [aria-hidden] [ref=e40]: ↗
+        - link "02 / Behavioural Design Agreement has not become action." [ref=e41] [cursor=pointer]:
+          - /url: /services/#behavioural-design
+          - generic [ref=e42]: 02 / Behavioural Design
+          - generic [ref=e43]: Agreement has not become action.
+          - generic [aria-hidden] [ref=e44]: ↗
+        - link "03 / Human–AI Decision Design AI is entering consequential work." [ref=e45] [cursor=pointer]:
+          - /url: /services/#human-ai-decision-design
+          - generic [ref=e46]: 03 / Human–AI Decision Design
+          - generic [ref=e47]: AI is entering consequential work.
+          - generic [aria-hidden] [ref=e48]: ↗
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: 02 / Selected evidence
+        - link "All work & research ↗" [ref=e53] [cursor=pointer]:
+          - /url: /work/
+      - heading "Observe before prescribing." [level=2] [ref=e54]: Observe beforeprescribing.
+      - generic [ref=e55]:
+        - article [ref=e56]:
+          - paragraph [ref=e57]: Case account / Policy analysis
+          - heading [level=3] [ref=e58]:
+            - link "When more thinking makes everything worse." [ref=e59] [cursor=pointer]:
+              - /url: /cases/policy-analyst-strategic-review
+          - paragraph [ref=e60]: A strategic report had stalled. The work returned to the argument it needed to make.
+          - paragraph [ref=e61]:
+            - generic [ref=e62]: Reported outcome
+            - text: Final draft in 9 days.
+          - link "Read the case account" [ref=e63] [cursor=pointer]:
+            - /url: /cases/policy-analyst-strategic-review
+            - text: Read the case account
+            - generic [aria-hidden] [ref=e64]: ↗
+        - article [ref=e65]:
+          - paragraph [ref=e66]: Behavioural research / South Africa
+          - heading [level=3] [ref=e67]:
+            - link "Cookstove adoption." [ref=e68] [cursor=pointer]:
+              - /url: /work/#research
+          - paragraph [ref=e69]: Investigating motivations and everyday cooking practices alongside the technology itself.
+          - paragraph [ref=e70]: The pilot reported increased LPG and biomass stove ownership, but no significant reduction in paraffin stove ownership.
+          - link "Examine the research" [ref=e71] [cursor=pointer]:
+            - /url: /work/#research
+            - text: Examine the research
+            - generic [aria-hidden] [ref=e72]: ↗
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: 03 / The practice
+          - paragraph [ref=e77]: Choices. People. Consequences.
+        - heading "Decide. Make it happen." [level=2] [ref=e78]: Decide.Make it happen.
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Swipe or scroll sideways to explore the three practice areas. Use the navigation buttons, or Left and Right arrow keys when this region is focused. Open Questions and outcomes for more detail.
+        - region "Areas of practice" [ref=e83]:
+          - generic [ref=e84]:
+            - article [ref=e85]:
+              - generic [ref=e86]:
+                - paragraph [ref=e87]: 01 / The practice
+                - heading "Strategic Decision Design." [level=3] [ref=e88]:
+                  - generic [ref=e89]: Strategic
+                  - generic [ref=e90]:
+                    - generic [ref=e91]: Decision
+                    - generic [ref=e92]: Design.
+                - paragraph [ref=e93]:
+                  - generic [ref=e94]: Resolve competing priorities.
+                  - generic [ref=e95]: Make the trade-offs explicit.
+                - link "Explore strategic decision support" [ref=e96] [cursor=pointer]:
+                  - /url: /services/#strategic-decision-design
+                  - text: Explore strategic decision support
+                  - generic [aria-hidden] [ref=e97]: ↗
+              - group:
+                - generic "Questions & outcomes" [ref=e98] [cursor=pointer]
+            - article [ref=e102]:
+              - generic [ref=e103]:
+                - paragraph [ref=e104]: 02 / The practice
+                - heading "Behavioural Design." [level=3] [ref=e105]:
+                  - generic [ref=e106]: Behavioural
+                  - generic [ref=e107]: Design.
+                - paragraph [ref=e109]:
+                  - generic [ref=e110]: Begin with what people actually do.
+                - link "Explore behavioural design support" [ref=e111] [cursor=pointer]:
+                  - /url: /services/#behavioural-design
+                  - text: Explore behavioural design support
+                  - generic [aria-hidden] [ref=e112]: ↗
+              - group:
+                - generic "Questions & outcomes" [ref=e113] [cursor=pointer]
+            - article [ref=e117]:
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: 03 / The practice
+                - heading "Human–AI Decision Design." [level=3] [ref=e120]:
+                  - generic [ref=e121]: Human–AI
+                  - generic [ref=e122]:
+                    - generic [ref=e123]: Decision
+                    - generic [ref=e124]: Design.
+                - paragraph [ref=e125]:
+                  - generic [ref=e126]: Define where people decide,
+                  - generic [ref=e127]: review and remain accountable.
+                - link "Explore Human–AI decision support" [ref=e128] [cursor=pointer]:
+                  - /url: /services/#human-ai-decision-design
+                  - text: Explore Human–AI decision support
+                  - generic [aria-hidden] [ref=e129]: ↗
+              - group:
+                - generic "Questions & outcomes" [ref=e130] [cursor=pointer]
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - paragraph [ref=e136]: 01 / 03
+            - paragraph [ref=e137]: Swipe or use the arrows
+          - generic "Choose an area of practice" [ref=e138]:
+            - button "Show Strategic Decision Design." [ref=e139] [cursor=pointer]: "01"
+            - button "Show Behavioural Design." [ref=e140] [cursor=pointer]: "02"
+            - button "Show Human–AI Decision Design." [ref=e141] [cursor=pointer]: "03"
+          - generic [ref=e142]:
+            - button "Previous practice card" [disabled] [ref=e143]:
+              - generic [aria-hidden] [ref=e144]: ←
+            - button "Next practice card" [ref=e145] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e146]: →
+          - status [ref=e147]: "Practice 1 of 3: Strategic Decision Design."
+      - generic [ref=e149]:
+        - paragraph [ref=e150]: Strategic decisions, behavioural scienceand human judgement. Working together.
+        - link "Explore how we help" [ref=e151] [cursor=pointer]:
+          - /url: /services/
+          - text: Explore how we help
+          - generic [aria-hidden] [ref=e152]: ↗
+    - generic [ref=e154]:
+      - generic [ref=e155]:
+        - paragraph [ref=e156]: 04 / Workshops & learning
+        - link "Compare the formats ↗" [ref=e157] [cursor=pointer]:
+          - /url: /learning/
+      - heading "A question. A way to learn." [level=2] [ref=e158]: A question.A way to learn.
+      - generic [ref=e160]:
+        - article [ref=e161]:
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: 01 / Custom workshop
+            - paragraph [ref=e164]: Discuss a team engagement
+          - generic [ref=e165]:
+            - heading [level=3] [ref=e166]:
+              - link "A live decision. A working session." [ref=e167] [cursor=pointer]:
+                - /url: /workshops
+            - paragraph [ref=e168]: Bring competing perspectives into the same conversation. Examine alternatives, assumptions and responsibility.
+            - link "Explore decision workshops" [ref=e169] [cursor=pointer]:
+              - /url: /workshops
+              - text: Explore decision workshops
+              - generic [aria-hidden] [ref=e170]: ↗
+        - article [ref=e171]:
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: 02 / Executive programme
+            - paragraph [ref=e174]: Discuss delivery and attendance options
+          - generic [ref=e175]:
+            - heading [level=3] [ref=e176]:
+              - link "Strategic Design Leadership in the Age of AI." [ref=e177] [cursor=pointer]:
+                - /url: /workshops/strategic-design-leadership/
+            - paragraph [ref=e178]: Five strategic questions, from what success means to how decisions are governed. Explore a standalone day or the connected programme.
+            - link "Explore the five-day masterclass" [ref=e179] [cursor=pointer]:
+              - /url: /workshops/strategic-design-leadership/
+              - text: Explore the five-day masterclass
+              - generic [aria-hidden] [ref=e180]: ↗
+        - article [ref=e181]:
+          - generic [ref=e182]:
+            - paragraph [ref=e183]: 03 / Self-paced learning
+            - paragraph [ref=e184]: Open the material now / Team sessions by enquiry
+          - generic [ref=e185]:
+            - heading [level=3] [ref=e186]:
+              - link "Should We Invest in Solar?" [ref=e187] [cursor=pointer]:
+                - /url: /courses
+            - paragraph [ref=e188]: Compare three proposals, question the assumptions and defend a recommendation in the fictional Cape Manufacturing case.
+            - link "Explore the solar learning case" [ref=e189] [cursor=pointer]:
+              - /url: /courses
+              - text: Explore the solar learning case
+              - generic [aria-hidden] [ref=e190]: ↗
+    - generic [ref=e191]:
+      - paragraph [ref=e192]: 05 / Try a decision exercise
+      - link "Continue to thinking ↓" [ref=e193] [cursor=pointer]:
+        - /url: "#thinking"
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - paragraph [ref=e197]: Strategic Decisions
+        - generic [ref=e198]:
+          - heading "Find formation." [level=2] [ref=e199]
+          - paragraph [ref=e200]: Choose what to back in the example below.What does each decision require? What will you defer?
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - heading "Back up to two priorities." [level=3] [ref=e203]
+          - paragraph [ref=e204]: Hover over each priority to explore. Click or tap to back a decision. Select it again to clear it.
+        - button "Reset choices" [ref=e205] [cursor=pointer]: Reset choices ↺
+        - status [ref=e206]: 0 of 2 commitments backed. Choose a shape to back a priority.
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - paragraph [ref=e209]: A field of commitments / fictional organisation
+          - group "Strategic priorities" [ref=e210]:
+            - generic [aria-hidden]: Customer evidence
+            - generic [aria-hidden]: Service capacity
+            - generic [aria-hidden]: Time to learn
+            - generic [aria-hidden]: Review rights
+            - button "Enter another market" [ref=e211] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e212]:
+                - text: 01 / Decision
+                - generic [ref=e213]: +
+              - generic [ref=e214]:
+                - generic [ref=e215]: Another
+                - generic [ref=e216]: market
+              - generic [aria-hidden] [ref=e217]: Open
+            - button "Deepen customer relationships" [ref=e218] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e219]:
+                - text: 02 / Decision
+                - generic [ref=e220]: +
+              - generic [ref=e221]:
+                - generic [ref=e222]: Closer
+                - generic [ref=e223]: relationships
+              - generic [aria-hidden] [ref=e224]: Open
+            - button "Improve operational reliability" [ref=e225] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e226]:
+                - text: 03 / Decision
+                - generic [ref=e227]: +
+              - generic [ref=e228]:
+                - generic [ref=e229]: Reliable
+                - generic [ref=e230]: operations
+              - generic [aria-hidden] [ref=e231]: Open
+            - button "Introduce AI into a workflow" [ref=e232] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e233]:
+                - text: 04 / Decision
+                - generic [ref=e234]: +
+              - generic [ref=e235]:
+                - generic [ref=e236]: AI in the
+                - generic [ref=e237]: workflow
+              - generic [aria-hidden] [ref=e238]: Open
+            - generic [ref=e239]:
+              - generic [ref=e240]: Capacity
+              - generic [ref=e241]: Finite / shared
+          - generic [ref=e242]:
+            - generic [ref=e243]: Yellow = backed · dashed = deferred
+            - generic [ref=e244]: Open questions remain.
+        - region "Choice details" [ref=e245]:
+          - paragraph [ref=e246]: The implications / your choice notes
+          - generic [ref=e248]:
+            - paragraph [ref=e249]: Explore / nothing selected
+            - heading "A choice creates obligations." [level=4] [ref=e250]
+            - paragraph [ref=e251]: Explore a shape to see what it needs. Back a priority to keep its information here.
+      - group [ref=e252]:
+        - generic "Read the worked example and its trade-offs" [ref=e253] [cursor=pointer]
+      - paragraph [ref=e254]: Fictional exercise with an illustrative two-commitment limit. It is not an assessment. No information is saved or sent.
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - paragraph [ref=e258]: 06 / Thinking & instruments
+        - link "Explore all thinking ↗" [ref=e259] [cursor=pointer]:
+          - /url: /thinking/
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - paragraph [ref=e262]: Strategic decision map
+          - heading "The Strategy Illusion." [level=3] [ref=e263]
+          - paragraph [ref=e264]: Are you following a strategy, or just a plan?
+          - paragraph [ref=e265]: Doing the work well does not make the choice right.
+          - link "Explore the map" [ref=e266] [cursor=pointer]:
+            - /url: /thinking/strategic-decision-maps/strategy-illusion/
+            - text: Explore the map
+            - generic [aria-hidden] [ref=e267]: ↗
+        - figure [ref=e269]:
+          - generic [ref=e270]:
+            - generic [aria-hidden] [ref=e271]:
+              - generic [ref=e272]: High
+              - generic [ref=e273]: Consistency of action
+              - generic [ref=e274]: Low
+            - table [ref=e276]:
+              - caption [ref=e277]: The Strategy Illusion. Clarity of choice increases from left to right.Consistency of action increases from bottom to top.
+              - rowgroup [ref=e281]:
+                - row [ref=e282]:
+                  - cell
+                  - columnheader "Low clarity of choice" [ref=e283]
+                  - columnheader "High clarity of choice" [ref=e284]
+              - rowgroup [ref=e285]:
+                - row [ref=e286]:
+                  - rowheader "High consistency of action" [ref=e287]
+                  - cell [ref=e288]:
+                    - strong [ref=e289]: The Efficient Treadmill
+                    - paragraph [ref=e290]: Unclear choices. Consistent action.
+                  - cell [ref=e291]:
+                    - strong [ref=e292]: Coherent Advantage
+                    - paragraph [ref=e293]: Clear choices. Consistent action.
+                - row [ref=e294]:
+                  - rowheader "Low consistency of action" [ref=e295]
+                  - cell [ref=e296]:
+                    - strong [ref=e297]: Strategic Drift
+                    - paragraph [ref=e298]: Unclear choices. Inconsistent action.
+                  - cell [ref=e299]:
+                    - strong [ref=e300]: Unrealised Strategy
+                    - paragraph [ref=e301]: Clear choices. Inconsistent action.
+            - generic [aria-hidden] [ref=e302]:
+              - generic [ref=e303]:
+                - generic [ref=e304]: Low
+                - generic [ref=e305]: High
+              - paragraph [ref=e306]: Clarity of choice
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - paragraph [ref=e309]: An instrument for the conversation
+          - heading "Make the reasoning visible." [level=3] [ref=e310]
+        - group [ref=e311]:
+          - generic "Open an example decision record" [ref=e312] [cursor=pointer]
+      - link "Essay The Laboratory Fallacy. When a persuasive model meets the conditions of real work." [ref=e313] [cursor=pointer]:
+        - /url: https://thespottedape.com/posts/substack/2026-02-14-the-laboratory-fallacy.html
+        - generic [ref=e314]: Essay
+        - generic [ref=e315]:
+          - heading "The Laboratory Fallacy." [level=3] [ref=e316]
+          - paragraph [ref=e317]: When a persuasive model meets the conditions of real work.
+        - generic [aria-hidden] [ref=e318]: ↗
+    - generic [ref=e320]:
+      - paragraph [ref=e321]: A consequential choice?
+      - heading "What needs deciding?" [level=2] [ref=e322]: What needsdeciding?
+      - generic [ref=e323]:
+        - paragraph [ref=e324]: Bring the alternatives, the assumptionsand the difficult questions.
+        - link "Let’s talk" [ref=e325] [cursor=pointer]:
+          - /url: /contact/?source=%2F
+  - contentinfo [ref=e326]:
+    - generic [ref=e327]:
+      - generic [ref=e328]:
+        - heading "Find your formation." [level=2] [ref=e329]: Find yourformation.
+        - link "Talk to The Spotted Ape" [ref=e330] [cursor=pointer]:
+          - /url: /contact/
+          - generic [aria-hidden] [ref=e331]: ↗
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - link "The Spotted Ape home" [ref=e334] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e335]: THE SPOTTED APE
+          - paragraph [ref=e336]: Independent strategic decisionand behavioural design practice.
+          - generic [ref=e337]:
+            - link "hello@thespottedape.com ↗" [ref=e338] [cursor=pointer]:
+              - /url: mailto:hello@thespottedape.com
+            - paragraph [ref=e339]: Cape Town, South Africa.Working with organisations in transition.
+        - navigation "Footer navigation" [ref=e340]:
+          - generic [ref=e341]:
+            - paragraph [ref=e342]: Get support
+            - link "How we help" [ref=e343] [cursor=pointer]:
+              - /url: /services/
+            - link "Strategic decisions" [ref=e344] [cursor=pointer]:
+              - /url: /services/#strategic-decision-design
+            - link "Behavioural design" [ref=e345] [cursor=pointer]:
+              - /url: /services/#behavioural-design
+            - link "Human–AI decisions" [ref=e346] [cursor=pointer]:
+              - /url: /services/#human-ai-decision-design
+          - generic [ref=e347]:
+            - paragraph [ref=e348]: Workshops & learning
+            - link "Custom workshops" [ref=e349] [cursor=pointer]:
+              - /url: /workshops
+            - link "Executive masterclass" [ref=e350] [cursor=pointer]:
+              - /url: /workshops/strategic-design-leadership/
+            - link "Solar learning case" [ref=e351] [cursor=pointer]:
+              - /url: /courses
+          - generic [ref=e352]:
+            - paragraph [ref=e353]: Evidence & thinking
+            - link "Work & research" [ref=e354] [cursor=pointer]:
+              - /url: /work/
+            - link "Research references ↗" [ref=e355] [cursor=pointer]:
+              - /url: https://thespottedape.com/research/index.html
+            - link "Thinking" [ref=e356] [cursor=pointer]:
+              - /url: /thinking/
+          - generic [ref=e357]:
+            - paragraph [ref=e358]: The practice
+            - link "About" [ref=e359] [cursor=pointer]:
+              - /url: /about
+            - link "Professional biography ↗" [ref=e360] [cursor=pointer]:
+              - /url: https://marcelmare.com
+            - link "Let’s talk" [ref=e361] [cursor=pointer]:
+              - /url: /contact/
+      - generic [ref=e362]:
+        - paragraph [ref=e363]: © 2026 The Spotted Ape (Pty) Ltd
+        - navigation "Legal" [ref=e364]:
+          - link "Privacy" [ref=e365] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e366] [cursor=pointer]:
+            - /url: /terms
+          - link "Back to top ↑" [ref=e367] [cursor=pointer]:
+            - /url: "#top"
