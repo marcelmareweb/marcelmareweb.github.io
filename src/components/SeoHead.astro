@@ -5,7 +5,7 @@ interface Props {
   canonicalURL?: string | URL;
   ogImage?: string | URL;
   schemaType?: string;
-  /** Keep a working page out of search results. */
+  /** Keep a working or error page out of search results; it then declares no canonical URL. */
   noindex?: boolean;
 }
 
@@ -46,14 +46,14 @@ const structuredData = {
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonical.href} />
+{!noindex && <link rel="canonical" href={canonical.href} />}
 {noindex && <meta name="robots" content="noindex,nofollow" />}
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Spotted Ape" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={canonical.href} />
+{!noindex && <meta property="og:url" content={canonical.href} />}
 {socialImage && <meta property="og:image" content={socialImage} />}
 {ogImage === '/og-card.png' && <><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="The Spotted Ape: More possibilities. Harder choices." /></>}
 
