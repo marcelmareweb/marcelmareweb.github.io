@@ -28,7 +28,7 @@ export const services = [
     problem: 'The campaign landed. The habit stayed.',
     question: 'What makes the old way easier than the new one?',
     description:
-      'People rarely resist a plan. They do what’s easier, more normal or more noticed. So we start where the behaviour happens, not where it was decided. Our cookstove research began with fresh bread, not a safety lecture.',
+      'People rarely resist a plan. They do what’s easier, more normal or more noticed. We start where the behaviour happens, not where it was decided. Our cookstove research began with fresh bread, not a safety lecture.',
     output: 'What actually gets in the way, and small changes worth testing.',
     work: [
       'Observe behaviour in its actual context.',
