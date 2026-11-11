@@ -15,6 +15,16 @@ uncertain: This was one session with a small group. It shows how people engaged 
 interest: human-ai
 service: human-ai-decision-design
 featured: false
+image:
+  src: /images/cases/creative-x-ai.jpg
+  width: 1000
+  height: 726
+  alt: 'Course title slide: “creative x ai” in large white type over swirling liquid and rock, with “Welcome to the course. This is where you learn to think and do like a creative.”, the QuiteFrankly and Breadbin Productions logos, and “Sponsored by the National Film & Video Foundation”.'
+  caption: The course’s title slide, AI for Impact Academy, lesson 02.
+  portrait:
+    src: /images/cases/creative-x-ai-portrait.jpg
+    width: 800
+    height: 1067
 ---
 
 One workshop session in which emerging creatives used AI tools on their own terms: identity first, then structured experiments, then work they could show.

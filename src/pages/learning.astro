@@ -59,7 +59,7 @@ const steps = [
         {creative && (
           <li>
             <Card layout="media" href={`/cases/${creative.slug}`} title={creative.title} text="Emerging creatives used AI on their own terms: identity first, then structured experiments, then work they could show." kind="Workshop" cue="Read." index={1}>
-              <div slot="media" class="type-media type-media--ink" aria-hidden="true"><p>{creative.question}</p></div>
+              {creative.image ? <img slot="media" class:list={['format-photo', !creative.image.portrait && 'format-photo--contain']} src={(creative.image.portrait ?? creative.image).src} width={(creative.image.portrait ?? creative.image).width} height={(creative.image.portrait ?? creative.image).height} loading="lazy" decoding="async" alt="" /> : <div slot="media" class="type-media type-media--ink" aria-hidden="true"><p>{creative.question}</p></div>}
             </Card>
           </li>
         )}
@@ -98,6 +98,7 @@ const steps = [
   .examples { margin-top: var(--space-sm); }
   .format-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
   .format-photo--right { object-position: 78% center; }
+  .format-photo--contain { object-fit: contain; background: var(--ink); }
   .type-media { display: flex; align-items: flex-end; height: 100%; padding: 24px; background: var(--surface); }
   .type-media--ink { background: var(--ink); color: var(--paper); }
   .type-media p { margin: 0; font-size: clamp(26px, 2.2vw, 40px); font-weight: 600; line-height: var(--leading-heading); letter-spacing: var(--tracking-heading); text-wrap: balance; }

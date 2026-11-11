@@ -51,6 +51,12 @@ const canonicalURL = new URL(`/cases/${data.slug}`, Astro.site ?? 'https://marce
 ) : (
 <>
 <p class="case-question">{data.question}</p>
+{data.image && (
+<figure class="case-figure">
+<img src={data.image.src} width={data.image.width} height={data.image.height} alt={data.image.alt} decoding="async" />
+<figcaption>{data.image.caption}</figcaption>
+</figure>
+)}
 <dl class="record" aria-label="The case in five parts">
 <div class="record-row"><dt>Evidence</dt><dd>{data.evidenceType}</dd></div>
 <div class="record-row"><dt>Role</dt><dd>{data.role}</dd></div>
@@ -94,6 +100,21 @@ document.querySelector('[data-print-brief]')?.addEventListener('click', () => wi
 }
 .scenario-label {
   margin-bottom: 20px;
+}
+.case-figure {
+  max-width: 1100px;
+  margin: 0 0 var(--space-md);
+}
+.case-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}
+.case-figure figcaption {
+  margin-top: 12px;
+  font: var(--font-label);
+  color: var(--text-muted);
 }
 .case-question {
   max-width: 24ch;

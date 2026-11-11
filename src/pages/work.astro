@@ -45,7 +45,7 @@ const creative = cases.flatMap(({ data }) => (data.format === 'five-part' && dat
   <ResearchEvidence />
   {creative && <section class="section-y section-rule" id="creative-ai" aria-labelledby="creative-title">
     <div class="wrap split-layout">
-      <div><p class="meta evidence-type">{creative.evidenceType}</p><h2 class="creative-title" id="creative-title"><a href={'/cases/' + creative.slug}>{creative.title}</a></h2><p class="lead creative-question">{creative.question}</p></div>
+      <div><p class="meta evidence-type">{creative.evidenceType}</p><h2 class="creative-title" id="creative-title"><a href={'/cases/' + creative.slug}>{creative.title}</a></h2><p class="lead creative-question">{creative.question}</p>{creative.image && <figure class="creative-figure"><img src={creative.image.src} width={creative.image.width} height={creative.image.height} alt={creative.image.alt} loading="lazy" decoding="async" /><figcaption>{creative.image.caption}</figcaption></figure>}</div>
       <div><dl class="record" aria-label="Workshop summary"><div class="record-row"><dt>Context</dt><dd>{creative.context}</dd></div><div class="record-row"><dt>Observed in the session</dt><dd>{creative.observed}</dd></div><div class="record-row"><dt>What remains uncertain</dt><dd>{creative.uncertain}</dd></div></dl><a class="text-link case-link" href={'/cases/' + creative.slug}>Read the case account <Arrow /></a></div>
     </div>
   </section>}
@@ -57,6 +57,9 @@ const creative = cases.flatMap(({ data }) => (data.format === 'five-part' && dat
   .case-link { margin-top: 28px; }
   .creative-title { font-size: var(--heading-2); line-height: 1.03; max-width: 20ch; }
   .creative-question { margin-top: 24px; max-width: 30ch; }
+  .creative-figure { margin: 40px 0 0; max-width: 640px; }
+  .creative-figure img { display: block; width: 100%; height: auto; border-radius: var(--radius-card); }
+  .creative-figure figcaption { margin-top: 12px; font: var(--font-label); color: var(--text-muted); }
   @media (max-width: 767px) { .creative-title { font-size: 44px; } }
   .evidence-type { margin-bottom: 20px; }
   .solar-title { font-size: var(--heading-2); line-height: 1.03; }

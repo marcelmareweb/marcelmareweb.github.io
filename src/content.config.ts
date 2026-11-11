@@ -39,6 +39,16 @@ const caseFivePart = z.object({
   interest: z.enum(enquiryInterests.map(({ id }) => id) as [EnquiryInterest, ...EnquiryInterest[]]),
   service: z.string(),
   featured: z.boolean(),
+  /** The engagement's own imagery (a public path), shown on the case and wherever its card appears. */
+  image: z.object({
+    src: z.string(),
+    width: z.number(),
+    height: z.number(),
+    alt: z.string(),
+    caption: z.string(),
+    /** An upright cut of the same image for portrait card frames. */
+    portrait: z.object({ src: z.string(), width: z.number(), height: z.number() }).optional(),
+  }).optional(),
 });
 
 const cases = defineCollection({

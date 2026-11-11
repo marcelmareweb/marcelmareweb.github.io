@@ -9,15 +9,15 @@ const creative = cases.flatMap(({ data }) => (data.format === 'five-part' && dat
 const map = strategyIllusion.quadrants;
 
 // Each card's image is set from its own content or the item's own published imagery, never a decorative illustration.
-type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title' | 'image'; mediaText?: string; image?: string; external?: boolean };
+type Item = { cue: string; kind: string; title: string; href: string; media: 'quote' | 'question' | 'matrix' | 'title' | 'image'; mediaText?: string; image?: string; contain?: boolean; external?: boolean };
 const items = [
   creative && {
     //kind: 'Workshop',
     title: creative.title,
     href: `/cases/${creative.slug}`,
-    media: 'question',
+    // A slide with its own lettering is never overlaid: the upright cut fills the frame, otherwise the slide is shown whole.
+    ...(creative.image ? { media: 'image', image: creative.image.portrait?.src ?? creative.image.src, contain: !creative.image.portrait } : { media: 'question', mediaText: creative.question }),
     cue: 'Read.',
-    mediaText: creative.question,
   },
   {
     //kind: 'Applied strategy',
@@ -82,7 +82,7 @@ const items = [
               </div>
             )}
             {item.media === 'title' && <p class="media-type media-type--title">{item.title}</p>}
-            {item.media === 'image' && !item.mediaText && <img class="strip-photo" src={item.image} alt="" loading="lazy" decoding="async" />}
+            {item.media === 'image' && !item.mediaText && <img class:list={['strip-photo', item.contain && 'strip-photo--contain']} src={item.image} alt="" loading="lazy" decoding="async" />}
           </div>
         </Card>
       </li>
@@ -133,6 +133,7 @@ const items = [
   .strip-media--title { background: var(--paper); }
   .strip-media--image:not(.strip-media--backed) { padding: 0; }
   .strip-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .strip-photo--contain { object-fit: contain; background: var(--ink); }
   /* Media text set over the item's own photo: an even ink veil keeps the type readable. */
   .strip-media--backed { position: relative; background: var(--ink); color: var(--paper); }
   .strip-backdrop { position: absolute; inset: 0; }
