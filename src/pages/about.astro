@@ -3,6 +3,8 @@ import Arrow from '../components/Arrow.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormationGraphic from '../components/FormationGraphic.astro';
 import PageIntro from '../components/PageIntro.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/people/marcel-mare.png';
 
 ---
 <BaseLayout title="About The Spotted Ape — Strategic Decisions & Behavioural Design" description="The independent practice of Marcel Maré. Helping teams find formation: strategic decisions, behavioural design and human judgement.">
@@ -50,6 +52,17 @@ import PageIntro from '../components/PageIntro.astro';
 <div class="practitioner-name">
 <h2>Marcel<br />Maré.</h2>
 <p class="lead">Behavioural designer.<br />Researcher. Strategic consultant.</p>
+<Image
+  class="practitioner-portrait"
+  src={portrait}
+  alt="Portrait of Marcel Maré: a close-up of his face, looking straight at the camera, in a dark T-shirt against a dark background."
+  widths={[400, 640, 1008]}
+  sizes="(max-width: 767px) calc(100vw - 40px), 420px"
+  format="webp"
+  quality={80}
+  loading="lazy"
+  decoding="async"
+/>
 <a class="text-link" href="https://marcelmare.com">Professional biography <Arrow />
 </a>
 </div>
@@ -103,6 +116,14 @@ import PageIntro from '../components/PageIntro.astro';
   font-size: var(--display-l);
   line-height: var(--leading-display);
   margin-block: 0 40px;
+}
+.practitioner-portrait {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin-top: 40px;
+  border-radius: var(--radius-card);
 }
 .practitioner-name .text-link {
   margin-top: 32px;
